@@ -1,6 +1,11 @@
 import sys, os, time
 import subprocess
 
+class InputParser():        # class for parsing command line inputs from users
+                            # It is for processing user inputs automatically
+    def __init__(self):
+        pass
+
 def build_syntax_prog(cmd, prog, covopt, tout):
     cmd = cmd + " %s/%s/%s" % (prog, covopt, tout)
     return cmd
@@ -10,6 +15,10 @@ def build_syntax_exe(cmd, ex_file):
     return cmd
 
 cmd = "./bincov/_build/bin64/drrun -c ./bincov/_build/clients/bincov/bin/libbincov.so"
+
+in_parser = InputParser()
+
+# raw_inputs below are to be deleted. InputParser will substitute for it.
 
 program = raw_input("[Q. ] Enter the name of program (ex. ls) : ")
 cover_option = raw_input("[Q. ] Enter the option of coverage (n : node / p : path) : ")
