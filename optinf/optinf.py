@@ -59,15 +59,19 @@ cmd = cc.put_binpath(cmd, exe_path)
 
 n = 0
 
-while(True):
-    print cmd
-    cmd_out = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
-    if cmd_out[0]:
-        elements = cmd_out[0].split('\n')[:-1]
-        for element in elements:
-            print element
-    n = n+1
-    print "Loop no. "+ str(n) +" is over."
-    time.sleep(10)
+def main():
+    while(True):
+        print cmd
+        cmd_out = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
+        if cmd_out[0]:
+            elements = cmd_out[0].split('\n')[:-1]
+            for element in elements:
+                print element
+        n = n+1
+        print "Loop no. "+ str(n) +" is over."
+        time.sleep(10)
+
+if __name__ == "__main__":
+    main()
 
 ### vim: set sts=4 sw=4 tabstop=4:
