@@ -1,0 +1,143 @@
+   1070 /lib64/ld-linux-x86-64.so.2
+   1255 d@	.
+   3721 libfwup.so.0
+   3736 _ITM_deregisterTMCloneTable
+   3772 __gmon_start__
+   4011 _Jv_RegisterClasses
+   4035 _ITM_registerTMCloneTable
+   4067 _fini
+   4075 _init
+   4103 fwup_resource_iter_next
+   4133 fwup_resource_iter_destroy
+   4166 fwup_set_up_update
+   4211 fwup_get_fw_version
+   4235 fwup_resource_iter_create
+   4267 fwup_get_lowest_supported_fw_version
+   4334 fwup_get_guid
+   4352 efi_guid_is_empty
+   4374 fwup_supported
+   4413 libpopt.so.0
+   4430 poptFreeContext
+   4450 poptAliasOptions
+   4471 poptPeekArg
+   4505 poptPrintUsage
+   4524 poptGetContext
+   4543 poptGetArg
+   4556 poptBadOption
+   4574 poptHelpOptions
+   4614 poptReadDefaultConfig
+   4642 poptStrerror
+   4657 poptGetNextOpt
+   4676 libpthread.so.0
+   4716 __errno_location
+   4737 open
+   4744 libefivar.so.0
+   4763 efi_str_to_guid
+   5003 efi_guid_zero
+   5021 efi_guid_to_id_guid
+   5045 libc.so.6
+   5057 __printf_chk
+   5074 exit
+   5101 setlocale
+   5113 dcgettext
+   5125 warnx
+   5133 __stack_chk_fail
+   5154 warn
+   5161 memcmp
+   5170 stderr
+   5177 __cxa_finalize
+   5216 errx
+   5223 bindtextdomain
+   5242 __libc_start_main
+   5264 free
+   5271 _edata
+   5300 __bss_start
+   5314 _end
+   5321 _IO_stdin_used
+   5340 LIBPOPT_0
+   5352 GLIBC_2.2.5
+   5366 GLIBC_2.3.4
+   5402 GLIBC_2.4
+  10740 AVAUI
+  10747 ATUH
+  11120 |$01
+  11200 D$haH
+  11670 L$0E1
+  12261 []A\A]A^
+  12373 t$ H
+  13006 \$ H
+  14660 AWAVAUATUSH
+  14711 D$H1
+  14720 D$(H
+  14752 D$ H
+  14770 d$0L
+  14775 t$8L
+  15002 l$@H
+  15014 D$$H
+  15042 |$0L
+  15101 |$8L
+  15163 D$$D
+  15170 |$ H
+  15272 |$(L
+  15345 L$HdH3
+  15370 X[]A\A]A^A_
+  15520 AWAVA
+  15527 AUATL
+  15652 []A\A]A^A_
+  15724 Could not create iterator
+  15756 /usr/share/locale/
+  16001 fwupdate
+  16012 apply
+  16020 Apply firmware updates
+  16047 <guid> <firmware.cap>
+  16075 list
+  16102 supported
+  16114 quiet
+  16122 Work quietly
+  16137 Help options:
+  16155 missing argument: %s
+  16202 guid
+  16207 Invalid guid: "%s"
+  16232 filename.cap
+  16247 invalid argument: "%s": %s
+  16302 invalid argument: "%s"
+  16331 no action specified
+  16355 Could not iterate resources
+  16411 could not open "%s"
+  16435 firmware resource not found
+  16500 %s version %d can be updated to any version above %d
+  16570 List supported firmware updates
+  16630 Query for firmware update support
+  16700 Options implemented via popt alias/exec:
+  16760 poptReadDefaultConfig failed: %s: %s
+  17030 Firmware updates are not supported on this machine.
+  17120 Firmware updates are supported on this machine.
+  17210 Could not list system firmware resources
+  17270 Could not set up firmware update
+  17617 ;*3$"
+  30020 91fd92a3a5b448faa3612639887114a8e9cbd3.debug
+  30105 .shstrtab
+  30117 .interp
+  30127 .note.ABI-tag
+  30145 .note.gnu.build-id
+  30170 .gnu.hash
+  30202 .dynsym
+  30212 .dynstr
+  30222 .gnu.version
+  30237 .gnu.version_r
+  30256 .rela.dyn
+  30270 .init
+  30276 .plt
+  30303 .plt.got
+  30314 .text
+  30322 .fini
+  30330 .rodata
+  30340 .eh_frame_hdr
+  30356 .eh_frame
+  30370 .init_array
+  30404 .fini_array
+  30420 .jcr
+  30425 .dynamic
+  30436 .data
+  30444 .bss
+  30451 .gnu_debuglink

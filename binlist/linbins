@@ -1,0 +1,59 @@
+#This list contains binaries which has protocol implementation
+
+/bin:
+ping
+ping6
+
+/usr/bin:
+arping
+avahi-browse
+avahi-publish
+avahi-resolve
+avahi-set-host-name
+bluemoon
+bluetoothctl
+bluetooth-sendto
+btmgmt
+curl
+dig
+dirmngr
+dirmngr-client
+ftp -> /etc/alternatives/ftp
+fwupdate
+fwupdmgr
+git
+l2ping
+l2test
+lpstat
+mtr
+netkit-ftp
+nm-applet
+nmtui
+nslookup
+obexctl
+openssl
+pftp -> /etc/alternatives/pftp
+rctest
+rfcomm
+scp
+sdptool
+sftp
+ssh
+ssh-add
+ssh-agent
+ssh-argv0
+ssh-copy-id
+ssh-keygen
+ssh-keyscan
+telnet -> /etc/alternatives/telnet
+telnet.netkit
+tracepath
+tracepath6
+traceroute6 -> /etc/alternatives/traceroute6
+traceroute6.iputils
+vstp
+webbrowser-app
+wget
+wireshark
+xdg-email
+xhost

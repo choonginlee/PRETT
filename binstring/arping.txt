@@ -1,0 +1,228 @@
+   1070 /lib64/ld-linux-x86-64.so.2
+   4421 libcap.so.2
+   4435 _ITM_deregisterTMCloneTable
+   4471 __gmon_start__
+   4510 _Jv_RegisterClasses
+   4534 _ITM_registerTMCloneTable
+   4566 _fini
+   4574 cap_get_proc
+   4611 cap_free
+   4622 cap_get_flag
+   4637 cap_set_proc
+   4654 cap_clear
+   4666 cap_init
+   4677 cap_set_flag
+   4714 libc.so.6
+   4726 setuid
+   4735 socket
+   4744 fflush
+   4753 __printf_chk
+   4770 exit
+   4775 inet_aton
+   5007 optind
+   5016 perror
+   5025 connect
+   5035 inet_ntoa
+   5047 strncpy
+   5057 puts
+   5064 sigprocmask
+   5100 __stack_chk_fail
+   5121 putchar
+   5131 strtol
+   5140 prctl
+   5146 sigemptyset
+   5162 __errno_location
+   5203 bind
+   5210 memcmp
+   5217 getopt
+   5226 __fprintf_chk
+   5244 sigaddset
+   5256 stdout
+   5265 memcpy
+   5274 setsockopt
+   5307 malloc
+   5316 recvfrom
+   5327 optarg
+   5336 stderr
+   5345 ioctl
+   5353 alarm
+   5361 __memset_chk
+   5376 getuid
+   5405 freeifaddrs
+   5421 getifaddrs
+   5434 if_nametoindex
+   5453 fwrite
+   5462 gettimeofday
+   5477 sigaction
+   5511 __memcpy_chk
+   5526 close
+   5534 getsockname
+   5550 sendto
+   5557 gethostbyname2
+   5576 strcmp
+   5605 __libc_start_main
+   5627 _edata
+   5636 __bss_start
+   5652 _end
+   5657 GLIBC_2.3
+   5671 GLIBC_2.14
+   5704 GLIBC_2.3.4
+   5720 GLIBC_2.4
+   5732 GLIBC_2.2.5
+  11301 %z- 
+  11321 %r- 
+  11341 %j- 
+  11361 %b- 
+  11401 %Z- 
+  11421 %R- 
+  11441 %J- 
+  11461 %B- 
+  11501 %:- 
+  11521 %2- 
+  11541 %*- 
+  11561 %"- 
+  12301 %z, 
+  12321 %r, 
+  12341 %j, 
+  12361 %b, 
+  12401 %Z, 
+  12421 %R, 
+  12441 %J, 
+  12461 %B, 
+  12501 %:, 
+  12521 %2, 
+  12541 %*, 
+  12561 %", 
+  13000 AWAVAUATUH
+  13057 ={, 
+  13130 =R, 
+  13311 =R+ 
+  13422 =	+ 
+  13667 =K+ 
+  13747 -T* 
+  14625 =9) 
+  14642 =l) 
+  14734 =^( 
+  15137 =o( 
+  15262 =Q( 
+  15555 t$ A
+  15716 \$0L
+  16143 =s& 
+  16160 =Z& 
+  16171 =U& 
+  16217 t$ H
+  16311 =:& 
+  16522 t<f=
+  17551 L$(H+
+  17637 =<" 
+  21117 5,  
+  21126 =-  
+  23323 tLE1
+  23462 fffff.
+  24600 tJE1
+  25164 t$"f
+  25240 l$ L
+  25332 T$$H
+  25356 D$$H
+  25532 []A\A]A^A_
+  25552 l$ H
+  25604 D$&L
+  25634 T$$H
+  26225 uyH= 
+  26542 ~VAUATD
+  26664 []A\A]
+  26700 AWAVLc
+  26711 AUATI
+  27014 []A\A]A^A_
+  27222 D9=_
+  30277 D9=2
+  30752 []A\A]A^A_
+  31027 Received %d response(s)
+  31062 %d request(s)
+  31100 %s%d broadcast(s)
+  31122 arping: cap_get_proc
+  31147 arping: cap_set_proc
+  31174 ioctl(SIOCGIFINDEX
+  31217 Interface "%s" is down
+  31247 arping: cap_clear
+  31271 arping: prctl
+  31307 arping: setuid
+  31326 arping: cap_init
+  31347 %02X
+  31354 Unicast
+  31364 Broadcast
+  31376 reply
+  31404 request
+  31414 %s from 
+  31425 %s [
+  31435 for %s 
+  31445 for 
+  31452  %ld.%03ldms
+  31470  UNSOLICITED?
+  31506 arping utility, iputils-%s
+  31542 h?bfDUAqc:w:s:I:V
+  31564 arping: socket
+  31603 getifaddrs
+  31616 arping: if_nametoindex
+  31645 malloc
+  31654 ioctl(SIOCFIFCONF
+  31676 arping: unknown host %s
+  31727 arping: invalid source %s
+  31762 WARNING: interface is ignored
+  32020 bind
+  32025 connect
+  32035 getsockname
+  32051 ARPING %s 
+  32064 from %s %s
+  32100 arping: recvfrom
+  32130 Sent %d probes (%d broadcast(s))
+  32200 Usage: arping [-fqbDUAV] [-c count] [-w timeout] [-I device] [-s source] destination
+  32325   -f : quit on first reply
+  32360   -q : be quiet
+  32400   -b : keep broadcasting, don't go unicast
+  32453   -D : duplicate address detection mode
+  32523   -U : Unsolicited ARP mode, update your neighbours
+  32607   -A : ARP answer mode, update your neighbours
+  32666   -V : print version and exit
+  32724   -c count : how many packets to send
+  32772   -w timeout : how long to wait for a reply
+  33046   -I device : which ethernet device to use
+  33121   -s source : source ip address
+  33161   destination : ask for what ip address
+  33240 Interface "%s" is not ARPable
+  33300 arping: Device %s not available.
+  33350 arping: device (option -I) is required.
+  33430 WARNING: setsockopt(SO_DONTROUTE)
+  33500 Interface "%s" is not ARPable (no ll address)
+  33560 WARNING: using default broadcast address.
+  33640 arping: no source address in not-DAD mode
+  33720 arping: too many interfaces!?
+  35277 ;*3$"
+  40724 s20121221
+  40736 arping
+  40753 .shstrtab
+  40765 .interp
+  40775 .note.ABI-tag
+  41013 .note.gnu.build-id
+  41036 .gnu.hash
+  41050 .dynsym
+  41060 .dynstr
+  41070 .gnu.version
+  41105 .gnu.version_r
+  41124 .rela.dyn
+  41136 .rela.plt
+  41150 .init
+  41156 .text
+  41164 .fini
+  41172 .rodata
+  41202 .eh_frame_hdr
+  41220 .eh_frame
+  41232 .init_array
+  41246 .fini_array
+  41262 .jcr
+  41267 .dynamic
+  41300 .got
+  41305 .got.plt
+  41316 .data
+  41324 .bss
+  41331 .gnu_debuglink

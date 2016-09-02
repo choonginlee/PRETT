@@ -1,0 +1,4299 @@
+   1070 /lib64/ld-linux-x86-64.so.2
+  25431 libresolv.so.2
+  25450 _ITM_deregisterTMCloneTable
+  25504 __gmon_start__
+  25523 _Jv_RegisterClasses
+  25547 _ITM_registerTMCloneTable
+  25601 __dn_skipname
+  25617 __res_query
+  25633 __dn_expand
+  25647 libassuan.so.0
+  25666 __assuan_close
+  25705 assuan_sock_connect
+  25731 assuan_sock_get_flag
+  25756 assuan_get_command_name
+  26006 __assuan_spawn
+  26025 assuan_sock_check_nonce
+  26055 assuan_send_data
+  26076 __assuan_read
+  26114 assuan_get_peercred
+  26140 assuan_fdopen
+  26156 assuan_register_reset_notify
+  26213 assuan_init_socket_server
+  26245 assuan_get_pointer
+  26270 __assuan_waitpid
+  26311 __assuan_connect
+  26332 assuan_sock_bind
+  26353 assuan_inquire
+  26372 assuan_init_pipe_server
+  26422 assuan_accept
+  26440 assuan_sock_set_flag
+  26465 assuan_new
+  26500 __assuan_write
+  26517 assuan_sock_connect_byname
+  26552 assuan_sock_close
+  26574 assuan_set_okay_line
+  26621 assuan_sock_new
+  26641 assuan_set_error
+  26662 __assuan_socketpair
+  26706 __assuan_recvmsg
+  26727 assuan_sock_set_sockaddr_un
+  26763 assuan_write_status
+  27007 assuan_set_malloc_hooks
+  27037 __assuan_sendmsg
+  27060 assuan_set_log_cb
+  27102 assuan_register_option_handler
+  27141 assuan_set_hello_line
+  27167 assuan_release
+  27206 assuan_set_flag
+  27226 assuan_set_pointer
+  27251 assuan_register_command
+  27301 __assuan_socket
+  27321 assuan_write_line
+  27343 __assuan_pipe
+  27361 assuan_transact
+  27401 assuan_set_gpg_err_source
+  27433 assuan_socket_connect
+  27461 assuan_set_system_hooks
+  27511 assuan_process
+  27530 assuan_set_assuan_log_prefix
+  27565 assuan_sock_init
+  27606 assuan_sock_get_nonce
+  27634 libgpg-error.so.0
+  27656 gpgrt_onclose
+  27674 _gpgrt_putc_overflow
+  27721 gpgrt_vbsprintf
+  27741 gpgrt_ungetc
+  27756 gpg_err_init
+  27773 gpgrt_fputs_unlocked
+  30020 gpgrt_flockfile
+  30040 gpg_err_code_from_errno
+  30070 gpgrt_vasprintf
+  30110 gpgrt_fprintf_unlocked
+  30137 gpgrt_ftell
+  30153 gpgrt_setvbuf
+  30171 gpgrt_bsprintf
+  30210 gpgrt_fwrite
+  30225 gpgrt_fseek
+  30241 _gpgrt_get_std_stream
+  30267 gpg_err_code_from_syserror
+  30322 gpgrt_asprintf
+  30341 gpgrt_free
+  30354 gpgrt_fread
+  30370 gpgrt_fopenmem
+  30407 gpgrt_fputc
+  30423 gpgrt_snprintf
+  30442 gpgrt_fgetc
+  30456 gpg_strerror
+  30473 gpgrt_fopencookie
+  30515 gpgrt_vfprintf_unlocked
+  30545 gpgrt_write
+  30561 gpgrt_fclose
+  30576 gpgrt_fdopen
+  30613 gpgrt_set_syscall_clamp
+  30643 gpgrt_fputs
+  30657 gpgrt_fgets
+  30673 gpgrt_write_sanitized
+  30721 gpgrt_fileno
+  30736 gpgrt_printf
+  30753 gpg_strsource
+  30771 gpg_err_set_errno
+  31013 gpgrt_rewind
+  31030 gpgrt_read_line
+  31050 gpgrt_feof
+  31063 gpgrt_set_alloc_func
+  31110 gpgrt_funlockfile
+  31132 gpgrt_read
+  31145 gpgrt_fopen
+  31161 gpgrt_ferror
+  31176 gpgrt_fprintf
+  31214 gpgrt_fflush
+  31231 libgcrypt.so.20
+  31251 gcry_sexp_sscan
+  31271 gcry_sexp_nth_data
+  31314 gcry_sexp_sprint
+  31335 gcry_sexp_release
+  31357 gcry_xcalloc
+  31374 gcry_xrealloc
+  31412 gcry_malloc_secure
+  31435 gcry_md_ctl
+  31451 gcry_md_get_algo
+  31472 gcry_xmalloc
+  31507 gcry_md_close
+  31525 gcry_create_nonce
+  31547 gcry_strdup
+  31563 gcry_md_map_name
+  31604 gcry_check_version
+  31627 gcry_calloc_secure
+  31652 gcry_sexp_find_token
+  31677 gcry_set_outofcore_handler
+  31732 gcry_md_hash_buffer
+  31756 gcry_sexp_build
+  31776 gcry_pk_get_keygrip
+  32022 gcry_pk_verify
+  32041 gcry_cipher_algo_name
+  32067 gcry_sexp_cadr
+  32106 gcry_md_algo_name
+  32130 gcry_calloc
+  32144 gcry_md_debug
+  32162 gcry_xstrdup
+  32177 gcry_md_read
+  32214 gcry_set_log_handler
+  32241 gcry_realloc
+  32256 gcry_md_get_algo_dlen
+  32304 gcry_md_write
+  32322 gcry_malloc
+  32336 gcry_sexp_canon_len
+  32362 gcry_free
+  32374 gcry_md_open
+  32411 gcry_set_fatalerror_handler
+  32445 gcry_control
+  32462 gcry_strerror
+  32500 libksba.so.8
+  32515 ksba_reader_set_cb
+  32540 ksba_cert_ref
+  32556 ksba_cert_get_crl_dist_point
+  32613 ksba_cert_get_public_key
+  32644 ksba_ocsp_parse_response
+  32675 ksba_crl_get_sig_val
+  32722 ksba_crl_get_digest_algo
+  32753 ksba_cert_get_validity
+  33002 ksba_set_hash_buffer_function
+  33040 ksba_reader_read
+  33061 ksba_crl_get_auth_key_id
+  33112 ksba_reader_unread
+  33135 ksba_crl_set_hash_function
+  33170 ksba_cert_get_digest_algo
+  33222 ksba_crl_get_item
+  33244 ksba_crl_parse
+  33263 ksba_cert_set_user_data
+  33313 ksba_cert_get_authority_info_access
+  33357 ksba_cert_get_serial
+  33404 ksba_crl_set_reader
+  33430 ksba_cert_get_sig_val
+  33456 ksba_cert_get_auth_key_id
+  33510 ksba_ocsp_get_cert
+  33533 ksba_ocsp_get_status
+  33560 ksba_reader_new
+  33600 ksba_free
+  33612 ksba_cert_get_ext_key_usages
+  33647 ksba_ocsp_build_request
+  33677 ksba_cert_get_key_usage
+  33727 ksba_cert_release
+  33751 ksba_cert_is_ca
+  33771 ksba_reader_release
+  34015 ksba_ocsp_get_sig_val
+  34043 ksba_cert_get_subject
+  34071 ksba_crl_new
+  34106 ksba_cert_get_issuer
+  34133 ksba_ocsp_release
+  34155 ksba_crl_release
+  34176 ksba_crl_get_crl_number
+  34226 ksba_ocsp_add_target
+  34253 ksba_cert_read_der
+  34276 ksba_cert_hash
+  34315 ksba_cert_get_cert_policies
+  34351 ksba_name_release
+  34373 ksba_set_malloc_hooks
+  34421 ksba_ocsp_hash_response
+  34451 ksba_check_version
+  34474 ksba_ocsp_new
+  34512 ksba_cert_get_user_data
+  34542 ksba_ocsp_set_nonce
+  34566 ksba_cert_init_from_mem
+  34616 ksba_name_get_uri
+  34640 ksba_crl_get_issuer
+  34664 ksba_cert_new
+  34702 ksba_crl_get_extension
+  34731 ksba_cert_get_extension
+  34761 ksba_cert_get_image
+  35005 ksba_cert_get_subj_key_id
+  35037 ksba_crl_get_update_times
+  35071 ksba_name_enum
+  35110 ksba_ocsp_get_responder_id
+  35143 libnpth.so.0
+  35160 npth_rwlock_rdlock
+  35203 npth_sleep
+  35216 npth_protect
+  35233 npth_accept
+  35247 npth_setname_np
+  35267 npth_unprotect
+  35306 npth_sigev_get_pending
+  35335 npth_waitpid
+  35352 npth_sigev_fini
+  35372 npth_select
+  35406 npth_create
+  35422 npth_sigev_init
+  35442 npth_init
+  35454 npth_rwlock_wrlock
+  35477 npth_write
+  35512 npth_sigev_sigmask
+  35535 npth_sigev_add
+  35554 npth_clock_gettime
+  35577 npth_usleep
+  35613 npth_read
+  35625 npth_pselect
+  35642 libpthread.so.0
+  35662 pthread_rwlock_unlock
+  35710 fsync
+  35716 __errno_location
+  35737 pthread_setspecific
+  35763 pthread_rwlock_init
+  36007 pthread_getspecific
+  36033 pthread_attr_init
+  36055 pthread_key_create
+  36100 pthread_attr_destroy
+  36125 pthread_attr_setdetachstate
+  36161 lseek
+  36167 libgnutls.so.30
+  36207 gnutls_x509_crt_init
+  36234 gnutls_strerror
+  36254 gnutls_free
+  36270 gnutls_handshake
+  36311 gnutls_global_init
+  36334 gnutls_bye
+  36347 gnutls_global_set_log_level
+  36403 gnutls_x509_crt_check_hostname
+  36442 gnutls_priority_set_direct
+  36475 gnutls_certificate_allocate_credentials
+  36545 gnutls_certificate_verify_peers2
+  36606 gnutls_certificate_set_x509_trust_file
+  36655 gnutls_certificate_type_get
+  36711 gnutls_transport_set_push_function
+  36754 gnutls_deinit
+  36772 gnutls_alert_get_name
+  37020 gnutls_transport_set_ptr
+  37051 gnutls_certificate_get_peers
+  37106 gnutls_transport_get_ptr
+  37137 gnutls_init
+  37153 gnutls_record_recv
+  37176 gnutls_global_set_log_function
+  37235 gnutls_transport_set_pull_function
+  37300 gnutls_record_send
+  37323 gnutls_alert_get
+  37344 gnutls_x509_crt_import
+  37373 gnutls_credentials_set
+  37422 gnutls_certificate_verification_status_print
+  37477 gnutls_server_name_set
+  37526 gnutls_x509_crt_deinit
+  37555 gnutls_certificate_free_credentials
+  37621 libldap_r-2.4.so.2
+  37644 ldap_msgfree
+  37661 ldap_get_option
+  37701 ldap_url_parse
+  37720 ldap_simple_bind_s
+  37743 ldap_next_entry
+  37763 ldap_value_free
+  40003 ldap_count_entries
+  40026 ldap_add_s
+  40041 ldap_err2string
+  40061 ldap_first_entry
+  40102 ldap_modify_s
+  40120 ldap_init
+  40132 ldap_get_values
+  40152 ldap_search_s
+  40170 ldap_unbind
+  40204 ldap_set_option
+  40224 ldap_free_urldesc
+  40246 libc.so.6
+  40260 strcpy
+  40267 gmtime_r
+  40300 readdir
+  40310 execv
+  40316 _IO_putc
+  40327 setlocale
+  40341 srand
+  40347 strncmp
+  40357 strrchr
+  40367 dcgettext
+  40401 getpwuid
+  40412 __fdelt_chk
+  40426 closedir
+  40437 __read_chk
+  40452 signal
+  40461 strncpy
+  40471 fork
+  40476 __stack_chk_fail
+  40517 unlink
+  40526 listen
+  40535 mkdir
+  40543 abort
+  40551 _exit
+  40557 memchr
+  40566 strpbrk
+  40576 getpid
+  40605 kill
+  40612 strspn
+  40621 bind_textdomain_codeset
+  40651 inet_pton
+  40663 strftime
+  40674 __assert_fail
+  40712 gmtime
+  40721 strtol
+  40730 isatty
+  40737 mmap
+  40744 getpwnam
+  40755 strlen
+  40764 tmpfile
+  40774 getaddrinfo
+  41010 memset
+  41017 strstr
+  41026 strcspn
+  41036 chdir
+  41044 memcmp
+  41053 getnameinfo
+  41067 ttyname
+  41077 dup2
+  41104 unsetenv
+  41115 shutdown
+  41126 __fprintf_chk
+  41144 putenv
+  41153 stdout
+  41162 memcpy
+  41171 strtoul
+  41201 strcat
+  41210 strcasecmp
+  41223 timegm
+  41232 remove
+  41241 nl_langinfo
+  41255 opendir
+  41265 __ctype_b_loc
+  41303 getenv
+  41312 sscanf
+  41321 __open_2
+  41332 stderr
+  41341 munmap
+  41350 getuid
+  41357 setrlimit
+  41371 strncasecmp
+  41405 __fxstat
+  41416 strtoull
+  41427 getcwd
+  41436 iconv_close
+  41452 rename
+  41461 geteuid
+  41471 __memcpy_chk
+  41506 localtime
+  41520 difftime
+  41531 strchr
+  41540 mktime
+  41547 iconv
+  41555 qsort
+  41563 iconv_open
+  41576 __ctype_toupper_loc
+  41622 __ctype_tolower_loc
+  41646 __cxa_finalize
+  41665 freeaddrinfo
+  41702 setsid
+  41711 __sprintf_chk
+  41727 __xstat
+  41737 getrlimit
+  41751 memmove
+  41761 uname
+  41767 bindtextdomain
+  42006 _IO_getc
+  42017 __strcat_chk
+  42034 strcmp
+  42043 __libc_start_main
+  42065 stpcpy
+  42074 sysconf
+  42104 __cxa_atexit
+  42121 _edata
+  42130 __bss_start
+  42144 _end
+  42151 iobuf_debug_mode
+  42172 _IO_stdin_used
+  42211 default_errsource
+  42237 _assuan_system_npth
+  42263 OPENLDAP_2.4_2
+  42302 NPTH_1.0
+  42313 GLIBC_2.2.5
+  42327 GPG_ERROR_1.0
+  42345 GCRYPT_1.6
+  42360 GLIBC_2.15
+  42373 GLIBC_2.4
+  42405 GLIBC_2.14
+  42420 GLIBC_2.3.4
+  42434 GLIBC_2.7
+  42446 GLIBC_2.3
+  42460 GNUTLS_3_4
+  42473 KSBA_0.9
+  42504 LIBASSUAN_1.0
+ 112660 AWAVAUATUSH
+ 112732 |$\L
+ 113536 D$\L
+ 113543 t$P1
+ 114200 l$dL
+ 114205 t$PL
+ 114244 D$\H
+ 115252 cu[A
+ 115735 L$0E
+ 116137 9\$\~:H
+ 116147 D$PL
+ 116160 <$-u
+ 120633 D$ln
+ 121072 D$(H
+ 121162 D$HH
+ 121203 D$xH
+ 121522 D$XH
+ 121527 D$hH
+ 121534 D$8H
+ 121563 |$hA
+ 122600 T$41
+ 122650 []A\A]A^A_
+ 124045 D$PH
+ 124123 D$PH
+ 124307 L$(H
+ 124332 T$lH
+ 124351 D$ln
+ 124440 D$pH
+ 124457 L$pH
+ 124563 |$xH
+ 124721 D$PL
+ 124740 L$\H
+ 124757 T$\t
+ 125753 D$PH
+ 126466 8$t7
+ 127211 D$PH
+ 130720 AUATA
+ 131007 []A\A]
+ 131020 AUATI
+ 131121 []A\A]
+ 131140 AUATA
+ 131227 []A\A]
+ 131240 AUATA
+ 131327 []A\A]
+ 131340 AUATI
+ 131431 []A\A]
+ 131440 AUATI
+ 131531 []A\A]
+ 131720 ATUSH
+ 131751 0<	wr1
+ 132127 []A\
+ 132340 []A\H
+ 133220 AWAVH
+ 133233 AUATI
+ 133617 <#vm
+ 134103 []A\A]A^A_
+ 134300 AWAVH
+ 134313 AUATUSH
+ 134513 D$(L
+ 134520 d$0H
+ 135757 \$(L
+ 136002 dH34%(
+ 136033 []A\A]A^A_
+ 136162 \$(H
+ 136220 l$(H
+ 136375 <:t\
+ 136423 	v"Hc
+ 137003 ATUS
+ 140163 []A\
+ 144260 ATUH
+ 144321 D$h1
+ 144712 D$hdH3
+ 144733 p[]A\
+ 145073 <%t!<+tMH
+ 145503 <	v&
+ 145763 t-USH
+ 146140 ATUH
+ 146230 []A\
+ 146275 D$(1
+ 146302 []A\
+ 146567 D$0t
+ 146660 ATUH
+ 147025 []A\
+ 147720 ATUH
+ 147763 tKH9
+ 150015 []A\
+ 150420 AUATI
+ 150744 ([]A\A]
+ 151321 []A\
+ 151371 []A\
+ 151427 D$81
+ 151734 t$8dH34%(
+ 152620 ATUH
+ 152646 D$81
+ 153031 t$8dH34%(
+ 153060 @[]A\
+ 153256 \$ H
+ 153440 ATUH
+ 153647 dH34%(
+ 153673  []A\
+ 154271 []A\
+ 154340 AUATUSH
+ 154373 D$81
+ 154444 t$ H
+ 154557 L$8dH3
+ 154606 H[]A\A]
+ 155300 ATUI
+ 155331 D$81
+ 155345 t$ H
+ 155470 L$8dH3
+ 155517 @[]A\
+ 156240 AWAVAUATI
+ 156277 D$81
+ 156445 D$(E1
+ 156462 D$ H
+ 156474 D$0H
+ 156615 T$8dH3
+ 156644 H[]A\A]A^A_
+ 157240 (t=H
+ 157442 T$(H
+ 157447 t$ H
+ 157512 t$0L
+ 157560 ATUI
+ 157750 []A\
+ 160020 []A\
+ 160060 AWAVAUATUSH
+ 160161 []A\A]A^A_
+ 160620 ATUH
+ 160651 D$(1
+ 160776 L$(dH3
+ 161025 0[]A\
+ 161124 L$ H
+ 161176 L$ L
+ 161400 AVAUATUH
+ 161473 []A\A]A^
+ 161631 []A\A]A^
+ 161700 AVAUI
+ 161707 ATUE1
+ 162161 []A\A]A^
+ 162422 []A\A]A^
+ 162447 []A\A]A^
+ 162520 AVAUI
+ 162527 ATUE1
+ 163001 []A\A]A^
+ 163242 []A\A]A^
+ 163267 []A\A]A^
+ 163340 AUATI
+ 163530 []A\A]
+ 163606 []A\A]
+ 163666 []A\A]
+ 164000 AWAVAUATI
+ 164051 D$h1
+ 164720 L$ H
+ 164736 D$@H
+ 164747 L$@L
+ 164770 Y^umH
+ 165010 T$ L
+ 165031 |$(H
+ 165047 t$01
+ 165413 T$hdH3
+ 165442 x[]A\A]A^A_
+ 165712 T$8H
+ 166070 PuuA
+ 166503 >-t	
+ 166520 AVAUI
+ 166527 ATUS
+ 166541 []A\A]A^
+ 166637 -u~I
+ 166667 	t6A
+ 167100 AVAUATUI
+ 167357 []A\A]A^
+ 167720 ATUH
+ 170056 []A\
+ 170162 []A\
+ 170214 []A\
+ 170260 AWAVAUATI
+ 170533 []A\A]A^A_
+ 170640 L$XH
+ 170645 T$PH
+ 170706 T$XH
+ 170713 t$PH
+ 171062 D$0H
+ 171670 D$0H
+ 171764 D$XE1
+ 172004 D$ H
+ 172011 D$PH
+ 172016 D$(H
+ 172023 D$HH
+ 172107  t$I
+ 172165 t$ L
+ 172230 T$8H
+ 172320 |$XL
+ 172714 D$8D	
+ 172726 l$`H
+ 173122 t$HH
+ 173174 t$HH
+ 173201 T$PH
+ 173602 l$<E
+ 174420 AUATUSH
+ 174641 SENDCERTH
+ 174666 _SKI
+ 175114 ([]A\A]
+ 175570 D$x1
+ 175761 ?1tk
+ 176002 L$xdH3
+ 176026 []A\
+ 176200 AUAT
+ 176241 D$(1
+ 177377 Hc01
+ 177511 D$(dH3
+ 177536 8[]A\A]
+ 200440 ATUSH
+ 200617 T$ H
+ 200663 /wmD
+ 201110 dH34%(
+ 201132 []A\
+ 201160 AWAVAUATUSH
+ 202053 ([]A\A]A^A_
+ 202620 ATUSH
+ 203070 dH34%(
+ 203112 []A\
+ 203372 ATUS1
+ 203451 []A\
+ 204000 AWAVH
+ 204013 AUATA
+ 204501 []A\A]A^A_
+ 205220 AWAVA
+ 205232 AUATUS1
+ 205263 t$ H
+ 205436 tMI9
+ 205642 []A\A]A^A_
+ 206263 tKUSH
+ 206420 AVAUI
+ 206712 |$ H
+ 207223  []A\A]A^
+ 211323 D$81
+ 211340 (u~H
+ 211377 $crl-
+ 211405 D$,.db
+ 211501 L$$1
+ 211515 |$8dH3<%(
+ 211620 ATUSH
+ 212207 []A\
+ 212520 AVAUATUE1
+ 212560 D$(1
+ 213443 \$(dH3
+ 213470 0[]A\A]A^
+ 214260 AWAVAUATUSH
+ 214320 D$81
+ 214562 l$ I
+ 215067 L$8dH3
+ 215114 H[]A\A]A^A_
+ 216323 d$ H
+ 216460 AWAVAUATI
+ 216514 |$ H
+ 217471 |$01
+ 217530 D$pH
+ 217552 D$qH
+ 220102 D$pH
+ 220410 T$(H
+ 220470 |$ L
+ 220634 []A\A]A^A_
+ 221506 |$ L
+ 221560 AWAVE1
+ 221567 AUATI
+ 222064 ([]A\A]A^A_
+ 222600 AWAVAUATUSH
+ 222631 D$H1
+ 222666 D$HdH3
+ 222713 X[]A\A]A^A_
+ 223130 D$@H
+ 223141 T$<H
+ 223173 |$@E1
+ 223421 D$8H
+ 223524 l$<A
+ 223616 D$<L
+ 224071 l$<H
+ 224272 |$ L
+ 225322 D$(H
+ 225327 l$(H
+ 226760 AVAUI
+ 226767 ATUA
+ 227026 D$81
+ 227161 T$8dH3
+ 227202 @[]A\A]A^
+ 227300 AWAVA
+ 227307 AUATI
+ 227354 D$x1
+ 227401 \$ H
+ 227601 8(t`H
+ 227642 L$xdH3
+ 227673 []A\A]A^A_
+ 230034 t3rH
+ 230200 AWAVAUATUSH
+ 230633 []A\A]A^A_
+ 230735 |$(D
+ 230766 |$ E1
+ 231112 D$(I
+ 231177 L$@I
+ 231345 =Vu$
+ 231752 t$ H
+ 232120 D$0H
+ 232155 D$HH
+ 232172 D$PH
+ 232207 D$`H
+ 232214 t$0H
+ 233033 D$8H
+ 233477 t$8L
+ 234012 L$`H
+ 234017 t$@H
+ 234132 |$(A
+ 234642 T$hH
+ 235216 t$\H
+ 235323 T$HH
+ 235330 t$PH
+ 235354 -3m$
+ 235430 T$HH
+ 235435 t$PH
+ 235527 l$HH
+ 235534 t$PH
+ 235661 T$xH
+ 235666 |$@1
+ 236134 |$pH
+ 236171 |$\H
+ 236216 |$`H
+ 236374 t$8H
+ 236461 t$xH
+ 237105 \$0L
+ 237112 d$8E1
+ 237323 d$8t2
+ 237565 T$8H
+ 237572 L$HH
+ 237604 |$0H
+ 237621 D$PH
+ 237667 D$0H
+ 237716 D$0H
+ 237743 D$0H
+ 237770 D$0H
+ 240016 D$0H
+ 240023 t$(I
+ 240041 D$0H
+ 240071 t$@H
+ 240117 D$(u*H
+ 240210 L$@H
+ 240407 \$(E1
+ 240565 l$0H
+ 240601 l$HL
+ 240647 \$0E1
+ 240657 D$(L
+ 241135 D$ I
+ 241310 =We$
+ 241343 D$ L
+ 241352 l$(H
+ 241466 d$ I
+ 241504 l$(L
+ 241736 |$0H
+ 242120 t$\H
+ 242177 D$HH
+ 242253 \$0L
+ 242264 l$PH
+ 243302 =ya$
+ 243372 D$(I
+ 243426 |$(H
+ 243503 t$(H
+ 243510 |$8H
+ 243721 t$(H
+ 244027 l$(L
+ 244067 t$(H
+ 244413 t$(L
+ 244537 |$ L
+ 244754 |$@H
+ 245061 t	</u
+ 245236 D$0H
+ 245331 t$8H
+ 245511 D$@H
+ 245523 T$HH
+ 245543 L$@H
+ 246103 t$ H
+ 246150 |$0H
+ 246303 t$ L
+ 246444 t$(H
+ 246504 t$(H
+ 246630 T$(H
+ 246635 t$ H
+ 247031 t$(H
+ 247174 |$0L
+ 247273 t$(H
+ 247417 t$ H
+ 247600 ATUH
+ 247711 []A\
+ 247740 AUATI
+ 250106 []A\A]
+ 250320 AWAVAUATI
+ 250363 D$81
+ 250443 D$01
+ 250466 D$(H
+ 250500 D$ H
+ 250642 =}V$
+ 250712 5UV$
+ 250731 T$ H
+ 251004 |$01
+ 251031 |$0H
+ 251046 |$ H
+ 251522 t$ H
+ 251736 L$8dH3
+ 251766 H[]A\A]A^A_
+ 252131 T$ L
+ 252176 T$ H
+ 252335 t$ H
+ 252560 AVAUI
+ 252567 ATUI
+ 252741 ?<0t
+ 253075 dH34%(
+ 253114 []A\A]A^
+ 253260 AWAVAUATUSH
+ 253320 D$81
+ 253345 D$0L
+ 253352 |$(I
+ 253643 http
+ 254007 5pP$
+ 254124 _AXt_
+ 254222 \$8dH3
+ 254247 H[]A\A]A^A_
+ 254561 |$0H
+ 254632 |$0H
+ 254653 |$0H
+ 255042 |$01
+ 255224 |$01
+ 255350 |$01
+ 255502 |$0I
+ 257105 D$(1
+ 257217 D$ H
+ 257242 L$(dH3
+ 257420 AUATI
+ 257621 ([]A\A]
+ 260151 2tTH;
+ 260465 tISH
+ 261020 AWAVL
+ 261033 AUATL
+ 261235 []A\A]A^A_
+ 261260 ATUH
+ 261313 D$(1
+ 261544 t$(dH34%(
+ 261570 0[]A\
+ 262220 AWAVA
+ 262227 AUATL
+ 262235 ->8$
+ 262271 D$(1
+ 262767 L$(dH3
+ 263014 8[]A\A]A^A_
+ 263640 AWAVA
+ 263647 AUATI
+ 263677 D$(1
+ 263727 D$ L
+ 264304 L$(dH3
+ 264331 8[]A\A]A^A_
+ 264703 |$ 1
+ 265130 \$ H
+ 265173 \$ H
+ 265514 AVAUL
+ 265634 uC[]A\A]A^
+ 266163 =(0$
+ 267120 ATUI
+ 267301 []A\
+ 267442 	vCH
+ 270244 574$
+ 270255 -.,$
+ 270262 ATUSH
+ 270421 []A\A]A^
+ 270500 AWAVL
+ 270513 AUATL
+ 270705 []A\A]A^A_
+ 270723 t#US
+ 271020 AWAVAUATI
+ 271111 tu< t
+ 271342 []A\A]A^A_
+ 272125 t%Hc
+ 273242 ;0u*H
+ 273700 AWAVI
+ 273707 AUATUSH
+ 273750 D$(1
+ 274012 L$(dH3
+ 274042 8[]A\A]A^A_
+ 274327 D$ L
+ 274450 |$ H
+ 275360 AWAVI
+ 275367 AUATI
+ 275417 L$(1
+ 275710 L$(dH3
+ 275735 8[]A\A]A^A_
+ 276102 l$ @
+ 276154 t$ L
+ 276274  uQM
+ 276471 l$ I
+ 276674 t$ L
+ 300100 AVAUI
+ 300107 ATUI
+ 300411  []A\A]A^
+ 301322 tqAUATA
+ 301414 t*Lc
+ 301453 []A\A]
+ 301476 []A\A]
+ 301520 AWAVI
+ 301527 AUATUSH
+ 301603 r;E1
+ 301654 []A\A]A^A_
+ 301734 xAD)
+ 302060 AWAVI
+ 302067 AUATUSH
+ 302165 D$ H
+ 302217 l$@1
+ 303031 []A\A]A^A_
+ 303112 D$8L
+ 303201 D$ H
+ 303245 l$0L
+ 303252 d$(I
+ 303300 AWAVAUATUSH
+ 304324 []A\A]A^A_
+ 305004 t$0H
+ 305016 ~`E1
+ 305061 T$0H
+ 305441 AWAVL
+ 305451 AUATUSH
+ 305665 t$(H
+ 306011 T$<A
+ 306260 9D$8
+ 306317 |$(K
+ 306345 D$ L
+ 306442 rDA)
+ 306503 H[]A\A]A^A_
+ 306526 []A\A]A^A_
+ 307036 O(tYD
+ 307300 AWAVAUATUSH
+ 307457 H;C 
+ 307761 r5A)
+ 310025 ([]A\A]A^A_
+ 310073 []A\A]A^A_
+ 310642 ~zAUATA
+ 310775 []A\A]
+ 311027 []A\A]
+ 311060 AWAVAUATA
+ 311106 L$ H
+ 311131 L$x1
+ 311412 D$2A
+ 311434 T$1	
+ 311614 T$11
+ 312044 |$xdH3<%(
+ 312075 []A\A]A^A_
+ 312215 l$,I
+ 312460 AWAVI
+ 312467 AUATA
+ 312522 D$(1
+ 313036 d$ D
+ 313110 D$!D
+ 313122 D$"D
+ 313134 D$#D
+ 313146 D$%D
+ 313160 D$&D
+ 313253 |$(dH3<%(
+ 313274 8[]A\A]A^A_
+ 313420 AWAVE
+ 313427 AUATI
+ 313475 D$(1
+ 314142 D$#D
+ 314154 D$%D
+ 314166 D$&D
+ 314301 |$(dH3<%(
+ 314326 8[]A\A]A^A_
+ 315120 AUATI
+ 315250 []A\A]
+ 315722 AVAUATL
+ 315732 $6UH
+ 315740 SteI
+ 316075 ]A\A]A^
+ 316300 AUATUSH
+ 316374 ;:upH
+ 316546 []A\A]
+ 316633 ?(u)H
+ 317056 9~'A
+ 317520 ATU1
+ 317562 D$(1
+ 320107 L$(dH3
+ 320133 0[]A\
+ 320340 ATU1
+ 320402 D$(1
+ 320737 L$(dH3
+ 320770 0[]A\
+ 321265 <!v,@
+ 321342 [u;H
+ 321520 ATUSH
+ 322405  []A\
+ 323120 AVAUATUSH
+ 323147 D$(1
+ 323162 D$(dH3
+ 323207 0[]A\A]A^
+ 323520 ATUI
+ 324144 	vYA
+ 324270 []A\
+ 324476 []A\
+ 324620 ATUH
+ 325014 []A\
+ 325120 AWAVI
+ 325127 AUATH
+ 325202 D$H1
+ 325323 L$HdH3
+ 325352 X[]A\A]A^A_
+ 325700 AUATI
+ 326117 []A\A]
+ 326160 AWAVI
+ 326167 AUATH
+ 326401 ([]A\A]A^A_
+ 327020 AWAVAUATA
+ 327174 T$pL
+ 330132 []A\A]A^A_
+ 331067 T$pL
+ 331077 D$PH
+ 331104 D$hH
+ 331140 |$(1
+ 331231 l$(L
+ 331302 D$HH
+ 331364 D$8D
+ 331450 L$(E1
+ 331466 |$X1
+ 332070 |$hH
+ 332151 t$xH
+ 332220 D$x1
+ 332236 d$hH
+ 332725 L$0H
+ 334100 D$XH
+ 334543 T$0H
+ 334555 L$dH
+ 335141 l$XH
+ 335146 l$0H
+ 335353 D$PH
+ 335367 T$0H
+ 336065 |$@H
+ 336364 T$8H
+ 336371 t$HL
+ 337016 t$PI
+ 337026 T$PH
+ 337457 d$ H
+ 337541 |$ L
+ 337606 d$ H
+ 340354 T$8H
+ 340553 d$ H
+ 341105 d$ H
+ 341163 |$ L
+ 342160 AWAVAUATI
+ 342222 D$81
+ 342340 L$8dH3
+ 342365 H[]A\A]A^A_
+ 342447 t$ H
+ 343625 L$ H
+ 344660 AWAVAUATA
+ 345072 ([]A\A]A^A_
+ 346520 ATUH
+ 346645 []A\
+ 347060 AWAVAUATUSH
+ 347102 L$\H
+ 347107 |$0dH
+ 347142 t$8H
+ 347147 T$PL
+ 347154 D$ H
+ 347376 []A\A]A^A_
+ 347547 D$(H
+ 347612 D$@H
+ 347627 D$`H
+ 347743 T$(1
+ 350104 D$PH
+ 350171 L;d$8t-L
+ 350443 t$`H
+ 350510 \$@H
+ 350515 |$HH
+ 351425 x	:u
+ 351550 |$0H
+ 351555 T$xL
+ 351630 |$xL
+ 351655 |$xL
+ 351707 9D$X~
+ 352071 d$xH
+ 352143 t$(H
+ 352366 t$xH
+ 352657 t$@H
+ 352710 t$(H
+ 352762 t$8H
+ 353542 t$(H
+ 353743 |$8L
+ 354462 D$ 1
+ 355564 D$ H
+ 355714 D$ H
+ 355760 L$lE
+ 355776 D$hE
+ 356174 D$ H
+ 356232 D$ H
+ 356402 L$0L
+ 356443 \$(E
+ 356471 L9l$
+ 356562 |$01
+ 356715 \$(E
+ 357043 T$XA
+ 357212 |$01
+ 360200 AVAU
+ 360211 ATUI
+ 360355 []A\A]A^
+ 361160 AWAVA
+ 361167 AUATM
+ 361234 D$X1
+ 361643 <$E1
+ 361756 L$XdH3
+ 362006 h[]A\A]A^A_
+ 362142 d$@H
+ 362355 D$@H
+ 362540 AVAUA
+ 362547 ATUI
+ 362670 _AXu8
+ 362754 []A\A]A^
+ 363055 Y^t'
+ 363114 ]A\A]A^
+ 363340 AWAVAUATUSH
+ 363443 .trH
+ 363732 .tC1
+ 364046 []A\A]A^A_
+ 364101 []A\A]A^A_
+ 364143 t3SH
+ 364240 AWAVI
+ 364247 AUATM
+ 364362 D$`H
+ 364562 ([]A\A]A^A_
+ 365540 D$`1
+ 365644 4$tVH
+ 366040 D$`H
+ 366320 AWAV
+ 366331 AUATA
+ 366665 fD9|$
+ 367470 []A\A]A^A_
+ 370001 D$ A
+ 371320 F H9
+ 371400 AWAVAUATI
+ 372026 []A\A]A^A_
+ 372056 []A\A]A^A_
+ 372320 AWAVAUATI
+ 372473 ~{Mc
+ 372717 ([]A\A]A^A_
+ 373036 ~XMc
+ 373320 AWAVAUATI
+ 373367 L$X1
+ 373376 |$ L
+ 373403 D$8H
+ 373453 |$ I
+ 373511 |$HH
+ 373567 t$ H
+ 373652 |$ 1
+ 373722 L$XdH3
+ 373747 h[]A\A]A^A_
+ 374043 ._tcf
+ 374067 t$HL
+ 374120 |$HH
+ 374317 \$PH
+ 374637 t$ H
+ 374732 L$49L$
+ 375134 t$HH
+ 375165 L$49L$
+ 375207 L$49L$
+ 375312 t$ H
+ 375455 t$ H
+ 375520 t$ H
+ 375600 AWAVL
+ 375613 AUATUSH
+ 376156 []A\A]A^A_
+ 376235 $%0D%fA
+ 376276 $%0D%fA
+ 376440 AUATI
+ 377016 []A\A]
+ 377260 AWAVA
+ 377267 AUATI
+ 377557 []A\A]A^A_
+ 400146 []A\A]A^A_
+ 400705 [trH
+ 402260 AUATI
+ 402637 ([]A\A]
+ 402743 s#H)
+ 404000 AVAUI
+ 404007 ATUI
+ 404520  []A\A]A^
+ 405300 AWAVM
+ 405307 AUATI
+ 406017 5ds#
+ 406025 5Vs#
+ 406033 5Hs#
+ 406041 5:s#
+ 406370 ([]A\A]A^A_
+ 407220 AWAVAUATUSH
+ 407254 D$(1
+ 407476 55p#
+ 407504 5'p#
+ 410035 D$  N
+ 410215 L$(dH3
+ 410245 8[]A\A]A^A_
+ 410745 D$  N
+ 412446 :t_E
+ 412542 :t#A
+ 414043 t;USH
+ 414171 ATUA
+ 414475 []A\
+ 414620 AUATI
+ 414763 []A\A]
+ 415000 AVAUH
+ 415007 ATUI
+ 415122 []A\A]A^
+ 415440 AUATUSH
+ 415654 []A\A]
+ 416353 L$ L
+ 416360 D$pH
+ 417214 L$ L
+ 417240 AWAVM
+ 417247 AUATA
+ 417327 L$ L
+ 417407 D$x1
+ 417644 L$xdH3
+ 417675 []A\A]A^A_
+ 420133 d$H1
+ 420202 D$HH
+ 420263 D$HL
+ 420331 D$0H
+ 420336 D$HH
+ 420403 D$Df
+ 420447 |$HD
+ 421132 T$HH
+ 421170 D$HE
+ 421247 D$ L
+ 421304 D$(M
+ 421520 d$H1
+ 421746 U8L9
+ 422173 |$.P
+ 422226 t$ H
+ 422242 T$8H
+ 422406 L$H1
+ 423453 t$.H
+ 423465 D$DH
+ 423622 t$0H
+ 423656 D$.H
+ 423671 t$8L
+ 423741 D$ H
+ 424065 ASAR
+ 424742 L$.L
+ 424747 d$PH
+ 425235 L$0u~H
+ 425275 L$0I
+ 426500 ATUSH
+ 426523 t$(AQAPA
+ 426573 []A\
+ 426636 []A\
+ 427043 T$0H
+ 427050 L$8L
+ 427055 D$@L
+ 427062 L$Ht7
+ 427070 )D$P
+ 427075 )L$`
+ 427102 )T$p
+ 430143 tWUSH
+ 430320 AWAVAUATUSH
+ 430351 D$(1
+ 430441 d$ H
+ 430730 \$(dH3
+ 430751 8[]A\A]A^A_
+ 431160 AWAVAUATI
+ 431214 D$(1
+ 431253 |$ E1
+ 431273 <$uY
+ 431773 \$(dH3
+ 432014 8[]A\A]A^A_
+ 432120 ATUSH
+ 432367  []A\
+ 432620 AWAVAUATUSH
+ 433122 []A\A]A^A_
+ 433170 ~UATI
+ 433312 []A\
+ 433660 ATUSH
+ 434060 =#m#
+ 434170 trHc
+ 434323 []A\
+ 434337 )[]A\
+ 434400 AWAVI
+ 434407 AUATI
+ 434451 |$HH
+ 434512 D$ H
+ 434566 D$X1
+ 434651 L$XdH3
+ 434700 h[]A\A]A^A_
+ 434731 |$HE1
+ 434746 D$PL
+ 435011 L$HI
+ 435032 =Ln#
+ 435104 T$ H
+ 435276 t$PH
+ 435303 |$ H
+ 435346 T$ H
+ 435532 |$P1
+ 435626 wP=-
+ 435652 l$0uYH
+ 435704 |$PI
+ 436122 |$PH
+ 436143 |$PI
+ 436217 L$<H
+ 436323 |$P1
+ 436767 tSvE
+ 437063 []A\
+ 437131 teE1
+ 437760 AUATI
+ 440153 []A\A]
+ 440205 ]A\A]
+ 440220 AWAVA
+ 440227 AUATM
+ 440733 X0IcM
+ 440743 ~*E;4$t6
+ 441017 D9t$
+ 441102 ([]A\A]A^A_
+ 442020 AWAVI
+ 442027 AUATE
+ 442076 4$dH
+ 442502 []A\A]A^A_
+ 442611 1137f
+ 443007 D;5B_#
+ 444010 5K]#
+ 444131 xOD;5
+ 444547 t$8L
+ 444557 D$@1
+ 444635 D$(H
+ 444673 D$(H
+ 444710 T$|L
+ 444715 d$ D
+ 444722 t$TH
+ 444727 l$XL
+ 444734 l$`I
+ 445002 t$PH
+ 445017 t$HI
+ 445167 L$0L
+ 445210 t$PH
+ 445362 d$ D
+ 445367 t$TH
+ 445374 l$XL
+ 445401 l$`H
+ 445420 L$HL
+ 445526 L$@H
+ 445614 t$|H
+ 445715 L$(L
+ 445740 t$ L
+ 446066 HcD$|H
+ 446172 t$@H
+ 446236 t$@H
+ 446256 Hct$|H
+ 446311 D$8H
+ 446512 HcD$|H
+ 447365 AVAU
+ 447376 ATUSH
+ 447422 []A\A]A^
+ 447617 Kc4#
+ 450500 AWAVH
+ 450513 AUATUSH
+ 450540 D$H1
+ 450564 t$HdH34%(
+ 450611 X[]A\A]A^A_
+ 450662 l$ E1
+ 451167 AUR1
+ 451204 ATVH
+ 451216 ARASH
+ 452162 D$h1
+ 452171 Handler H
+ 452205 D$X putH
+ 452223 for HKP 
+ 452237 hkpsH
+ 452252 URLs:
+ 452271 D$ H
+ 452276 hkp://
+ 452310 D$(H
+ 452315  hkps://H
+ 452327 D$0H
+ 452335 SupportH
+ 452346 D$8H
+ 452353 ed methoH
+ 452365 D$@H
+ 452372 ds: searH
+ 452404 D$HH
+ 452411 ch, get,H
+ 452435 D$\H
+ 452442   hkp
+ 452455 $th1
+ 452474 >ht@H
+ 452553 T$hdH3
+ 452766 ZYuFH
+ 453047 dH34%(
+ 453170 ~YATI
+ 453261 |%L9
+ 453317 []A\
+ 453360 AWAVI
+ 453367 AUATH
+ 453433 l$`H
+ 453440 L$8H
+ 453561 T$`H
+ 453776 []A\A]A^A_
+ 454053 \$ H
+ 454060 D$HE1
+ 454077 D$XH
+ 454111 D$@H
+ 454123 D$PH
+ 454130 D$(H
+ 454135 D$DH
+ 454162 |$ H
+ 454227 |$HH
+ 454316 t$8L
+ 454330 D$`A
+ 454343 L$xH
+ 454366 T$0H
+ 454431 |$XH
+ 455142 T$HH
+ 455267 D$PH
+ 455274 L$81
+ 455400 AWAVAUATI
+ 455450 \$`H
+ 455455 L$8H
+ 455601 T$`H
+ 455734 dH34%(
+ 455762 []A\A]A^A_
+ 456134 t$XL
+ 456141 l$@H
+ 456157 D$ H
+ 456164 D$HH
+ 456176 D$PH
+ 456203 D$(H
+ 456210 D$DH
+ 456242 L$ H
+ 456263 |$HE1
+ 456331 t$8L
+ 456343 D$`H
+ 456350 L$xH
+ 456373 T$0H
+ 456433 |$HD
+ 456452 |$XH
+ 456517 AVAUL
+ 456525 L$(D
+ 457103 |$PA
+ 457127 T$HH
+ 457172 D$PH
+ 457177 t$81
+ 457256 |$P1
+ 457320 AWAVAUATI
+ 457356 |$XH
+ 457416 D$h1
+ 457476 D$,teH
+ 457577 L$hdH3
+ 457630 x[]A\A]A^A_
+ 457652 |$XH
+ 457711 |$XL
+ 457716 |$`L
+ 457735 D$HH
+ 457763 D$PH
+ 457775 D$@H
+ 460007 D$<H
+ 460042 |$HH
+ 460122 t$ H
+ 460131 t$0H
+ 460167 T$ H
+ 460227 |$HD
+ 460246 |$`H
+ 460313 AWAVL
+ 460326 D$8H
+ 460517 D$H1
+ 460526 Handler H
+ 460542 D$@etchH
+ 460557 for HTTPH
+ 460576  URLs:
+ 460615  http://H
+ 460635   httpsH
+ 460646 D$ H
+ 460657 SuppH
+ 460665 D$(H
+ 460672 orted meH
+ 460704 D$0H
+ 460711 thods: fH
+ 460735 D$DtN1
+ 460756 :hu.
+ 461012 L$HdH3
+ 461120 AWAVAUATI
+ 461215 D$(1
+ 461235 |$ A
+ 461300 L$(dH3
+ 461330 8[]A\A]A^A_
+ 461366 t$ 1
+ 461446 t$(A
+ 462002 wL=-
+ 462053 |$ I
+ 462135 |$ H
+ 462156 |$ H
+ 462350 |$ 1
+ 462412 |$ A
+ 462522 |$ A
+ 463102 D$h1
+ 463111 Handler H
+ 463125 D$`e.orH
+ 463142 for FING
+ 463172   fiH
+ 463205 nger:<usH
+ 463224 er>@<hosH
+ 463236 D$ H
+ 463246 SuppoH
+ 463255 D$(H
+ 463262 rted metH
+ 463274 D$0H
+ 463301 hods: feH
+ 463313 D$8H
+ 463324 ExamH
+ 463332 D$@H
+ 463337 ple:
+ 463344   fH
+ 463351 D$HH
+ 463356 inger:joH
+ 463370 D$PH
+ 463375 e@examplH
+ 463421 D$dtBH
+ 463500 T$hdH3
+ 463560 ATUI
+ 463714  []A\
+ 464020 =V@#
+ 465163 tgATUSH
+ 465330 []A\
+ 465340 AWAVAUATUSH
+ 465663 []A\A]A^A_
+ 466520 AVAU
+ 466526 ATUA
+ 466771 ]A\A]A^
+ 467131 +[]A\A]A^
+ 467145 -N:#
+ 467226 []A\A]A^
+ 467260 AWAVI
+ 467267 AUATM
+ 470216 T$@H
+ 470256 dH34%(
+ 470304 []A\A]A^A_
+ 470353 L$<L
+ 470360 T$0H
+ 470365 D$ H
+ 470433 \$(L
+ 470440 T$0H
+ 470455 L$<H
+ 470740 AUATH
+ 471224 []A\A]
+ 471340 AWAVAUATI
+ 471411 D$81
+ 471420 userCert
+ 471443 ificate,H
+ 471462 caCertifH
+ 471501 icate,x5H
+ 471520 09caCertH
+ 471756 ldap:///H
+ 472037 ?sub
+ 472076 L$8dH3
+ 472125 H[]A\A]A^A_
+ 472360 AUATUSH
+ 472525 []A\A]
+ 472560 AWAVA
+ 472567 AUATI
+ 472630 APVI
+ 472736 []A\A]A^A_
+ 473100 AWAV1
+ 473236 AWAV1
+ 473540 AWAVI
+ 473547 AUATI
+ 473713 PAVL
+ 474050 PAVL
+ 474111 []A\A]A^A_
+ 474171 []A\A]A^A_
+ 474220 ATUH
+ 474246 D$(1
+ 474373 mailH
+ 474452 T$(dH3
+ 474502 0[]A\
+ 474632 (|(sn=*%H
+ 474644 s*)(|(cnH
+ 474656 =*%s*)(mH
+ 474676 ail=*%s*
+ 474730 D$ )))
+ 475160 AVAUI
+ 475167 ATUI
+ 475367 PAUL
+ 475524 PAUL
+ 475567 []A\A]A^
+ 475672 []A\A]A^
+ 475760 AWAVAUATI
+ 476020 |$0H
+ 476025 =n,#
+ 476057 t$(H
+ 476353 D$PH
+ 476360 D$ H
+ 476507 =;+#
+ 477333 dH34%(
+ 477361 []A\A]A^A_
+ 477751 \$<Hc
+ 477772 L$<H
+ 500015 T$(H
+ 500024 L$<H
+ 500042 |$0H
+ 500047 T$PH
+ 500334 |$(I
+ 500502 L$(t#
+ 500600 AWAVI
+ 500607 AUATI
+ 500616 USE1
+ 500766 txL9{
+ 501421 ([]A\A]A^A_
+ 501527  uNA
+ 502243 t;USH
+ 502552 iu	1
+ 502740 AWAVAUATI
+ 502763 t$ H
+ 503011 D$(1
+ 503046 D$ H
+ 503670 \$(H
+ 504051 T$8H
+ 504204 \$(dH3
+ 504231 8[]A\A]A^A_
+ 504413 |$ H
+ 504631 AUATUI
+ 505075 ]A\A]A^
+ 505114 ]A\A]A^
+ 507520 D$H1
+ 507605 t$(H
+ 507660 L$HdH3
+ 507705 P[]A\
+ 510301 t$,H
+ 510420 AWAVI
+ 510427 AUATUSH
+ 510672 PAS1
+ 511227 D$XH
+ 511234 D$HE1
+ 511301 t$@H
+ 511363 L$`H
+ 511377 L$hH
+ 511413 L$pH
+ 511440 D$`H
+ 511462 |$HI
+ 511573 D$0E1
+ 511643 t$HH
+ 511711 T$0I
+ 511740 t$HH
+ 512003 D$01
+ 512017 T$0H
+ 512034 t$HH
+ 512103 D$01
+ 512117 T$0H
+ 512327 []A\A]A^A_
+ 512425 D$hH
+ 512454 D$pH
+ 512477 D$xAVL
+ 512534 |$HE1
+ 513033 D$(H
+ 513262 |$8A
+ 513322 t$HH
+ 513401 t$HH
+ 513466 t$HH
+ 514140 AWAVI
+ 514147 AUAT
+ 514453 []A\A]A^A_
+ 514577 []A\A]A^A_
+ 515015 []A\A]A^A_
+ 515157 D$81
+ 515243 l$$l
+ 515300 t$8dH34%(
+ 515660 AWAVAUATUSH
+ 516113 []A\A]A^A_
+ 516203 L$8H
+ 516210 T$0H
+ 516215 t$(E1
+ 516261 |$@H
+ 516345 |$(H
+ 516442 t$0H
+ 516460 D$8H
+ 516515 D$XH
+ 516531 D$`H
+ 516545 D$hH
+ 516561 D$pH
+ 516575 D$xH
+ 516715 D$HPH
+ 516723 L$0H
+ 516730 |$8L
+ 516751 XZtS
+ 517042 |$@E1
+ 517102 t$@H
+ 517134 t$@H
+ 517141 |$(H
+ 517200 D$HE1
+ 517222 |$(H
+ 517315 |$(H
+ 517445 t$(H
+ 520657 T$8H
+ 520664 |$(H
+ 521360 |$HE1
+ 521460 AWAVAUATUSH
+ 521671 []A\A]A^A_
+ 521720 t$81
+ 521754 T$HH
+ 521761 t$@E1
+ 522013 |$HH
+ 522072 T$8H
+ 522136 D$`H
+ 522152 D$hH
+ 522166 D$pH
+ 522202 D$xH
+ 522345 D$XPH
+ 522353 L$HH
+ 522360 t$XH
+ 522365 |$PL
+ 522404 |$HA
+ 522454 t$PH
+ 522542 |$@H
+ 522631 |$@L
+ 522755 t$PH
+ 522777 D$XM
+ 523007 D$(tX
+ 523022 |$@H
+ 523121 |$@L
+ 523251 uUE1
+ 523260 |$HM
+ 523276 |$@H
+ 523723 |$@H
+ 524103 |$@H
+ 524265 |$@H
+ 524375 |$@H
+ 524505 |$@H
+ 524610 |$@H
+ 524734 t$PH
+ 525054 |$@H
+ 525157 |$@H
+ 525217 L$ H
+ 525310 L$ H
+ 526060 AWAVI
+ 526067 AUATUSH
+ 526701 []A\A]A^A_
+ 526737 []A\A]A^A_
+ 527040 AWAVAUATUSH
+ 527114 T$(H
+ 527121 L$0H
+ 527340 []A\A]A^A_
+ 527420 D$xL
+ 530014 D$(H
+ 530667 D$|M
+ 530717 D$PH
+ 530734 D$hJ
+ 531376 H9D$H
+ 531462 T$0H
+ 531467 t$(H
+ 531676 ,+Hc
+ 532340 D$gL
+ 532347 L$`L
+ 532354 L$XH
+ 532376 L$`L
+ 532403 L$XH
+ 532410 D$8D
+ 532434 |$@H
+ 532463 D$8E
+ 532562 |$ D
+ 532607 |$ H
+ 532774 |$|	
+ 533417 T$ H
+ 533424 |$@H
+ 533502 D$8~
+ 533530 D$8D
+ 533626 |$@H
+ 533647 T$ H
+ 533654 |$@H
+ 533675 D$ H
+ 533702 |$@H
+ 533742 |$@H
+ 534020 D$XL
+ 534042 L$8H
+ 534047 |$@H
+ 534106 |$P1
+ 534152 t$hL
+ 534246 |$|	
+ 534312 T$ H
+ 534317 |$@H
+ 534345 |$P1
+ 534411 t$hL
+ 534542 t$PH
+ 534620 |$@H
+ 534671 t$PH
+ 534747 |$@H
+ 535302 |$@H
+ 535720 AWAVAUATI
+ 536002 T$ H
+ 536131 |$0H
+ 536214 D$ H
+ 536243 D$PL
+ 536250 l$@H
+ 536312 T$@H
+ 536317 D$0H9
+ 536356 T$8H+T$HH
+ 536370 D$PH
+ 536413 D$`E1
+ 536437 D$hH
+ 536454 D$pH
+ 536471 D$xH
+ 537176 D$ H)
+ 537206 \$(H
+ 537261 D$0H
+ 537266 T$@H
+ 537322 t$8H9t$H
+ 537365 D$PH
+ 537532 []A\A]A^A_
+ 537547 D$(H
+ 537600 H9\$ 
+ 537640 AWAVAUATUSH
+ 537706 D$PL
+ 537740 D$`H
+ 537775 D$pH
+ 540002 D$ H
+ 540007 D$LH
+ 540034 T$`H
+ 540041 D$PH9
+ 540100 T$XH+T$hH
+ 540112 D$pH
+ 540321 D$ H
+ 540477 t7Hc{
+ 540676 CPI9
+ 541772 t$LD
+ 542207 L$00
+ 542254 T$(H
+ 542334 L$(H
+ 542600 D$PH
+ 542605 T$`H
+ 542630 L$XH9L$h
+ 542774 D$pH
+ 543167 C0WH
+ 543347 L$0H
+ 543501 D$H1
+ 543522 D$HdH3
+ 544172 C0L9
+ 544207  t.L
+ 544500 AUATUSH
+ 544720 []A\A]
+ 544740 AWAVI
+ 544747 AUATI
+ 545020 D$81
+ 545551 \$8dH3
+ 545601 H[]A\A]A^A_
+ 545703 L$$L
+ 546031 D$ A
+ 546041 D$0A
+ 547443 t#SH
+ 547623 AVAUATI
+ 547727 t!L;`
+ 550276 ]A\A]A^
+ 550350 ]A\A]A^
+ 550612 ?.u]
+ 550631 0tTD
+ 550713 8.t9
+ 550746 0<	wU1
+ 551122 0<	v
+ 551171 AWAVAUATA
+ 551655 4$Hc
+ 551747 []A\A]A^A_
+ 552300 AVAUI
+ 552307 ATUSH
+ 552334 <$dH
+ 552642 []A\A]A^
+ 552720 AWAV
+ 552726 AUAT
+ 553075 ?t7I
+ 553171 <$~I
+ 554021 []A\A]A^A_
+ 555160 ATUI
+ 555312 []A\
+ 555371 ATUI
+ 555662 []A\
+ 555754 AUATUH
+ 556250 ]A\A]
+ 556303 ]A\A]
+ 556320 []A\I
+ 556677 1t.D
+ 557162 ttAW
+ 557171 AVAUATA
+ 557335 []A\A]A^A_
+ 557403 tpAWAVI
+ 557414 AUATI
+ 557552 []A\A]A^A_
+ 557724 t:H)
+ 560003 []A\
+ 560020 []A\H
+ 560053 t$(H
+ 560060 T$0H
+ 560065 L$8L
+ 560072 D$@L
+ 560077 L$Ht7
+ 560105 )D$P
+ 560112 )L$`
+ 560117 )T$p
+ 560353 t$(H
+ 560360 T$0H
+ 560365 L$8L
+ 560372 D$@L
+ 560377 L$Ht7
+ 560405 )D$P
+ 560412 )L$`
+ 560417 )T$p
+ 560653 t$(H
+ 560660 T$0H
+ 560665 L$8L
+ 560672 D$@L
+ 560677 L$Ht7
+ 560705 )D$P
+ 560712 )L$`
+ 560717 )T$p
+ 561153 t$(H
+ 561160 T$0H
+ 561165 L$8L
+ 561172 D$@L
+ 561177 L$Ht7
+ 561205 )D$P
+ 561212 )L$`
+ 561217 )T$p
+ 561663 AVAUATUS
+ 562320 []A\A]A^
+ 564206 tLH9
+ 564213 AUATI
+ 564222 USwJH)
+ 564316 []A\A]
+ 564463 tkAVAUATI
+ 564610 ]A\A]A^
+ 564630 ]A\A]A^
+ 564733 t$(H
+ 564740 T$0H
+ 564745 L$8L
+ 564752 D$@L
+ 564757 L$Ht7
+ 564765 )D$P
+ 564772 )L$`
+ 564777 )T$p
+ 565141 D$ H
+ 565273 t$(H
+ 565300 T$0H
+ 565305 L$8L
+ 565312 D$@L
+ 565317 L$Ht7
+ 565325 )D$P
+ 565332 )L$`
+ 565337 )T$p
+ 565501 D$ H
+ 565720 AWAVI
+ 565727 AUATI
+ 566216 []A\A]A^A_
+ 566240 []A\A]A^A_
+ 566300 AVAUATUH
+ 566645  u!H
+ 567113 []A\A]A^
+ 567141 ]A\A]A^
+ 567500 AWAVAUATA
+ 567606  trH
+ 570327 []A\A]A^A_
+ 570347  uAI
+ 570600 ATUH
+ 570677 []A\
+ 570720 ATUI
+ 571024 []A\
+ 571042 u<USH
+ 571160 ATUI
+ 571311 []A\
+ 571327 []A\
+ 571342 u<USH
+ 571460 AVAUATUSH
+ 571715  []A\A]A^
+ 571746 t"H9
+ 572100 AUATUSH
+ 572216 []A\A]
+ 572243 tDUSH
+ 572500 ATUI
+ 572626 []A\
+ 573100 AWAVE1
+ 573107 AUATUSH
+ 573137 D$x1
+ 573146 D$pH
+ 573153 t$(H
+ 573170 L$<H
+ 573175 D$ H
+ 573202 D$(H
+ 573252 \$0H
+ 573302 @@<=vME
+ 573637 D$(H
+ 573701 T$<A
+ 573730 L$xdH3
+ 573761 []A\A]A^A_
+ 574041 |$ M
+ 574257 D$pA
+ 574346 L$ I
+ 575353 L$ I
+ 575425 D$pE1
+ 575565 D$pE1
+ 575745 D$pE1
+ 576013 |$ I
+ 576025 l$@H
+ 576032 \$HE
+ 576156 l$@E
+ 576166 \$HM
+ 576234 D$pE1
+ 576300 D$pE1
+ 576444 L$PH
+ 576455 T$`H
+ 576474 |$hH
+ 576523 L$XH
+ 576530 T$`H
+ 576535 t$PL
+ 576542 D$hH
+ 576575 D$XH
+ 576704 T$8H
+ 576711 t$(1
+ 577110 T$8H
+ 577115 t$(H
+ 600220 AVAUATUSH
+ 600260 D$(1
+ 600517 t$(dH34%(
+ 600544 0[]A\A]A^
+ 600753 D$ L
+ 601420 ATUS
+ 601566 []A\
+ 602045 []A\
+ 602744 ATUS
+ 603045 []A\A]
+ 603215 []A\A]
+ 603376 "t2H
+ 603405 []A\A]
+ 603520 AUATUS1
+ 603561 T$0H
+ 603566 L$8L
+ 603573 D$@L
+ 603653 D$ A
+ 604046 X[]A\A]
+ 604560 AWAVAUATI
+ 606110 t	D9
+ 607366 "<|t&
+ 607500 AWAV1
+ 607506 AUATI
+ 607655 m8t?A
+ 607732 8[]A\A]A^A_
+ 607763 -t:A
+ 610567  ;|$(
+ 610614 J ty
+ 611115 :-uM
+ 611305 HcT$ 
+ 612015 D$(H
+ 612201 D$ H
+ 613006 T$(H
+ 613114 :-tJL
+ 613360 AWAVAUATUSH
+ 613473 |$`1
+ 614147 D$8Ic
+ 614734 []A\A]A^A_
+ 615062 l$`A
+ 615166 l$`A
+ 615414 D$ Mc
+ 615424 \$ B
+ 615507 |$ A
+ 616044 D$ B
+ 616056 t$ L
+ 616524 \$TL
+ 616531 |$XE1
+ 616551 t$HL
+ 616556 |$8H
+ 617012 T$DA
+ 617065 Lcd$DL
+ 617327 |$Db
+ 617410 \$TL
+ 617415 t$HL
+ 617633 |$`B
+ 617741 L$ H
+ 617753 D$(Ic
+ 620011 D$(2H
+ 620017 |$ H
+ 620024 D$(H
+ 620031 T$8H
+ 620053 T$8A
+ 620064 D$ D
+ 620170 L$(H
+ 620207 L$(H
+ 620214 D$ A
+ 621200 AUATI
+ 621262 <$-uIA
+ 621714 ([]A\A]
+ 622220 AWAVAUATI
+ 622646 G H;G
+ 622734 G H;G
+ 623252 []A\A]A^A_
+ 623726 A[A^D
+ 624102 =	~"
+ 624351 =b}"
+ 624433 =0}"
+ 624513 T$0H
+ 624520 L$8L
+ 624525 D$@L
+ 624532 L$Ht7
+ 624540 )D$P
+ 624545 )L$`
+ 624552 )T$p
+ 625000 AWAVAUATI
+ 625107 -<n"
+ 625212 5={"
+ 625521 []A\A]A^A_
+ 626346 D$ H
+ 626353 D$ H
+ 626360 T$$f
+ 626402 L$"A
+ 626601 |$Pf
+ 627020 -sj"
+ 627536 D$0H
+ 627543 D$0H
+ 627576 T$2A
+ 630302 =	u"
+ 631113 T$0H
+ 631120 L$8L
+ 631125 D$@L
+ 631132 L$Ht7
+ 631140 )D$P
+ 631145 )L$`
+ 631152 )T$p
+ 631453 t$(H
+ 631460 T$0H
+ 631465 L$8L
+ 631472 D$@L
+ 631477 L$Ht7
+ 631505 )D$P
+ 631512 )L$`
+ 631517 )T$p
+ 631753 t$(H
+ 631760 T$0H
+ 631765 L$8L
+ 631772 D$@L
+ 631777 L$Ht7
+ 632005 )D$P
+ 632012 )L$`
+ 632017 )T$p
+ 632313 t$(H
+ 632320 T$0H
+ 632325 L$8L
+ 632332 D$@L
+ 632337 L$Ht7
+ 632345 )D$P
+ 632352 )L$`
+ 632357 )T$p
+ 632573 t$(H
+ 632600 T$0H
+ 632605 L$8L
+ 632612 D$@L
+ 632617 L$Ht7
+ 632625 )D$P
+ 632632 )L$`
+ 632637 )T$p
+ 633053 t$(H
+ 633060 T$0H
+ 633065 L$8L
+ 633072 D$@L
+ 633077 L$Ht7
+ 633105 )D$P
+ 633112 )L$`
+ 633117 )T$p
+ 633356 t$(H
+ 633363 T$0H
+ 633370 L$8L
+ 633375 D$@L
+ 633402 L$Ht7
+ 633410 )D$P
+ 633415 )L$`
+ 633422 )T$p
+ 633553 D$ L
+ 633700 AUATI
+ 633763 []A\A]
+ 634105 []A\A]
+ 634370 =cm"
+ 635071 <	w*1
+ 635223 t[ATU1
+ 635335 []A\
+ 636603 AVAUI
+ 636702 []A\A]A^
+ 637142 []A\A]A^
+ 637540 AUATUSH
+ 637734 <$:H
+ 637741 4$ud
+ 637746 >:u_H9
+ 640010 []A\A]
+ 640035 A8D$
+ 640140 AUATUSH
+ 640172 D$81
+ 640274 D$0:H
+ 640305 l$0I
+ 640666 t$8dH34%(
+ 640707 H[]A\A]
+ 641041 D$H1
+ 641061 ?(t#1
+ 641071 t$HdH34%(
+ 641333 <(tQ<)t]
+ 642000 AWAVAUATI
+ 642057 (10:publH
+ 642101 D$pH
+ 642106 ic-key(3
+ 642130 D$xH
+ 642135 :rsa(1:n
+ 642146 D$`)(1:H
+ 642173 D$P)))
+ 642204 D$dt*
+ 642562 t$pH
+ 642751 L$`H
+ 642770 L$ D
+ 643077 H+|$ E
+ 643145 D$PA
+ 643174 D$@A
+ 643215 L+L$
+ 643324 L$0I
+ 643333 L+D$@L
+ 643345 L$8H
+ 643352 L$(H
+ 643420 t$HH
+ 643502 t$ J
+ 643564 t$@J
+ 643637 dH3<%(
+ 643665 []A\A]A^A_
+ 643705 t$8M
+ 644242 Hc\$
+ 644300 AWAVM
+ 644307 AUATUSH
+ 644355 \$x1
+ 644364 t$PL
+ 644371 d$@H
+ 644376 \$4L
+ 644403 l$HH
+ 644410 l$8I
+ 644441 |$8H
+ 644446 t$HL
+ 644547 T$xdH3
+ 644602 []A\A]A^A_
+ 645166 D$4L
+ 645176 D$$M
+ 645245 9D$$
+ 645325 D$@H
+ 645466 L$hL
+ 645473 |$XI
+ 645541 L$(u
+ 645613 T$PH
+ 645620 D$@H
+ 645625 T$PH
+ 645632 D$@H
+ 645734 L$pL
+ 645765 D$XL
+ 646033 t$`H
+ 646051 T$pH
+ 646140 AWAVI
+ 646147 AUATUSH
+ 646172 t$ L
+ 646265 D$(1
+ 646315 L$(dH3
+ 646342 8[]A\A]A^A_
+ 646601 T$ H
+ 650160 AWAV1
+ 650166 AUATI
+ 650520 []A\A]A^A_
+ 652120 AWAVAUATUSH
+ 653167 ([]A\A]A^A_
+ 653542 =!O"
+ 655766 gfff
+ 656120 AWAVI
+ 656140 ATUSI
+ 657161 ]A\A]A^A_
+ 657430 	wuH
+ 657501 	wTH
+ 657566 :t$1
+ 660773 t#H+
+ 661123 D$H1
+ 661305 D$HdH3
+ 661366 tHH9
+ 661377 u'H9
+ 661404 |ZH)
+ 661700 ATUSH
+ 661726 D$81
+ 661752 t$8dH34%(
+ 661777 @[]A\
+ 662065 0<	w
+ 662100 0<	w
+ 662113 0<	w
+ 662126 0<	w
+ 662500 AUATUSH
+ 662702 ([]A\A]
+ 663022 T000
+ 663104 < tX<	tT
+ 663260 ATUI
+ 663315 D$81
+ 663741 t$8dH34%(
+ 663765 @[]A\
+ 664043 T$H1
+ 664201 D$HdH3
+ 664640 ATUI
+ 664674 D$81
+ 665012 L$8dH3
+ 665037 @[]A\
+ 666462 ul[H
+ 667052 =q9"
+ 667671 =B7"
+ 670106 G	PH
+ 670143 tKUSH
+ 670202 Tu/H
+ 670320 AVAUATU
+ 670462  []A\A]A^
+ 671420 AWAVAUATUS
+ 671462 D$(1
+ 671535 L$(dH3
+ 671564 8[]A\A]A^A_
+ 672074 D$ A
+ 672113 L$$A
+ 672322 L$$H
+ 672327 T$ H
+ 672507 tGSH
+ 672555 C t/
+ 672760 AWAVAUATUSH
+ 673011 D$81
+ 673165 \$8dH3
+ 673216 H[]A\A]A^A_
+ 673503 C(Mc
+ 673512 |$ L
+ 673632 T$ H
+ 673646 |$0M
+ 673733 L$"Hc
+ 674014 D$3tgI
+ 674123 tSE1
+ 674600 AUATUSH
+ 674760 ([]A\A]
+ 675024 w(Ic
+ 676633 C t1
+ 676753 AWAVAUATUSH
+ 677226 []A\A]A^A_
+ 677730 =t=A
+ 701506 ATUSA
+ 702630 []A\A]
+ 702751 []A\A]
+ 704020 AVAUATU1
+ 704104 ]A\A]A^
+ 704320 []A\A]A^
+ 704360 AVAUATU1
+ 704501 ]A\A]A^
+ 705036 []A\A]A^
+ 705200 AWAVI
+ 705207 AUATI
+ 705554 []A\A]A^A_
+ 706317 dH34%(
+ 706504 ATE1
+ 706514 ,7SH
+ 706552 tLH9
+ 706635 t.H9
+ 706750 tFUSH
+ 707711 um<@tiA
+ 707734 .tY< vUL
+ 707762  vCH
+ 710115 []A\
+ 710453 >.uL
+ 710504 	w f
+ 710566 0<	w51
+ 711011 t ~3
+ 711351 ATUS1
+ 711417 []A\E1
+ 711543 []A\
+ 711763 ATUH
+ 711771 St4A
+ 712036 []A\H
+ 712121 ]A\1
+ 712443 t_ATI
+ 712600 []A\
+ 712640 AVAUATUH
+ 712675 D$H1
+ 713006 D$8P
+ 713013 D$9K
+ 713241 l$HH
+ 713344 L$HdH3
+ 713365 P[]A\A]A^
+ 713402 D$L1
+ 713500 ATU1
+ 713522 |t:H
+ 713621 []A\
+ 714220 AWAVAUATI
+ 714330 <?ud
+ 714463 []A\A]A^A_
+ 714525 0<	wE
+ 715324 []A\A]A^A_
+ 715576 t$8H
+ 715603 T$@H
+ 715610 L$HL
+ 715615 D$PL
+ 715622 L$Xt:
+ 715630 )D$`
+ 715635 )L$p
+ 715734 D$(1
+ 716040 L$(dH3
+ 716156 t$8H
+ 716163 T$@H
+ 716170 L$HL
+ 716175 D$PL
+ 716202 L$Xt:
+ 716210 )D$`
+ 716215 )L$p
+ 716314 D$(1
+ 716425 L$(dH3
+ 717132 t8ATUH
+ 717217 +[]A\
+ 717540 T$@H
+ 717545 L$HL
+ 717552 D$PL
+ 717557 L$Xt:
+ 717565 )D$`
+ 717572 )L$p
+ 717671 D$(1
+ 720037 D$(dH3
+ 720754 dH34%(
+ 721003 $H9K8t
+ 721250 ?-uH
+ 721400 AWAVM
+ 721407 AUATI
+ 721515 []A\A]A^A_
+ 723120 AWAVAUATI
+ 723314 ([]A\A]A^A_
+ 724560 AVAUATUSH
+ 724607 D$(1
+ 724733 [pXZH
+ 724746 D$(dH3
+ 724767 0[]A\A]A^
+ 725050 D$(1
+ 725124 S8H9
+ 725141 {@H)
+ 725306 S0H9
+ 725740 L$(dH3
+ 725765 0[]A\
+ 727423 AVAUATUS
+ 727634 ]A\A]A^
+ 730042 []A\
+ 730130 []A\1
+ 730243 H9WPt
+ 730300 ATUI
+ 730337 D$81
+ 730423 L$8dH3
+ 730450 @[]A\
+ 730462 D$PH
+ 730523 CPH9
+ 730734 T$|A
+ 730741 t$xH
+ 730774 \$pH
+ 731107 D$ H
+ 731120 D$(H
+ 731131 D$0H
+ 731142 D$8H
+ 731153 D$@H
+ 731164 D$HH
+ 731175 D$PH
+ 731206 D$XH
+ 731217 D$`H
+ 731230 D$hH
+ 731241 D$pH
+ 731431 |$@I
+ 731533 D$ H
+ 731544 D$(H
+ 731555 D$0H
+ 731566 D$8H
+ 731577 D$@H
+ 731610 D$HH
+ 731621 D$PH
+ 731632 D$XH
+ 731643 D$`H
+ 731654 D$hH
+ 731665 D$pH
+ 731726 T$|A
+ 731733 t$xH
+ 732243 ATUSwYH
+ 732375 []A\
+ 732460 AWAVAUATUSH
+ 732511 D$81
+ 732733 kptY
+ 733162 L$8dH3
+ 733206 H[]A\A]A^A_
+ 733240 ATUI
+ 733422 []A\
+ 733566 H;X(u-1
+ 734060 AVAUA
+ 734067 ATUI
+ 734371 ]A\A]A^
+ 734420 AVAUATU
+ 734454 D$(1
+ 735017 L$(dH3
+ 735044 0[]A\A]A^
+ 735143 H9CPu
+ 735503 H9CP
+ 736020 AVAUA
+ 736027 ATUA
+ 736364 ]A\A]A^
+ 736400 AVAUATUSH
+ 736427 D$81
+ 737155 L$8dH3
+ 737205 @[]A\A]A^
+ 740200 AVAUI
+ 740207 ATUI
+ 740243 D$81
+ 740273 {|?~@H
+ 740325 L$8dH3
+ 740354 @[]A\A]A^
+ 741526 u(H9
+ 742000 AWAVAUATUSH
+ 742163 []A\A]A^A_
+ 742242 t$0I
+ 742247 D$8H9
+ 742305 t$@E
+ 742336 |$0A9
+ 742540 AUATUSH
+ 742763 s@Hc
+ 743006 []A\A]
+ 743230 t&H9
+ 743420 AVAUATUS
+ 743466 E(H9
+ 743532 u8E)
+ 743543 []A\A]A^
+ 743634 []A\A]A^
+ 743700 AWAVI
+ 743707 AUATUSH
+ 744022 []A\A]A^A_
+ 744467 E0H;E8
+ 744621 E0H;E8
+ 745155 E0H;E8
+ 745230 U0H;U8
+ 745310 U0H;U8
+ 745370 E0H;E8
+ 746634 M Hc
+ 750560 ATUI
+ 750614 D$(1
+ 750714 L$(dH3
+ 750740 0[]A\
+ 751020 AVAUATUS
+ 751241 ]A\A]A^
+ 751765 H9GPt
+ 752173 H9WP
+ 752240 ATUI
+ 752427 []A\
+ 752463 H9CP
+ 752703 H9WPt
+ 753003 H9WPH
+ 753260 AWAVAUATUSH
+ 753513 C0H;C8r
+ 753556 []A\A]A^A_
+ 753765 C0H;C8s
+ 754372 C8H9
+ 754462 C8H9
+ 754502 C8H)
+ 755037 t$ E1
+ 755660 AWAVI
+ 755667 AUATI
+ 755722 D$(1
+ 755731 d$ H
+ 756027 t$ H
+ 756062 L$(dH3
+ 756107 8[]A\A]A^A_
+ 757320 AWAVAUATI
+ 757426 D$ H
+ 757461 D$x1
+ 757530 |$01
+ 760035 l$HH
+ 760042 D$@H
+ 760117 |$8H
+ 760176 |$8H
+ 760440 L$xdH3
+ 760473 []A\A]A^A_
+ 760714 |$@E1
+ 761022 |$01
+ 761047 D$(H
+ 761054 t$@H
+ 761156 |$01
+ 761232 D$ H
+ 761313 D$01
+ 761774 |$@1
+ 762460 AWAVI
+ 762467 AUATI
+ 762532 |$ H
+ 762577 D$X1
+ 762644 |$ 1
+ 762675 |$ 1
+ 763050 L$XdH3
+ 763077 h[]A\A]A^A_
+ 763240 D$ 1
+ 763533 |$(H
+ 763572 |$(H
+ 763721 |$@H
+ 764142 |$ 1
+ 764206 u]E1
+ 764347 t$01
+ 764455 |$ 1
+ 765000 AUATA
+ 765051 D$(1
+ 765151 ZYuKH
+ 765221 $tDH
+ 765226 L$(dH3
+ 765251 8[]A\A]
+ 765360 AWAVH
+ 765371 AUATI
+ 765437 D$,H
+ 765605 L9<$t K
+ 765636 |$(I
+ 765645 L9<$u
+ 765726 T$,H
+ 765771 t$ H
+ 766024 Lc|$(H
+ 766064 []A\A]A^A_
+ 766114 H9D$
+ 766136 t$ H
+ 766157 L$,1
+ 766212 []A\A]A^A_
+ 766267 L$(H
+ 766323 []A\A]A^A_
+ 766544 t~AWAVI
+ 766555 AUATI
+ 766731 []A\A]A^A_
+ 767223 t{USH
+ 767245 1vPH
+ 767663 t3ATUI
+ 767723 []A\E1
+ 770015 tiAVAUATUSL
+ 770125 ]A\A]A^
+ 770154 ]A\A]A^
+ 770246 AWAVI
+ 770255 AUATUSH
+ 770565 []A\A]A^A_
+ 770637 []A\A]A^A_
+ 771021 []A\A]A^A_
+ 771152 USMc
+ 771400 AWAVAUATUSH
+ 771442 D$x1
+ 771541 t]<	A
+ 771571 tE< t
+ 771620 <	tl< thE1
+ 771723 T$xdH3
+ 771757 []A\A]A^A_
+ 772173 t:I9
+ 773532 }(H)
+ 774601 D$(I
+ 774654 Lcd$
+ 775460 AVAUA
+ 775467 ATUI
+ 775603 ]A\A]A^
+ 776022 []A\A]A^
+ 776500 AUATI
+ 776531 tcE1
+ 776647 []A\A]
+ 776740 AWAVAUATA
+ 777660 AWAVAUATUSH
+1000272 []A\A]A^A_
+1000540 AWAVA
+1000550 AUATA
+1000611 D$h1
+1001064 t$(H
+1001071 |$@1
+1001127 t$0H
+1001203 t$8H
+1001246 |$(H
+1001307 |$0H
+1001354 L$hdH3
+1001403 x[]A\A]A^A_
+1001422 |$(H
+1001612 D$(I
+1001627 D$0H
+1001651 D$81
+1002145 |$(H
+1002202 |$0H
+1002237 |$8H
+1002462 T$@H
+1002520 AWAVM
+1002527 AUATA
+1002611 []A\A]A^A_
+1003111  []A\
+1003700 AVAUI
+1003707 ATUI
+1003750 []A\A]A^
+1004571 AWAVAUATUSH
+1004720 []A\A]A^A_
+1004764 57v!
+1005151 ([]A\A]A^A_
+1005220 AWAVAUATUSH
+1005254 D$81
+1005306 t8H;X
+1005331 L$8dH3
+1005356 H[]A\A]A^A_
+1006020 AWAVAUATI
+1007146 H9D$ L
+1007303 .locf
+1007533 []A\A]A^A_
+1010260 AWAVI
+1010267 AUATUSH
+1010331 L$x1
+1010352 QvCL
+1010436 D$ H
+1010513 D$ H
+1010775 L$xdH3
+1011030 []A\A]A^A_
+1011154 tmHc
+1011643 D$ H9
+1012660 AWAVAUATUS1
+1012762 t$@E1
+1013012 t$,H
+1013024 t$0H
+1013343 dH34%(
+1013373 []A\A]A^A_
+1014221 D$0D
+1014763 H;E(
+1015620 AWAVAUATUSH
+1015651 D$(1
+1015715 D$ H
+1016134 uJD9
+1016161 <.H)
+1016204 L$(dH3
+1016231 8[]A\A]A^A_
+1016307 T$ H
+1016500 ATUE1
+1016560 []A\
+1016623 AUATUSL
+1016633 d$(L
+1016640 T$0H
+1017351 []A\A]
+1017423 ]A\A]
+1017624 <(th<)t|1
+1020060 AWAVA
+1020067 AUATL
+1020212 []A\A]A^A_
+1020404 gnutls:L%d: %.*s
+1020426 advanced
+1020437 expert
+1020446 guru
+1020453 valid debug levels are: %s
+1020507 none
+1020514 error opening '%s': %s
+1020544 error reading '%s': %s
+1020574 /.~\
+1020601 --ocsp-signer
+1020617 can't open '%s': %s
+1020644 %s:%u: read error: %s
+1020673 can't access '%s': %s
+1020722 starting housekeeping
+1020751 ready with housekeeping
+1021002 @DIRMNGR@ (@GNUPG@)
+1021026 2.1.11
+1021035 GNU/Linux
+1021047 http://bugs.gnupg.org
+1021075 1.3.14.3.2.26
+1021113 tor-mode
+1021124 error enabling Tor mode: %s
+1021161 handler nonce check FAILED
+1021215 handler for fd %d started
+1021250 handler for fd %d terminated
+1021306 usage: %s [options] 
+1021333 option file '%s': %s
+1021361 dirmngr_ldapservers.conf
+1021412 1.6.0
+1021420 libgcrypt
+1021432 1.2.0
+1021440 libksba
+1021450 SHELL
+1021456 dirmngr.conf
+1021473 reading options from '%s'
+1021526 /etc/dirmngr
+1021543 /etc/
+1021551 GnuPG
+1021557 --server
+1021570 ... okay
+1021602 --daemon
+1021613 can't create socket: %s
+1021644 socket name '%s' is too long
+1021702 listen() failed: %s
+1021727 listening on socket '%s'
+1021761 error forking process: %s
+1022014 DIRMNGR_INFO
+1022031 %s=%s:%lu:1
+1022045 out of core
+1022062 setenv %s;
+1022076 %s; export %s;
+1022116 setsid() failed: %s
+1022143 chdir to / failed: %s
+1022172 shutdown forced
+1022213 %s %s stopped
+1022232 accept failed: %s
+1022255 conn fd=%d
+1022270 --list-crls
+1022304 --fetch-crl URL
+1022324 --flush
+1022334 gpgconf-dirmngr.conf:%lu:"%s
+1022372 verbose:%lu:
+1022410 quiet:%lu:
+1022424 debug-level:%lu:"none
+1022453 log-file:%lu:
+1022472 force:%lu:
+1022506 ldapserverlist-file:%lu:"%s
+1022543 ldaptimeout:%lu:%u
+1022567 max-replies:%lu:%u
+1022613 allow-ocsp:%lu:
+1022634 ocsp-responder:%lu:
+1022661 ocsp-signer:%lu:
+1022703 faked-system-time:%lu:
+1022733 no-greeting:%lu:
+1022755 disable-http:%lu:
+1023000 disable-ldap:%lu:
+1023023 honor-http-proxy:%lu
+1023051 http-proxy:%lu:
+1023072 only-ldap-proxy:%lu:
+1023120 ignore-ldap-dp:%lu:
+1023145 ignore-http-dp:%lu:
+1023172 ignore-ocsp-service-url:%lu:
+1023230 ignore-ocsp-servic-url:%lu:
+1023265 use-tor:%lu:
+1023303 keyserver:%lu:
+1023323 x509
+1023330 crypto
+1023337 memory
+1023346 memstat
+1023356 hashing
+1023372 lookup
+1023401 @Commands:
+1023416 load-crl
+1023427 fetch-crl
+1023441 |URL|fetch a CRL from URL
+1023473 shutdown
+1023504 shutdown the dirmngr
+1023531 flush the cache
+1023551 gpgconf-list
+1023570 gpgconf-test
+1023607 Options:
+1023622 verbose
+1023632 be somewhat more quiet
+1023665 csh-style command output
+1023716 |FILE|read options from FILE
+1023753 debug-level
+1023767 no-detach
+1024001 log-file
+1024012 batch
+1024020 run without asking a user
+1024052 force
+1024060 allow-ocsp
+1024073 allow sending OCSP requests
+1024127 disable-http
+1024144 inhibit the use of HTTP
+1024174 disable-ldap
+1024211 inhibit the use of LDAP
+1024241 ignore-http-dp
+1024260 ignore-ldap-dp
+1024277 ignore-ocsp-service-url
+1024327 only-ldap-proxy
+1024347 ldapserverlist-file
+1024373 add-servers
+1024407 ldaptimeout
+1024423 ocsp-responder
+1024442 ocsp-max-clock-skew
+1024466 ocsp-max-period
+1024506 ocsp-current-period
+1024532 max-replies
+1024546 nameserver
+1024561 keyserver
+1024573 hkp-cacert
+1024606 use-tor
+1024616 socket-name
+1024632 faked-system-time
+1024654 debug-all
+1024666 gnutls-debug
+1024703 debug-wait
+1024716 no-greeting
+1024732 ldap-wrapper-program
+1024757 http-wrapper-program
+1025004 honor-http-proxy
+1025025 ignore-cert-extension
+1025060 invalid debug-level '%s' given
+1025120 none, basic, advanced, expert, guru
+1025170 %s:%u: line too long - skipped
+1025230 %s:%u: invalid fingerprint detected
+1025300 %s:%u: garbage at end of line ignored
+1025350 housekeeping is already going on
+1025420 Please report bugs to <@EMAIL@>.
+1025470 Usage: @DIRMNGR@ [options] (-h for help)
+1025550 Syntax: @DIRMNGR@ [options] [command [args]]
+1025625 Keyserver, CRL, and OCSP access for @GNUPG@
+1025710 (is your Libassuan recent enough?)
+1025760 error reading nonce on fd %d: %s
+1026030 SIGHUP received - re-reading configuration and flushing caches
+1026130 %s is too old (need %s, have %s)
+1026200 gnutls_global_init failed: %s
+1026240 Note: no default option file '%s'
+1026310 WARNING: ***************************************
+1026400 WARNING: Tor mode (--use-tor) MAY NOT FULLY WORK!
+1026470 Note: '%s' is not considered an option
+1026540 NOTE: DirMngr is now a proper part of %s.  The configuration and other directory names changed.  Please check that no other version of dirmngr is still installed.  To disable this warning, remove the directory '/etc/dirmngr'.
+1027110 WARNING: running with faked system time: 
+1027170 waiting for debugger - my pid is %u .....
+1027250 colons are not allowed in the socket name
+1027330 error preparing socket '%s': %s
+1027400 redirecting socket '%s' to '%s'
+1027450 error getting nonce for the socket
+1027520 error binding socket to '%s': %s
+1027570 error preparing housekeeping thread: %s
+1027650 error spawning housekeeping thread: %s
+1027720 SIGUSR2 received - no action defined
+1027770 SIGTERM received - shutting down ...
+1030040 SIGTERM received - still %d active connections
+1030120 SIGINT received - immediate shutdown
+1030170 signal %d received - no action defined
+1030240 npth_pselect failed: %s - waiting 1s
+1030310 error spawning connection handler: %s
+1030360 fetching CRL from '%s' failed: %s
+1030430 processing CRL from '%s' failed: %s
+1030500 run in server mode (foreground)
+1030540 run in daemon mode (background)
+1030600 list the contents of the CRL cache
+1030650 |FILE|load CRL from FILE into cache
+1030720 |LEVEL|set the debugging level to LEVEL
+1030770 do not detach from the console
+1031030 |FILE|write server mode logs to FILE
+1031100 force loading of outdated CRLs
+1031140 ignore HTTP CRL distribution points
+1031210 ignore LDAP CRL distribution points
+1031260 ignore certificate contained OCSP service URLs
+1031340 |URL|redirect all HTTP requests to URL
+1031410 |HOST|use HOST for LDAP queries
+1031450 do not use fallback hosts with --ldap-proxy
+1031530 |FILE|read LDAP server list from FILE
+1031600 add new servers discovered in CRL distribution points to serverlist
+1031710 |N|set LDAP timeout to N seconds
+1031760 |URL|use OCSP responder at URL
+1032020 |FPR|OCSP response signed by FPR
+1032070 |N|do not return more than N items in one query
+1032150 |FILE|use the CA certificates in FILE for HKP over TLS
+1032240 route all network traffic via Tor
+1032312 (See the "info" manual for a complete listing of all commands and options)
+1033040 force-crl-refresh
+1033062 audit-events
+1033077 honor-keyserver-url-used
+1033134 error sending data: %s
+1033166 command '%s' failed: %s
+1033217 command '%s' failed: %s <%s>
+1033261 socket_name
+1033275 - Tor mode is enabled
+1033323 Tor not running
+1033343 NO_TOR
+1033352 Tor mode is NOT enabled
+1033402 dnsinfo
+1033412 unknown value for WHAT
+1033441 TARGETCERT
+1033454 assuan_inquire failed: %s
+1033507 --force-default-responder
+1033541 server.c
+1033552 --only-ocsp
+1033566 serialno missing in cert ID
+1033622 SENDCERT
+1033633 KEYBLOCK
+1033644 KEYBLOCK_INFO
+1033662 --pka
+1033670 --dane
+1033677 missing arguments
+1033721 IPGP
+1033726 unknown subtype
+1033746 error enabling Tor mode
+1033776 no mailbox in user id
+1034024 ._pka.
+1034033 ._openpgpkey.
+1034055 --url
+1034063 ldapserver missing
+1034106 [default]
+1034120 --single
+1034131 --cache-only
+1034146 fetch_cert_by_url failed: %s
+1034204 cmd_lookup: no data
+1034231 start_cert_fetch failed: %s
+1034266  (truncated)
+1034303 fetch_next_cert failed: %s
+1034337 max_replies %d exceeded
+1034370 TRUNCATED
+1034402 SENDISSUERCERT
+1034421 serial_hex() failed
+1034446 SENDCERT_SKI
+1034463 ISTRUSTED %s
+1034500 DNS_CERT
+1034511 [none]
+1034520 Home: %s
+1034531 Config: %s
+1034547 Assuan accept problem: %s
+1034602 Assuan processing failed: %s
+1034640 --clear
+1034650 --help
+1034657 --resolve
+1034671 --hosttable
+1034705 --alive
+1034715 no support for zombies
+1034744 no permission to use --dead
+1035000 name of host missing
+1035025 KEYSERVER
+1035037 tick
+1035044 PROGRESS
+1035055 LDAPSERVER
+1035070 ISVALID
+1035100 CHECKCRL
+1035111 CHECKOCSP
+1035123 LOOKUP
+1035132 LOADCRL
+1035142 LISTCRLS
+1035153 CACHECERT
+1035165 VALIDATE
+1035176 KS_SEARCH
+1035210 KS_GET
+1035217 KS_FETCH
+1035230 KS_PUT
+1035237 GETINFO
+1035247 KILLDIRMNGR
+1035263 RELOADDIRMNGR
+1035310 no permission to reload this process
+1035360 can't do that whilst running as system service
+1035440 no permission to kill this process
+1035510 assuan_inquire(%s) failed: %s
+1035550 - System resolver w/o Tor support
+1035620 error setting up a data stream
+1035660 crl_cache_isvalid returned invalid code
+1035740 either --pka or --dane may be given
+1036010 cmd_lookup: trying %s:%d base=%s
+1036060 cmd_lookup: returning one cert%s
+1036130 get_cert_local called w/o context
+1036200 get_issuing_cert_local called w/o context
+1036260 get_cert_local_ski called w/o context
+1036330 get_cert_local_ski called with insufficient arguments
+1036420 can't allocate enough memory: %s
+1036470 can't allocate control structure: %s
+1036540 failed to allocate assuan context: %s
+1036610 failed to initialize the server: %s
+1036660 connection from process %ld (%ld:%ld)
+1036730 oops: connection control structure still referenced (%d)
+1037030 failed to the register commands with Assuan: %s
+1037120 Bad keyserver configuration in dirmngr.conf
+1037200 cmd_checkcrl
+1037220 cmd_checkocsp
+1037240 Dirmngr 2.1.11 at your service
+1037300 RELOADDIRMNGR
+1037317 This command is an alternative to SIGHUP
+1037370 to reload the configuration.
+1037440 KILLDIRMNGR
+1037455 This command allows a user - given sufficient permissions -
+1037551 to kill this dirmngr process.
+1037640 GETINFO <what>
+1037660 Multi purpose command to return certain information.  
+1037747 Supported values of WHAT are:
+1040006 version     - Return the version of the program.
+1040067 pid         - Return the process id of the server.
+1040152 tor         - Return OK if running in Tor mode
+1040231 dnsinfo     - Return info about the DNS resolver
+1040312 socket_name - Return the name of the socket.
+1040400 KS_PUT
+1040410 Send a key to the configured OpenPGP keyservers.  The actual key material
+1040522 is then requested by Dirmngr using
+1040566   INQUIRE KEYBLOCK
+1040612 The client shall respond with a binary version of the keyblock (e.g.,
+1040720 the output of `gpg --export KEYID').  For LDAP
+1040777 keyservers Dirmngr may ask for meta information of the provided keyblock
+1041110 using:
+1041120   INQUIRE KEYBLOCK_INFO
+1041151 The client shall respond with a colon delimited info lines (the output
+1041260 of 'for x in keys sigs; do gpg --list-$x --with-colons KEYID; done').
+1041400 KS_FETCH <URL>
+1041420 Get the key(s) from URL.
+1041500 KS_GET {<pattern>}
+1041524 Get the keys matching PATTERN from the configured OpenPGP keyservers
+1041631 (see command KEYSERVER).  Each pattern should be a keyid, a fingerprint,
+1041742 or an exact name indicated by the '=' prefix.
+1042040 KS_SEARCH {<pattern>}
+1042067 Search the configured OpenPGP keyservers (see command KEYSERVER)
+1042170 for keys matching PATTERN
+1042240 KEYSERVER [<options>] [<uri>|<host>]
+1042305 Options are:
+1042322   --help
+1042333   --clear      Remove all configured keyservers
+1042413   --resolve    Resolve HKP host names and rotate
+1042474   --hosttable  Print table of known hosts and pools
+1042560   --dead       Mark <host> as dead
+1042623   --alive      Mark <host> as alive
+1042670 If called without arguments list all configured keyserver URLs.
+1042770 If called with an URI add this as keyserver.  Note that keyservers
+1043073 are configured on a per-session base.  A default keyserver may already be
+1043205 present, thus the "--clear" option must be used to get full control.
+1043312 If "--clear" and an URI are used together the clear command is
+1043411 obviously executed first.  A RESET command does not change the list
+1043515 of configured keyservers.
+1043600 VALIDATE
+1043612 Validate a certificate using the certificate validation function
+1043713 used internally by dirmngr.  This command is only useful for
+1044010 debugging.  To get the actual certificate, this command immediately
+1044114 inquires it using
+1044137   INQUIRE TARGETCERT
+1044165 and the caller is expected to return the certificate for the
+1044262 request as a binary blob.
+1044340 CACHECERT
+1044353 Put a certificate into the internal cache.  This command might be
+1044455 useful if a client knows in advance certificates required for a
+1044555 test and wants to make sure they get added to the internal cache.
+1044657 It is also helpful for debugging.  To get the actual certificate,
+1044761 this command immediately inquires it using
+1045035   INQUIRE TARGETCERT
+1045063 and the caller is expected to return the certificate for the
+1045160 request as a binary blob.
+1045240 LISTCRLS
+1045252 List the content of all CRLs in a readable format.  This command is
+1045356 usually used by gpgsm using the invocation "gpgsm --call-dirmngr
+1045457 listcrls".  It may also be used directly using "dirmngr
+1045547 --list-crls".
+1045600 LOADCRL [--url] <filename|url>
+1045640 Load the CRL in the file with name FILENAME into our cache.  Note
+1045742 that FILENAME should be given with an absolute path because
+1046036 Dirmngrs cwd is not known.  With --url the CRL is directly loaded
+1046140 from the given URL.
+1046165 This command is usually used by gpgsm using the invocation "gpgsm
+1046267 --call-dirmngr loadcrl <filename>".  A direct invocation of Dirmngr
+1046373 is not useful because gpgsm might need to callback gpgsm to ask for
+1046477 the CA's certificate.
+1046540 LOOKUP [--url] [--single] [--cache-only] <pattern>
+1046624 Lookup certificates matching PATTERN. With --url the pattern is
+1046724 expected to be one URL.
+1046755 If --url is not given:  To allow for multiple patterns (which are ORed)
+1047065 quoting is required: Spaces are translated to "+" or "%20";
+1047161 obviously this requires that the usual escape quoting rules are applied.
+1047273 If --url is given no special escaping is required because URLs are
+1047376 already escaped this way.
+1047431 If --single is given the first and only the first match will be
+1047531 returned.  If --cache-only is _not_ given, no local query will be
+1047633 done.
+1047642 If --cache-only is given no external lookup is done so that only
+1047743 certificates from the cache may get returned.
+1050040 CHECKOCSP [--force-default-responder] [<fingerprint>]
+1050127 Check whether the certificate with FINGERPRINT (SHA-1 hash of the
+1050231 entire X.509 certificate blob) is valid or not by asking an OCSP
+1050332 responder responsible for this certificate.  The optional
+1050424 fingerprint may be used for a quick check in case an OCSP check has
+1050530 been done for this certificate recently (we always cache OCSP
+1050626 responses for a couple of minutes). If the fingerprint has not been
+1050732 given or there is no cached result, the function inquires the
+1051030 certificate using an
+1051056    INQUIRE TARGETCERT
+1051105 and the caller is expected to return the certificate for the
+1051202 request (which should match FINGERPRINT) as a binary blob.
+1051275 Processing then takes place without further interaction; in
+1051371 particular dirmngr tries to locate other required certificates by
+1051473 its own mechanism which includes a local certificate store as well
+1051576 as a list of trusted root certifciates.
+1051647 If the option --force-default-responder is given, only the default
+1051752 OCSP responder will be used and any other methods of obtaining an
+1052054 OCSP responder URL won't be used.
+1052117 The return value is the usual gpg-error code or 0 for ducesss;
+1052216 i.e. the certificate validity has been confirmed by a valid CRL.
+1052340 CHECKCRL [<fingerprint>]
+1052372 Check whether the certificate with FINGERPRINT (SHA-1 hash of the
+1052474 entire X.509 certificate blob) is valid or not by consulting the
+1052575 CRL responsible for this certificate.  If the fingerprint has not
+1052677 been given or the certificate is not known, the function 
+1052771 inquires the certificate using an
+1053034   INQUIRE TARGETCERT
+1053062 and the caller is expected to return the certificate for the
+1053157 request (which should match FINGERPRINT) as a binary blob.
+1053252 Processing then takes place without further interaction; in
+1053346 particular dirmngr tries to locate other required certificate by
+1053447 its own mechanism which includes a local certificate store as well
+1053552 as a list of trusted root certificates.
+1053623 The return value is the usual gpg-error code or 0 for ducesss;
+1053722 i.e. the certificate validity has been confirmed by a valid CRL.
+1054040 ISVALID [--only-ocsp] [--force-default-responder] <certificate_id>|<certificate_fpr>
+1054166 This command checks whether the certificate identified by the
+1054264 certificate_id is valid.  This is done by consulting CRLs or
+1054361 whatever has been configured.  Note, that the returned error codes
+1054464 are from gpg-error.h.  The command may callback using the inquire
+1054566 function.  See the manual for details.
+1054636 The CERTIFICATE_ID is a hex encoded string consisting of two parts,
+1054742 delimited by a single dot.  The first part is the SHA-1 hash of the
+1055046 issuer name and the second part the serial number.
+1055132 Alternatively the certificate's fingerprint may be given in which
+1055234 case an OCSP request is done before consulting the CRL.
+1055325 If the option --only-ocsp is given, no fallback to a CRL check will
+1055431 be used.
+1055443 If the option --force-default-responder is given, only the default
+1055546 OCSP responder will be used and any other methods of obtaining an
+1055650 OCSP responder URL won't be used.
+1055740 LDAPSERVER <data>
+1055763 Add a new LDAP server to the list of configured LDAP servers.
+1056061 DATA is in the same format as expected in the configure file.
+1056200 DNS_CERT <subtype> <name>
+1056232 DNS_CERT --pka <user_id>
+1056263 DNS_CERT --dane <user_id>
+1056316 Return the CERT record for <name>.  <subtype> is one of
+1056406   *     Return the first record of any supported subtype
+1056477   PGP   Return the first record of subtype PGP (3)
+1056562   IPGP  Return the first record of subtype IPGP (6)
+1056646 If the content of a certifciate is available (PGP) it is returned
+1056750 by data lines.  Fingerprints and URLs are returned via status lines.
+1057055 In --pka mode the fingerprint and if available an URL is returned.
+1057160 In --dane mode the key is returned from RR type 61
+1057243 creating directory '%s'
+1057274 crls.d
+1057303 dirmngr-cache.d
+1057323 ignoring database dir '%s'
+1057357 failed to remove '%s': %s
+1057412 removing cache file '%s'
+1057444 not removing file '%s'
+1057474 error closing cache file: %s
+1057532 can't hash '%s': %s
+1057562 DIR.txt
+1057572 %.100s/%.100s:%d
+1057613 error hashing '%s': %s
+1057663 crlcache.c
+1057676 eprev
+1057704 strlen (issuer_hash) == 40
+1057737 v:%d:
+1057746 opening cache file '%s'
+1060002 [missing]
+1060014 [system]
+1060025  Issuer:	%s
+1060042  Issuer Hash:	%s
+1060064  This Update:	%s
+1060106  Next Update:	%s
+1060130  CRL Number :	%s
+1060152  AuthKeyId  :	%s
+1060175              	
+1060214  Trust Check:	%s
+1060236 :	 reasons( 
+1060253 unspecified 
+1060270 key_compromise 
+1060310 ca_compromise 
+1060327 affiliation_changed 
+1060354 superseeded
+1060370 cessation_of_operation
+1060417 certificate_hold
+1060440 other
+1060446 ) rdate: %.15s
+1060466 End CRL dump
+1060504 entry->lineno
+1060522 no issuer DN in '%s' line %u
+1060560 oops: invalid S/N
+1060603 unknown
+1060613 ksba_crl_new failed: %s
+1060644 crl-tmp-%s-%u-%p.db.tmp
+1060674 ksba_crl_parse failed: %s
+1060727 unknown hash algorithm '%s'
+1060764 hash.cert
+1060776 error getting CRL item: %s
+1061032 CRL issuer certificate 
+1061067 not found
+1061102 crl_issuer_cert
+1061122 gcry_pk_verify: %s
+1061146 crl_parse_insert failed: %s
+1061203 creating cache file '%s'
+1061235 DIR-tmp-%s-%u-%p.txt.tmp
+1061266 # Invalid line detected: 
+1061320 error writing '%s': %s
+1061350 error closing '%s': %s
+1061400 checking distribution points
+1061436 ldap:
+1061444 ldaps:
+1061453 http:
+1061461 https:
+1061470 fetching CRL from '%s'
+1061520 crl_fetch via DP failed: %s
+1061555 inserting CRL (reader %p)
+1061610 default location(s)
+1061640 error creating directory '%s': %s
+1061710 error reading directory '%s': %s
+1061760 error setting up MD5 hash context: %s
+1062030 calling unlock_db_file on a closed file
+1062110 calling unlock_db_file on an unlocked file
+1062170 failed to open cache dir file '%s': %s
+1062240 error creating new cache dir file '%s': %s
+1062320 error writing new cache dir file '%s': %s
+1062400 error closing new cache dir file '%s': %s
+1062460 new cache dir file '%s' created
+1062530 failed to re-open cache dir file '%s': %s
+1062610 too many open cache files; can't open anymore
+1062670 invalid formatted checksum for '%s'
+1062740 error opening cache file '%s': %s
+1063010 error initializing cache file '%s' for reading: %s
+1063100 CRL cache has not yet been initialized
+1063150 no CRL available for issuer id %s
+1063220 cached CRL for issuer id %s too old; update required
+1063310 force-crl-refresh active and %d minutes passed for issuer id %s; update required
+1063440 force-crl-refresh active for issuer id %s; update required
+1063540 available CRL for issuer ID %s can't be used
+1063620 cached CRL for issuer id %s tampered; we need to update
+1063720 WARNING: invalid cache record length for S/N 
+1064000 problem reading cache record for S/N %s: %s
+1064060 S/N %s is not valid; reason=%02X  date=%.15s
+1064140 S/N %s is valid, it is not listed in the CRL
+1064220 error getting data from cache file: %s
+1064270 inconsistent data on user trust check
+1064340 no system trust and client does not trust either
+1064430 --------------------------------------------------------
+1064530 Begin CRL dump (retrieved via %s)
+1064600  ERROR: The CRL will not be used because it was still too old after an update!
+1064720  ERROR: The CRL will not be used due to an unknown critical extension!
+1065030  ERROR: The CRL will not be used
+1065100  ERROR: This cached CRL may have been tampered with!
+1065170  WARNING: invalid cache record length
+1065240 problem reading cache record: %s
+1065310 problem reading cache key: %s
+1065350 error reading cache entry from db: %s
+1065420 first record of '%s' is not the version
+1065500 old version of cache directory - cleaning up
+1065560 old version of cache directory - giving up
+1065640 crl cache has already been initialized - not doing twice
+1065740 extra field detected in crl record of '%s' line %u
+1066030 invalid line detected in '%s' line %u
+1066100 duplicate entry detected in '%s' line %u
+1066160 unsupported record type in '%s' line %u skipped
+1066250 invalid issuer hash in '%s' line %u
+1066320 invalid timestamp in '%s' line %u
+1066370 WARNING: invalid cache file hash in '%s' line %u
+1066460 detected errors in cache dir file
+1066530 please check the reason and manually delete that file
+1066620 failed to create a new cache object: %s
+1066700 oops: issuer missing in certificate
+1066750 oops: S/N missing in certificate
+1067020 cache_isvalid returned invalid status code %d
+1067100 ksba_crl_set_reader failed: %s
+1067140 removed stale temporary cache file '%s'
+1067220 problem removing stale temporary cache file '%s': %s
+1067310 error creating temporary cache file '%s': %s
+1067370 gcry_md_open for algorithm %d failed: %s
+1067450 error getting update times of CRL: %s
+1067520 update times of this CRL: this=%s next=%s
+1067600 nextUpdate not given; assuming a validity period of one day
+1067700 error inserting item into temporary cache file: %s
+1067770 no CRL issuer found in CRL: %s
+1070030 locating CRL issuer certificate by authorityKeyIdentifier
+1070130 got an invalid S-expression from libksba
+1070210 converting S-expression failed: %s
+1070260 (data(flags pkcs1)(hash %s %b))
+1070320 creating S-expression failed: %s
+1070370 CRL signature verification failed: %s
+1070440 error checking validity of CRL issuer certificate: %s
+1070530 crl_parse_insert: unknown stop reason
+1070600 error finishing temporary cache file '%s': %s
+1070660 error closing temporary cache file '%s': %s
+1070740 WARNING: new CRL still too old; it expired on %s - loading anyway
+1071050 new CRL still too old; it expired on %s
+1071130 unknown critical CRL extension %s
+1071200 problem renaming '%s' to '%s': %s
+1071250 failed to create temporary cache dir file '%s': %s
+1071340 # Next line added by another process; our pid is %lu
+1071430 error renaming '%s' to '%s': %s
+1071500 updating the DIR file failed - cache entry will get lost with the next program start
+1071630 error reading CRL extensions: %s
+1071700 no issuer name and no distribution point
+1071760 crl_cache_insert via DP failed: %s
+1072030 no distribution point - trying issuer name
+1072110 fetching CRL from default location
+1072160 crl_fetch via issuer failed: %s
+1072230 crl_cache_insert via issuer failed: %s
+1072440 crl_parse_insert
+1072470 unlock_db_file
+1072520 make_db_file_name
+1072550 open_dir
+1072570 2.5.29.35
+1072610 2.5.29.20
+1072622 Location
+1072633 too many redirections
+1072662 error retrieving '%s': %s
+1072715 certificateRevocationList
+1072747 cACertificate
+1072770 using "http" instead of "https"
+1073040 CRL access not possible due to disabled %s
+1073120 error initializing reader object: %s
+1073170 reader to file mapping table full - waiting
+1073250 error retrieving '%s': http status %u
+1073320 CRL access not possible due to Tor mode
+1073400 URL '%s' redirected to '%s' (%u)
+1073450 certificate search not possible due to disabled %s
+1073540 can't acquire write lock on the certificate cache: %s
+1073630 can't release lock on the certificate cache: %s
+1073720 can't acquire read lock on the certificate cache: %s
+1074010 oops: ksba_cert_hash failed: %s
+1074060 dropping %u certificates from the cache
+1074140 can't access directory '%s': %s
+1074210 can't parse certificate '%s': %s
+1074260 certificate '%s' already cached
+1074330 trusted certificate '%s' loaded
+1074400 error loading certificate '%s': %s
+1074450 permanently loaded certificates: %u
+1074520     runtime cached certificates: %u
+1074570 can't initialize certificate cache lock: %s
+1074650 error caching certificate: %s
+1074710 invalid SHA1 fingerprint string '%s'
+1074760 find_cert_bysn: certificate not returned by caller - doing lookup
+1075070 error fetching certificate by S/N: %s
+1075140 find_cert_bysn: Ooops: issuer DN does not match
+1075230 find_cert_bysubject: certificate not in ocsp_certs
+1075320 find_cert_bysubject: certificate not in cache
+1075400 find_cert_bysubject: certificate not returned by caller - doing lookup
+1075510 error fetching certificate by subject: %s
+1075570 find_cert_bysubject: subject DN does not match
+1075650 no issuer found in certificate
+1075710 error getting authorityKeyIdentifier: %s
+1075770 not found using authorityKeyIdentifier
+1076040 (%u:
+1076045 gcry_md_open failed: %s
+1076076 certcache.c
+1076112 idx < 256
+1076124 .crt
+1076131 .der
+1076136 certificate '%s' loaded
+1076167   SHA1 fingerprint = %s
+1076220    issuer =
+1076234   subject =
+1076250 trusted-certs
+1076266 extra-certs
+1076302 certificate already cached
+1076336 certificate cached
+1076362 01234567890abcdefABCDEF
+1076412 :0123456789abcdefABCDEF
+1076442    considering certificate (#
+1076500    found
+1076512    considering certificate (/
+1077160 put_cert
+1077171 %02X:
+1077177 [error]
+1077215 BEGIN Certificate '%s':
+1077246      serial: %s
+1077267   notBefore: 
+1077305    notAfter: 
+1077323      issuer: 
+1077341     subject: 
+1077357   hash algo: %s
+1077400   SHA1 fingerprint: %s
+1077430 END Certificate
+1077454  [invalid]
+1077467 subject
+1077502 expected hostname: %s
+1077531 server[%u]
+1077544 malloc failed: %s
+1077567 bad URL encoding detected
+1077622 rw,samethread
+1077640 PGP PUBLIC KEY BLOCK
+1077670 invalid canonical S-expression found
+1077740 error parsing cert for logging: %s
+1100004 ONLY_VALID_IF_CERT_VALID
+1100035 [unknown status]
+1100056 success
+1100066 key compromise
+1100105 unspecified
+1100121 CA compromise
+1100137 affiliation changed
+1100163 cessation of operation
+1100212 certificate on hold
+1100236 removed from CRL
+1100257 privilege withdrawn
+1100303 AA compromise
+1100321 no status
+1100333 other (unknown)
+1100353 replay detected
+1100373 unauthorized
+1100410 must sign request
+1100432 try later
+1100444 internal error
+1100463 malformed
+1100475 using OCSP responder '%s'
+1100530 error connecting to '%s': %s
+1100566 ocsp.c
+1100575 nbytes < bufsize
+1100616 responder certificate 
+1100645 '/%s' 
+1100654 validated_at
+1100671 good
+1100700 not signed by a default OCSP signer's certificate
+1100770 issuer certificate not found: %s
+1101040 caller did not return the target certificate
+1101120 caller did not return the issuing certificate
+1101200 failed to allocate OCSP context: %s
+1101250 can't get authorityInfoAccess: %s
+1101320 no default OCSP responder defined
+1101370 no default OCSP signer defined
+1101430 using default OCSP responder '%s'
+1101500 failed to establish a hashing context for OCSP: %s
+1101570 OCSP request not possible due to Tor mode
+1101650 OCSP request not possible due to disabled HTTP
+1101730 error setting OCSP target: %s
+1101770 error building OCSP request: %s
+1102040 Content-Type: application/ocsp-request
+1102110 Content-Length: %lu
+1102140 error sending request to '%s': %s
+1102210 error accessing '%s': http status %u
+1102260 error reading from responder: %s
+1102330 response from server too large; limit is %d bytes
+1102420 error reading HTTP response for '%s': %s
+1102500 error parsing OCSP response for '%s': %s
+1102560 OCSP responder at '%s' status: %s
+1102630 hashing the OCSP response for '%s' failed: %s
+1102710 only SHA-1 is supported for OCSP responses
+1102770 (data(flags pkcs1)(hash sha1 %b))
+1103040 allocating list item failed: %s
+1103110 error getting responder ID: %s
+1103150 no suitable certificate found to verify the OCSP response
+1103250 error getting OCSP status for target certificate: %s
+1103340 set_user_data(validated_at) failed: %s
+1103410 certificate status is: %s  (this=%s  next=%s)
+1103470 certificate has been revoked at: %s due to: %s
+1103550 OCSP responder returned a non-current status
+1103630 used now: %s  this_update: %s
+1103670 OCSP responder returned an too old status
+1103750 used now: %s  next_update: %s
+1104010 OCSP responder returned a status in the future
+1104100 read_response
+1104120 1.3.6.1.5.5.7.48.1
+1104143 ksba_cert_hash failed: %s
+1104176 signature value:
+1104217  %02X
+1104225 gcry_sexp_scan failed: %s
+1104260 public-key
+1104277 (data(flags raw)(value %b))
+1104333 validate.c
+1104346 2.5.29.15
+1104360 certificate is good (cached)
+1104416 certificate not yet valid
+1104450 (valid from 
+1104465 certificate has expired
+1104515 (expired at 
+1104532 2.289.9.9
+1104544 error getting serialno: %s
+1104600 fingerprint=%s
+1104620 issuer
+1104627 certificate chain too long
+1104663 issuer certificate not found
+1104720 issuer certificate: #/
+1104747 got issuer's certificate:
+1105002 certificate is good
+1105027 certificate chain is good
+1105062   certificate
+1105100 ci->cert
+1105111 not checking CRL for
+1105136 target certificate is valid
+1105176 2.5.29.19
+1105210 2.5.29.32
+1105222 2.5.29.37
+1105240 libksba did not return a proper S-Exp
+1105310 DSA requires the use of a 160 bit hash algorithm
+1105400 no key usage specified - assuming all usages
+1105460 error getting key usage information: %s
+1105540 certificate should not have been used for certification
+1105640 certificate should not have been used for OCSP response signing
+1105750 certificate should not have been used for CRL signing
+1106040 certificate should not have been used for encryption
+1106130 certificate should not have been used for signing
+1106220 certificate is not usable for encryption
+1106300 certificate is not usable for signing
+1106350 accepting root CA not marked as a CA
+1106420 issuer certificate is not marked as a CA
+1106500 running in compatibility mode - certificate chain not checked!
+1106600 certificate with invalid validity: %s
+1106650 critical certificate extension %s is not supported
+1106740 certificate's policy list: %s
+1107000 Note: non-critical certificate policy not allowed
+1107070 certificate policy not allowed
+1107130 selfsigned certificate has a BAD signature
+1107210 root certificate is not marked trusted
+1107260 checking trustworthiness of root certificate failed: %s
+1107360 root certificate is good but not trusted
+1107440 root certificate is good and trusted
+1107510 certificate has a BAD signature
+1107550 certificate chain longer than allowed by CA (%d)
+1107640 ctrl->check_revocations_nest_level >= 0
+1107710 CRL checking too deeply nested
+1107750 target certificate may be valid
+1110020 target certificate is NOT valid
+1110100 check_revocations
+1110130 check_cert_sig
+1110160 1.3.6.1.5.5.7.3.9
+1110220 1.3.6.1.5.5.7.3.8
+1110260 1.3.6.1.5.5.7.3.4
+1110320 1.3.6.1.5.5.7.3.3
+1110360 1.3.6.1.5.5.7.3.2
+1110420 1.3.6.1.5.5.7.3.1
+1110520 8.8.8.8
+1110534 0123456789
+1110547 .onion
+1110563 0TLS network write failed: %s
+1110622 can't connect to '%s': %s
+1110655 resolving '%s' failed: %s
+1110710 error creating socket: %s
+1110743 host not found
+1110762 no IP address for host
+1111011 %;?&=
+1111017 %%%02X
+1111026 https
+1111034 hkps
+1111041 TLS network read failed: %s
+1111076 NORMAL
+1111105 hkps.pool.sks-keyservers.net
+1111142 sks-keyservers.netCA.pem
+1111173 gnutls_init failed: %s
+1111223 Tor support is not available
+1111261 RESP: '%.*s'
+1111277 Content-Length
+1111316 not an X.509 certificate
+1111347 %s: status=0x%04x
+1111372 hostname missing
+1111413 error importing certificate
+1111447 %s: %s: %s
+1111463 hostname does not match
+1111513 localhost
+1111525 HEAD
+1111532 POST
+1111537 OOPS
+1111544 http_proxy
+1111564 _@[]/
+1111572 socks4
+1111601 socks5h
+1111611 Proxy-Authorization: Basic 
+1111645   (sent server name '%s')
+1111700 TLS handshake failed: %s
+1111732 %;?&
+1111743 http://
+1111753 invalid HTTP proxy (%s): %s
+1112010 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890@!"#$%&'()*+,-./:;<=>?[\]^_{|}~
+1112150 gnutls_certificate_allocate_credentials failed: %s
+1112240 setting CA from file '%s' failed: %s
+1112310 gnutls_priority_set_direct failed at '%s': %s
+1112370 gnutls_credentials_set failed: %s
+1112440 server did not send a certificate
+1112510 TLS requested but no session object provided
+1112570 TLS requested but no GNUTLS context available
+1112650 gnutls_server_name_set failed: %s
+1112720 TLS handshake failed: %s (alert %d)
+1112770 TLS connection authentication failed: %s
+1113050 %s %s://%s:%hu%s%s HTTP/1.0
+1113105 %s%s
+1113120 %s %s%s HTTP/1.0
+1113142 Host: %s%s
+1113200 TLS verification of peer failed
+1113240 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+1113341 Known schemata:
+1113362 ldaps
+1113370 ldapi
+1113400 (Use an URL for engine specific help.)
+1113447 ks-engine-hkp.c
+1113467 a >= 0 && a < hosttable_size
+1113524 b >= 0 && b < hosttable_size
+1113561 hosttable[a]
+1113576 hosttable[b]
+1113613  (again)
+1113626 out of core in mark_host_dead
+1113664 marking host '%s' as dead%s
+1113721 keytext=
+1113732 resolve_dns_addr failed: %s
+1113767  [already known]
+1114010 _hkp._tcp.%s
+1114025 !hi->pool
+1114042 host '%s' marked as dead
+1114074 marking '%s' as alive
+1114122 marking '%s' as dead
+1114147 n >= 0 && n < hosttable_size
+1114210  v4=
+1114215  v6=
+1114222   .       %s
+1114237   .   -->
+1114255 resurrected host '%s'
+1114303 0x%08lX
+1114313 0x%08lX%08lX
+1114330 SOURCE
+1114337 error reading response: %s
+1114373 &exact=on
+1114405 /pks/add
+1114420 Pragma: no-cache
+1114442 Cache-Control: no-cache
+1114500 selecting a different host due to a timeout
+1114560 Content-Type: application/x-www-form-urlencoded
+1114641 Content-Length: %zu
+1114670 resolve_dns_addr failed while checking '%s': %s
+1114760 resolve_dns_addr for '%s': '%s' [index table full - ignored]
+1115060 map_host for '%s' problem: %s - '%s' [ignored]
+1115140 resolve_dns_addr for '%s': '%s'%s
+1115210 shrinking index table in map_host failed: %s
+1115270 no alive host found in pool '%s'
+1115340 hi->poolidx >= 0 && hi->poolidx < hosttable_size
+1115430 hosttable (idx, ipv6, ipv4, dead, name, time):
+1115510 %3d %s %s %s %s%s%s%s%s%s%s%s
+1115550 %s://%s:%hu: resolve failed: %s
+1115610 @!"#$%&'()*+,-./:;<=>?[\]^_{|}~
+1115650 /pks/lookup?op=index&options=mr&search=
+1115720 HKP keyservers do not support v3 fingerprints
+1116000 /pks/lookup?op=get&options=mr&search=
+1116220 add_host
+1116240 sort_hostpool
+1116260 map_host
+1116300 ks_hkp_mark_host
+1116321   http
+1116330   finger
+1116341   kdns
+1116350 This keyserver engine accepts URLs of the form:
+1116430   kdns://[NAMESERVER]/[ROOT][?at=STRING]
+1116501 with
+1116506   NAMESERVER  used for queries (default: system standard)
+1116600   ROOT        a DNS name appended to the query (default: none)
+1116677   STRING      a string to replace the '@' (default: ".")
+1116770 If a long answer is expected add the parameter "usevc=1".
+1117062 Supported methods: fetch
+1117113 Example:
+1117124 A query for "hacker@gnupg.org" with
+1117170   kdns://10.0.0.1/example.net?at=_key_&usevc=1
+1117247 setup as --auto-key-lookup in gpg does a CERT record query
+1117342 with type PGP on the nameserver 10.0.0.1 for
+1117417   hacker._key_.gnupg.org.example.net
+1117464 %s:%u: no hostname given
+1117516 %s:%u: skipping this line
+1117560 %s:%u: password given without user
+1117710 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890.-
+1120020 invalid char 0x%02x in host name - not added
+1120100 adding '%s:%d' to the ldap server list
+1120150 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890$-_.+!*'(),
+1120270 no hostname in URL or query failed; trying all default hostnames
+1120400 start_cert_fetch: invalid pattern '%s'
+1120450 fetch_next_cert_ldap: got attribute '%s'
+1120530 fetch_next_cert_ldap: got attribute '%s' -  ignored
+1120620 ldap_search hit the size limit of the server
+1120676 ldap://
+1120706 --pass
+1120721 --log-with-pid
+1120740 --multi
+1120750 --timeout
+1120762 --only-search-timeout
+1121010 --proxy
+1121020 --host
+1121027 --port
+1121036 --user
+1121045 --dn
+1121052 --filter
+1121063 --attr
+1121072 objectClass=*
+1121110 userCertificate
+1121130 caCertificate
+1121146 x509caCert
+1121161 truncated
+1121173 bindname=
+1121205 password=
+1121217 password
+1121230 *()\/
+1121236 %%%02x
+1121250 Unable to parse LDAP uri '%s'
+1121310 bindname given multiple times in URL '%s', ignoring.
+1121400 password given multiple times in URL '%s', ignoring.
+1121470 Unhandled extension (%s) in URL '%s', ignoring.
+1122710 uncescape
+1122730 ks_ldap_put
+1122744 (pgpUserID=%s)
+1122763 (pgpUserID=*%s*)
+1123004 (pgpUserID=*<%s>*)
+1123027 (pgpUserID=*<*%s*>*)
+1123054 (pgpUserID=*<*%s>*)
+1123100 (pgpKeyID=%08lX)
+1123121 (pgpCertID=%08lX%08lX)
+1123150 Unsupported search mode.
+1123202 >not shown<
+1123216 >none<
+1123225 pgpKey
+1123234 pgpKeyV2
+1123247 LDAP bind to %s, password %s
+1123305 Internal LDAP bind error: %s
+1123343 namingContexts
+1123362 (objectClass=*)
+1123402 pgpBaseKeySpaceDN
+1123424 pgpVersion
+1123437 pgpSoftware
+1123453 cn=pgpServerInfo,%s
+1123477 software
+1123510 cn=pgpServerInfo
+1123531 baseKeySpaceDN
+1123550 ldap: Server: 	%s
+1123573 ldap: Version:	%s
+1123616 ldap_conn: %p
+1123635 real_ldap: %d
+1123654 basedn: %s
+1123670 pgpkeyattr: %s
+1123710 %04d%02d%02d%02d%02d%02dZ
+1123742 %4d%2d%2d%2d%2d%2d
+1123765   ldap
+1123774 pgpcertid
+1124006 pgpuserid
+1124020 pgpkeyid
+1124031 pgprevoked
+1124044 pgpdisabled
+1124060 pgpkeycreatetime
+1124101 modifytimestamp
+1124121 pgpkeysize
+1124134 pgpkeytype
+1124152 INFO %s BEGIN
+1124171 pub:%s:
+1124201 DSS/DH
+1124213 pgpkeyexpiretime
+1124234 uid:%s
+1124244 INFO %s END
+1124261 KEY 0x%s BEGIN
+1124302 KEY 0x%s END
+1124320 Bad search pattern: '%s'
+1124352 SEARCH '%s' => '%s' BEGIN
+1124405 SEARCH %s FAILED %d
+1124432 info:1:0
+1124444 info:1:%d
+1124463 uid:
+1124470 SEARCH %s END
+1124507   %s:
+1124515  delete.
+1124527     %d. 
+1124540 `%.*s
+1124546 ...' (%zd bytes elided)
+1124576 pgpCertid=virtual,%s
+1124623 pgpDisabled
+1124637 pgpKeyID
+1124650 pgpKeyType
+1124663 pgpUserID
+1124675 pgpKeyCreateTime
+1124716 pgpSignerID
+1124732 pgpRevoked
+1124745 pgpSubKeyID
+1124761 pgpKeySize
+1124774 pgpKeyExpireTime
+1125015 pgpCertID
+1125027 pgpKeyInfo
+1125042 objectClass
+1125076 0123456789aAbBcCdDeEfF
+1125125 malformed record!
+1125150 %05u
+1125155 ks-engine-ldap.c
+1125176 0 <= x && x <= 0xff
+1125222 infolen == -1
+1125240 Bad certid.
+1125255 pgpCertID=%s,%s
+1125300 my_ldap_connect(%s:%d/%s????%s%s%s%s%s)
+1125360 Failed to open connection to LDAP server (%s://%s:%d)
+1125450 gpgkeys: unable to go to LDAP 3: %s
+1125520 Handler for LDAP URLs:
+1125547   ldap://host:port/[BASEDN]???[bindname=BINDNAME,password=PASSWORD]
+1125654 Note: basedn, bindname and password need to be percent escaped. In
+1125757 particular, spaces need to be replaced with %20 and commas with %2c.
+1126064 bindname will typically be of the form:
+1126135   uid=user%2cou=PGP%20Users%2cdc=EXAMPLE%2cdc=ORG
+1126220 The ldaps:// and ldapi:// schemes are also supported.  If ldaps is used
+1126330 then the server's certificate will be checked.  If it is not valid, any
+1126440 operation will be aborted.
+1126474 Supported methods: search, get, put
+1126550 LDAP access not possible due to Tor mode
+1126630 gpgkeys: LDAP search error: %s
+1126670 gpgkeys: key %s not found on keyserver
+1126740 gpgkeys: unable to retrieve key %s from keyserver
+1127030 gpgkeys: search results exceeded server limit.  First 1 result shown.
+1127140 gpgkeys: search results exceeded server limit.  First %d results shown.
+1127260 (char *) info + infolen - 1 == infoend
+1127330 gpgkeys: error adding key to keyserver: %s
+1127410 Failed to parse creation time ('%s')
+1127460 npth_select failed: %s - waiting 1s
+1127530 error reading log from ldap wrapper %d: %s
+1127610 ldap wrapper %d ready: timeout
+1127650 ldap wrapper %d ready: exitcode=%d
+1127720 waiting for ldap wrapper %d failed: %s
+1127770 ldap wrapper %d stalled - killing
+1130040   c=%p pid=%d/%d rdr=%p ctrl=%p/%d la=%lu rdy=%d
+1130130 error spawning ldap wrapper reaper thread: %s
+1130210 releasing ldap worker c=%p pid=%d/%d rdr=%p ctrl=%p/%d
+1130300 reading from ldap wrapper %d failed: %s
+1130360 ldap wrapper %d started (reader %p)
+1130425 error printing log line: %s
+1130462 [dirmngr_ldap]
+1130501 ldap wrapper %d ready
+1130527 ldap worker stati:
+1130553 ldap-reaper
+1130567 error allocating memory: %s
+1130624 --env-pass
+1130637 DIRMNGR_LDAP_PASS
+1130661 error creating a pipe: %s
+1130714 /usr/share/locale
+1130736 utf-8
+1130744 stringhelp.c
+1130762 fatal: getcwd failed: %s
+1131022 fatal: out of memory
+1131051 fatal: too many args for xstrconcat
+1131120 (char*)(result + n + 1) == buffer
+1131200 strtokenize
+1131220 do_make_filename
+1131241 iconv_open failed: %s
+1131270 \x%02x
+1131277 utf8conv.c
+1131316 iso-8859-1
+1131335 ASCII
+1131343 ANSI_X3.4-1968
+1131362 utf8
+1131370 conversion from '%s' to '%s' not available
+1131450 conversion from '%s' to '%s' failed: %s
+1131720 do_utf8_to_native
+1131742 [??]
+1131747 argument not expected
+1131775 read error
+1132010 keyword too long
+1132031 missing argument
+1132052 invalid argument
+1132073 invalid command
+1132113 invalid alias definition
+1132144 out of core
+1132160 invalid option
+1132177 %s:%u: %s
+1132212 invalid command "%.50s"
+1132243 option "%.50s" is ambiguous
+1132300 command "%.50s" is ambiguous
+1132336 invalid option "%.50s"
+1132376 Options:
+1132422 warranty
+1132433 dump-options
+1132450 ignore-invalid-option
+1132476 alias
+1132510 invalid argument for arg_parse
+1132550 missing argument for option "%.50s"
+1132620 invalid argument for option "%.50s"
+1132670 option "%.50s" does not expect an argument
+1132750 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+1133070 This is free software; you can redistribute it and/or modify
+1133165 it under the terms of the GNU General Public License as published by
+1133272 the Free Software Foundation; either version 3 of the License, or
+1133374 (at your option) any later version.
+1133441 It is distributed in the hope that it will be useful,
+1133527 but WITHOUT ANY WARRANTY; without even the implied warranty of
+1133626 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+1133724 GNU General Public License for more details.
+1134002 You should have received a copy of the GNU General Public License
+1134104 along with this software.  If not, see <http://www.gnu.org/licenses/>.
+1134220 This is free software: you are free to change and redistribute it.
+1134323 There is NO WARRANTY, to the extent permitted by law.
+1134420 Copyright (C) 2016 Free Software Foundation, Inc.
+1134511 (A single dash may be used instead of the double ones)
+1134610 --dump-options
+1134627 --help
+1134636 --version
+1134650 --warranty
+1135064 socket://
+1135076 tcp://
+1135105 [%u.%lu]
+1135116 [%u.%lx]
+1135127 logging.c
+1135141 logstream
+1135153 Fatal: 
+1135163 Ohhhh jeeee: 
+1135201 DBG: 
+1135207 [Unknown log level %d]: 
+1135240 error writing to '%s': %s
+1135277 ... this is a bug (%s:%d:%s)
+1135340 %04d-%02d-%02d %02d:%02d:%02d 
+1135400 failed to create socket for logging: %s
+1135460 error writing to file descriptor %d: %s
+1135540 [not enabled in the source] %s
+1135640 do_logv
+1135650 log_get_stream
+1135667 sexputil.c
+1135702 [invalid S-expression]
+1135731 sig-val
+1135741 hash
+1135752 ecdsa
+1135760 eddsa
+1135770 invalid S-exp in cmp_simple_canon_sexp
+1136040 sexp_to_string
+1136057 can't disable core dumps: %s
+1136115 /dev/null
+1136127 XXXXXX
+1136136 -rwx
+1136150 %s: WARNING: standard input reopened
+1136220 %s: WARNING: standard output reopened
+1136270 %s: WARNING: standard error reopened
+1136340 %s: fatal: unable to reopen standard input, output, or error
+1136440 gnupg_allow_set_foregound_window
+1136510 %s called with invalid pid %lu
+1136600 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+1136677 /usr/bin
+1136710 /pinentry
+1136722 /pinentry-basic
+1136742 ~/.gnupg
+1136753 GNUPGHOME
+1136765 /etc/gnupg2
+1137001 /usr/lib/gnupg2
+1137021 /usr/share/gnupg2
+1137043 /var/cache/gnupg2
+1137065 /var/run/gnupg2/S.dirmngr
+1137117 /gpg-agent
+1137132 /scdaemon
+1137144 /gpg-protect-tool
+1137166 /dirmngr_ldap
+1137204 /gpg-check-pattern
+1137227 /gpgsm
+1137236 /gpg2
+1137244 /gpg-connect-agent
+1137267 /gpgconf
+1137300 homedir.c
+1137320 /usr/lib/x86_64-linux-gnu/gnupg2
+1137460 gnupg_module_name
+1137502 gettime.c
+1137514 %04d%02d%02dT%02d%02d%02d
+1137546 gnupg_get_time() failed
+1137577 %uy%ud%uh%um
+1137614 time-warp
+1137626 %ud%uh%um%us
+1137643 %04d-%02d-%02d
+1137662 %04d-%02d-%02d %02d:%02d:%02d
+1137724 %.4s-%.2s-%.2s %.2s:%.2s:%s
+1137760 days_per_month
+1140000 gnupg_copy_time
+1140036 N@PGP 
+1140045 -----BEGIN 
+1140061 -----
+1140070 b64enc.c
+1140101 idx < 4
+1140111 -----END 
+1140140 b64enc_finish
+1140160 b64enc_write
+1140353 	FVh	Q)
+1140675 ]';[
+1140706 Z1V8V0
+1140722 O2AG
+1140736 C3bl}6
+1140771 _d4u
+1141103 .IpV.
+1141153 (}$}(j[
+1141201 G3|_
+1141230 Ht*~
+1141305 Eps 
+1141333 q:viq
+1141423 `W<*`
+1141512 pm2A
+1141517 m%>io
+1141623 AlN?A
+1141712 eL	3
+1141741 +NJ=g
+1142001 5&]dy
+1142163 V5PWV
+1142177 WABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/b64dec.c
+1142410 b64dec_proc
+1142517 ?456789:;<=
+1142607  !"#$%&'()*+,-./0123
+1142640 ybndrfg8ejkmcpqxot1uwisza345h769convert.c
+1142720 hex2str_alloc
+1142740 01234567890_-.abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+1143043 !#$%&'*+/=?^`{|}~
+1143070 libgcrypt problem: %s
+1143117 AES128
+1143126 [stdout]
+1143137 [stdin]
+1143147 enabled debug flags:
+1143174 available debug flags:
+1143224  %5u %s
+1143240 out of core in secure memory while allocating %lu bytes
+1143330 out of core while allocating %lu bytes
+1143400 %s:%u: obsolete option "%s" - it has no effect
+1143460 WARNING: "%s%s" is an obsolete option - it has no effect
+1143560 unknown debug flag '%s' ignored
+1143621 estream_asprintf failed: %s
+1143660 increasing temp iobuf from %lu to %lu
+1143730 filter_flush did not write all!
+1144000 fd_cache_close (%s) used existing slot
+1144050 fd_cache_close (%s) new slot created
+1144120 iobuf chain: %d.%d '%s' filter_eof=%d start=%d len=%d
+1144210 iobuf-%d.%d: underflow: buffer size: %d; still buffered: %d => space for %d bytes
+1144340 iobuf-%d.%d: underflow: eof (pending eof)
+1144420 iobuf-%d.%d: filter popped (pending EOF returned)
+1144510 iobuf-%d.%d: pending error (%s) returned
+1144570 iobuf-%d.%d: underflow: A->FILTER (%lu bytes)
+1144650 iobuf-%d.%d: A->FILTER() returned rc=%d (%s), read %lu bytes
+1144750 iobuf-%d.%d: pop in underflow (nothing buffered, got EOF)
+1145050 filter_flush failed in pop_filter: %s
+1145120 can't remove the last filter from the chain
+1145200 Ohh jeee, trying to remove a head filter
+1145260 Ohh jeee, trying to remove an intermediate filter
+1145350 pop_filter(): filter function not found
+1145430 use == IOBUF_INPUT || use == IOBUF_INPUT_TEMP || use == IOBUF_OUTPUT || use == IOBUF_OUTPUT_TEMP
+1145600 iobuf_alloc() passed a bufsize of 0!
+1145650 filter_flush failed on close: %s
+1145720 IOBUFCTRL_FREE failed on close: %s
+1145770 iobuf-%d.%d: ioctl '%s' keep_open=%d
+1146040 iobuf-*.*: ioctl '%s' invalidate
+1146110 iobuf-%d.%d: ioctl '%s' no_cache=%d
+1146160 use == IOBUF_INPUT || use == IOBUF_OUTPUT
+1146240 fd_cache_open (%s) using cached fp
+1146310 fd_cache_open (%s) not cached
+1146350 iobuf-%d.%d: open '%s' desc=%s fd=%d
+1146420 i/o filter too deeply nested - corrupted data?
+1146500 iobuf_readbyte called on a non-INPUT pipeline!
+1146560 iobuf_read called on a non-INPUT pipeline!
+1146640 a->use == IOBUF_INPUT || a->use == IOBUF_INPUT_TEMP
+1146730 iobuf_writebyte called on an input pipeline!
+1147010 iobuf_write called on an input pipeline!
+1147070 block_filter: 1st length byte missing
+1147140 block_filter: 2nd length byte missing
+1147210 block_filter: invalid 4 byte length
+1147260 block_filter %p: read error (size=%lu,a->size=%lu)
+1147350 a->buflen <= OP_MIN_PARTIAL_CHUNK
+1147420 block_filter: write error: %s
+1147460 iobuf_writestr called on an input pipeline!
+1147540 Flushing iobuf %d.%d (%s) from iobuf_temp_to_buffer failed.  Ignoring.
+1147650 source->use == IOBUF_INPUT || source->use == IOBUF_INPUT_TEMP
+1147750 dest->use == IOBUF_OUTPUT || source->use == IOBUF_OUTPUT_TEMP
+1150050 source->use == IOBUF_OUTPUT || source->use == IOBUF_OUTPUT_TEMP
+1150150 dest->use == IOBUF_OUTPUT || dest->use == IOBUF_OUTPUT_TEMP
+1150250 pop_filter called in iobuf_seek - please report
+1150340 pop_filter called in set_partial_block_mode - please report
+1150435 flush on non-output iobuf
+1150470 filter_flush: no filter
+1150521 iobuf.c
+1150531 %s: read error: %s
+1150555 file_filter(fd)
+1150575 %s: close fd/handle %d
+1150625 fd_cache_close (%d) real
+1150657 %s: write error: %s
+1150704 estream_filter
+1150723 %s: es_fclose %p
+1150754 a->use == IOBUF_INPUT
+1151002 a->d.start <= a->d.len
+1151031 IOBUFCTRL_FREE failed: %s
+1151064 fname
+1151072 fd_cache_invalidate (%s)
+1151124 iobuf-%d.%d: pop '%s'
+1151153 ! a->chain
+1151166 iobuf-%d.%d: popped filter
+1151222 iobuf-%d.%d: close '%s'
+1151253 length == a->d.size
+1151303 [fd %p]
+1151313 iobuf-%d.%d: esopen%s '%s'
+1151347 iobuf-*.*: ioctl '%s' fsync
+1151404 fd_cache_synchronize (%s)
+1151437                  did (%s)
+1151472 <null>
+1151501 [fd %d]
+1151511 iobuf-%d.%d: fdopen%s '%s'
+1151545 can't rewind fd %d: %s
+1151604 iobuf-%d.%d: push '%s'
+1151634 IOBUFCTRL_INIT failed: %s
+1151667 buflen > 0
+1151702 a->d.start == 1
+1151722 a->d.len < a->d.size
+1151747 c <= 0x1f
+1151761 n == OP_MIN_PARTIAL_CHUNK
+1152013 !a->buflen
+1152026 nbytes < OP_MIN_PARTIAL_CHUNK
+1152064 init block_filter %p
+1152112 block_filter
+1152127 block_filter: pending bytes!
+1152165 free block_filter %p
+1152213 fstat() failed: %s
+1152237 can't lseek: %s
+1152264 length >= 2 || maxlen >= 2
+1152317 p > buffer
+1152340 iobuf_read_line
+1152360 block_filter
+1152400 block_filter
+1152420 pop_filter
+1152440 iobuf_copy
+1152460 iobuf_write_temp
+1152520 iobuf_writebyte
+1152540 iobuf_peek
+1152560 underflow
+1152600 iobuf_readbyte
+1152620 file_es_filter
+1152640 file_filter
+1152660 fd_cache_invalidate
+1152710 do_open
+1152720 iobuf_temp_with_content
+1152750 iobuf_alloc
+1152764 putenv=
+1152774 OPTION %s%s=%s
+1153013 gnupg_spawn_agent_sentinel
+1153046 gnupg_spawn_dirmngr_sentinel
+1153103 gnupg_spawn_unknown_sentinel
+1153140 ASSUAN_DEBUG
+1153155 GPG_TTY
+1153165 lc-ctype
+1153176 lc-messages
+1153212 S.gpg-agent
+1153226 starting_agent ? 0 0
+1153253 error building filename: %s
+1153310 --homedir
+1153322 --use-standard-socket
+1153350 RESET
+1153356 GETINFO restricted
+1153401 starting_dirmngr ? 0 0
+1153430 SCD GETINFO version
+1153460 error allocating assuan context: %s
+1153530 no running gpg-agent - starting '%s'
+1153600 error flushing pending output: %s
+1153650 failed to start agent '%s': %s
+1153710 waiting for the agent to come up ... (%ds)
+1153770 connection to agent established
+1154040 can't connect to the agent: %s
+1154100 connection to agent is in restricted mode
+1154160 no running Dirmngr - starting '%s'
+1154230 failed to start the dirmngr '%s': %s
+1154300 waiting for the dirmngr to come up ... (%ds)
+1154360 connection to the dirmngr established
+1154430 connecting dirmngr at '%s' failed: %s
+1154477 ttyname
+1154507 TERM
+1154514 ttytype
+1154524 DISPLAY
+1154534 display
+1154544 XAUTHORITY
+1154557 xauthority
+1154572 XMODIFIERS
+1154605 GTK_IM_MODULE
+1154623 DBUS_SESSION_BUS_ADDRESS
+1154654 QT_IM_MODULE
+1154671 INSIDE_EMACS
+1154706 PINENTRY_USER_DATA
+1154731 pinentry-user-data
+1154754  0123456789abcdefABCDEF
+1155410 r,nonblock
+1155423 w,nonblock
+1155442 failed to open '%s': %s
+1155473 dup2 std%s failed: %s
+1155530 error creating a stream for a pipe: %s
+1155600 waiting for process %d to terminate failed: %s
+1155660 error running '%s': probably not installed
+1155740 error running '%s': exit status %d
+1156010 error running '%s': terminated
+1156050 waitpid failed in gnupg_spawn_process_detached: %s
+1156133 EMAIL
+1156141 GNUPG
+1156157 GPGSM
+1156165 GPG_AGENT
+1156177 SCDAEMON
+1156220 GPGCONF
+1156230 GPGTAR
+1156237 gpgtar
+1156250 map_static_macro_string failed: %s
+1156314 %10d
+1156322 %.*s/.#lk%p.
+1156337 %s.%d
+1156345 error reading lockfile '%s'
+1156402 (deadlock?) 
+1156417 Oops, '%s' is already locked
+1156455 cannot read lockfile
+1156503 lockfile disappeared
+1156531 Oops, '%s' is not locked
+1156570 can't check whether hardlinks are supported for '%s': %s
+1156670 locking for '%s' done via O_EXCL
+1156740 failed to create temporary file '%s': %s
+1157020 error opening lockfile '%s': %s
+1157070 invalid size of lockfile '%s'
+1157130 invalid pid %d in lockfile '%s'
+1157200 lock not made: writing to '%s' failed: %s
+1157260 lock not made: Oops: stat of tmp file failed: %s
+1157350 Oops: lock already held by us
+1157410 removing stale lockfile (created by %d)
+1157470 waiting for lock (held by %d%s) %s...
+1157540 lock not made: open(O_EXCL) of '%s' failed: %s
+1157620 release_dotlock: lockfile error
+1157670 release_dotlock: not our lock (pid=%d)
+1157740 release_dotlock: error removing lockfile '%s'
+1172407 ;*3$"
+1314214 bff5ef7f4eb17d6484d6d6b7a5ca895b9cdbfa.debug
+1314301 .shstrtab
+1314313 .interp
+1314323 .note.ABI-tag
+1314341 .note.gnu.build-id
+1314364 .gnu.hash
+1314376 .dynsym
+1314406 .dynstr
+1314416 .gnu.version
+1314433 .gnu.version_r
+1314452 .rela.dyn
+1314464 .init
+1314472 .plt
+1314477 .plt.got
+1314510 .text
+1314516 .fini
+1314524 .rodata
+1314534 .eh_frame_hdr
+1314552 .eh_frame
+1314564 .init_array
+1314600 .fini_array
+1314614 .jcr
+1314621 .data.rel.ro
+1314636 .dynamic
+1314647 .data
+1314655 .bss
+1314662 .gnu_debuglink

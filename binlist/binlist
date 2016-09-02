@@ -1,0 +1,1883 @@
+/bin:
+total 12976
+-rwxr-xr-x 1 root root 1037528  6월 25 00:44 bash
+-rwxr-xr-x 1 root root   31288  5월 20  2015 bunzip2
+-rwxr-xr-x 1 root root 1964536  8월 19  2015 busybox
+-rwxr-xr-x 1 root root   31288  5월 20  2015 bzcat
+lrwxrwxrwx 1 root root       6  7월 26 15:48 bzcmp -> bzdiff
+-rwxr-xr-x 1 root root    2140  5월 20  2015 bzdiff
+lrwxrwxrwx 1 root root       6  7월 26 15:48 bzegrep -> bzgrep
+-rwxr-xr-x 1 root root    4877  5월 20  2015 bzexe
+lrwxrwxrwx 1 root root       6  7월 26 15:48 bzfgrep -> bzgrep
+-rwxr-xr-x 1 root root    3642  5월 20  2015 bzgrep
+-rwxr-xr-x 1 root root   31288  5월 20  2015 bzip2
+-rwxr-xr-x 1 root root   14616  5월 20  2015 bzip2recover
+lrwxrwxrwx 1 root root       6  7월 26 15:48 bzless -> bzmore
+-rwxr-xr-x 1 root root    1297  5월 20  2015 bzmore
+-rwxr-xr-x 1 root root   52080  2월 18 22:37 cat
+-rwxr-xr-x 1 root root   14752  2월  7 20:10 chacl
+-rwxr-xr-x 1 root root   60272  2월 18 22:37 chgrp
+-rwxr-xr-x 1 root root   56112  2월 18 22:37 chmod
+-rwxr-xr-x 1 root root   64368  2월 18 22:37 chown
+-rwxr-xr-x 1 root root   10480  9월 17  2015 chvt
+-rwxr-xr-x 1 root root  151024  2월 18 22:37 cp
+-rwxr-xr-x 1 root root  141472  2월 18 23:36 cpio
+-rwxr-xr-x 1 root root  154072  2월 18 05:25 dash
+-rwxr-xr-x 1 root root   68464  2월 18 22:37 date
+-rwxr-xr-x 1 root root   72632  2월 18 22:37 dd
+-rwxr-xr-x 1 root root   97912  2월 18 22:37 df
+-rwxr-xr-x 1 root root  126584  2월 18 22:37 dir
+-rwxr-xr-x 1 root root   60680  5월 27 08:31 dmesg
+lrwxrwxrwx 1 root root       8  7월 26 15:48 dnsdomainname -> hostname
+lrwxrwxrwx 1 root root       8  7월 26 15:48 domainname -> hostname
+-rwxr-xr-x 1 root root   82264  9월 17  2015 dumpkeys
+-rwxr-xr-x 1 root root   31376  2월 18 22:37 echo
+-rwxr-xr-x 1 root root   51512  4월 26  2014 ed
+-rwxr-xr-x 1 root root   36504  7월 14  2015 efibootmgr
+-rwxr-xr-x 1 root root      28  4월 29 21:58 egrep
+-rwxr-xr-x 1 root root   27280  2월 18 22:37 false
+-rwxr-xr-x 1 root root   10488  9월 17  2015 fgconsole
+-rwxr-xr-x 1 root root      28  4월 29 21:58 fgrep
+-rwxr-xr-x 1 root root   49576  5월 27 08:31 findmnt
+-rwxr-xr-x 1 root root   36024  2월  7 22:37 fuser
+-rwsr-xr-x 1 root root   30800  7월 12 16:03 fusermount
+-rwxr-xr-x 1 root root   23752  2월  7 20:10 getfacl
+-rwxr-xr-x 1 root root  211224  4월 29 21:58 grep
+-rwxr-xr-x 1 root root    2301 10월 27  2014 gunzip
+-rwxr-xr-x 1 root root    5927 10월 27  2014 gzexe
+-rwxr-xr-x 1 root root   98240 10월 27  2014 gzip
+-rwxr-xr-x 1 root root  192760  3월  2 00:33 hciconfig
+-rwxr-xr-x 1 root root   14800 11월 24  2015 hostname
+-rwxr-xr-x 1 root root  376192  4월  5 21:16 ip
+-rwxr-xr-x 1 root root  498936  7월 13 01:28 journalctl
+-rwxr-xr-x 1 root root   10480  9월 17  2015 kbd_mode
+-rwxr-xr-x 1 root root   23152  1월 13  2016 kill
+-rwxr-xr-x 1 root root  154696  3월 13 22:36 kmod
+-rwxr-xr-x 1 root root  169800  2월 29 21:13 less
+-rwxr-xr-x 1 root root   10256  2월 29 21:13 lessecho
+lrwxrwxrwx 1 root root       8  7월 26 15:48 lessfile -> lesspipe
+-rwxr-xr-x 1 root root   19824  2월 29 21:13 lesskey
+-rwxr-xr-x 1 root root    7765  2월 29 21:13 lesspipe
+-rwxr-xr-x 1 root root   56152  2월 18 22:37 ln
+-rwxr-xr-x 1 root root  111432  9월 17  2015 loadkeys
+-rwxr-xr-x 1 root root   48128  3월 29 18:25 login
+-rwxr-xr-x 1 root root  453848  7월 13 01:28 loginctl
+-rwxr-xr-x 1 root root  105136  2월 18 07:45 lowntfs-3g
+-rwxr-xr-x 1 root root  126584  2월 18 22:37 ls
+-rwxr-xr-x 1 root root   77280  5월 27 08:31 lsblk
+lrwxrwxrwx 1 root root       4  7월 26 15:48 lsmod -> kmod
+-rwxr-xr-x 1 root root   76848  2월 18 22:37 mkdir
+-rwxr-xr-x 1 root root   64496  2월 18 22:37 mknod
+-rwxr-xr-x 1 root root   39728  2월 18 22:37 mktemp
+-rwxr-xr-x 1 root root   39768  5월 27 08:31 more
+-rwsr-xr-x 1 root root   40152  5월 27 08:31 mount
+-rwxr-xr-x 1 root root   14768  5월 27 08:31 mountpoint
+lrwxrwxrwx 1 root root      20  7월 26 15:48 mt -> /etc/alternatives/mt
+-rwxr-xr-x 1 root root   68824  2월 18 23:36 mt-gnu
+-rwxr-xr-x 1 root root  130488  2월 18 22:37 mv
+-rwxr-xr-x 1 root root  208480  3월 29 18:16 nano
+lrwxrwxrwx 1 root root      20  7월 26 15:48 nc -> /etc/alternatives/nc
+-rwxr-xr-x 1 root root   31248 12월  4  2012 nc.openbsd
+lrwxrwxrwx 1 root root      24  7월 26 15:48 netcat -> /etc/alternatives/netcat
+-rwxr-xr-x 1 root root  119624  6월 30  2014 netstat
+-rwxr-xr-x 1 root root  670304  7월 13 01:28 networkctl
+lrwxrwxrwx 1 root root       8  7월 26 15:48 nisdomainname -> hostname
+-rwsr-xr-x 1 root root  142032  2월 18 07:45 ntfs-3g
+-rwxr-xr-x 1 root root   10312  2월 18 07:45 ntfs-3g.probe
+-rwxr-xr-x 1 root root   67608  2월 18 07:45 ntfs-3g.secaudit
+-rwxr-xr-x 1 root root   18424  2월 18 07:45 ntfs-3g.usermap
+-rwxr-xr-x 1 root root   26728  2월 18 07:45 ntfscat
+-rwxr-xr-x 1 root root   30824  2월 18 07:45 ntfscluster
+-rwxr-xr-x 1 root root   34920  2월 18 07:45 ntfscmp
+-rwxr-xr-x 1 root root   34928  2월 18 07:45 ntfsfallocate
+-rwxr-xr-x 1 root root   39024  2월 18 07:45 ntfsfix
+-rwxr-xr-x 1 root root   55416  2월 18 07:45 ntfsinfo
+-rwxr-xr-x 1 root root   31928  2월 18 07:45 ntfsls
+-rwxr-xr-x 1 root root   30824  2월 18 07:45 ntfsmove
+-rwxr-xr-x 1 root root   38944  2월 18 07:45 ntfstruncate
+-rwxr-xr-x 1 root root   47752  2월 18 07:45 ntfswipe
+lrwxrwxrwx 1 root root       6  7월 26 15:48 open -> openvt
+-rwxr-xr-x 1 root root   18912  9월 17  2015 openvt
+lrwxrwxrwx 1 root root      14  7월 26 15:48 pidof -> /sbin/killall5
+-rwsr-xr-x 1 root root   44168  5월  8  2014 ping
+-rwsr-xr-x 1 root root   44680  5월  8  2014 ping6
+-rwxr-xr-x 1 root root   35504  5월 11 02:56 plymouth
+-rwxr-xr-x 1 root root   97408  1월 13  2016 ps
+-rwxr-xr-x 1 root root   31472  2월 18 22:37 pwd
+lrwxrwxrwx 1 root root       4  7월 26 15:48 rbash -> bash
+-rwxr-xr-x 1 root root   39632  2월 18 22:37 readlink
+-rwxr-xr-x 1 root root      89  4월 26  2014 red
+-rwxr-xr-x 1 root root   60272  2월 18 22:37 rm
+-rwxr-xr-x 1 root root   39632  2월 18 22:37 rmdir
+lrwxrwxrwx 1 root root       4  7월 26 15:48 rnano -> nano
+-rwxr-xr-x 1 root root   19320  1월 27  2016 run-parts
+-rwxr-xr-x 1 root root   73424  2월 12 09:20 sed
+-rwxr-xr-x 1 root root   36296  2월  7 20:10 setfacl
+-rwxr-xr-x 1 root root   39888  9월 17  2015 setfont
+-rwxr-xr-x 1 root root   30875  6월 17 21:42 setupcon
+lrwxrwxrwx 1 root root       4  7월 26 15:48 sh -> dash
+lrwxrwxrwx 1 root root       4  7월 26 15:48 sh.distrib -> dash
+-rwxr-xr-x 1 root root   31408  2월 18 22:37 sleep
+-rwxr-xr-x 1 root root  115816  4월  5 21:16 ss
+lrwxrwxrwx 1 root root       7  7월 26 15:48 static-sh -> busybox
+-rwxr-xr-x 1 root root   72496  2월 18 22:37 stty
+-rwsr-xr-x 1 root root   40128  3월 29 18:25 su
+-rwxr-xr-x 1 root root   31408  2월 18 22:37 sync
+-rwxr-xr-x 1 root root  659848  7월 13 01:28 systemctl
+lrwxrwxrwx 1 root root      20  7월 26 15:48 systemd -> /lib/systemd/systemd
+-rwxr-xr-x 1 root root   51656  7월 13 01:28 systemd-ask-password
+-rwxr-xr-x 1 root root   39344  7월 13 01:28 systemd-escape
+-rwxr-xr-x 1 root root   64080  7월 13 01:28 systemd-hwdb
+-rwxr-xr-x 1 root root  281840  7월 13 01:28 systemd-inhibit
+-rwxr-xr-x 1 root root   47544  7월 13 01:28 systemd-machine-id-setup
+-rwxr-xr-x 1 root root   35248  7월 13 01:28 systemd-notify
+-rwxr-xr-x 1 root root  133704  7월 13 01:28 systemd-tmpfiles
+-rwxr-xr-x 1 root root   68032  7월 13 01:28 systemd-tty-ask-password-agent
+-rwxr-xr-x 1 root root   23144  5월 27 08:31 tailf
+-rwxr-xr-x 1 root root  383632 11월 11  2015 tar
+-rwxr-xr-x 1 root root   10416  1월 27  2016 tempfile
+-rwxr-xr-x 1 root root   64432  2월 18 22:37 touch
+-rwxr-xr-x 1 root root   27280  2월 18 22:37 true
+-rwxr-xr-x 1 root root  445040  7월 13 01:28 udevadm
+-rwxr-xr-x 1 root root   14328  7월 12 16:03 ulockmgr_server
+-rwsr-xr-x 1 root root   27608  5월 27 08:31 umount
+-rwxr-xr-x 1 root root   31440  2월 18 22:37 uname
+-rwxr-xr-x 1 root root    2301 10월 27  2014 uncompress
+-rwxr-xr-x 1 root root    2762  9월 17  2015 unicode_start
+-rwxr-xr-x 1 root root  126584  2월 18 22:37 vdir
+-rwxr-xr-x 1 root root   10552  3월  3 22:42 vmmouse_detect
+-rwxr-xr-x 1 root root   31376  5월 27 08:31 wdctl
+-rwxr-xr-x 1 root root     946  1월 27  2016 which
+-rwxr-xr-x 1 root root   27432  1월 19  2016 whiptail
+lrwxrwxrwx 1 root root       8  7월 26 15:48 ypdomainname -> hostname
+-rwxr-xr-x 1 root root    1937 10월 27  2014 zcat
+-rwxr-xr-x 1 root root    1777 10월 27  2014 zcmp
+-rwxr-xr-x 1 root root    5764 10월 27  2014 zdiff
+-rwxr-xr-x 1 root root     140 10월 27  2014 zegrep
+-rwxr-xr-x 1 root root     140 10월 27  2014 zfgrep
+-rwxr-xr-x 1 root root    2131 10월 27  2014 zforce
+-rwxr-xr-x 1 root root    5938 10월 27  2014 zgrep
+-rwxr-xr-x 1 root root    2037 10월 27  2014 zless
+-rwxr-xr-x 1 root root    1910 10월 27  2014 zmore
+-rwxr-xr-x 1 root root    5047 10월 27  2014 znew
+
+/usr/bin:
+total 142020
+-rwxr-xr-x 1 root root        51920  2월 18 22:37 [
+lrwxrwxrwx 1 root root            8  7월 26 15:48 2to3 -> 2to3-2.7
+-rwxr-xr-x 1 root root           96  7월  3 04:02 2to3-2.7
+-rwxr-xr-x 1 root root           96  7월  7 18:14 2to3-3.5
+-rwxr-xr-x 1 root root        10392  1월 31  2016 411toppm
+-rwxr-xr-x 1 root root        19208  4월 15 09:06 a11y-profile-manager-indicator
+-rwxr-xr-x 1 root root        22696  4월 13 11:23 aa-enabled
+-rwxr-xr-x 1 root root        19064  4월 15 09:04 aconnect
+-rwxr-xr-x 1 root root        15072  4월  9 07:36 acpi_listen
+-rwxr-xr-x 1 root root       194288  3월  2 20:40 activity-log-manager
+-rwxr-xr-x 1 root root         6356  6월 25 00:12 add-apt-repository
+-rwxr-xr-x 1 root root        18888  5월 27 08:31 addpart
+lrwxrwxrwx 1 root root           26  7월 26 15:48 addr2line -> x86_64-linux-gnu-addr2line
+-rwxr-xr-x 1 root root        35560  4월 15 09:04 alsabat
+-rwxr-xr-x 1 root root        73224  4월 15 09:04 alsaloop
+-rwxr-xr-x 1 root root        65496  4월 15 09:04 alsamixer
+-rwxr-xr-x 1 root root        10504  4월 15 09:04 alsatplg
+-rwxr-xr-x 1 root root        15104  4월 15 09:04 alsaucm
+-rwxr-xr-x 1 root root        19064  4월 15 09:04 amidi
+-rwxr-xr-x 1 root root        52728  4월 15 09:04 amixer
+-rwxr-xr-x 1 root root         2668 11월 17  2014 amuFormat.sh
+lrwxrwxrwx 1 root root           25  7월 26 15:48 animate -> /etc/alternatives/animate
+lrwxrwxrwx 1 root root           57  7월 26 15:48 animate-im6 -> ../lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/animate
+-rwxr-xr-x 1 root root         5680  1월 31  2016 anytopnm
+-rwxr-xr-x 1 root root          276  1월 10  2014 apg
+-rwxr-xr-x 1 root root        31488  1월 10  2014 apgbfm
+-rwxr-xr-x 1 root root        64984  4월 15 09:04 aplay
+-rwxr-xr-x 1 root root        23216  4월 15 09:04 aplaymidi
+-rwxr-xr-x 1 root root         2555  5월 18 18:14 apport-bug
+-rwxr-xr-x 1 root root        12566  5월 18 18:17 apport-cli
+lrwxrwxrwx 1 root root           10  7월 26 15:48 apport-collect -> apport-bug
+-rwxr-xr-x 1 root root         1848  5월 18 18:17 apport-unpack
+-rwxr-xr-x 1 root root        10488  5월  6  2015 appres
+-rwxr-xr-x 1 root root        35920  5월 12 19:59 appstreamcli
+lrwxrwxrwx 1 root root            6  7월 26 15:48 apropos -> whatis
+-rwxr-xr-x 1 root root        14376  5월 12 19:53 apt
+lrwxrwxrwx 1 root root           18  7월 26 15:48 apt-add-repository -> add-apt-repository
+-rwxr-xr-x 1 root root        80000  5월 12 19:53 apt-cache
+-rwxr-xr-x 1 root root        22656  5월 12 19:53 apt-cdrom
+-rwxr-xr-x 1 root root        18480  5월 12 19:53 apt-config
+-rwxr-xr-x 1 root root         1040 10월 13  2015 aptdcon
+-rwxr-xr-x 1 root root        22664  5월 12 19:54 apt-extracttemplates
+-rwxr-xr-x 1 root root       231552  5월 12 19:54 apt-ftparchive
+-rwxr-xr-x 1 root root        43128  5월 12 19:53 apt-get
+-rwxr-xr-x 1 root root        20771  5월 12 19:51 apt-key
+-rwxr-xr-x 1 root root        47232  5월 12 19:53 apt-mark
+-rwxr-xr-x 1 root root        26680  5월 12 19:54 apt-sortpkgs
+-rwxr-xr-x 1 root root          273  5월 20 05:08 apturl
+-rwxr-xr-x 1 root root         1544  5월 25 05:41 apturl-gtk
+lrwxrwxrwx 1 root root           19  7월 26 15:48 ar -> x86_64-linux-gnu-ar
+-rwxr-xr-x 1 root root        31440  2월 18 22:37 arch
+lrwxrwxrwx 1 root root            5  7월 26 15:48 arecord -> aplay
+-rwxr-xr-x 1 root root        23272  4월 15 09:04 arecordmidi
+-rwxr-xr-x 1 root root        10520  4월  7 20:48 arm2hpdl
+-rwxr-xr-x 1 root root        18920  5월  8  2014 arping
+lrwxrwxrwx 1 root root           19  7월 26 15:48 as -> x86_64-linux-gnu-as
+-rwxr-xr-x 1 root root        10384  1월 31  2016 asciitopgm
+-rwxr-xr-x 1 root root        18928  4월 15 09:04 aseqdump
+-rwxr-xr-x 1 root root        19040  4월 15 09:04 aseqnet
+-rwxr-xr-x 1 root root       147256  2월  7 19:05 aspell
+-rwxr-xr-x 1 root root         2044  2월  7 19:05 aspell-import
+lrwxrwxrwx 1 root root            9  7월 26 15:48 assistant -> qtchooser
+-rwxr-xr-x 1 root root        26784  1월 31  2016 atktopbm
+-rwxr-xr-x 1 root root        10568  2월 10 22:42 atobm
+-rwxr-xr-x 1 root root        27296 11월 24  2015 avahi-browse
+lrwxrwxrwx 1 root root           12  7월 26 15:48 avahi-browse-domains -> avahi-browse
+-rwxr-xr-x 1 root root        18968 11월 24  2015 avahi-publish
+lrwxrwxrwx 1 root root           13  7월 26 15:48 avahi-publish-address -> avahi-publish
+lrwxrwxrwx 1 root root           13  7월 26 15:48 avahi-publish-service -> avahi-publish
+-rwxr-xr-x 1 root root        14792 11월 24  2015 avahi-resolve
+lrwxrwxrwx 1 root root           13  7월 26 15:48 avahi-resolve-address -> avahi-resolve
+lrwxrwxrwx 1 root root           13  7월 26 15:48 avahi-resolve-host-name -> avahi-resolve
+-rwxr-xr-x 1 root root        14728 11월 24  2015 avahi-set-host-name
+lrwxrwxrwx 1 root root           21  7월 26 15:48 awk -> /etc/alternatives/awk
+-rwxr-xr-x 1 root root       190184 10월 27  2015 baobab
+-rwxr-xr-x 1 root root        39664  2월 18 22:37 base32
+-rwxr-xr-x 1 root root        39664  2월 18 22:37 base64
+-rwxr-xr-x 1 root root        31408  2월 18 22:37 basename
+-rwxr-xr-x 1 root root         6958  6월 25 00:44 bashbug
+-rwxr-xr-x 1 root root        85232 12월 12  2014 bc
+-rwxr-xr-x 1 root root       192792  3월  2 00:33 bccmd
+-rwxr-xr-x 1 root root        10456  5월  6  2015 bdftopcf
+-rwxr-xr-x 1 root root        10472  5월  6  2015 bdftruncate
+-rwxr-xr-x 1 root root        10384  1월 31  2016 bioradtopgm
+-rwxr-xr-x 1 root root        92984  2월 10 22:42 bitmap
+-rwxr-xr-x 1 root root        34888  3월  2 00:33 bluemoon
+-rwxr-xr-x 1 root root       137512  3월  2 00:33 bluetoothctl
+-rwxr-xr-x 1 root root        28080  1월 29  2016 bluetooth-sendto
+-rwxr-xr-x 1 root root        36080  7월  6 00:09 bluetooth-wizard
+-rwxr-xr-x 1 root root        14552  1월 31  2016 bmptopnm
+lrwxrwxrwx 1 root root            8  7월 26 15:48 bmptoppm -> bmptopnm
+-rwxr-xr-x 1 root root        10520  2월 10 22:42 bmtoa
+-rwxr-xr-x 1 root root        76224  7월 13 01:28 bootctl
+-rwxr-xr-x 1 root root       215488  4월 28 17:45 brltty-ctb
+-rwxr-xr-x 1 root root       166208  4월 28 17:45 brltty-trtxt
+-rwxr-xr-x 1 root root       192616  4월 28 17:45 brltty-ttb
+-rwxr-xr-x 1 root root       117920  6월 30 17:02 broadwayd
+-rwxr-xr-x 1 root root        10360  1월 31  2016 brushtopbm
+-rwxr-xr-x 1 root root        10520  3월  1 20:43 bsd-from
+-rwxr-sr-x 1 root tty         14752  3월  1 20:43 bsd-write
+-rwxr-xr-x 1 root root        26696  3월  2 00:33 btattach
+-rwxr-xr-x 1 root root       264280  3월  2 00:33 btmgmt
+-rwxr-xr-x 1 root root       589784  3월  2 00:33 btmon
+-rwxr-xr-x 1 root root       371928  7월 13 01:28 busctl
+lrwxrwxrwx 1 root root           21  7월 26 15:48 c++ -> /etc/alternatives/c++
+-rwxr-xr-x 1 root root        36607  3월 13 20:54 c2ph
+lrwxrwxrwx 1 root root           21  7월 26 15:48 c89 -> /etc/alternatives/c89
+-rwxr-xr-x 1 root root          428  5월  7  2006 c89-gcc
+lrwxrwxrwx 1 root root           21  7월 26 15:48 c99 -> /etc/alternatives/c99
+-rwxr-xr-x 1 root root          454  4월 11  2011 c99-gcc
+lrwxrwxrwx 1 root root            4  7월 26 15:48 cal -> ncal
+-rwxr-xr-x 1 root root        27848  3월  1 20:43 calendar
+-rwxr-xr-x 1 root root        23960  8월  7  2014 calibrate_ppa
+-rwxr-xr-x 1 root root        10488  1월 14  2016 canberra-gtk-play
+-rwxr-xr-x 1 root root        14328  3월 26 02:42 cancel
+-rwxr-xr-x 1 root root        34976  4월  8 18:53 capinfos
+lrwxrwxrwx 1 root root            3  7월 26 15:48 captoinfo -> tic
+-rwxr-xr-x 1 root root         3327  4월 15 07:10 catchsegv
+-rwxr-xr-x 1 root root        35288 11월  7  2015 catman
+-rwxr-xr-x 1 root root          853 10월 31  2015 cautious-launcher
+lrwxrwxrwx 1 root root           20  7월 26 15:48 cc -> /etc/alternatives/cc
+-rwxr-xr-x 1 root root        18424 11월  7  2015 cd-create-profile
+-rwxr-xr-x 1 root root        22520 11월  7  2015 cd-fix-profile
+-rwxr-xr-x 1 root root        10232 11월  7  2015 cd-iccdump
+-rwxr-xr-x 1 root root        18424 11월  7  2015 cd-it8
+lrwxrwxrwx 1 root root           24  7월 26 15:48 c++filt -> x86_64-linux-gnu-c++filt
+lrwxrwxrwx 1 root root           10  7월 26 15:48 chacl -> /bin/chacl
+-rwxr-sr-x 1 root shadow      62336  3월 29 18:25 chage
+lrwxrwxrwx 1 root root           11  7월 26 15:48 chardet3 -> chardetect3
+-rwxr-xr-x 1 root root          309  2월 11 02:12 chardetect3
+lrwxrwxrwx 1 root root            9  7월 26 15:48 charmap -> gucharmap
+-rwxr-xr-x 1 root root        10592 10월 30  2015 chattr
+-rwxr-xr-x 1 root root        64432  2월 18 22:37 chcon
+-rwxr-xr-x 1 root root         2771  5월 27 07:49 check-language-support
+-rwxr-xr-x 1 root root       255504  4월  5 00:43 cheese
+-rwsr-xr-x 1 root root        49584  3월 29 18:25 chfn
+-rwxr-xr-x 1 root root        27312  5월 27 08:31 chrt
+-rwsr-xr-x 1 root root        40432  3월 29 18:25 chsh
+-rwxr-xr-x 1 root root       136760  3월  2 00:33 ciptool
+-rwxr-xr-x 1 root root       147651  6월 17 21:42 ckbcomp
+-rwxr-xr-x 1 root root        31408  2월 18 22:37 cksum
+-rwxr-xr-x 1 root root         6224  2월 19 17:22 clear
+-rwxr-xr-x 1 root root        10512  6월 25 00:44 clear_console
+-rwxr-xr-x 1 root root        43696 12월 27  2015 cmp
+-rwxr-xr-x 1 root root        10376  1월 31  2016 cmuwmtopbm
+-rwxr-xr-x 1 root root        10480  9월 17  2015 codepage
+-rwxr-xr-x 1 root root        10504  3월  1 20:43 col
+-rwxr-xr-x 1 root root        10472  3월  1 20:43 colcrt
+-rwxr-xr-x 1 root root        51192 11월  7  2015 colormgr
+-rwxr-xr-x 1 root root        10464  3월  1 20:43 colrm
+-rwxr-xr-x 1 root root        14712  3월  1 20:43 column
+lrwxrwxrwx 1 root root            9  7월 26 15:48 combinediff -> interdiff
+-rwxr-xr-x 1 root root        35536  2월 18 22:37 comm
+lrwxrwxrwx 1 root root           25  7월 26 15:48 compare -> /etc/alternatives/compare
+lrwxrwxrwx 1 root root           57  7월 26 15:48 compare-im6 -> ../lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/compare
+-rwxr-xr-x 1 root root        14848  7월 15 01:14 compiz
+-rwxr-xr-x 1 root root         3040  7월 15 01:00 compiz-decorator
+lrwxrwxrwx 1 root root           11  7월 26 15:48 compose -> run-mailcap
+lrwxrwxrwx 1 root root           27  7월 26 15:48 composite -> /etc/alternatives/composite
+lrwxrwxrwx 1 root root           59  7월 26 15:48 composite-im6 -> ../lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/composite
+lrwxrwxrwx 1 root root           25  7월 26 15:48 conjure -> /etc/alternatives/conjure
+lrwxrwxrwx 1 root root           57  7월 26 15:48 conjure-im6 -> ../lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/conjure
+lrwxrwxrwx 1 root root           25  7월 26 15:48 convert -> /etc/alternatives/convert
+lrwxrwxrwx 1 root root           57  7월 26 15:48 convert-im6 -> ../lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/convert
+-rwxr-xr-x 1 root root        12792  3월 13 20:54 corelist
+-rwxr-xr-x 1 root root         7427  3월 13 20:54 cpan
+-rwxr-xr-x 1 root root         7448  3월 13 20:54 cpan5.22-x86_64-linux-gnu
+lrwxrwxrwx 1 root root            5  7월 26 15:48 cpp -> cpp-5
+-rwxr-xr-x 1 root root       915736  7월  5 05:53 cpp-5
+-rwxr-xr-x 1 root root         1043  1월  3  2016 crc32
+-rwxr-xr-x 1 root root          558  4월 17 05:01 createfontdatachunk
+-rwxr-xr-x 1 root root       131800  2월  1 21:56 credentials-preferences
+-rwxr-xr-x 1 root root         5231  5월  3 02:03 c_rehash
+-rwxr-sr-x 1 root crontab     36080  4월  6 06:59 crontab
+-rwxr-xr-x 1 root root        47984  2월 18 22:37 csplit
+lrwxrwxrwx 1 root root            6  7월 26 15:48 ctstat -> lnstat
+-rwxr-xr-x 1 root root        22880  2월 18 14:33 cups-calibrate
+-rwxr-xr-x 1 root root        14328  3월 26 02:42 cupstestdsc
+-rwxr-xr-x 1 root root        55368  3월 26 02:42 cupstestppd
+-rwxr-xr-x 1 root root       190408  2월 18 17:18 curl
+-rwxr-xr-x 1 root root        39728  2월 18 22:37 cut
+-rwxr-xr-x 1 root root        14656  5월 18 10:14 cvt
+-rwxr-xr-x 1 root root        10224  4월  2 01:41 dbus-cleanup-sockets
+-rwxr-xr-x 1 root root       224208  4월  2 01:41 dbus-daemon
+-rwxr-xr-x 1 root root        26616  4월  2 01:41 dbus-launch
+-rwxr-xr-x 1 root root        22520  4월  2 01:41 dbus-monitor
+-rwxr-xr-x 1 root root        10224  4월  2 01:41 dbus-run-session
+-rwxr-xr-x 1 root root        22512  4월  2 01:41 dbus-send
+-rwxr-xr-x 1 root root        14320  4월  2 01:41 dbus-update-activation-environment
+-rwxr-xr-x 1 root root        10224  4월  2 01:41 dbus-uuidgen
+-rwxr-xr-x 1 root root        47560 12월 12  2014 dc
+-rwxr-xr-x 1 root root        44168  5월 27  2015 dconf
+-rwxr-xr-x 1 root root        10488  9월 17  2015 deallocvt
+-rwxr-xr-x 1 root root         2859 11월 11  2015 debconf
+-rwxr-xr-x 1 root root        11541 11월 11  2015 debconf-apt-progress
+-rwxr-xr-x 1 root root          608 11월 11  2015 debconf-communicate
+-rwxr-xr-x 1 root root         1719 11월 11  2015 debconf-copydb
+-rwxr-xr-x 1 root root          647 11월 11  2015 debconf-escape
+-rwxr-xr-x 1 root root         2935 11월 11  2015 debconf-set-selections
+-rwxr-xr-x 1 root root         1827 11월 11  2015 debconf-show
+-rwxr-xr-x 1 root root        18426  2월 29 21:24 deb-systemd-helper
+-rwxr-xr-x 1 root root         4477  2월 29 21:24 deb-systemd-invoke
+-rwxr-xr-x 1 root root         1351  5월  6  2015 dehtmldiff
+-rwxr-xr-x 1 root root       173272  4월  8 04:49 deja-dup
+-rwxr-xr-x 1 root root        44616  4월  8 04:49 deja-dup-preferences
+-rwxr-xr-x 1 root root        18888  5월 27 08:31 delpart
+lrwxrwxrwx 1 root root            9  7월 26 15:48 designer -> qtchooser
+lrwxrwxrwx 1 root root           20  7월 26 15:48 desktop-file-edit -> desktop-file-install
+-rwxr-xr-x 1 root root        74720  4월  5 03:39 desktop-file-install
+-rwxr-xr-x 1 root root        66568  4월  5 03:39 desktop-file-validate
+-rwxr-xr-x 1 root root       159832 11월 24  2014 devdump
+-rwxr-xr-x 1 root root        40080  6월 10 04:35 dfu-tool
+-rwxr-xr-x 1 root root         2550  8월 19  2015 dh_bash-completion
+-rwxr-xr-x 1 root root         9664 11월  8  2012 dh_installxmlcatalogs
+lrwxrwxrwx 1 root root           26  7월 26 15:48 dh_pypy -> ../share/dh-python/dh_pypy
+-rwxr-xr-x 1 root root         1056 12월 10  2015 dh_python2
+lrwxrwxrwx 1 root root           29  7월 26 15:48 dh_python3 -> ../share/dh-python/dh_python3
+-rwxr-xr-x 1 root root       126032 12월 27  2015 diff
+-rwxr-xr-x 1 root root        56176 12월 27  2015 diff3
+-rwxr-xr-x 1 root root        39504  2월  8 08:14 diffstat
+-rwxr-xr-x 1 root root       104544  4월 27 11:04 dig
+-rwxr-xr-x 1 root root        39640  2월 18 22:37 dircolors
+-rwxr-xr-x 1 root root       368840  4월  8 19:14 dirmngr
+-rwxr-xr-x 1 root root        96904  4월  8 19:14 dirmngr-client
+-rwxr-xr-x 1 root root        31408  2월 18 22:37 dirname
+-rwxr-xr-x 1 root root        17143 11월 26  2006 dirsplit
+lrwxrwxrwx 1 root root           25  7월 26 15:48 display -> /etc/alternatives/display
+lrwxrwxrwx 1 root root           57  7월 26 15:48 display-im6 -> ../lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/display
+-rwxr-xr-x 1 root root        18944  6월 24 06:08 dm-tool
+-rwxr-xr-x 1 root root         6590  4월 26 17:52 do-release-upgrade
+-rwxr-xr-x 1 root root       278264  5월 12 19:55 dpkg
+-rwxr-xr-x 1 root root        12623  5월 12 19:55 dpkg-architecture
+-rwxr-xr-x 1 root root         6217  5월 12 19:55 dpkg-buildflags
+-rwxr-xr-x 1 root root        23032  5월 12 19:55 dpkg-buildpackage
+-rwxr-xr-x 1 root root         7503  5월 12 19:55 dpkg-checkbuilddeps
+-rwxr-xr-x 1 root root       134520  5월 12 19:55 dpkg-deb
+-rwxr-xr-x 1 root root         2770  5월 12 19:55 dpkg-distaddfile
+-rwxr-xr-x 1 root root       138648  5월 12 19:55 dpkg-divert
+-rwxr-xr-x 1 root root        17870  5월 12 19:55 dpkg-genchanges
+-rwxr-xr-x 1 root root        14249  5월 12 19:55 dpkg-gencontrol
+-rwxr-xr-x 1 root root        10637  5월 12 19:55 dpkg-gensymbols
+-rwxr-xr-x 1 root root         6629  4월  8 01:55 dpkg-log-summary
+-rwxr-xr-x 1 root root        17765  5월 12 19:55 dpkg-maintscript-helper
+-rwxr-xr-x 1 root root         8538  5월 12 19:55 dpkg-mergechangelogs
+-rwxr-xr-x 1 root root         6789  5월 12 19:55 dpkg-name
+-rwxr-xr-x 1 root root         4545  5월 12 19:55 dpkg-parsechangelog
+-rwxr-xr-x 1 root root       146872  5월 12 19:55 dpkg-query
+-rwxr-xr-x 1 root root         8409  5월 12 19:55 dpkg-scanpackages
+-rwxr-xr-x 1 root root         9152  5월 12 19:55 dpkg-scansources
+-rwxr-xr-x 1 root root        29572  5월 12 19:55 dpkg-shlibdeps
+-rwxr-xr-x 1 root root        20332  5월 12 19:55 dpkg-source
+-rwxr-xr-x 1 root root       109712  5월 12 19:55 dpkg-split
+-rwxr-xr-x 1 root root        60496  5월 12 19:55 dpkg-statoverride
+-rwxr-xr-x 1 root root        72672  5월 12 19:55 dpkg-trigger
+-rwxr-xr-x 1 root root         3262  5월 12 19:55 dpkg-vendor
+-rwxr-xr-x 1 root root       122032  2월 18 22:37 du
+-rwxr-xr-- 1 root wireshark   88272  4월  8 18:53 dumpcap
+lrwxrwxrwx 1 root root           13  7월 26 15:48 dumpkeys -> /bin/dumpkeys
+-rwxr-xr-x 1 root root         1023  2월 29 19:49 dvipdf
+lrwxrwxrwx 1 root root           20  7월 26 15:48 dwp -> x86_64-linux-gnu-dwp
+lrwxrwxrwx 1 root root           11  7월 26 15:48 edit -> run-mailcap
+-rwxr-xr-x 1 root root        39000  4월  8 18:53 editcap
+-rwxr-xr-x 1 root root         2060  5월  6  2015 editdiff
+lrwxrwxrwx 1 root root           24  7월 26 15:48 editor -> /etc/alternatives/editor
+-rwxr-xr-x 1 root root        58872  5월  6  2015 editres
+-rwxr-xr-x 1 root root        31408  2월 25  2014 eject
+lrwxrwxrwx 1 root root           24  7월 26 15:48 elfedit -> x86_64-linux-gnu-elfedit
+-rwxr-xr-x 1 root root        39863  3월 13 20:54 enc2xs
+-rwxr-xr-x 1 root root         3028  3월 13 20:54 encguess
+-rwxr-xr-x 1 root root        18504  4월  5 22:33 enchant
+-rwxr-xr-x 1 root root        10232  4월  5 22:33 enchant-lsmod
+-rwxr-xr-x 1 root root         1508  4월 17 05:01 enhancer
+-rwxr-xr-x 1 root root        31408  2월 18 22:37 env
+-rwxr-xr-x 1 root root        35336  2월 10 21:13 envsubst
+-rwxr-xr-x 1 root root        10568  3월 10 13:16 eog
+-rwxr-xr-x 1 root root          639  2월 29 19:49 eps2eps
+-rwxr-xr-x 1 root root       185536  1월 29  2016 eqn
+-rwxr-xr-x 1 root root        10408  5월  7  2014 esc-m
+-rwxr-xr-x 1 root root       416912  3월  9 06:53 evince
+-rwxr-xr-x 1 root root        51416  3월  9 06:53 evince-previewer
+-rwxr-xr-x 1 root root        14424  3월  9 06:53 evince-thumbnailer
+lrwxrwxrwx 1 root root           20  7월 26 15:48 ex -> /etc/alternatives/ex
+-rwxr-xr-x 1 root root        31472  2월 18 22:37 expand
+-rwxr-sr-x 1 root shadow      22768  3월 29 18:25 expiry
+-rwxr-xr-x 1 root root         2439  4월 17 05:01 explode
+-rwxr-xr-x 1 root root        43760  2월 18 22:37 expr
+-rwxr-xr-x 1 root root        14504  1월 31  2016 eyuvtoppm
+-rwxr-xr-x 1 root root        72464  2월 18 22:37 factor
+-rwxr-xr-x 1 root root        18688  3월 29 18:25 faillog
+-rwxr-xr-x 1 root root        27160 11월 24  2014 faked-sysv
+-rwxr-xr-x 1 root root        27216 11월 24  2014 faked-tcp
+lrwxrwxrwx 1 root root           26  7월 26 15:48 fakeroot -> /etc/alternatives/fakeroot
+-rwxr-xr-x 1 root root         3855 11월 24  2014 fakeroot-sysv
+-rwxr-xr-x 1 root root         3850 11월 24  2014 fakeroot-tcp
+-rwxr-xr-x 1 root root        23104  5월 27 08:31 fallocate
+-rwxr-xr-x 1 root root        14856  4월  7 00:52 fc-cache
+-rwxr-xr-x 1 root root        14792  4월  7 00:52 fc-cat
+-rwxr-xr-x 1 root root        10568  4월  7 00:52 fc-list
+-rwxr-xr-x 1 root root        10632  4월  7 00:52 fc-match
+-rwxr-xr-x 1 root root        10568  4월  7 00:52 fc-pattern
+-rwxr-xr-x 1 root root        10536  4월  7 00:52 fc-query
+-rwxr-xr-x 1 root root        10584  4월  7 00:52 fc-scan
+-rwxr-xr-x 1 root root        10592  4월  7 00:52 fc-validate
+-rwxr-xr-x 1 root root       113672  1월 31  2016 fiascotopnm
+-rwxr-xr-x 1 root root        19088 11월 20  2015 file
+-rwxr-xr-x 1 root root        18816  3월 26 02:49 file2brl
+-rwxr-xr-x 1 root root         3172  6월  5  2015 file-rename
+-rwxr-xr-x 1 root root       492512  6월 10 02:13 file-roller
+-rwxr-xr-x 1 root root        44880  5월  6  2015 filterdiff
+-rwxr-xr-x 1 root root       221768  2월  8 08:18 find
+lrwxrwxrwx 1 root root           25  7월 26 15:48 firefox -> ../lib/firefox/firefox.sh
+-rwxr-xr-x 1 root root        14504  1월 31  2016 fitstopnm
+-rwxr-xr-x 1 root root         1870  5월  6  2015 fixcvsdiff
+-rwxr-xr-x 1 root root         8369 11월 17  2015 fix-qdf
+lrwxrwxrwx 1 root root            9  7월 26 15:48 flipdiff -> interdiff
+-rwxr-xr-x 1 root root        27352  5월 27 08:31 flock
+-rwxr-xr-x 1 root root        39632  2월 18 22:37 fmt
+-rwxr-xr-x 1 root root        35536  2월 18 22:37 fold
+-rwxr-xr-x 1 root root          311  2월 29 19:49 font2c
+-rwxr-xr-x 1 root root        35256  5월  6  2015 fonttosfnt
+-rwxr-xr-x 1 root root        33136  4월  7 20:48 foo2hbpl2
+-rwxr-xr-x 1 root root        18343  4월  7 20:48 foo2hbpl2-wrapper
+-rwxr-xr-x 1 root root        36208  4월  7 20:48 foo2hiperc
+-rwxr-xr-x 1 root root        18541  4월  7 20:48 foo2hiperc-wrapper
+-rwxr-xr-x 1 root root        36464  4월  7 20:48 foo2hp
+-rwxr-xr-x 1 root root        19204  4월  7 20:48 foo2hp2600-wrapper
+-rwxr-xr-x 1 root root        33200  4월  7 20:48 foo2lava
+-rwxr-xr-x 1 root root        20083  4월  7 20:48 foo2lava-wrapper
+-rwxr-xr-x 1 root root        36368  4월  7 20:48 foo2oak
+-rwxr-xr-x 1 root root        17871  4월  7 20:48 foo2oak-wrapper
+-rwxr-xr-x 1 root root        36240  4월  7 20:48 foo2qpdl
+-rwxr-xr-x 1 root root        19514  4월  7 20:48 foo2qpdl-wrapper
+-rwxr-xr-x 1 root root        32112  4월  7 20:48 foo2slx
+-rwxr-xr-x 1 root root        17603  4월  7 20:48 foo2slx-wrapper
+-rwxr-xr-x 1 root root        32112  4월  7 20:48 foo2xqx
+-rwxr-xr-x 1 root root        17572  4월  7 20:48 foo2xqx-wrapper
+-rwxr-xr-x 1 root root        37264  4월  7 20:48 foo2zjs
+lrwxrwxrwx 1 root root            5  7월 26 15:48 foo2zjs-icc2ps -> psicc
+-rwxr-xr-x 1 root root         2997  4월  7 20:48 foo2zjs-pstops
+-rwxr-xr-x 1 root root        25824  4월  7 20:48 foo2zjs-wrapper
+lrwxrwxrwx 1 root root           31  7월 26 15:48 foomatic-rip -> ../lib/cups/filter/foomatic-rip
+-rwxr-xr-x 1 root root        18808  1월 13  2016 free
+lrwxrwxrwx 1 root root           22  7월 26 15:48 from -> /etc/alternatives/from
+-rwxr-xr-x 1 root root        10384  1월 31  2016 fstopgm
+lrwxrwxrwx 1 root root           21  7월 26 15:48 ftp -> /etc/alternatives/ftp
+-rwxr-xr-x 1 root root        22864 11월 20  2015 funzip
+-rwxr-xr-x 1 root root        14328  3월 21 04:29 fwupdate
+-rwxr-xr-x 1 root root        61040  6월 10 04:35 fwupdmgr
+lrwxrwxrwx 1 root root            5  7월 26 15:48 g++ -> g++-5
+-rwxr-xr-x 1 root root        13560  1월 31  2016 g3topbm
+-rwxr-xr-x 1 root root       919832  7월  5 06:00 g++-5
+-rwxr-xr-x 1 root root        10240  9월 18  2015 gamma4scanimage
+-rwxr-xr-x 1 root root        19008  5월 18 18:15 gapplication
+-rwxr-xr-x 1 root root       232160  3월  2 00:33 gatttool
+-rwxr-xr-x 1 root root        10696  2월  4 01:00 gcalccmd
+lrwxrwxrwx 1 root root            5  7월 26 15:48 gcc -> gcc-5
+-rwxr-xr-x 1 root root       915736  7월  5 06:18 gcc-5
+lrwxrwxrwx 1 root root            8  7월 26 15:48 gcc-ar -> gcc-ar-5
+-rwxr-xr-x 1 root root        31136  7월  5 06:18 gcc-ar-5
+lrwxrwxrwx 1 root root            8  7월 26 15:48 gcc-nm -> gcc-nm-5
+-rwxr-xr-x 1 root root        31136  7월  5 06:18 gcc-nm-5
+lrwxrwxrwx 1 root root           12  7월 26 15:48 gcc-ranlib -> gcc-ranlib-5
+-rwxr-xr-x 1 root root        31136  7월  5 06:18 gcc-ranlib-5
+-rwxr-xr-x 1 root root        56648 11월 27  2015 gconf-merge-tree
+lrwxrwxrwx 1 root root           11  7월 26 15:48 gconftool -> gconftool-2
+-rwxr-xr-x 1 root root        60672 11월 27  2015 gconftool-2
+-rwxr-xr-x 1 root root         2945  6월 24 04:42 gcore
+lrwxrwxrwx 1 root root            6  7월 26 15:48 gcov -> gcov-5
+-rwxr-xr-x 1 root root       474968  7월  5 06:18 gcov-5
+lrwxrwxrwx 1 root root           11  7월 26 15:48 gcov-tool -> gcov-tool-5
+-rwxr-xr-x 1 root root       462640  7월  5 06:18 gcov-tool-5
+-rwxr-xr-x 1 root root        10672 10월 23  2015 gcr-viewer
+-rwxr-xr-x 1 root root      6546408  6월 24 04:55 gdb
+-rwxr-xr-x 1 root root         1995  6월 24 04:54 gdb-add-index
+-rwxr-xr-x 1 root root       418336  6월 24 04:55 gdbserver
+-rwxr-xr-x 1 root root          126  6월 24 04:54 gdbtui
+-rwxr-xr-x 1 root root        35768  5월 18 18:14 gdbus
+-rwxr-xr-x 1 root root         9228  2월 17 00:29 gdialog
+-rwxr-xr-x 1 root root        10536  3월  4 08:42 gedit
+lrwxrwxrwx 1 root root            8  7월 26 15:48 gemtopbm -> gemtopnm
+-rwxr-xr-x 1 root root        10416  1월 31  2016 gemtopnm
+-rwxr-xr-x 1 root root        23168  4월 15 07:19 gencat
+-rwxr-xr-x 1 root root       601360 11월 24  2014 genisoimage
+lrwxrwxrwx 1 root root            3  7월 26 15:48 geqn -> eqn
+lrwxrwxrwx 1 root root           11  7월 26 15:48 GET -> lwp-request
+-rwxr-xr-x 1 root root        22944  4월 15 07:19 getconf
+-rwxr-xr-x 1 root root         6210 11월 24  2014 geteltorito
+-rwxr-xr-x 1 root root        27960  4월 15 07:19 getent
+lrwxrwxrwx 1 root root           12  7월 26 15:48 getfacl -> /bin/getfacl
+-rwxr-xr-x 1 root root        10488  9월 17  2015 getkeycodes
+-rwxr-xr-x 1 root root        14776  5월 27 08:31 getopt
+-rwxr-xr-x 1 root root        35312  2월 10 21:13 gettext
+-rwxr-xr-x 1 root root        43751  2월 10 21:13 gettextize
+-rwxr-xr-x 1 root root         4624  2월 10 21:13 gettext.sh
+lrwxrwxrwx 1 root root            2  7월 26 15:48 ghostscript -> gs
+-rwxr-xr-x 1 root root          642  4월 17 05:01 gifmaker
+-rwxr-xr-x 1 root root        18648  1월 31  2016 giftopnm
+lrwxrwxrwx 1 root root           12  7월 26 15:48 ginstall-info -> install-info
+lrwxrwxrwx 1 root root           49  7월 26 15:48 gio-querymodules -> ../lib/x86_64-linux-gnu/glib-2.0/gio-querymodules
+-rwxr-xr-x 1 root root        14680  4월  7 20:48 gipddecode
+-rwxr-xr-x 1 root root      1862800  3월 23 12:45 git
+lrwxrwxrwx 1 root root            3  3월 23 12:45 git-receive-pack -> git
+-rwxr-xr-x 1 root root       894512  3월 23 12:45 git-shell
+lrwxrwxrwx 1 root root            3  3월 23 12:45 git-upload-archive -> git
+-rwxr-xr-x 1 root root       976720  3월 23 12:45 git-upload-pack
+-rwxr-xr-x 1 root root        10736  1월 28  2016 gkbd-keyboard-display
+lrwxrwxrwx 1 root root           55  7월 26 15:48 glib-compile-resources -> ../lib/x86_64-linux-gnu/glib-2.0/glib-compile-resources
+lrwxrwxrwx 1 root root           53  7월 26 15:48 glib-compile-schemas -> ../lib/x86_64-linux-gnu/glib-2.0/glib-compile-schemas
+-rwxr-xr-x 1 root root       407744  2월  4 01:00 gnome-calculator
+-rwxr-xr-x 1 root root       369712  5월 18 17:23 gnome-calendar
+lrwxrwxrwx 1 root root            9  7월 26 15:48 gnome-character-map -> gucharmap
+-rwxr-xr-x 1 root root        40544 12월  2  2015 gnome-disk-image-mounter
+-rwxr-xr-x 1 root root       521504 12월  2  2015 gnome-disks
+-rwxr-xr-x 1 root root        19208  4월 20 19:31 gnome-file-share-properties
+-rwxr-xr-x 1 root root        62320 11월  3  2015 gnome-font-viewer
+lrwxrwxrwx 1 root root            4  7월 26 15:48 gnome-help -> yelp
+lrwxrwxrwx 1 root root           15  7월 26 15:48 gnome-keyring -> gnome-keyring-3
+-rwxr-xr-x 1 root root        15144 11월  1  2015 gnome-keyring-3
+-rwxr-xr-x 1 root root      1014224 11월  1  2015 gnome-keyring-daemon
+-rwxr-xr-x 1 root root         1444  5월 27 07:49 gnome-language-selector
+-rwxr-xr-x 1 root root        69600 11월  4  2015 gnome-power-statistics
+-rwxr-xr-x 1 root root       136368  1월  4  2016 gnome-screensaver
+-rwxr-xr-x 1 root root        15176  1월  4  2016 gnome-screensaver-command
+-rwxr-xr-x 1 root root        83488 11월  3  2015 gnome-screenshot
+-rwxr-xr-x 1 root root          333  5월 18 17:34 gnome-session
+-rwxr-xr-x 1 root root        10592  5월 18 17:35 gnome-session-inhibit
+-rwxr-xr-x 1 root root        65608  5월 18 17:35 gnome-session-properties
+-rwxr-xr-x 1 root root        10848  5월 18 17:35 gnome-session-quit
+-rwxr-xr-x 1 root root       639568  6월 21 15:27 gnome-software
+-rwxr-xr-x 1 root root       121552 10월 20  2015 gnome-system-log
+-rwxr-xr-x 1 root root          255  4월 13  2013 gnome-system-log-pkexec
+-rwxr-xr-x 1 root root       331264 11월 12  2015 gnome-system-monitor
+-rwxr-xr-x 1 root root         3368  3월 16 03:05 gnome-terminal
+-rwxr-xr-x 1 root root        81928  3월 16 03:05 gnome-terminal.real
+-rwxr-xr-x 1 root root         1394  3월 16 03:00 gnome-terminal.wrapper
+lrwxrwxrwx 1 root root           35  7월 26 15:48 gnome-text-editor -> /etc/alternatives/gnome-text-editor
+-rwxr-xr-x 1 root root        23312 11월  3  2015 gnome-thumbnail-font
+lrwxrwxrwx 1 root root           35  7월 26 15:48 gnome-www-browser -> /etc/alternatives/gnome-www-browser
+lrwxrwxrwx 1 root root            7  7월 26 15:48 gold -> ld.gold
+-rwxr-xr-x 1 root root        10368  1월 31  2016 gouldtoppm
+-rwsr-xr-x 1 root root        75304  3월 29 18:25 gpasswd
+-rwxr-xr-x 1 root root      1008632  2월 12 22:08 gpg
+-rwxr-xr-x 1 root root       917032  4월  8 19:14 gpg2
+-rwxr-xr-x 1 root root       352872  4월  8 19:14 gpg-agent
+-rwxr-xr-x 1 root root       139720  4월  8 19:14 gpgconf
+-rwxr-xr-x 1 root root       142056  4월  8 19:14 gpg-connect-agent
+-rwxr-xr-x 1 root root        26696  4월  8 19:14 gpgparsemail
+-rwxr-xr-x 1 root root        60296  2월 12 22:08 gpgsplit
+-rwxr-xr-x 1 root root       372488  2월 12 22:08 gpgv
+-rwxr-xr-x 1 root root         3303  2월 12 22:08 gpg-zip
+lrwxrwxrwx 1 root root            3  7월 26 15:48 gpic -> pic
+lrwxrwxrwx 1 root root           22  7월 26 15:48 gprof -> x86_64-linux-gnu-gprof
+-rwxr-xr-x 1 root root        73336  4월 29 23:18 gpu-manager
+lrwxrwxrwx 1 root root           10  7월 26 15:48 grepdiff -> filterdiff
+-rwxr-xr-x 1 root root        18984  5월 18 18:15 gresource
+-rwxr-xr-x 1 root root       103744  1월 29  2016 groff
+-rwxr-xr-x 1 root root         2780  1월 29  2016 grog
+-rwxr-xr-x 1 root root       165600  1월 29  2016 grops
+-rwxr-xr-x 1 root root       120160  1월 29  2016 grotty
+-rwxr-xr-x 1 root root        31440  2월 18 22:37 groups
+-rwxr-xr-x 1 root root       234272  6월 17 18:11 grub-editenv
+-rwxr-xr-x 1 root root       647616  6월 17 18:11 grub-file
+-rwxr-xr-x 1 root root       780816  6월 17 18:11 grub-fstest
+-rwxr-xr-x 1 root root       229984  6월 17 18:11 grub-glue-efi
+-rwxr-xr-x 1 root root         1681  6월 17 18:10 grub-kbdcomp
+-rwxr-xr-x 1 root root       205464  6월 17 18:11 grub-menulst2cfg
+-rwxr-xr-x 1 root root       255264  6월 17 18:11 grub-mkfont
+-rwxr-xr-x 1 root root       317120  6월 17 18:11 grub-mkimage
+-rwxr-xr-x 1 root root       234400  6월 17 18:11 grub-mklayout
+-rwxr-xr-x 1 root root       358800  6월 17 18:11 grub-mknetdir
+-rwxr-xr-x 1 root root       234472  6월 17 18:11 grub-mkpasswd-pbkdf2
+-rwxr-xr-x 1 root root       229696  6월 17 18:11 grub-mkrelpath
+-rwxr-xr-x 1 root root       801824  6월 17 18:11 grub-mkrescue
+-rwxr-xr-x 1 root root       432872  6월 17 18:11 grub-mkstandalone
+-rwxr-xr-x 1 root root       595056  6월 17 18:11 grub-mount
+lrwxrwxrwx 1 root root           34  7월 26 15:48 grub-ntldr-img -> ../lib/grub/i386-pc/grub-ntldr-img
+-rwxr-xr-x 1 root root       664616  6월 17 18:11 grub-render-label
+-rwxr-xr-x 1 root root       254408  6월 17 18:11 grub-script-check
+-rwxr-xr-x 1 root root       611896  6월 17 18:11 grub-syslinux2cfg
+-rwxr-xr-x 1 root root        10456  2월 29 19:49 gs
+-rwxr-xr-x 1 root root          350  2월 29 19:49 gsbj
+-rwxr-xr-x 1 root root          352  2월 29 19:49 gsdj
+-rwxr-xr-x 1 root root          352  2월 29 19:49 gsdj500
+-rwxr-xr-x 1 root root        23216  5월 18 18:15 gsettings
+-rwxr-xr-x 1 root root        23464 11월 27  2015 gsettings-data-convert
+-rwxr-xr-x 1 root root        41811 11월 27  2015 gsettings-schema-convert
+-rwxr-xr-x 1 root root          353  2월 29 19:49 gslj
+-rwxr-xr-x 1 root root          350  2월 29 19:49 gslp
+-rwxr-xr-x 1 root root          277  2월 29 19:49 gsnd
+-rwxr-xr-x 1 root root        14976  6월 24 05:37 gst-device-monitor-1.0
+-rwxr-xr-x 1 root root        23512  6월 24 05:37 gst-discoverer-1.0
+-rwxr-xr-x 1 root root        40288  6월 24 06:05 gst-inspect-1.0
+-rwxr-xr-x 1 root root         1020  3월 17 00:40 gst-install
+-rwxr-xr-x 1 root root        31880  6월 24 06:05 gst-launch-1.0
+-rwxr-xr-x 1 root root        35904  6월 24 05:37 gst-play-1.0
+lrwxrwxrwx 1 root root           41  7월 26 15:48 gstreamer-codec-install -> /etc/alternatives/gstreamer-codec-install
+-rwxr-xr-x 1 root root        14856  6월 24 06:05 gst-typefind-1.0
+lrwxrwxrwx 1 root root            3  7월 26 15:48 gtbl -> tbl
+-rwxr-xr-x 1 root root        14616  5월 18 10:14 gtf
+-rwxr-xr-x 1 root root        19112  6월 30 17:02 gtk-builder-tool
+-rwxr-xr-x 1 root root        10744  6월 30 17:02 gtk-launch
+lrwxrwxrwx 1 root root           57  7월 26 15:48 gtk-update-icon-cache -> ../lib/x86_64-linux-gnu/libgtk2.0-0/gtk-update-icon-cache
+lrwxrwxrwx 1 root root           60  7월 26 15:48 gtk-update-icon-cache-3.0 -> ../lib/x86_64-linux-gnu/libgtk-3-0/gtk-update-icon-cache-3.0
+-rwxr-xr-x 1 root root       162296  7월 15 01:14 gtk-window-decorator
+-rwxr-xr-x 1 root root        74448  1월 28  2016 gucharmap
+-rwxr-xr-x 1 root root        10792  5월 18 18:08 gvfs-cat
+-rwxr-xr-x 1 root root        11064  5월 18 18:08 gvfs-copy
+-rwxr-xr-x 1 root root        15192  5월 18 18:08 gvfs-info
+-rwxr-xr-x 1 root root          884  5월 18 18:07 gvfs-less
+-rwxr-xr-x 1 root root        15384  5월 18 18:08 gvfs-ls
+-rwxr-xr-x 1 root root        10840  5월 18 18:08 gvfs-mime
+-rwxr-xr-x 1 root root        10760  5월 18 18:08 gvfs-mkdir
+-rwxr-xr-x 1 root root        10760  5월 18 18:08 gvfs-monitor-dir
+-rwxr-xr-x 1 root root        10760  5월 18 18:08 gvfs-monitor-file
+-rwxr-xr-x 1 root root        31824  5월 18 18:08 gvfs-mount
+-rwxr-xr-x 1 root root        11016  5월 18 18:08 gvfs-move
+-rwxr-xr-x 1 root root        10888  5월 18 18:08 gvfs-open
+-rwxr-xr-x 1 root root        10712  5월 18 18:08 gvfs-rename
+-rwxr-xr-x 1 root root        10760  5월 18 18:08 gvfs-rm
+-rwxr-xr-x 1 root root        11080  5월 18 18:08 gvfs-save
+-rwxr-xr-x 1 root root        10848  5월 18 18:08 gvfs-set-attribute
+-rwxr-xr-x 1 root root        10872  5월 18 18:08 gvfs-trash
+-rwxr-xr-x 1 root root        15032  5월 18 18:08 gvfs-tree
+-rwxr-xr-x 1 root root        29162  3월 13 20:54 h2ph
+-rwxr-xr-x 1 root root        60775  3월 13 20:54 h2xs
+-rwxr-xr-x 1 root root        15026  1월  6  2016 hardening-check
+-rwxr-xr-x 1 root root        27056  4월  7 20:48 hbpldecode
+-rwxr-xr-x 1 root root       133016  3월  2 00:33 hciattach
+-rwxr-xr-x 1 root root       138776  3월  2 00:33 hcitool
+lrwxrwxrwx 1 root root            7  7월 26 15:48 hd -> hexdump
+-rwxr-xr-x 1 root root        39664  2월 18 22:37 head
+lrwxrwxrwx 1 root root           11  7월 26 15:48 HEAD -> lwp-request
+-rwxr-xr-x 1 root root         2514  4월  8 20:39 helpztags
+-rwxr-xr-x 1 root root        14408  3월  2 00:33 hex2hcd
+-rwxr-xr-x 1 root root        31232  3월  1 20:43 hexdump
+-rwxr-xr-x 1 root root        18840  4월  7 20:48 hipercdecode
+-rwxr-xr-x 1 root root        10384  1월 31  2016 hipstopgm
+-rwxr-xr-x 1 root root        88440  4월 27 11:04 host
+-rwxr-xr-x 1 root root        27280  2월 18 22:37 hostid
+-rwxr-xr-x 1 root root       294096  7월 13 01:28 hostnamectl
+lrwxrwxrwx 1 root root           23  7월 26 15:48 hp-align -> ../share/hplip/align.py
+lrwxrwxrwx 1 root root           23  7월 26 15:48 hp-check -> ../share/hplip/check.py
+lrwxrwxrwx 1 root root           23  7월 26 15:48 hp-clean -> ../share/hplip/clean.py
+lrwxrwxrwx 1 root root           26  7월 26 15:48 hp-colorcal -> ../share/hplip/colorcal.py
+lrwxrwxrwx 1 root root           36  7월 26 15:48 hp-config_usb_printer -> ../share/hplip/config_usb_printer.py
+lrwxrwxrwx 1 root root           24  7월 26 15:48 hp-doctor -> ../share/hplip/doctor.py
+lrwxrwxrwx 1 root root           26  7월 26 15:48 hp-firmware -> ../share/hplip/firmware.py
+lrwxrwxrwx 1 root root           22  7월 26 15:48 hp-info -> ../share/hplip/info.py
+lrwxrwxrwx 1 root root           24  7월 26 15:48 hp-levels -> ../share/hplip/levels.py
+lrwxrwxrwx 1 root root           28  7월 26 15:48 hp-logcapture -> ../share/hplip/logcapture.py
+lrwxrwxrwx 1 root root           25  7월 26 15:48 hp-makeuri -> ../share/hplip/makeuri.py
+lrwxrwxrwx 1 root root           27  7월 26 15:48 hp-pkservice -> ../share/hplip/pkservice.py
+lrwxrwxrwx 1 root root           24  7월 26 15:48 hp-plugin -> ../share/hplip/plugin.py
+-rwxr-xr-x 1 root root          719  3월 29 15:59 hp-plugin-ubuntu
+lrwxrwxrwx 1 root root           23  7월 26 15:48 hp-probe -> ../share/hplip/probe.py
+lrwxrwxrwx 1 root root           23  7월 26 15:48 hp-query -> ../share/hplip/query.py
+lrwxrwxrwx 1 root root           22  7월 26 15:48 hp-scan -> ../share/hplip/scan.py
+lrwxrwxrwx 1 root root           23  7월 26 15:48 hp-setup -> ../share/hplip/setup.py
+lrwxrwxrwx 1 root root           26  7월 26 15:48 hp-testpage -> ../share/hplip/testpage.py
+lrwxrwxrwx 1 root root           26  7월 26 15:48 hp-timedate -> ../share/hplip/timedate.py
+lrwxrwxrwx 1 root root            7  7월 26 15:48 i386 -> setarch
+lrwxrwxrwx 1 root root           34  7월 26 15:51 i686-linux-gnu-pkg-config -> /usr/share/pkg-config-crosswrapper
+-rwxr-xr-x 1 root root        27536  1월 19  2016 ibus
+-rwxr-xr-x 1 root root       164152  1월 19  2016 ibus-daemon
+-rwxr-xr-x 1 root root         1147  1월 19  2016 ibus-setup
+-rwxr-xr-x 1 root root         1141  7월 23  2015 ibus-table-createdb
+-rwxr-xr-x 1 root root        31264  2월 27 18:09 iceauth
+-rwxr-xr-x 1 root root        45880  2월 10 22:42 ico
+-rwxr-xr-x 1 root root        10400  1월 31  2016 icontopbm
+-rwxr-xr-x 1 root root        60416  4월 15 07:19 iconv
+-rwxr-xr-x 1 root root        39760  2월 18 22:37 id
+lrwxrwxrwx 1 root root           26  7월 26 15:48 identify -> /etc/alternatives/identify
+lrwxrwxrwx 1 root root           58  7월 26 15:48 identify-im6 -> ../lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/identify
+-rwxr-xr-x 1 root root        18848  4월 15 09:04 iecset
+-rwxr-xr-x 1 root root       115176  3월 11 21:59 igt_stats
+-rwxr-xr-x 1 root root        31544  4월 26  2014 ijs_pxljr
+-rwxr-xr-x 1 root root        80184  1월 31  2016 ilbmtoppm
+-rwxr-xr-x 1 root root         1241  1월 31  2016 imagetops
+-rwxr-xr-x 1 root root        10811  3월 26 12:56 im-config
+-rwxr-xr-x 1 root root        10400  1월 31  2016 imgtoppm
+-rwxr-xr-x 1 root root         1030  3월 22  2015 im-launch
+lrwxrwxrwx 1 root root           24  7월 26 15:48 import -> /etc/alternatives/import
+lrwxrwxrwx 1 root root           56  7월 26 15:48 import-im6 -> ../lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/import
+-rwxr-xr-x 1 root root       219896  3월 12 18:46 info
+lrwxrwxrwx 1 root root           29  7월 26 15:48 infobrowser -> /etc/alternatives/infobrowser
+-rwxr-xr-x 1 root root        55880  2월 19 17:22 infocmp
+lrwxrwxrwx 1 root root            3  7월 26 15:48 infotocap -> tic
+-rwxr-xr-x 1 root root         6922  5월 19 23:24 init-checkconf
+-rwxr-xr-x 1 root root        18725  5월 19 23:24 initctl2dot
+-rwxr-xr-x 1 root root        22184  1월 10  2016 inputattach
+-rwxr-xr-x 1 root root       138840  2월 18 22:37 install
+-rwxr-xr-x 1 root root        44768  3월 12 18:46 install-info
+-rwxr-xr-x 1 root root           95  3월  8 10:15 install-printerdriver
+-rwxr-xr-x 1 root root         4332  3월 13 20:54 instmodsh
+-rwxr-xr-x 1 root root         1331  3월 11 21:59 intel_aubdump
+-rwxr-xr-x 1 root root       189928  3월 11 21:59 intel_audio_dump
+-rwxr-xr-x 1 root root       116200  3월 11 21:59 intel_backlight
+-rwxr-xr-x 1 root root        10528  3월 11 21:59 intel_bios_dumper
+-rwxr-xr-x 1 root root        31384  3월 11 21:59 intel_bios_reader
+-rwxr-xr-x 1 root root       111024  3월 11 21:59 intel_display_crc
+-rwxr-xr-x 1 root root       128488  3월 11 21:59 intel_display_poller
+-rwxr-xr-x 1 root root        10776  3월 11 21:59 intel_dump_decode
+-rwxr-xr-x 1 root root       139752  3월 11 21:59 intel_error_decode
+-rwxr-xr-x 1 root root       111048  3월 11 21:59 intel_firmware_decode
+-rwxr-xr-x 1 root root       116200  3월 11 21:59 intel_forcewaked
+-rwxr-xr-x 1 root root        10520  3월 11 21:59 intel_framebuffer_dump
+-rwxr-xr-x 1 root root       166880  3월 11 21:59 intel-gen4asm
+-rwxr-xr-x 1 root root        35216  3월 11 21:59 intel-gen4disasm
+-rwxr-xr-x 1 root root         2121  3월 11 21:59 intel_gpu_abrt
+-rwxr-xr-x 1 root root       115656  3월 11 21:59 intel_gpu_frequency
+-rwxr-xr-x 1 root root        69176  3월 11 21:59 intel-gpu-overlay
+-rwxr-xr-x 1 root root       116200  3월 11 21:59 intel_gpu_time
+-rwxr-xr-x 1 root root       140904  3월 11 21:59 intel_gpu_top
+-rwxr-xr-x 1 root root       111016  3월 11 21:59 intel_gtt
+-rwxr-xr-x 1 root root       128680  3월 11 21:59 intel_infoframes
+-rwxr-xr-x 1 root root       124488  3월 11 21:59 intel_l3_parity
+-rwxr-xr-x 1 root root       116232  3월 11 21:59 intel_lid
+-rwxr-xr-x 1 root root        14776  3월 11 21:59 intel_opregion_decode
+-rwxr-xr-x 1 root root       120392  3월 11 21:59 intel_panel_fitter
+-rwxr-xr-x 1 root root       211336  3월 11 21:59 intel_perf_counters
+-rwxr-xr-x 1 root root       182152  3월 11 21:59 intel_reg
+-rwxr-xr-x 1 root root       120296  3월 11 21:59 intel_reg_checker
+-rwxr-xr-x 1 root root       230504  3월 11 21:59 intel_residency
+-rwxr-xr-x 1 root root       119336  3월 11 21:59 intel_sprite_on
+-rwxr-xr-x 1 root root        10504  3월 11 21:59 intel_stepping
+-rwxr-xr-x 1 root root        64808  4월  5 19:35 intel-virtual-output
+-rwxr-xr-x 1 root root       128488  3월 11 21:59 intel_watermark
+-rwxr-xr-x 1 root root        48400  5월  6  2015 interdiff
+-rwxr-xr-x 1 root root        23128  5월 27 08:31 ionice
+-rwxr-xr-x 1 root root        23232  5월 27 08:31 ipcmk
+-rwxr-xr-x 1 root root        27176  5월 27 08:31 ipcrm
+-rwxr-xr-x 1 root root        47832  5월 27 08:31 ipcs
+-rwxr-xr-x 1 root root        19064  4월 13 17:40 ipod-read-sysinfo-extended
+-rwxr-xr-x 1 root root        10552  4월 13 17:40 ipod-time-sync
+lrwxrwxrwx 1 root root           19  7월 26 15:48 iptables-xml -> /sbin/xtables-multi
+-rwxr-xr-x 1 root root        10584  1월 27  2016 ischroot
+-rwxr-xr-x 1 root root        18832  3월  3 20:47 isdv4-serial-debugger
+-rwxr-xr-x 1 root root        18912  3월  3 20:47 isdv4-serial-inputattach
+-rwxr-xr-x 1 root root       163928 11월 24  2014 isodump
+-rwxr-xr-x 1 root root       327056 11월 24  2014 isoinfo
+-rwxr-xr-x 1 root root       163864 11월 24  2014 isovfy
+-rwxr-xr-x 1 root root         7222 10월 24  2015 ispell-wrapper
+-rwxr-xr-x 1 root root        47888  2월 18 22:37 join
+-rwxr-xr-x 1 root root        27024  1월 31  2016 jpegtopnm
+-rwxr-xr-x 1 root root        31600 11월 18  2014 jpgicc
+-rwxr-xr-x 1 root root         3918  3월 13 20:54 json_pp
+-rwxr-xr-x 1 root root          288  1월  7  2016 jwt3
+-rwxr-xr-x 1 root root        10504  9월 17  2015 kbdinfo
+-rwxr-xr-x 1 root root       146056  4월  8 19:14 kbxutil
+-rwxr-xr-x 1 root root        10232  3월 11 02:52 kerneloops-submit
+-rwxr-xr-x 1 root root        23736  2월  7 22:37 killall
+-rwxr-xr-x 1 root root        14968  5월 19 01:26 kmodsign
+-rwxr-xr-x 1 root root         3759  2월 18 03:16 koi8rxterm
+-rwxr-xr-x 1 root root        94024  3월  2 00:33 l2ping
+-rwxr-xr-x 1 root root       106568  3월  2 00:33 l2test
+-rwxr-xr-x 1 root root        39768  5월 27 08:31 last
+lrwxrwxrwx 1 root root            4  7월 26 15:48 lastb -> last
+-rwxr-xr-x 1 root root        14368  3월 29 18:25 lastlog
+-rwxr-xr-x 1 root root        18832  4월  7 20:48 lavadecode
+-rwxr-xr-x 1 root root         7786  3월 17 05:58 lcf
+lrwxrwxrwx 1 root root            9  7월 26 15:48 lconvert -> qtchooser
+lrwxrwxrwx 1 root root           19  7월 26 15:48 ld -> x86_64-linux-gnu-ld
+lrwxrwxrwx 1 root root           23  7월 26 15:48 ld.bfd -> x86_64-linux-gnu-ld.bfd
+-rwxr-xr-x 1 root root         5420  4월 15 07:10 ldd
+lrwxrwxrwx 1 root root           24  7월 26 15:48 ld.gold -> x86_64-linux-gnu-ld.gold
+-rwxr-xr-x 1 root root        10408  1월 31  2016 leaftoppm
+lrwxrwxrwx 1 root root            9  7월 26 15:48 less -> /bin/less
+lrwxrwxrwx 1 root root           13  7월 26 15:48 lessecho -> /bin/lessecho
+lrwxrwxrwx 1 root root           13  7월 26 15:48 lessfile -> /bin/lessfile
+lrwxrwxrwx 1 root root           12  7월 26 15:48 lesskey -> /bin/lesskey
+lrwxrwxrwx 1 root root           13  7월 26 15:48 lesspipe -> /bin/lesspipe
+-rwxr-xr-x 1 root root        92744 11월  7  2015 lexgrog
+-rwxr-xr-x 1 root root        15719  3월 13 20:54 libnetcfg
+lrwxrwxrwx 1 root root           34  7월 26 15:48 libreoffice -> ../lib/libreoffice/program/soffice
+-rwxr-xr-x 1 root root        10552  1월 22  2016 libwacom-list-local-devices
+-rwxr-xr-x 1 root root        10568  5월 27 08:31 line
+lrwxrwxrwx 1 root root            9  7월 26 15:48 linguist -> qtchooser
+-rwxr-xr-x 1 root root        31376  2월 18 22:37 link
+-rwxr-xr-x 1 root root        23136 11월 18  2014 linkicc
+lrwxrwxrwx 1 root root           32  7월 26 15:48 lintian -> ../share/lintian/frontend/dplint
+lrwxrwxrwx 1 root root           32  7월 26 15:48 lintian-info -> ../share/lintian/frontend/dplint
+lrwxrwxrwx 1 root root           32  7월 26 15:48 lintian-lab-tool -> ../share/lintian/frontend/dplint
+lrwxrwxrwx 1 root root            7  7월 26 15:48 linux32 -> setarch
+lrwxrwxrwx 1 root root            7  7월 26 15:48 linux64 -> setarch
+-rwxr-xr-x 1 root root         1577  1월 20  2011 linux-boot-prober
+-rwxr-xr-x 1 root root         2696  8월  5  2015 linux-version
+-rwxr-xr-x 1 root root        10384  1월 31  2016 lispmtopgm
+-rwxr-xr-x 1 root root        11032  5월  6  2015 listres
+-rwxr-xr-x 1 root root        19128  4월  5 21:16 lnstat
+lrwxrwxrwx 1 root root           13  7월 26 15:48 loadkeys -> /bin/loadkeys
+-rwxr-xr-x 1 root root        27240  9월 17  2015 loadunimap
+-rwxr-xr-x 1 root root           59  6월 28 15:12 localc
+-rwxr-xr-x 1 root root        38816  4월 15 07:19 locale
+-rwxr-xr-x 1 root root       302304  7월 13 01:28 localectl
+-rwxr-xr-x 1 root root       323288  4월 15 07:19 localedef
+lrwxrwxrwx 1 root root           24  7월 26 15:48 locate -> /etc/alternatives/locate
+-rwxr-xr-x 1 root root           59  6월 28 15:12 lodraw
+-rwxr-xr-x 1 root root           53  6월 28 15:12 loffice
+-rwxr-xr-x 1 root root           64  6월 28 15:12 lofromtemplate
+-rwxr-xr-x 1 root root        36200  5월 27 08:31 logger
+-rwxr-xr-x 1 root root        27312  2월 18 22:37 logname
+-rwxr-xr-x 1 root root           62  6월 28 15:12 loimpress
+-rwxr-xr-x 1 root root           59  6월 28 15:12 lomath
+-rwxr-xr-x 1 root root        10552  3월  1 20:43 look
+-rwxr-xr-x 1 root root         2763  3월  1 20:43 lorder
+-rwxr-xr-x 1 root root           58  6월 28 15:12 loweb
+-rwxr-xr-x 1 root root           61  6월 28 15:12 lowriter
+-rwxr-xr-x 1 root root        18424  3월 26 02:42 lp
+-rwxr-xr-x 1 root root        14408  3월 26 02:42 lpoptions
+-rwxr-xr-x 1 root root        14408  3월 26 02:42 lpq
+-rwxr-xr-x 1 root root        14328  3월 26 02:42 lpr
+-rwxr-xr-x 1 root root        10232  3월 26 02:42 lprm
+-rwxr-xr-x 1 root root        43824 12월  8  2015 lp_solve
+-rwxr-xr-x 1 root root        31008  3월 26 02:42 lpstat
+lrwxrwxrwx 1 root root            9  7월 26 15:48 lrelease -> qtchooser
+-rwxr-xr-x 1 root root        10576 10월 30  2015 lsattr
+-rwxr-xr-x 1 root root         3638  8월 26  2015 lsb_release
+-rwxr-xr-x 1 root root        56440  5월 27 08:31 lscpu
+lrwxrwxrwx 1 root root           10  7월 26 15:48 lsdiff -> filterdiff
+-rwxr-xr-x 1 root root       639304  6월 15 19:55 lshw
+-rwxr-xr-x 1 root root         2486  8월 17  2015 lsinitramfs
+-rwxr-xr-x 1 root root        60416  5월 27 08:31 lsipc
+-rwxr-xr-x 1 root root        31832  5월 27 08:31 lslocks
+-rwxr-xr-x 1 root root        52376  5월 27 08:31 lslogins
+-rwxr-xr-x 1 root root       163224 10월 29  2015 lsof
+-rwxr-xr-x 1 root root        73968  2월  5 05:59 lspci
+-rwxr-xr-x 1 root root         1081  6월 26  2014 lspgpot
+-rwxr-xr-x 1 root root       105128 10월 24  2015 lsusb
+-rwxr-xr-x 1 root root       305408  4월 12 14:48 ltrace
+-rwxr-xr-x 1 root root        41688  5월  6  2015 luit
+lrwxrwxrwx 1 root root            9  7월 26 15:48 lupdate -> qtchooser
+-rwxr-xr-x 1 root root         8635 12월  6  2015 lwp-download
+-rwxr-xr-x 1 root root         2797 12월  6  2015 lwp-dump
+-rwxr-xr-x 1 root root         2478 12월  6  2015 lwp-mirror
+-rwxr-xr-x 1 root root        15059 12월  6  2015 lwp-request
+-rwxr-xr-x 1 root root          419  2월 18 03:16 lxterm
+lrwxrwxrwx 1 root root            2  7월 26 15:48 lz -> uz
+lrwxrwxrwx 1 root root           23  7월 26 15:48 lzcat -> /etc/alternatives/lzcat
+lrwxrwxrwx 1 root root           23  7월 26 15:48 lzcmp -> /etc/alternatives/lzcmp
+lrwxrwxrwx 1 root root           24  7월 26 15:48 lzdiff -> /etc/alternatives/lzdiff
+lrwxrwxrwx 1 root root           25  7월 26 15:48 lzegrep -> /etc/alternatives/lzegrep
+lrwxrwxrwx 1 root root           25  7월 26 15:48 lzfgrep -> /etc/alternatives/lzfgrep
+lrwxrwxrwx 1 root root           24  7월 26 15:48 lzgrep -> /etc/alternatives/lzgrep
+lrwxrwxrwx 1 root root           24  7월 26 15:48 lzless -> /etc/alternatives/lzless
+lrwxrwxrwx 1 root root           22  7월 26 15:48 lzma -> /etc/alternatives/lzma
+-rwxr-xr-x 1 root root        10504  2월 13  2014 lzmainfo
+lrwxrwxrwx 1 root root           24  7월 26 15:48 lzmore -> /etc/alternatives/lzmore
+-rwxr-xr-x 1 root root        10368  1월 31  2016 macptopbm
+-rwxr-xr-x 1 root root       207528  2월 15 20:13 make
+-rwxr-xr-x 1 root root         4905  2월 15 20:10 make-first-existing-target
+-rwxr-xr-x 1 root root       107008 11월  7  2015 man
+-rwxr-xr-x 1 root root       129760 11월  7  2015 mandb
+-rwxr-xr-x 1 root root        31200 11월  7  2015 manpath
+-rwxr-xr-x 1 root root        19080  9월 17  2015 mapscrn
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mattrib -> mtools
+-rwxr-xr-x 1 root root       117768  3월 24  2014 mawk
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mbadblocks -> mtools
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mcat -> mtools
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mcd -> mtools
+-rwxr-xr-x 1 root root         1679 11월 17  2014 mcheck
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mclasserase -> mtools
+-rwxr-xr-x 1 root root          847 11월 17  2014 mcomp
+-rwxr-xr-x 1 root root        27352  5월 27 08:31 mcookie
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mcopy -> mtools
+-rwxr-xr-x 1 root root        43792  2월 18 22:37 md5sum
+lrwxrwxrwx 1 root root            6  7월 26 15:48 md5sum.textutils -> md5sum
+-rwxr-xr-x 1 root root        10416  1월 31  2016 mdatopbm
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mdel -> mtools
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mdeltree -> mtools
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mdir -> mtools
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mdu -> mtools
+-rwxr-xr-x 1 root root        18504  4월  8 18:53 mergecap
+-rwxr-xr-x 1 root root        10616  5월 27 08:31 mesg
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mformat -> mtools
+-rwxr-xr-x 1 root root        10384  1월 31  2016 mgrtopbm
+-rwxr-xr-x 1 root root         8711  6월 27  2015 mimeopen
+-rwxr-xr-x 1 root root        12145  6월 27  2015 mimetype
+-rwxr-xr-x 1 root root        20120  5월  7  2014 min12xxw
+lrwxrwxrwx 1 root root            6  7월 26 15:48 minfo -> mtools
+-rwxr-xr-x 1 root root        60368  2월 18 22:37 mkfifo
+-rwxr-xr-x 1 root root           65  5월  6  2015 mkfontdir
+-rwxr-xr-x 1 root root        31824  5월  6  2015 mkfontscale
+lrwxrwxrwx 1 root root           11  7월 26 15:48 mkisofs -> genisoimage
+-rwxr-xr-x 1 root root        10576 11월 17  2014 mkmanifest
+-rwxr-xr-x 1 root root        16163  9월 17  2015 mk_modmap
+-rwxr-xr-x 1 root root       178296  2월 24 20:33 mksquashfs
+-rwxr-xr-x 1 root root        23040 11월 24  2014 mkzftree
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mlabel -> mtools
+-rwxr-sr-x 1 root mlocate     39520 11월 18  2014 mlocate
+-rwxr-xr-x 1 root root       145832 11월  4  2015 mmcli
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mmd -> mtools
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mmount -> mtools
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mmove -> mtools
+lrwxrwxrwx 1 root root            9  7월 26 15:48 moc -> qtchooser
+lrwxrwxrwx 1 root root           25  7월 26 15:48 mogrify -> /etc/alternatives/mogrify
+lrwxrwxrwx 1 root root           57  7월 26 15:48 mogrify-im6 -> ../lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/mogrify
+lrwxrwxrwx 1 root root           25  7월 26 15:48 montage -> /etc/alternatives/montage
+lrwxrwxrwx 1 root root           57  7월 26 15:48 montage-im6 -> ../lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/montage
+-rwxr-xr-x 1 root root        65456 12월 10  2014 mousetweaks
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mpartition -> mtools
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mrd -> mtools
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mren -> mtools
+-rwxr-xr-x 1 root root        10480  6월 20  2013 mscompress
+-rwxr-xr-x 1 root root        10480  6월 20  2013 msexpand
+-rwxr-xr-x 1 root root        22880  2월 10 21:13 msgattrib
+-rwxr-xr-x 1 root root        22872  2월 10 21:13 msgcat
+-rwxr-xr-x 1 root root        22984  2월 10 21:13 msgcmp
+-rwxr-xr-x 1 root root        18760  2월 10 21:13 msgcomm
+-rwxr-xr-x 1 root root        18744  2월 10 21:13 msgconv
+-rwxr-xr-x 1 root root        18744  2월 10 21:13 msgen
+-rwxr-xr-x 1 root root        14680  2월 10 21:13 msgexec
+-rwxr-xr-x 1 root root        27048  2월 10 21:13 msgfilter
+-rwxr-xr-x 1 root root        77104  2월 10 21:13 msgfmt
+-rwxr-xr-x 1 root root        35520  2월 10 21:13 msggrep
+-rwxr-xr-x 1 root root        44104  2월 10 21:13 msginit
+-rwxr-xr-x 1 root root        52520  2월 10 21:13 msgmerge
+-rwxr-xr-x 1 root root        31256  2월 10 21:13 msgunfmt
+-rwxr-xr-x 1 root root        18752  2월 10 21:13 msguniq
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mshortname -> mtools
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mshowfat -> mtools
+-rwxr-xr-x 1 root root       182784 11월 17  2014 mtools
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mtoolstest -> mtools
+-rwxr-xr-x 1 root root        79528  5월 13 05:00 mtr
+-rwxr-xr-x 1 root root         6494  4월 15 07:09 mtrace
+-rwxr-xr-x 1 root root        10376  1월 31  2016 mtvtoppm
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mtype -> mtools
+-rwxr-xr-x 1 root root          784 11월 17  2014 mxtar
+lrwxrwxrwx 1 root root            6  7월 26 15:48 mzip -> mtools
+-rwxr-xr-x 1 root root        27216  5월 27 08:31 namei
+-rwxr-xr-x 1 root root      1426400  3월 19 04:57 nautilus
+-rwxr-xr-x 1 root root        31632  3월 19 04:57 nautilus-autorun-software
+-rwxr-xr-x 1 root root        44744  3월 19 04:57 nautilus-connect-server
+-rwxr-xr-x 1 root root        14880 11월 18  2014 nautilus-sendto
+lrwxrwxrwx 1 root root           22  7월 26 15:48 nawk -> /etc/alternatives/nawk
+-rwxr-xr-x 1 root root        29840  3월  1 20:43 ncal
+-rwxr-xr-x 1 root root        10368  1월 31  2016 neotoppm
+-rwxr-xr-x 1 root root          908  1월 29  2016 neqn
+-rwxr-xr-x 1 root root        89904  5월  6  2015 netkit-ftp
+-rwsr-xr-x 1 root root        39904  3월 29 18:25 newgrp
+-rwxr-xr-x 1 root root        35328  2월 10 21:13 ngettext
+-rwxr-xr-x 1 root root        35536  2월 18 22:37 nice
+-rwxr-xr-x 1 root root        39760  2월 18 22:37 nl
+lrwxrwxrwx 1 root root           19  7월 26 15:48 nm -> x86_64-linux-gnu-nm
+-rwxr-xr-x 1 root root       283560  6월 13 23:06 nm-applet
+-rwxr-xr-x 1 root root       617688  7월 12 16:07 nmcli
+-rwxr-xr-x 1 root root       389448  6월 13 23:06 nm-connection-editor
+-rwxr-xr-x 1 root root        14792  7월 12 16:07 nm-online
+-rwxr-xr-x 1 root root       252920  7월 12 16:07 nmtui
+lrwxrwxrwx 1 root root            5  7월 26 15:48 nmtui-connect -> nmtui
+lrwxrwxrwx 1 root root            5  7월 26 15:48 nmtui-edit -> nmtui
+lrwxrwxrwx 1 root root            5  7월 26 15:48 nmtui-hostname -> nmtui
+-rwxr-xr-x 1 root root        31440  2월 18 22:37 nohup
+-rwxr-xr-x 1 root root        14720  2월 16  2015 notify-send
+-rwxr-xr-x 1 root root        31440  2월 18 22:37 nproc
+-rwxr-xr-x 1 root root         3323  1월 29  2016 nroff
+-rwxr-xr-x 1 root root        27520  5월 27 08:31 nsenter
+-rwxr-xr-x 1 root root        92368  4월 27 11:04 nslookup
+-rwxr-xr-x 1 root root        23008  4월  5 21:16 nstat
+-rwxr-xr-x 1 root root        63512  4월 27 11:04 nsupdate
+-rwxr-xr-x 1 root root        43128  2월 18 07:45 ntfsdecrypt
+-rwxr-xr-x 1 root root        60272  2월 18 22:37 numfmt
+-rwxr-xr-x 1 root root          270  4월 29 23:18 nvidia-detector
+-rwxr-xr-x 1 root root        18840  4월  7 20:48 oakdecode
+-rwxr-xr-x 1 root root        92424  3월  2 00:33 obexctl
+lrwxrwxrwx 1 root root           24  7월 26 15:48 objcopy -> x86_64-linux-gnu-objcopy
+lrwxrwxrwx 1 root root           24  7월 26 15:48 objdump -> x86_64-linux-gnu-objdump
+-rwxr-xr-x 1 root root        20408  2월 10 22:42 oclock
+-rwxr-xr-x 1 root root        68432  2월 18 22:37 od
+lrwxrwxrwx 1 root root           17  7월 26 15:48 on_ac_power -> /sbin/on_ac_power
+-rwxr-xr-x 1 root root         1275  4월 19 00:46 onboard
+-rwxr-xr-x 1 root root          846  4월 19 00:46 onboard-settings
+-rwxr-xr-x 1 root root          162  2월  1 21:56 online-accounts-preferences
+-rwxr-xr-x 1 root root       559072  5월  3 02:03 openssl
+-rwxr-xr-x 1 root root        14728  4월  7 20:48 opldecode
+-rwxr-xr-x 1 root root         8508  4월  8 09:57 orca
+-rwxr-xr-x 1 root root           70 11월 11  2015 orca-dm-wrapper
+-rwxr-xr-x 1 root root         4596  3월 11 22:43 os-prober
+-rwxr-xr-x 1 root root        31464 12월 28  2015 p11-kit
+-rwxr-xr-x 1 root root        44160  3월 21 19:48 pacat
+-rwxr-xr-x 1 root root        14736  3월 21 19:48 pacmd
+-rwxr-xr-x 1 root root        60640  3월 21 19:48 pactl
+-rwxr-xr-x 1 root root         2259  3월 21 19:46 padsp
+lrwxrwxrwx 1 root root           23  7월 26 15:48 pager -> /etc/alternatives/pager
+-rwxr-xr-x 1 root root         2108  4월 17 05:01 painter
+-rwxr-xr-x 1 root root        18696  1월 31  2016 palmtopnm
+-rwxr-xr-x 1 root root        14512  1월 31  2016 pamcut
+-rwxr-xr-x 1 root root        10384  1월 31  2016 pamdeinterlace
+-rwxr-xr-x 1 root root        10416  1월 31  2016 pamdice
+-rwxr-xr-x 1 root root        10392  1월 31  2016 pamfile
+-rwxr-xr-x 1 root root        10400  1월 31  2016 pamoil
+lrwxrwxrwx 1 root root            5  7월 26 15:48 pamon -> pacat
+-rwxr-xr-x 1 root root        10400  1월 31  2016 pamstack
+-rwxr-xr-x 1 root root        10408  1월 31  2016 pamstretch
+-rwxr-xr-x 1 root root         1343  1월 31  2016 pamstretch-gen
+-rwxr-xr-x 1 root root        10608 11월  4  2015 paperconf
+lrwxrwxrwx 1 root root            5  7월 26 15:48 paplay -> pacat
+lrwxrwxrwx 1 root root            5  7월 26 15:48 parec -> pacat
+lrwxrwxrwx 1 root root            5  7월 26 15:48 parecord -> pacat
+-rwxr-xr-x 1 root root         8693 10월 24  2015 parsechangelog
+-rwxr-xr-x 1 root root        77448  5월 27 08:31 partx
+-rwsr-xr-x 1 root root        54256  3월 29 18:25 passwd
+-rwxr-xr-x 1 root root        31440  2월 18 22:37 paste
+-rwxr-xr-x 1 root root        14848  3월 21 19:48 pasuspender
+-rwxr-xr-x 1 root root       154944  4월  3  2015 patch
+-rwxr-xr-x 1 root root        31408  2월 18 22:37 pathchk
+-rwxr-xr-x 1 root root        14704  3월 21 19:48 pax11publish
+-rwxr-xr-x 1 root root        10400  1월 31  2016 pbmclean
+-rwxr-xr-x 1 root root        10360  1월 31  2016 pbmlife
+-rwxr-xr-x 1 root root        10360  1월 31  2016 pbmmake
+-rwxr-xr-x 1 root root        10376  1월 31  2016 pbmmask
+-rwxr-xr-x 1 root root        10384  1월 31  2016 pbmpage
+-rwxr-xr-x 1 root root        10520  1월 31  2016 pbmpscale
+-rwxr-xr-x 1 root root        10440  1월 31  2016 pbmreduce
+-rwxr-xr-x 1 root root        10440  1월 31  2016 pbmtext
+-rwxr-xr-x 1 root root        14600  1월 31  2016 pbmtextps
+-rwxr-xr-x 1 root root        10392  1월 31  2016 pbmto10x
+-rwxr-xr-x 1 root root        10648  1월 31  2016 pbmtoascii
+-rwxr-xr-x 1 root root        10392  1월 31  2016 pbmtoatk
+-rwxr-xr-x 1 root root        10352  1월 31  2016 pbmtobbnbg
+-rwxr-xr-x 1 root root        10384  1월 31  2016 pbmtocmuwm
+-rwxr-xr-x 1 root root        10344  1월 31  2016 pbmtoepsi
+-rwxr-xr-x 1 root root         6248  1월 31  2016 pbmtoepson
+-rwxr-xr-x 1 root root        13560  1월 31  2016 pbmtog3
+-rwxr-xr-x 1 root root        10400  1월 31  2016 pbmtogem
+-rwxr-xr-x 1 root root        10392  1월 31  2016 pbmtogo
+-rwxr-xr-x 1 root root        10376  1월 31  2016 pbmtoicon
+-rwxr-xr-x 1 root root        10440  1월 31  2016 pbmtolj
+-rwxr-xr-x 1 root root        10384  1월 31  2016 pbmtomacp
+-rwxr-xr-x 1 root root        10416  1월 31  2016 pbmtomda
+-rwxr-xr-x 1 root root        10360  1월 31  2016 pbmtomgr
+-rwxr-xr-x 1 root root        10408  1월 31  2016 pbmtonokia
+-rwxr-xr-x 1 root root        10376  1월 31  2016 pbmtopgm
+-rwxr-xr-x 1 root root        10368  1월 31  2016 pbmtopi3
+-rwxr-xr-x 1 root root         6240  1월 31  2016 pbmtoplot
+-rwxr-xr-x 1 root root        35064  1월 31  2016 pbmtoppa
+-rwxr-xr-x 1 root root        12120  1월 31  2016 pbmtopsg3
+-rwxr-xr-x 1 root root         6256  1월 31  2016 pbmtoptx
+-rwxr-xr-x 1 root root        10344  1월 31  2016 pbmtowbmp
+-rwxr-xr-x 1 root root        10392  1월 31  2016 pbmtox10bm
+-rwxr-xr-x 1 root root        10392  1월 31  2016 pbmtoxbm
+-rwxr-xr-x 1 root root        10360  1월 31  2016 pbmtoybm
+-rwxr-xr-x 1 root root        10392  1월 31  2016 pbmtozinc
+-rwxr-xr-x 1 root root        18544  1월 31  2016 pbmupc
+-rwxr-xr-x 1 root root        14936  2월  5 05:59 pcimodules
+-rwxr-xr-x 1 root root        18624  1월 31  2016 pcxtoppm
+lrwxrwxrwx 1 root root            6  7월 26 15:48 pdb -> pdb2.7
+lrwxrwxrwx 1 root root           23  7월 26 15:48 pdb2.7 -> ../lib/python2.7/pdb.py
+lrwxrwxrwx 1 root root            6  7월 26 15:48 pdb3 -> pdb3.5
+lrwxrwxrwx 1 root root           23  7월 26 15:48 pdb3.5 -> ../lib/python3.5/pdb.py
+-rwxr-xr-x 1 root root          698  2월 29 19:49 pdf2dsc
+-rwxr-xr-x 1 root root          909  2월 29 19:49 pdf2ps
+-rwxr-xr-x 1 root root        14992  2월 27 01:48 pdfdetach
+-rwxr-xr-x 1 root root        14528  2월 27 01:48 pdffonts
+-rwxr-xr-x 1 root root        43200  2월 27 01:48 pdfimages
+-rwxr-xr-x 1 root root        26816  2월 27 01:48 pdfinfo
+-rwxr-xr-x 1 root root        14408  2월 27 01:48 pdfseparate
+-rwxr-xr-x 1 root root       116840  2월 27 01:48 pdftocairo
+-rwxr-xr-x 1 root root        84072  2월 27 01:48 pdftohtml
+-rwxr-xr-x 1 root root        18536  2월 27 01:48 pdftoppm
+-rwxr-xr-x 1 root root        18632  2월 27 01:48 pdftops
+-rwxr-xr-x 1 root root        30928  2월 27 01:48 pdftotext
+-rwxr-xr-x 1 root root        26696  2월 27 01:48 pdfunite
+-rwxr-xr-x 1 root root        10552  2월  7 22:37 peekfd
+-rwxr-xr-x 1 root root      1907192  3월 13 20:54 perl
+-rwxr-xr-x 1 root root      1907192  3월 13 20:54 perl5.22.1
+-rwxr-xr-x 1 root root        10496  3월 13 20:54 perl5.22-x86_64-linux-gnu
+-rwxr-xr-x 1 root root        45355  3월 13 20:54 perlbug
+-rwxr-xr-x 1 root root          125  3월 13 20:54 perldoc
+-rwxr-xr-x 1 root root        10823  3월 13 20:54 perlivp
+-rwxr-xr-x 1 root root        45355  3월 13 20:54 perlthanks
+-rwxr-xr-x 1 root root          498  2월 29 19:49 pf2afm
+-rwxr-xr-x 1 root root          516  2월 29 19:49 pfbtopfa
+lrwxrwxrwx 1 root root           22  7월 26 15:48 pftp -> /etc/alternatives/pftp
+-rwxr-xr-x 1 root root        39840  5월 27 08:31 pg
+-rwxr-xr-x 1 root root         6256  1월 31  2016 pgmbentley
+-rwxr-xr-x 1 root root        14584  1월 31  2016 pgmcrater
+-rwxr-xr-x 1 root root        10376  1월 31  2016 pgmedge
+-rwxr-xr-x 1 root root        10368  1월 31  2016 pgmenhance
+-rwxr-xr-x 1 root root        10384  1월 31  2016 pgmhist
+-rwxr-xr-x 1 root root        10360  1월 31  2016 pgmkernel
+-rwxr-xr-x 1 root root        10376  1월 31  2016 pgmnoise
+lrwxrwxrwx 1 root root            7  7월 26 15:48 pgmnorm -> pnmnorm
+lrwxrwxrwx 1 root root            6  7월 26 15:48 pgmoil -> pamoil
+-rwxr-xr-x 1 root root        10352  1월 31  2016 pgmramp
+-rwxr-xr-x 1 root root        10360  1월 31  2016 pgmslice
+-rwxr-xr-x 1 root root        26816  1월 31  2016 pgmtexture
+-rwxr-xr-x 1 root root        10384  1월 31  2016 pgmtofs
+-rwxr-xr-x 1 root root        10392  1월 31  2016 pgmtolispm
+-rwxr-xr-x 1 root root        17048  1월 31  2016 pgmtopbm
+-rwxr-xr-x 1 root root        10392  1월 31  2016 pgmtoppm
+-rwxr-xr-x 1 root root        27280  1월 13  2016 pgrep
+-rwxr-xr-x 1 root root         6264  1월 31  2016 pi1toppm
+-rwxr-xr-x 1 root root        10384  1월 31  2016 pi3topbm
+-rwxr-xr-x 1 root root       200736  1월 29  2016 pic
+lrwxrwxrwx 1 root root           22  7월 26 15:48 pico -> /etc/alternatives/pico
+-rwxr-xr-x 1 root root         8319  3월 13 20:54 piconv
+-rwxr-xr-x 1 root root         2359  4월 17 05:01 pilconvert
+-rwxr-xr-x 1 root root        15575  4월 17 05:01 pildriver
+-rwxr-xr-x 1 root root         2667  4월 17 05:01 pilfile
+-rwxr-xr-x 1 root root         1028  4월 17 05:01 pilfont
+-rwxr-xr-x 1 root root         2538  4월 17 05:01 pilprint
+lrwxrwxrwx 1 root root           26  7월 26 15:48 pinentry -> /etc/alternatives/pinentry
+-rwxr-xr-x 1 root root        61048  2월  7 02:16 pinentry-gnome3
+lrwxrwxrwx 1 root root           30  7월 26 15:48 pinentry-x11 -> /etc/alternatives/pinentry-x11
+-rwxr-xr-x 1 root root        35696  2월 18 22:37 pinky
+lrwxrwxrwx 1 root root            9  7월 26 15:48 pixeltool -> qtchooser
+-rwxr-xr-x 1 root root        10464  1월 31  2016 pjtoppm
+-rwxr-xr-x 1 root root        10640  1월 18  2016 pkaction
+-rwxr-xr-x 1 root root        19104  1월 18  2016 pkcheck
+-rwsr-xr-x 1 root root        23376  1월 18  2016 pkexec
+-rwxr-xr-x 1 root root        47944  4월  6 23:03 pkg-config
+lrwxrwxrwx 1 root root            5  7월 26 15:48 pkill -> pgrep
+-rwxr-xr-x 1 root root        14784  1월 18  2016 pkttyagent
+-rwxr-xr-x 1 root root         4531  3월 13 20:54 pl2pm
+-rwxr-xr-x 1 root root          324  1월 12  2016 plainbox-qml-shell
+-rwxr-xr-x 1 root root          342  1월 12  2016 plainbox-trusted-launcher-1
+-rwxr-xr-x 1 root root         2174  4월 17 05:01 player
+-rwxr-xr-x 1 root root        14944  4월 15 07:19 pldd
+-rwxr-xr-x 1 root root          146  1월 28  2016 plog
+-rwxr-xr-x 1 root root        31344  1월 13  2016 pmap
+-rwxr-xr-x 1 root root          981  2월 16 02:16 pm-is-supported
+-rwxr-xr-x 1 root root        23016  1월 31  2016 pngtopnm
+-rwxr-xr-x 1 root root       628760  8월  7  2014 pnm2ppa
+-rwxr-xr-x 1 root root        10392  1월 31  2016 pnmalias
+-rwxr-xr-x 1 root root        10392  1월 31  2016 pnmarith
+-rwxr-xr-x 1 root root        10416  1월 31  2016 pnmcat
+-rwxr-xr-x 1 root root        14568  1월 31  2016 pnmcolormap
+-rwxr-xr-x 1 root root        10440  1월 31  2016 pnmcomp
+-rwxr-xr-x 1 root root        39088  1월 31  2016 pnmconvol
+-rwxr-xr-x 1 root root        10488  1월 31  2016 pnmcrop
+-rwxr-xr-x 1 root root        14512  1월 31  2016 pnmcut
+-rwxr-xr-x 1 root root        10384  1월 31  2016 pnmdepth
+-rwxr-xr-x 1 root root        10384  1월 31  2016 pnmenlarge
+-rwxr-xr-x 1 root root        10392  1월 31  2016 pnmfile
+-rwxr-xr-x 1 root root        10440  1월 31  2016 pnmflip
+-rwxr-xr-x 1 root root        10424  1월 31  2016 pnmgamma
+-rwxr-xr-x 1 root root        10432  1월 31  2016 pnmhisteq
+-rwxr-xr-x 1 root root        10416  1월 31  2016 pnmhistmap
+-rwxr-xr-x 1 root root         4601  1월 31  2016 pnmindex
+lrwxrwxrwx 1 root root           10  7월 26 15:48 pnminterp -> pamstretch
+lrwxrwxrwx 1 root root           14  7월 26 15:48 pnminterp-gen -> pamstretch-gen
+-rwxr-xr-x 1 root root         6272  1월 31  2016 pnminvert
+-rwxr-xr-x 1 root root         1768  1월 31  2016 pnmmargin
+-rwxr-xr-x 1 root root        14552  1월 31  2016 pnmmontage
+-rwxr-xr-x 1 root root        18672  1월 31  2016 pnmnlfilt
+lrwxrwxrwx 1 root root           13  7월 26 15:48 pnmnoraw -> pnmtoplainpnm
+-rwxr-xr-x 1 root root        10408  1월 31  2016 pnmnorm
+-rwxr-xr-x 1 root root        10432  1월 31  2016 pnmpad
+-rwxr-xr-x 1 root root        10400  1월 31  2016 pnmpaste
+-rwxr-xr-x 1 root root        10376  1월 31  2016 pnmpsnr
+-rwxr-xr-x 1 root root         3203  1월 31  2016 pnmquant
+-rwxr-xr-x 1 root root        14624  1월 31  2016 pnmremap
+-rwxr-xr-x 1 root root        14552  1월 31  2016 pnmrotate
+-rwxr-xr-x 1 root root        18608  1월 31  2016 pnmscale
+-rwxr-xr-x 1 root root        14512  1월 31  2016 pnmscalefixed
+-rwxr-xr-x 1 root root        10416  1월 31  2016 pnmshear
+-rwxr-xr-x 1 root root        10424  1월 31  2016 pnmsmooth
+-rwxr-xr-x 1 root root        10464  1월 31  2016 pnmsplit
+-rwxr-xr-x 1 root root        10368  1월 31  2016 pnmtile
+-rwxr-xr-x 1 root root        14560  1월 31  2016 pnmtoddif
+-rwxr-xr-x 1 root root       201208  1월 31  2016 pnmtofiasco
+-rwxr-xr-x 1 root root        10368  1월 31  2016 pnmtofits
+-rwxr-xr-x 1 root root        18808  1월 31  2016 pnmtojpeg
+-rwxr-xr-x 1 root root        18672  1월 31  2016 pnmtopalm
+-rwxr-xr-x 1 root root         6264  1월 31  2016 pnmtoplainpnm
+-rwxr-xr-x 1 root root        31408  1월 31  2016 pnmtopng
+-rwxr-xr-x 1 root root        18664  1월 31  2016 pnmtops
+-rwxr-xr-x 1 root root        10432  1월 31  2016 pnmtorast
+-rwxr-xr-x 1 root root        43656  1월 31  2016 pnmtorle
+-rwxr-xr-x 1 root root        14528  1월 31  2016 pnmtosgi
+-rwxr-xr-x 1 root root        10352  1월 31  2016 pnmtosir
+-rwxr-xr-x 1 root root        18728  1월 31  2016 pnmtotiff
+-rwxr-xr-x 1 root root        18680  1월 31  2016 pnmtotiffcmyk
+-rwxr-xr-x 1 root root        10424  1월 31  2016 pnmtoxwd
+-rwxr-xr-x 1 root root         4096  3월 13 20:54 pod2html
+-rwxr-xr-x 1 root root        13843  3월 13 20:54 pod2man
+-rwxr-xr-x 1 root root        11003  3월 13 20:54 pod2text
+-rwxr-xr-x 1 root root         3670  3월 13 20:54 pod2usage
+-rwxr-xr-x 1 root root         3699  3월 13 20:54 podchecker
+-rwxr-xr-x 1 root root         2527  3월 13 20:54 podselect
+-rwxr-xr-x 1 root root         2837  1월 28  2016 poff
+-rwxr-xr-x 1 root root         1362  1월 28  2016 pon
+lrwxrwxrwx 1 root root           11  7월 26 15:48 POST -> lwp-request
+-rwxr-xr-x 1 root root        18520  3월 26 02:42 ppdc
+-rwxr-xr-x 1 root root        10328  3월 26 02:42 ppdhtml
+-rwxr-xr-x 1 root root        10328  3월 26 02:42 ppdi
+-rwxr-xr-x 1 root root        14408  3월 26 02:42 ppdmerge
+-rwxr-xr-x 1 root root        10328  3월 26 02:42 ppdpo
+-rwxr-xr-x 1 root root          404  2월 29 19:49 pphs
+-rwxr-xr-x 1 root root        14472  1월 31  2016 ppm3d
+-rwxr-xr-x 1 root root        10408  1월 31  2016 ppmbrighten
+-rwxr-xr-x 1 root root        10376  1월 31  2016 ppmchange
+-rwxr-xr-x 1 root root        22800  1월 31  2016 ppmcie
+-rwxr-xr-x 1 root root        10400  1월 31  2016 ppmcolormask
+-rwxr-xr-x 1 root root         6256  1월 31  2016 ppmcolors
+-rwxr-xr-x 1 root root        10384  1월 31  2016 ppmdim
+-rwxr-xr-x 1 root root        10392  1월 31  2016 ppmdist
+-rwxr-xr-x 1 root root        10432  1월 31  2016 ppmdither
+-rwxr-xr-x 1 root root        11661  1월 31  2016 ppmfade
+-rwxr-xr-x 1 root root        10384  1월 31  2016 ppmflash
+-rwxr-xr-x 1 root root        22768  1월 31  2016 ppmforge
+-rwxr-xr-x 1 root root        10376  1월 31  2016 ppmhist
+-rwxr-xr-x 1 root root        10432  1월 31  2016 ppmlabel
+-rwxr-xr-x 1 root root         6256  1월 31  2016 ppmmake
+-rwxr-xr-x 1 root root        10384  1월 31  2016 ppmmix
+lrwxrwxrwx 1 root root            7  7월 26 15:48 ppmnorm -> pnmnorm
+-rwxr-xr-x 1 root root        10416  1월 31  2016 ppmntsc
+-rwxr-xr-x 1 root root        22784  1월 31  2016 ppmpat
+-rwxr-xr-x 1 root root        18680  1월 31  2016 ppmquant
+-rwxr-xr-x 1 root root         2072  1월 31  2016 ppmquantall
+-rwxr-xr-x 1 root root        14512  1월 31  2016 ppmqvga
+-rwxr-xr-x 1 root root         1706  1월 31  2016 ppmrainbow
+-rwxr-xr-x 1 root root        10368  1월 31  2016 ppmrelief
+-rwxr-xr-x 1 root root         6832  1월 31  2016 ppmshadow
+-rwxr-xr-x 1 root root        10416  1월 31  2016 ppmshift
+-rwxr-xr-x 1 root root        10400  1월 31  2016 ppmspread
+-rwxr-xr-x 1 root root        15408  1월 31  2016 ppmtoacad
+-rwxr-xr-x 1 root root        14600  1월 31  2016 ppmtobmp
+-rwxr-xr-x 1 root root        10400  1월 31  2016 ppmtoeyuv
+-rwxr-xr-x 1 root root        18672  1월 31  2016 ppmtogif
+-rwxr-xr-x 1 root root        10440  1월 31  2016 ppmtoicr
+-rwxr-xr-x 1 root root        39368  1월 31  2016 ppmtoilbm
+lrwxrwxrwx 1 root root            9  7월 26 15:48 ppmtojpeg -> pnmtojpeg
+-rwxr-xr-x 1 root root        10392  1월 31  2016 ppmtoleaf
+-rwxr-xr-x 1 root root        10400  1월 31  2016 ppmtolj
+-rwxr-xr-x 1 root root           81  1월 31  2016 ppmtomap
+-rwxr-xr-x 1 root root        18640  1월 31  2016 ppmtomitsu
+-rwxr-xr-x 1 root root       547456  1월 31  2016 ppmtompeg
+-rwxr-xr-x 1 root root        10400  1월 31  2016 ppmtoneo
+-rwxr-xr-x 1 root root        14536  1월 31  2016 ppmtopcx
+-rwxr-xr-x 1 root root        10360  1월 31  2016 ppmtopgm
+-rwxr-xr-x 1 root root        10392  1월 31  2016 ppmtopi1
+-rwxr-xr-x 1 root root        10408  1월 31  2016 ppmtopict
+-rwxr-xr-x 1 root root        10392  1월 31  2016 ppmtopj
+-rwxr-xr-x 1 root root        10392  1월 31  2016 ppmtopuzz
+-rwxr-xr-x 1 root root        10384  1월 31  2016 ppmtorgb3
+-rwxr-xr-x 1 root root        10400  1월 31  2016 ppmtosixel
+-rwxr-xr-x 1 root root        10432  1월 31  2016 ppmtotga
+-rwxr-xr-x 1 root root        10472  1월 31  2016 ppmtouil
+-rwxr-xr-x 1 root root        14616  1월 31  2016 ppmtowinicon
+-rwxr-xr-x 1 root root        14640  1월 31  2016 ppmtoxpm
+-rwxr-xr-x 1 root root        10360  1월 31  2016 ppmtoyuv
+-rwxr-xr-x 1 root root        10384  1월 31  2016 ppmtoyuvsplit
+-rwxr-xr-x 1 root root        10384  1월 31  2016 ppmtv
+-rwxr-xr-x 1 root root        76752  2월 18 22:37 pr
+-rwxr-xr-x 1 root root         5656  2월  7 19:05 precat
+-rwxr-xr-x 1 root root        43208  1월 29  2016 preconv
+-rwxr-xr-x 1 root root         2987  3월 13 20:54 prename
+-rwxr-xr-x 1 root root         5656  2월  7 19:05 preunzip
+-rwxr-xr-x 1 root root         5656  2월  7 19:05 prezip
+-rwxr-xr-x 1 root root        10488  2월  7 19:05 prezip-bin
+lrwxrwxrwx 1 root root           11  7월 26 15:48 print -> run-mailcap
+-rwxr-xr-x 1 root root          395  2월 29 19:49 printafm
+-rwxr-xr-x 1 root root        31376  2월 18 22:37 printenv
+-rwxr-xr-x 1 root root        18704  3월  1 20:43 printerbanner
+-rwxr-xr-x 1 root root         5640  4월  7 20:48 printer-profile
+-rwxr-xr-x 1 root root        47856  2월 18 22:37 printf
+-rwxr-xr-x 1 root root        32056  5월 27 08:31 prlimit
+-rwxr-xr-x 1 root root        13550  3월 13 20:54 prove
+-rwxr-xr-x 1 root root        14696  2월  7 22:37 prtstat
+-rwxr-xr-x 1 root root          740  2월 29 19:49 ps2ascii
+-rwxr-xr-x 1 root root         2794  2월 29 19:49 ps2epsi
+-rwxr-xr-x 1 root root          272  2월 29 19:49 ps2pdf
+-rwxr-xr-x 1 root root          215  2월 29 19:49 ps2pdf12
+-rwxr-xr-x 1 root root          215  2월 29 19:49 ps2pdf13
+-rwxr-xr-x 1 root root          215  2월 29 19:49 ps2pdf14
+-rwxr-xr-x 1 root root         1097  2월 29 19:49 ps2pdfwr
+-rwxr-xr-x 1 root root          647  2월 29 19:49 ps2ps
+-rwxr-xr-x 1 root root          669  2월 29 19:49 ps2ps2
+lrwxrwxrwx 1 root root            8  7월 26 15:48 ps2txt -> ps2ascii
+lrwxrwxrwx 1 root root            9  7월 26 15:48 psfaddtable -> psfxtable
+lrwxrwxrwx 1 root root            9  7월 26 15:48 psfgettable -> psfxtable
+lrwxrwxrwx 1 root root            9  7월 26 15:48 psfstriptable -> psfxtable
+-rwxr-xr-x 1 root root        18808  9월 17  2015 psfxtable
+-rwxr-xr-x 1 root root        18888 11월 18  2014 psicc
+-rwxr-xr-x 1 root root        10384  1월 31  2016 psidtopgm
+-rwxr-xr-x 1 root root        18768  1월 31  2016 pstopnm
+-rwxr-xr-x 1 root root        27464  2월  7 22:37 pstree
+lrwxrwxrwx 1 root root            6  7월 26 15:48 pstree.x11 -> pstree
+-rwxr-xr-x 1 root root        36607  3월 13 20:54 pstruct
+-rwxr-xr-x 1 root root         3524  3월 13 20:54 ptar
+-rwxr-xr-x 1 root root         2590  3월 13 20:54 ptardiff
+-rwxr-xr-x 1 root root         4354  3월 13 20:54 ptargrep
+-rwxr-xr-x 1 root root        68560  2월 18 22:37 ptx
+-rwxr-xr-x 1 root root        88224  3월 21 19:48 pulseaudio
+-rwxr-xr-x 1 root root        10608  1월 13  2016 pwdx
+-rwxr-xr-x 1 root root         7806  3월 23 20:00 py3clean
+-rwxr-xr-x 1 root root        12113  3월 23 20:00 py3compile
+lrwxrwxrwx 1 root root           31  7월 26 15:48 py3versions -> ../share/python3/py3versions.py
+lrwxrwxrwx 1 root root           26  7월 26 15:48 pybuild -> ../share/dh-python/pybuild
+-rwxr-xr-x 1 root root         4123 12월 10  2015 pyclean
+-rwxr-xr-x 1 root root        11894 12월 10  2015 pycompile
+lrwxrwxrwx 1 root root            8  7월 26 15:48 pydoc -> pydoc2.7
+-rwxr-xr-x 1 root root           79  7월  3 04:02 pydoc2.7
+lrwxrwxrwx 1 root root            8  7월 26 15:48 pydoc3 -> pydoc3.5
+-rwxr-xr-x 1 root root           79  7월  7 18:14 pydoc3.5
+lrwxrwxrwx 1 root root           12  7월 26 15:48 pygettext -> pygettext2.7
+-rwxr-xr-x 1 root root        22097  7월  3 04:02 pygettext2.7
+lrwxrwxrwx 1 root root           12  7월 26 15:48 pygettext3 -> pygettext3.5
+-rwxr-xr-x 1 root root        22256  7월  7 18:14 pygettext3.5
+lrwxrwxrwx 1 root root            9  7월 26 15:48 python -> python2.7
+lrwxrwxrwx 1 root root            9  7월 26 15:48 python2 -> python2.7
+-rwxr-xr-x 1 root root      3546104  7월  3 04:05 python2.7
+lrwxrwxrwx 1 root root            9  7월 26 15:48 python3 -> python3.5
+-rwxr-xr-x 1 root root      4456272  7월  7 18:17 python3.5
+-rwxr-xr-x 1 root root      4456272  7월  7 18:17 python3.5m
+lrwxrwxrwx 1 root root           10  7월 26 15:48 python3m -> python3.5m
+lrwxrwxrwx 1 root root           29  7월 26 15:48 pyversions -> ../share/python/pyversions.py
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qcollectiongenerator -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qdbus -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qdbuscpp2xml -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qdbusviewer -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qdbusxml2cpp -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qdoc -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qdoc3 -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qglinfo -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qhelpconverter -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qhelpgenerator -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qlalr -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qmake -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qml -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qml1plugindump -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qmlbundle -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qmleasing -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qmlimportscanner -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qmllint -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qmlmin -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qmlplugindump -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qmlprofiler -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qmlscene -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qmltestrunner -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qmlviewer -> qtchooser
+-rwxr-xr-x 1 root root        84152 11월 17  2015 qpdf
+-rwxr-xr-x 1 root root        18840  4월  7 20:48 qpdldecode
+-rwxr-xr-x 1 root root        10376  1월 31  2016 qrttoppm
+-rwxr-xr-x 1 root root        39640 12월  9  2015 qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qtconfig -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qtdiag -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 qtpaths -> qtchooser
+-rwxr-xr-x 1 root root         2453  4월 29 23:18 quirks-handler
+lrwxrwxrwx 1 root root           23  7월 26 15:48 ranlib -> x86_64-linux-gnu-ranlib
+-rwxr-xr-x 1 root root        10384  1월 31  2016 rasttopnm
+-rwxr-xr-x 1 root root        59464  4월  8 18:53 rawshark
+-rwxr-xr-x 1 root root        10424  1월 31  2016 rawtopgm
+-rwxr-xr-x 1 root root        10376  1월 31  2016 rawtoppm
+lrwxrwxrwx 1 root root            9  7월 26 15:48 rcc -> qtchooser
+lrwxrwxrwx 1 root root           21  7월 26 15:48 rcp -> /etc/alternatives/rcp
+-rwxr-xr-x 1 root root       140712  3월  2 00:33 rctest
+lrwxrwxrwx 1 root root           24  7월 26 15:48 readelf -> x86_64-linux-gnu-readelf
+-rwxr-xr-x 1 root root        60240  2월 18 22:37 realpath
+-rwxr-xr-x 1 root root        14624  2월 10 21:13 recode-sr-latin
+-rwxr-xr-x 1 root root         3445  5월  6  2015 recountdiff
+-rwxr-xr-x 1 root root        35552  5월  6  2015 rediff
+-rwxr-xr-x 1 root root       322024  3월 29 11:39 remmina
+lrwxrwxrwx 1 root root           24  7월 26 15:48 rename -> /etc/alternatives/rename
+-rwxr-xr-x 1 root root        14752  5월 27 08:31 rename.ul
+-rwxr-xr-x 1 root root        49208  2월 10 22:42 rendercheck
+-rwxr-xr-x 1 root root        10624  5월 27 08:31 renice
+-rwxr-xr-x 1 root root        14408  4월  8 18:53 reordercap
+lrwxrwxrwx 1 root root            4  7월 26 15:48 reset -> tset
+-rwxr-xr-x 1 root root        18848  2월 18 03:16 resize
+-rwxr-xr-x 1 root root        18984  9월 17  2015 resizecons
+-rwxr-xr-x 1 root root        35696  5월 27 08:31 resizepart
+-rwxr-xr-x 1 root root        10632  5월 27 08:31 rev
+-rwxr-xr-x 1 root root       102904  3월  2 00:33 rfcomm
+-rwxr-xr-x 1 root root        10368  1월 31  2016 rgb3toppm
+-rwxr-xr-x 1 root root           30  3월  5 02:02 rgrep
+-rwxr-xr-x 1 root root        10552  4월 14 07:00 rhythmbox
+-rwxr-xr-x 1 root root        37816  4월 14 07:00 rhythmbox-client
+-rwxr-xr-x 1 root root        31336  1월 31  2016 rletopnm
+lrwxrwxrwx 1 root root           24  7월 26 15:48 rlogin -> /etc/alternatives/rlogin
+-rwxr-xr-x 1 root root          173 11월  4  2015 routef
+-rwxr-xr-x 1 root root         1262 11월  4  2015 routel
+-rwxr-xr-x 1 root root        93120  4월 15 07:19 rpcgen
+lrwxrwxrwx 1 root root           21  7월 26 15:48 rsh -> /etc/alternatives/rsh
+-rwxr-xr-x 1 root root         2610  5월  6  2015 rstart
+-rwxr-xr-x 1 root root         1469  5월  6  2015 rstartd
+-rwxr-xr-x 1 root root       479448  1월 20  2016 rsync
+lrwxrwxrwx 1 root root            6  7월 26 15:48 rtstat -> lnstat
+-rwxr-xr-x 1 root root        35632  2월 18 22:37 runcon
+-rwxr-xr-x 1 root root        17975 10월 31  2015 run-mailcap
+-rwxr-xr-x 1 root root           57  2월  7 19:05 run-with-aspell
+lrwxrwxrwx 1 root root           23  7월 26 15:48 rview -> /etc/alternatives/rview
+-rwxr-xr-x 1 root root       117728  9월 18  2015 sane-find-scanner
+-rwxr-xr-x 1 root root        10469  1월 27  2016 savelog
+-rwxr-xr-x 1 root root        47984  5월 19 01:26 sbattach
+-rwxr-xr-x 1 root root        10536  1월 31  2016 sbigtopgm
+-rwxr-xr-x 1 root root        56464  5월 19 01:26 sbkeysync
+-rwxr-xr-x 1 root root        48048  5월 19 01:26 sbsiglist
+-rwxr-xr-x 1 root root        48080  5월 19 01:26 sbsign
+-rwxr-xr-x 1 root root        52336  5월 19 01:26 sbvarsign
+-rwxr-xr-x 1 root root        52176  5월 19 01:26 sbverify
+-rwxr-xr-x 1 root root        51992  9월 18  2015 scanimage
+-rwxr-xr-x 1 root root        80016  4월 28 17:52 scp
+-rwxr-xr-x 1 root root           90  3월  8 10:15 scp-dbus-service
+-rwxr-xr-x 1 root root        10520  9월 17  2015 screendump
+-rwxr-xr-x 1 root root        23200  5월 27 08:31 script
+-rwxr-xr-x 1 root root        14744  5월 27 08:31 scriptreplay
+-rwxr-xr-x 1 root root        47904 12월 27  2015 sdiff
+-rwxr-xr-x 1 root root       205720  3월  2 00:33 sdptool
+-rwxr-xr-x 1 root root      1102688 10월 28  2015 seahorse
+lrwxrwxrwx 1 root root           11  7월 26 15:48 see -> run-mailcap
+-rwxr-xr-x 1 root root          474 10월 24  2015 select-default-iwrap
+-rwxr-xr-x 1 root root         1215  6월 17  2013 select-editor
+-rwxr-xr-x 1 root root         1436  6월 17  2013 sensible-browser
+-rwxr-xr-x 1 root root         1109  6월 17  2013 sensible-editor
+-rwxr-xr-x 1 root root          288  6월 17  2013 sensible-pager
+-rwxr-xr-x 1 root root        47856  2월 18 22:37 seq
+-rwxr-xr-x 1 root root         1059  3월 17 00:40 session-installer
+-rwxr-xr-x 1 root root        14864  5월  7  2015 session-migration
+-rwxr-xr-x 1 root root        10600  2월 27 18:09 sessreg
+-rwxr-xr-x 1 root root        14720  5월 27 08:31 setarch
+lrwxrwxrwx 1 root root           12  7월 26 15:48 setfacl -> /bin/setfacl
+-rwxr-xr-x 1 root root        10480  9월 17  2015 setkeycodes
+-rwxr-xr-x 1 root root        10504  9월 17  2015 setleds
+-rwxr-xr-x 1 root root        10464  9월 17  2015 setlogcons
+-rwxr-xr-x 1 root root        10552  9월 17  2015 setmetamode
+-rwxr-xr-x 1 root root        23008  2월  5 05:59 setpci
+-rwxr-xr-x 1 root root        10624  5월 27 08:31 setsid
+-rwxr-xr-x 1 root root        35440  5월 27 08:31 setterm
+-rwxr-xr-x 1 root root        23344  5월  6  2015 setxkbmap
+-rwxr-xr-x 1 root root       133488  4월 28 17:52 sftp
+lrwxrwxrwx 1 root root            6  7월 26 15:48 sg -> newgrp
+-rwxr-xr-x 1 root root        14568  1월 31  2016 sgitopnm
+-rwxr-xr-x 1 root root        43792  2월 18 22:37 sha1sum
+-rwxr-xr-x 1 root root        51984  2월 18 22:37 sha224sum
+-rwxr-xr-x 1 root root        51984  2월 18 22:37 sha256sum
+-rwxr-xr-x 1 root root        56080  2월 18 22:37 sha384sum
+-rwxr-xr-x 1 root root        56080  2월 18 22:37 sha512sum
+-rwxr-xr-x 1 root root         9332  3월 13 20:54 shasum
+-rwxr-xr-x 1 root root      4291448  2월 16 22:57 shotwell
+-rwxr-xr-x 1 root root        18784  9월 17  2015 showconsolefont
+-rwxr-xr-x 1 root root        14624  9월 17  2015 showkey
+-rwxr-xr-x 1 root root         6400  2월 27 18:09 showrgb
+-rwxr-xr-x 1 root root        56240  2월 18 22:37 shred
+-rwxr-xr-x 1 root root        56144  2월 18 22:37 shuf
+-rwxr-xr-x 1 root root       509456 11월  6  2015 signond
+-rwxr-xr-x 1 root root        73064 11월  6  2015 signonpluginprocess
+-rwxr-xr-x 1 root root       276184 11월 26  2015 signon-ui
+-rwxr-xr-x 1 root root       383192  3월 21 06:13 simple-scan
+-rwxr-xr-x 1 root root        10400  1월 31  2016 sirtopnm
+lrwxrwxrwx 1 root root           21  7월 26 15:48 size -> x86_64-linux-gnu-size
+-rwxr-xr-x 1 root root        23152  1월 13  2016 skill
+-rwxr-xr-x 1 root root        18912  1월 13  2016 slabtop
+-rwxr-xr-x 1 root root        14640  1월 31  2016 sldtoppm
+lrwxrwxrwx 1 root root            3  7월 26 15:48 slogin -> ssh
+-rwxr-xr-x 1 root root        18856  4월  7 20:48 slxdecode
+-rwxr-xr-x 1 root root        23088  5월  6  2015 smproxy
+-rwxr-xr-x 1 root root      9883024  6월 30 05:13 snap
+lrwxrwxrwx 1 root root            5  7월 26 15:48 snice -> skill
+-rwxr-xr-x 1 root root        30920  1월 29  2016 soelim
+lrwxrwxrwx 1 root root           34  7월 26 15:48 soffice -> ../lib/libreoffice/program/soffice
+-rwxr-xr-x 1 root root         4259  6월 25 00:12 software-properties-gtk
+-rwxr-xr-x 1 root root       110040  2월 18 22:37 sort
+-rwxr-xr-x 1 root root         4306  4월 15 07:10 sotruss
+-rwxr-xr-x 1 root root        10376  1월 31  2016 spctoppm
+-rwxr-xr-x 1 root root          220  2월 19 06:51 spd-conf
+-rwxr-xr-x 1 root root        19736  2월 19 06:51 spd-say
+-rwxr-xr-x 1 root root        31536  4월 15 09:04 speaker-test
+-rwxr-xr-x 1 root root       134552  2월 19 06:51 speech-dispatcher
+lrwxrwxrwx 1 root root           32  7월 26 15:48 spellintian -> ../share/lintian/frontend/dplint
+-rwxr-xr-x 1 root root        18768  3월 13 20:54 splain
+-rwxr-xr-x 1 root root        69024  2월 18 22:37 split
+-rwxr-xr-x 1 root root         3461  5월  6  2015 splitdiff
+-rwxr-xr-x 1 root root        10456  9월 17  2015 splitfont
+-rwxr-xr-x 1 root root        23256  4월 15 07:19 sprof
+-rwxr-xr-x 1 root root        10352  1월 31  2016 sputoppm
+-rwxr-xr-x 1 root root       899064  2월 23 01:43 sqldiff
+-rwxr-xr-x 1 root root        32584 12월 18  2014 sqlite
+-rwxr-xr-x 1 root root       944000  2월 23 01:43 sqlite3
+-rwxr-xr-x 1 root root       707248  4월 28 17:52 ssh
+-rwxr-xr-x 1 root root       338136  4월 28 17:52 ssh-add
+-rwxr-sr-x 1 root ssh        358624  4월 28 17:52 ssh-agent
+-rwxr-xr-x 1 root root         1456  4월 28 09:46 ssh-argv0
+-rwxr-xr-x 1 root root        10360  3월 10 03:04 ssh-copy-id
+-rwxr-xr-x 1 root root       399600  4월 28 17:52 ssh-keygen
+-rwxr-xr-x 1 root root       415984  4월 28 17:52 ssh-keyscan
+-rwxr-xr-x 1 root root        10424  1월 31  2016 st4topgm
+-rwxr-xr-x 1 root root         1293  3월 21 19:46 start-pulseaudio-x11
+-rwxr-xr-x 1 root root         5517  4월 26 17:55 startx
+-rwxr-xr-x 1 root root        80944  2월 18 22:37 stat
+-rwxr-xr-x 1 root root        64336  2월 18 22:37 stdbuf
+-rwxr-xr-x 1 root root       866480  1월 14  2016 strace
+lrwxrwxrwx 1 root root           24  7월 26 15:48 stream -> /etc/alternatives/stream
+lrwxrwxrwx 1 root root           56  7월 26 15:48 stream-im6 -> ../lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16/stream
+lrwxrwxrwx 1 root root           24  7월 26 15:48 strings -> x86_64-linux-gnu-strings
+lrwxrwxrwx 1 root root           22  7월 26 15:48 strip -> x86_64-linux-gnu-strip
+-rwxr-xr-x 1 root root           51  6월 27  2013 subl
+-rwsr-xr-x 1 root root       136808  5월  5 02:25 sudo
+lrwxrwxrwx 1 root root            4  7월 26 15:48 sudoedit -> sudo
+-rwxr-xr-x 1 root root        47680  5월  5 02:25 sudoreplay
+-rwxr-xr-x 1 root root        39672  2월 18 22:37 sum
+-rwxr-xr-x 1 root root       100968  4월  8 19:14 symcryptrun
+-rwxr-xr-x 1 root root        18312  3월  3 22:41 synclient
+-rwxr-xr-x 1 root root        18992  3월  3 22:41 syndaemon
+-rwxr-xr-x 1 root root       200584  2월 24 22:32 syslinux
+-rwxr-xr-x 1 root root        29888 10월  6  2015 syslinux-legacy
+-rwxr-xr-x 1 root root           95  3월  8 10:15 system-config-printer
+-rwxr-xr-x 1 root root           80  3월  8 10:15 system-config-printer-applet
+-rwxr-xr-x 1 root root      1487008  7월 13 01:28 systemd-analyze
+-rwxr-xr-x 1 root root        35256  7월 13 01:28 systemd-cat
+-rwxr-xr-x 1 root root       294112  7월 13 01:28 systemd-cgls
+-rwxr-xr-x 1 root root       310568  7월 13 01:28 systemd-cgtop
+-rwxr-xr-x 1 root root        64088  7월 13 01:28 systemd-delta
+-rwxr-xr-x 1 root root        35248  7월 13 01:28 systemd-detect-virt
+-rwxr-xr-x 1 root root        43440  7월 13 01:28 systemd-path
+-rwxr-xr-x 1 root root       335064  7월 13 01:28 systemd-resolve
+-rwxr-xr-x 1 root root       376344  7월 13 01:28 systemd-run
+-rwxr-xr-x 1 root root       351440  7월 13 01:28 systemd-stdio-bridge
+-rwxr-xr-x 1 root root        39072  1월  4  2016 t1ascii
+-rwxr-xr-x 1 root root        44224  1월  4  2016 t1asm
+-rwxr-xr-x 1 root root        39040  1월  4  2016 t1binary
+-rwxr-xr-x 1 root root        43096  1월  4  2016 t1disasm
+-rwxr-xr-x 1 root root        47328  1월  4  2016 t1mac
+-rwxr-xr-x 1 root root        43304  1월  4  2016 t1unmac
+-rwxr-xr-x 1 root root        14576  2월 19 17:22 tabs
+-rwxr-xr-x 1 root root        35568  2월 18 22:37 tac
+-rwxr-xr-x 1 root root        64432  2월 18 22:37 tail
+-rwxr-xr-x 1 root root        31416  5월 27 08:31 taskset
+-rwxr-xr-x 1 root root       121032  1월 29  2016 tbl
+lrwxrwxrwx 1 root root            8  7월 26 15:48 tclsh -> tclsh8.6
+-rwxr-xr-x 1 root root         6224  3월 30 08:55 tclsh8.6
+-rwxr-xr-x 1 root root        35568  2월 18 22:37 tee
+lrwxrwxrwx 1 root root           24  7월 26 15:48 telnet -> /etc/alternatives/telnet
+-rwxr-xr-x 1 root root        99840  5월  6  2015 telnet.netkit
+-rwxr-xr-x 1 root root        47824  2월 18 22:37 test
+-rwxr-xr-x 1 root root        47280  4월  8 18:53 text2pcap
+-rwxr-xr-x 1 root root        14504  1월 31  2016 tgatoppm
+-rwxr-xr-x 1 root root         2295 11월 17  2014 tgz
+-rwxr-xr-x 1 root root        18704  1월 31  2016 thinkjettopbm
+-rwxr-xr-x 1 root root         1795  4월 17 05:01 thresholder
+lrwxrwxrwx 1 root root           33  7월 26 15:48 thunderbird -> ../lib/thunderbird/thunderbird.sh
+-rwxr-xr-x 1 root root        72408  2월 19 17:22 tic
+-rwxr-xr-x 1 root root        18680  1월 31  2016 tifftopnm
+-rwxr-xr-x 1 root root        31576 11월 18  2014 tificc
+-rwxr-xr-x 1 root root        15072  7월 22  2015 time
+-rwxr-xr-x 1 root root       302304  7월 13 01:28 timedatectl
+-rwxr-xr-x 1 root root        56704  2월 18 22:37 timeout
+-rwxr-xr-x 1 root root        14784  1월 13  2016 tload
+-rwxr-xr-x 1 root root        14688  2월 19 17:22 toe
+-rwxr-xr-x 1 root root       109064  1월 13  2016 top
+-rwxr-xr-x 1 root root        95160  5월 23  2012 toshset
+-rwxr-xr-x 1 root root        10232  3월 10 16:36 totem
+-rwxr-xr-x 1 root root        18512  3월 10 16:36 totem-audio-preview
+-rwxr-xr-x 1 root root        39016  3월 10 16:36 totem-video-thumbnailer
+lrwxrwxrwx 1 root root           10  7월 26 15:48 touch -> /bin/touch
+-rwxr-xr-x 1 root root        14648  2월 19 17:22 tput
+-rwxr-xr-x 1 root root        47856  2월 18 22:37 tr
+-rwxr-xr-x 1 root root        14680  5월  8  2014 tracepath
+-rwxr-xr-x 1 root root        14688  5월  8  2014 tracepath6
+lrwxrwxrwx 1 root root           29  7월 26 15:48 traceroute6 -> /etc/alternatives/traceroute6
+-rwxr-xr-x 1 root root        23104  5월  8  2014 traceroute6.iputils
+-rwxr-xr-x 1 root root        35600 11월 18  2014 transicc
+-rwxr-xr-x 1 root root       816872  3월 22 02:48 transmission-gtk
+-rwxr-xr-x 1 root root        19424  2월 10 22:42 transset
+-rwxr-xr-x 1 root root       712032  1월 29  2016 troff
+-rwxr-xr-x 1 root root        52016  2월 18 22:37 truncate
+-rwxr-xr-x 1 root root       175624 12월 28  2015 trust
+-rwxr-xr-x 1 root root        18864  2월 19 17:22 tset
+-rwxr-xr-x 1 root root        39600  2월 18 22:37 tsort
+-rwxr-xr-x 1 root root        10624  4월 21 01:01 ttfread
+-rwxr-xr-x 1 root root        27312  2월 18 22:37 tty
+-rwxr-xr-x 1 root root        15208  4월 15 07:09 tzselect
+lrwxrwxrwx 1 root root           10  7월 26 15:48 ubuntu-bug -> apport-bug
+-rwsr-xr-x 1 root root        23288  4월 30 01:02 ubuntu-core-launcher
+-rwxr-xr-x 1 root root         5278  4월 29 23:18 ubuntu-drivers
+lrwxrwxrwx 1 root root           14  7월 26 15:48 ubuntu-software -> gnome-software
+-rwxr-xr-x 1 root root         7193  4월 12 12:58 ubuntu-support-status
+-rwxr-xr-x 1 root root        23120  2월  1 21:58 ubuntu-webapps-update-index
+-rwxr-xr-x 1 root root        40636  3월 17 05:58 ucf
+-rwxr-xr-x 1 root root        19367  3월 17 05:58 ucfq
+-rwxr-xr-x 1 root root        10722  3월 17 05:58 ucfr
+-rwxr-xr-x 1 root root        18776  5월  6  2015 ucs2any
+-rwxr-xr-x 1 root root        52520  4월  2 05:05 udisksctl
+lrwxrwxrwx 1 root root            9  7월 26 15:48 uic -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 uic3 -> qtchooser
+-rwxr-xr-x 1 root root        14648  3월  1 20:43 ul
+-rwxr-xr-x 1 root root       179280  9월 18  2015 umax_pp
+-rwxr-xr-x 1 root root        56262  2월 21 13:07 unattended-upgrade
+lrwxrwxrwx 1 root root           18  7월 26 15:48 unattended-upgrades -> unattended-upgrade
+-rwxr-xr-x 1 root root        31472  2월 18 22:37 unexpand
+-rwxr-xr-x 1 root root          530  9월 17  2015 unicode_stop
+-rwxr-xr-x 1 root root        43792  2월 18 22:37 uniq
+-rwxr-xr-x 1 root root         9182  7월 15 19:17 unity
+-rwxr-xr-x 1 root root        66016  7월  6 00:09 unity-control-center
+-rwxr-xr-x 1 root root        10560  7월  1 19:49 unity-scope-loader
+lrwxrwxrwx 1 root root           50  7월 26 15:48 unity-settings-daemon -> ../lib/unity-settings-daemon/unity-settings-daemon
+-rwxr-xr-x 1 root root        44176  2월  1 21:58 unity-webapps-desktop-file
+-rwxr-xr-x 1 root root        27480  1월 15  2016 unity-webapps-qml-launcher
+-rwxr-xr-x 1 root root        19472  2월  1 21:58 unity-webapps-runner
+-rwxr-xr-x 1 root root        27280  2월 18 22:37 unlink
+lrwxrwxrwx 1 root root           24  7월 26 15:48 unlzma -> /etc/alternatives/unlzma
+-rwxr-xr-x 1 root root           52  6월 28 15:12 unopkg
+-rwxr-xr-x 1 root root        19168  5월 27 08:31 unshare
+-rwxr-xr-x 1 root root        94872  2월 24 20:33 unsquashfs
+-rwxr-xr-x 1 root root         5940  5월  6  2015 unwrapdiff
+lrwxrwxrwx 1 root root            2  7월 26 15:48 unxz -> xz
+-rwxr-xr-x 1 root root       162688 11월 20  2015 unzip
+-rwxr-xr-x 1 root root        76592 11월 20  2015 unzipsfx
+-rwxr-xr-x 1 root root        47728  5월 12 19:55 update-alternatives
+lrwxrwxrwx 1 root root           26  7월 26 15:48 updatedb -> /etc/alternatives/updatedb
+-rwxr-xr-x 1 root root        43768 11월 18  2014 updatedb.mlocate
+-rwxr-xr-x 1 root root        19144  4월  5 03:39 update-desktop-database
+-rwxr-xr-x 1 root root         5637 11월 27  2015 update-gconf-defaults
+-rwxr-xr-x 1 root root         4774  4월 12 12:58 update-manager
+-rwxr-xr-x 1 root root          672  6월 10 02:02 update-mime-database
+-rwxr-xr-x 1 root root        52392  6월 10 02:02 update-mime-database.real
+-rwxr-xr-x 1 root root        57736  6월 30 06:23 update-notifier
+-rwxr-xr-x 1 root root        14824  6월 15 20:26 upower
+-rwxr-xr-x 1 root root        10576  1월 13  2016 uptime
+-rwxr-xr-x 1 root root         2937  1월 23  2016 usb-creator-gtk
+-rwxr-xr-x 1 root root         4216 10월 24  2015 usb-devices
+-rwxr-xr-x 1 root root        23088 10월 24  2015 usbhid-dump
+-rwxr-xr-x 1 root root        10504  4월  7 20:48 usb_printerid
+-rwxr-xr-x 1 root root        31440  2월 18 22:37 users
+-rwxr-xr-x 1 root root        14872  5월 27 08:31 utmpdump
+-rwxr-xr-x 1 root root        10600  5월 27 08:31 uuidgen
+-rwxr-xr-x 1 root root         3674  2월 18 03:16 uxterm
+-rwxr-xr-x 1 root root         2496 11월 17  2014 uz
+lrwxrwxrwx 1 root root           20  7월 26 15:48 vi -> /etc/alternatives/vi
+lrwxrwxrwx 1 root root           22  7월 26 15:48 view -> /etc/alternatives/view
+-rwxr-xr-x 1 root root          968  4월 17 05:01 viewer
+-rwxr-xr-x 1 root root        24088  5월  6  2015 viewres
+-rwxr-xr-x 1 root root      1064592  6월 17 15:48 vim.tiny
+-rwxr-xr-x 1 root root        10592  2월 18 16:49 vino-passwd
+-rwxr-xr-x 1 root root        31912  2월 18 16:49 vino-preferences
+-rwxr-xr-x 1 root root        31216  1월 13  2016 vmstat
+-rwxr-xr-x 1 root root        10680  3월  3 23:29 vmwarectrl
+-rwxr-xr-x 1 root root        10240  2월 25  2014 volname
+-rwxr-xr-x 1 root root        23048  4월 28 17:45 vstp
+lrwxrwxrwx 1 root root           19  7월 26 15:48 w -> /etc/alternatives/w
+-rwxr-sr-x 1 root tty         27368  5월 27 08:31 wall
+-rwxr-xr-x 1 root root        23696  1월 13  2016 watch
+-rwxr-xr-x 1 root root        14328  4월  8 19:14 watchgnupg
+-rwxr-xr-x 1 root root        10352  1월 31  2016 wbmptopbm
+-rwxr-xr-x 1 root root        43832  2월 18 22:37 wc
+-rwxr-xr-x 1 root root       559416  4월 14 00:37 webapp-container
+-rwxr-xr-x 1 root root        47200  4월 14 00:37 webapp-container-hook
+-rwxr-xr-x 1 root root       710984  4월 14 00:37 webbrowser-app
+-rwxr-xr-x 1 root root          286  2월 29 19:49 wftopfa
+-rwxr-xr-x 1 root root       474656  6월 14 17:18 wget
+-rwxr-xr-x 1 root root        48104 11월  7  2015 whatis
+-rwxr-xr-x 1 root root        23648  5월 27 08:31 whereis
+lrwxrwxrwx 1 root root           10  7월 26 15:48 which -> /bin/which
+-rwxr-xr-x 1 root root        47984  2월 18 22:37 who
+-rwxr-xr-x 1 root root        31408  2월 18 22:37 whoami
+-rwxr-xr-x 1 root root        57096  6월 17 04:28 whoopsie
+-rwxr-xr-x 1 root root        19128  9월 10  2015 whoopsie-preferences
+-rwxr-xr-x 1 root root        18720  1월 31  2016 winicontoppm
+-rwxr-xr-x 1 root root      7394544  4월  8 18:53 wireshark
+lrwxrwxrwx 1 root root            7  7월 26 15:48 wish -> wish8.6
+-rwxr-xr-x 1 root root         6240  3월 14 17:42 wish8.6
+-rwxr-xr-x 1 root root        10464  2월  7 19:05 word-list-compress
+-rwxr-xr-x 1 root root        55296  1월 19  2016 wpa_passphrase
+-rwxr-xr-x 1 root root        18928  1월 13  2016 w.procps
+lrwxrwxrwx 1 root root           23  7월 26 15:48 write -> /etc/alternatives/write
+lrwxrwxrwx 1 root root            4  7월 26 15:48 X -> Xorg
+lrwxrwxrwx 1 root root            1  7월 26 15:48 X11 -> .
+-rwxr-xr-x 1 root root       141608  2월 10 22:42 x11perf
+-rwxr-xr-x 1 root root         2807  2월 10 22:42 x11perfcomp
+lrwxrwxrwx 1 root root            7  7월 26 15:48 x86_64 -> setarch
+-rwxr-xr-x 1 root root        27768  7월 15 04:30 x86_64-linux-gnu-addr2line
+-rwxr-xr-x 1 root root        60536  7월 15 04:30 x86_64-linux-gnu-ar
+-rwxr-xr-x 1 root root       369480  7월 15 04:30 x86_64-linux-gnu-as
+-rwxr-xr-x 1 root root        27248  7월 15 04:30 x86_64-linux-gnu-c++filt
+lrwxrwxrwx 1 root root            5  7월 26 15:48 x86_64-linux-gnu-cpp -> cpp-5
+lrwxrwxrwx 1 root root            5  7월 26 15:48 x86_64-linux-gnu-cpp-5 -> cpp-5
+-rwxr-xr-x 1 root root      2720480  7월 15 04:30 x86_64-linux-gnu-dwp
+-rwxr-xr-x 1 root root        31552  7월 15 04:30 x86_64-linux-gnu-elfedit
+lrwxrwxrwx 1 root root            5  7월 26 15:48 x86_64-linux-gnu-g++ -> g++-5
+lrwxrwxrwx 1 root root            5  7월 26 15:48 x86_64-linux-gnu-g++-5 -> g++-5
+lrwxrwxrwx 1 root root            5  7월 26 15:48 x86_64-linux-gnu-gcc -> gcc-5
+lrwxrwxrwx 1 root root            5  7월 26 15:48 x86_64-linux-gnu-gcc-5 -> gcc-5
+lrwxrwxrwx 1 root root            8  7월 26 15:48 x86_64-linux-gnu-gcc-ar -> gcc-ar-5
+lrwxrwxrwx 1 root root            8  7월 26 15:48 x86_64-linux-gnu-gcc-ar-5 -> gcc-ar-5
+lrwxrwxrwx 1 root root            8  7월 26 15:48 x86_64-linux-gnu-gcc-nm -> gcc-nm-5
+lrwxrwxrwx 1 root root            8  7월 26 15:48 x86_64-linux-gnu-gcc-nm-5 -> gcc-nm-5
+lrwxrwxrwx 1 root root           12  7월 26 15:48 x86_64-linux-gnu-gcc-ranlib -> gcc-ranlib-5
+lrwxrwxrwx 1 root root           12  7월 26 15:48 x86_64-linux-gnu-gcc-ranlib-5 -> gcc-ranlib-5
+lrwxrwxrwx 1 root root            6  7월 26 15:48 x86_64-linux-gnu-gcov -> gcov-5
+lrwxrwxrwx 1 root root            6  7월 26 15:48 x86_64-linux-gnu-gcov-5 -> gcov-5
+lrwxrwxrwx 1 root root           11  7월 26 15:48 x86_64-linux-gnu-gcov-tool -> gcov-tool-5
+lrwxrwxrwx 1 root root           11  7월 26 15:48 x86_64-linux-gnu-gcov-tool-5 -> gcov-tool-5
+-rwxr-xr-x 1 root root        98616  7월 15 04:30 x86_64-linux-gnu-gprof
+lrwxrwxrwx 1 root root            6  7월 26 15:48 x86_64-linux-gnu-ld -> ld.bfd
+-rwxr-xr-x 1 root root      1220040  7월 15 04:30 x86_64-linux-gnu-ld.bfd
+-rwxr-xr-x 1 root root      2912776  7월 15 04:30 x86_64-linux-gnu-ld.gold
+-rwxr-xr-x 1 root root        40744  7월 15 04:30 x86_64-linux-gnu-nm
+-rwxr-xr-x 1 root root       224432  7월 15 04:30 x86_64-linux-gnu-objcopy
+-rwxr-xr-x 1 root root       356760  7월 15 04:30 x86_64-linux-gnu-objdump
+lrwxrwxrwx 1 root root           34  7월 26 15:48 x86_64-linux-gnu-pkg-config -> /usr/share/pkg-config-crosswrapper
+-rwxr-xr-x 1 root root        60536  7월 15 04:30 x86_64-linux-gnu-ranlib
+-rwxr-xr-x 1 root root       485184  7월 15 04:30 x86_64-linux-gnu-readelf
+-rwxr-xr-x 1 root root        31704  7월 15 04:30 x86_64-linux-gnu-size
+-rwxr-xr-x 1 root root        27728  7월 15 04:30 x86_64-linux-gnu-strings
+-rwxr-xr-x 1 root root       224440  7월 15 04:30 x86_64-linux-gnu-strip
+-rwxr-xr-x 1 root root        47944  4월  6 23:03 x86_64-pc-linux-gnu-pkg-config
+-rwxr-xr-x 1 root root        67800  2월  8 08:18 xargs
+-rwxr-xr-x 1 root root        40392  3월 27  2015 xauth
+-rwxr-xr-x 1 root root        20920  2월 10 22:42 xbiff
+-rwxr-xr-x 1 root root        10408  1월 31  2016 xbmtopbm
+-rwxr-xr-x 1 root root       147304  4월 28 17:45 xbrlapi
+-rwxr-xr-x 1 root root        32376  2월 10 22:42 xcalc
+-rwxr-xr-x 1 root root        19272  2월 10 22:42 xclipboard
+-rwxr-xr-x 1 root root        46808  2월 10 22:42 xclock
+-rwxr-xr-x 1 root root        31800  2월 27 18:09 xcmsdb
+-rwxr-xr-x 1 root root        19976  2월 10 22:42 xconsole
+-rwxr-xr-x 1 root root        14816  2월 10 22:42 xcursorgen
+-rwxr-xr-x 1 root root        15032  2월 10 22:42 xcutsel
+-rwxr-xr-x 1 root root        19397  2월  1 23:01 xdg-desktop-icon
+-rwxr-xr-x 1 root root        42035  2월  1 23:01 xdg-desktop-menu
+-rwxr-xr-x 1 root root        26395  2월  1 23:01 xdg-email
+-rwxr-xr-x 1 root root        28787  2월  1 23:01 xdg-icon-resource
+-rwxr-xr-x 1 root root        40535  2월  1 23:01 xdg-mime
+-rwxr-xr-x 1 root root        22746  2월  1 23:01 xdg-open
+-rwxr-xr-x 1 root root        33748  2월  1 23:01 xdg-screensaver
+-rwxr-xr-x 1 root root        36544  2월  1 23:01 xdg-settings
+-rwxr-xr-x 1 root root          234  4월 14 14:45 xdg-user-dir
+-rwxr-xr-x 1 root root        19200  7월  3  2013 xdg-user-dirs-gtk-update
+-rwxr-xr-x 1 root root        18936  4월 14 14:45 xdg-user-dirs-update
+-rwxr-xr-x 1 root root         4523  4월  8 01:55 xdiagnose
+-rwxr-xr-x 1 root root        90712  2월 10 22:42 xditview
+-rwxr-xr-x 1 root root        32344  5월  6  2015 xdpyinfo
+-rwxr-xr-x 1 root root        10440  5월  6  2015 xdriinfo
+-rwxr-xr-x 1 root root         7238  4월  8 01:55 xedid
+-rwxr-xr-x 1 root root       645880  2월 10 22:42 xedit
+-rwxr-xr-x 1 root root        31512  5월  6  2015 xev
+-rwxr-xr-x 1 root root        20472  2월 10 22:42 xeyes
+-rwxr-xr-x 1 root root        29176  5월  6  2015 xfd
+-rwxr-xr-x 1 root root        37352  5월  6  2015 xfontsel
+-rwxr-xr-x 1 root root        10536  2월 27 18:09 xgamma
+-rwxr-xr-x 1 root root        64536  2월 10 22:42 xgc
+-rwxr-xr-x 1 root root       272048  2월 10 21:13 xgettext
+-rwxr-xr-x 1 root root        14824  2월 27 18:09 xhost
+-rwxr-xr-x 1 root root        14560  1월 31  2016 ximtoppm
+-rwxr-xr-x 1 root root        19056  4월 26 17:55 xinit
+-rwxr-xr-x 1 root root        52672 10월 29  2015 xinput
+-rwxr-xr-x 1 root root        10512  5월  6  2015 xkbbell
+-rwxr-xr-x 1 root root       201568  5월  6  2015 xkbcomp
+-rwxr-xr-x 1 root root        31232  5월  6  2015 xkbevd
+-rwxr-xr-x 1 root root        88632  5월  6  2015 xkbprint
+-rwxr-xr-x 1 root root        19752  5월  6  2015 xkbvleds
+-rwxr-xr-x 1 root root        19816  5월  6  2015 xkbwatch
+-rwxr-xr-x 1 root root        16982  2월 27 18:09 xkeystone
+-rwxr-xr-x 1 root root        14680  5월  6  2015 xkill
+-rwxr-xr-x 1 root root        15544  2월 10 22:42 xload
+-rwxr-xr-x 1 root root        19928  2월 10 22:42 xlogo
+-rwxr-xr-x 1 root root        10520  5월  6  2015 xlsatoms
+-rwxr-xr-x 1 root root        14696  5월  6  2015 xlsclients
+-rwxr-xr-x 1 root root        18816  5월  6  2015 xlsfonts
+-rwxr-xr-x 1 root root        37816  2월 10 22:42 xmag
+-rwxr-xr-x 1 root root        63416  2월 10 22:42 xman
+-rwxr-xr-x 1 root root        19880  5월  6  2015 xmessage
+lrwxrwxrwx 1 root root            9  7월 26 15:48 xmlpatterns -> qtchooser
+lrwxrwxrwx 1 root root            9  7월 26 15:48 xmlpatternsvalidator -> qtchooser
+-rwxr-xr-x 1 root root        31656  2월 27 18:09 xmodmap
+-rwxr-xr-x 1 root root        10776  2월 10 22:42 xmore
+-rwxr-xr-x 1 root root          274  5월 18 10:13 Xorg
+-rwxr-xr-x 1 root root         2892  4월  8 01:55 xpci
+-rwxr-xr-x 1 root root        14688  1월 31  2016 xpmtoppm
+-rwxr-xr-x 1 root root        37912  5월  6  2015 xprop
+-rwxr-xr-x 1 root root        14744  4월  7 20:48 xqxdecode
+-rwxr-xr-x 1 root root        60256  2월 27 18:09 xrandr
+-rwxr-xr-x 1 root root         3994  4월  8 01:55 xrandr-tool
+-rwxr-xr-x 1 root root        27312  2월 27 18:09 xrdb
+-rwxr-xr-x 1 root root        10536  2월 27 18:09 xrefresh
+-rwxr-xr-x 1 root root         2809  2월 19 22:43 xrotate
+lrwxrwxrwx 1 root root           35  7월 26 15:48 x-session-manager -> /etc/alternatives/x-session-manager
+-rwxr-xr-x 1 root root        31432  2월 27 18:09 xset
+-rwxr-xr-x 1 root root        10520  2월 27 18:09 xsetmode
+-rwxr-xr-x 1 root root        10528  2월 27 18:09 xsetpointer
+-rwxr-xr-x 1 root root        18896  2월 27 18:09 xsetroot
+-rwxr-xr-x 1 root root        48904  3월  3 20:47 xsetwacom
+-rwxr-xr-x 1 root root        85800  5월  6  2015 xsm
+-rwxr-xr-x 1 root root        15256  2월 27 18:09 xstdcmap
+-rwxr-xr-x 1 root root         5126  3월 13 20:54 xsubpp
+-rwxr-xr-x 1 root root       543232  2월 18 03:16 xterm
+lrwxrwxrwx 1 root root           37  7월 26 15:48 x-terminal-emulator -> /etc/alternatives/x-terminal-emulator
+-rwxr-xr-x 1 root root        32808  2월 27 18:09 xvidtune
+-rwxr-xr-x 1 root root        14616  5월  6  2015 xvinfo
+-rwxr-xr-x 1 root root        10392  1월 31  2016 xvminitoppm
+-rwxr-xr-x 1 root root        27184  2월 10 22:42 xwd
+-rwxr-xr-x 1 root root        18672  1월 31  2016 xwdtopnm
+-rwxr-xr-x 1 root root        43752  5월  6  2015 xwininfo
+-rwxr-xr-x 1 root root        27144  2월 10 22:42 xwud
+lrwxrwxrwx 1 root root           31  7월 26 15:48 x-www-browser -> /etc/alternatives/x-www-browser
+-rwxr-xr-x 1 root root        18552  6월 17 15:54 xxd
+-rwxr-xr-x 1 root root        68648  2월 13  2014 xz
+lrwxrwxrwx 1 root root            2  7월 26 15:48 xzcat -> xz
+lrwxrwxrwx 1 root root            6  7월 26 15:48 xzcmp -> xzdiff
+-rwxr-xr-x 1 root root         5518  2월 13  2014 xzdiff
+lrwxrwxrwx 1 root root            6  7월 26 15:48 xzegrep -> xzgrep
+lrwxrwxrwx 1 root root            6  7월 26 15:48 xzfgrep -> xzgrep
+-rwxr-xr-x 1 root root         5421  2월 13  2014 xzgrep
+-rwxr-xr-x 1 root root         1825  2월 13  2014 xzless
+-rwxr-xr-x 1 root root         2168  2월 13  2014 xzmore
+-rwxr-xr-x 1 root root        10376  1월 31  2016 ybmtopbm
+-rwxr-xr-x 1 root root        53296  3월 21 18:28 yelp
+-rwxr-xr-x 1 root root        31408  2월 18 22:37 yes
+-rwxr-xr-x 1 root root        10400  1월 31  2016 yuvsplittoppm
+-rwxr-xr-x 1 root root        10400  1월 31  2016 yuvtoppm
+-rwxr-xr-x 1 root root        14768  4월 15 07:19 zdump
+-rwxr-xr-x 1 root root        10384  1월 31  2016 zeisstopnm
+-rwxr-xr-x 1 root root       206000  2월 24 23:31 zeitgeist-daemon
+-rwxr-xr-x 1 root root       131760  2월 24 23:31 zeitgeist-datahub
+-rwxr-xr-x 1 root root       105752  2월 17 00:30 zenity
+-rwxr-xr-x 1 root root       192520  8월 17  2015 zip
+-rwxr-xr-x 1 root root        86224  8월 17  2015 zipcloak
+-rwxr-xr-x 1 root root        48459  3월 13 20:54 zipdetails
+-rwxr-xr-x 1 root root         2953 11월 20  2015 zipgrep
+-rwxr-xr-x 1 root root       162688 11월 20  2015 zipinfo
+-rwxr-xr-x 1 root root        81840  8월 17  2015 zipnote
+-rwxr-xr-x 1 root root        81840  8월 17  2015 zipsplit
+-rwxr-xr-x 1 root root        27064  4월  7 20:48 zjsdecode
+-rwxr-xr-x 1 root root        10336 11월 17  2015 zlib-flate
+
+/usr/local/bin:
+total 0

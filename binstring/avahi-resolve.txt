@@ -1,0 +1,172 @@
+   1070 /lib64/ld-linux-x86-64.so.2
+   3621 libavahi-client.so.3
+   3646 _ITM_deregisterTMCloneTable
+   3702 avahi_address_parse
+   3726 __gmon_start__
+   3745 avahi_init_i18n
+   3765 _Jv_RegisterClasses
+   4011 avahi_address_snprint
+   4037 _ITM_registerTMCloneTable
+   4071 avahi_address_resolver_new
+   4124 _fini
+   4132 avahi_client_errno
+   4155 avahi_client_new
+   4176 avahi_client_free
+   4220 avahi_client_get_host_name_fqdn
+   4260 avahi_client_get_version_string
+   4320 avahi_host_name_resolver_free
+   4356 avahi_host_name_resolver_new
+   4413 _init
+   4421 avahi_address_resolver_free
+   4455 libavahi-common.so.3
+   4502 avahi_simple_poll_get
+   4530 avahi_simple_poll_new
+   4556 avahi_simple_poll_quit
+   4605 avahi_strerror
+   4624 avahi_simple_poll_free
+   4653 avahi_simple_poll_loop
+   4702 libpthread.so.0
+   4722 write
+   4730 read
+   4735 __errno_location
+   4756 fcntl
+   4764 sigaction
+   4776 close
+   5004 libc.so.6
+   5016 __printf_chk
+   5033 setlocale
+   5045 optind
+   5054 strrchr
+   5064 pipe
+   5071 dcgettext
+   5103 __stack_chk_fail
+   5124 __assert_fail
+   5142 strstr
+   5151 __fprintf_chk
+   5167 stdout
+   5176 stderr
+   5205 getopt_long
+   5221 __libc_start_main
+   5243 _edata
+   5252 __bss_start
+   5266 _end
+   5273 GLIBC_2.3.4
+   5307 GLIBC_2.4
+   5321 GLIBC_2.2.5
+   7641 %z  
+   7661 %r  
+   7701 %j  
+   7721 %b  
+   7741 %Z  
+   7761 %R  
+  10001 %J  
+  10021 %B  
+  10041 %:  
+  10061 %2  
+  10101 %*  
+  10121 %"  
+  10740 AWAVAUATA
+  11004 D$81
+  11362 D;%o
+  11577 L$8dH3
+  11627 H[]A\A]A^A_
+  12565 APUM
+  12626 AYAZ
+  13565 UH-P1`
+  14100 ATUSH
+  14123 D$(1
+  14257 D$(dH3
+  14304 0[]A\
+  14620 ATUSH
+  14643 D$(1
+  14755 D$(dH3
+  15002 0[]A\
+  16222 SxB1
+  16360 ATUSH
+  16750 []A\
+  17520 AWAVA
+  17527 AUATL
+  17652 []A\A]A^A_
+  17744 avahi-resolve.c
+  17766 %s	%s
+  17775 avahi
+  20003 n_resolving > 0
+  20023 Client failure, exiting: %s
+  20060 [-a]
+  20070 [-n]
+  20100 address
+  20110 host-name
+  20122 hVnav46
+  20132 Too few arguments
+  20155 No command specified.
+  20204 %s 0.6.32-rc
+  20222 Failed to parse address '%s'
+  20260 help
+  20265 version
+  20275 verbose
+  20310 Failed to resolve address '%s': %s
+  20360 Failed to resolve host name '%s': %s
+  20430 %s [options] %s <host name ...>
+  20470 %s [options] %s <address ... >
+  20530     -h --help            Show this help
+  20600     -V --version         Show version
+  20646     -n --name            Resolve host name
+  20721     -a --address         Resolve address
+  20772     -v --verbose         Enable verbose mode
+  21047     -6                   Lookup IPv6 address
+  21124     -4                   Lookup IPv4 address
+  21210 Failed to create simple poll object.
+  21260 Failed to create client object: %s
+  21330 Failed to query version string: %s
+  21400 Failed to query host name: %s
+  21440 Server version: %s; Host name: %s
+  21510 Failed to create host name resolver: %s
+  21570 Failed to create address resolver: %s
+  23200 host_name_resolver_callback
+  23240 address_resolver_callback
+  23272 SIGINT
+  23301 SIGTERM
+  23311 sigint.c
+  23324 fd == pipe_fds[0]
+  23346 event == AVAHI_WATCH_IN
+  23376 l == sizeof(s)
+  23415 Got %s, quitting.
+  23440 fd >= 0
+  23450 spoll
+  23456 !simple_poll
+  23473 pipe() failed: %s
+  23516 sigaction() failed: %s
+  23546 watch
+  23560 pipe_fds[0] == -1 && pipe_fds[1] == -1
+  23640 sigint_uninstall
+  23670 set_nonblock
+  23710 watch_callback
+  23730 sigint_install
+  24317 ;*3$"
+  30520 2ea7e695d09857d28de0da670c6d26338d37cc.debug
+  30605 .shstrtab
+  30617 .interp
+  30627 .note.ABI-tag
+  30645 .note.gnu.build-id
+  30670 .gnu.hash
+  30702 .dynsym
+  30712 .dynstr
+  30722 .gnu.version
+  30737 .gnu.version_r
+  30756 .rela.dyn
+  30770 .rela.plt
+  31002 .init
+  31010 .plt.got
+  31021 .text
+  31027 .fini
+  31035 .rodata
+  31045 .eh_frame_hdr
+  31063 .eh_frame
+  31075 .init_array
+  31111 .fini_array
+  31125 .jcr
+  31132 .dynamic
+  31143 .got.plt
+  31154 .data
+  31162 .bss
+  31167 .gnu_debuglink

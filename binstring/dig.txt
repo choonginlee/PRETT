@@ -1,0 +1,1307 @@
+   1070 /lib64/ld-linux-x86-64.so.2
+   1576 'k/1<]
+   1711 ?"~4
+   2013 |)~h
+   2144 ^ k%
+  20521 libdns.so.162
+  20537 isc_timer_create
+  20560 isc_base64_decodestring
+  20610 isc_result_totext
+  20632 isc_sockaddr_fromin
+  20656 isc_hex_decodestring
+  20703 isc_sockaddr_equal
+  20726 isc_task_create
+  20746 isc__buffer_putuint8
+  20773 isc_socket_bind
+  21013 isc_sockaddr_fromin6
+  21040 isc_assertion_failed
+  21065 isc_task_send
+  21103 isc_random_get
+  21122 isc__buffer_init
+  21143 isc_timer_detach
+  21164 isc_taskmgr_destroy
+  21210 isc_time_seconds
+  21231 isc_buffer_getuint16
+  21256 isc_timer_reset
+  21276 isc_string_strlcat
+  21321 isc_socket_cancel
+  21343 isc__mem_get
+  21360 isc_entropy_detach
+  21403 isc_socket_create
+  21425 isc_timermgr_destroy
+  21452 isc_sockaddr_eqaddr
+  21476 isc_mempool_create
+  21521 isc_mem_create
+  21540 isc__mutex_init
+  21560 isc__mem_allocate
+  21602 isc_sockaddr_getport
+  21627 isc_socketmgr_destroy
+  21655 isc_time_microdiff
+  21700 isc_error_runtimecheck
+  21727 isc_mem_setname
+  21747 isc_sockaddr_ismulticast
+  22000 isc_string_strlcpy
+  22023 isc_file_exists
+  22043 isc_sockaddr_pf
+  22063 isc_parse_uint32
+  22104 isc__mem_put
+  22121 isc_socket_connect
+  22144 isc__buffer_clear
+  22166 isc_sockaddr_any
+  22207 isc__mem_free
+  22225 isc_interval_set
+  22246 isc_socket_attach
+  22270 _Jv_RegisterClasses
+  22314 isc_mempool_setfillcount
+  22345 isc_event_allocate
+  22370 isc_buffer_allocate
+  22414 isc__buffer_usedregion
+  22443 isc_sockaddr_anyofpf
+  22470 isc__buffer_putstr
+  22513 isc_event_free
+  22532 isc_socket_detach
+  22554 isc_mempool_setfreemax
+  22603 isc_serial_ge
+  22621 isc_mempool_destroy
+  22645 isc__mempool_get
+  22666 isc__buffer_putmem
+  22711 _ITM_deregisterTMCloneTable
+  22745 isc_sockaddr_any6
+  22767 isc__mempool_put
+  23010 isc__buffer_add
+  23030 isc_task_setname
+  23051 isc_timer_touch
+  23071 isc__buffer_putuint16
+  23117 isc_entropy_getdata
+  23143 isc_netaddr_fromsockaddr
+  23174 isc_time_now
+  23211 __gmon_start__
+  23230 isc_mempool_setname
+  23254 _ITM_registerTMCloneTable
+  23306 isc_buffer_free
+  23326 isc_netaddr_format
+  23351 isc_task_detach
+  23371 isc_sockaddr_format
+  23415 dns_name_copy
+  23433 dns_name_fromstring2
+  23460 dns_master_stylecreate2
+  23510 dns_name_clone
+  23527 dns_name_invalidate
+  23553 dns_message_buildopt
+  23600 dns_rdataclass_fromtext
+  23630 dns_compress_invalidate
+  23660 dns_name_destroy
+  23701 dns_message_addname
+  23725 dns_message_renderend
+  23753 dns_message_firstname
+  24001 dst_key_fromnamedfile
+  24027 dns_message_getquerytsig
+  24060 dns_message_gettempname
+  24110 dst_key_free
+  24125 dns_rdata_tofmttext
+  24151 dns_tsig_hmacsha1_name
+  24200 dns_tsig_hmacsha256_name
+  24231 dns_tsig_hmacmd5_name
+  24257 dns_message_rendersection
+  24311 dns_message_parse
+  24333 dns_rdataclass_format
+  24361 dns_tsigkey_detach
+  24404 dns_tsig_hmacsha384_name
+  24435 dst_key_name
+  24452 dns_rdataset_current
+  24477 dns_name_isabsolute
+  24523 dns_message_gettemprdataset
+  24557 dns_message_currentname
+  24607 dns_rdataset_first
+  24632 dns_rdata_tostruct
+  24655 dns_tsig_hmacsha512_name
+  24706 dns_tsigkey_createfromkey
+  24740 dns_message_gettemprdatalist
+  24775 dst_key_setbits
+  25015 _fini
+  25023 dns_message_pseudosectiontotext
+  25063 dst_key_alg
+  25077 dns_rdata_reset
+  25117 dns_name_fromtext
+  25141 dns_rdatatype_format
+  25166 dns_name_countlabels
+  25213 dns_result_register
+  25237 dns_name_setbuffer
+  25262 dns_name_format
+  25302 dns_rdata_fromstruct
+  25327 dns_rdatalist_tordataset
+  25360 dns_compress_init
+  25402 dst_context_destroy
+  25426 dns_rdatatype_fromtext
+  25455 dns_message_renderbegin
+  25505 dns_tsigkey_create
+  25530 dns_name_fullcompare
+  25555 dns_log_setcontext
+  25600 dns_master_styledestroy
+  25630 dns_tsig_hmacsha224_name
+  25661 dns_name_concatenate
+  25706 dns_name_equal
+  25725 dns_log_init
+  25742 dns_rdatalist_init
+  25765 dns_rdataset_next
+  26007 dns_tsig_verify
+  26027 dns_rootname
+  26044 dst_lib_destroy
+  26064 dns_rdataset_makequestion
+  26116 dst_lib_init
+  26133 dns_message_setopt
+  26156 dns_message_peekheader
+  26205 dns_message_gettemprdata
+  26236 dns_name_init
+  26254 dns_message_nextname
+  26301 dns_rdatatype_totext
+  26326 dns_message_findtype
+  26353 dns_rdata_freestruct
+  26400 dns_message_setquerytsig
+  26431 dns_message_create
+  26454 dns_message_destroy
+  26500 dns_byaddr_createptrname2
+  26532 dns_message_settsigkey
+  26561 dns_message_puttempname
+  26611 dns_message_sectiontotext
+  26643 liblwres.so.141
+  26663 lwres_conf_get
+  26702 lwres_conf_parse
+  26723 lwres_context_destroy
+  26751 lwres_net_pton
+  26770 lwres_context_create
+  27015 lwres_net_ntop
+  27034 lwres_conf_clear
+  27055 libbind9.so.140
+  27075 cfg_obj_asstring
+  27116 cfg_map_getname
+  27136 isc_net_probeipv6
+  27160 isc_net_probeipv4
+  27202 cfg_map_get
+  27216 bind9_getaddresses
+  27241 libisccfg.so.140
+  27262 cfg_parser_create
+  27304 cfg_parse_file
+  27323 cfg_obj_destroy
+  27343 cfg_type_sessionkey
+  27367 cfg_parser_destroy
+  27412 libisc.so.160
+  27430 isc_timermgr_create
+  27454 isc_app_start
+  27472 isc_log_setcontext
+  27515 isc_log_create
+  27534 isc_log_usechannel
+  27557 isc_mem_stats
+  27575 isc__buffer_invalidate
+  27624 isc_net_disableipv4
+  27650 isc_net_disableipv6
+  27674 isc_mem_destroy
+  27714 isc_taskmgr_create
+  27737 isc_log_setdebuglevel
+  27765 isc_app_block
+  30003 isc_app_shutdown
+  30024 isc_sockaddr_compare
+  30051 isc_app_isrunning
+  30073 isc_app_run
+  30107 isc_log_destroy
+  30127 isc_entropy_create
+  30152 isc_socket_recvv
+  30173 isc_socket_sendtov2
+  30217 isc_app_unblock
+  30237 isc_socket_sendv
+  30260 isc_app_finish
+  30277 isc_app_onrun
+  30315 isc_socketmgr_create
+  30342 isc_mem_debugging
+  30364 isc_time_nanoseconds
+  30411 libpthread.so.0
+  30431 pthread_mutex_destroy
+  30457 pthread_mutex_lock
+  30502 pthread_mutex_unlock
+  30527 libc.so.6
+  30541 fflush
+  30550 __printf_chk
+  30565 _IO_putc
+  30576 perror
+  30605 strncpy
+  30615 __stack_chk_fail
+  30636 putchar
+  30646 stdin
+  30654 strpbrk
+  30664 inet_pton
+  30676 strftime
+  30707 feof
+  30714 fgets
+  30722 strlen
+  30731 __fprintf_chk
+  30747 stdout
+  30756 fputc
+  30764 fputs
+  30772 fclose
+  31001 strcasecmp
+  31014 getenv
+  31023 stderr
+  31032 __snprintf_chk
+  31051 __strncat_chk
+  31067 strncasecmp
+  31103 __strsep_g
+  31116 fwrite
+  31125 localtime
+  31137 strchr
+  31146 __vfprintf_chk
+  31165 __strcpy_chk
+  31202 __cxa_finalize
+  31221 memmove
+  31231 fopen64
+  31241 __libc_start_main
+  31263 _edata
+  31272 __bss_start
+  31306 _end
+  31313 server_list
+  31327 timeout
+  31337 lookup_list
+  31353 sendcount
+  31365 have_ipv4
+  31377 fatalexit
+  31411 ndots
+  31417 cancel_now
+  31432 digestbits
+  31445 current_lookup
+  31467 commctx
+  31477 timermgr
+  31510 keyfile
+  31520 memdebugging
+  31535 keepaddr
+  31546 specified_source
+  31567 free_now
+  31600 progname
+  31611 default_lookup
+  31630 search_list
+  31644 global_task
+  31660 check_ra
+  31671 taskmgr
+  31701 have_ipv6
+  31713 tries
+  31721 extrabytes
+  31734 usesearch
+  31746 namebuf
+  31756 keysecret
+  31770 bind_address
+  32005 is_dst_up
+  32017 hmacname
+  32030 lookup_lock
+  32044 lctx
+  32051 debugtiming
+  32065 entp
+  32072 sockcount
+  32104 bind_any
+  32115 keep
+  32122 lookup_counter
+  32141 validated
+  32153 cookie_secret
+  32171 socketmgr
+  32203 exitcode
+  32214 cookie
+  32223 keep_open
+  32235 showsearch
+  32250 recvcount
+  32262 _IO_stdin_used
+  32301 keynametext
+  32315 GLIBC_2.2.5
+  32331 GLIBC_2.4
+  32343 GLIBC_2.3.4
+  54571 %"6!
+  54601 %"6!
+  54611 %"6!
+  54621 %"6!
+  54631 %"6!
+  54641 %"6!
+  54651 %"6!
+  54661 %"6!
+  54671 %"6!
+  54701 %"6!
+  54734 AUATH
+  55465 =v9!
+  55472 H;8t
+  55551 A\A]A^
+  55562 =)5!
+  55702 =i4!
+  56002 =)4!
+  56011 5"4!
+  56222 =A(!
+  56420 AVAUL
+  56433 ATUH
+  57076 =U2!
+  57265 AXAYH
+  57327 []A\A]A^
+  57540 AWAVI
+  57547 AUATM
+  57723 4<Bw8
+  60516 L$8M
+  60640 []A\A]A^A_
+  60655 d$8H
+  61715 |$.D
+  62002 D$.f=
+  62220 t$@H
+  62253 T$0I
+  62713 |$@H
+  62762 T$@f
+  63036 |$@H
+  63147 l$0H
+  63207 =t>!
+  63423 l$8I
+  63635 L$8I
+  63653 l$PH
+  63713 =0=!
+  63750 L$8H
+  64120 t$@H
+  64147 D$.f=
+  64246 L$8I
+  64264 L$8H
+  64365 |$0H
+  64660 t$8H
+  64712 L$8H
+  65000 AWAVAUATUS
+  65024 |$DH
+  65037 t$@dH
+  65315 D$XH
+  65322 D$(H
+  65327 D$ZH
+  65372 d$dE
+  65444 D$pA
+  65470 T$XD
+  65555 T$XH
+  65562 D$pf
+  65762 |$pH
+  65767 T$\I
+  66077 |$pH
+  66511 d$pM
+  66516 l$|H
+  66553 L$,A
+  66616 |$`A
+  66623 D$0A
+  66646 5m"!
+  67015 L$dH
+  67051 D$hP
+  67062 D$$PD
+  67070 L$`L
+  67142 |$pI
+  67216 d$pH
+  67461 D$hP
+  67472 D$$PD
+  67500 L$`L
+  67526 =]%!
+  67546 l$DE
+  67761 d$xH
+  67775 |$xL
+  70602 d$hE
+  70665 T$`A
+  70721 @|fD
+  71124 []A\A]A^A_
+  71205 L$8H
+  71331 L$ H
+  72102 =i !
+  72364 d$pM
+  72625 |$lH
+  72665 D$lfA
+  74345 D$ E
+  74352 l$HL; 
+  75013 t$DE
+  75031 l$4A
+  77232 D$ E
+  77237 l$@L; 
+ 100233 l$HE
+ 100240 l$PE
+ 100245 l$LE
+ 100252 l$TE
+ 100257 l$@D
+ 100273 l$DD
+ 101321 |$lH
+ 101361 T$lH
+ 101764 |$lH
+ 102024 D$lfA
+ 102643 D$Ht
+ 103231 l$,E
+ 103415 |$lH
+ 103451 D$lfA
+ 104412 |$lH
+ 104446 D$lA
+ 105320 ATUA
+ 105353 l$PdH
+ 105477 []A\
+ 105604 CHIc
+ 106117 T$ H
+ 106130 T$(H
+ 106141 T$0H
+ 106152 T$8H
+ 107000 AWAVAUATI
+ 107263 D$pA
+ 107304 D$HH
+ 107500 |$,H
+ 107652 L$(H
+ 110013 L$,L
+ 110036 L$8H
+ 110043 L$xE
+ 110053 L$@H
+ 110075 L$PH
+ 110262 D$hH
+ 110350 |$HH
+ 110423 []A\A]A^A_
+ 110446 L$(1
+ 110455 T$pH
+ 110602 L$(1
+ 110611 T$pH
+ 110745 T$pH
+ 111073 T$pH
+ 111147 D$ f
+ 111213 |$(H
+ 111231 D$hH
+ 111236 T$pD
+ 111311 D$ E
+ 111327 D$hH
+ 111334 T$pD
+ 111404 D$hH
+ 111411 T$pD
+ 111552 |$81
+ 111566 \$hH
+ 111762 D$ I
+ 111777 D$0H
+ 112004 T$@H
+ 112040 D$xH
+ 112253 AXAY
+ 112662 t$ H
+ 112742 D$@H
+ 113003 t$XH
+ 113241 H+T$PH9
+ 113261 t$PH
+ 113336 D$pA
+ 113357 D$HH
+ 113557 \$,E
+ 114461 	T$(
+ 114546 D$pA
+ 114601 D$HH
+ 115660 AUATUSH
+ 116406 H;8t
+ 116452 []A\A]
+ 116521 H;8t
+ 116600 AUATI
+ 116735 <$H9
+ 116755 []A\A]
+ 117046 []A\A]
+ 117214 t\H9s
+ 117520 AVAUA
+ 117527 ATUI
+ 117654 []A\A]A^
+ 120160 AWAVA
+ 120167 AUATI
+ 120227 l$$D
+ 120347 t$ H
+ 120520 []A\A]A^A_
+ 120646 .in-addr
+ 120661 .arp
+ 121020 t$(H
+ 121025 T$0H
+ 121032 L$8L
+ 121037 D$@L
+ 121044 L$Ht7
+ 121052 )D$P
+ 121057 )L$`
+ 121064 )T$p
+ 122060 ATUSH
+ 122102 t$8H
+ 122107 T$@H
+ 122114 L$HL
+ 122121 D$PL
+ 122126 L$Xt:
+ 122134 )D$`
+ 122141 )L$p
+ 122240 D$(1
+ 122264 D$(dH3
+ 122315 []A\
+ 123447 C`H9
+ 123510 H9Sh
+ 123627 CpH9
+ 123670 H9Sx
+ 124530 H9S`
+ 124640 H9Sp
+ 126625 $t?H
+ 127060 AWAVH
+ 127073 AUATUSH
+ 127756 []A\A]A^A_
+ 130220 AUAT1
+ 130471 []A\A]
+ 130543 ATUS
+ 130751 []A\
+ 131060 AVAUI
+ 131067 ATUH
+ 131121 D$X1
+ 131411 D$XdH3
+ 131436 `[]A\A]A^
+ 132520 AVAUATUSH
+ 132732 D9t$
+ 133132 []A\A]A^
+ 135007 []A\
+ 135120 ATUH
+ 136227 []A\
+ 136740 AVAUATUSH
+ 137146 []A\A]A^
+ 137162 t$PH
+ 140040 AWAVI
+ 140047 AUATI
+ 140112 D$x1
+ 140260 l$ L
+ 140502 L$xdH3
+ 140533 []A\A]A^A_
+ 142111 |$	H
+ 143120 AWAVH
+ 143133 AUATUSH
+ 143160 D$H1
+ 143703 D$HdH3
+ 143730 X[]A\A]A^A_
+ 146041 l$ H
+ 146073 |$ H
+ 146125 l$(H
+ 146202 l$(H
+ 146216 |$ H
+ 146245 |$(H
+ 146252 T$0H
+ 146306 |$0H
+ 146313 T$8H
+ 146334 |$0H
+ 146341 T$@H
+ 146434 |$8H
+ 146453 |$@I
+ 146564 |$ H
+ 147060 ATUH
+ 150234 []A\
+ 150340 AVAUATUSH
+ 150367 D$H1
+ 150762 t$$f
+ 151050 D$HdH3
+ 151071 P[]A\A]A^
+ 151200 AUAT1
+ 152201 []A\A]H
+ 153000 AWAVAUATUSH
+ 154113 D$ L
+ 154310 []A\A]A^A_
+ 154663 t$(I
+ 155312 T$\f
+ 156126 EHfA
+ 156607 FtE1
+ 156741 L$Ht
+ 157020 D$(H
+ 157031 D$@L
+ 157131 D$@fA
+ 157237 D$(H
+ 157275 t2Ic
+ 157523 D$(f
+ 157601 D$8H
+ 162205 L$HH
+ 162222 t$0@"t
+ 163107 D$hf
+ 163117 |$hH
+ 163124 D$`H
+ 163156 t$pH
+ 163247 |$x1
+ 163304 D$pH
+ 164200 ATUI
+ 164341  []A\
+ 165714 XZ[]A\
+ 165776 []A\
+ 166160 ATUSH
+ 166505 H9sx
+ 166660 H9sx
+ 167074 []A\
+ 167500 AWAV
+ 167511 AUATI
+ 167672 []A\A]A^A_
+ 170220 AWAVE1
+ 170227 AUATUSH
+ 170350 |$lfD
+ 170530 D$XL
+ 170600 D$0H
+ 170624 l$`H
+ 170641 D$ I
+ 170757 L$ H
+ 170764 |$X1
+ 171143 T$HH
+ 171162 |$HA
+ 171271 |$PL
+ 171605 |$XH
+ 171713 t$,D
+ 171734 D$HH
+ 172012 L$ H
+ 172017 |$X1
+ 172117 []A\A]A^A_
+ 172156 |$XH
+ 172163 L$LH
+ 172231 T$8E
+ 173400 \$<E
+ 174063 StLH
+ 175260 AUATUSH
+ 175764 []A\A]
+ 176135 ]A\A]
+ 176740 AWAVAUATUSH
+ 200334 []A\A]A^A_
+ 200454 []A\A]A^A_
+ 200652 []A\A]A^A_
+ 201120 AUATUSH
+ 201646 []A\A]
+ 202320 AUATUSH
+ 202345 L$X1
+ 203065 D$XdH3
+ 203112 h[]A\A]
+ 204320 AWAVAUATUSH
+ 204351 L$X1
+ 204724 H;}x
+ 205151 D$XdH3
+ 205176 h[]A\A]A^A_
+ 206240 H;}xt
+ 206740 AWAVAUATUSH
+ 207015 t$HH
+ 207246 D$HH
+ 207327 d$HH
+ 207356 l$xH
+ 207515 M;l$x
+ 210052 []A\A]A^A_
+ 210161 T$\H
+ 210166 t$ZL
+ 210454 D$ H
+ 210612 |$`H
+ 210654 T$`H
+ 210754 |$`L
+ 211174 |$ H
+ 211660 M;l$xt
+ 212161 |$HA
+ 212310 L$ZH
+ 213344 =Gt 
+ 213601 \$(L
+ 213606 d$0L
+ 213613 l$8H
+ 213642 |$`H
+ 213753 F"f9
+ 213771 F f9
+ 214151 |$`1
+ 214214 \$(L
+ 214221 d$0L
+ 214376 |$ H
+ 214767 D$`H
+ 215163 t$`1
+ 215214 |$`L
+ 215332 |$`H
+ 216202 t$`f
+ 216457 D$`f
+ 217022 f9D$
+ 217234 |$`A
+ 220627 D$`1
+ 220664 t$|f
+ 220671 |$~H
+ 220765 L$0f=
+ 220776 D$8A
+ 221055 D$`H
+ 221130 |$pL
+ 221152 T$@H
+ 221207 D$hH
+ 221444 D;k,
+ 221730 D;k,
+ 222042 |$0D
+ 222117 |$`I
+ 223420 AUATH
+ 223504 %W~ 
+ 223615 -.m 
+ 224602 []A\A]
+ 225540 -{i 
+ 226004 -oq 
+ 226213 -0q 
+ 226503 5xp 
+ 227200 AWAVA
+ 227207 AUATL
+ 227215 %6V 
+ 227225 -6V 
+ 227332 []A\A]A^A_
+ 227410 Usage:  dig [@global-server] [domain] [q-type] [q-class] {q-opt}
+ 227511             {global-d-opt} host [@local-server] {local-d-opt}
+ 227607             [ host [@local-server] {local-d-opt} [...]]
+ 227701 Use "dig -h" (or "dig -h | more") for complete list of options
+ 230010 %s; <<>> DiG 9.10.3-P4-Ubuntu <<>>
+ 230060 Where:  domain	  is in the Domain Name System
+ 230136         q-class  is one of (in,hs,ch,...) [default: in]
+ 230226         q-type   is one of (a,any,mx,ns,soa,hinfo,axfr,txt,...) [default:a]
+ 230342                  (Use ixfr=version for type ixfr)
+ 230424         q-opt    is one of:
+ 230460                  -4                  (use IPv4 query transport only)
+ 230565                  -6                  (use IPv6 query transport only)
+ 230672                  -b address[#port]   (bind to source address/port)
+ 230775                  -c class            (specify query class)
+ 231070                  -f filename         (batch mode)
+ 231152                  -i                  (use IP6.INT for IPv6 reverse lookups)
+ 231266                  -k keyfile          (specify tsig key file)
+ 231363                  -m                  (enable memory usage debugging)
+ 231470                  -p port             (specify port number)
+ 231563                  -q name             (specify query name)
+ 231655                  -t type             (specify query type)
+ 231747                  -u                  (display times in usec instead of msec)
+ 232064                  -x dot-notation     (shortcut for reverse lookups)
+ 232170                  -y [hmac:]name:key  (specify named base64 tsig key)
+ 232275         d-opt    is of the form +keyword[=value], where keyword is:
+ 232401                  +[no]aaonly         (Set AA flag in query (+[no]aaflag))
+ 232513                  +[no]additional     (Control display of additional section)
+ 232630                  +[no]adflag         (Set AD flag in query (default on))
+ 232741                  +[no]all            (Set or clear all display flags)
+ 233047                  +[no]answer         (Control display of answer section)
+ 233160                  +[no]authority      (Control display of authority section)
+ 233274                  +[no]besteffort     (Try to parse even illegal messages)
+ 233406                  +bufsize=###        (Set EDNS0 Max UDP packet size)
+ 233513                  +[no]cdflag         (Set checking disabled flag in query)
+ 233626                  +[no]cl             (Control display of class in records)
+ 233741                  +[no]cmd            (Control display of command line)
+ 234050                  +[no]comments       (Control display of comment lines)
+ 234160                  +[no]crypto         (Control display of cryptographic fields in records)
+ 234312                  +[no]defname        (Use search list (+[no]search))
+ 234417                  +[no]dnssec         (Request DNSSEC records)
+ 234515                  +domain=###         (Set default domainname)
+ 234613                  +[no]edns[=###]     (Set EDNS version) [0]
+ 234707                  +ednsflags=###      (Set EDNS flag bits)
+ 235001                  +[no]ednsnegotiation (Set EDNS version negotiation)
+ 235106                  +ednsopt=###[:value] (Send specified EDNS option)
+ 235211                  +noednsopt          (Clear list of +ednsopt options)
+ 235317                  +[no]expire         (Request time to expire)
+ 235415                  +[no]fail           (Don't try next server on SERVFAIL)
+ 235526                  +[no]identify       (ID responders in short answers)
+ 235634                  +[no]ignore         (Don't revert to TCP for TC responses.)
+ 235751                  +[no]keepopen       (Keep the TCP socket open between queries)
+ 236071                  +[no]multiline      (Print records in an expanded format)
+ 236204                  +ndots=###          (Set search NDOTS value)
+ 236302                  +[no]nsid           (Request Name Server ID)
+ 236400                  +[no]nssearch       (Search all authoritative nameservers)
+ 236514                  +[no]onesoa         (AXFR prints only one soa record)
+ 236623                  +[no]opcode=[###]   (Set the opcode of the request)
+ 236730                  +[no]qr             (Print question before sending)
+ 237035                  +[no]question       (Control display of question section)
+ 237150                  +[no]recurse        (Recursive mode)
+ 237236                  +retry=###          (Set number of UDP retries) [2]
+ 237343                  +[no]rrcomments     (Control display of per-record comments)
+ 237461                  +[no]search         (Set whether to use searchlist)
+ 237566                  +[no]short          (Display nothing except short
+ 237671                                       form of answer)
+ 237757                  +[no]showsearch     (Search with intermediate results)
+ 240067                  +[no]split=##       (Split hex/base64 fields into chunks)
+ 240202                  +[no]stats          (Control display of statistics)
+ 240307                  +subnet=addr        (Set edns-client-subnet option)
+ 240414                  +[no]tcp            (TCP mode (+[no]vc))
+ 240506                  +time=###           (Set query timeout) [5]
+ 240603                  +[no]trace          (Trace delegation down from root [+dnssec])
+ 240724                  +tries=###          (Set number of UDP attempts) [3]
+ 241032                  +[no]ttlid          (Control display of ttls in records)
+ 241144                  +[no]vc             (TCP mode (+[no]tcp))
+ 241237         global d-opts and servers (before host name) affect all queries.
+ 241350         local d-opts and servers (after host name) affect only that lookup.
+ 241464         -h                           (print help and exit)
+ 241557         -v                           (print version and exit)
+ 241660 ;; Warning, extra class option
+ 241720 ;; Warning, ignoring invalid class %s
+ 241770 ;; Warning, extra type option
+ 242030 ;; Warning, ignoring invalid type %s
+ 242100 couldn't get address for '%s': %s: skipping lookup
+ 242170 (lookup_list).tail == (lookup)
+ 242230 (lookup_list).head == (lookup)
+ 242270 (lookup_list).head != (lookup)
+ 242330 (lookup_list).tail != (lookup)
+ 242370 ednsopt no code point specified
+ 242430 ;; Warning, split must be a multiple of 4; adjusting to %d
+ 242530 ;; Warning, ixfr requires a serial number
+ 242610 couldn't open specified batch file
+ 242660 ;; XFR size: %u records (messages %u, bytes %llu)
+ 242750 ;; WARNING -- Some TSIG could not be validated
+ 243030 ;; WARNING -- TSIG key was not used.
+ 243100 ;; Received %llu bytes from %s(%s) in %ld us
+ 243160 ;; Received %llu bytes from %s(%s) in %ld ms
+ 243240 ;; ->>HEADER<<- opcode: %s, status: %s, id: %u
+ 243320 ; QUERY: %u, ANSWER: %u, AUTHORITY: %u, ADDITIONAL: %u
+ 243410 ;; WARNING: recursion requested but not available
+ 243501 ;; WARNING: EDNS query returned status %s - retry with '%s+noedns'
+ 243610 ;; WARNING: Message has %u extra byte%s at end
+ 243670 dns_message_pseudosectiontotext
+ 243730  +cmd
+ 243736  +short
+ 243746 ; (%d server%s found)
+ 243775 ;; global options:%s%s
+ 244025 can't find IPv4 networking
+ 244060 can't find IPv6 networking
+ 244113 46bcdfhikmnptvyx
+ 244134 DiG 9.10.3-P4-Ubuntu
+ 244162 46dhimnuv
+ 244174 Couldn't parse port number
+ 244227 invalid address %s
+ 244252 looking up %s
+ 244270 ixfr=
+ 244276 Couldn't parse serial number
+ 244333 Invalid IP address %s
+ 244362 Invalid option: -%s
+ 244407 parse_args()
+ 244424 making new lookup
+ 244446 batchfp == ((void *)0)
+ 244475 ../../../bin/dig/dig.c
+ 244524 HOME
+ 244531 %s/.digrc
+ 244543 config line %s
+ 244567 .digrc argv %d: %s
+ 244612 main parsing %s
+ 244632 ;; Invalid option %s
+ 244663 aaonly
+ 244672 aaflag
+ 244701 additional
+ 244714 adflag
+ 244727 authority
+ 244741 besteffort
+ 244754 bufsize
+ 244764 Couldn't parse buffer size
+ 245017 cdflag
+ 245031 class
+ 245037 crypto
+ 245046 defname
+ 245056 dnssec
+ 245065 domain
+ 245074 Couldn't parse edns
+ 245120 Couldn't parse ednsflags
+ 245151 ednsnegotiation
+ 245171 ednsopt
+ 245201 expire
+ 245210 fail
+ 245215 identify
+ 245226 ignore
+ 245235 keepopen
+ 245246 multiline
+ 245260 Couldn't parse ndots
+ 245305 nsid
+ 245312 nssearch
+ 245323 onesoa
+ 245332 Couldn't parse opcode
+ 245360 question
+ 245371 rdflag
+ 245400 recurse
+ 245410 retry
+ 245416 Couldn't parse retries
+ 245445 rrcomments
+ 245460 showsearch
+ 245473 Couldn't parse split
+ 245520 stats
+ 245526 subnet
+ 245535 Couldn't parse client
+ 245567 Couldn't parse timeout
+ 245616 trace
+ 245624 Couldn't parse tries
+ 245651 ttlid
+ 245662 Invalid option: +%s
+ 245707 batch line %s
+ 245725 batch argv %d: %s
+ 245747 ;; Query time: %ld usec
+ 246000 ;; Query time: %ld msec
+ 246031 ;; SERVER: %s(%s)
+ 246054 %a %b %d %H:%M:%S %Z %Y
+ 246104 ;; WHEN: %s
+ 246121 ;; MSG SIZE  rcvd: %u
+ 246150 short_form
+ 246163 long_form
+ 246175 nocomments
+ 246210 +nodnssec 
+ 246223 dns_master_stylecreate
+ 246252 isc_buffer_allocate
+ 246276 ; %s
+ 246304 ;; Sending:
+ 246320 ;; Got answer:
+ 246343 ;; flags:
+ 246411 ; MBZ: 0x4
+ 246424 dns_message_sectiontotext
+ 246456 dns_rdata_totext
+ 246477  from server 
+ 246515  in %ld us.
+ 246531  in %ld ms.
+ 246545 say_message
+ 246561 short_answer
+ 246576 %.*s
+ 246603 noheaders
+ 246615 printmessage(%s %s %s)
+ 246644 main()
+ 246653 isc_app_start
+ 246671 isc_app_onrun
+ 246707 NOERROR
+ 246717 FORMERR
+ 246727 SERVFAIL
+ 246740 NXDOMAIN
+ 246751 NOTIMP
+ 246760 REFUSED
+ 246770 YXDOMAIN
+ 247001 YXRRSET
+ 247011 NXRRSET
+ 247021 NOTAUTH
+ 247031 NOTZONE
+ 247041 RESERVED11
+ 247054 RESERVED12
+ 247067 RESERVED13
+ 247102 RESERVED14
+ 247115 RESERVED15
+ 247130 BADVERS
+ 247140 IQUERY
+ 247147 STATUS
+ 247156 RESERVED3
+ 247170 NOTIFY
+ 247177 UPDATE
+ 247206 RESERVED6
+ 247220 RESERVED7
+ 247232 RESERVED8
+ 247244 RESERVED9
+ 247256 RESERVED10
+ 250530 (search_list).tail == (search)
+ 250570 (search_list).head != (search)
+ 250630 (search_list).tail != (search)
+ 250670 memory allocation failure in %s:%d
+ 250740 (lookup->connecting).tail == (query)
+ 251010 (lookup->connecting).head == (query)
+ 251060 (lookup->connecting).head != (query)
+ 251130 (lookup->connecting).tail != (query)
+ 251200 (query->recvlist).tail == (&query->recvbuf)
+ 251260 (query->recvlist).head == (&query->recvbuf)
+ 251340 (query->recvlist).head != (&query->recvbuf)
+ 251420 (query->recvlist).tail != (&query->recvbuf)
+ 251500 (query->lengthlist).tail == (&query->lengthbuf)
+ 251560 (query->lengthlist).head == (&query->lengthbuf)
+ 251640 (query->lengthlist).head != (&query->lengthbuf)
+ 251720 (query->lengthlist).tail != (&query->lengthbuf)
+ 252000 query->recvspace != ((void *)0)
+ 252040 ;; Couldn't create key %s: %s
+ 252100 couldn't get address for '%s': %s
+ 252150 before insertion, init@%p -> %p, new@%p -> %p
+ 252230 after insertion, init -> %p, new = %p, new -> %p
+ 252320 invalid prefix length '%s': %s
+ 252360 ;; Warning, ignoring invalid TSIG algorithm %s
+ 252440 key must have algorithm and secret
+ 252510 ;; Couldn't create key %s: bad algorithm
+ 252570 unable to generate cookie secret
+ 252640 Couldn't read key from %s: %s
+ 252700 can't find either v4 or v6 networking
+ 252750 freeing server %p belonging to %p
+ 253020 (lookup->my_server_list).tail == ((dig_server_t *)ptr)
+ 253110 (lookup->my_server_list).head == ((dig_server_t *)ptr)
+ 253200 (lookup->my_server_list).head != ((dig_server_t *)ptr)
+ 253270 (lookup->my_server_list).tail != ((dig_server_t *)ptr)
+ 253360 '%s' is not in legal name syntax (%s)
+ 253430 dns_name_isabsolute(lookup->name)
+ 253500 starting to render the message
+ 253540 create query %p linked to lookup %p
+ 253610 working on lookup %p, query %p
+ 253650 recving with lookup=%p, query=%p, sock=%p
+ 253730 isc_time_now((&query->time_sent)) == 0
+ 254000 event->ev_type == (((2) << 16) + 2)
+ 254050 (sevent->bufferlist).tail == (b)
+ 254120 (sevent->bufferlist).head == (b)
+ 254170 (sevent->bufferlist).head != (b)
+ 254240 (sevent->bufferlist).tail != (b)
+ 254310 couldn't get address for '%s': %s
+ 254360 (lookup->my_server_list).tail == (srv)
+ 254430 (lookup->my_server_list).head == (srv)
+ 254500 (lookup->my_server_list).head != (srv)
+ 254550 (lookup->my_server_list).tail != (srv)
+ 254620 (lookup_list).tail == (current_lookup)
+ 254670 (lookup_list).head != (current_lookup)
+ 254740 (lookup_list).tail != (current_lookup)
+ 255010 ignoring launch_next_query because !pending
+ 255070 sending a request in launch_next_query
+ 255140 ;; Skipping server %s, incompatible address family
+ 255230 event->ev_type == (((1) << 16) + 2)
+ 255300 resending UDP request to first server
+ 255350 making new TCP request, %d tries left
+ 255420 ;; connection timed out; no servers could be reached
+ 255510 event->ev_type == (((2) << 16) + 4)
+ 255560 ;; Connection to %s(%s) for %s failed: %s.
+ 255640 event->ev_type == (((2) << 16) + 1)
+ 255710 ;; communications error to %s: %s
+ 255760 (((query->recvlist).head == ((void *)0)) ? isc_boolean_true : isc_boolean_false)
+ 256110 recving with lookup=%p, query=%p
+ 256160 resubmitted recv request with length %d, recvcount=%d
+ 256250 isc_time_now((&query->time_recv)) == 0
+ 256320 (sevent->bufferlist).tail == (&query->recvbuf)
+ 256400 (sevent->bufferlist).head == (&query->recvbuf)
+ 256460 (sevent->bufferlist).head != (&query->recvbuf)
+ 256540 (sevent->bufferlist).tail != (&query->recvbuf)
+ 256620 ;; reply from unexpected source: %s, expected %s
+ 256710 ;; %s: ID mismatch: expected ID %u, got %u
+ 256770 ;; ERROR: short (< header size) message
+ 257040 ;; Warning: ID mismatch: expected ID %u, got %u
+ 257130 ;; Warning: short (< header size) message received
+ 257220 ;; Warning: query response not set
+ 257270 ;; Warning: Message parser reports malformed message packet.
+ 257370 ;; Question section mismatch: got %s/%s/%s
+ 257450 ;; BADVERS, retrying with EDNS version %u.
+ 257530 ;; Truncated, retrying in TCP mode.
+ 257600 ;; Got %s from %s, trying next server
+ 257650 ;; Couldn't verify signature: %s
+ 257720 ; Transfer failed.  Didn't start with SOA answer.
+ 260010 canceling pending query %p, belonging to %p
+ 260070 canceling connecting query %p, belonging to %p
+ 260150 ((lookup_list).head) == ((void *)0)
+ 260220 ((pthread_mutex_destroy(((&lookup_lock))) == 0) ? 0 : 34) == 0
+ 260320 ../../../bin/dig/dighost.c
+ 260353 invalid %s '%s': %s
+ 260400 %s: 
+ 260405 isc_time_now((&t)) == 0
+ 260435 %d.%06d: 
+ 260447 query != ((void *)0)
+ 260474 clear_query(%p)
+ 260514 (lookup->q).tail == (query)
+ 260550 (lookup->q).head == (query)
+ 260604 (lookup->q).head != (query)
+ 260640 (lookup->q).tail != (query)
+ 260674 sockcount=%d
+ 260711 empty
+ 260717 full
+ 260724 check_if_done()
+ 260744 list %s
+ 260754 sockcount == 0
+ 260773 recvcount == 0
+ 261012 shutting down
+ 261030 cancel_lookup()
+ 261050 force_timeout ()
+ 261071 isc_event_allocate: %s
+ 261120 %s: %s
+ 261127 setup_text_key()
+ 261150 dns_name_init
+ 261166 bringup_timer()
+ 261206 have local timeout of %d
+ 261237 isc_timer_create
+ 261260 servname != ((void *)0)
+ 261310 make_server(%s)
+ 261330 copy_server_list()
+ 261353 %%%u
+ 261360 flush_server_list()
+ 261404 (server_list).tail == (ps)
+ 261437 (server_list).head == (ps)
+ 261472 (server_list).head != (ps)
+ 261525 (server_list).tail != (ps)
+ 261560 memory allocation failure
+ 261612 clone_server_list()
+ 261636 make_empty_lookup()
+ 261662 !free_now
+ 261674 clone_lookup()
+ 261713 looknew != ((void *)0)
+ 261742 out of memory
+ 261760 requeue_lookup()
+ 262001 too many lookups
+ 262022 next_origin()
+ 262040 following up %s
+ 262060 couldn't parse digest bits
+ 262116 invalid address '%s'
+ 262143 hmac != ((void *)0)
+ 262167 unknown key type '%.*s'
+ 262217 hmac-md5
+ 262230 hmac-md5-
+ 262242 digest-bits [0..128]
+ 262267 hmac-sha1
+ 262301 hmac-sha1-
+ 262314 digest-bits [0..160]
+ 262341 hmac-sha224
+ 262355 hmac-sha224-
+ 262372 digest-bits [0..224]
+ 262417 hmac-sha256
+ 262433 hmac-sha256-
+ 262450 digest-bits [0..256]
+ 262475 hmac-sha384
+ 262511 hmac-sha384-
+ 262526 digest-bits [0..384]
+ 262553 hmac-sha512
+ 262567 hmac-sha512-
+ 262604 digest-bits [0..512]
+ 262631 setup_system()
+ 262650 lwres_context_create failed
+ 262704 /etc/resolv.conf
+ 262725 parse of %s failed
+ 262750 create_search_list()
+ 262775 ndots is %d.
+ 263012 127.0.0.1
+ 263030 setup_file_key()
+ 263051 secret
+ 263060 algorithm
+ 263072 add_nameserver failed
+ 263120 setup_libs()
+ 263135 isc_mem_create
+ 263160 isc_log_create
+ 263177 default_debug
+ 263215 isc_log_usechannel
+ 263240 isc_taskmgr_create
+ 263263 isc_task_create
+ 263303 isc_timermgr_create
+ 263327 isc_socketmgr_create
+ 263354 isc_entropy_create
+ 263377 dst_lib_init
+ 263414 isc_mempool_create
+ 263437 COMMPOOL
+ 263450 isc_mutex_init
+ 263467 too many ednsopts
+ 263511 bad edns code point: %s
+ 263541 isc_hex_decodestring
+ 263566 destroy
+ 263576 freeing buffer %p
+ 263620 lookup != ((void *)0)
+ 263646 try_clear_lookup(%p)
+ 263673 query to %s still pending
+ 263725 query to %s still connecting
+ 263762 setup_lookup(%p)
+ 264003 dns_message_create
+ 264026 resetting lookup counter.
+ 264060 cloning server list
+ 264104 dns_message_gettempname
+ 264134 trying origin %s
+ 264155 using root origin
+ 264177 '%s' is not a legal name (%s)
+ 264235 recursive query
+ 264255 AA query
+ 264266 AD query
+ 264277 CD query
+ 264310 add_question()
+ 264327 dns_message_gettemprdataset()
+ 264365 insert_soa()
+ 264402 dns_message_gettemprdata
+ 264433 isc_rdata_fromstruct
+ 264460 dns_message_gettemprdatalist
+ 264515 dns_message_gettemprdataset
+ 264551 initializing keys
+ 264573 dns_message_settsigkey
+ 264622 dns_compress_init
+ 264644 dns_message_renderbegin
+ 264674 add_opt()
+ 264706 dns_message_buildopt
+ 264733 dns_message_setopt
+ 264756 dns_message_rendersection
+ 265010 dns_message_renderend
+ 265036 done rendering
+ 265055 count == 1
+ 265070 send_udp(%p)
+ 265105 isc_socket_create
+ 265127 isc_socket_bind
+ 265147 isc_socket_recvv
+ 265170 recvcount=%d
+ 265205 sending a request
+ 265227 query->sock != ((void *)0)
+ 265262 isc_socket_sendtov
+ 265305 isc_mutex_lock
+ 265324 success
+ 265334 send_done()
+ 265350 sendcount=%d
+ 265365 sendcount >= 0
+ 265404 sending next, since searching
+ 265442 unlock_lookup %s:%d
+ 265466 isc_mutex_unlock
+ 265507 found NS set
+ 265524 ;; BAD (HORIZONTAL) REFERRAL
+ 265561 ;; BAD REFERRAL
+ 265601 dns_rdata_tostruct
+ 265624 found NS %s
+ 265640 adding server %s
+ 265661 i > 0
+ 265667 do_lookup()
+ 265703 start_lookup()
+ 265722 current_lookup == ((void *)0)
+ 265760 check_next_lookup(%p)
+ 266006 still have a worker
+ 266032 launch_next_query()
+ 266056 sockcount >= 0
+ 266075 isc_socket_sendv
+ 266116 send_tcp_connect(%p)
+ 266143 ;; No acceptable nameservers
+ 266200 query->sock == ((void *)0)
+ 266233 isc_socket_connect
+ 266256 (l->q).tail == (query)
+ 266305 (l->q).head == (query)
+ 266334 (l->q).head != (query)
+ 266363 (l->q).tail != (query)
+ 266412 connect_timeout()
+ 266434 trying next server...
+ 266462 connect_done()
+ 266501 query->waiting_connect
+ 266530 in cancel handler
+ 266552 sockcount > 0
+ 266570 unsuccessful connection: %s
+ 266624 tcp_length_done()
+ 266646 recvcount >= 0
+ 266665 b == &query->lengthbuf
+ 266714 WARNING
+ 266724 SERVFAIL reply
+ 266743 recursion not available
+ 266773 recv_done()
+ 267007 lookup=%p, query=%p
+ 267033 b == &query->recvbuf
+ 267060 no longer pending.  Got %s
+ 267113 in recv cancel handler
+ 267142 ;; communications error: %s
+ 267177 getting initial querysig
+ 267230 dns_message_getquerytsig
+ 267261 dns_message_setquerytsig
+ 267312 before parse starts
+ 267336 ;; Got bad packet: %s
+ 267365 %d bytes
+ 267377 %02x 
+ 267405          
+ 267417 sending query %p
+ 267441 freeing querysig buffer %p
+ 267474 after parse
+ 267510 isc_timer_reset
+ 267530 in TRACE code
+ 267546 in NSSEARCH code
+ 267567 still pending.
+ 267606 check_for_more_data()
+ 267634 ; Transfer failed.
+ 267657 got the second rr as nonsoa
+ 267713 got an SOA
+ 267726 this is the first serial %u
+ 267762 got up to date response
+ 270012 doing axfr, got second SOA
+ 270045 doing ixfr, got empty zone
+ 270100 this is the second serial %u
+ 270135 got a match for ixfr
+ 270162 done with ixfr
+ 270201 meaningless soa %u
+ 270224 cancel_all()
+ 270241 (lookup_list).tail == (l)
+ 270273 (lookup_list).head == (l)
+ 270325 (lookup_list).head != (l)
+ 270357 (lookup_list).tail != (l)
+ 270411 destroy_libs()
+ 270430 freeing task
+ 270445 freeing taskmgr
+ 270465 sendcount == 0
+ 270504 freeing commctx
+ 270524 freeing socketmgr
+ 270546 freeing timermgr
+ 270567 freeing key %p
+ 270606 destroy DST lib
+ 270626 detach from entropy
+ 270652 Removing log context
+ 270677 Destroy memory
+ 272217 ;*3$"
+ 310052 feb00ee30ff146bd75e0d703d3d54be7f2ae35.debug
+ 310137 .shstrtab
+ 310151 .interp
+ 310161 .note.ABI-tag
+ 310177 .note.gnu.build-id
+ 310222 .gnu.hash
+ 310234 .dynsym
+ 310244 .dynstr
+ 310254 .gnu.version
+ 310271 .gnu.version_r
+ 310310 .rela.dyn
+ 310322 .init
+ 310330 .plt
+ 310335 .plt.got
+ 310346 .text
+ 310354 .fini
+ 310362 .rodata
+ 310372 .eh_frame_hdr
+ 310410 .eh_frame
+ 310422 .init_array
+ 310436 .fini_array
+ 310452 .jcr
+ 310457 .data.rel.ro
+ 310474 .dynamic
+ 310505 .data
+ 310513 .bss
+ 310520 .gnu_debuglink
