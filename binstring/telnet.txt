@@ -1,0 +1,914 @@
+   1070 /lib64/ld-linux-x86-64.so.2
+   1313 @fUa
+   6461 libstdc++.so.6
+   6500 __gmon_start__
+   6517 _Jv_RegisterClasses
+   6543 _ITM_deregisterTMCloneTable
+   6577 _ITM_registerTMCloneTable
+   6631 _ZdlPv
+   6640 _Znam
+   6646 _ZdaPv
+   6655 __cxa_guard_release
+   6701 _Znwm
+   6707 __cxa_guard_acquire
+   6733 libc.so.6
+   6745 __gethostname_chk
+   6767 socket
+   6776 fflush
+   7005 strcpy
+   7014 __printf_chk
+   7031 execl
+   7037 _IO_putc
+   7050 fopen
+   7056 gai_strerror
+   7073 strncmp
+   7103 inet_aton
+   7115 optind
+   7124 strrchr
+   7134 wait
+   7141 __longjmp_chk
+   7157 perror
+   7166 connect
+   7176 getpwuid
+   7207 __fdelt_chk
+   7223 inet_ntoa
+   7235 signal
+   7244 strncpy
+   7254 __stack_chk_fail
+   7275 putchar
+   7305 select
+   7314 realloc
+   7324 stdin
+   7332 _exit
+   7340 kill
+   7345 strdup
+   7354 __assert_fail
+   7372 strtok
+   7401 strtol
+   7410 isatty
+   7417 feof
+   7424 fgets
+   7432 getpwnam
+   7443 strlen
+   7452 __cxa_atexit
+   7467 send
+   7474 getaddrinfo
+   7510 cfgetospeed
+   7524 __errno_location
+   7545 tcsetattr
+   7557 bind
+   7564 read
+   7571 getnameinfo
+   7605 herror
+   7614 getopt
+   7623 shutdown
+   7634 __fprintf_chk
+   7652 __sigsetjmp
+   7666 stdout
+   7675 fputc
+   7703 recv
+   7710 fputs
+   7716 memcpy
+   7725 fclose
+   7734 __vsnprintf_chk
+   7754 setsockopt
+   7767 malloc
+   7776 strcasecmp
+  10011 raise
+  10017 __strncpy_chk
+  10035 __ctype_b_loc
+  10053 getenv
+  10062 optarg
+  10071 stderr
+  10100 ioctl
+  10106 gethostbyname
+  10124 __snprintf_chk
+  10143 getuid
+  10152 strncasecmp
+  10166 fileno
+  10175 fwrite
+  10204 __memcpy_chk
+  10221 strchr
+  10230 vfork
+  10236 rindex
+  10245 tcgetattr
+  10257 sleep
+  10265 __ctype_toupper_loc
+  10311 __strcpy_chk
+  10326 __ctype_tolower_loc
+  10352 freeaddrinfo
+  10367 cfgetispeed
+  10403 __strcat_chk
+  10420 strcmp
+  10427 __asprintf_chk
+  10446 __libc_start_main
+  10470 ferror
+  10477 free
+  10504 __environ
+  10516 GLIBCXX_3.4
+  10532 CXXABI_1.3
+  10545 GLIBC_2.15
+  10560 GLIBC_2.14
+  10573 GLIBC_2.8
+  10605 GLIBC_2.3
+  10617 GLIBC_2.4
+  10631 GLIBC_2.11
+  10644 GLIBC_2.3.4
+  10660 GLIBC_2.2.5
+  16721 %zB!
+  16741 %rB!
+  16761 %jB!
+  17001 %bB!
+  17021 %ZB!
+  17041 %RB!
+  17061 %JB!
+  17101 %BB!
+  17121 %:B!
+  17141 %2B!
+  17161 %*B!
+  17201 %"B!
+  17721 %zA!
+  17741 %rA!
+  17761 %jA!
+  20001 %bA!
+  20021 %ZA!
+  20041 %RA!
+  20061 %JA!
+  20101 %BA!
+  20121 %:A!
+  20141 %2A!
+  20161 %*A!
+  20201 %"A!
+  20721 %z@!
+  20741 %r@!
+  20761 %j@!
+  21001 %b@!
+  21021 %Z@!
+  21041 %R@!
+  21061 %J@!
+  21101 %B@!
+  21121 %:@!
+  21141 %2@!
+  21161 %*@!
+  21201 %"@!
+  22060 AWAVAUATUSH
+  22116 D$H1
+  22233 5pl!
+  22651 =rX!
+  22712 =IX!
+  23761 L$HdH3
+  24011 X[]A\A]A^A_
+  24237 5lh!
+  24254 =Wh!
+  25746 =5R!
+  26576 []A\
+  27140 AWAVAUATUSH
+  27437 []A\A]A^A_
+  27521 []A\A]A^A_
+  30220 D$(1
+  30272 t$ H
+  30335 H9D$
+  30367 T$(dH3
+  30422 D$ H9D$
+  30460 ATUA
+  31432 =	K!
+  32100 =HJ!
+  32142 =%J!
+  32303 AVAUATA
+  32524 ]A\A]A^
+  32765 ]A\A]A^
+  33242 =yG!
+  33277 ]A\A]A^
+  33362 ]A\A]A^
+  33446 ATUS
+  34320 D$81
+  34502 T$8dH3
+  35131 : t#H
+  35263 ATUS
+  35562 =H2!
+  36277 @"=NR!
+  36620 AWAVI
+  36627 AUATE1
+  36636 USE1
+  37417 ([]A\A]A^A_
+  37622 D;|$
+  37672 D$$H
+  41563 ATUS
+  41750 []A\
+  41776 []A\
+  42204 []A\
+  43340 AWAVAUATUSH
+  43660 []A\A]A^A_
+  43771 []A\A]A^A_
+  44040 AUATI
+  44226 []A\A]
+  44301 =Z5!
+  44414 ]A\A]
+  44762 =)4!
+  45331 A9\$
+  45404 AWAVAUATI
+  46060 tfLce
+  46440 [A\A]A^A_]
+  46720 AUATI
+  47276 []A\A]
+  50115 ty<^
+  50606 ~`E1
+  51040 AUAT
+  51541 -b+!
+  51606 Hc-;+!
+  52241 -"*!
+  52546 Hc-[)!
+  53201 -B(!
+  53506 Hc-{'!
+  54141 -b&!
+  54206 Hc-;&!
+  54641 -"%!
+  55146 Hc-[$!
+  55601 -"#!
+  56106 Hc-["!
+  56541 -R!!
+  56606 Hc-+!!
+  56777 []A\A]
+  57062 -q !
+  57102 -a !
+  57122 -Q !
+  57142 -a !
+  57162 -Q !
+  57202 -A !
+  57222 -1 !
+  57242 -! !
+  65420 ATUA
+  66036 []A\1
+  66255 []A\
+  66440 ATUSH
+  66536 []A\
+  66740 AWAVAUATUSH
+  67260 D$XE
+  70316 []A\A]A^A_
+  70573 openfD
+  71061 L$`H
+  71114 T$`H
+  71152 \$`H
+  71343 D$ L
+  71562 D$XH
+  71600 D$XH
+  72270 =c	!
+  72466 L$`H
+  73052 D$XH
+  73057 D$XH
+  73241 :tTD
+  73372 t$PH
+  73402 D$0H
+  73423 T$(L
+  73430 D$0uVH
+  73442 T$8L
+  73464 T$8tdHcP
+  73543 D$HH
+  73564 |$PM
+  73655 H-`~a
+  73711 H-`~a
+  73722 D$ t
+  73747 |$tA
+  74640 AUATI
+  74761 []A\A]
+  75005 ~IHcW 
+  75020 ;W(t+H
+  75140 AVAUATUSH
+  75306 []A\A]A^
+  75440 ATUSH
+  76112 t49k(
+  76517 +G$9
+  77141 |$ I
+  77321 W Hcw
+  77347 t9SH
+ 101060 AWAVA
+ 101067 AUAT
+ 101173 t-Hc
+ 101255 t)Hc
+ 101333 t*Ic
+ 101412 t(Hc
+ 101467 t(Hc
+ 101654 []A\A]A^A_
+ 107602 t1Hc
+ 107722 t1Hc
+ 110042 t1Hc
+ 110162 t1Hc
+ 113305 8thH
+ 113340 0t5H
+ 114246 2@81t
+ 120020 AUATUSH
+ 120214 []A\A]
+ 120711 L+-x
+ 121540 AWAVA
+ 121547 AUATI
+ 121725 ~9Lc
+ 122031 []A\A]A^A_
+ 122120 AWAV
+ 122131 AUAT
+ 122201 D$H1
+ 122742 D$HdH3
+ 122767 X[]A\A]A^A_
+ 123111 H;=h
+ 123210 t$(1
+ 123314 t$0A
+ 124475 y1Hc
+ 125343 tnMc
+ 125534 Lcd$
+ 133741 D$(1
+ 133761 D$(dH3
+ 135263 Hc\$
+ 135513 Hcl$
+ 142120 ATUH
+ 142207 []A\
+ 142240 []A\
+ 143220 ATUI
+ 143304 t-H;
+ 143402 t'H;
+ 143457 []A\
+ 144120 ATUA
+ 144166 D$X1
+ 144406 D$ H
+ 144422 D$(H
+ 144436 D$0H
+ 144452 D$8H
+ 144776 D$ H
+ 145012 D$(H
+ 145026 D$0H
+ 145042 D$8H
+ 145250 T$,8
+ 145261 L$18
+ 145423 D$XdH3
+ 145450 `[]A\
+ 146223 ucHc=p
+ 147261 []A\
+ 147315 []A\
+ 147460 AUATUSH
+ 147614 []A\A]
+ 147660 H;=q
+ 147745 (standarH
+ 147766 d outputH
+ 150160 AWAVA
+ 150167 AUATE1
+ 150467 []A\A]A^A_
+ 151500 AUATA
+ 153064 []A\A]
+ 153440 AWAVAUATA
+ 153507 D$X1
+ 153661 ~/Hc
+ 154002 D$XdH3
+ 154027 h[]A\A]A^A_
+ 157721 H;5P
+ 160737 D;l$
+ 163736 |$01
+ 165120 AWAVAUATI
+ 165416 []A\A]A^A_
+ 165440 AUATI
+ 165475 t*Lc
+ 165560 []A\A]
+ 165607 []A\A]
+ 165631 []A\A]
+ 165730 ~NAT
+ 166043 []A\
+ 166060 AWAVA
+ 166067 AUATI
+ 166274 []A\A]A^A_
+ 166554 Lc|$
+ 167100 AUATUS1
+ 167330 8:td
+ 167464 []A\A]
+ 167712 DISPLAY
+ 170467 t7USH
+ 170710 ~VUS1
+ 171360 AUATUSH
+ 171420 x^t=E1
+ 171541 []A\A]
+ 171677 []A\A]
+ 172353 97t9
+ 172720 AVAUA
+ 172727 ATUI
+ 173136 xpuvE
+ 173223  []A\A]A^
+ 173660 ATUE1
+ 174101 xMHc}
+ 174213 []A\
+ 175160 AWAVA
+ 175167 AUATL
+ 175175 %Vc 
+ 175205 -~c 
+ 175312 []A\A]A^A_
+ 175404 only 
+ 175412 %-15s %s
+ 175424 display help information
+ 175455 %-15s toggle %s
+ 175476 enable
+ 175505 disable
+ 175515 %-15s %s %s
+ 175532 Will
+ 175537 Won't
+ 175545 %s %s.
+ 175564 %s reset to "%s".
+ 175607 %s character is '%s'.
+ 175636 Local
+ 175647 Remote
+ 175656 Connected to %s.
+ 175700 %s line editing
+ 175721 %s catching of signals
+ 175751 Catching signals locally
+ 176002 %s character echo
+ 176025 %s flow control
+ 176046 No connection.
+ 176065 Escape character is '%s'.
+ 176120 new escape character: 
+ 176147 will
+ 176154 won't
+ 176162 %-15s [%s]
+ 176176 %-15s "%s"
+ 176212 ?Ambiguous argument '%s'.
+ 176245 ?Unknown argument '%s'.
+ 176276 ?Need to be connected first.
+ 176333 'mode ?' for help.
+ 176356 Connection closed.
+ 176401 'send ?' for help
+ 176423 buffer, if this might help.)
+ 176460 SENT
+ 176465 %s set to "%s".
+ 176506 %-*s	%s
+ 176517 Print help information
+ 176546 ?Ambiguous help command %s
+ 176602 ?Invalid help command %s
+ 176634 No help available
+ 176656 ?Ambiguous command
+ 176701 ?Invalid command
+ 176722 commands.cc
+ 176736 argc>=1
+ 176746 Try ? %s for help
+ 176771 `%s' requires a subcommand.
+ 177026 Try %s ? for help
+ 177051 Usage: send %s <option>
+ 177102 Valid options are:
+ 177127 wont
+ 177134 dont
+ 177144 /bin/sh
+ 177154 Fork failed
+ 177171 SHELL
+ 177202 Execl
+ 177210 close
+ 177216 logout
+ 177225 display
+ 177235 mode
+ 177242 open
+ 177247 quit
+ 177254 send
+ 177261 unset
+ 177267 toggle
+ 177304 environ
+ 177314 import
+ 177323 check
+ 177331 escape
+ 177340 crmod
+ 177346 %s> 
+ 177353 /etc/telnetrc
+ 177371 HOME
+ 177376 %s/.telnetrc
+ 177413 asprintf
+ 177424 telnet
+ 177433 ?Already connected to %s
+ 177465 (to) 
+ 177512 Bad source route option: %s
+ 177547 telnet: port %s overflows
+ 177602 telnet: port %s out of range
+ 177640 Trying %s...
+ 177656 USER
+ 177663 undefine
+ 177674 unexport
+ 177705 Send an environment variable
+ 177742 list
+ 177747 Disable LINEMODE option
+ 177777 Enable LINEMODE option
+ 200026 Enable signal trapping
+ 200055 +isig
+ 200063 -isig
+ 200071 Disable signal trapping
+ 200121 Enable character editing
+ 200152 +edit
+ 200160 -edit
+ 200166 Disable character editing
+ 200220 Enable tab expansion
+ 200245 +softtabs
+ 200257 -softtabs
+ 200271 Enable literal character echo
+ 200327 +litecho
+ 200340 -litecho
+ 200351 kludgeline
+ 200364 rlogin
+ 200373 rlogin escape character
+ 200423 tracefile
+ 200435 flushoutput
+ 200451 interrupt
+ 200467 character to cause an EOF 
+ 200522 kill
+ 200527 lnext
+ 200535 susp
+ 200542 reprint
+ 200552 worderase
+ 200564 start
+ 200572 character to use for XON
+ 200623 stop
+ 200630 character to use for XOFF
+ 200662 forw1
+ 200670 forw2
+ 200702 alternate AYT character
+ 200732 autoflush
+ 200744 autosynch
+ 200756 skiprc
+ 200765 don't read the telnetrc files
+ 201023 inbinary
+ 201034 receiving of binary data
+ 201065 outbinary
+ 201077 sending of binary data
+ 201126 crlf
+ 201133 map carriage return on output
+ 201171 localchars
+ 201204 debug
+ 201212 debugging
+ 201224 netdata
+ 201234 prettydump
+ 201247 show option processing
+ 201276 termdata
+ 201312 Send Telnet Abort output
+ 201343 Send Telnet 'Are You There'
+ 201403 Send Telnet Break
+ 201425 break
+ 201436 Send Telnet Erase Character
+ 201475 Send Telnet Erase Line
+ 201524 Send current escape character
+ 201570 Send Telnet Interrupt Process
+ 201626 intp
+ 201633 intr
+ 201644 Send Telnet 'No operation'
+ 201703 Send Telnet 'End of Record'
+ 201737 abort
+ 201745 Send Telnet 'Abort Process'
+ 202001 Send Telnet 'Suspend Process'
+ 202037 getstatus
+ 202051 Send request for STATUS
+ 202101 Display send options
+ 202130 Need an argument to 'environ' command.  'environ ?' for help.
+ 202230 '%s': unknown argument ('environ ?' for help).
+ 202310 '%s': ambiguous argument ('environ ?' for help).
+ 202400 Need %s%d argument%s to 'environ %s' command.  'environ ?' for help.
+ 202510 format is:  'mode Mode', where 'Mode' is one of:
+ 202600 Need an argument to 'toggle' command.  'toggle ?' for help.
+ 202700 '%s': ambiguous argument ('toggle ?' for help).
+ 202770 '%s': unknown argument ('toggle ?' for help).
+ 203050 Deprecated usage - please use 'toggle crmod' in the future.
+ 203150 %s map carriage return on output.
+ 203220 Need an argument to 'unset' command.  'unset ?' for help.
+ 203320 '%s': unknown argument ('unset ?' for help).
+ 203400 '%s': ambiguous argument ('unset ?' for help).
+ 203460 Operating with LINEMODE option
+ 203520 Operating in obsolete linemode
+ 203560 Operating in single character mode
+ 203630 Deprecated usage - please use 'set escape%s%s' in the future.
+ 203730 Will send carriage returns as telnet <CR><LF>.
+ 204010 Will send carriage returns as telnet <CR><NUL>.
+ 204070 Unknown mode '%s' ('mode ?' for help).
+ 204140 Ambiguous mode '%s' ('mode ?' for help).
+ 204220 ?Need to have LINEMODE option enabled first.
+ 204300 need at least one argument for 'send' command
+ 204360 Unknown send argument '%s'
+ 204413 'send ?' for help.
+ 204440 Ambiguous send argument '%s'
+ 204475 'send ?' for help.
+ 204530 Need %d argument%s to 'send %s' command.  'send %s ?' for help.
+ 204640 There is not enough room in the buffer TO the network
+ 204730 to process your request.  Nothing will be done.
+ 205010 ('send synch' will throw away most data in the network
+ 205100 Telnet 'send' error - argument disappeared!
+ 205160 Need to be connected first for `bye'.
+ 205230 Need to be connected first for `logout'.
+ 205310 Already transmitting in binary mode.
+ 205360 Negotiating binary mode on output.
+ 205430 Already transmitting in network ascii mode.
+ 205510 Negotiating network ascii mode on output.
+ 205570 Already receiving in binary mode.
+ 205640 Negotiating binary mode on input.
+ 205710 Already receiving in network ascii mode.
+ 205770 Negotiating network ascii mode on input.
+ 206050 Already operating in binary mode with remote host.
+ 206140 Negotiating binary mode with remote host.
+ 206220 Already in network ascii mode with remote host.
+ 206300 Negotiating network ascii mode with remote host.
+ 206370 Format is 'set Name Value'
+ 206423 'set ?' for help.
+ 206450 '%s': unknown argument ('set ?' for help).
+ 206530 '%s': ambiguous argument ('set ?' for help).
+ 206610 Format is 'set togglename [on|off]'
+ 206654 'set ?' for help.
+ 206700 Commands may be abbreviated.  Commands are:
+ 206760 Wrong number of arguments for command.
+ 207030 '%s': ambiguous argument ('send %s ?' for help).
+ 207120 '%s': unknown argument ('send %s ?' for help).
+ 207200 Telnet rlogin escape character is '%s'.
+ 207260 Telnet escape character is '%s'.
+ 207330 set treatment of special characters
+ 207400 Use local special character definitions
+ 207450 Use remote special character definitions
+ 207530 Verify remote special character definitions
+ 207610 usage: %s [-l user] [-a] host-name [port]
+ 207670 telnet: could not resolve %s: %s
+ 207740 telnet: could not resolve %s/%s: %s
+ 210010 telnet: Unable to connect to remote host
+ 210070 telnet: Unable to connect to remote host: Bad port number
+ 210170 Connection closed by foreign host.
+ 210240 Define an environment variable
+ 210300 Undefine an environment variable
+ 210350 Mark an environment variable for automatic export
+ 210440 Don't mark an environment variable for automatic export
+ 210530 List the current environment variables
+ 210600 (or disable obsolete line-by-line mode)
+ 210650 (or enable obsolete line-by-line mode)
+ 210720 These require the LINEMODE option to be enabled
+ 211000 Disable literal character echo
+ 211040 character to toggle local echoing on/off
+ 211120 character to escape back to telnet command mode
+ 211200 file to write trace information to
+ 211250 The following need 'localchars' to be toggled true
+ 211340 character to cause an Abort Output
+ 211410 character to cause an Interrupt Process
+ 211460 character to cause an Abort process
+ 211530 The following are for local editing in linemode
+ 211610 character to use to erase a character
+ 211660 character to use to erase a line
+ 211730 character to use for literal next
+ 212000 character to cause a Suspend Process
+ 212050 character to use for line reprint
+ 212120 character to use to erase a word
+ 212170 alternate end of line character
+ 212230 flushing of output when sending interrupt characters
+ 212320 flush output when sending interrupt characters
+ 212400 automatic sending of interrupt characters in urgent mode
+ 212500 send interrupt characters in urgent mode
+ 212560 sending and receiving of binary data
+ 212630 sending carriage returns as telnet <CR><LF>
+ 212710 mapping of received carriage returns
+ 212760 local recognition of certain control characters
+ 213040 recognize certain control characters
+ 213110 turn on socket level debugging
+ 213150 printing of hexadecimal network data (debugging)
+ 213240 print hexadecimal representation of network traffic
+ 213330 output of "netdata" to user readable format (debugging)
+ 213420 print user readable output for "netdata"
+ 213500 viewing of options processing (debugging)
+ 213560 (debugging) toggle printing of hexadecimal terminal data
+ 213660 print hexadecimal representation of terminal traffic
+ 213750 Send Telnet 'Go Ahead' sequence
+ 214010 Send Telnet End of File Character
+ 214060 Perform Telnet 'Synch operation'
+ 214140 int command_entry::call(int, const char**)
+ 214214 	[-n tracefile] [ -b addr ]
+ 214250 Usage: %s %s%s%s%s
+ 214274 [host-name [port]]
+ 214317  [-r] 
+ 214326 rlog
+ 214333 : Bad TOS argument '
+ 214360 ; will try to use default TOS
+ 214416 4678EKLS:X:ab:de:k:l:n:rt:x
+ 214460 [-4] [-6] [-8] [-E] [-L] [-a] [-d] [-e char] [-l user]
+ 214550 %s: -k ignored, no Kerberos V4 support.
+ 214630 %s: Warning: -t ignored, no TN3270 support.
+ 214710 %s: -x ignored, no encryption support.
+ 216030 ring.cc
+ 216040 max>0
+ 216046 binding
+ 216056 count>=0
+ 216070 ((head - tail - count) % size) == 0
+ 216140 top-bot > 0 && top-bot <= count
+ 216200 ((size+head-tail)%size)==count
+ 216242 telnet: buffer overflow, losing data, sorry
+ 216320 int ringbuf::flush()
+ 216360 int ringbuf::gets(char*, int)
+ 216520 sleep(5) from telnet, after select
+ 217000 close
+ 217012 ptrarray.h
+ 217025 ix>=0 && ix<n
+ 217043 lm_will: no command!!!
+ 217072 lm_wont: no command!!!
+ 217121 lm_do: no command!!!
+ 217146 lm_dont: no command!!!
+ 217175 remote
+ 217204 remote default
+ 217223 local
+ 217231 %c%c%c%c%c%c%c%c%c
+ 217254 ACCT
+ 217261 UNKNOWN
+ 217271 TERM
+ 217301 %c%c%c%c%s%c%c
+ 217320 %c%c%c%c%ld,%ld%c%c
+ 217344 DISPLAY
+ 217354 In SUBOPTION processing, RCVD
+ 217416 LANG
+ 217427 LOGNAME
+ 217437 POSIXLY_CORRECT
+ 217457 PRINTER
+ 217467 SSH_
+ 217474 SYSTEMTYPE
+ 217507 XAUTHORITY
+ 221100 T*& ptrarray<T>::operator[](int) const [with T = const char]
+ 221540 Special characters are %s values
+ 221610 env_opt_start: malloc()/realloc() failed!!!
+ 221670 env_opt_add: realloc() failed!!!
+ 221740 Remote side does not support STATUS option
+ 222214 Cannot open %s.
+ 222235 %c 0x%x	
+ 222246 %.2x
+ 222253 DONT
+ 222263 WILL
+ 222270 WONT
+ 222275 %s IAC %s
+ 222307 %s IAC %d
+ 222321 EXOPL
+ 222327 %s %d %d
+ 222340 %s %s 
+ 222347 resp DO_DONT %s: %d
+ 222374 resp DO_DONT %d: %d
+ 222421 want DO   %s
+ 222437 want DO   %d
+ 222455      DO   %s
+ 222473      DO   %d
+ 222511 resp WILL_WONT %s: %d
+ 222540 resp WILL_WONT %d: %d
+ 222567 want WILL %s
+ 222605 want WILL %d
+ 222623 want WONT %s
+ 222641 want WONT %d
+ 222657      WILL %s
+ 222675      WILL %d
+ 222713 want DONT %s
+ 222731 want DONT %d
+ 222747 |FLUSHOUT
+ 222761 |FLUSHIN
+ 222772 |ACK
+ 222777 |LIT_ECHO
+ 223011 |SOFT_TAB
+ 223023 |TRAPSIG
+ 223034 |EDIT
+ 223042 %s IAC SB 
+ 223055 (terminated by 
+ 223101 , not IAC SE!) 
+ 223121 (Empty suboption???)
+ 223146 TERMINAL-TYPE 
+ 223165 IS "%.*s"
+ 223177 TERMINAL-SPEED
+ 223216  (empty suboption???)
+ 223244  IS 
+ 223251 %.*s
+ 223256  SEND
+ 223264  %d (unknown)
+ 223302  ?%d?
+ 223310 TOGGLE-FLOW-CONTROL
+ 223334  OFF
+ 223345  RESTART-ANY
+ 223362  RESTART-XON
+ 223377 NAWS
+ 223404  %d %d (%d)
+ 223420 LINEMODE 
+ 223432 WILL 
+ 223440 WONT 
+ 223452 DONT 
+ 223460 (no option???)
+ 223477 Forward Mask
+ 223524  NOSUPPORT
+ 223537  CANTCHANGE
+ 223553  VARIABLE
+ 223565  DEFAULT
+ 223576  %d;
+ 223603 (no mode???)
+ 223620 %s%s%s%s%s
+ 223633  (0x%x)
+ 223643  ?0x%x?
+ 223666  %s %s
+ 223675  %s %d
+ 223704 X-DISPLAY-LOCATION 
+ 223730 ENVIRON 
+ 223741 SEND 
+ 223747 INFO 
+ 223755 " VAR 
+ 223764 " USERVAR 
+ 223777 " VALUE 
+ 224010 " ESC 
+ 224017 " %03o 
+ 224027 %s (unknown)
+ 224050 SYNCH
+ 224100 ABORT
+ 224112 SUSP
+ 224133 LNEXT
+ 224141 FORW1
+ 224147 FORW2
+ 224155 BINARY
+ 224170 SUPPRESS GO AHEAD
+ 224212 TIMING MARK
+ 224226 RCTE
+ 224233 NAOL
+ 224240 NAOP
+ 224245 NAOCRD
+ 224254 NAOHTS
+ 224263 NAOHTD
+ 224272 NAOFFD
+ 224301 NAOVTS
+ 224310 NAOVTD
+ 224317 NAOLFD
+ 224326 EXTEND ASCII
+ 224343 LOGOUT
+ 224352 BYTE MACRO
+ 224365 DATA ENTRY TERMINAL
+ 224411 SUPDUP
+ 224420 SUPDUP OUTPUT
+ 224436 SEND LOCATION
+ 224454 TERMINAL TYPE
+ 224472 END OF RECORD
+ 224510 TACACS UID
+ 224523 OUTPUT MARKING
+ 224542 TTYLOC
+ 224551 3270 REGIME
+ 224565 X.3 PAD
+ 224575 TSPEED
+ 224604 LFLOW
+ 224612 LINEMODE
+ 224623 XDISPLOC
+ 224634 OLD-ENVIRON
+ 224650 AUTHENTICATION
+ 224667 ENCRYPT
+ 224677 NEW-ENVIRON
+ 224717 DMARK
+ 224740 - unknown qualifier %d (0x%x).
+ 225500 unix:
+ 225506 %c %-20s %s
+ 225530 Cannot send '%s': Telnet ENVIRON option disabled
+ 225620 Cannot send '%s': variable not defined
+ 225700 T& array<T>::operator[](int) const [with T = enviro]
+ 225765 setsockopt (SO_DEBUG)
+ 226013 telnet: socket
+ 226032 telnet: bind
+ 226047 setsockopt (IP_OPTIONS)
+ 226077 setsockopt
+ 226112 select
+ 226130 Source route is only supported for IPv4
+ 226210 telnet: setsockopt (IP_TOS) (ignored)
+ 232207 ;*3$"
+ 261600 deprecated command -- use 'set escape' instead
+ 261700 deprecated command -- use 'toggle crmod' instead
+ 262000 try to enter line or character mode ('mode ?' for more)
+ 262100 change environment variables ('environ ?' for more)
+ 262164 suspend telnet
+ 262220 display operating parameters
+ 262300 toggle operating parameters ('toggle ?' for more)
+ 262400 unset operating parameters ('unset ?' for more)
+ 262500 set operating parameters ('set ?' for more)
+ 262600 transmit special characters ('send ?' for more)
+ 262660 print status information
+ 262711 exit telnet
+ 262740 forcibly logout remote user and close the connection
+ 263040 close current connection
+ 263100 connect to a site
+ 272340 $Id: commands.cc,v 1.34 2000/07/23 04:16:24 dholland Exp $
+ 272500 $NetKit: netkit-telnet-0.17 $
+ 272540 $Id: main.cc,v 1.14 1999/08/01 05:06:37 dholland Exp $
+ 272700 @(#) Copyright (c) 1988, 1990 Regents of the University of California.
+ 273007 All rights reserved.
+ 273040 $Id: network.cc,v 1.15 1996/08/13 08:09:58 dholland Exp $
+ 273200 $Id: ring.cc,v 1.23 2000/07/23 03:25:09 dholland Exp $
+ 273300 $Id: sys_bsd.cc,v 1.24 1999/09/28 16:29:24 dholland Exp $
+ 273440 $Id: telnet.cc,v 1.36 2000/07/23 03:24:53 dholland Exp $
+ 274300 $Id: terminal.cc,v 1.25 1999/12/12 19:48:05 dholland Exp $
+ 274400 $Id: tn3270.cc,v 1.9 1996/08/13 09:08:34 dholland Exp $
+ 274500 (standard output)
+ 276500 $Id: utilities.cc,v 1.19 1999/12/12 15:33:40 dholland Exp $
+ 276600 $Id: genget.cc,v 1.3 1996/07/26 09:54:09 dholland Exp $
+ 276710 440a48a1a094cfe99147d9a48f58e53d6072b7.debug
+ 276775 .shstrtab
+ 277007 .interp
+ 277017 .note.ABI-tag
+ 277035 .note.gnu.build-id
+ 277060 .gnu.hash
+ 277072 .dynsym
+ 277102 .dynstr
+ 277112 .gnu.version
+ 277127 .gnu.version_r
+ 277146 .rela.dyn
+ 277160 .rela.plt
+ 277172 .init
+ 277200 .text
+ 277206 .fini
+ 277214 .rodata
+ 277224 .eh_frame_hdr
+ 277242 .eh_frame
+ 277254 .init_array
+ 277270 .fini_array
+ 277304 .jcr
+ 277311 .dynamic
+ 277322 .got
+ 277327 .got.plt
+ 277340 .data
+ 277346 .bss
+ 277353 .gnu_debuglink

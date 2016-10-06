@@ -1,4 +1,5 @@
 from collections import Counter
+from itertools import izip
 import sys
 import re
 import os
@@ -8,15 +9,18 @@ import time
 outputdir = '../tokenfile'
 exception_token = ['atuh', 'auati', 'avaui', 'atui', 'auatush', \
 					'awavi', 'dh', 'awavauatush', 'hh', 'atush', \
-					'ht', 'avati', 'xdh', 'llc', 'awavauati']
+					'ht', 'avati', 'xdh', 'llc', 'awavauati', \
+					'uauh' ]
+ranklist = {}
 
 def count_token(file) :
+	global ranklist
 	words = re.findall(r'\w+', open(file).read().lower())
-	c = Counter(words).most_common(10)
-	print "======== Token Analysis of file", file, "========="
-	print c[0:5]
-	print c[5:10]
-	print
+	tempdic = dict((k,1) for k in words)
+	#c = Counter(tempdic).most_common()
+	#print c 
+	ranklist = Counter(ranklist) + Counter(tempdic)
+	print "======== Token analysis of file", file, "done.", "========="
 
 def extract_token(path, file) :
 
@@ -42,7 +46,7 @@ def extract_token(path, file) :
 		if(re.search('\w[.]\w', string_read)): # dot : path
 			continue # file zpath
 
-		result = re.findall('[a-zA-Z]{2,}', string_read)
+		"""		result = re.findall('[a-zA-Z]{2,}', string_read)
 		for extoken in exception_token :
 			for token in result :
 				if extoken == token.lower():
@@ -50,7 +54,17 @@ def extract_token(path, file) :
 
 		if result : # ignore empty string
 			#fw.write(str(result)+'\n')
-			result_first.append(result[0]) #insert first element
+			result_first.append(result[0])
+		"""
+		result = re.findall('[a-zA-Z]{2,}', string_read)
+		if result :
+			for extoken in exception_token :
+				if extoken == result[0].lower() :
+					result.remove(result[0])
+					break
+
+		if result :
+			result_first.append(result[0].lower()) #insert first element
 
 	fw.write((str(set(result_first))))
 
@@ -93,3 +107,25 @@ if __name__ == "__main__" :
 
 	print("[+] Plase check the \'tokenfile\' directory.")
 	print("--- Total %s seconds ---" % (time.time() - start_time))
+
+	print "[+] total unique tokens :", len(ranklist.most_common())
+	for k in ranklist.most_common() :
+		print k
+
+	"""
+	cnt = 0
+	printlist = []
+
+	for k in ranklist.most_common():
+		if cnt % 5 == 4 :
+			index = cnt - 4
+			print printlist[index:]
+			cnt = cnt + 1
+		else :
+			printlist.append(k)
+			cnt = cnt + 1
+	"""
+
+
+
+

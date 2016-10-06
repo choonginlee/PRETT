@@ -1,0 +1,165 @@
+   1070 /lib64/ld-linux-x86-64.so.2
+   3671 libX11.so.6
+   3705 _ITM_deregisterTMCloneTable
+   3741 __gmon_start__
+   3760 _Jv_RegisterClasses
+   4004 _ITM_registerTMCloneTable
+   4036 _init
+   4044 XSetErrorHandler
+   4065 XRemoveHost
+   4101 _fini
+   4107 XEnableAccessControl
+   4134 XListHosts
+   4147 XDisableAccessControl
+   4175 XDisplayName
+   4212 XAddHost
+   4223 XOpenDisplay
+   4240 XCloseDisplay
+   4256 libXmuu.so.1
+   4273 XmuPrintDefaultErrorMessage
+   4327 libc.so.6
+   4341 __printf_chk
+   4356 exit
+   4363 getpwuid
+   4374 inet_ntop
+   4406 getdomainname
+   4424 puts
+   4431 __stack_chk_fail
+   4452 putchar
+   4462 inet_pton
+   4474 getpwnam
+   4505 strlen
+   4514 getaddrinfo
+   4530 getnameinfo
+   4544 netname2user
+   4561 __fprintf_chk
+   4577 inet_addr
+   4611 endhostent
+   4624 memcpy
+   4633 __memmove_chk
+   4651 malloc
+   4660 stderr
+   4667 alarm
+   4675 __snprintf_chk
+   4714 sethostent
+   4727 sigaction
+   4741 strchr
+   4750 __ctype_tolower_loc
+   4774 freeaddrinfo
+   5011 user2netname
+   5026 strcmp
+   5035 __libc_start_main
+   5057 free
+   5064 _edata
+   5073 __bss_start
+   5107 _end
+   5114 GLIBC_2.3
+   5126 GLIBC_2.14
+   5141 GLIBC_2.4
+   5153 GLIBC_2.3.4
+   5167 GLIBC_2.2.5
+   7641 %z  
+   7661 %r  
+   7701 %j  
+   7721 %b  
+   7741 %Z  
+   7761 %R  
+  10001 %J  
+  10021 %B  
+  10041 %:  
+  10061 %2  
+  10101 %*  
+  10121 %"  
+  11060 AWAVAUATA
+  11266 ~[Hc
+  11313 <-tY<+tu
+  13105 UH-p1`
+  13440 AWAVAUATI
+  13510 D$x1
+  14076 t$xdH34%(
+  14132 []A\A]A^A_
+  14410 L$ 1
+  14444 |$ M
+  15511 l$(L)
+  15536 D$$H
+  15543 D$ E
+  15700 D$@E
+  17217 |$ A
+  17514 mt)f
+  17523 otRf
+  17700 ATUSH
+  20242 T$ H
+  20531 []A\
+  20605 :HcU
+  21240 AWAVA
+  21247 AUATL
+  21372 []A\A]A^A_
+  21450 being removed from access control list
+  21520 being added to access control list
+  21570 %s: malloc bombed in change_host
+  21640 %s: not compiled for Kerberos 5
+  21710 %s: unknown address family "%s"
+  21760 %s: type must be specified for server interpreted family "%s"
+  22060 non-network local connections %s
+  22130 failed to get netname for "%s"
+  22170 %s: unable to get %saddress for "%s"
+  22240 %s:  must be on local machine to add or remove hosts.
+  22330 %s:  must be on local machine to enable or disable access control.
+  22440 %s:  unable to open display "%s"
+  22510 access control enabled, only authorized clients can connect
+  22610 access control disabled, clients can connect from any host
+  22710 <unknown address in family %d>
+  22750 	(no nameserver response within %d seconds)
+  23030 inet6 
+  23037 inet 
+  23045 inet:
+  23053 inet6:
+  23062 dnet:
+  23070 %s: not compiled for DECnet
+  23125 nis:
+  23132 krb:
+  23137 local:
+  23152 no such user "%s"
+  23175 %s@ (%s) %s
+  23212 %s %s
+  23221 %s %s%s
+  23232 failed when 
+  23247 %s@ (%*.*s)
+  23263 -help
+  23271 usage: %s [[+-]hostname ...]
+  23327 INET:
+  23335 INET6:
+  23344 DNET:
+  23352 NIS:
+  23357 KRB:
+  23364 LOCAL:
+  23377 <unknown family type %d>:
+  23434 %s:  bad hostname "%s"
+  23757 ;*3$"
+  30560 51c1451871c0a78c0e2e030ca8786095c74145.debug
+  30645 .shstrtab
+  30657 .interp
+  30667 .note.ABI-tag
+  30705 .note.gnu.build-id
+  30730 .gnu.hash
+  30742 .dynsym
+  30752 .dynstr
+  30762 .gnu.version
+  30777 .gnu.version_r
+  31016 .rela.dyn
+  31030 .rela.plt
+  31042 .init
+  31050 .plt.got
+  31061 .text
+  31067 .fini
+  31075 .rodata
+  31105 .eh_frame_hdr
+  31123 .eh_frame
+  31135 .init_array
+  31151 .fini_array
+  31165 .jcr
+  31172 .dynamic
+  31203 .got.plt
+  31214 .data
+  31222 .bss
+  31227 .gnu_debuglink

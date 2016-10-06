@@ -21,5 +21,28 @@ strings -to /usr/bin/fwupdmgr > fwupdmgr.txt
 strings -to /usr/bin/git > git.txt
 strings -to /usr/bin/l2ping > l2ping.txt
 strings -to /usr/bin/l2test > l2test.txt
-
-
+strings -to /usr/bin/mtr > mtr.txt
+strings -to /usr/bin/netkit-ftp > netkit-ftp.txt
+strings -to /usr/bin/nm-applet > nm-applet.txt
+strings -to /usr/bin/nmtui > nmtui.txt
+strings -to /usr/bin/nslookup > nslookup.txt
+strings -to /usr/bin/obexctl > obexctl.txt
+strings -to /usr/bin/openssl > openssl.txt
+strings -to /usr/bin/pftp > pftp.txt
+strings -to /usr/bin/rctest > rctest.txt
+strings -to /usr/bin/rfcomm > rfcomm.txt
+strings -to /usr/bin/scp > scp.txt
+strings -to /usr/bin/sdptool > sdptool.txt
+strings -to /usr/bin/sftp > sftp.txt
+strings -to /usr/bin/ssh > ssh.txt
+strings -to /usr/bin/telnet > telnet.txt
+strings -to /usr/bin/telnet.netkit > telnet.netkit.txt
+strings -to /usr/bin/tracepath > tracepath.txt
+strings -to /usr/bin/tracepath6 > tracepath6.txt
+strings -to /usr/bin/traceroute6 > traceroute6.txt
+strings -to /usr/bin/vstp > vstp.txt
+strings -to /usr/bin/webbrowser-app > webbrowser-app.txt
+strings -to /usr/bin/wget > wget.txt
+strings -to /usr/bin/wireshark > wireshark.txt
+strings -to /usr/bin/xdg-email > xdg-email.txt
+strings -to /usr/bin/xhost > xhost.txt

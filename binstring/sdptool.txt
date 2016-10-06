@@ -1,0 +1,2764 @@
+   1070 /lib64/ld-linux-x86-64.so.2
+   1254 @dM	@
+   4731 libglib-2.0.so.0
+   4752 _ITM_deregisterTMCloneTable
+   5006 __gmon_start__
+   5025 _Jv_RegisterClasses
+   5051 _ITM_registerTMCloneTable
+   5103 _init
+   5111 g_markup_parse_context_parse
+   5146 _fini
+   5154 g_markup_parse_context_free
+   5210 g_markup_parse_context_new
+   5243 libpthread.so.0
+   5263 send
+   5270 read
+   5275 recv
+   5302 __errno_location
+   5323 connect
+   5333 close
+   5341 libc.so.6
+   5353 socket
+   5362 __printf_chk
+   5377 exit
+   5404 sprintf
+   5414 strncmp
+   5424 optind
+   5433 __strdup
+   5444 __fdelt_chk
+   5460 strncpy
+   5470 puts
+   5475 __stack_chk_fail
+   5516 putchar
+   5526 select
+   5535 realloc
+   5545 strtoll
+   5555 strtol
+   5564 calloc
+   5573 strlen
+   5602 writev
+   5611 bind
+   5616 memcmp
+   5625 __syslog_chk
+   5642 getsockopt
+   5655 poll
+   5662 stdout
+   5671 memcpy
+   5700 __vsnprintf_chk
+   5720 strtoul
+   5730 setsockopt
+   5743 malloc
+   5752 strcat
+   5761 strcasecmp
+   5774 __strndup
+   6006 __ctype_b_loc
+   6024 sscanf
+   6033 optarg
+   6042 ioctl
+   6050 __snprintf_chk
+   6067 getopt_long
+   6103 strncasecmp
+   6117 strtoull
+   6130 __memcpy_chk
+   6145 strchr
+   6154 __vfprintf_chk
+   6173 __cxa_finalize
+   6212 __sprintf_chk
+   6230 memmove
+   6240 strerror
+   6251 __libc_start_main
+   6273 snprintf
+   6304 _edata
+   6313 __bss_start
+   6327 _end
+   6334 _IO_stdin_used
+   6353 attrib_max
+   6366 service
+   6376 GLIBC_2.2.5
+   6412 GLIBC_2.3
+   6424 GLIBC_2.14
+   6437 GLIBC_2.15
+   6452 GLIBC_2.4
+   6464 GLIBC_2.3.4
+  57416 iuEL
+  57722 ]A\A]A^
+  57755 []A\A]A^H
+  60402 =1z"
+  60520 AWAVH
+  60533 AUATH
+  60546 USE1
+  60741 D$XH
+  61007 D$P@
+  61130 t$l1
+  61160 D$k%
+  61252 Hcl$PH
+  61373 t$81
+  61406 D$TH
+  61430 D$kH
+  61435 D$ H
+  61442 D$jH
+  61447 D$(H
+  61454 D$iH
+  61616 D$(M
+  61635 H9\$
+  61775 D$ I
+  62021 H9\$
+  62031 T$PH
+  62036 |$8L
+  62076 t$XH
+  62116 |$@H
+  62161 \$TM
+  62345 []A\A]A^A_
+  62506 D$0M
+  63000 AWAVH
+  63013 AUATH
+  63026 USE1
+  63057 D$X1
+  63176 t$0H
+  63203 |$ 1
+  63666 L$XdH3
+  63715 h[]A\A]A^A_
+  65071 AWAV
+  65100 AUATL
+  65305 []A\A]A^A_
+  65563 L;<$t
+  65706 D9m(
+  66604 D9m(
+  67360 AWAV
+  67371 AUAT
+  67462 L$,f
+  67504 l$0f
+  67607 l$p1
+  70054 t$*H
+  70104 l$PI
+  70172 t$,H
+  70232 t$.H
+  70723 []A\A]A^A_
+  71000 AVAU
+  71011 ATUI
+  71435 l$01
+  71662 []A\A]A^
+  71740 AVAU
+  71751 ATUI
+  72151 l$P1
+  72577 []A\A]A^
+  72660 AVAU
+  72671 ATUI
+  73071 l$P1
+  73517 []A\A]A^
+  73600 AWAV
+  73611 AUATI
+  74621 []A\A]A^A_
+  74700 AWAV
+  74711 AUATI
+  75721 []A\A]A^A_
+  76000 AWAV
+  76011 AUAT
+  76225 l$@1
+  76422 l$`1
+  77127 []A\A]A^A_
+  77200 AWAV
+  77211 AUAT
+ 100260 []A\A]A^A_
+ 100340 AWAV
+ 100351 AUAT
+ 100441 l$ H
+ 100574 l$`1
+ 101411 []A\A]A^A_
+ 101460 AWAV
+ 101471 AUAT
+ 101561 l$ L
+ 102562 []A\A]A^A_
+ 102640 AWAV
+ 102651 AUAT
+ 102741 l$ L
+ 103742 []A\A]A^A_
+ 104020 AWAV
+ 104031 AUAT
+ 104121 l$ H
+ 104254 l$`1
+ 105071 []A\A]A^A_
+ 105140 AWAV
+ 105151 AUAT
+ 105241 l$ L
+ 106146 []A\A]A^A_
+ 106220 AWAV
+ 106231 AUAT
+ 106321 l$ H
+ 106454 l$`1
+ 107271 []A\A]A^A_
+ 107340 ATUI
+ 107367 \$0H
+ 107417 D$h1
+ 110102 T$hdH3
+ 110123 p[]A\
+ 110200 AVAU
+ 110211 ATUI
+ 111013 []A\A]A^
+ 111060 AUATI
+ 111107 \$@H
+ 111114 l$ dH
+ 111132 D$x1
+ 111406 T$xdH3
+ 111433 []A\A]
+ 111500 AVAU
+ 111511 ATUI
+ 112112 5AL"
+ 112313 []A\A]A^
+ 112360 AVAU
+ 112371 ATUI
+ 113173 []A\A]A^
+ 113240 AVAU
+ 113251 ATUI
+ 114130 []A\A]A^
+ 114200 ATUI
+ 114222 \$@H
+ 114227 l$ dH
+ 114245 D$x1
+ 114510 T$xdH3
+ 114532 []A\
+ 114600 AUATI
+ 114632 \$PH
+ 115016 5]F"
+ 115214 []A\A]
+ 115300 AWAV
+ 115311 AUATI
+ 115633 l$0fD
+ 116374 []A\A]A^A_
+ 116460 AWAV
+ 116471 AUATI
+ 117013 l$0fD
+ 117401 5z|"
+ 117554 []A\A]A^A_
+ 117640 AWAV
+ 117651 AUATI
+ 120025 d$ L
+ 120475 5>z"
+ 120655 []A\A]A^A_
+ 120740 AWAV
+ 120751 AUATI
+ 121144 d$ L
+ 121501 l$`H
+ 122054 []A\A]A^A_
+ 122140 AWAV
+ 122151 AUAT
+ 122234 |$(H
+ 122275 D$?1
+ 122667 t$?H
+ 123206 |$(H
+ 123361 |$ 1
+ 123457 []A\A]A^A_
+ 123540 AWAV
+ 123551 AUAT
+ 123634 |$(H
+ 123665 D$?1
+ 124257 t$?H
+ 124537 |$(H
+ 124712 |$ 1
+ 125010 []A\A]A^A_
+ 125100 AWAV
+ 125111 AUAT
+ 125201 l$ H
+ 125346 l$`1
+ 126042 5Yo"
+ 126222 []A\A]A^A_
+ 126300 AWAV
+ 126311 AUAT
+ 126401 l$ H
+ 126546 l$`1
+ 127422 []A\A]A^A_
+ 127500 AUAT
+ 127745 l$pL
+ 130360 []A\A]
+ 130440 AWAV
+ 130451 AUAT
+ 130541 l$0H
+ 130555 D$&1
+ 130773 l$pf
+ 131143 t$&H
+ 131355 D$pH
+ 131366 D$xH
+ 131540 D$(4
+ 132012 []A\A]A^A_
+ 132100 AWAV
+ 132111 AUAT
+ 132174 |$(H
+ 132322 D$>1
+ 132704 t$>I
+ 133107 D$?H
+ 133245 |$(H
+ 133420 |$ 1
+ 133516 []A\A]A^A_
+ 133600 AVAUH
+ 133607 ATUI
+ 133726 L$"f
+ 134073 D$	%
+ 135274 T$0H
+ 135301 t$PH
+ 135330 D$@H
+ 135352 D$PH
+ 135357 D$	H
+ 135364 D$HH
+ 135450 D$ H
+ 135462 t$pH
+ 135467 |$`H
+ 135474 D$pH
+ 135501 D$"H
+ 135506 T$`H
+ 136133 []A\A]A^
+ 136200 AVAU
+ 140740 T$ H
+ 140745 t$@H
+ 140774 D$0H
+ 141005 D$$c
+ 141032 D$@H
+ 141044 D$8H
+ 141142 t$`H
+ 141147 |$PH
+ 141154 D$`H
+ 141166 T$PH
+ 141440 []A\A]A^
+ 141520 AWAV
+ 141531 AUATUSH
+ 141734 l$ H
+ 142037 l$`1
+ 142731 []A\A]A^A_
+ 143000 AWAV
+ 143011 AUATUSH
+ 143202 l$ H
+ 143305 l$`1
+ 144140 []A\A]A^A_
+ 144220 AWAV
+ 144231 AUAT
+ 144242 USE1
+ 144275 L$.dH
+ 144357 T$,L
+ 144641 t$,H
+ 144763 t$.H
+ 145064 |$0fD
+ 145072 D$2fD
+ 145100 L$4fD
+ 145106 T$6L
+ 145505 []A\A]A^A_
+ 145703 t;ATD
+ 145773 []A\
+ 146102 t,HcN
+ 146254 ]A\H
+ 146331 []A\
+ 146530 []A\
+ 146627 []A\
+ 146715 []A\
+ 147127  []A\
+ 147225 []A\
+ 147445 []A\
+ 147541 Xt,D;
+ 147740 AWAVAUATUSH
+ 150026 %e+"
+ 150405 ([]A\A]A^A_
+ 150500 AUATH
+ 151065 5FI"
+ 151172 ([]A\A]
+ 151440 AVAU
+ 151501 D$81
+ 151722 cu{H
+ 152143 L$8dH3
+ 152170 @[]A\A]A^
+ 152561 t$0H
+ 153200 AWAVAUATUSH
+ 153234 L$X1
+ 153464 D$XdH3
+ 153511 h[]A\A]A^A_
+ 153543 \$ H
+ 153561 d$0H
+ 153572 5!D"
+ 153742 |$ H
+ 154004 \$ H
+ 154143 |$ H
+ 154205 D$(H
+ 154230 D$0L
+ 154553 \$(H
+ 154614 |$(1
+ 155466 \$ H
+ 155564 5'@"
+ 155700 |$ H
+ 156016 t|ATUSH
+ 156210 []A\
+ 156260 AWAVI
+ 156267 AUATI
+ 156344 D$(1
+ 156550 L$(dH3
+ 156575 8[]A\A]A^A_
+ 157100 AVAUE1
+ 157107 ATUI
+ 157137 D$H1
+ 157274 rtq~
+ 157413 L$HdH3
+ 157440 P[]A\A]A^
+ 157564 D$@H
+ 157636 T$@H
+ 157643 t$<1
+ 157700 AWAVAUATI
+ 160002 D$\.
+ 160250 rtMH
+ 160332 []A\A]A^A_
+ 160472 |$TL
+ 160477 d$@H
+ 160504 \$<A
+ 160640 L;|$
+ 160700 AWAVI
+ 160707 AUATUSH
+ 160734 D$h1
+ 160772 \$PH
+ 160777 =|9"
+ 161434 f9D$,t
+ 161673 L$hdH3
+ 161724 x[]A\A]A^A_
+ 162240 ATUI
+ 162465 []A\
+ 162520 AVAUE1
+ 162527 ATUI
+ 162557 D$H1
+ 162716 rtw~
+ 162767 =l5"
+ 163043 L$HdH3
+ 163070 P[]A\A]A^
+ 163740 AWAVAUATI
+ 164001 t$ L
+ 164035 D$H1
+ 164463 L$HdH3
+ 164504 X[]A\A]A^A_
+ 164740 AWAVI
+ 164747 AUATUS
+ 165260 ([]A\A]A^A_
+ 165340 AUATUSH
+ 165365 D$(1
+ 165642 L$(dH3
+ 165667 8[]A\A]
+ 166152 l$ A
+ 167020 AWAVAUATUSH
+ 167260 t$PA
+ 167455 []A\A]A^A_
+ 167671 t$PA
+ 167747 t$PA
+ 170024 t$PA
+ 170156 D$PH
+ 170173 D$pH
+ 170261 L9<$u
+ 170313 t$PA
+ 170371 t$PA
+ 170447 t$PA
+ 170524 t$PA
+ 170625 D$PH
+ 170642 D$pH
+ 170731 L9<$u
+ 170756 t$PA
+ 171034 t$PA
+ 171111 t$PA
+ 171413 <"t-H
+ 173160 ATUL
+ 173403 []A\
+ 174104 H(~X
+ 174400 AWAVH
+ 174413 AUATUSH
+ 174453 D$h1
+ 174632 D$hdH3
+ 174657 x[]A\A]A^A_
+ 174760 t$(H
+ 175011 t$(H
+ 175056 l$ H
+ 175144 D$0H
+ 175151 D$ H
+ 175166 D$8A
+ 175307 $6Mc
+ 175314 D9t$
+ 175325 D$ L
+ 175332 |$0H
+ 175337 \$8H
+ 175453 t$ H
+ 175462 :hu"
+ 175616 t$(H
+ 175652 t$(H
+ 175703 t$(H
+ 175734 t$(H
+ 175765 t$(H
+ 176016 t$(H
+ 176047 t$(H
+ 176100 t$(H
+ 176131 t$(H
+ 176162 t$(H
+ 176213 t$(H
+ 176244 t$(H
+ 176316 t$(H
+ 176462 D$ H
+ 177114 T$H1
+ 177215 t$(H
+ 177255 T$HH
+ 177365 $tgH
+ 177606 t$`H
+ 177635 -u A
+ 177706 T$`H
+ 177760 D4PE
+ 200040 AVAUI
+ 200234 []A\A]A^
+ 200300 ]A\A]A^
+ 200340 AUATUSH
+ 200564 ([]A\A]
+ 201123 tiUSH
+ 201320 ATUH
+ 201421 []A\
+ 201473 t$(H
+ 201500 T$0H
+ 201505 L$8L
+ 201512 D$@L
+ 201517 L$Ht7
+ 201525 )D$P
+ 201532 )L$`
+ 201537 )T$p
+ 202013 T$0H
+ 202020 L$8L
+ 202025 D$@L
+ 202032 L$Ht7
+ 202040 )D$P
+ 202045 )L$`
+ 202052 )T$p
+ 202313 T$0H
+ 202320 L$8L
+ 202325 D$@L
+ 202332 L$Ht7
+ 202340 )D$P
+ 202345 )L$`
+ 202352 )T$p
+ 202633 L$8L
+ 202640 D$@L
+ 202645 L$Ht7
+ 202653 )D$P
+ 202660 )L$`
+ 202665 )T$p
+ 203320 ATUI
+ 203452 []A\
+ 242320 AUATUSH
+ 242517 []A\A]
+ 242644 []A\
+ 242716 []A\
+ 242751 AWAVI
+ 242760 AUATUSH
+ 243241 []A\A]A^A_
+ 243331 AWAVE1
+ 243340 AUATI
+ 243601 []A\A]A^A_
+ 243714 D$h1
+ 244022 L$hdH3
+ 244114 D$h1
+ 244220 L$hdH3
+ 244640 AUATUSH
+ 245107 []A\A]
+ 245122 DOWN
+ 245542 SLAV
+ 245700 AWAV
+ 245707 AUATI
+ 246354 L;l$
+ 246533 ([]A\A]A^A_
+ 247020 AWAV
+ 247027 AUATI
+ 247055 D$$H
+ 247427 D$$H
+ 247530 L;l$
+ 247743 D$(H
+ 247751 8[]A\A]A^A_
+ 250020 AWAVAUATI
+ 250424 []A\A]A^A_
+ 251100 AUAT
+ 251312 []A\A]
+ 251372 D$h1
+ 251461 L$hdH3
+ 252040 AWAVA
+ 252047 AUATI
+ 252352 $xJA
+ 252534 []A\A]A^A_
+ 253140 ATUSH
+ 253326 []A\
+ 253460 ATUf
+ 253544 |$X1
+ 253553 T$ H
+ 253604 T$0H
+ 253641 D$HH
+ 253744 L$XdH3
+ 253765 `[]A\
+ 254000 AWAVI
+ 254007 AUATA
+ 254065 |$PL
+ 254072 D$,1
+ 254366 l$`L
+ 254436 \$0f
+ 254443 D$4f.
+ 254654 []A\A]A^A_
+ 255025 D$a<
+ 255044 to<>
+ 255060 D$cA;F
+ 255151 f;D$du
+ 255206 F Hc
+ 255232 f;D$eu
+ 255402 A9N I
+ 255420 NN A
+ 255425 N Hc
+ 255537 F Hc
+ 255632 D$X1
+ 255641 T$FH
+ 255663 T$pH
+ 255712 t$Df
+ 255717 L$JH
+ 255770 D$Lf
+ 256057 D$1f
+ 256071 \$XdH3
+ 256217 D$H1
+ 256262 t$ f
+ 256404 L$HdH3
+ 256553 D$H1
+ 256562 D$@H
+ 256747 L$HdH3
+ 257113 D$H1
+ 257122 D$@H
+ 257307 L$HdH3
+ 257505 D$81
+ 257631 L$8dH3
+ 257766 D$81
+ 260131 L$8dH3
+ 260261 T$@dH
+ 260277 D$h1
+ 260355 D$Et
+ 260373 D$GH
+ 260400 T$OM
+ 260421 D$WH
+ 260535 D$ '
+ 260605 \$hdH3
+ 260753 D$H1
+ 260762 D$@H
+ 261147 L$HdH3
+ 261306 D$81
+ 261451 L$8dH3
+ 261645 D$81
+ 261771 L$8dH3
+ 262124 D$81
+ 262305 L$8dH3
+ 262420 ATUI
+ 262451 \$0H
+ 262703 []A\
+ 263034 \$0dH
+ 263255 []A\
+ 263300 ATUD
+ 263367 \$@dH
+ 263417 D$0f
+ 263424 t$4f
+ 263431 L$8H
+ 263470 D$0f
+ 263651 []A\
+ 264024 D$81
+ 264146 D$0H
+ 264170 L$8dH3
+ 264252 D$H1
+ 264272 t$ f
+ 264277 D$ H
+ 264455 L$HdH3
+ 264612 D$X1
+ 264644 D$@H
+ 264771 T$CH
+ 265001 L$XdH3
+ 265127 D$X1
+ 265165 D$@H
+ 265336 T$EH
+ 265347 L$XdH3
+ 265512 D$H1
+ 265532 t$ f
+ 265537 D$ H
+ 265674 L$HdH3
+ 266057 D$81
+ 266133 D$0	
+ 266237 L$8dH3
+ 266370 D$x1
+ 266423 D$0H
+ 266474 D$ A
+ 266540 T$1H
+ 266550 T$9H
+ 266561 T$AH
+ 266572 T$IH
+ 266603 T$QH
+ 266614 T$YH
+ 266625 T$aH
+ 266636 T$iH
+ 266647 L$xdH3
+ 267010 D$H1
+ 267043 D$0H
+ 267114 D$ 	
+ 267154 T$1H
+ 267164 L$HdH3
+ 267334 D$X1
+ 267433 D$@H
+ 267541 T$CH
+ 267552 L$XdH3
+ 267710 D$81
+ 267743 D$0H
+ 270062 T$5f
+ 270073 L$8dH3
+ 270230 D$81
+ 270263 D$0H
+ 270365 D$1f
+ 270407 L$8dH3
+ 270571 D$0dH
+ 270607 t$81
+ 270615 L$1H
+ 270714 T$8dH3
+ 271037 D$81
+ 271155 L$8dH3
+ 271304 D$81
+ 271434 L$8dH3
+ 271500 ATUI
+ 271532 l$0H
+ 271713 D$1H
+ 272026 []A\
+ 272260 AUATA
+ 272314 l$0dH
+ 272565 []A\A]
+ 272646 D$81
+ 272654 T$6H
+ 272703 D$0A
+ 272716 t$4f
+ 273017 L$8dH3
+ 273122 D$H1
+ 273131 D$0H
+ 273146 D$1f
+ 273153 t$5f
+ 273215 L$7L
+ 273222 T$?H
+ 273301 L$HdH3
+ 273366 D$81
+ 273374 T$6H
+ 273423 D$0A
+ 273436 t$4f
+ 273537 L$8dH3
+ 273624 D$H1
+ 273644 t$ f
+ 273651 D$ H
+ 273754 L$HdH3
+ 274077 D$H1
+ 274142 t$ f
+ 274242 L$HdH3
+ 274364 D$H1
+ 274404 t$ f
+ 274411 D$ H
+ 274427 D$$	
+ 274514 L$HdH3
+ 274637 D$H1
+ 274751 D$0H
+ 274763 D$@H
+ 275017 L$HdH3
+ 275137 D$H1
+ 275203 t$ f
+ 275210 T$"D
+ 275333 L$HdH3
+ 275464 D$H1
+ 275504 t$ f
+ 275511 D$ H
+ 275636 L$HdH3
+ 276017 D$81
+ 276134 L$8dH3
+ 276264 D$81
+ 276445 L$8dH3
+ 276637 D$81
+ 276754 L$8dH3
+ 277104 D$81
+ 277265 L$8dH3
+ 277457 D$81
+ 277574 L$8dH3
+ 277724 D$81
+ 300105 L$8dH3
+ 300317 D$0H
+ 300425 D$1H
+ 300436 t$2H
+ 300452 D$2H
+ 300724 L$A@
+ 300731 t$@L
+ 300747 |$IH
+ 300760 D$AI
+ 301377 D$81
+ 301514 L$8dH3
+ 301644 D$81
+ 302025 L$8dH3
+ 302176 D$X1
+ 302231 D$0H
+ 302302 D$ !
+ 302333 D$1H
+ 302340 T$9H
+ 302355 D$AH
+ 302362 T$IH
+ 302400 L$XdH3
+ 302557 D$81
+ 302674 L$8dH3
+ 303044 D$81
+ 303225 L$8dH3
+ 303363 D$H1
+ 303437 t$ f
+ 303444 T$"D
+ 303561 L$HdH3
+ 303712 D$H1
+ 303744 D$ H
+ 303756 t$ H
+ 304005 D$(H
+ 304103 L$HdH3
+ 304245 D$H1
+ 304350 D$"H
+ 304430 L$HdH3
+ 304572 D$H1
+ 304624 D$ H
+ 304636 t$ H
+ 304665 D$(H
+ 304763 L$HdH3
+ 305125 D$H1
+ 305230 D$"H
+ 305310 L$HdH3
+ 305444 D$X1
+ 305573 D$@H
+ 305641 L$XdH3
+ 305772 D$H1
+ 306024 D$ H
+ 306036 t$ H
+ 306065 D$(H
+ 306162 L$HdH3
+ 306332 D$H1
+ 306364 D$ H
+ 306376 t$ H
+ 306425 D$(H
+ 306522 L$HdH3
+ 306674 D$X1
+ 306773 D$@H
+ 307066 D$DH
+ 307076 D$Lf
+ 307111 L$XdH3
+ 307247 D$H1
+ 307323 t$ f
+ 307330 T$"D
+ 307403 D$@	
+ 307455 L$HdH3
+ 307605 D$H1
+ 307655 D$(H
+ 307775 L$HdH3
+ 310117 D$H1
+ 310162 T$`@
+ 310174 t$ H
+ 310201 D$(H
+ 310335 L$HdH3
+ 310464 D$81
+ 310645 L$8dH3
+ 311015 T$`f
+ 311104 L$dH
+ 311116 D$eD
+ 311123 L$ff
+ 311327 D$@H
+ 311411 D$Af
+ 311571 T$`H
+ 311576 t$ dH
+ 311614 D$H1
+ 311722 D$ fD
+ 311730 L$"H
+ 311766 D$@	
+ 312020 L$HdH3
+ 312152 D$X1
+ 312204 D$@H
+ 312331 T$CH
+ 312341 L$XdH3
+ 312511 ATUA
+ 313422 tYAUATA
+ 313531 []A\A]
+ 313546 []A\A]
+ 314041 []A\
+ 314431 ARASAPL
+ 315140 AWAVI
+ 315147 AUATI
+ 315222 D$81
+ 315325 "wHL
+ 315523 <?whH
+ 315701 \$8dH3
+ 315732 H[]A\A]A^A_
+ 316173 L$ I
+ 316256 L$ I
+ 316403 ATUStCI
+ 316507 []A\
+ 317000 ATUH
+ 317166 5t?D)
+ 317174 []A\
+ 317301 []A\
+ 317701 D$81
+ 317774 T$8dH3
+ 320360 AUATI
+ 320470 []A\A]
+ 320524 []A\A]
+ 320767 t H;w
+ 321240 AWAVI
+ 321247 AUAT
+ 321424 []A\A]A^A_
+ 321460 AVATI
+ 321602 []A\A^
+ 321663 tgAUATI
+ 322026 []A\A]
+ 322067 []A\A]
+ 322123 t.ATI
+ 322177 []A\
+ 322220 AUATI
+ 322601 []A\A]
+ 323233 5x7!
+ 323360 AVAUI
+ 323367 ATUSH
+ 323631 \$ I
+ 323651 ;	u[H
+ 323702 	uCA
+ 323707 <$	u<
+ 323735 566!
+ 323767 ]A\A]A^
+ 324012 5	6!
+ 324056 []A\A]A^
+ 324103 ]A\A]A^
+ 324140 AVAUATUI
+ 324646 ]A\A]A^
+ 324672 5Y4!
+ 324737 []A\A]A^
+ 324763 ]A\A]A^
+ 325121 ;	u&H
+ 325560 []A\
+ 326500 AVAUD
+ 326510 ATUI
+ 326663 []A\A]A^
+ 326722 []A\A]A^
+ 326762 []A\A]A^
+ 327023 []A\A]A^
+ 327061 []A\A]A^
+ 327162 D$(M
+ 327167 d$ M
+ 327205 []A\A]A^
+ 330122 AVAUATUS
+ 330230 E L9
+ 330300 ]A\A]A^
+ 330351 ]A\A]A^
+ 330400 AVAUATUI
+ 331036 []A\A]A^
+ 331140 AVAUATUI
+ 331175 D$(1
+ 331656 t$(dH34%(
+ 331677 0[]A\A]A^
+ 332236 []A\
+ 332260 []A\
+ 332300 ATUI
+ 332377 []A\
+ 332420 AWAVAUATUSH
+ 332612 []A\A]A^A_
+ 332654 []A\A]A^A_
+ 332700 ATUS
+ 332757 []A\
+ 333072 D$ I
+ 334340 ATUSH
+ 334433 []A\
+ 334620 ATUI
+ 335002 dH3<%(
+ 335024  []A\
+ 335533 =`^!
+ 336040 AUATI
+ 336227 t'<	u
+ 336251 []A\A]
+ 336343 tqAUATI
+ 336462 []A\A]
+ 336517 []A\A]
+ 336540 ATUH
+ 336677 <5t7[]A\
+ 336742 []A\
+ 337002 []A\
+ 337105 []A\
+ 337140 ATUI
+ 337354  []A\
+ 337400 ATUI
+ 337576 []A\
+ 340000 ATUI
+ 340160 AWAVAUATUSH
+ 340211 D$(1
+ 340355 L$ H
+ 340422 T$ Lc
+ 340452 D$$E1
+ 340502 E HcL$$I
+ 340524 D;t$ 
+ 340771 |$(dH3<%(
+ 341016 8[]A\A]A^A_
+ 341553 %tRH
+ 342520 AWAVI
+ 342527 AUATUSH
+ 342576 D$81
+ 342612 T$/H
+ 342640 T$0Lc
+ 342746 l$4H
+ 342766 $HcT$
+ 343023 T$09
+ 343136 L$4H
+ 343300 L$8dH3
+ 343326 H[]A\A]A^A_
+ 343440 AWAVI
+ 343447 AUATUSH
+ 344014 D$ A
+ 344025 D$(L
+ 344041 []A\A]A^A_
+ 344100 AWAVAUATI
+ 344312 D$0H
+ 344324 \$ L
+ 344340 d$,M
+ 344644 d$,L
+ 344651 |$ L
+ 344757 []A\A]A^A_
+ 345130 UStEH
+ 345260 ATU1
+ 346140 AWAVAUATI
+ 346174 D$h1
+ 346230 D$?	
+ 346401 D$=L
+ 346423 D$>H
+ 346430 D$ H
+ 346435 D$<H
+ 346442 D$(H
+ 346447 D$?H
+ 346542 L$hdH3
+ 346567 x[]A\A]A^A_
+ 346612 D$(H
+ 346617 D$@I
+ 346630 D$PH
+ 346642 t$PH
+ 346661 D$HI
+ 347013 D$@I
+ 347042 D$ H
+ 347047 D$@I
+ 347223 t-USH
+ 347320 AWAVAUATUSH
+ 350134 ([]A\A]A^A_
+ 350200 ATUA
+ 350301 []A\
+ 350743 tKATUSH
+ 351044 []A\
+ 351100 AWAVAUATUSH
+ 351426 t$\H
+ 351433 t$@H
+ 351456 |$PL
+ 351611 D$RA
+ 351621 D$TA
+ 351640 D$XA
+ 352157 t$PA
+ 352172 /var/runA
+ 352223 D$PH
+ 352240 /sdp
+ 352326 []A\A]A^A_
+ 352366 D$TA
+ 352452 L$ A
+ 352541 |$ L
+ 352654 T$"f
+ 353100 AWAVAUATUSH
+ 353131 D$(1
+ 353310 L$(dH3
+ 353335 8[]A\A]A^A_
+ 354200 AWAVA
+ 354207 AUATI
+ 354245 D$(1
+ 354443 L$(dH3
+ 354466 8[]A\A]A^A_
+ 354760 AUATUSH
+ 355210 []A\A]
+ 356060 AVAUATUSH
+ 356111 D$(1
+ 356257 L$(dH3
+ 356304 0[]A\A]A^
+ 356532 t<<x
+ 357160 AWAVAUATUSH
+ 357234 D$H1
+ 357430 D$(H
+ 357461 D$4H
+ 357466 D$DH
+ 357473 D$8f
+ 357501 t$4H
+ 357524 L$0L
+ 360147 T$DH
+ 360236 L$HdH3
+ 360267 X[]A\A]A^A_
+ 360600 AWAVAUATUSH
+ 360631 D$h1
+ 361135 D$4H
+ 361142 D$HE1
+ 361152 t$(H
+ 361210 L$ H
+ 361262 \$\H
+ 361303 L$ L
+ 361312 \$XM
+ 361332 t$4H
+ 361337 |$(L
+ 361360 t$0L
+ 361735 L$hdH3
+ 361762 x[]A\A]A^A_
+ 362174 D$XH
+ 362271 AWAVAUATUSH
+ 362554 V(Hc
+ 362657 []A\A]A^A_
+ 363151 AWAVAUATUSH
+ 363560 []A\A]A^A_
+ 364111 AWAVAUATUSH
+ 364375 S(Lc
+ 364555 []A\A]A^A_
+ 365100 AWAVAUATUSH
+ 365241 fA9V
+ 365323 E E1
+ 365433 ([]A\A]A^A_
+ 367400 AWAVAUATUSH
+ 367434 D$x1
+ 367665 \$xdH3
+ 367716 []A\A]A^A_
+ 370002 D$XL
+ 370130 l$8L
+ 370153 D$ B
+ 370171 D$(H
+ 370176 D$@H
+ 370220 D$,H
+ 370225 D$TH
+ 370321 D$`D
+ 370326 d$lH
+ 370350 d$hL
+ 370374 t$8L
+ 370410 t$,H
+ 370415 |$ L
+ 370441 t$(L
+ 370446 D$0L
+ 370613 d$HH
+ 370623 L$LH9
+ 371171 T$HL
+ 371221 D$hH
+ 371226 L$XH
+ 371241 DD$LI
+ 371331 t$\1
+ 371343 t$ H
+ 371360 |$LH
+ 371377 t$HH
+ 371645 t$ H
+ 371676 D$@M
+ 371721 t$ H
+ 371760 AWAVAUATUSH
+ 372047 \$$H
+ 372726 T$$H
+ 372757 |$(H
+ 373031 []A\A]A^A_
+ 373165 8[]A\A]A^A_
+ 373300 AWAVI
+ 373307 AUAT
+ 373753 []A\A]A^A_
+ 374012 []A\A]A^A_
+ 374340 AWAVA
+ 374347 AUATL
+ 374472 []A\A]A^A_
+ 374546 Service get request failed.
+ 374606 Memory allocation failed
+ 374637 Search for a service
+ 374664 browse
+ 374673 5.37
+ 374700 sdptool - SDP tool v%s
+ 374730 Commands:
+ 374742 	%-4s		%s
+ 374756 Services:
+ 374776 True
+ 375003 False
+ 375015 Bool %s
+ 375026 UINT8 0x%02x
+ 375044 UINT16 0x%04x
+ 375063 UINT32 0x%08x
+ 375102 UINT64 0x%016jx
+ 375123 UINT128 ...
+ 375137 INT8 %d
+ 375150 INT16 %d
+ 375162 INT32 %d
+ 375174 INT64 %jd
+ 375207 UUID16 0x%04x - %s
+ 375233 UUID32 0x%08x - %s
+ 375257 UUID128 
+ 375270 UUID type 0x%02x
+ 375312  %02x
+ 375320 URL %s
+ 375330 Sequence
+ 375341 Alternate
+ 375353 Unknown type 0x%02x
+ 375400 UUID16 0x%04x
+ 375417 UUID32 0x%08x
+ 375436 String 
+ 375446 BlueZ
+ 375454 Generic Attribute Profile
+ 375506 http://www.bluez.org/
+ 375534 Apple Computer Ltd.
+ 375560 Bluetooth acceptor
+ 375603 AppleAgent
+ 375616 UDI TE
+ 375625 UDI TE service registered
+ 375657 UDI UE
+ 375666 UDI UE service registered
+ 375720 Audio Sink
+ 375733 Audio sink service registered
+ 375771 Audio Source
+ 376006 PAN User
+ 376017 PANU service registered
+ 376047 Group Network Service
+ 376075 GN service registered
+ 376123 Headset
+ 376133 Headset service registered
+ 376166 Direct Printing
+ 376206 OBEX File Transfer
+ 376235 Fax service registered
+ 376264 LAN Access over PPP
+ 376310 LAN Access service registered
+ 376346 Dial-Up Networking
+ 376371 Macmini
+ 376401 PowerMac10,1
+ 376416 1.6.6f22
+ 376427 Apple Macintosh Attributes
+ 376462 Nokia PC Suite
+ 376501 PalmOS HotSync
+ 376520 Microsoft ActiveSync
+ 376545 SyncML Client
+ 376563 TOSHIBA SR-1
+ 376600 AVRCP TG
+ 376611 AVRCP CT
+ 376622 Cordless Telephony
+ 376645 CTP service registered
+ 376674 Common ISDN Access
+ 376717 CIP service registered
+ 376746 OBEX Message Access Server
+ 377001 MAP service registered
+ 377030 OBEX Phonebook Access Server
+ 377065 PBAP service registered
+ 377115 SIM Access
+ 377130 SIM Access service registered
+ 377166 Handsfree
+ 377200 Handsfree service registered
+ 377235 SEMC HLA
+ 377246 SEMC HLA service registered
+ 377302 COM Port
+ 377313 Serial Port
+ 377327 OBEX Object Push
+ 377350 Nintendo RVL-CNT-01
+ 377374 Nintendo
+ 377405 Wii-Mote service registered
+ 377441 HID Keyboard
+ 377456 Voice Gateway
+ 377474 Headset AG service registered
+ 377532 Network Access Point Service
+ 377567 NAP service registered
+ 377616 local
+ 377624 %.*sBroken dataseq link
+ 377655 %.*sNil
+ 377666 %.*s%s (Integer) : 0x%x
+ 377717 %.*sInteger : 0x%x
+ 377743 %.*sUUID16 : 0x%.4x - %s
+ 377775 %.*sUUID16 : 0x%.4x
+ 400022 %.*sUUID32 : 0x%.8x - %s
+ 400054 %.*sData :
+ 400067 %.*sText : "%s"
+ 400110 %.*sURL : %s
+ 400126 %.*sData Sequence
+ 400151 %.*sData Sequence Alternates
+ 400207 %.*sUUID32 : 0x%.8x
+ 400234 Attribute Identifier : 0x%x
+ 400271 Usage:
+ 400300 	del record_handle
+ 400323 No local SDP server!
+ 400350 Service Record not found.
+ 400402 Service Record deleted.
+ 400432 Unknown service name: %s
+ 400464 Service RecHandle: 0x%x
+ 400515 Service Class ID List:
+ 400544   "%s" (0x%s)
+ 400563   UUID 128: %s
+ 400603 Protocol Descriptor List:
+ 400635     Channel: %d
+ 400656     uint8: 0x%02x
+ 400701     PSM: %d
+ 400716     Version: 0x%04x
+ 400743     uint16: 0x%04x
+ 400767     SEQ16:
+ 401006     SEQ8:
+ 401020     FIXME: dtd=0%x
+ 401044 Language Base Attr List:
+ 401075   code_ISO639: 0x%02x
+ 401124   encoding:    0x%02x
+ 401153   base_offset: 0x%02x
+ 401202 Profile Descriptor List:
+ 401233 	Attribute 0x%04x - %s
+ 401263 	Attribute 0x%04x
+ 401306 Searching for %s on %s ...
+ 401342 Browsing %s ...
+ 401363 Service Search failed: %s
+ 401416 Inquiring ...
+ 401434 Inquiry failed
+ 401456 Class 0x%X
+ 401472 Unknown service %s
+ 401521 Invalid uuid %s
+ 401546 +i:h
+ 401553 help
+ 401560 device
+ 401567 Browse all available services
+ 401625 Request all records
+ 401655 Add local service
+ 401703 Delete local service
+ 401730 Get local service
+ 401752 setattr
+ 401762 setseq
+ 401771 bdaddr
+ 402000 tree
+ 402015 uuid
+ 402022 l2cap
+ 402034 channel
+ 402044 network
+ 402074 OPUSH
+ 402102 PRINT
+ 402113 HSAG
+ 402123 HFAG
+ 402134 PBAP
+ 402154 PANU
+ 402161 HCRP
+ 402172 KEYB
+ 402177 WIIMOTE
+ 402213 A2SRC
+ 402221 A2SNK
+ 402227 AVRCT
+ 402235 AVRTG
+ 402243 UDIUE
+ 402251 UDITE
+ 402257 SEMCHLA
+ 402273 SYNCMLSERV
+ 402306 ACTIVESYNC
+ 402321 HOTSYNC
+ 402331 PALMOS
+ 402340 NOKID
+ 402346 PCSUITE
+ 402356 NFTP
+ 402363 NSYNCML
+ 402373 NGAGE
+ 402401 APPLE
+ 402413 ISYNC
+ 402421 GATT
+ 402432 RFCOMM
+ 402445 TCS-BIN
+ 402455 TCS-AT
+ 402464 OBEX
+ 402471 HTTP
+ 402502 BNEP
+ 402507 UPnP/ESDP
+ 402521 HIDP
+ 402526 HardcopyControlChannel
+ 402555 HardcopyDataChannel
+ 402601 HardcopyNotification
+ 402626 AVCTP
+ 402634 AVDTP
+ 402642 CMTP
+ 402647 UDI_C-Plane
+ 402663 PublicBrowseGroup
+ 402705 SerialPort
+ 402720 LANAccessUsingPPP
+ 402742 DialupNetworking (DUN)
+ 402771 IrMCSync
+ 403002 OBEXObjectPush
+ 403021 OBEXFileTransfer
+ 403042 IrMCSyncCommand
+ 403062 CordlessTelephony
+ 403104 AudioSource
+ 403120 AudioSink
+ 403132 RemoteControlTarget
+ 403156 AdvancedAudio
+ 403174 RemoteControl
+ 403212 RemoteControlController
+ 403242 Intercom
+ 403253 HeadsetAudioGateway
+ 403303 WAP Client
+ 403316 PANU (PAN/BNEP)
+ 403336 NAP (PAN/BNEP)
+ 403355 GN (PAN/BNEP)
+ 403373 DirectPrinting (BPP)
+ 403420 ReferencePrinting (BPP)
+ 403450 Imaging (BIP)
+ 403466 ImagingResponder (BIP)
+ 403515 ImagingAutomaticArchive (BIP)
+ 403553 HandsfreeAudioGateway
+ 403601 ReflectedUI (BPP)
+ 403623 BasicPrinting (BPP)
+ 403647 PrintingStatus (BPP)
+ 403674 HCR_Print (HCR)
+ 403714 HCR_Scan (HCR)
+ 403733 Common ISDN Access (CIP)
+ 403764 UDI-MT
+ 403773 UDI-TA
+ 404002 Audio/Video
+ 404016 SIM Access (SAP)
+ 404037 Phonebook Access (PBAP) - PCE
+ 404075 Phonebook Access (PBAP) - PSE
+ 404133 Phonebook Access (PBAP)
+ 404163 Headset (HSP)
+ 404201 Message Access (MAP) - MAS
+ 404234 Message Access (MAP) - MNS
+ 404267 Message Access (MAP)
+ 404314 PnPInformation
+ 404333 GenericNetworking
+ 404355 GenericFileTransfer
+ 404401 GenericAudio
+ 404416 GenericTelephony
+ 404437 VideoSource
+ 404453 VideoSink
+ 404465 VideoDistribution
+ 404513 HDPSource
+ 404525 HDPSink
+ 404535 MapSupportedFeatures
+ 404562 MASInstanceID
+ 404600 SupportedMessageTypes
+ 404626 SupportedRepositories
+ 404654 PbapSupportedFeatures
+ 404702 GoepL2capPsm
+ 404717 SupportedDataStoresList
+ 404747 Remote audio volume control
+ 405003 IpSubnet
+ 405014 SecurityDescription
+ 405040 NetAccessType
+ 405056 MaxNetAccessrate
+ 405077 IPv4Subnet
+ 405112 IPv6Subnet
+ 405125 DeviceReleaseNum
+ 405146 ParserVersion
+ 405164 DeviceSubclass
+ 405203 CountryCode
+ 405217 VirtualCable
+ 405234 ReconnectInitiate
+ 405256 LangIDBaseList
+ 405275 SDPDisable
+ 405310 BatteryPower
+ 405325 RemoteWakeup
+ 405342 ProfileVersion
+ 405361 SupervisionTimeout
+ 405404 NormallyConnectable
+ 405430 BootDevice
+ 405443 SpecificationID
+ 405463 VendorID
+ 405474 ProductID
+ 405506 PrimaryRecord
+ 405524 VendorIDSource
+ 405543 GroupID
+ 405553 VersionNumberList
+ 405575 ServiceDatabaseState
+ 405622 ServiceRecordHandle
+ 405646 ServiceClassIDList
+ 405671 ServiceRecordState
+ 405714 ServiceID
+ 405726 ProtocolDescriptorList
+ 405755 BrowseGroupList
+ 405775 LanguageBaseAttributeIDList
+ 406031 ServiceInfoTimeToLive
+ 406057 ServiceAvailability
+ 406103 DocumentationURL
+ 406124 ClientExecutableURL
+ 406150 IconURL
+ 406160 Code ISO639
+ 406174 Encoding
+ 406205 Base Offset
+ 406221 Protocol
+ 406232 Channel/Port
+ 406250 Usage:
+ 406257 	get record_handle attrib_id attrib_values
+ 406340 Adding uuid16 0x%X to record 0x%X
+ 406410 Adding int 0x%X to record 0x%X
+ 406450 Adding string "%s" to record 0x%X
+ 406520 Service Record update failed (%d).
+ 406570 Failed to create pSequenceHolder
+ 406640 Usage:
+ 406647 	get record_handle attrib_id attrib_value
+ 406730 Adding attrib 0x%X uuid16 0x%X to record 0x%X
+ 407010 Adding attrib 0x%X int 0x%X to record 0x%X
+ 407070 Adding attrib 0x%X string "%s" to record 0x%X
+ 407150 Usage:
+ 407157 	sdptool [options] <command> [command parameters]
+ 407250 Options:
+ 407261 	-h		Display help
+ 407303 	-i		Specify source interface
+ 407350 Service Record registration failed
+ 407420 Generic Attribute Profile Service registered
+ 407500 Apple iSync service registered
+ 407540 Audio source service registered
+ 407600 Direct Printing service registered
+ 407650 OBEX File Transfer service registered
+ 407720 Dial-Up Networking service registered
+ 407770 Apple attribute service registered
+ 410040 Nokia PC Suite service registered
+ 410110 PalmOS service record registered
+ 410160 HotSync service record registered
+ 410230 ActiveSync service record registered
+ 410300 SyncML Client service record registered
+ 410350 Toshiba Speech Recognition SR-1 service record registered
+ 410450 Nokia ID service record registered
+ 410520 Remote target service registered
+ 410570 Remote control service registered
+ 410640 Serial Port service registered
+ 410700 OBEX Object Push service registered
+ 410750 HID keyboard service registered
+ 411010 Handsfree AG service registered
+ 411050                                          
+ 411130 %.*sUUID128 : 0x%.8x-%.4x-%.4x-%.4x-%.8x-%.4x
+ 411210 %.*sEnum type of UUID not set
+ 411250 Attribute Identifier : 0x%x - %s
+ 411320 Record handle was not specified.
+ 411370 Failed to unregister service record: %s
+ 411450 Usage:
+ 411457 	add [--handle=RECORD_HANDLE --channel=CHANNEL] service
+ 411550 Failed to connect to SDP server on %s: %s
+ 411630 Usage:
+ 411637 	get [--tree] [--raw] [--xml] [--bdaddr bdaddr] record_handle
+ 411740 Usage:
+ 411747 	records [--tree] [--raw] [--xml] bdaddr
+ 412020 Usage:
+ 412027 	search [--bdaddr bdaddr] [--tree] [--raw] [--xml] SERVICE
+ 412122 SERVICE is a name (string) or UUID (0x1002)
+ 412200 Usage:
+ 412207 	browse [--tree] [--raw] [--xml] [--uuid uuid] [--l2cap] [bdaddr]
+ 412320 Set/Add attribute to a SDP record
+ 412370 Set/Add attribute sequence to a SDP record
+ 412450 ServiceDiscoveryServerServiceClassID
+ 412520 BrowseGroupDescriptorServiceClassID
+ 412570 ImagingReferencedObjects (BIP)
+ 412630 DirectPrintingReferenceObjectsService (BPP)
+ 412710 HumanInterfaceDeviceService (HID)
+ 412760 HardcopyCableReplacement (HCR)
+ 413020 BluetoothProfileDescriptorList
+ 413060 AdditionalProtocolDescriptorLists
+ 415664 true
+ 415671 false
+ 415677 <nil/>
+ 415707 <boolean value="
+ 415730 " />
+ 415736 <uint8 value="
+ 415755 0x%02x
+ 415764 <uint16 value="
+ 416004 0x%04x
+ 416013 <uint32 value="
+ 416033 0x%08x
+ 416042 <uint64 value="
+ 416062 0x%016jx
+ 416073 <uint128 value="
+ 416114 <int8 value="
+ 416135 <int16 value="
+ 416154 <int32 value="
+ 416173 <int64 value="
+ 416216 <int128 value="
+ 416236 <uuid value="
+ 416254 <url value="
+ 416271 <sequence>
+ 416305 </sequence>
+ 416322 <alternate>
+ 416337 </alternate>
+ 416355 <text 
+ 416364 encoding="hex" 
+ 416404 	<attribute id="0x%04x">
+ 416436 	</attribute>
+ 416455 record
+ 416464 attribute
+ 416476 sequence
+ 416507 alternate
+ 416521 value
+ 416527 encoding
+ 416540 name
+ 416545 boolean
+ 416555 uint8
+ 416563 uint16
+ 416572 uint32
+ 416601 uint64
+ 416610 uint128
+ 416620 text
+ 416625 <record>
+ 416637 </record>
+ 417520 %02x%02x%02x%02x-%02x%02x-%02x%02x-%02x%02x-%02x%02x%02x%02x%02x%02x
+ 417630 <?xml version="1.0" encoding="UTF-8" ?>
+ 417710 %2.2X:%2.2X:%2.2X:%2.2X:%2.2X:%2.2X
+ 417760 Ceva, Inc. (formerly Parthus Technologies, Inc.)
+ 420050 Mitsubishi Electric Corporation
+ 420110 NXP Semiconductors (formerly Philips Semiconductors)
+ 420200 Macronix International Co. Ltd.
+ 420240 Computer Access Technology Corporation (CATC)
+ 420320 Renesas Electronics Corporation
+ 420360 Integrated System Solution Corp.
+ 420430 Matsushita Electric Industrial Co., Ltd.
+ 420510 BlackBerry Limited (formerly Research In Motion)
+ 420600 Integrated Silicon Solution Taiwan, Inc.
+ 420660 CONWISE Technology Corporation Ltd
+ 420730 Continental Automotive Systems
+ 420770 Sony Ericsson Mobile Communications
+ 421040 Harman International Industries, Inc.
+ 421110 Realtek Semiconductor Corporation
+ 421160 Beautiful Enterprise Co., Ltd.
+ 421220 Summit Data Communications, Inc.
+ 421270 ShangHai Super Smart Electronics Co. Ltd.
+ 421350 Sports Tracking Technologies Ltd.
+ 421420 DeLorme Publishing Company, Inc.
+ 421470 Topcorn Positioning Systems, LLC
+ 421540 Gimbal Inc. (formerly Qualcomm Labs, Inc. and Qualcomm Retail Solutions, Inc.)
+ 421660 Advanced PANMOBIL Systems GmbH & Co. KG
+ 421730 i.Tech Dynamic Global Distribution Ltd.
+ 422000 Jiangsu Toppower Automotive Electronics Co., Ltd.
+ 422070 Kensington Computer Products Group
+ 422140 Ingenieur-Systemgruppe Zahn GmbH
+ 422210 Clarinox Technologies Pty. Ltd.
+ 422250 Qualcomm Innovation Center, Inc. (QuIC)
+ 422320 AMICCOM Electronics Corporation
+ 422360 Shenzhen Excelsecu Data Technology Co.,Ltd
+ 422440 Taixingbang Technology (HK) Co,. LTD.
+ 422510 Qualcomm Connected Experiences, Inc.
+ 422560 Eden Software Consultants Ltd.
+ 422620 Aether Things Inc. (formerly Morse Project Inc.)
+ 422710 PLUS Locations Systems Pty Ltd
+ 422750 Ubiquitous Computing Technology Corporation
+ 423030 HiSilicon Technologies Co., Ltd.
+ 423100 Openbrain Technologies, Co., Ltd.
+ 423150 Changzhou Yongse Infotech Co., Ltd
+ 423220 Cypress Semiconductor Corporation
+ 423270 Seed Labs, Inc. (formerly ETC sp. z.o.o.)
+ 423350 Alpine Electronics (China) Co., Ltd
+ 423420 Huizhou Desay SV Automotive CO., LTD.
+ 423470 Anhui Huami Information Technology Co., Ltd.
+ 423550 Qingdao Yeelink Information Technology Co., Ltd.
+ 423640 Milwaukee Tool (formerly Milwaukee Electric Tools)
+ 423730 Connovate Technology Private Limited
+ 424000 Gecko Health Innovations, Inc.
+ 424040 TRON Forum (formerly T-Engine Forum)
+ 424110 Cochlear Bone Anchored Solutions AB
+ 424160 Hong Kong HunterSun Electronic Limited
+ 424230 Chengdu Synwing Technology Ltd
+ 424270 Koninklijke Philips Electronics N.V.
+ 424340 Minelab Electronics Pty Limited
+ 424400 Advanced Application Design, Inc.
+ 424450 Spreadtrum Communications Shanghai Ltd
+ 424520 Zebra Technologies Corporation
+ 424560 Anyka (Guangzhou) Microelectronics Technology Co, LTD
+ 424650 Kontakt Micro-Location Sp. z o.o.
+ 424720 Verifone Systems PTe Ltd. Taiwan Branch
+ 424770 Huami (Shanghai) Culture Communication CO., LTD
+ 425050 Shenzhen SuLong Communication Ltd
+ 425120 FengFan (BeiJing) Technology Co, Ltd
+ 425170 Beijing CarePulse Electronic Technology Co, Ltd
+ 425250 University of Applied Sciences Valais/Haute Ecole Valaisanne
+ 425350 Five Interactive, LLC dba Zendo
+ 425410 NetEase (Hangzhou) Network co.Ltd.
+ 425460 DEKA Research & Development Corp.
+ 425530 E.G.O. Elektro-Ger
+ 425554 tebau GmbH
+ 425570 steute Schaltgerate GmbH & Co. KG
+ 425640 HUAWEI Technologies Co., Ltd. ( 
+ 425740 Tendyron Corporation ( 
+ 426040 HANSHIN ELECTRIC RAILWAY CO.,LTD.
+ 426110 Techtronic Power Tools Technology Limited
+ 426170 Lenovo (Singapore) Pte Ltd. ( 
+ 426260 VASCO Data Security International, Inc.
+ 426330 Teva Branded Pharmaceutical Products R&D, Inc.
+ 426410 Flint Rehabilitation Devices, LLC
+ 426460 Espressif Incorporated ( 
+ 426562 %2.2X-%2.2X-%2.2X
+ 426604 Ericsson Technology Licensing
+ 426642 Nokia Mobile Phones
+ 426666 Intel Corp.
+ 426702 IBM Corp.
+ 426714 Toshiba Corp.
+ 426732 3Com
+ 426737 Microsoft
+ 426751 Lucent
+ 426760 Motorola
+ 426771 Infineon Technologies AG
+ 427022 Cambridge Silicon Radio
+ 427052 Silicon Wave
+ 427067 Digianswer A/S
+ 427106 Texas Instruments Inc.
+ 427135 Broadcom Corporation
+ 427162 Mitel Semiconductor
+ 427206 Widcomm, Inc
+ 427223 Zeevo, Inc.
+ 427237 Atmel Corporation
+ 427261 RTX Telecom A/S
+ 427301 KC Technology Inc.
+ 427324 NewLogic
+ 427335 Transilica, Inc.
+ 427356 Rohde & Schwarz GmbH & Co. KG
+ 427414 TTPCom Limited
+ 427433 Signia Technologies, Inc.
+ 427465 Conexant Systems Inc.
+ 427513 Qualcomm
+ 427524 Inventel
+ 427535 AVM Berlin
+ 427550 BandSpeed, Inc.
+ 427570 Mansella Ltd
+ 427605 NEC Corporation
+ 427625 WavePlus Technology Co., Ltd.
+ 427663 Alcatel
+ 427673 C Technologies
+ 427712 Open Interface
+ 427731 R F Micro Devices
+ 427753 Hitachi Ltd
+ 427767 Symbol Technologies, Inc.
+ 430021 Tenovis
+ 430031 GCT Semiconductor
+ 430053 Norwood Systems
+ 430073 MewTel Technology Inc.
+ 430122 ST Microelectronics
+ 430146 Synopsis
+ 430157 Red-M (Communications) Ltd
+ 430212 Commil Ltd
+ 430225 Eclipse (HQ Espana) S.L.
+ 430256 Mobilian Corporation
+ 430303 Terax
+ 430311 Gennum Corporation
+ 430334 IPextreme, Inc.
+ 430354 Systems and Chips, Inc.
+ 430404 Bluetooth SIG, Inc.
+ 430430 Seiko Epson Corporation
+ 430460 PARROT SA
+ 430472 Socket Mobile
+ 430510 Atheros Communications, Inc.
+ 430545 MediaTek, Inc.
+ 430564 Bluegiga
+ 430575 Marvell Technology Group Ltd.
+ 430633 3DSP Corporation
+ 430654 Accel Semiconductor Ltd.
+ 430705 Apple, Inc.
+ 430721 Staccato Communications, Inc.
+ 430757 Avago Technologies
+ 431002 APT Licensing Ltd.
+ 431025 SiRF Technology
+ 431045 Tzero Technologies, Inc.
+ 431076 J&M Corporation
+ 431116 Free2move AB
+ 431133 3DiJoy Corporation
+ 431156 Plantronics, Inc.
+ 431200 Vizio, Inc.
+ 431214 Nordic Semiconductor ASA
+ 431245 EM Microelectronic-Marin SA
+ 431301 Ralink Technology Corporation
+ 431337 Belkin International, Inc.
+ 431372 Stonestreet One, LLC
+ 431417 Wicentric, Inc.
+ 431437 RivieraWaves S.A.S
+ 431462 RDA Microelectronics
+ 431507 Gibson Guitars
+ 431526 MiCommand Inc.
+ 431545 Band XI International, LLC
+ 431600 Hewlett-Packard Company
+ 431630 9Solutions Oy
+ 431646 GN Netcom A/S
+ 431664 General Motors
+ 431703 A&D Engineering, Inc.
+ 431731 MindTree Ltd.
+ 431747 Polar Electro OY
+ 431770 BriarTek, Inc.
+ 432007 Sound ID
+ 432020 Monster, LLC
+ 432035 connectBlue AB
+ 432054 Group Sense Ltd.
+ 432075 Zomm, LLC
+ 432107 Samsung Electronics Co. Ltd.
+ 432144 Creative Technology Ltd.
+ 432175 Laird Technologies
+ 432220 Nike, Inc.
+ 432233 lesswire AG
+ 432247 MStar Semiconductor, Inc.
+ 432301 Hanlynn Technologies
+ 432326 A & R Cambridge
+ 432346 Seers Technology Co. Ltd
+ 432377 Autonet Mobile
+ 432416 WuXi Vimicro
+ 432433 Sennheiser Communications A/S
+ 432471 TimeKeeping Systems, Inc.
+ 432523 Ludus Helsinki Ltd.
+ 432547 BlueRadios, Inc.
+ 432570 equinox AG
+ 432603 Garmin International, Inc.
+ 432636 Ecotest
+ 432646 GN ReSound A/S
+ 432665 Jawbone
+ 432675 Zscan Software
+ 432714 Quintic Corp.
+ 432732 Stollman E+V GmbH
+ 432754 Funai Electric Co., Ltd.
+ 433005 ThinkOptics, Inc.
+ 433027 Universal Electronics, Inc.
+ 433063 Airoha Technology Corp.
+ 433113 NEC Lighting, Ltd.
+ 433136 ODM Technology, Inc.
+ 433163 ConnecteDevice Ltd.
+ 433207 zer01.tv GmbH
+ 433225 Alpwise
+ 433235 Colorfy, Inc.
+ 433253 Geoforce Inc.
+ 433271 Bose Corporation
+ 433312 Suunto Oy
+ 433324 SR-Medizinelektronik
+ 433351 Vertu Corporation Limited
+ 433403 Meta Watch Ltd.
+ 433423 LINAK A/S
+ 433435 OTL Dynamics LLC
+ 433456 Panda Ocean Inc.
+ 433477 Visteon Corporation
+ 433523 ARP Devices Limited
+ 433547 Magneti Marelli S.p.A
+ 433575 CAEN RFID srl
+ 433613 Green Throttle Games
+ 433640 Peter Systemtechnik GmbH
+ 433671 Omegawave Oy
+ 433706 Cinetix
+ 433716 Passif Semiconductor Corp
+ 433750 Saris Cycling Group, Inc
+ 434001 Bekey A/S
+ 434013 BDE Technology Co., Ltd.
+ 434044 Swirl Networks
+ 434063 Meso international
+ 434106 TreLab Ltd
+ 434121 Johnson Controls, Inc.
+ 434150 Starkey Laboratories Inc.
+ 434202 S-Power Electronics Limited
+ 434236 Ace Sensor Inc
+ 434255 Aplix Corporation
+ 434277 AAMP of America
+ 434317 Stalmart Technology Limited
+ 434353 Geneq Inc.
+ 434366 adidas AG
+ 434400 LG Electronics
+ 434417 Onset Computer Corporation
+ 434452 Selfly BV
+ 434464 Quuppa Oy.
+ 434477 GeLo Inc
+ 434510 Evluma
+ 434517 MC10
+ 434524 Binauric SE
+ 434540 Beats Electronics
+ 434562 Microchip Technology Inc.
+ 434614 Elgato Systems GmbH
+ 434640 ARCHOS SA
+ 434652 Dexcom, Inc.
+ 434667 Polar Electro Europe B.V.
+ 434721 Dialog Semiconductor B.V.
+ 434753 Kawantech
+ 434765 Austco Communication Systems
+ 435022 Timex Group USA, Inc.
+ 435050 Qualcomm Technologies, Inc.
+ 435104 Voyetra Turtle Beach
+ 435131 txtr GmbH
+ 435143 Biosentronics
+ 435161 Procter & Gamble
+ 435202 Hosiden Corporation
+ 435226 Muzik LLC
+ 435240 Misfit Wearables Corp
+ 435266 Google
+ 435275 Danlers Ltd
+ 435311 Semilink Inc
+ 435326 inMusic Brands, Inc
+ 435352 L.S. Research Inc.
+ 435375 Freshtemp
+ 435407 KS Technologies
+ 435427 ACTS Technologies
+ 435451 Vtrack Systems
+ 435470 Nielsen-Kellerman Company
+ 435522 Server Technology, Inc.
+ 435552 BioResearch Associates
+ 435601 Jolly Logic, LLC
+ 435622 Above Average Outcomes, Inc.
+ 435657 Bitsplitters GmbH
+ 435701 PayPal, Inc.
+ 435716 Witron Technology Limited
+ 435750 Kent Displays Inc.
+ 435773 Nautilus Inc.
+ 436011 Smartifier Oy
+ 436027 Elcometer Limited
+ 436051 VSN Technologies Inc.
+ 436077 AceUni Corp., Ltd.
+ 436122 StickNFind
+ 436135 Crystal Code AB
+ 436155 KOUKAAM a.s.
+ 436172 Delphi Corporation
+ 436215 ValenceTech Limited
+ 436241 Reserved
+ 436252 Typo Products, LLC
+ 436275 TomTom International BV
+ 436325 Fugoo, Inc
+ 436340 Keiser Corporation
+ 436363 Bang & Olufsen A/S
+ 436406 Innovative Yachtter Solutions
+ 436444 William Demant Holding A/S
+ 436477 Chicony Electronics Co., Ltd.
+ 436535 Atus BV
+ 436545 Codegate Ltd.
+ 436563 ERi, Inc.
+ 436575 Transducers Direct, LLC
+ 436625 Fujitsu Ten Limited
+ 436651 Audi AG
+ 436661 Nippon Seiki Co., Ltd.
+ 436710 Steelseries ApS
+ 436730 Visybl Inc.
+ 436744 Xensr
+ 436752 e.solutions
+ 436766 1OAK Technologies
+ 437010 Wimoto Technologies Inc
+ 437040 Radius Networks, Inc.
+ 437066 Wize Technology Co., Ltd.
+ 437120 Qualcomm Labs, Inc.
+ 437144 Aruba Networks
+ 437163 Baidu
+ 437171 Arendi AG
+ 437203 Skoda Auto a.s.
+ 437223 Volkswagon AG
+ 437241 Porsche AG
+ 437254 Sino Wealth Electronic Ltd.
+ 437310 AirTurn, Inc.
+ 437326 Kinsa, Inc.
+ 437342 HID Global
+ 437355 SEAT es
+ 437365 Promethean Ltd.
+ 437405 Salutica Allied Solutions
+ 437437 GPSI Group Pty Ltd
+ 437462 Nimble Devices Oy
+ 437504 SportIQ
+ 437514 TEMEC Instruments B.V.
+ 437543 Sony Corporation
+ 437564 ASSA ABLOY
+ 437577 Clarion Co., Ltd.
+ 437621 Warehouse Innovations
+ 437647 MADS Inc
+ 437660 Blue Maestro Limited
+ 437705 Resolution Products, Inc.
+ 437737 Airewear LLC
+ 437754 Prestigio Plaza Ltd.
+ 440001 NTEO Inc.
+ 440013 Focus Systems Corporation
+ 440045 Tencent Holdings Limited
+ 440076 Allegion
+ 440107 Murata Manufacuring Co., Ltd.
+ 440145 WirelessWERX
+ 440162 Nod, Inc.
+ 440174 B&B Manufacturing Company
+ 440226 FedEx Services
+ 440245 Grape Systems Inc.
+ 440270 Bkon Connect
+ 440305 Lintech GmbH
+ 440322 Novatel Wireless
+ 440343 Ciright
+ 440353 Mighty Cast, Inc.
+ 440375 Ambimat Electronics
+ 440421 Perytons Ltd.
+ 440437 Tivoli Audio, LLC
+ 440461 Master Lock
+ 440475 Mesh-Net Ltd
+ 440512 Tangerine, Inc.
+ 440532 B&W Group Ltd.
+ 440551 Pioneer Corporation
+ 440575 OnBeep
+ 440604 Vernier Software & Technology
+ 440642 ROL Ergo
+ 440653 Pebble Technology
+ 440675 NETATMO
+ 440705 Accumulate AB
+ 440723 Inmite s.r.o.
+ 440741 ChefSteps, Inc.
+ 440761 micas AG
+ 440772 Biomedical Research Ltd.
+ 441023 Pitius Tec S.L.
+ 441043 Estimote, Inc.
+ 441062 Unikey Technologies, Inc.
+ 441114 Timer Cap Co.
+ 441132 AwoX
+ 441137 yikes
+ 441145 MADSGlobal NZ Ltd.
+ 441170 PCH International
+ 441212 MISHIK Pte Ltd
+ 441231 Bayer HealthCare
+ 441252 Spicebox LLC
+ 441267 emberlight
+ 441302 Cooper-Atkins Corporation
+ 441334 Qblinks
+ 441344 MYSPHERA
+ 441355 LifeScan Inc
+ 441372 Volantic AB
+ 441406 Podo Labs, Inc
+ 441425 Roche Diabetes Care AG
+ 441454 Amazon Fulfillment Service
+ 441507 Kocomojo, LLC
+ 441525 Everykey LLC
+ 441542 Dynamic Controls
+ 441563 SentriLock
+ 441576 I-SYST inc.
+ 441612 CASIO COMPUTER CO., LTD.
+ 441643 LAPIS Semiconductor Co., Ltd.
+ 441701 Telemonitor, Inc.
+ 441723 taskit GmbH
+ 441737 Daimler AG
+ 441752 BatAndCat
+ 441764 BluDotz Ltd
+ 442000 XTel ApS
+ 442011 Gigaset Communications GmbH
+ 442045 HOP Ubiquitous
+ 442064 To Be Assigned
+ 442103 Nectar
+ 442112 bel'apps LLC
+ 442127 CORE Lighting Ltd
+ 442151 Seraphim Sense Ltd
+ 442174 Unico RBC
+ 442206 Physical Enterprises Inc.
+ 442240 Able Trend Technology Limited
+ 442276 Konica Minolta, Inc.
+ 442323 Wilo SE
+ 442333 Extron Design Services
+ 442362 Fitbit, Inc.
+ 442377 Fireflies Systems
+ 442421 Intelletto Technologies Inc.
+ 442456 FDK CORPORATION
+ 442476 Cloudleaf, Inc
+ 442515 Maveric Automation LLC
+ 442544 Acoustic Stream Corporation
+ 442600 Zuli
+ 442605 Paxton Access Ltd
+ 442627 WiSilica Inc
+ 442644 Vengit Limited
+ 442663 SALTO SYSTEMS S.L.
+ 442706 CUBETECH s.r.o.
+ 442726 Cokiya Incorporated
+ 442752 CVS Health
+ 442765 Ceruus
+ 442774 Strainstall Ltd
+ 443014 Channel Enterprises (HK) Ltd.
+ 443052 FIAMM
+ 443060 GIGALANE.CO.,LTD
+ 443101 EROAD
+ 443107 Mine Safety Appliances
+ 443136 Icon Health and Fitness
+ 443166 Asandoo GmbH
+ 443203 ENERGOUS CORPORATION
+ 443230 Taobao
+ 443237 Canon Inc.
+ 443252 Geophysical Technology Inc.
+ 443306 Facebook, Inc.
+ 443325 Nipro Diagnostics, Inc.
+ 443355 FlightSafety International
+ 443410 Earlens Corporation
+ 443434 Sunrise Micro Devices, Inc.
+ 443470 Star Micronics Co., Ltd.
+ 443521 Netizens Sp. z o.o.
+ 443545 Nymi Inc.
+ 443557 Nytec, Inc.
+ 443573 Trineo Sp. z o.o.
+ 443615 Nest Labs Inc.
+ 443634 LM Technologies Ltd
+ 443660 General Electric Company
+ 443711 i+D3 S.L.
+ 443723 HANA Micron
+ 443737 Stages Cycling LLC
+ 443762 SenionLab AB
+ 443777 Syszone Co., Ltd
+ 444020 Pulsate Mobile Ltd.
+ 444044 pironex GmbH
+ 444061 BRADATECH Corp.
+ 444101 Transenergooil AG
+ 444123 Bunch
+ 444131 DME Microelectronics
+ 444156 Bitcraze AB
+ 444172 HASWARE Inc.
+ 444207 Abiogenix Inc.
+ 444226 Poly-Control ApS
+ 444247 Avi-on
+ 444256 Laerdal Medical AS
+ 444301 Fetch My Pet
+ 444316 Sam Labs Ltd.
+ 444334 HOUWA SYSTEM DESIGN, k.k.
+ 444372 Primus Inter Pares Ltd
+ 444421 August
+ 444430 Gill Electronics
+ 444451 Sky Wave Design
+ 444471 Newlab S.r.l.
+ 444507 ELAD srl
+ 444520 G-wearables inc.
+ 444541 Squadrone Systems Inc.
+ 444570 Code Corporation
+ 444611 Savant Systems LLC
+ 444634 Logitech International SA
+ 444666 Innblue Consulting
+ 444711 iParking Ltd.
+ 444727 Bison Group Ltd.
+ 444750 Widex A/S
+ 444762 Jolla Ltd
+ 444774 Lectronix, Inc.
+ 445014 Caterpillar Inc
+ 445034 Freedom Innovations
+ 445060 Dynamic Devices Ltd
+ 445104 Technology Solutions (UK) Ltd
+ 445142 IPS Group Inc.
+ 445161 STIR
+ 445166 Sano, Inc
+ 445200 AutoMap LLC
+ 445214 CuteCircuit LTD
+ 445234 Valeo Service
+ 445252 Fullpower Technologies, Inc.
+ 445307 KloudNation
+ 445323 Itron, Inc.
+ 445337 The University of Tokyo
+ 445367 UTC Fire and Security
+ 445415 Cool Webthings Limited
+ 445444 DJO Global
+ 445457 Gelliner Limited
+ 445500 Medtronic, Inc.
+ 445520 Gozio, Inc.
+ 445534 Form Lifting, LLC
+ 445556 Wahoo Fitness, LLC
+ 445601 Radio System Corporation
+ 445632 Freescale Semiconductor, Inc.
+ 445670 AR Timing
+ 445702 Rigado LLC
+ 445715 Kemppi Oy
+ 445727 Tapcentive Inc.
+ 445747 Smartbotics Inc.
+ 445770 Otter Products, LLC
+ 446014 STEMP Inc.
+ 446027 LumiGeek LLC
+ 446044 InvisionHeart Inc.
+ 446067 Macnica Inc.
+ 446104 Jaguar Land Rover Limited
+ 446136 CoroWare Technologies, Inc
+ 446171 Simplo Technology Co., LTD
+ 446224 Omron Healthcare Co., LTD
+ 446256 Comodule GMBH
+ 446274 ikeGPS
+ 446303 Telink Semiconductor Co. Ltd
+ 446340 Interplan Co., Ltd
+ 446363 Wyler AG
+ 446374 IK Multimedia Production srl
+ 446431 Lukoton Experience Oy
+ 446457 MTI Ltd
+ 446467 Tech4home, Lda
+ 446506 Hiotech AB
+ 446521 DOTT Limited
+ 446536 Blue Speck Labs, LLC
+ 446563 Cisco Systems Inc
+ 446605 Mobicomm Inc
+ 446622 Edamic
+ 446631 Goodnet Ltd
+ 446645 Luster Leaf Products Inc
+ 446676 Manus Machina BV
+ 446717 Mobiquity Networks Inc
+ 446746 Praxis Dynamics
+ 446766 Philip Morris Products S.A.
+ 447022 Comarch SA
+ 447035 Nestl
+ 447044  Nespresso S.A.
+ 447064 Merlinia A/S
+ 447101 LifeBEAM Technologies
+ 447127 Twocanoes Labs, LLC
+ 447153 Muoverti Limited
+ 447174 Stamer Musikanlagen GMBH
+ 447225 Tesla Motors
+ 447242 Pharynks Corporation
+ 447267 Lupine
+ 447276 Siemens AG
+ 447311 Foster Electric Company, Ltd
+ 447346 ETA SA
+ 447355 x-Senso Solutions Kft
+ 447403 Qrio Inc
+ 447414 Pitpatpet Ltd
+ 447432 MSHeli s.r.l.
+ 447450 Trakm8 Ltd
+ 447463 JIN CO, Ltd
+ 447477 Alatech Technology
+ 447522 Awarepoint
+ 447535 ViCentra B.V.
+ 447553 Raven Industries
+ 447574 WaveWare Technologies
+ 447622 Argenox Technologies
+ 447647 Bragi GmbH
+ 447662 16Lab Inc
+ 447674 Masimo Corp
+ 447710 Iotera Inc.
+ 447724 Endress+Hauser
+ 447743 ACKme Networks, Inc.
+ 447770 FiftyThree Inc.
+ 450010 Parker Hannifin Corp
+ 450035 Transcranial Ltd
+ 450056 Uwatec AG
+ 450070 Orlan LLC
+ 450102 Blue Clover Devices
+ 450126 M-Way Solutions GmbH
+ 450153 Microtronics Engineering GmbH
+ 450211 Schneider Schreibger
+ 450237 te GmbH
+ 450247 Sapphire Circuits LLC
+ 450275 Lumo Bodytech Inc.
+ 450320 UKC Technosolution
+ 450343 Xicato Inc.
+ 450357 Playbrush
+ 450371 Dai Nippon Printing Co., Ltd.
+ 450427 G24 Power Limited
+ 450451 AdBabble Local Commerce Inc.
+ 450506 Devialet SA
+ 450522 ALTYOR
+ 450531 Lexmark International Inc.
+ 450564 Fluke Corporation
+ 450606 Yardarm Technologies
+ 450633 SensaRx
+ 450643 SECVRE GmbH
+ 450657 Glacial Ridge Technologies
+ 450712 Identiv, Inc.
+ 450730 DDS, Inc.
+ 450742 SMK Corporation
+ 450762 Schawbel Technologies LLC
+ 451014 XMI Systems SA
+ 451033 Cerevo
+ 451042 Torrox GmbH & Co KG
+ 451066 Gemalto
+ 451076 Domster Tadeusz Szydlowski
+ 451131 Technogym SPA
+ 451147 FLEURBAEY BVBA
+ 451166 Aptcode Solutions
+ 451210 LSI ADL Technology
+ 451233 Animas Corp
+ 451247 Alps Electric Co., Ltd.
+ 451277 OCEASOFT
+ 451310 Motsai Research
+ 451330 Geotab
+ 451337 bewhere inc
+ 451353 Johnson Outdoors Inc
+ 451400 Ekomini inc.
+ 451415 DEFA AS
+ 451425 Aseptika Ltd
+ 451442 HabitAware, LLC
+ 451462 ruwido austria gmbh
+ 451506 ITEC corporation
+ 451527 StoneL
+ 451536 Sonova AG
+ 451550 Maven Machines, Inc.
+ 451575 Synapse Electronics
+ 451621 Standard Innovation Inc.
+ 451652 RF Code, Inc.
+ 451670 Wally Ventures S.L.
+ 451714 Willowbank Electronics Ltd
+ 451747 SK Telecom
+ 451762 Jetro AS
+ 451773 Code Gears LTD
+ 452012 NANOLINK APS
+ 452027 IF, LLC
+ 452037 RF Digital Corp
+ 452057 Church & Dwight Co., Inc
+ 452110 Multibit Oy
+ 452124 CliniCloud Inc
+ 452143 SwiftSensors
+ 452160 Blue Bite
+ 452172 ELIAS GmbH
+ 452205 Sivantos GmbH
+ 452223 Petzl
+ 452231 storm power ltd
+ 452251 EISST Ltd
+ 452263 Inexess Technology Simma KG
+ 452317 Currant, Inc.
+ 452335 C2 Development, Inc.
+ 452362 Blue Sky Scientific, LLC
+ 452413 ALOTTAZS LABS, LLC
+ 452436 Kupson spol. s r.o.
+ 452462 Areus Engineering GmbH
+ 452511 Impossible Camera GmbH
+ 452540 InventureTrack Systems
+ 452567 LockedUp
+ 452600 Itude
+ 452606 Pacific Lock Company
+ 452633 Robert Bosch GmbH
+ 452655 Illuxtron international B.V.
+ 452712 miSport Ltd.
+ 452727 Chargelib
+ 452741 Doppler Lab
+ 452755 BBPOS Limited
+ 452773 RTB Elektronik GmbH & Co. KG
+ 453030 Rx Networks, Inc.
+ 453052 WeatherFlow, Inc.
+ 453074 Technicolor USA Inc.
+ 453121 Bestechnic(Shanghai),Ltd
+ 453152 Raden Inc
+ 453164 JouZen Oy
+ 453176 CLABER S.P.A.
+ 453214 Hyginex, Inc.
+ 453232 Schneider Electric
+ 453255 Oort Technologies LLC
+ 453303 Chrono Therapeutics
+ 453327 Rinnai Corporation
+ 453352 Swissprime Technologies AG
+ 453405 Koha.,Co.Ltd
+ 453422 Genevac Ltd
+ 453436 Chemtronics
+ 453452 Seguro Technology Sp. z o.o.
+ 453507 Redbird Flight Simulations
+ 453542 Dash Robotics
+ 453560 LINE Corporation
+ 453601 Guillemot Corporation
+ 453627 Wilson Sporting Goods
+ 453655 Ayatan Sensors
+ 453674 Electronics Tomorrow Limited
+ 453731 PayRange Inc.
+ 453747 ABOV Semiconductor
+ 453772 AINA-Wireless Inc.
+ 454015 Eijkelkamp Soil & Water
+ 454045 BMA ergonomics b.v.
+ 454071 Anima
+ 454102 Empatica Srl
+ 454117 Afero, Inc.
+ 454133 Powercast Corporation
+ 454161 Secuyou ApS
+ 454175 OMRON Corporation
+ 454217 Send Solutions
+ 454236 NIPPON SYSTEMWARE CO.,LTD.
+ 454271 Neosfar
+ 454301 Fliegl Agrartechnik GmbH
+ 454332 Gilvader
+ 454343 Digi International Inc (R)
+ 454376 DeWalch Technologies, Inc.
+ 454431 Samsung SDS Co., Ltd.
+ 454457 Blur Product Development
+ 454510 University of Michigan
+ 454537 Victron Energy BV
+ 454561 NTT docomo
+ 454574 Carmanah Technologies Corp.
+ 454630 Bytestorm Ltd.
+ 454647 internal use
+ 454664 not assigned
+ 454763 hhhg(
+ 454771 G]o&&G&_&&GGG&_&_
+ 455013 &_o_
+ 455025 VIRTUAL
+ 455041 PCCARD
+ 455050 UART
+ 455055 RS232
+ 455067 SDIO
+ 455074 UNKNOWN
+ 455104 BR/EDR
+ 455123 '%s' 
+ 455131 <3-slot packets>
+ 455152 <5-slot packets>
+ 455173 <encryption>
+ 455210 <slot offset>
+ 455226 <timing accuracy>
+ 455250 <role switch>
+ 455266 <hold mode>
+ 455302 <sniff mode>
+ 455317 <park state>
+ 455334 <RSSI>
+ 455343 <channel quality>
+ 455365 <SCO link>
+ 455400 <HV2 packets>
+ 455416 <HV3 packets>
+ 455434 <u-law log>
+ 455450 <A-law log>
+ 455464 <CVSD>
+ 455473 <paging scheme>
+ 455513 <power control>
+ 455533 <transparent SCO>
+ 455555 <broadcast encrypt>
+ 455601 <no. 24>
+ 455612 <EDR ACL 2 Mbps>
+ 455633 <EDR ACL 3 Mbps>
+ 455654 <enhanced iscan>
+ 455675 <interlaced iscan>
+ 455720 <interlaced pscan>
+ 455743 <inquiry with RSSI>
+ 455767 <extended SCO>
+ 456006 <EV4 packets>
+ 456024 <EV5 packets>
+ 456042 <no. 34>
+ 456053 <AFH cap. slave>
+ 456074 <AFH class. slave>
+ 456117 <BR/EDR not supp.>
+ 456142 <LE support>
+ 456157 <3-slot EDR ACL>
+ 456200 <5-slot EDR ACL>
+ 456221 <sniff subrating>
+ 456243 <pause encryption>
+ 456266 <AFH cap. master>
+ 456310 <AFH class. master>
+ 456334 <EDR eSCO 2 Mbps>
+ 456356 <EDR eSCO 3 Mbps>
+ 456400 <3-slot EDR eSCO>
+ 456422 <extended inquiry>
+ 456445 <LE and BR/EDR>
+ 456465 <no. 50>
+ 456476 <simple pairing>
+ 456517 <encapsulated PDU>
+ 456542 <err. data report>
+ 456565 <non-flush flag>
+ 456606 <no. 55>
+ 456617 <LSTO>
+ 456626 <inquiry TX power>
+ 456651 <EPC>
+ 456657 <no. 59>
+ 456670 <no. 60>
+ 456701 <no. 61>
+ 456712 <no. 62>
+ 456723 <extended features>
+ 456753 1.0b
+ 457014 Inquiry
+ 457024 Inquiry Cancel
+ 457043 Exit Periodic Inquiry Mode
+ 457076 Disconnect
+ 457111 Add SCO Connection
+ 457134 Cancel Create Connection
+ 457165 Accept Connection Request
+ 457217 Reject Connection Request
+ 457251 Link Key Request Reply
+ 457300 PIN Code Request Reply
+ 457327 Change Connection Packet Type
+ 457365 Authentication Requested
+ 457416 Set Connection Encryption
+ 457450 Change Connection Link Key
+ 457503 Master Link Key
+ 457523 Cancel Remote Name Request
+ 457556 Read Remote Extended Features
+ 457614 Read Clock Offset
+ 457636 Read LMP Handle
+ 457656 Hold Mode
+ 457670 Exit Sniff Mode
+ 457710 Exit Park State
+ 457730 QoS Setup
+ 457742 Role Discovery
+ 457761 Switch Role
+ 457775 Read Link Policy Settings
+ 460027 Write Link Policy Settings
+ 460062 Flow Specification
+ 460105 Reset
+ 460113 Set Event Filter
+ 460134 Read PIN Type
+ 460152 Write PIN Type
+ 460171 Create New Unit Key
+ 460215 Read Stored Link Key
+ 460242 Write Stored Link Key
+ 460270 Delete Stored Link Key
+ 460317 Write Local Name
+ 460340 Read Local Name
+ 460360 Read Page Timeout
+ 460402 Write Page Timeout
+ 460425 Read Scan Enable
+ 460446 Write Scan Enable
+ 460470 Read Page Scan Activity
+ 460520 Write Page Scan Activity
+ 460551 Read Inquiry Scan Activity
+ 460604 Write Inquiry Scan Activity
+ 460640 Read Authentication Enable
+ 460673 Write Authentication Enable
+ 460727 Read Encryption Mode
+ 460754 Write Encryption Mode
+ 461002 Read Class Of Device
+ 461027 Write Class Of Device
+ 461055 Read Voice Setting
+ 461100 Write Voice Setting
+ 461124 Read Automatic Flush Timeout
+ 461161 Write Automatic Flush Timeout
+ 461217 Read Hold Mode Activity
+ 461247 Write Hold Mode Activity
+ 461300 Read Transmit Power Level
+ 461332 Host Buffer Size
+ 461353 Read Link Supervision Timeout
+ 461411 Read Number of Supported IAC
+ 461446 Read Current IAC LAP
+ 461473 Write Current IAC LAP
+ 461521 Read Page Scan Period Mode
+ 461554 Write Page Scan Period Mode
+ 461610 Read Page Scan Mode
+ 461634 Write Page Scan Mode
+ 461661 Read Inquiry Scan Type
+ 461710 Write Inquiry Scan Type
+ 461740 Read Inquiry Mode
+ 461762 Write Inquiry Mode
+ 462005 Read Page Scan Type
+ 462031 Write Page Scan Type
+ 462056 Read Local Supported Commands
+ 462114 Read Local Supported Features
+ 462152 Read Local Extended Features
+ 462207 Read Country Code
+ 462231 Read BD ADDR
+ 462246 Read Failed Contact Counter
+ 462302 Reset Failed Contact Counter
+ 462337 Get Link Quality
+ 462360 Read RSSI
+ 462372 Read AFH Channel Map
+ 462417 Read BD Clock
+ 462435 Read Loopback Mode
+ 462460 Write Loopback Mode
+ 462504 Enable Device Under Test Mode
+ 462542 Setup Synchronous Connection
+ 462577 Accept Synchronous Connection
+ 462635 Reject Synchronous Connection
+ 462673 Refresh Encryption Key
+ 462722 Sniff Subrating
+ 462742 Read Simple Pairing Mode
+ 462773 Write Simple Pairing Mode
+ 463025 Read Local OOB Data
+ 463051 IO Capability Request Reply
+ 463105 User Passkey Request Reply
+ 463140 Remote OOB Data Request Reply
+ 463176 Enhanced Flush
+ 463215 Send Keypress Notification
+ 463250 Read Encryption Key Size
+ 463301 Create Physical Link
+ 463326 Accept Physical Link
+ 463353 Disconnect Physical Link
+ 463404 Create Logical Link
+ 463430 Accept Logical Link
+ 463454 Disconnect Logical Link
+ 463504 Logical Link Cancel
+ 463530 Flow Specification Modify
+ 463562 Set Event Mask Page 2
+ 463610 Read Location Data
+ 463633 Write Location Data
+ 463657 Read Local AMP Info
+ 463703 Read Local AMP_ASSOC
+ 463730 Write Remote AMP_ASSOC
+ 463757 Read Flow Control Mode
+ 464006 Write Flow Control Mode
+ 464036 Read Data Block Size
+ 464063 Enable AMP Receiver Reports
+ 464117 AMP Test End
+ 464134 AMP Test Command
+ 464155 Short Range Mode
+ 464176 Read LE Host Support
+ 464223 Write LE Host Support
+ 464251 LE Set Event Mask
+ 464273 LE Read Buffer Size
+ 464317 LE Set Random Address
+ 464345 LE Set Advertising Parameters
+ 464403 LE Set Advertising Data
+ 464433 LE Set Scan Response Data
+ 464465 LE Set Advertise Enable
+ 464515 LE Set Scan Parameters
+ 464544 LE Set Scan Enable
+ 464567 LE Create Connection
+ 464614 LE Create Connection Cancel
+ 464650 LE Read White List Size
+ 464700 LE Clear White List
+ 464724 LE Add Device To White List
+ 464760 LE Connection Update
+ 465005 LE Read Channel Map
+ 465031 LE Read Remote Used Features
+ 465066 LE Encrypt
+ 465101 LE Rand
+ 465111 LE Start Encryption
+ 465135 LE Read Supported States
+ 465166 LE Receiver Test
+ 465207 LE Transmitter Test
+ 465233 LE Test End
+ 465247 NONE
+ 465254 ACCEPT
+ 465263 MASTER
+ 465272 AUTH
+ 465277 ENCRYPT
+ 465307 TRUSTED
+ 465317 RELIABLE
+ 465330 SECURE
+ 465337 RSWITCH
+ 465347 HOLD
+ 465354 SNIFF
+ 465362 PARK
+ 465407 2-EV3
+ 465415 2-EV5
+ 465423 3-EV3
+ 465431 3-EV5
+ 465453 2-DH1
+ 465461 2-DH3
+ 465467 2-DH5
+ 465475 3-DH1
+ 465503 3-DH3
+ 465511 3-DH5
+ 465522 INIT
+ 465527 RUNNING
+ 465543 PSCAN
+ 465551 ISCAN
+ 465557 INQUIRY
+ 465630 Link Key Request Negative Reply
+ 465670 PIN Code Request Negative Reply
+ 465730 Read Remote Supported Features
+ 465770 Read Remote Version Information
+ 466030 Read Default Link Policy Settings
+ 466100 Write Default Link Policy Settings
+ 466150 Read Connection Accept Timeout
+ 466210 Write Connection Accept Timeout
+ 466250 Read Num Broadcast Retransmissions
+ 466320 Write Num Broadcast Retransmissions
+ 466370 Read Synchronous Flow Control Enable
+ 466440 Write Synchronous Flow Control Enable
+ 466510 Set Host Controller To Host Flow Control
+ 466570 Host Number Of Completed Packets
+ 466640 Write Link Supervision Timeout
+ 466700 Set AFH Channel Classification
+ 466740 Read AFH Channel Assessment Mode
+ 467010 Write AFH Channel Assessment Mode
+ 467060 Read Local Version Information
+ 467120 Read Extended Inquiry Response
+ 467160 Write Extended Inquiry Response
+ 467220 Read Inquiry Response Transmit Power Level
+ 467300 Write Inquiry Transmit Power Level
+ 467350 Read Default Erroneous Data Reporting
+ 467420 Write Default Erroneous Data Reporting
+ 467470 User Confirmation Request Reply
+ 467530 User Confirmation Request Negative Reply
+ 467610 User Passkey Request Negative Reply
+ 467660 Write Simple Pairing Debug Mode
+ 467720 Remote OOB Data Request Negative Reply
+ 467770 IO Capability Request Negative Reply
+ 470040 Read Logical Link Accept Timeout
+ 470110 Write Logical Link Accept Timeout
+ 470160 Read Enhanced Transmit Power Level
+ 470230 Read Best Effort Flush Timeout
+ 470270 Write Best Effort Flush Timeout
+ 470330 LE Read Local Supported Features
+ 470400 LE Read Advertising Channel TX Power
+ 470450 LE Remove Device From White List
+ 470520 LE Set Host Channel Classification
+ 470570 LE Long Term Key Request Reply
+ 470630 LE Long Term Key Request Negative Reply
+ 470700 %s: Continuation state size exceeds internal buffer
+ 470770 %s: Unknown sequence type, aborting
+ 471040 %s: Strings of size > USHRT_MAX not supported
+ 471120 %s: Unknown data type : %d expecting a svc UUID
+ 471210 %s: Not enough room for 16-bit UUID
+ 471260 %s: Not enough room for 32-bit UUID
+ 471330 %s: Not enough room for 128-bit UUID
+ 471400 %s: Sizeof text string > UINT16_MAX
+ 471450 %s: String too long to fit in packet
+ 471520 %s: Not enough memory for incoming string
+ 471600 %s: Packet not big enough to hold sequence.
+ 471660 %s: Unknown data descriptor : 0x%x terminating
+ 471740 %s: Unexpected end of packet: continuation state data missing
+ 472040 %s: Response buffer alloc failure:%m (%d)
+ 472120 %s: Protocol error: transaction id does not match
+ 472210 %s: Protocol error: invalid length
+ 472260 %s: Protocol error: wrong current service record count value.
+ 472360 %s: Protocol error: invalid PDU size
+ 472430 %s: Protocol error: invalid AttrList size
+ 472510 %s: Protocol error: wrong PDU size.
+ 472560 %s: Error sending data:%m(%d)
+ 472620 %s: Client timed out
+ 472646 NULL
+ 472653 %.8x
+ 472660 %.8x-%.4x-%.4x-%.4x-%.8x%.4x
+ 472715 Type of UUID (%x) unknown.
+ 472750 %s: Unexpected end of packet
+ 473006 Service Name: %.*s
+ 473032 Service Description: %.*s
+ 473065 Service Provider: %.*s
+ 473115 %s: Error sending data:%m
+ 473150 %s: Invalid session
+ 473175 %s: Inquiry failed:%m
+ 473224 %s: Read response:%m (%d)
+ 473257 %s: Illegal PDU ID: 0x%x
+ 473311 %s: SVC REC is null
+ 473336 SDP Server
+ 473351 Browse Group Descriptor
+ 473401 Public Browse Group
+ 473425 LAN Access Using PPP
+ 473452 Dialup Networking
+ 473474 IrMC Sync
+ 473506 IrMC Sync Command
+ 473530 AV Remote Target
+ 473551 Advanced Audio
+ 473570 AV Remote
+ 473602 AV Remote Controller
+ 473627 Headset Audio Gateway
+ 473655 Network Access Point
+ 473702 PAN Group Network
+ 473724 Reference Printing
+ 473747 Imaging
+ 473757 Imaging Responder
+ 474001 Imaging Automatic Archive
+ 474033 Imaging Referenced Objects
+ 474066 Handsfree Audio Gateway
+ 474116 Direct Printing Ref. Objects
+ 474153 Reflected UI
+ 474170 Basic Printing
+ 474207 Printing Status
+ 474227 Human Interface Device
+ 474256 Hardcopy Cable Replacement
+ 474311 HCR Print
+ 474323 HCR Scan
+ 474334 Video Conferencing Gateway
+ 474367 UDI MT
+ 474376 UDI TA
+ 474405 Phonebook Access - PCE
+ 474434 Phonebook Access - PSE
+ 474463 Phonebook Access
+ 474504 Message Access - MAS
+ 474531 Message Access - MNS
+ 474556 Message Access
+ 474575 PnP Information
+ 474615 Generic Networking
+ 474640 Generic File Transfer
+ 474666 Generic Audio
+ 474704 Generic Telephony
+ 474726 UPnP
+ 474733 UPnP IP
+ 474743 UPnP PAN
+ 474754 UPnP LAP
+ 474765 UPnP L2CAP
+ 475000 Video Source
+ 475015 Video Sink
+ 475030 Video Distribution
+ 475053 HDP Source
+ 475066 HDP Sink
+ 475077 Generic Access
+ 475116 Generic Attribute
+ 475140 Apple Agent
+ 475154 UPNP
+ 475161 HCRP-Ctrl
+ 475173 HCRP-Data
+ 475205 HCRP-Notify
+ 475225 MCAP-Ctrl
+ 475237 MCAP-Data
+ 500560 sdp_general_inquiry
+ 500620 sdp_service_search_attr_req
+ 500660 sdp_process
+ 500700 sdp_get_error
+ 500720 sdp_service_search_attr_async
+ 500760 sdp_service_attr_async
+ 501020 sdp_service_search_async
+ 501060 sdp_service_attr_req
+ 501120 extract_record_handle_seq
+ 501160 copy_cstate
+ 501200 sdp_service_search_req
+ 501240 sdp_device_record_update
+ 501300 sdp_device_record_unregister_binary
+ 501400 sdp_device_record_register_binary
+ 501450 sdp_read_rsp
+ 501500 sdp_send_req_w4_rsp
+ 501540 sdp_extract_pdu
+ 501560 extract_seq
+ 501600 extract_str
+ 501620 extract_int
+ 501640 sdp_extract_attr
+ 501700 sdp_extract_seqtype
+ 501740 sdp_uuid_extract
+ 502000 sdp_data_alloc_with_length
+ 507077 ;*3$"
+ 560203 QAq@Q
+ 560233 0e|T<
+ 615540 c70546c69b2d7577fc216507152ca06c35c8c4.debug
+ 615625 .shstrtab
+ 615637 .interp
+ 615647 .note.ABI-tag
+ 615665 .note.gnu.build-id
+ 615710 .gnu.hash
+ 615722 .dynsym
+ 615732 .dynstr
+ 615742 .gnu.version
+ 615757 .gnu.version_r
+ 615776 .rela.dyn
+ 616010 .init
+ 616016 .plt
+ 616023 .plt.got
+ 616034 .text
+ 616042 .fini
+ 616050 .rodata
+ 616060 .eh_frame_hdr
+ 616076 .eh_frame
+ 616110 .init_array
+ 616124 .fini_array
+ 616140 .jcr
+ 616145 .data.rel.ro
+ 616162 .dynamic
+ 616173 .data
+ 616201 .bss
+ 616206 .gnu_debuglink
