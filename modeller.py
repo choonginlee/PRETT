@@ -4,13 +4,14 @@ import sys
 from scapy.all import *
 
 pkts = rdpcap("pcap/ftp2.pcap")
+
+# P1. Collect FTP pkts which contain Messages
+
 client_ip = ""
 server_ip = ""
-req_raw_strings = []
-res_raw_strings = []
+req_raw_paylds = []
+res_raw_paylds = []
 
-
-#print ls(pkts[3])
 i = 0
 for pkt in pkts:
 	i = i+1
@@ -22,19 +23,23 @@ for pkt in pkts:
 		if client_ip == "" and server_ip != ip.src:
 			client_ip = ip.src
 		if ip.dst == server_ip:
-			req_raw_strings.append(raw_string)
+			req_raw_paylds.append(raw_string)
 		elif ip.dst == client_ip:
-			res_raw_strings.append(raw_string)
+			res_raw_paylds.append(raw_string)
+
 
 print "IP of client : ", client_ip
 print "IP of server : ", server_ip
 print "[[[ REQUESTS ]]]"
-for str in req_raw_strings:
+for str in req_raw_paylds:
 	print str
 print "[[[ RESPONSES ]]]"
-for str in res_raw_strings:
+for str in res_raw_paylds:
 	print str
 
+# P2. Compare each FTP payload with previously stored tokens
 
+# -- varible strings to be stored as each tuple ([payload], ([begin_index], [end_index]))
+variable_paylds = []
 
-# P1. Collect FTP pkts which contain Messages
+for req_payld in req_raw_paylds:
