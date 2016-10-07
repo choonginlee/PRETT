@@ -6,7 +6,7 @@ import os
 import argparse
 import time
 
-outputdir = '../tokenfile'
+outputdir = './tokenfile'
 exception_token = ['atuh', 'auati', 'avaui', 'atui', 'auatush', \
 					'awavi', 'dh', 'awavauatush', 'hh', 'atush', \
 					'ht', 'avati', 'xdh', 'llc', 'awavauati', \
@@ -107,6 +107,12 @@ if __name__ == "__main__" :
 
 	print("[+] Plase check the \'tokenfile\' directory.")
 	print("--- Total %s seconds ---" % (time.time() - start_time))
+
+	# write total tokens in one file
+	file_write_total = outputdir + "/total_tokens.txt"
+	fw = open(file_write_total, 'w')
+	fw.write(str(ranklist))
+	close(fw)
 
 	print "[+] total unique tokens :", len(ranklist.most_common())
 	for k in ranklist.most_common() :
