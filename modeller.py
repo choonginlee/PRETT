@@ -54,7 +54,13 @@ if len(sys.argv) < 3:
 
 
 dst_ip = sys.argv[1]
+print dst_ip
+print ""
+
 payload = sys.argv[2]
+print payload
+print ""
+
 
 p = IP(dst=dst_ip)/TCP()/payload
 
