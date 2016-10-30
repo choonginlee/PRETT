@@ -3,6 +3,9 @@
 import sys
 from scapy.all import *
 
+# PCAP READ AND PARSE #
+"""
+
 pkts = rdpcap("pcap/ftp2.pcap")
 
 # P1. Collect FTP pkts which contain Messages
@@ -43,3 +46,20 @@ for str in res_raw_paylds:
 variable_paylds = []
 
 for req_payld in req_raw_paylds:
+"""
+
+if len(sys.argv) < 3:
+	print "Please specify the destination IP and payload\n"
+
+dst_ip = sys.argv[1]
+payload = sys.argv[2]
+
+p = IP(dst=dst_ip)/TCP()/payload
+
+p
+
+# Generate message
+
+
+
+# Send message and listen
