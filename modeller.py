@@ -49,7 +49,9 @@ for req_payld in req_raw_paylds:
 """
 
 if len(sys.argv) < 3:
-	print "Please specify the destination IP and payload\n"
+	print "[-] Please specify the destination IP and payload\n"
+	sys.exit()
+
 
 dst_ip = sys.argv[1]
 payload = sys.argv[2]
