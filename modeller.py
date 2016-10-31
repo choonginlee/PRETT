@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 
 import sys
+import pickle
 from scapy.all import *
 
 # PCAP READ AND PARSE #
@@ -42,12 +43,11 @@ for str in res_raw_paylds:
 
 # P2. Compare each FTP payload with previously stored tokens
 
-# -- varible strings to be stored as each tuple ([payload], ([begin_index], [end_index]))
+# -- varible strings to be stored as each tuple ([payload], [token], ([begin_index], [end_index]))
 variable_paylds = []
+token_db = []
 
-for req_payld in req_raw_paylds:
 """
-
 
 if len(sys.argv) < 3:
 	print "[-] Please specify the destination IP and payload\n"
@@ -55,6 +55,23 @@ if len(sys.argv) < 3:
 	
 dst_ip = sys.argv[1]
 payload = sys.argv[2]
+
+with open("./tokenfile/total_tokens.txt") as f:
+	token_db = pickle.load(f)
+
+for payld in req_raw_paylds:
+	for token in token_db:
+		if token[1] > 1:
+			index = payld.load.lower().find(token[0], 0)
+			if index >= 0:
+				tuple_data = (payld.load, token[0], (index, index+len(token[0])))
+				variable_paylds.append(tuple(tuple_data))
+
+for item in variable_paylds :
+	print item
+
+print len(variable_paylds), "Variable payloads found"
+
 
 p = IP(dst=dst_ip)/TCP()/payload
 

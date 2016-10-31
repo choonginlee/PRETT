@@ -1,10 +1,14 @@
-from collections import Counter
+from collectio
+
+
+ns import Counter
 from itertools import izip
 import sys
 import re
 import os
 import argparse
 import time
+import pickle
 
 outputdir = './tokenfile'
 exception_token = ['atuh', 'auati', 'avaui', 'atui', 'auatush', \
@@ -12,15 +16,18 @@ exception_token = ['atuh', 'auati', 'avaui', 'atui', 'auatush', \
 					'ht', 'avati', 'xdh', 'llc', 'awavauati', \
 					'uauh' ]
 ranklist = {}
+cnt = 0
 
 def count_token(file) :
 	global ranklist
+	global cnt
+	cnt = cnt + 1
 	words = re.findall(r'\w+', open(file).read().lower())
 	tempdic = dict((k,1) for k in words)
 	#c = Counter(tempdic).most_common()
 	#print c 
 	ranklist = Counter(ranklist) + Counter(tempdic)
-	print "======== Token analysis of file", file, "done.", "========="
+	print "======== [", cnt, "] Token analysis of file", file, "done.", "========="
 
 def extract_token(path, file) :
 
@@ -68,7 +75,7 @@ def extract_token(path, file) :
 
 	fw.write((str(set(result_first))))
 
-	fw.close()
+	fw.close
 
 	count_token(file_write)
 
@@ -110,13 +117,11 @@ if __name__ == "__main__" :
 
 	# write total tokens in one file
 	file_write_total = outputdir + "/total_tokens.txt"
-	fw = open(file_write_total, 'w')
-	fw.write(str(ranklist))
-	close(fw)
+	with open(file_write_total, "wb") as f:
+		pickle.dump(ranklist.most_common(), f)
+
 
 	print "[+] total unique tokens :", len(ranklist.most_common())
-	for k in ranklist.most_common() :
-		print k
 
 	"""
 	cnt = 0
