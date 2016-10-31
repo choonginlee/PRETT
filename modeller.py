@@ -4,6 +4,9 @@ import sys
 import pickle
 from scapy.all import *
 
+# PCAP READ AND PARSE #
+"""
+
 pkts = rdpcap("pcap/ftp2.pcap")
 
 # P1. Collect FTP pkts which contain Messages
@@ -44,6 +47,8 @@ for str in res_raw_paylds:
 variable_paylds = []
 token_db = []
 
+"""
+
 with open("./tokenfile/total_tokens.txt") as f:
 	token_db = pickle.load(f)
 
@@ -60,5 +65,12 @@ for item in variable_paylds :
 
 print len(variable_paylds), "Variable payloads found"
 
-#for i in range(0,10):
-#	pkts[i].show()
+p = IP(dst=dst_ip)/TCP()/payload
+
+p
+
+# Generate message
+
+
+
+# Send message and listen
