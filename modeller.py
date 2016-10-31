@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 
 import sys
+import pickle
 from scapy.all import *
 
 pkts = rdpcap("pcap/ftp2.pcap")
@@ -39,7 +40,25 @@ for str in res_raw_paylds:
 
 # P2. Compare each FTP payload with previously stored tokens
 
-# -- varible strings to be stored as each tuple ([payload], ([begin_index], [end_index]))
+# -- varible strings to be stored as each tuple ([payload], [token], ([begin_index], [end_index]))
 variable_paylds = []
+token_db = []
 
-for req_payld in req_raw_paylds:
+with open("./tokenfile/total_tokens.txt") as f:
+	token_db = pickle.load(f)
+
+for payld in req_raw_paylds:
+	for token in token_db:
+		if token[1] > 1:
+			index = payld.load.lower().find(token[0], 0)
+			if index >= 0:
+				tuple_data = (payld.load, token[0], (index, index+len(token[0])))
+				variable_paylds.append(tuple(tuple_data))
+
+for item in variable_paylds :
+	print item
+
+print len(variable_paylds), "Variable payloads found"
+
+#for i in range(0,10):
+#	pkts[i].show()
