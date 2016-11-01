@@ -6,7 +6,7 @@ ptmsg is a tool that automatically infering network protocol models from binary 
 ## Prerequisite ##
 - Scapy
 
-### Easy Running Example ###
+## Easy Running Example ##
 
 1. Run stringsgen.sh in the root directory of ptmsg
 - It generates tokens from basic binaries of your own linux OS.
