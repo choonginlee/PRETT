@@ -1,7 +1,4 @@
-from collectio
-
-
-ns import Counter
+from collections import Counter
 from itertools import izip
 import sys
 import re

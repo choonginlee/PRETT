@@ -1,4 +1,27 @@
-OptInf
+ptmsg
 ======
 
-OptInf is a tool that infers command-line options from a given program binary.
+ptmsg is a tool that automatically infering network protocol models from binary tokens.
+
+Prerequisite
+- Scapy
+
+Easy Running Example
+
+1. Run stringsgen.sh in the root directory of ptmsg
+- It generates tokens from basic binaries of your own linux OS.
+
+2. If strings are generated from binaries, check binstring/ directory.
+- There should a lot of txt files which contain strings extracted from target binaries
+
+3. Then run tokenizer.py by specifying binstring/ directory as an arguemnt.
+- Ex ) $ python tokenizer.py ./binstring/
+- It refines appropriate tokens from the strings
+
+4. If tokens are generated and refined from strings, check tokenfile/ directory.
+- There should a lot of txt files which contain tokens refined from strings
+
+5. Then run modeller.py by specifying target FTP server as an arguemnt (permission needed)
+- Ex ) $ sudo python modeller.py [Target IP]
+
+6. You will see the requests automatically generated and responses of them.
