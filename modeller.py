@@ -3,6 +3,7 @@
 import sys
 import pickle
 import time
+from transitions.extensions import GraphMachine as Machine
 from scapy.all import *
 
 # INSTRUCTION #
@@ -58,6 +59,11 @@ token_db = []
 
 """
 
+class FTPStateMachine(object):
+	def __init__(self, name, model):
+		self.name
+		self.machine = Machine(model = model, states = ['0'], initial = '0')
+
 def handshake(dst_ip, dport, sport):
 	#Initiate TCP connection - 3 handshaking
 	print "[+] ======== Hand Shaking ========"
@@ -92,6 +98,15 @@ def disconnect_ftp(rp):
 	send(fin_ack_p)
 	print "[+] FTP disconnected\n"
 
+def draw_state_machine(sm, cs, payload):
+	# sm : state machine, cs : current state, payload : response packet payload 
+	# Draw a state machine based on the response
+	num_of_states = num_of_states + 1
+	next_state = str(num_of_states)
+
+	fsm.add_states(next_state)
+	fsm.add_transition(payload, source = cs, dest = next_state)
+
 def generate_ftp_ack(rp):
 	tcp_seg_len = len(rp.getlayer(Raw).load)
 	p = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=rp.ack, ack=rp.seq+tcp_seg_len, flags = "A")
@@ -119,6 +134,7 @@ dst_ip = sys.argv[1]
 dport = 21
 sport = 1005
 delimiter = "\r\n"
+num_of_states = 1
 
 """
 if len(sys.argv) == 3 and sys.argv[2] == "clean":
@@ -129,6 +145,8 @@ else :
 """
 
 mode = raw_input("[!] Manual? or Auto? (m / a) : ")
+m = Model()
+fsm = FTPStateMachine("FTPMachine", m)
 
 if mode == 'm':
 	rp = handshake(dst_ip, dport, sport)
@@ -156,6 +174,9 @@ elif mode == 'a' :
 	with open("./tokenfile/total_tokens.txt") as f:
 		token_db = pickle.load(f)
 
+	#Initialize current state as 0
+	cs = 0
+
 	# Simple message format ( 1 word )
 	for token in token_db:
 		sport = int(RandShort())
@@ -179,19 +200,24 @@ elif mode == 'a' :
 			if rcv.haslayer("Raw"):
 				i = i + 1
 				print "[+] FTP Response %d received.\n" % i
-				# FTP packet received
-				#print "[+] FTP PACKET :::"
-				print "[+] RESPONSE FTP PAYLOAD : ", rcv.getlayer("Raw").load # this is protocol response message
+				rcvdpayload = rcv.getlayer("Raw").load
+				print "[+] RESPONSE FTP PAYLOAD : ", rcvdpayload # this is protocol response message
 				rp = rcv
 				ack_p = generate_ftp_ack(rp)
 				send(ack_p)
 				print "[+] FTP ACK sent."
+				draw_state_machine(fsm, str(cs), rcvdpayload)
 		
-		time.sleep(1)
 		# Finish TCP connection
 		# Request QUIT -> TCP FIN Handshake
 		disconnect_ftp(rp)
+
+		#Initialize current state as 0
+		cs = 0
+
 		time.sleep(1)
+
+		m.graph.draw("My_state_diagram.png", prog='dot')
 
 else :
 	print "[-] Invalid Input... exit...\n"
