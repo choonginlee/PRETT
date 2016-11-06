@@ -21,8 +21,6 @@ def count_token(file) :
 	cnt = cnt + 1
 	words = re.findall(r'\w+', open(file).read().lower())
 	tempdic = dict((k,1) for k in words)
-	#c = Counter(tempdic).most_common()
-	#print c 
 	ranklist = Counter(ranklist) + Counter(tempdic)
 	print "======== [", cnt, "] Token analysis of file", file, "done.", "========="
 
@@ -35,42 +33,21 @@ def extract_token(path, file) :
 	fr = open(file_read, 'r')
 	fw = open(file_write, 'w')
 
-	#fr_lines = sum(1 for line in fr) # line no of the file read 
-
 	result = []
 	result_first = []
 
 	while True :
 		string_read = fr.readline()
 		if not string_read: break # eol
-		if(re.search('\w[_]\w', string_read)): # underbar: func or val
-			continue
-		if(re.search('\w[/]\w', string_read)): # slash: path
-			continue # file path
-		if(re.search('\w[.]\w', string_read)): # dot : path
-			continue # file zpath
 
-		"""		result = re.findall('[a-zA-Z]{2,}', string_read)
-		for extoken in exception_token :
-			for token in result :
-				if extoken == token.lower():
-					result.remove(token)
+		split_list = []
+		split_list = re.split('[:.-/_\s]+', string_read)
+		for split in split_list:
+			result_first = re.findall('[A-Za-z]{2,}', split)
+			for res in result_first:
+				result.append(res)
 
-		if result : # ignore empty string
-			#fw.write(str(result)+'\n')
-			result_first.append(result[0])
-		"""
-		result = re.findall('[a-zA-Z]{2,}', string_read)
-		if result :
-			for extoken in exception_token :
-				if extoken == result[0].lower() :
-					result.remove(result[0])
-					break
-
-		if result :
-			result_first.append(result[0].lower()) #insert first element
-
-	fw.write((str(set(result_first))))
+	fw.write((str(set(result))))
 
 	fw.close
 
@@ -119,20 +96,6 @@ if __name__ == "__main__" :
 
 
 	print "[+] total unique tokens :", len(ranklist.most_common())
-
-	"""
-	cnt = 0
-	printlist = []
-
-	for k in ranklist.most_common():
-		if cnt % 5 == 4 :
-			index = cnt - 4
-			print printlist[index:]
-			cnt = cnt + 1
-		else :
-			printlist.append(k)
-			cnt = cnt + 1
-	"""
 
 
 
