@@ -76,7 +76,7 @@ def handshake(dst_ip, dport, sport):
 def disconnect_ftp(rp):
 	print "[+] ======== Disconnection ========"
 	p = generate_ftp_msg("QUIT", rp)
-	ans, unans = sr(p, multi=1, timeout=0.3, verbose=0) # SEND -> GET ACK -> GET RESPONSE (normal case)
+	ans, unans = sr(p, multi=1, timeout=0.001, verbose=0) # SEND -> GET ACK -> GET RESPONSE (normal case)
 
 	for snd, rcv in ans:
 		if rcv.haslayer("Raw"):
@@ -140,7 +140,7 @@ if mode == 'm':
 		if raw_input("[ ] Send Packet? (y/n) : ") != 'y' :
 			print "[+] Program ends... \n"
 			break
-		ans, unans = sr(p, multi=1, timeout=0.3, verbose=0) # SEND -> GET ACK -> GET RESPONSE (normal case)
+		ans, unans = sr(p, multi=1, timeout=0.1, verbose=0) # SEND -> GET ACK -> GET RESPONSE (normal case)
 		#print "[+] %d packets received." % len(ans)
 
 		for snd, rcv in ans:
@@ -172,7 +172,7 @@ elif mode == 'a' :
 			break
 
 		# Send message and listen
-		ans, unans = sr(p, multi=1, timeout=0.3, verbose=0) # SEND -> GET ACK -> GET RESPONSE (normal case)
+		ans, unans = sr(p, multi=1, timeout=0.1, verbose=0) # SEND -> GET ACK -> GET RESPONSE (normal case)
 		i = 0
 
 		for snd, rcv in ans:
@@ -185,8 +185,9 @@ elif mode == 'a' :
 				rp = rcv
 				ack_p = generate_ftp_ack(rp)
 				send(ack_p)
-				print "[+] ACK sent."
-
+				print "[+] FTP ACK sent."
+		
+		time.sleep(1)
 		# Finish TCP connection
 		# Request QUIT -> TCP FIN Handshake
 		disconnect_ftp(rp)
