@@ -4,9 +4,11 @@
 ptmsg is a tool that automatically infering network protocol models from binary tokens.
 
 ## Prerequisite ##
-- Scapy
-- matplotlib
-- transitions
+- Scapy (pip)
+- matplotlib (pip)
+- transitions (pip)
+- python-tk (apt-get)
+- http://stackoverflow.com/questions/32885486/pygraphviz-importerror-undefined-symbol-agundirected
 
 ## Easy Running Example ##
 

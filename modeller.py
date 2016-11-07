@@ -171,7 +171,7 @@ elif mode == 'a' :
 
 	# Simple message format ( 1 word )
 	for token in token_db:
-		sport = int(RandShort())
+		sport = sport + 1
 		cnt = cnt + 1
 
 		#Start with 3WHS
@@ -182,11 +182,13 @@ elif mode == 'a' :
 		p = generate_ftp_msg(payload, rp)
 		#print "[+] Message to be sent \n", p.getlayer("Raw").show()
 
+		"""
 		if cnt % 10000 == 0 and raw_input("[?] Trial %d, Send Packet? (y/n) : " % cnt) != 'y' :
 			# Disconnect with pretty FIN ANK
 			disconnect_ftp(rp)
 			print "[+] Program ends... \n"
 			break
+		"""
 
 		# Send message and listen
 		ans, unans = sr(p, multi=1, timeout=0.1, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
@@ -213,14 +215,15 @@ elif mode == 'a' :
 		cs = 0
 
 		if cnt % 1000 == 0 :
-			ftpmachine.model.graph.draw("diagram/sample_state.png", prog='dot')
-			img = mplotimg.imread("diagram/sample_state.png")
-			plt.imshow(img)
-			plt.show()
-
+			graphname = "diagram/sample_state" + str(cnt) + ".png"
+			ftpmachine.model.graph.draw(graphname, prog='dot')
+			#img = mplotimg.imread("diagram/sample_state.png")
+			#plt.imshow(img)
+			#plt.show()
+		
 	# Program normally ends.
-	ftpmachine.model.graph.draw("diagram/sample_state.png", prog='dot')
-	img = mplotimg.imread("diagram/sample_state.png")
+	ftpmachine.model.graph.draw("diagram/sample_state_fin.png", prog='dot')
+	img = mplotimg.imread("diagram/sample_state_fin.png")
 	plt.imshow(img)
 	plt.show()
 	sys.exit()
