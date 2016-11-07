@@ -5,6 +5,8 @@ ptmsg is a tool that automatically infering network protocol models from binary 
 
 ## Prerequisite ##
 - Scapy
+- matplotlib
+- transitions
 
 ## Easy Running Example ##
 
