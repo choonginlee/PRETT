@@ -1,172 +1,160 @@
    1070 /lib64/ld-linux-x86-64.so.2
-   3621 libavahi-client.so.3
-   3646 _ITM_deregisterTMCloneTable
-   3702 avahi_address_parse
-   3726 __gmon_start__
-   3745 avahi_init_i18n
-   3765 _Jv_RegisterClasses
-   4011 avahi_address_snprint
-   4037 _ITM_registerTMCloneTable
-   4071 avahi_address_resolver_new
-   4124 _fini
-   4132 avahi_client_errno
-   4155 avahi_client_new
-   4176 avahi_client_free
-   4220 avahi_client_get_host_name_fqdn
-   4260 avahi_client_get_version_string
-   4320 avahi_host_name_resolver_free
-   4356 avahi_host_name_resolver_new
-   4413 _init
-   4421 avahi_address_resolver_free
-   4455 libavahi-common.so.3
-   4502 avahi_simple_poll_get
-   4530 avahi_simple_poll_new
-   4556 avahi_simple_poll_quit
-   4605 avahi_strerror
-   4624 avahi_simple_poll_free
-   4653 avahi_simple_poll_loop
-   4702 libpthread.so.0
-   4722 write
-   4730 read
-   4735 __errno_location
-   4756 fcntl
-   4764 sigaction
-   4776 close
-   5004 libc.so.6
-   5016 __printf_chk
-   5033 setlocale
-   5045 optind
-   5054 strrchr
-   5064 pipe
-   5071 dcgettext
-   5103 __stack_chk_fail
-   5124 __assert_fail
-   5142 strstr
-   5151 __fprintf_chk
-   5167 stdout
-   5176 stderr
-   5205 getopt_long
-   5221 __libc_start_main
-   5243 _edata
-   5252 __bss_start
-   5266 _end
-   5273 GLIBC_2.3.4
-   5307 GLIBC_2.4
-   5321 GLIBC_2.2.5
-   7641 %z  
-   7661 %r  
-   7701 %j  
-   7721 %b  
-   7741 %Z  
-   7761 %R  
-  10001 %J  
-  10021 %B  
-  10041 %:  
-  10061 %2  
-  10101 %*  
-  10121 %"  
-  10740 AWAVAUATA
-  11004 D$81
-  11362 D;%o
-  11577 L$8dH3
-  11627 H[]A\A]A^A_
-  12565 APUM
-  12626 AYAZ
-  13565 UH-P1`
-  14100 ATUSH
-  14123 D$(1
-  14257 D$(dH3
-  14304 0[]A\
-  14620 ATUSH
-  14643 D$(1
-  14755 D$(dH3
-  15002 0[]A\
-  16222 SxB1
-  16360 ATUSH
-  16750 []A\
-  17520 AWAVA
-  17527 AUATL
-  17652 []A\A]A^A_
-  17744 avahi-resolve.c
-  17766 %s	%s
-  17775 avahi
-  20003 n_resolving > 0
-  20023 Client failure, exiting: %s
-  20060 [-a]
-  20070 [-n]
-  20100 address
-  20110 host-name
-  20122 hVnav46
-  20132 Too few arguments
-  20155 No command specified.
-  20204 %s 0.6.32-rc
-  20222 Failed to parse address '%s'
-  20260 help
-  20265 version
-  20275 verbose
-  20310 Failed to resolve address '%s': %s
-  20360 Failed to resolve host name '%s': %s
-  20430 %s [options] %s <host name ...>
-  20470 %s [options] %s <address ... >
-  20530     -h --help            Show this help
-  20600     -V --version         Show version
-  20646     -n --name            Resolve host name
-  20721     -a --address         Resolve address
-  20772     -v --verbose         Enable verbose mode
-  21047     -6                   Lookup IPv6 address
-  21124     -4                   Lookup IPv4 address
-  21210 Failed to create simple poll object.
-  21260 Failed to create client object: %s
-  21330 Failed to query version string: %s
-  21400 Failed to query host name: %s
-  21440 Server version: %s; Host name: %s
-  21510 Failed to create host name resolver: %s
-  21570 Failed to create address resolver: %s
-  23200 host_name_resolver_callback
-  23240 address_resolver_callback
-  23272 SIGINT
-  23301 SIGTERM
-  23311 sigint.c
-  23324 fd == pipe_fds[0]
-  23346 event == AVAHI_WATCH_IN
-  23376 l == sizeof(s)
-  23415 Got %s, quitting.
-  23440 fd >= 0
-  23450 spoll
-  23456 !simple_poll
-  23473 pipe() failed: %s
-  23516 sigaction() failed: %s
-  23546 watch
-  23560 pipe_fds[0] == -1 && pipe_fds[1] == -1
-  23640 sigint_uninstall
-  23670 set_nonblock
-  23710 watch_callback
-  23730 sigint_install
-  24317 ;*3$"
-  30520 2ea7e695d09857d28de0da670c6d26338d37cc.debug
-  30605 .shstrtab
-  30617 .interp
-  30627 .note.ABI-tag
-  30645 .note.gnu.build-id
-  30670 .gnu.hash
-  30702 .dynsym
-  30712 .dynstr
-  30722 .gnu.version
-  30737 .gnu.version_r
-  30756 .rela.dyn
-  30770 .rela.plt
-  31002 .init
-  31010 .plt.got
-  31021 .text
-  31027 .fini
-  31035 .rodata
-  31045 .eh_frame_hdr
-  31063 .eh_frame
-  31075 .init_array
-  31111 .fini_array
-  31125 .jcr
-  31132 .dynamic
-  31143 .got.plt
-  31154 .data
-  31162 .bss
-  31167 .gnu_debuglink
+   3751 libavahi-client.so.3
+   3776 _ITM_deregisterTMCloneTable
+   4032 avahi_address_parse
+   4056 __gmon_start__
+   4075 avahi_init_i18n
+   4115 _Jv_RegisterClasses
+   4141 avahi_address_snprint
+   4167 _ITM_registerTMCloneTable
+   4221 avahi_address_resolver_new
+   4254 _fini
+   4262 avahi_client_errno
+   4305 avahi_client_new
+   4326 avahi_client_free
+   4350 avahi_client_get_host_name_fqdn
+   4410 avahi_client_get_version_string
+   4450 avahi_host_name_resolver_free
+   4506 avahi_host_name_resolver_new
+   4543 _init
+   4551 avahi_address_resolver_free
+   4605 libavahi-common.so.3
+   4632 avahi_simple_poll_get
+   4660 avahi_simple_poll_new
+   4706 avahi_simple_poll_quit
+   4735 avahi_strerror
+   4754 avahi_simple_poll_free
+   5003 avahi_simple_poll_loop
+   5032 libpthread.so.0
+   5052 write
+   5060 read
+   5065 __errno_location
+   5106 fcntl
+   5114 sigaction
+   5126 close
+   5134 libc.so.6
+   5146 __printf_chk
+   5163 setlocale
+   5175 optind
+   5204 strrchr
+   5214 pipe
+   5221 dcgettext
+   5233 __stack_chk_fail
+   5254 __assert_fail
+   5272 strstr
+   5301 __fprintf_chk
+   5317 stdout
+   5326 stderr
+   5335 getopt_long
+   5351 __cxa_finalize
+   5370 __libc_start_main
+   5412 _edata
+   5421 __bss_start
+   5435 _end
+   5442 _IO_stdin_used
+   5461 GLIBC_2.3.4
+   5475 GLIBC_2.4
+   5507 GLIBC_2.2.5
+  11140 AWAVAUATA
+  11204 D$81
+  12026 L$8dH3
+  12055 H[]A\A]A^A_
+  13046 APUM
+  13106 AYAZ
+  14460 AUATUSH
+  14505 D$(1
+  14641 D$(dH3
+  14666 8[]A\A]
+  15220 ATUSH
+  15243 D$(1
+  15355 D$(dH3
+  15402 0[]A\
+  16702 SxB1
+  17060 ATUSH
+  17463 []A\
+  20340 AWAVA
+  20347 AUATL
+  20472 []A\A]A^A_
+  20544 avahi-resolve.c
+  20566 %s	%s
+  20575 avahi
+  20603 n_resolving > 0
+  20623 Client failure, exiting: %s
+  20660 [-a]
+  20670 [-n]
+  20700 address
+  20710 host-name
+  20722 hVnav46
+  20732 Too few arguments
+  20755 No command specified.
+  21004 %s 0.6.32
+  21017 Failed to parse address '%s'
+  21055 help
+  21062 version
+  21072 verbose
+  21110 Failed to resolve address '%s': %s
+  21160 Failed to resolve host name '%s': %s
+  21230 %s [options] %s <host name ...>
+  21270 %s [options] %s <address ... >
+  21330     -h --help            Show this help
+  21400     -V --version         Show version
+  21446     -n --name            Resolve host name
+  21521     -a --address         Resolve address
+  21572     -v --verbose         Enable verbose mode
+  21647     -6                   Lookup IPv6 address
+  21724     -4                   Lookup IPv4 address
+  22010 Failed to create simple poll object.
+  22060 Failed to create client object: %s
+  22130 Failed to query version string: %s
+  22200 Failed to query host name: %s
+  22240 Server version: %s; Host name: %s
+  22310 Failed to create host name resolver: %s
+  22370 Failed to create address resolver: %s
+  23060 host_name_resolver_callback
+  23120 address_resolver_callback
+  23152 SIGINT
+  23161 SIGTERM
+  23171 sigint.c
+  23204 fd == pipe_fds[0]
+  23226 event == AVAHI_WATCH_IN
+  23256 l == sizeof(s)
+  23275 Got %s, quitting.
+  23320 fd >= 0
+  23330 spoll
+  23336 !simple_poll
+  23353 pipe() failed: %s
+  23376 sigaction() failed: %s
+  23426 watch
+  23440 pipe_fds[0] == -1 && pipe_fds[1] == -1
+  23520 sigint_uninstall
+  23550 set_nonblock
+  23570 watch_callback
+  23610 sigint_install
+  24177 ;*3$"
+  30030 f224e568748db12b8eb6ce751cbc5929eb9953.debug
+  30115 .shstrtab
+  30127 .interp
+  30137 .note.ABI-tag
+  30155 .note.gnu.build-id
+  30200 .gnu.hash
+  30212 .dynsym
+  30222 .dynstr
+  30232 .gnu.version
+  30247 .gnu.version_r
+  30266 .rela.dyn
+  30300 .init
+  30306 .plt
+  30313 .plt.got
+  30324 .text
+  30332 .fini
+  30340 .rodata
+  30350 .eh_frame_hdr
+  30366 .eh_frame
+  30400 .init_array
+  30414 .fini_array
+  30430 .jcr
+  30435 .data.rel.ro
+  30452 .dynamic
+  30463 .data
+  30471 .bss
+  30476 .gnu_debuglink

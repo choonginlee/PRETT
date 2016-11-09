@@ -1,340 +1,315 @@
    1070 /lib64/ld-linux-x86-64.so.2
-   5061 libavahi-client.so.3
-   5106 avahi_string_list_add
-   5134 avahi_string_list_free
-   5163 _ITM_deregisterTMCloneTable
-   5217 avahi_malloc
-   5234 __gmon_start__
-   5253 avahi_init_i18n
-   5273 avahi_strdup
-   5310 _Jv_RegisterClasses
-   5334 avahi_domain_equal
-   5357 avahi_address_snprint
-   5405 _ITM_registerTMCloneTable
-   5437 avahi_free
-   5452 _fini
-   5460 avahi_service_resolver_new
-   5513 avahi_service_type_browser_new
-   5552 avahi_client_errno
-   5575 avahi_client_new
-   5616 avahi_client_free
-   5640 avahi_domain_browser_new
-   5671 avahi_client_get_host_name_fqdn
-   5731 avahi_client_get_version_string
-   5771 avahi_service_browser_new
-   6023 _init
-   6031 avahi_service_resolver_free
-   6065 libavahi-common.so.3
-   6112 avahi_strndup
-   6130 avahi_simple_poll_get
-   6156 avahi_simple_poll_new
-   6204 avahi_simple_poll_quit
-   6233 avahi_proto_to_string
-   6261 avahi_strerror
-   6300 avahi_string_list_to_string
-   6334 avahi_escape_label
-   6357 avahi_simple_poll_free
-   6406 avahi_simple_poll_loop
-   6435 libgdbm.so.3
-   6452 gdbm_close
-   6465 gdbm_nextkey
-   6502 gdbm_firstkey
-   6520 gdbm_fetch
-   6533 gdbm_open
-   6545 libpthread.so.0
-   6565 write
-   6573 read
-   6600 __errno_location
-   6621 fcntl
-   6627 sigaction
-   6641 libc.so.6
-   6653 fflush
-   6662 __printf_chk
-   6677 setlocale
-   6711 optind
-   6720 strrchr
-   6730 pipe
-   6735 dcgettext
-   6747 __stack_chk_fail
-   6770 __assert_fail
-   7006 strtol
-   7015 strlen
-   7024 strstr
-   7033 __fprintf_chk
-   7051 stdout
-   7060 strcasecmp
-   7073 __ctype_b_loc
-   7111 getenv
-   7120 optarg
-   7127 stderr
-   7136 __snprintf_chk
-   7155 getopt_long
-   7171 if_indextoname
-   7210 strchr
-   7217 __libc_start_main
-   7241 snprintf
-   7252 _edata
-   7261 __bss_start
-   7275 _end
-   7302 GLIBC_2.2.5
-   7316 GLIBC_2.3
-   7330 GLIBC_2.4
-   7342 GLIBC_2.3.4
-  13301 %zI 
-  13321 %rI 
-  13341 %jI 
-  13361 %bI 
-  13401 %ZI 
-  13421 %RI 
-  13441 %JI 
-  13461 %BI 
-  13501 %:I 
-  13521 %2I 
-  13541 %*I 
-  13561 %"I 
-  14301 %zH 
-  14321 %rH 
-  14341 %jH 
-  14361 %bH 
-  14401 %ZH 
-  14421 %RH 
-  14441 %JH 
-  14461 %BH 
-  14501 %:H 
-  14521 %2H 
-  14541 %*H 
-  14561 %"H 
-  15462 D$4H
-  15741 =jF 
-  16346 []A\
-  16366 ;-LE 
-  16504 =WE 
-  17345 =vC 
-  17452 =1C 
-  17605 UH-(b`
-  20001 =aB 
-  20500 AWAVAUATUSH
-  20567 tG9+u
-  20706 []A\A]A^A_
-  21041 5b@ 
-  21101 =Z@ 
-  21523 t$(1
-  22022 D$(dH3
-  22064 -V> 
-  22112 =I> 
-  22170 =#> 
-  22520 AWAVM
-  22527 AUATA
-  22560 O4dH
-  22642 D$0L
-  23024 t$ D
-  23165 []A\A]A^A_
-  23244 l$0H
-  23443 t$ D
-  23473 AWAV
-  23760 AWAVAUATUSH
-  24007 D$XH
-  24156 []A\A]A^A_
-  24201 -	: 
-  24216 []A\A]A^A_
-  24356 []A\A]A^A_
-  24462 l$PM
-  24515 []A\A]A^A_
-  24541 -%9 
-  24774 l$PM
-  25030 ={8 
-  25101 T$(H
-  25115 B t>
-  25360 AWAVM
-  25367 AUATM
-  25422 D$H1
-  25645 D$HdH3
-  25672 X[]A\A]A^A_
-  26017 =L6 
-  26044 L$(L
-  26051 D$ 1
-  26204 D$ L
-  26256 L$ u%
-  26500 AUATUSH
-  26530 =;5 
-  26644 []A\A]
-  26726 ZYt/H
-  27002 []A\A]
-  27065 =&4 
-  27116 =M4 
-  27411 =R3 
-  27443 =x3 
-  27521 -93 
-  27541 -%3 
-  27660 AUATUSH
-  27772 =a2 
-  30022 []A\A]
-  30144 =/2 
-  30156 Sh@#@
-  30357 =l1 
-  30426 []A\A]
-  30472 =Y1 
-  30735 =~0 
-  31026 =E0 
-  31054 =g0 
-  31070 =C0 
-  31117 5$0 
-  31453 =h/ 
-  31556 =-/ 
-  31765 =f. 
-  32362 =!/ 
-  32662 SxB1
-  33020 ATUSH
-  33226 $`4@
-  33333 5@+ 
-  33410 []A\
-  33457 =,+ 
-  33742 =0, 
-  34244 AWAVAUATSH
-  34310 =b+ 
-  34571 AXAY
-  34706 [A\A]A^A_]
-  35706 =e( 
-  35727 =L( 
-  35756 =-( 
-  36040 AUATUSH
-  36220 t^Hc
-  36303 -h' 
-  36371 []A\A]
-  36402 -)' 
-  36460 AWAVA
-  36467 AUATL
-  36612 []A\A]A^A_
-  36704 avahi-browse.c
-  36723 *_head == _item
-  36743 n_all_for_now >= 0
-  36766 n_cache_exhausted >= 0
-  37015 n_resolving >= 0
-  37036 : All for now
-  37055 avahi
-  37063 : Cache exhausted
-  37112 %c;%s;%s;%s
-  37127 %c %4s %4s %s
-  37146 domain_browser failed: %s
-  37201 %c;%s;%s;%s;%s;%s%s
-  37225 %c %6s %4s %-*s %-20s %s
-  37257 service_browser failed: %s
-  37315 ;%s;%s;%u;%s
-  37333 n_resolving > 0
-  37353 client
-  37362 stype
-  37370 Client failure, exiting: %s
-  37425 E Ifce Prot Domain
-  37451 Type
-  37456 Name
-  37463 Waiting for daemon ...
-  37513 COLUMNS
-  37523 domain
-  37532 hVd:avtclrDfpkb
-  37552 Too few arguments
-  37575 Too many arguments
-  37621 %s [options] 
-  37641 %s 0.6.32-rc
-  37657 help
-  37664 version
-  37674 browse-domains
-  37717 verbose
-  37727 terminate
-  37741 cache
-  37747 ignore-local
-  37764 resolve
-  37774 no-fail
-  40004 parsable
-  40015 no-db-lookup
-  40032 dump-db
-  41130 remove_service
-  42140 domain_browser_callback
-  42200 service_type_browser_callback
-  42240 check_terminate
-  42260 service_resolver_callback
-  42320 service_browser_callback
-  42360 browse_service_type
-  42404 start
-  42420 Failed to resolve service '%s' of type '%s' in domain '%s': %s
-  42520    hostname = [%s]
-  42543    address = [%s]
-  42565    port = [%u]
-  42604    txt = [%s]
-  42630 avahi_service_browser_new() failed: %s
-  42700 service_type_browser failed: %s
-  42750 Disconnected, reconnecting ...
-  43010 Failed to create client object: %s
-  43060 Failed to query version string: %s
-  43130 Failed to query host name: %s
-  43170 Server version: %s; Host name: %s
-  43240 E Ifce Prot %-*s %-20s Domain
-  43300 avahi_service_type_browser_new() failed: %s
-  43360 config->command == COMMAND_BROWSE_DOMAINS
-  43440 avahi_domain_browser_new() failed: %s
-  43510 %s [options] <service type>
-  43544 %s [options] -a
-  43564 %s [options] -D
-  43604 %s [options] -b
-  43630     -k --no-db-lookup    Don't lookup service types
-  43714     -b --dump-db         Dump service type database
-  44010     -h --help            Show this help
-  44060     -V --version         Show version
-  44126     -D --browse-domains  Browse for browsing domains instead of services
-  44237     -a --all             Show all services, regardless of the type
-  44342     -d --domain=DOMAIN   The domain to browse in
-  44423     -v --verbose         Enable verbose mode
-  44500     -t --terminate       Terminate after dumping a more or less complete list
-  44616     -c --cache           Terminate after dumping all entries from the cache
-  44732     -l --ignore-local    Ignore local services
-  45011     -r --resolve         Resolve services found
-  45071     -f --no-fail         Don't fail if the daemon is not available
-  45174     -p --parsable        Output in parsable format
-  45260 Failed to create simple poll object.
-  45326 SIGINT
-  45335 SIGTERM
-  45345 sigint.c
-  45360 fd == pipe_fds[0]
-  45402 event == AVAHI_WATCH_IN
-  45432 l == sizeof(s)
-  45451 Got %s, quitting.
-  45474 fd >= 0
-  45504 spoll
-  45512 !simple_poll
-  45527 pipe() failed: %s
-  45552 sigaction() failed: %s
-  45602 watch
-  45610 pipe_fds[0] == -1 && pipe_fds[1] == -1
-  45660 sigint_uninstall
-  45710 set_nonblock
-  45730 watch_callback
-  45750 sigint_install
-  45770 /usr/lib/x86_64-linux-gnu/avahi/service-types.db
-  46060 %s[%s]
-  46577 ;*3$"
-  61050 233f16cd34d925551757fb1f6829cc77af0215.debug
-  61135 .shstrtab
-  61147 .interp
-  61157 .note.ABI-tag
-  61175 .note.gnu.build-id
-  61220 .gnu.hash
-  61232 .dynsym
-  61242 .dynstr
-  61252 .gnu.version
-  61267 .gnu.version_r
-  61306 .rela.dyn
-  61320 .rela.plt
-  61332 .init
-  61340 .plt.got
-  61351 .text
-  61357 .fini
-  61365 .rodata
-  61375 .eh_frame_hdr
-  61413 .eh_frame
-  61425 .init_array
-  61441 .fini_array
-  61455 .jcr
-  61462 .dynamic
-  61473 .got.plt
-  61504 .data
-  61512 .bss
-  61517 .gnu_debuglink
+   1205 _<2b9
+   5221 libavahi-client.so.3
+   5246 avahi_string_list_add
+   5274 avahi_string_list_free
+   5323 _ITM_deregisterTMCloneTable
+   5357 avahi_malloc
+   5374 __gmon_start__
+   5413 avahi_init_i18n
+   5433 avahi_strdup
+   5450 _Jv_RegisterClasses
+   5474 avahi_domain_equal
+   5517 avahi_address_snprint
+   5545 _ITM_registerTMCloneTable
+   5577 avahi_free
+   5612 _fini
+   5620 avahi_service_resolver_new
+   5653 avahi_service_type_browser_new
+   5712 avahi_client_errno
+   5735 avahi_client_new
+   5756 avahi_client_free
+   6000 avahi_domain_browser_new
+   6031 avahi_client_get_host_name_fqdn
+   6071 avahi_client_get_version_string
+   6131 avahi_service_browser_new
+   6163 _init
+   6171 avahi_service_resolver_free
+   6225 libavahi-common.so.3
+   6252 avahi_strndup
+   6270 avahi_simple_poll_get
+   6316 avahi_simple_poll_new
+   6344 avahi_simple_poll_quit
+   6373 avahi_proto_to_string
+   6421 avahi_strerror
+   6440 avahi_string_list_to_string
+   6474 avahi_escape_label
+   6517 avahi_simple_poll_free
+   6546 avahi_simple_poll_loop
+   6575 libgdbm.so.3
+   6612 gdbm_close
+   6625 gdbm_nextkey
+   6642 gdbm_firstkey
+   6660 gdbm_fetch
+   6673 gdbm_open
+   6705 libpthread.so.0
+   6725 write
+   6733 read
+   6740 __errno_location
+   6761 fcntl
+   6767 sigaction
+   7001 libc.so.6
+   7013 fflush
+   7022 __printf_chk
+   7037 setlocale
+   7051 optind
+   7060 strrchr
+   7070 pipe
+   7075 dcgettext
+   7107 __stack_chk_fail
+   7130 __assert_fail
+   7146 strtol
+   7155 strlen
+   7164 strstr
+   7173 __fprintf_chk
+   7211 stdout
+   7220 strcasecmp
+   7233 __ctype_b_loc
+   7251 getenv
+   7260 optarg
+   7267 stderr
+   7276 __snprintf_chk
+   7315 getopt_long
+   7331 if_indextoname
+   7350 strchr
+   7357 __cxa_finalize
+   7376 __libc_start_main
+   7420 snprintf
+   7431 _edata
+   7440 __bss_start
+   7454 _end
+   7461 _IO_stdin_used
+   7500 GLIBC_2.2.5
+   7514 GLIBC_2.3
+   7526 GLIBC_2.4
+   7540 GLIBC_2.3.4
+  15360 AUATA
+  15723 D$4H
+  16367 =DC 
+  16422 5AC 
+  16462 5!C 
+  16476 =5C 
+  16524 ='C 
+  16616 []A\A]
+  16671 T$4H
+  17071 =BB 
+  17772 =A@ 
+  20341 =a? 
+  21120 AWAVAUATUSH
+  21207 tG9+u
+  21326 []A\A]A^A_
+  21461 52= 
+  21521 =*= 
+  22161 D$(1
+  22472 D$(dH3
+  23220 AWAVM
+  23227 AUATA
+  23260 O4dH
+  23342 D$0H
+  23530 t$ D
+  23564 UAWM
+  23673 []A\A]A^A_
+  23764 l$0H
+  24167 t$ D
+  24223 AWAVM
+  24520 AWAVA
+  24527 AUATUSH
+  24552 t$XH
+  24727 []A\A]A^A_
+  24766 []A\A]A^A_
+  25012 =i6 
+  25121 =*6 
+  25132 []A\A]A^A_
+  25242 l$PM
+  25275 []A\A]A^A_
+  25554 l$PM
+  25664 T$(H
+  25700 B tJ
+  26030 =[4 
+  26200 AWAVAUATA
+  26242 D$H1
+  26465 D$HdH3
+  26512 X[]A\A]A^A_
+  26722 \$ A
+  27360 AUATUSH
+  27410 =k1 
+  27524 []A\A]
+  27611 ZYt/H
+  27665 []A\A]
+  27754 =O0 
+  30005 =v0 
+  30341 =Z/ 
+  30451 -A/ 
+  30501 -%/ 
+  30620 AUATUSH
+  30736 =]. 
+  30766 []A\A]
+  31113 =(. 
+  31323 =h- 
+  31372 []A\A]
+  31442 =Q- 
+  31725 =f, 
+  32032 =!, 
+  32060 =C, 
+  32412 =i+ 
+  32464 =?+ 
+  32703 =x* 
+  33014 =/* 
+  33045 =V* 
+  33252 =i) 
+  33343 =X) 
+  33645 =n( 
+  33664 =c( 
+  33742 SxB1
+  34120 ATUSH
+  34246 =m' 
+  34261 =f' 
+  34523 []A\
+  35154 5O& 
+  35245 =N' 
+  35464 AWAVAUATSH
+  35722 =9& 
+  36012 AXAY
+  36127 [A\A]A^A_]
+  36302 =I% 
+  37240 AUATUSH
+  37254 -_# 
+  37420 t^Hc
+  37571 []A\A]
+  37626 =e" 
+  37660 AWAVA
+  37667 AUATL
+  40012 []A\A]A^A_
+  40064 avahi-browse.c
+  40103 *_head == _item
+  40123 n_all_for_now >= 0
+  40146 n_cache_exhausted >= 0
+  40175 n_resolving >= 0
+  40216 : All for now
+  40235 avahi
+  40243 : Cache exhausted
+  40272 %c;%s;%s;%s
+  40307 %c %4s %4s %s
+  40326 domain_browser failed: %s
+  40361 %c;%s;%s;%s;%s;%s%s
+  40405 %c %6s %4s %-*s %-20s %s
+  40437 service_browser failed: %s
+  40475 ;%s;%s;%u;%s
+  40513 n_resolving > 0
+  40533 client
+  40542 stype
+  40550 Client failure, exiting: %s
+  40605 E Ifce Prot Domain
+  40631 Type
+  40636 Name
+  40643 Waiting for daemon ...
+  40673 COLUMNS
+  40703 domain
+  40712 hVd:avtclrDfpkb
+  40732 Too few arguments
+  40755 Too many arguments
+  41001 %s [options] 
+  41021 %s 0.6.32
+  41034 help
+  41041 version
+  41051 browse-domains
+  41074 verbose
+  41104 terminate
+  41116 cache
+  41124 ignore-local
+  41141 resolve
+  41151 no-fail
+  41161 parsable
+  41172 no-db-lookup
+  41207 dump-db
+  41640 remove_service
+  41660 domain_browser_callback
+  41720 service_type_browser_callback
+  41760 check_terminate
+  42000 service_resolver_callback
+  42040 service_browser_callback
+  42100 browse_service_type
+  42124 start
+  42140 Failed to resolve service '%s' of type '%s' in domain '%s': %s
+  42240    hostname = [%s]
+  42263    address = [%s]
+  42305    port = [%u]
+  42324    txt = [%s]
+  42350 avahi_service_browser_new() failed: %s
+  42420 service_type_browser failed: %s
+  42470 Disconnected, reconnecting ...
+  42530 Failed to create client object: %s
+  42600 Failed to query version string: %s
+  42650 Failed to query host name: %s
+  42710 Server version: %s; Host name: %s
+  42760 E Ifce Prot %-*s %-20s Domain
+  43020 avahi_service_type_browser_new() failed: %s
+  43100 config->command == COMMAND_BROWSE_DOMAINS
+  43160 avahi_domain_browser_new() failed: %s
+  43230 %s [options] <service type>
+  43264 %s [options] -a
+  43304 %s [options] -D
+  43324 %s [options] -b
+  43350     -k --no-db-lookup    Don't lookup service types
+  43434     -b --dump-db         Dump service type database
+  43530     -h --help            Show this help
+  43600     -V --version         Show version
+  43646     -D --browse-domains  Browse for browsing domains instead of services
+  43757     -a --all             Show all services, regardless of the type
+  44062     -d --domain=DOMAIN   The domain to browse in
+  44143     -v --verbose         Enable verbose mode
+  44220     -t --terminate       Terminate after dumping a more or less complete list
+  44336     -c --cache           Terminate after dumping all entries from the cache
+  44452     -l --ignore-local    Ignore local services
+  44531     -r --resolve         Resolve services found
+  44611     -f --no-fail         Don't fail if the daemon is not available
+  44714     -p --parsable        Output in parsable format
+  45000 Failed to create simple poll object.
+  45046 SIGINT
+  45055 SIGTERM
+  45065 sigint.c
+  45100 fd == pipe_fds[0]
+  45122 event == AVAHI_WATCH_IN
+  45152 l == sizeof(s)
+  45171 Got %s, quitting.
+  45214 fd >= 0
+  45224 spoll
+  45232 !simple_poll
+  45247 pipe() failed: %s
+  45272 sigaction() failed: %s
+  45322 watch
+  45330 pipe_fds[0] == -1 && pipe_fds[1] == -1
+  45400 sigint_uninstall
+  45430 set_nonblock
+  45450 watch_callback
+  45470 sigint_install
+  45510 /usr/lib/x86_64-linux-gnu/avahi/service-types.db
+  45600 %s[%s]
+  46317 ;*3$"
+  60040 5f3c326239dba18abf02b426ec7ca7bdadfd8b.debug
+  60125 .shstrtab
+  60137 .interp
+  60147 .note.ABI-tag
+  60165 .note.gnu.build-id
+  60210 .gnu.hash
+  60222 .dynsym
+  60232 .dynstr
+  60242 .gnu.version
+  60257 .gnu.version_r
+  60276 .rela.dyn
+  60310 .init
+  60316 .plt
+  60323 .plt.got
+  60334 .text
+  60342 .fini
+  60350 .rodata
+  60360 .eh_frame_hdr
+  60376 .eh_frame
+  60410 .init_array
+  60424 .fini_array
+  60440 .jcr
+  60445 .data.rel.ro
+  60462 .dynamic
+  60473 .data
+  60501 .bss
+  60506 .gnu_debuglink

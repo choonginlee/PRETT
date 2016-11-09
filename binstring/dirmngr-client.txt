@@ -1,1040 +1,1073 @@
    1070 /lib64/ld-linux-x86-64.so.2
-   1211 hX,&
-   1307 |fUa
-  10221 libassuan.so.0
-  10240 _ITM_deregisterTMCloneTable
-  10274 __gmon_start__
-  10313 _Jv_RegisterClasses
-  10337 _ITM_registerTMCloneTable
-  10371 assuan_send_data
-  10412 assuan_new
-  10425 assuan_set_log_cb
-  10447 assuan_release
-  10466 assuan_transact
-  10506 assuan_set_gpg_err_source
-  10540 assuan_socket_connect
-  10566 assuan_set_assuan_log_prefix
-  10623 libgpg-error.so.0
-  10645 _gpgrt_putc_overflow
-  10672 gpg_err_init
-  10707 gpgrt_fputs_unlocked
-  10734 gpgrt_flockfile
-  10754 gpg_err_code_from_errno
-  11004 gpgrt_vasprintf
-  11024 gpgrt_fprintf_unlocked
-  11053 gpgrt_setvbuf
-  11071 _gpgrt_get_std_stream
-  11117 gpg_err_code_from_syserror
-  11152 gpgrt_asprintf
-  11171 gpgrt_fputc
-  11205 gpgrt_snprintf
-  11224 gpg_strerror
-  11241 gpgrt_fopencookie
-  11263 gpgrt_vfprintf_unlocked
-  11313 gpgrt_fclose
-  11330 gpgrt_fdopen
-  11345 gpgrt_fputs
-  11361 gpgrt_fileno
-  11376 gpg_err_set_errno
-  11420 gpgrt_set_alloc_func
-  11445 gpgrt_funlockfile
-  11467 gpgrt_ferror
-  11504 gpgrt_fprintf
-  11522 gpgrt_fflush
-  11537 libc.so.6
-  11551 socket
-  11560 strcpy
-  11567 execv
-  11575 _IO_putc
-  11606 setlocale
-  11620 fopen
-  11626 strncmp
-  11636 strrchr
-  11646 pipe
-  11653 dcgettext
-  11665 getpwuid
-  11676 strncpy
-  11706 fork
-  11713 __stack_chk_fail
-  11734 unlink
-  11743 select
-  11752 mkdir
-  11760 realloc
-  11770 abort
-  11776 stdin
-  12004 _exit
-  12012 strpbrk
-  12022 getpid
-  12031 kill
-  12036 bind_textdomain_codeset
-  12066 inet_pton
-  12100 __assert_fail
-  12116 strtol
-  12125 isatty
-  12134 getpwnam
-  12145 calloc
-  12154 strlen
-  12163 tmpfile
-  12173 __errno_location
-  12214 chdir
-  12222 memcmp
-  12231 ttyname
-  12241 dup2
-  12246 unsetenv
-  12257 __fprintf_chk
-  12275 putenv
-  12304 stdout
-  12313 memcpy
-  12322 strtoul
-  12332 malloc
-  12341 remove
-  12350 nl_langinfo
-  12364 __ctype_b_loc
-  12402 getenv
-  12411 __open_2
-  12422 stderr
-  12431 getuid
-  12440 setrlimit
-  12452 __fxstat
-  12463 getcwd
-  12472 fwrite
-  12501 fread
-  12507 iconv_close
-  12523 geteuid
-  12533 __memcpy_chk
-  12550 waitpid
-  12560 localtime
-  12572 strchr
-  12601 iconv
-  12607 canonicalize_file_name
-  12636 iconv_open
-  12651 sleep
-  12657 __ctype_toupper_loc
-  12703 __ctype_tolower_loc
-  12727 __cxa_finalize
-  12746 setsid
-  12755 __sprintf_chk
-  12773 __xstat
-  13003 getrlimit
-  13015 memmove
-  13025 uname
-  13033 bindtextdomain
-  13052 access
-  13061 _IO_getc
-  13072 strcmp
-  13101 __libc_start_main
-  13123 stpcpy
-  13132 sysconf
-  13142 free
-  13147 __cxa_atexit
-  13164 _edata
-  13173 __bss_start
-  13207 _end
-  13214 _IO_stdin_used
-  13233 default_errsource
-  13255 LIBASSUAN_1.0
-  13273 GPG_ERROR_1.0
-  13311 GLIBC_2.14
-  13324 GLIBC_2.3.4
-  13340 GLIBC_2.4
-  13352 GLIBC_2.7
-  13364 GLIBC_2.2.5
-  13400 GLIBC_2.3
-  30740 AWAVAUATE1
-  31017 |$,H
-  31024 \$pH
-  31207 D$pH
-  31721 5J<!
-  32044 |$@ N
-  32063 =p?!
-  32125 |$0H
-  32226 |$PL
-  32233 t$Hf
-  32252 l$0H
-  32317 T$PH
-  32324 t$HH
-  32417 =L=!
-  33007 []A\A]A^A_
-  33073 ={=!
-  33103 t$0H
-  33175 =9=!
-  33210 LOADCRL I
-  33440 =~<!
-  33450 _AX~
-  33543 D$,H
-  34536 T$,H
-  34576 l$0E
-  34717 LOOKUP 
-  35115 D$8H
-  35122 |$0L
-  35151 D$XH
-  35156 D$@H
-  35163 |$PH
-  35170 D$`H
-  35230 XZ~ 
-  35606 AYAZ~
-  36067 D$ H
-  36552 =06!
-  36640 D$8H
-  36645 |$0H
-  36674 D$XH
-  36701 D$@H
-  36706 |$PH
-  36713 D$`H
-  36753 Y^~#
-  37055 T$@H
-  37062 t$81
-  37220 D$ H
-  37225 T$@H
-  37232 t$8H
-  37271 D$ H
-  37407 T$@H
-  37414 t$8H
-  37762 =Y2!
-  40231 =j/!
-  40360 AWAVI
-  40367 AUATUSH
-  40765 H94$
-  41103 ?	T$(H
-  41116 D$(H
-  41343 D$ H
-  41524 	vIH
-  42022 8[]A\A]A^A_
-  42062 T$,H
-  42076 T$,H
-  42245 D$(H
-  42575 D$(H
-  42676 AWAVAUATI
-  43223 []A\A]A^A_
-  44567 ='*!
-  45223 t#SH
-  45403 AVAUATI
-  45507 t!L;`
-  46056 ]A\A]A^
-  46130 ]A\A]A^
-  46260 ATUS
-  46426 []A\
-  46705 []A\
-  47604 ATUS
-  47705 []A\A]
-  50055 []A\A]
-  50236 "t2H
-  50245 []A\A]
-  50360 AUATUS1
-  50421 T$0H
-  50426 L$8L
-  50433 D$@L
-  50513 D$ A
-  50706 X[]A\A]
-  51420 AWAVAUATI
-  52750 t	D9
-  54226 "<|t&
-  54340 AWAV1
-  54346 AUATI
-  54515 m8t?A
-  54572 8[]A\A]A^A_
-  54623 -t:A
-  55427  ;|$(
-  55454 J ty
-  55755 :-uM
-  56145 HcT$ 
-  56655 D$(H
-  57041 D$ H
-  57646 T$(H
-  57754 :-tJL
-  60220 AWAVAUATUSH
-  60333 |$`1
-  61007 D$8Ic
-  61574 []A\A]A^A_
-  61722 l$`A
-  62026 l$`A
-  62254 D$ Mc
-  62264 \$ B
-  62347 |$ A
-  62704 D$ B
-  62716 t$ L
-  63364 \$TL
-  63371 |$XE1
-  63411 t$HL
-  63416 |$8H
-  63652 T$DA
-  63725 Lcd$DL
-  64167 |$Db
-  64250 \$TL
-  64255 t$HL
-  64473 |$`B
-  64601 L$ H
-  64613 D$(Ic
-  64651 D$(2H
-  64657 |$ H
-  64664 D$(H
-  64671 T$8H
-  64713 T$8A
-  64724 D$ D
-  65030 L$(H
-  65047 L$(H
-  65054 D$ A
-  66040 AUATI
-  66122 <$-uIA
-  66554 ([]A\A]
-  67060 AWAVAUATI
-  67506 G H;G
-  67574 G H;G
-  70112 []A\A]A^A_
-  70566 A[A^D
-  71353 T$0H
-  71360 L$8L
-  71365 D$@L
-  71372 L$Ht7
-  71400 )D$P
-  71405 )L$`
-  71412 )T$p
-  71640 AWAVAUATI
-  72361 []A\A]A^A_
-  73206 D$ H
-  73213 D$ H
-  73220 T$$f
-  73242 L$"A
-  73441 |$Pf
-  74376 D$0H
-  74403 D$0H
-  74436 T$2A
-  75753 T$0H
-  75760 L$8L
-  75765 D$@L
-  75772 L$Ht7
-  76000 )D$P
-  76005 )L$`
-  76012 )T$p
-  76313 t$(H
-  76320 T$0H
-  76325 L$8L
-  76332 D$@L
-  76337 L$Ht7
-  76345 )D$P
-  76352 )L$`
-  76357 )T$p
-  76613 t$(H
-  76620 T$0H
-  76625 L$8L
-  76632 D$@L
-  76637 L$Ht7
-  76645 )D$P
-  76652 )L$`
-  76657 )T$p
-  77153 t$(H
-  77160 T$0H
-  77165 L$8L
-  77172 D$@L
-  77177 L$Ht7
-  77205 )D$P
-  77212 )L$`
-  77217 )T$p
-  77433 t$(H
-  77440 T$0H
-  77445 L$8L
-  77452 D$@L
-  77457 L$Ht7
-  77465 )D$P
-  77472 )L$`
-  77477 )T$p
-  77713 t$(H
-  77720 T$0H
-  77725 L$8L
-  77732 D$@L
-  77737 L$Ht7
-  77745 )D$P
-  77752 )L$`
-  77757 )T$p
- 100216 t$(H
- 100223 T$0H
- 100230 L$8L
- 100235 D$@L
- 100242 L$Ht7
- 100250 )D$P
- 100255 )L$`
- 100262 )T$p
- 100413 D$ L
- 100540 AUATI
- 100623 []A\A]
- 100745 []A\A]
- 104227 tGSH
- 104275 C t/
- 104500 AWAVAUATUSH
- 104531 D$81
- 104705 \$8dH3
- 104736 H[]A\A]A^A_
- 105223 C(Mc
- 105232 |$ L
- 105352 T$ H
- 105366 |$0M
- 105453 L$"Hc
- 105534 D$3tgI
- 105643 tSE1
- 106320 AUATUSH
- 106500 ([]A\A]
- 106544 w(Ic
- 110477 t$ E1
- 111320 AWAVI
- 111327 AUATI
- 111362 D$(1
- 111371 d$ H
- 111467 t$ H
- 111522 L$(dH3
- 111547 8[]A\A]A^A_
- 112760 AWAVAUATI
- 113066 D$ H
- 113121 D$x1
- 113170 |$01
- 113475 l$HH
- 113502 D$@H
- 113557 |$8H
- 113636 |$8H
- 114100 L$xdH3
- 114133 []A\A]A^A_
- 114354 |$@E1
- 114462 |$01
- 114507 D$(H
- 114514 t$@H
- 114616 |$01
- 114672 D$ H
- 114753 D$01
- 115434 |$@1
- 116120 AWAVI
- 116127 AUATI
- 116172 |$ H
- 116237 D$X1
- 116304 |$ 1
- 116335 |$ 1
- 116510 L$XdH3
- 116537 h[]A\A]A^A_
- 116700 D$ 1
- 117173 |$(H
- 117232 |$(H
- 117361 |$@H
- 117602 |$ 1
- 117646 u]E1
- 120007 t$01
- 120115 |$ 1
- 120440 AUATA
- 120511 D$(1
- 120611 ZYuKH
- 120661 $tDH
- 120666 L$(dH3
- 120711 8[]A\A]
- 121020 AWAVH
- 121031 AUATI
- 121077 D$,H
- 121245 L9<$t K
- 121276 |$(I
- 121305 L9<$u
- 121366 T$,H
- 121431 t$ H
- 121464 Lc|$(H
- 121524 []A\A]A^A_
- 121554 H9D$
- 121576 t$ H
- 121617 L$,1
- 121652 []A\A]A^A_
- 121727 L$(H
- 121763 []A\A]A^A_
- 122204 t~AWAVI
- 122215 AUATI
- 122371 []A\A]A^A_
- 122663 t{USH
- 122705 1vPH
- 123323 t3ATUI
- 123363 []A\E1
- 123455 tiAVAUATUSL
- 123565 ]A\A]A^
- 123614 ]A\A]A^
- 123706 AWAVI
- 123715 AUATUSH
- 124225 []A\A]A^A_
- 124277 []A\A]A^A_
- 124461 []A\A]A^A_
- 124612 USMc
- 125040 AVAUA
- 125047 ATUI
- 125163 ]A\A]A^
- 125402 []A\A]A^
- 126060 AUATI
- 126111 tcE1
- 126227 []A\A]
- 126320 AWAVAUATA
- 127240 AWAVAUATUSH
- 127652 []A\A]A^A_
- 130120 AWAVA
- 130130 AUATA
- 130171 D$h1
- 130444 t$(H
- 130451 |$@1
- 130507 t$0H
- 130563 t$8H
- 130626 |$(H
- 130667 |$0H
- 130734 L$hdH3
- 130763 x[]A\A]A^A_
- 131002 |$(H
- 131172 D$(I
- 131207 D$0H
- 131231 D$81
- 131525 |$(H
- 131562 |$0H
- 131617 |$8H
- 132042 T$@H
- 132100 AWAVM
- 132107 AUATA
- 132171 []A\A]A^A_
- 132360 AWAVI
- 132367 AUATI
- 132451 t?E1
- 132602 []A\A]A^A_
- 133260 AVAUI
- 133267 ATUI
- 133330 []A\A]A^
- 134151 AWAVAUATUSH
- 134300 []A\A]A^A_
- 134531 ([]A\A]A^A_
- 134600 AWAVAUATUSH
- 134634 D$81
- 134666 t8H;X
- 134711 L$8dH3
- 134736 H[]A\A]A^A_
- 135512 ?.u]
- 135531 0tTD
- 135613 8.t9
- 135646 0<	wU1
- 136022 0<	v
- 136071 AWAVAUATA
- 136555 4$Hc
- 136647 []A\A]A^A_
- 137200 AVAUI
- 137207 ATUSH
- 137234 <$dH
- 137542 []A\A]A^
- 137620 AWAV
- 137626 AUAT
- 137775 ?t7I
- 140071 <$~I
- 140721 []A\A]A^A_
- 142060 ATUI
- 142212 []A\
- 142271 ATUI
- 142562 []A\
- 142654 AUATUH
- 143150 ]A\A]
- 143203 ]A\A]
- 143220 []A\I
- 143577 1t.D
- 144062 ttAW
- 144071 AVAUATA
- 144235 []A\A]A^A_
- 144303 tpAWAVI
- 144314 AUATI
- 144452 []A\A]A^A_
- 144624 t:H)
- 144703 []A\
- 144720 []A\H
- 144753 t$(H
- 144760 T$0H
- 144765 L$8L
- 144772 D$@L
- 144777 L$Ht7
- 145005 )D$P
- 145012 )L$`
- 145017 )T$p
- 145253 t$(H
- 145260 T$0H
- 145265 L$8L
- 145272 D$@L
- 145277 L$Ht7
- 145305 )D$P
- 145312 )L$`
- 145317 )T$p
- 145553 t$(H
- 145560 T$0H
- 145565 L$8L
- 145572 D$@L
- 145577 L$Ht7
- 145605 )D$P
- 145612 )L$`
- 145617 )T$p
- 146053 t$(H
- 146060 T$0H
- 146065 L$8L
- 146072 D$@L
- 146077 L$Ht7
- 146105 )D$P
- 146112 )L$`
- 146117 )T$p
+  10751 libassuan.so.0
+  10770 _ITM_deregisterTMCloneTable
+  11024 __gmon_start__
+  11043 _Jv_RegisterClasses
+  11067 _ITM_registerTMCloneTable
+  11121 assuan_send_data
+  11142 assuan_new
+  11155 assuan_set_log_cb
+  11177 assuan_release
+  11216 assuan_transact
+  11236 assuan_set_gpg_err_source
+  11270 assuan_socket_connect
+  11316 assuan_set_assuan_log_prefix
+  11353 libgpg-error.so.0
+  11375 _gpgrt_putc_overflow
+  11422 gpg_err_init
+  11437 gpgrt_fputs_unlocked
+  11464 gpgrt_flockfile
+  11504 gpg_err_code_from_errno
+  11534 gpgrt_vasprintf
+  11554 gpgrt_fprintf_unlocked
+  11603 gpgrt_setvbuf
+  11621 _gpgrt_get_std_stream
+  11647 gpg_err_code_from_syserror
+  11702 gpgrt_asprintf
+  11721 gpgrt_fputc
+  11735 gpgrt_snprintf
+  11754 gpg_strerror
+  11771 gpgrt_fopencookie
+  12013 gpgrt_vfprintf_unlocked
+  12043 gpgrt_fclose
+  12060 gpgrt_fdopen
+  12075 gpgrt_fputs
+  12111 gpgrt_fileno
+  12126 gpg_err_set_errno
+  12150 gpgrt_set_alloc_func
+  12175 gpgrt_funlockfile
+  12217 gpgrt_ferror
+  12234 gpgrt_fprintf
+  12252 gpgrt_fflush
+  12267 libgcrypt.so.20
+  12307 gcry_xcalloc
+  12324 gcry_xrealloc
+  12342 gcry_malloc_secure
+  12365 gcry_xmalloc
+  12402 gcry_create_nonce
+  12424 gcry_strdup
+  12440 gcry_check_version
+  12463 gcry_md_hash_buffer
+  12507 gcry_calloc
+  12523 gcry_xstrdup
+  12540 gcry_realloc
+  12555 gcry_malloc
+  12571 gcry_free
+  12603 gcry_control
+  12620 libc.so.6
+  12632 socket
+  12641 strcpy
+  12650 readdir
+  12660 execv
+  12666 _IO_putc
+  12677 setlocale
+  12711 fopen
+  12717 strncmp
+  12727 strrchr
+  12737 pipe
+  12744 dcgettext
+  12756 getpwuid
+  12767 closedir
+  13000 strncpy
+  13010 fork
+  13015 __stack_chk_fail
+  13036 unlink
+  13045 select
+  13054 mkdir
+  13062 abort
+  13070 stdin
+  13076 _exit
+  13104 strpbrk
+  13114 getpid
+  13123 kill
+  13130 bind_textdomain_codeset
+  13160 inet_pton
+  13172 chmod
+  13200 __assert_fail
+  13216 strtol
+  13225 isatty
+  13234 getpwnam
+  13245 strlen
+  13254 tmpfile
+  13264 strcspn
+  13274 __errno_location
+  13315 chdir
+  13323 memcmp
+  13332 ttyname
+  13342 dup2
+  13347 unsetenv
+  13360 __fprintf_chk
+  13376 putenv
+  13405 stdout
+  13414 memcpy
+  13423 strtoul
+  13433 remove
+  13442 nl_langinfo
+  13456 opendir
+  13466 __ctype_b_loc
+  13504 getenv
+  13513 __open_2
+  13524 stderr
+  13533 getuid
+  13542 setrlimit
+  13554 __fxstat
+  13565 getcwd
+  13574 fwrite
+  13603 fread
+  13611 iconv_close
+  13625 geteuid
+  13635 __memcpy_chk
+  13652 waitpid
+  13662 localtime
+  13674 strchr
+  13703 iconv
+  13711 canonicalize_file_name
+  13740 iconv_open
+  13753 sleep
+  13761 __ctype_toupper_loc
+  14005 __ctype_tolower_loc
+  14031 __cxa_finalize
+  14050 setsid
+  14057 __sprintf_chk
+  14075 __xstat
+  14105 getrlimit
+  14117 memmove
+  14127 uname
+  14135 bindtextdomain
+  14154 access
+  14163 _IO_getc
+  14174 strcmp
+  14203 __libc_start_main
+  14225 stpcpy
+  14234 sysconf
+  14244 __cxa_atexit
+  14261 _IO_stdin_used
+  14300 default_errsource
+  14322 LIBASSUAN_1.0
+  14340 GPG_ERROR_1.0
+  14356 GLIBC_2.14
+  14371 GLIBC_2.3.4
+  14405 GLIBC_2.4
+  14417 GLIBC_2.7
+  14431 GLIBC_2.2.5
+  14445 GLIBC_2.3
+  14457 GCRYPT_1.6
+  33204 X[]1
+  33220 AWAVE1
+  33227 AUATE1
+  33307 l$`H
+  33466 D$`H
+  33512 51I!
+  33540 D$x=
+  34120 |$0 N
+  34173 |$ j
+  34253 l$@L
+  34302 \$ H
+  34347 T$@H
+  34354 t$8H
+  34447 =4I!
+  35051 []A\A]A^A_
+  35364 4$E	
+  35607 =OH!
+  35617 d$ H
+  35721 LOADCRL H
+  36147 =WG!
+  36160 _AX~
+  36665 d$ E
+  37010 LOOKUP 
+  37224 D$(H
+  37231 |$ L
+  37260 D$HH
+  37265 D$0H
+  37272 |$@H
+  37277 D$PH
+  37337 XZ~ 
+  37716 AYAZ~
+  40746 D$(H
+  40753 |$ H
+  41002 D$HH
+  41007 D$0H
+  41014 |$@H
+  41021 D$PH
+  41061 Y^~ 
+  41160 T$0H
+  41165 t$(1
+  41330 T$0H
+  41335 t$(H
+  41454 T$0H
+  41461 t$(H
+  42102 =	>!
+  42500 AWAVI
+  42507 AUATUSH
+  43325 H9<$
+  43440 ?	T$(H
+  43453 D$(H
+  44111 D$ H
+  44220 8[]A\A]A^A_
+  44256 T$,H
+  44272 T$,H
+  44430 D$(H
+  44641 D$(H
+  46056 AWAVAUATI
+  46433 []A\A]A^A_
+  46450 %C5!
+  46573 5d6!
+  47363 t#SH
+  47543 AVAUATI
+  47647 t!L;`
+  50216 ]A\A]A^
+  50270 ]A\A]A^
+  50420 ATUS
+  50566 []A\
+  51045 []A\
+  51744 ATUS
+  52045 []A\A]
+  52215 []A\A]
+  52376 "t2H
+  52405 []A\A]
+  52520 AUATUS1
+  52561 T$0H
+  52566 L$8L
+  52573 D$@L
+  52600 L$HtnH
+  52647 D$ A
+  53010 X[]A\A]
+  53025 5f,!
+  53034 D5>,!
+  53222 =Y-!
+  53540 AWAVI
+  53547 AUATUSH
+  55051 t#D9
+  55642 $<|t	
+  56242 "<|t&
+  56520 AWAV1
+  56526 AUATUSH
+  56674 k8u5
+  56703 -tjD
+  57034 H[]A\A]A^A_
+  57216 L$0H
+  57223 L$(L
+  57266 T$ H
+  57273 L$(L
+  57645  ;|$<A
+  60201 :-uc
+  60606 HcT$
+  61051 D$(H
+  61575 |$<H
+  62105 T$(H
+  62216 :-t1H
+  62420 AWAVAUATUSH
+  62535 |$`1
+  63223 D$ Hc
+  63572 D$ Hc
+  64506 []A\A]A^A_
+  64552 D$ Hc
+  64654 D$(Hc
+  64755 |$(A
+  65153 l$ 1
+  65367 |$(L
+  65640 T$Hf%
+  66020 L$HHc
+  66062 \$TL
+  66067 l$@H
+  66132 T$HHc
+  66167 \$TH
+  66174 |$XH
+  66226 t$@I
+  66305 T$Hf%
+  66717 |$(A
+  67052 l$ 1
+  67171 T$(H
+  67203 D$0Lc
+  67240 D$02H
+  67246 |$(H
+  67253 D$0H
+  67417 D$(H
+  67534 D$Pf%
+  70540 AUATI
+  70622 <$-uIA
+  71254 ([]A\A]
+  71560 AWAVAUATA
+  72220 G I;G
+  72344 G I;G
+  73500 []A\A]A^A_
+  74653 T$0H
+  74660 L$8L
+  74665 D$@L
+  74672 L$Ht7
+  74700 )D$P
+  74705 )L$`
+  74712 )T$p
+  75140 AWAVI
+  75147 AUATI
+  75661 []A\A]A^A_
+  76506 D$ H
+  76513 D$ H
+  76520 T$$f
+  76542 L$"A
+  76725 |$RL
+  77666 D$0H
+  77673 D$0H
+  77726 T$2A
+ 101253 T$0H
+ 101260 L$8L
+ 101265 D$@L
+ 101272 L$Ht7
+ 101300 )D$P
+ 101305 )L$`
+ 101312 )T$p
+ 101613 t$(H
+ 101620 T$0H
+ 101625 L$8L
+ 101632 D$@L
+ 101637 L$Ht7
+ 101645 )D$P
+ 101652 )L$`
+ 101657 )T$p
+ 102113 t$(H
+ 102120 T$0H
+ 102125 L$8L
+ 102132 D$@L
+ 102137 L$Ht7
+ 102145 )D$P
+ 102152 )L$`
+ 102157 )T$p
+ 102453 t$(H
+ 102460 T$0H
+ 102465 L$8L
+ 102472 D$@L
+ 102477 L$Ht7
+ 102505 )D$P
+ 102512 )L$`
+ 102517 )T$p
+ 102733 t$(H
+ 102740 T$0H
+ 102745 L$8L
+ 102752 D$@L
+ 102757 L$Ht7
+ 102765 )D$P
+ 102772 )L$`
+ 102777 )T$p
+ 103213 t$(H
+ 103220 T$0H
+ 103225 L$8L
+ 103232 D$@L
+ 103237 L$Ht7
+ 103245 )D$P
+ 103252 )L$`
+ 103257 )T$p
+ 103516 t$(H
+ 103523 T$0H
+ 103530 L$8L
+ 103535 D$@L
+ 103542 L$Ht7
+ 103550 )D$P
+ 103555 )L$`
+ 103562 )T$p
+ 103713 D$ L
+ 104043 AVAUI
+ 104104 []A\A]A^H
+ 104245 []A\A]A^
+ 105460 ATU1
+ 106540 AWAVL
+ 106553 AUATL
+ 106762 D$(%
+ 107111 []A\A]A^A_
+ 107322 /gnuf
+ 107454 D$(%
+ 110102 D$(?
+ 110122 D$(%
+ 110173 D$(?u
+ 112271 C t+
+ 112500 AWAVAUATUSH
+ 112531 D$81
+ 112705 \$8dH3
+ 112736 H[]A\A]A^A_
+ 113131  t H
+ 113226 E(Mc
+ 113235 |$ L
+ 113400 T$ H
+ 113540 D$2A
+ 113551 D$3tjI
+ 113600 |<0H
+ 113665 tYE1
+ 114340 AVAUATUSH
+ 114355 o4dH
+ 114453 w(Ic
+ 115202  []A\A]A^
+ 116300 AUATD
+ 117417 []A\A]
+ 117556 ]A\A]
+ 120437 t$ E1
+ 121260 AWAVI
+ 121267 AUATI
+ 121322 D$(1
+ 121331 d$ H
+ 121427 t$ H
+ 121464 L$(dH3
+ 121513 8[]A\A]A^A_
+ 122720 AWAVAUATI
+ 122774 t$(H
+ 123045 D$x1
+ 123137 |$01
+ 123426 l$HH
+ 123433 D$@H
+ 123533 |$8H
+ 123572 |$8H
+ 124032 L$xdH3
+ 124065 []A\A]A^A_
+ 124346 |$@E1
+ 124642 |$01
+ 124673 D$ H
+ 124776 |$01
+ 125220 t$(H
+ 125253 D$0I
+ 125337 |$@1
+ 125704 L$,A
+ 126100 AWAVE
+ 126107 AUATA
+ 126217 D$X1
+ 126252 |$ 1
+ 126517 D$0H
+ 126533 D$8H
+ 126557 |$(H
+ 126616 |$(H
+ 126745 D$ 1
+ 127132 L$XdH3
+ 127161 h[]A\A]A^A_
+ 127527 |$ 1
+ 127566 t$01
+ 127654 |$ 1
+ 130140 AUATA
+ 130211 D$(1
+ 130311 ZYuKH
+ 130361 $tDH
+ 130366 L$(dH3
+ 130411 8[]A\A]
+ 130520 AWAVH
+ 130531 AUATI
+ 130577 D$,H
+ 130745 L;<$t K
+ 130776 |$(I
+ 131005 L;<$u
+ 131066 T$,H
+ 131131 t$ H
+ 131164 Lc|$(H
+ 131224 []A\A]A^A_
+ 131254 H9D$
+ 131276 t$ H
+ 131317 L$,1
+ 131352 []A\A]A^A_
+ 131427 t$(H
+ 131463 []A\A]A^A_
+ 131712 AWAVI
+ 131721 AUATI
+ 131767 $vEL
+ 132105 []A\A]A^A_
+ 132403 t{USH
+ 132425 1vPH
+ 133043 t3ATUI
+ 133103 []A\E1
+ 133175 tiAVAUATUSL
+ 133305 ]A\A]A^
+ 133334 ]A\A]A^
+ 133426 AWAVI
+ 133435 AUATUSH
+ 133745 []A\A]A^A_
+ 134017 []A\A]A^A_
+ 134201 []A\A]A^A_
+ 134500 AUATA
+ 134625 []A\A]
+ 135056 []A\A]
+ 135600 dH34%(
+ 136060 AUATI
+ 136111 tcE1
+ 136227 []A\A]
+ 136320 AWAVA
+ 136327 AUATI
+ 136362 D$(1
+ 137260 AWAVAUATUSH
+ 137672 []A\A]A^A_
+ 140060 AWAVA
+ 140070 AUATM
+ 140126 D$h1
+ 140406 t$(H
+ 140454 t$0H
+ 140461 |$P1
+ 140523 t$8H
+ 140530 |$`1
+ 140561 |$(H
+ 140622 |$0H
+ 140662 L$hdH3
+ 140712 x[]A\A]A^A_
+ 140742 |$(H
+ 141123 D$(I
+ 141140 D$0H
+ 141162 D$8E1
+ 141460 |$(H
+ 141515 |$0H
+ 141552 |$8H
+ 142012 t$ L
+ 142017 L$ D
+ 142034 T$PH
+ 142060 AWAVM
+ 142067 AUATA
+ 142151 []A\A]A^A_
+ 142360 AWAVAUATUSH
+ 142411 D$(1
+ 142552 L$(dH3
+ 142577 8[]A\A]A^A_
+ 142642 l$$A
+ 142770 L$$H
+ 143660 AUATI
+ 143750 []A\A]
+ 144600 AWAVAUATUSH
+ 144757 ([]A\A]A^A_
+ 145260 AWAVAUATUSH
+ 145323 D$81
+ 145346 tHH;k
+ 145410 L$8dH3
+ 145435 H[]A\A]A^A_
+ 146212 ?.u]
+ 146231 0tTD
+ 146313 8.t9
+ 146346 0<	w]1
+ 146432 <	wMH
+ 146532 0<	v
  146563 AVAUATUS
- 147220 []A\A]A^
- 151106 tLH9
- 151113 AUATI
- 151122 USwJH)
- 151216 []A\A]
- 151363 tkAVAUATI
- 151510 ]A\A]A^
- 151530 ]A\A]A^
- 151633 t$(H
- 151640 T$0H
- 151645 L$8L
- 151652 D$@L
- 151657 L$Ht7
- 151665 )D$P
- 151672 )L$`
- 151677 )T$p
- 152041 D$ H
- 152173 t$(H
- 152200 T$0H
- 152205 L$8L
- 152212 D$@L
- 152217 L$Ht7
- 152225 )D$P
- 152232 )L$`
- 152237 )T$p
- 152401 D$ H
- 152620 AWAVI
- 152627 AUATI
- 153116 []A\A]A^A_
- 153140 []A\A]A^A_
- 153200 AVAUATUH
- 153545  u!H
- 154013 []A\A]A^
- 154041 ]A\A]A^
- 154400 AWAVAUATA
- 154506  trH
- 155227 []A\A]A^A_
- 155247  uAI
- 155420 ATUI
- 155546 []A\
- 156020 AWAVE1
- 156027 AUATUSH
- 156057 D$x1
- 156066 D$pH
- 156073 t$(H
- 156110 L$<H
- 156115 D$ H
- 156122 D$(H
- 156172 \$0H
- 156222 @@<=vME
- 156557 D$(H
- 156621 T$<A
- 156650 L$xdH3
- 156701 []A\A]A^A_
- 156761 |$ M
- 157177 D$pA
- 157266 L$ I
- 160273 L$ I
- 160345 D$pE1
- 160505 D$pE1
- 160665 D$pE1
- 160733 |$ I
- 160745 l$@H
- 160752 \$HE
- 161076 l$@E
- 161106 \$HM
- 161154 D$pE1
- 161220 D$pE1
- 161364 L$PH
- 161375 T$`H
- 161414 |$hH
- 161443 L$XH
- 161450 T$`H
- 161455 t$PL
- 161462 D$hH
- 161515 D$XH
- 161624 T$8H
- 161631 t$(1
- 162030 T$8H
- 162035 t$(H
- 163140 AVAUATUSH
- 163200 D$(1
- 163437 t$(dH34%(
- 163464 0[]A\A]A^
- 163673 D$ L
- 164340 AWAVAUATI
- 165466 H9D$ L
- 165623 .locf
- 166053 []A\A]A^A_
- 166600 AWAVI
- 166607 AUATUSH
- 166651 L$x1
- 166672 QvCL
- 166756 D$ H
- 167033 D$ H
- 167315 L$xdH3
- 167350 []A\A]A^A_
- 167474 tmHc
- 170163 D$ H9
- 171200 AWAVAUATUS1
- 171302 t$@E1
- 171332 t$,H
- 171344 t$0H
- 171663 dH34%(
- 171713 []A\A]A^A_
- 172541 D$0D
- 173303 H;E(
- 175120 AWAV1
- 175126 AUATI
- 175460 []A\A]A^A_
- 177060 AWAVAUATUSH
- 200127 ([]A\A]A^A_
- 201052 t8ATUH
- 201137 +[]A\
- 201460 T$@H
- 201465 L$HL
- 201472 D$PL
- 201477 L$Xt:
- 201505 )D$`
- 201512 )L$p
- 201611 D$(1
- 201757 D$(dH3
- 203400 AWAVA
- 203407 AUATL
- 203415 %Va 
- 203425 -Va 
- 203532 []A\A]A^A_
- 203704 dirmngr-client.c
- 203725 -----BEGIN 
- 203744 TARGETCERT
- 203757 SENDCERT
- 203770 SENDCERT_SKI
- 204005 SENDISSUERCERT
- 204024 unsupported inquiry '%s'
- 204056 dirmngr-client (@GNUPG@)
- 204107 2.1.11
- 204116 GNU/Linux
- 204130 http://bugs.gnupg.org
- 204156 got status: '%s'
- 204200 CHECKOCSP
- 204212 CHECKCRL
- 204223 okay
- 204230 response of dirmngr: %s
- 204261 dirmngr-client
- 204300 ERROR
- 204306 certificate is valid
- 204337 certificate has been revoked
- 204375 certificate check failed: %s
- 204433 looking up '%s'
- 204454 --url 
- 204463 --cache-only 
- 204501 %%%02X
- 204510 lookup failed: %s
- 204533 absolute file name expected
- 204570 loading CRL '%s' failed: %s
- 204625 CACHECERT
- 204637 VALIDATE
- 204650 certificate already cached
- 204704 verbose
- 204714 be somewhat more quiet
- 204743 ocsp
- 204750 use OCSP instead of CRLs
- 205001 ping
- 205006 cache-cert
- 205021 validate
- 205032 validate a certificate
- 205061 lookup a certificate
- 205106 local
- 205120 expect an URL for --lookup
- 205153 load-crl
- 205164 load a CRL into the dirmngr
- 205220 squid-mode
- 205233 special mode for use by Squid
- 205275 force-default-responder
- 205330 invalid percent escape sequence
- 205400 no certificate or invalid encoded
- 205450 error writing base64 encoding: %s
- 205520 Please report bugs to <@EMAIL@>.
- 205570 Usage: dirmngr-client [options] [certfile|pattern] (-h for help)
- 205700 Syntax: dirmngr-client [options] [certfile|pattern]
- 205764 Test an X.509 certificate against a CRL or do an OCSP check
- 206060 The process returns 0 if the certificate is valid, 1 if it is
- 206156 not valid and other error codes for general failures
- 206250 CHECKOCSP --force-default-responder
- 206320 error reading certificate from stdin: %s
- 206400 error reading certificate from '%s': %s
- 206460 certificate too large to make any sense
- 206540 can't connect to the dirmngr: %s
- 206610 error canonicalizing '%s': %s
- 206650 a dirmngr daemon is up and running
- 206720 error caching certificate: %s
- 206760 validation of certificate failed: %s
- 207030 check whether a dirmngr is running
- 207100 add a certificate to the cache
- 207140 lookup only locally stored certificates
- 207210 expect certificates in PEM format
- 207260 force the use of the default OCSP responder
- 207760 read_pem_certificate
- 210005 /usr/share/locale
- 210027 utf-8
- 210035 [??]
- 210042 argument not expected
- 210070 read error
- 210103 keyword too long
- 210124 missing argument
- 210145 invalid argument
- 210166 invalid command
- 210206 invalid alias definition
- 210237 out of core
- 210253 invalid option
- 210272 %s:%u: %s
- 210305 invalid command "%.50s"
- 210336 option "%.50s" is ambiguous
- 210373 command "%.50s" is ambiguous
- 210431 out of core
- 210446 invalid option "%.50s"
- 210511 Options:
- 210535 help
- 210542 warranty
- 210553 dump-options
- 210570 ignore-invalid-option
- 210616 alias
- 210630 invalid argument for arg_parse
- 210670 missing argument for option "%.50s"
- 210740 invalid argument for option "%.50s"
- 211010 option "%.50s" does not expect an argument
- 211070 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
- 211210 This is free software; you can redistribute it and/or modify
- 211305 it under the terms of the GNU General Public License as published by
- 211412 the Free Software Foundation; either version 3 of the License, or
- 211514 (at your option) any later version.
- 211561 It is distributed in the hope that it will be useful,
- 211647 but WITHOUT ANY WARRANTY; without even the implied warranty of
- 211746 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- 212044 GNU General Public License for more details.
- 212122 You should have received a copy of the GNU General Public License
- 212224 along with this software.  If not, see <http://www.gnu.org/licenses/>.
- 212340 This is free software: you are free to change and redistribute it.
- 212443 There is NO WARRANTY, to the extent permitted by law.
- 212540 Copyright (C) 2016 Free Software Foundation, Inc.
- 212631 (A single dash may be used instead of the double ones)
- 212730 --dump-options
- 212747 --help
- 212756 --version
- 212770 --warranty
- 213204 socket://
- 213220 tcp://
- 213227 [%u.%lu]
- 213240 [%u.%lx]
- 213251 logging.c
- 213263 logstream
- 213275 [%u]
- 213302 Fatal: 
- 213312 Ohhhh jeeee: 
- 213330 DBG: 
- 213336 [Unknown log level %d]: 
- 213367 can't connect to '%s': %s
- 213422 error writing to '%s': %s
- 213461  %02X
- 213467 ... this is a bug (%s:%d:%s)
- 213530 %04d-%02d-%02d %02d:%02d:%02d 
- 213570 failed to create socket for logging: %s
- 213650 error writing to file descriptor %d: %s
- 213730 [not enabled in the source] %s
- 214030 do_logv
- 214040 log_get_stream
- 214057 /usr/bin
- 214070 /pinentry
- 214102 /pinentry-basic
- 214122 ~/.gnupg
- 214133 GNUPGHOME
- 214145 /etc/gnupg2
- 214161 /usr/lib/gnupg2
- 214201 /usr/share/gnupg2
- 214223 /var/cache/gnupg2
- 214245 /var/run/gnupg2/S.dirmngr
- 214277 /gpg-agent
- 214312 /scdaemon
- 214324 /dirmngr
- 214335 /gpg-protect-tool
- 214357 /dirmngr_ldap
- 214375 /gpg-check-pattern
- 214420 /gpgsm
- 214427 /gpg2
- 214435 /gpg-connect-agent
- 214460 /gpgconf
- 214471 homedir.c
- 214510 /usr/lib/x86_64-linux-gnu/gnupg2
- 214640 gnupg_module_name
- 214662 PGP 
- 214667 -----
- 214676 b64enc.c
- 214707 idx < 4
- 214717 -----END 
- 214740 b64enc_finish
- 214760 b64enc_write
- 215153 	FVh	Q)
- 215475 ]';[
- 215506 Z1V8V0
- 215522 O2AG
- 215536 C3bl}6
- 215571 _d4u
- 215703 .IpV.
- 215753 (}$}(j[
- 216001 G3|_
- 216030 Ht*~
- 216105 Eps 
- 216133 q:viq
- 216223 `W<*`
- 216312 pm2A
- 216317 m%>io
- 216423 AlN?A
- 216512 eL	3
- 216541 +NJ=g
- 216601 5&]dy
- 216763 V5PWV
- 216777 WABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/putenv=
- 217110 OPTION %s%s=%s
- 217127 gnupg_spawn_agent_sentinel
- 217162 gnupg_spawn_dirmngr_sentinel
- 217217 gnupg_spawn_unknown_sentinel
- 217254 ASSUAN_DEBUG
- 217271 GPG_TTY
- 217301 lc-ctype
- 217312 lc-messages
- 217326 S.gpg-agent
- 217342 starting_agent ? 0 0
- 217367 error building filename: %s
- 217424 --homedir
- 217436 --use-standard-socket
- 217464 --daemon
- 217475 RESET
- 217503 GETINFO restricted
- 217526 starting_dirmngr ? 0 0
- 217555 SCD GETINFO version
- 217610 error allocating assuan context: %s
- 217660 no running gpg-agent - starting '%s'
- 217730 error flushing pending output: %s
- 220000 failed to start agent '%s': %s
- 220040 waiting for the agent to come up ... (%ds)
- 220120 connection to agent established
- 220170 can't connect to the agent: %s
- 220230 connection to agent is in restricted mode
- 220310 no running Dirmngr - starting '%s'
- 220360 failed to start the dirmngr '%s': %s
- 220430 waiting for the dirmngr to come up ... (%ds)
- 220510 connection to the dirmngr established
- 220560 connecting dirmngr at '%s' failed: %s
- 220627 ttyname
- 220637 TERM
- 220644 ttytype
- 220654 DISPLAY
- 220664 display
- 220674 XAUTHORITY
- 220707 xauthority
- 220722 XMODIFIERS
- 220735 GTK_IM_MODULE
- 220753 DBUS_SESSION_BUS_ADDRESS
- 221004 QT_IM_MODULE
- 221021 INSIDE_EMACS
- 221036 PINENTRY_USER_DATA
- 221061 pinentry-user-data
- 221104 r,nonblock
- 221117 w,nonblock
- 221132 error creating a pipe: %s
- 221175 /dev/null
- 221207 failed to open '%s': %s
- 221240 dup2 std%s failed: %s
- 221267 error forking process: %s
- 221330 error creating a stream for a pipe: %s
- 221400 error running '%s': probably not installed
- 221460 error running '%s': exit status %d
- 221530 error running '%s': terminated
- 221570 waiting for process %d to terminate failed: %s
- 221650 waitpid failed in gnupg_spawn_process_detached: %s
- 221733 EMAIL
- 221741 GNUPG
- 221747 GnuPG
- 221765 GPGSM
- 221773 GPG_AGENT
- 222005 SCDAEMON
- 222016 DIRMNGR
- 222036 GPGCONF
- 222046 GPGTAR
- 222055 gpgtar
- 222070 map_static_macro_string failed: %s
- 222134 stringhelp.c
- 222152 fatal: getcwd failed: %s
- 222212 fatal: out of memory
- 222241 fatal: too many args for xstrconcat
- 222310 (char*)(result + n + 1) == buffer
- 222360 strtokenize
- 222400 do_make_filename
- 222421 iconv_open failed: %s
- 222450 \x%02x
- 222457 utf8conv.c
- 222476 iso-8859-1
- 222515 ASCII
- 222523 ANSI_X3.4-1968
- 222542 utf8
- 222550 conversion from '%s' to '%s' not available
- 222630 conversion from '%s' to '%s' failed: %s
- 223100 do_utf8_to_native
- 223122 unknown
- 223132 %10d
- 223140 %.*s/.#lk%p.
- 223155 %s.%d
- 223163 error reading lockfile '%s'
- 223220 (deadlock?) 
- 223235 Oops, '%s' is already locked
- 223273 cannot read lockfile
- 223321 lockfile disappeared
- 223347 Oops, '%s' is not locked
- 223410 can't check whether hardlinks are supported for '%s': %s
- 223510 locking for '%s' done via O_EXCL
- 223560 failed to create temporary file '%s': %s
- 223640 error opening lockfile '%s': %s
- 223710 invalid size of lockfile '%s'
- 223750 invalid pid %d in lockfile '%s'
- 224020 lock not made: writing to '%s' failed: %s
- 224100 lock not made: Oops: stat of tmp file failed: %s
- 224170 Oops: lock already held by us
- 224230 removing stale lockfile (created by %d)
- 224310 waiting for lock (held by %d%s) %s...
- 224360 lock not made: open(O_EXCL) of '%s' failed: %s
- 224440 release_dotlock: lockfile error
- 224510 release_dotlock: not our lock (pid=%d)
- 224560 release_dotlock: error removing lockfile '%s'
- 224637 can't disable core dumps: %s
- 224675 XXXXXX
- 224704 -rwx
- 224720 %s: WARNING: standard input reopened
- 224770 %s: WARNING: standard output reopened
- 225040 %s: WARNING: standard error reopened
- 225110 %s: fatal: unable to reopen standard input, output, or error
- 225210 gnupg_allow_set_foregound_window
- 225260 %s called with invalid pid %lu
- 225340 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
- 225440 error allocating enough memory: %s
- 225510 unexpected call to gcry_create_nonce
- 231407 ;*3$"
- 270040 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
- 271120 337bd7df68582c26146cf9ef9d7d0f17a7ccda.debug
- 271205 .shstrtab
- 271217 .interp
- 271227 .note.ABI-tag
- 271245 .note.gnu.build-id
- 271270 .gnu.hash
- 271302 .dynsym
- 271312 .dynstr
- 271322 .gnu.version
- 271337 .gnu.version_r
- 271356 .rela.dyn
- 271370 .init
- 271376 .plt
- 271403 .plt.got
- 271414 .text
- 271422 .fini
- 271430 .rodata
- 271440 .eh_frame_hdr
- 271456 .eh_frame
- 271470 .init_array
- 271504 .fini_array
- 271520 .jcr
- 271525 .data.rel.ro
- 271542 .dynamic
- 271553 .data
- 271561 .bss
- 271566 .gnu_debuglink
+ 147275 ]A\A]A^
+ 147600 AVAUI
+ 147607 ATUSH
+ 147634 <$dH
+ 150046 []A\A]A^
+ 150200 AWAV
+ 150206 AUAT
+ 150510 []A\A]A^A_
+ 150532 <$~I
+ 150704 t$ H
+ 152560 ATUH
+ 152712 []A\
+ 152771 AUATI
+ 153266 []A\A]
+ 153306 []A\A]
+ 153335 []A\A]
+ 153402 AUATUH
+ 153655 ]A\A]A^
+ 153723 ]A\A]A^
+ 153742 []A\I
+ 153752 A]A^
+ 154437 1t.D
+ 154720 AWAVAUATA
+ 155146 []A\A]A^A_
+ 155220 AWAVAUATI
+ 155442 []A\A]A^A_
+ 155604 t:H)
+ 155663 []A\
+ 155700 []A\H
+ 155733 t$(H
+ 155740 T$0H
+ 155745 L$8L
+ 155752 D$@L
+ 155757 L$Ht7
+ 155765 )D$P
+ 155772 )L$`
+ 155777 )T$p
+ 156233 t$(H
+ 156240 T$0H
+ 156245 L$8L
+ 156252 D$@L
+ 156257 L$Ht7
+ 156265 )D$P
+ 156272 )L$`
+ 156277 )T$p
+ 156533 t$(H
+ 156540 T$0H
+ 156545 L$8L
+ 156552 D$@L
+ 156557 L$Ht7
+ 156565 )D$P
+ 156572 )L$`
+ 156577 )T$p
+ 157033 t$(H
+ 157040 T$0H
+ 157045 L$8L
+ 157052 D$@L
+ 157057 L$Ht7
+ 157065 )D$P
+ 157072 )L$`
+ 157077 )T$p
+ 160173 vAD8
+ 161166 t@H9
+ 161173 wSH)
+ 161443 tkAVAUL
+ 161455 ATUH
+ 161566 ]A\A]A^
+ 161610 ]A\A]A^
+ 161713 t$(H
+ 161720 T$0H
+ 161725 L$8L
+ 161732 D$@L
+ 161737 L$Ht7
+ 161745 )D$P
+ 161752 )L$`
+ 161757 )T$p
+ 162121 D$ H
+ 162253 t$(H
+ 162260 T$0H
+ 162265 L$8L
+ 162272 D$@L
+ 162277 L$Ht7
+ 162305 )D$P
+ 162312 )L$`
+ 162317 )T$p
+ 162461 D$ H
+ 162700 AWAVI
+ 162707 AUATI
+ 163156 []A\A]A^A_
+ 163220 AVAUATUH
+ 163605  u!H
+ 164046 u0[L
+ 164054 ]A\A]A^
+ 164105 ]A\A]A^
+ 164200 AUATI
+ 164376 []A\A]
+ 164660 AWAVAUATA
+ 165610 []A\A]A^A_
+ 165700 ATUI
+ 166026 []A\
+ 166300 AWAVH
+ 166307 AUATH
+ 166316 USE1
+ 166347 L$DdH
+ 166365 L$x1
+ 166406 D$pH
+ 166430 T$@H
+ 166446 D$(L
+ 166472 \$8E1
+ 166522 @@<=vRE
+ 167075 D$ L
+ 167127 T$DA
+ 167151 |$xdH3<%(
+ 167207 []A\A]A^A_
+ 167262 |$(H
+ 167477 D,pA
+ 167567 L$(H
+ 170607 L$(H
+ 170675 D$pE1
+ 171005 T$DA
+ 171045 D$pE1
+ 171205 D$pE1
+ 171252 D$(H
+ 171270 \$HL
+ 171407 \$HM
+ 171456 D$pE1
+ 171521 D$pE1
+ 171651 |$ L
+ 171664 |$PH
+ 171675 D$`H
+ 171751 L$XH
+ 171756 T$`H
+ 171763 t$PL
+ 171770 D$hH
+ 172023 D$XH
+ 172045 l$ H
+ 172067 T$DIc
+ 172154 T$@H
+ 172161 t$01
+ 172362 T$@H
+ 172367 t$0H
+ 173500 AVAUATUSH
+ 173540 D$(1
+ 174015 t$(dH34%(
+ 174045 0[]A\A]A^
+ 174253 D$ L
+ 174720 AWAVAUATI
+ 176054 H9D$ L
+ 176211 .locf
+ 176451 []A\A]A^A_
+ 177160 AWAVI
+ 177167 AUATUSH
+ 177231 L$x1
+ 177252 QvCL
+ 177336 D$ H
+ 177413 D$ H
+ 177675 L$xdH3
+ 177730 []A\A]A^A_
+ 200051 thHc
+ 200535 D$ H9
+ 201540 AWAVAUATUS1
+ 201642 t$@E1
+ 201672 t$,H
+ 201704 t$0H
+ 202223 dH34%(
+ 202253 []A\A]A^A_
+ 203103 D$0D
+ 203643 H;E(
+ 206020 AWAV1
+ 206026 AUATI
+ 206360 []A\A]A^A_
+ 207560 AWAVAUATUSH
+ 210646 ([]A\A]A^A_
+ 211137 []A\
+ 211612 t6ATUH
+ 211675 +[]A\
+ 212220 T$@H
+ 212225 L$HL
+ 212232 D$PL
+ 212237 L$Xt:
+ 212245 )D$`
+ 212252 )L$p
+ 212351 D$(1
+ 212517 D$(dH3
+ 213260 AWAVA
+ 213267 AUATL
+ 213412 []A\A]A^A_
+ 213604 -----BEGIN 
+ 213620 TARGETCERT
+ 213633 SENDCERT
+ 213644 SENDCERT_SKI
+ 213661 SENDISSUERCERT
+ 213700 unsupported inquiry '%s'
+ 213732 dirmngr-client (@GNUPG@)
+ 213763 2.1.15
+ 213772 GNU/Linux
+ 214004 https://bugs.gnupg.org
+ 214033 got status: '%s'
+ 214060 CHECKOCSP
+ 214072 CHECKCRL
+ 214103 okay
+ 214110 response of dirmngr: %s
+ 214141 dirmngr-client
+ 214160 ERROR
+ 214166 certificate is valid
+ 214217 certificate has been revoked
+ 214255 certificate check failed: %s
+ 214313 looking up '%s'
+ 214334 --url 
+ 214343 --cache-only 
+ 214361 %%%02X
+ 214370 lookup failed: %s
+ 214413 absolute file name expected
+ 214450 loading CRL '%s' failed: %s
+ 214505 CACHECERT
+ 214517 VALIDATE
+ 214530 certificate already cached
+ 214564 verbose
+ 214574 be somewhat more quiet
+ 214623 ocsp
+ 214630 use OCSP instead of CRLs
+ 214661 ping
+ 214666 cache-cert
+ 214701 validate
+ 214712 validate a certificate
+ 214741 lookup a certificate
+ 214766 local
+ 215000 expect an URL for --lookup
+ 215033 load-crl
+ 215044 load a CRL into the dirmngr
+ 215100 squid-mode
+ 215113 special mode for use by Squid
+ 215155 force-default-responder
+ 215210 invalid percent escape sequence
+ 215260 ../../dirmngr/dirmngr-client.c
+ 215320 no certificate or invalid encoded
+ 215370 error writing base64 encoding: %s
+ 215440 Please report bugs to <@EMAIL@>.
+ 215510 Usage: dirmngr-client [options] [certfile|pattern] (-h for help)
+ 215620 Syntax: dirmngr-client [options] [certfile|pattern]
+ 215704 Test an X.509 certificate against a CRL or do an OCSP check
+ 216000 The process returns 0 if the certificate is valid, 1 if it is
+ 216076 not valid and other error codes for general failures
+ 216170 CHECKOCSP --force-default-responder
+ 216240 error reading certificate from stdin: %s
+ 216320 error reading certificate from '%s': %s
+ 216400 certificate too large to make any sense
+ 216460 can't connect to the dirmngr: %s
+ 216530 error canonicalizing '%s': %s
+ 216570 a dirmngr daemon is up and running
+ 216640 error caching certificate: %s
+ 216700 validation of certificate failed: %s
+ 216750 check whether a dirmngr is running
+ 217020 add a certificate to the cache
+ 217060 lookup only locally stored certificates
+ 217130 expect certificates in PEM format
+ 217200 force the use of the default OCSP responder
+ 217700 read_pem_certificate
+ 217725 /usr/share/locale
+ 217747 gnupg2
+ 217756 utf-8
+ 217764 [??]
+ 217771 argument not expected
+ 220017 read error
+ 220032 keyword too long
+ 220053 missing argument
+ 220074 invalid argument
+ 220115 invalid command
+ 220135 invalid alias definition
+ 220166 out of core
+ 220202 invalid option
+ 220221 %s:%u: %s
+ 220234 invalid command "%.50s"
+ 220265 option "%.50s" is ambiguous
+ 220322 command "%.50s" is ambiguous
+ 220360 out of core
+ 220375 invalid option "%.50s"
+ 220440 Options:
+ 220464 help
+ 220471 warranty
+ 220502 dump-options
+ 220517 ignore-invalid-option
+ 220550 alias
+ 220570 invalid argument for arg_parse
+ 220630 missing argument for option "%.50s"
+ 220700 invalid argument for option "%.50s"
+ 220750 option "%.50s" does not expect an argument
+ 221030 License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+ 221150 This is free software; you can redistribute it and/or modify
+ 221245 it under the terms of the GNU General Public License as published by
+ 221352 the Free Software Foundation; either version 3 of the License, or
+ 221454 (at your option) any later version.
+ 221521 It is distributed in the hope that it will be useful,
+ 221607 but WITHOUT ANY WARRANTY; without even the implied warranty of
+ 221706 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ 222004 GNU General Public License for more details.
+ 222062 You should have received a copy of the GNU General Public License
+ 222164 along with this software.  If not, see <https://gnu.org/licenses/>.
+ 222300 This is free software: you are free to change and redistribute it.
+ 222403 There is NO WARRANTY, to the extent permitted by law.
+ 222500 Copyright (C) 2016 Free Software Foundation, Inc.
+ 222571 (A single dash may be used instead of the double ones)
+ 222670 --dump-options
+ 222707 --help
+ 222716 --version
+ 222730 --warranty
+ 223144 socket://
+ 223160 tcp://
+ 223167 [%u.%lu]
+ 223200 [%u.%lx]
+ 223211 ../../common/logging.c
+ 223240 logstream
+ 223252 [%u]
+ 223257 Fatal: 
+ 223267 Ohhhh jeeee: 
+ 223305 DBG: 
+ 223313 [Unknown log level %d]: 
+ 223344 %*s%.*s
+ 223354 can't connect to '%s': %s
+ 223407 error writing to '%s': %s
+ 223446  %02X
+ 223454 ... this is a bug (%s:%d:%s)
+ 223520 %04d-%02d-%02d %02d:%02d:%02d 
+ 223560 failed to create socket for logging: %s
+ 223640 error writing to file descriptor %d: %s
+ 223720 [not enabled in the source] %s
+ 223760 Assertion "%s" in %s failed (%s:%d)
+ 224070 do_logv
+ 224100 log_get_stream
+ 224117 1.7.0
+ 224125 libgcrypt
+ 224140 %s is too old (need %s, have %s)
+ 224202 /usr/bin
+ 224213 ~/.gnupg
+ 224224 /pinentry
+ 224236 /pinentry-basic
+ 224256 GNUPGHOME
+ 224270 %s/user/%u
+ 224303 -rwx
+ 224314 /etc/gnupg
+ 224327 /usr/lib/gnupg
+ 224346 /usr/share/gnupg
+ 224367 /var/cache/gnupg
+ 224410 S.dirmngr
+ 224422 /gpg-agent
+ 224435 /scdaemon
+ 224447 /dirmngr
+ 224460 /gpg-protect-tool
+ 224502 /dirmngr_ldap
+ 224520 /gpg-check-pattern
+ 224543 /gpgsm
+ 224552 /gpg
+ 224557 /gpg-connect-agent
+ 224602 /gpgconf
+ 224613 ../../common/homedir.c
+ 224642 /var/run
+ 224660 /usr/lib/x86_64-linux-gnu/gnupg
+ 225000 gnupg_module_name
+ 225022 PGP 
+ 225027 -----
+ 225036 ../../common/b64enc.c
+ 225064 idx < 4
+ 225074 -----END 
+ 225140 b64enc_finish
+ 225160 b64enc_write
+ 225353 	FVh	Q)
+ 225675 ]';[
+ 225706 Z1V8V0
+ 225722 O2AG
+ 225736 C3bl}6
+ 225771 _d4u
+ 226103 .IpV.
+ 226153 (}$}(j[
+ 226201 G3|_
+ 226230 Ht*~
+ 226305 Eps 
+ 226333 q:viq
+ 226423 `W<*`
+ 226512 pm2A
+ 226517 m%>io
+ 226623 AlN?A
+ 226712 eL	3
+ 226741 +NJ=g
+ 227001 5&]dy
+ 227163 V5PWV
+ 227177 WABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/ybndrfg8ejkmcpqxot1uwisza345h769putenv=
+ 227350 OPTION %s%s=%s
+ 227367 gnupg_spawn_agent_sentinel
+ 227422 gnupg_spawn_dirmngr_sentinel
+ 227457 gnupg_spawn_unknown_sentinel
+ 227514 ASSUAN_DEBUG
+ 227531 GPG_TTY
+ 227541 lc-ctype
+ 227552 lc-messages
+ 227566 S.gpg-agent
+ 227602 starting_agent ? 0 0
+ 227627 error building filename: %s
+ 227664 --homedir
+ 227676 --use-standard-socket
+ 227724 --daemon
+ 227735 RESET
+ 227743 GETINFO restricted
+ 227766 starting_dirmngr ? 0 0
+ 230015 SCD GETINFO version
+ 230050 error allocating assuan context: %s
+ 230120 no running gpg-agent - starting '%s'
+ 230170 error flushing pending output: %s
+ 230240 failed to start agent '%s': %s
+ 230300 waiting for the agent to come up ... (%ds)
+ 230360 connection to agent established
+ 230430 can't connect to the agent: %s
+ 230470 connection to agent is in restricted mode
+ 230550 no running Dirmngr - starting '%s'
+ 230620 failed to start the dirmngr '%s': %s
+ 230670 waiting for the dirmngr to come up ... (%ds)
+ 230750 connection to the dirmngr established
+ 231020 connecting dirmngr at '%s' failed: %s
+ 231067 ttyname
+ 231077 TERM
+ 231104 ttytype
+ 231114 DISPLAY
+ 231124 display
+ 231134 XAUTHORITY
+ 231147 xauthority
+ 231162 XMODIFIERS
+ 231175 GTK_IM_MODULE
+ 231213 DBUS_SESSION_BUS_ADDRESS
+ 231244 QT_IM_MODULE
+ 231261 INSIDE_EMACS
+ 231276 PINENTRY_USER_DATA
+ 231321 pinentry-user-data
+ 231344 r,nonblock
+ 231357 w,nonblock
+ 231372 error creating a pipe: %s
+ 231425 /proc/self/fd
+ 231453 /dev/null
+ 231465 failed to open '%s': %s
+ 231516 dup2 std%s failed: %s
+ 231545 error forking process: %s
+ 231600 error creating a stream for a pipe: %s
+ 231650 error running '%s': probably not installed
+ 231730 error running '%s': exit status %d
+ 232000 error running '%s': terminated
+ 232040 waiting for processes to terminate failed: %s
+ 232120 waitpid failed in gnupg_spawn_process_detached: %s
+ 232203 EMAIL
+ 232211 GNUPG
+ 232217 GnuPG
+ 232231 GPGSM
+ 232237 GPG_AGENT
+ 232251 SCDAEMON
+ 232262 DIRMNGR
+ 232302 GPGCONF
+ 232312 GPGTAR
+ 232321 gpgtar
+ 232330 map_static_macro_string failed: %s
+ 232374 ../../common/stringhelp.c
+ 232427 fatal: getcwd failed: %s
+ 232467 fatal: out of memory
+ 232521 fatal: too many args for xstrconcat
+ 232570 (char*)(result + n + 1) == buffer
+ 232640 strtokenize
+ 232660 do_make_filename
+ 232701 iconv_open failed: %s
+ 232730 \x%02x
+ 232737 ../../common/utf8conv.c
+ 232773 iso-8859-1
+ 233012 ASCII
+ 233020 ANSI_X3.4-1968
+ 233037 utf8
+ 233050 conversion from '%s' to '%s' not available
+ 233130 conversion from '%s' to '%s' failed: %s
+ 233400 do_utf8_to_native
+ 233422 unknown
+ 233432 %10d
+ 233440 %.*s/.#lk%p.
+ 233455 %s.%d
+ 233463 error reading lockfile '%s'
+ 233520 (deadlock?) 
+ 233535 Oops, '%s' is already locked
+ 233573 cannot read lockfile
+ 233621 lockfile disappeared
+ 233647 Oops, '%s' is not locked
+ 233710 can't check whether hardlinks are supported for '%s': %s
+ 234010 locking for '%s' done via O_EXCL
+ 234060 failed to create temporary file '%s': %s
+ 234140 error opening lockfile '%s': %s
+ 234210 invalid size of lockfile '%s'
+ 234250 invalid pid %d in lockfile '%s'
+ 234320 lock not made: writing to '%s' failed: %s
+ 234400 lock not made: Oops: stat of tmp file failed: %s
+ 234470 Oops: lock already held by us
+ 234530 removing stale lockfile (created by %d)
+ 234610 waiting for lock (held by %d%s) %s...
+ 234660 lock not made: open(O_EXCL) of '%s' failed: %s
+ 234740 release_dotlock: lockfile error
+ 235010 release_dotlock: not our lock (pid=%d)
+ 235060 release_dotlock: error removing lockfile '%s'
+ 235137 can't disable core dumps: %s
+ 235175 XXXXXX
+ 235210 %s: WARNING: standard input reopened
+ 235260 %s: WARNING: standard output reopened
+ 235330 %s: WARNING: standard error reopened
+ 235400 %s: fatal: unable to reopen standard input, output, or error
+ 235500 gnupg_allow_set_foregound_window
+ 235550 %s called with invalid pid %lu
+ 235640 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+ 241527 ;*3$"
+ 300040 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+ 301120 bed91823e4366fb29a477e9e0a754efb7b363d.debug
+ 301205 .shstrtab
+ 301217 .interp
+ 301227 .note.ABI-tag
+ 301245 .note.gnu.build-id
+ 301270 .gnu.hash
+ 301302 .dynsym
+ 301312 .dynstr
+ 301322 .gnu.version
+ 301337 .gnu.version_r
+ 301356 .rela.dyn
+ 301370 .init
+ 301376 .plt
+ 301403 .plt.got
+ 301414 .text
+ 301422 .fini
+ 301430 .rodata
+ 301440 .eh_frame_hdr
+ 301456 .eh_frame
+ 301470 .init_array
+ 301504 .fini_array
+ 301520 .jcr
+ 301525 .data.rel.ro
+ 301542 .dynamic
+ 301553 .data
+ 301561 .bss
+ 301566 .gnu_debuglink
