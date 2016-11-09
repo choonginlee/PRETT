@@ -42,16 +42,41 @@ def disconnect_ftp(rp):
 
 	p = generate_ftp_msg("QUIT", rp)
 	# Listen FIN-ACK
-	ans, unans = sr(p, filter = "tcp", multi=1, timeout=0.05, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
+	ans, unans = sr(p, filter = "tcp", multi=1, timeout=0.015, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
 	
-	if len(ans) == 0:
-		logging.debug("No packet in timeout!")
-		sys.exit()
+	"""
+	if len(ans) == 0 :
+		logging.error("No packet in timeout!")
+		rp = sniff(filter = "tcp", timeout = 10, count = 2)
+		if len(rp) == 0:
+			logging.error("It takes too long time! abort...")
+			sys.exit()
+	elif len(ans) == 1 :
+		logging.error("Not enough packet in timeout!")
+		# Wait for the next packet
+		rp = sniff(filter = "tcp", timeout = 10, count = 1)
+		if len(rp) == 0:
+			logging.error("It takes too long time! abort...")
+			sys.exit()
+		else:
+			ans[1][1] = rp
+			pass
+
+	elif len(ans) == 2 :
+		pass
+		
+	elif len(ans) >= 3:
+		logging.error("Unexpected packet received.")
+		return
+	"""
+
+	if len(ans) < 2:
+		return
 
 	FIN_ACK = ans[1][1]
 
 	#elapsed_time = time.time() - start_time
-	#print "After sniffing and parsing FIN-ACK..." + str(elapsed_time) + "\n"
+	#print "After sniffing and parsing FIN-ACK..." + str(elapsed_sudo time) + "\n"
 
 	# Send ack to fin-ack
 	ACK = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=FIN_ACK.ack, ack=FIN_ACK.seq, flags = "A") # SYN - ACK
@@ -66,9 +91,10 @@ def disconnect_ftp(rp):
 
 	logging.info("[+] FTP disconnected\n")
 
-def send_receive_ftp(rp):
+def send_receive_ftp(rp, token):
 	# SEND Req. -> Get ACK -> GET Rep. -> Send ACK (normal TCP-based protocol)
 	global cnt
+	temp_rp = rp
 	cnt = cnt + 1
 	start_time = time.time()
 
@@ -86,7 +112,7 @@ def send_receive_ftp(rp):
 	"""
 
 	# Send Req, then get ACK and Resp of tcp
-	ans, unans = sr(p, filter = "tcp", multi=1, timeout=0.05, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
+	ans, unans = sr(p, filter = "tcp", multi=1, timeout=0.015, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
 	
 	if len(ans) == 0:
 		logging.debug("No packet in short timeout!")
@@ -94,7 +120,7 @@ def send_receive_ftp(rp):
 		rp = sniff(filter = "tcp", timeout = 10, count = 1)
 		if len(rp) == 0:
 			logging.error("It takes too long time! abort...")
-			sys.exit()
+			return temp_rp
 		else:
 			sentpayload = p.getlayer("Raw").load
 			rcvdpayload = rp.getlayer("Raw").load
@@ -187,13 +213,8 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 			# if it is already seen,
 			# - No need to make new state
 			# - Find the corresponding src & dst state
-			# - Add new transition
-			"""
-			t_label = spyld + "," + t
-			dst_state = transition_info.get(t)[1]
-			sm.add_transition(t_label, source = crnt_state, dest = dst_state) # add transition
-			transition_info[t_label] = [crnt_state, dst_state] # add transition info
-			"""
+			# - Add input counts for each seen transition
+			transition_info[t][2] = transition_info[t][2] + 1
 			return
 		
 	#If not seen before,
@@ -205,7 +226,7 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 
 	t_label = spyld + " / " + rpyld
 	sm.add_transition(t_label, source = crnt_state, dest = dst_state)
-	transition_info[t_label] = [crnt_state, dst_state] # add transition info
+	transition_info[t_label] = [crnt_state, dst_state, 1] # add transition info
 
 logging.basicConfig(level=logging.DEBUG, filename="ptmsg_log", filemode="a+", format="%(asctime)-15s %(levelname)-8s %(message)s")
 
@@ -248,7 +269,7 @@ if mode == 'm':
 			print "[+] Program ends... \n"
 			break
 
-		ans, unans = sr(p, multi=1, timeout=0.1, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
+		ans, unans = sr(p, multi=1, timeout=0.01, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
 
 		for sp, rcv in ans:
 			if rcv.haslayer("Raw"):
@@ -265,6 +286,8 @@ elif mode == 'a' :
 
 	# Simple message format ( 1 word )
 	for token in token_db:
+		if token[0] == "quit":
+			continue
 		sport = sport + 1
 
 		#Start with 3WHS
@@ -275,7 +298,7 @@ elif mode == 'a' :
 		send(ftp_ack, verbose=False)
 		
 		# Send message and listen
-		rp = send_receive_ftp(rp)
+		rp = send_receive_ftp(rp, token)
 
 		# Finish TCP connection
 		disconnect_ftp(rp)
@@ -284,6 +307,8 @@ elif mode == 'a' :
 		cs = 0
 
 		if cnt % 1000 == 0 :
+			elapsed_time = time.time() - g_start_time
+			print "[+] COUNT OF TRIALS : %d" % cnt, "Time Elapsed :", elapsed_time, "s"
 			graphname = "diagram/sample_state" + str(cnt) + ".png"
 			ftpmachine.model.graph.draw(graphname, prog='dot')
 			#img = mplotimg.imread("diagram/sample_state.png")
@@ -294,6 +319,7 @@ elif mode == 'a' :
 	print "Total elapsed time : ", elapsed_time, "\n"
 	# Program normally ends.
 	ftpmachine.model.graph.draw("diagram/sample_state_fin.png", prog='dot')
+	logging.info(transition_info)
 	img = mplotimg.imread("diagram/sample_state_fin.png")
 	plt.imshow(img)
 	plt.show()
