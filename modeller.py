@@ -120,7 +120,7 @@ def send_receive_ftp(rp, token):
 	start_time = time.time()
 
 	# Generate message from tokens
-	payload = token[0]
+	payload = token
 	p = generate_ftp_msg(payload, rp)
 	#print "[+] Message to be sent \n", p.getlayer("Raw").show()
 
@@ -239,8 +239,8 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	t_label = spyld + " / " + rpyld
 	sm.add_transition(t_label, source = crnt_state, dest = dst_state)
 	transition_info[t_label] = [crnt_state, dst_state, 1] # add transition info
-	state_numb_list.append(num_of_states)	
-	state_list.add_state(State(num_of_states, current_state, spyld))
+	state_numb_list.append(num_of_states)
+	state_list.add_state(State(num_of_states, parent=current_state, token=str(spyld)))
 	logging.info("[+] Count : " + str(cnt) + " | State " + crnt_state + " added with transition " + t_label)
 
 logging.basicConfig(level=logging.DEBUG, filename="ptmsg_log", filemode="a+", format="%(asctime)-15s %(levelname)-8s %(message)s")
@@ -249,7 +249,7 @@ dst_ip = sys.argv[1]
 
 #These informations are prerequisite.
 dport = 21
-sport = 1005
+sport = 2500
 delimiter = "\r\n"
 exit_label = "QUIT / 221 Goodbye."
 
@@ -257,7 +257,7 @@ num_of_states = 0
 g_start_time = 0
 
 #Mode Selection
-mode = raw_input("[!] Manual? or Auto? ( \'m\' - for testing / \'a\' - basic mode) : ")
+mode = raw_input("[!] Manual? or Auto? ( \'m\' - for testing / \'b\' - bfs mode) : ")
 
 #Crate ftp machine and assign protocol model
 ftpmachine = generate_ftp_model()
@@ -277,7 +277,7 @@ if mode == 'm':
 	#Next Ack no. calculation : last seq + prev. tcp payload len
 	ftp_ack = generate_ftp_ack(rp)
 	send(ftp_ack, verbose=False)
-
+	
 	for i in range(10) :
 		payload = raw_input("[!] payload? : ")
 		p = generate_ftp_msg(payload, rp)
@@ -311,15 +311,71 @@ elif mode == 'b' :
 
 		move_state_token =[]
 		target_state = current_state
-
+		
 		while True:
 			current_parent = state_list.state_list[target_state].parent
 			if current_parent is not None:
-				move_state_token.insert(0, state_list[target_state].token)
+				move_state_token.append(state_list.state_list[target_state].token)
 				target_state = current_parent
 				continue
 			else: # root node
-				break;
+				break
+
+		move_state_token.reverse()
+
+		# Simple message format ( 1 word )
+		for token in token_db:
+			if token[0] == "quit":
+				continue
+			sport = sport + 1
+
+			#Start with 3WHS
+			rp = handshake_init(dst_ip, dport, sport)
+			
+			#If handshake finished, the server sends response. Send ack and get the last req packet info.
+			ftp_ack = generate_ftp_ack(rp)
+			send(ftp_ack, verbose=False)
+
+			for tk in move_state_token:
+				rp = send_receive_ftp(rp, tk)
+			
+			# Send message and listen
+			rp = send_receive_ftp(rp, token[0])
+
+			# Finish TCP connection
+			disconnect_ftp(rp)
+
+			#Initialize current state as 0
+			cs = 0
+
+			if cnt % 1000 == 0 :
+				elapsed_time = time.time() - g_start_time
+				print "[+] COUNT OF TRIALS : %d" % cnt, "Time Elapsed :", elapsed_time, "s"
+				graphname = "diagram/bfs_state" + str(cnt) + ".png"
+				ftpmachine.model.graph.draw(graphname, prog='dot')
+				#img = mplotimg.imread("diagram/sample_state.png")
+				#plt.imshow(img)
+				#plt.show()
+				
+		current_state = current_state + 1
+	
+	elapsed_time = time.time() - g_start_time
+	print "Total elapsed time : ", elapsed_time, "\n"
+	# Program normally ends.
+	ftpmachine.model.graph.draw("diagram/bfs_state_fin.png", prog='dot')
+	logging.info(transition_info)
+	img = mplotimg.imread("diagram/bfs_state_fin.png")
+	plt.imshow(img)
+	plt.show()
+	sys.exit()
+
+elif mode == 'd':
+	with open("./tokenfile/total_tokens.txt") as f:
+		token_db = pickle.load(f)
+
+	while True:
+
+		
 
 		# Simple message format ( 1 word )
 		for token in token_db:
@@ -334,18 +390,15 @@ elif mode == 'b' :
 			ftp_ack = generate_ftp_ack(rp)
 			send(ftp_ack, verbose=False)
 
-			for tk in move_state_token:
-				rp = send_receive_ftp(rp, tk)
-			
 			# Send message and listen
-			rp = send_receive_ftp(rp, token)
+			rp = send_receive_ftp(rp, token[0])
 
 			# Finish TCP connection
 			disconnect_ftp(rp)
 
 			#Initialize current state as 0
 			cs = 0
-
+			
 			if cnt % 1000 == 0 :
 				elapsed_time = time.time() - g_start_time
 				print "[+] COUNT OF TRIALS : %d" % cnt, "Time Elapsed :", elapsed_time, "s"
@@ -354,18 +407,17 @@ elif mode == 'b' :
 				#img = mplotimg.imread("diagram/sample_state.png")
 				#plt.imshow(img)
 				#plt.show()
-				
-		current_state = current_state + 1
-	
-	elapsed_time = time.time() - g_start_time
-	print "Total elapsed time : ", elapsed_time, "\n"
-	# Program normally ends.
-	ftpmachine.model.graph.draw("diagram/sample_state_bfs_fin.png", prog='dot')
-	logging.info(transition_info)
-	img = mplotimg.imread("diagram/sample_state_fin.png")
-	plt.imshow(img)
-	plt.show()
-	sys.exit()
+					
+		elapsed_time = time.time() - g_start_time
+		print "Total elapsed time : ", elapsed_time, "\n"
+		# Program normally ends.
+		ftpmachine.model.graph.draw("diagram/sample_state_bfs_fin.png", prog='dot')
+		logging.info(transition_info)
+		img = mplotimg.imread("diagram/sample_state_fin.png")
+		plt.imshow(img)
+		plt.show()
+		sys.exit()
+
 
 else :
 	print "[-] Invalid Input... exit...\n"
