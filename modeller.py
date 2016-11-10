@@ -195,12 +195,15 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	# sm : state machine, crnt_state : current state, payload : response packet payload 
 	
 	# Build and fix a state machine based on the response
-	global num_of_states, transition_info
+	global num_of_states, transition_info, cnt
 
 	#Check if the response already seen before
 	for t in sm.get_triggers(crnt_state):
 		#logging.info("Trigger t : \n", t)
-		if rpyld != "Timeout" and re.search(rpyld, t):
+		if rpyld == "Timeout" and len(spyld) > 15:
+			abbr_spyld = spyld[0:15] + "-abbr"
+			break
+		if re.search(rpyld, t):
 			# if it is already seen,
 			# - No need to make new state
 			# - Find the corresponding src & dst state
@@ -215,11 +218,15 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	dst_state = str(num_of_states)
 	sm.add_states(dst_state)
 
+	# In case of timeout with huge inputs, store full send/receive label in transition_info
+	# but store abbrebiated send/receive label in transition model (as well as state machine diagram)
 	t_label = spyld + " / " + rpyld
-	sm.add_transition(t_label, source = crnt_state, dest = dst_state)
 	transition_info[t_label] = [crnt_state, dst_state, 1] # add transition info
-	logging.info("[+] Count : " + str(cnt) + " | State " + crnt_state + " added with transition " + t_label)
+	logging.info("[+] Count : " + str(cnt) + " | State " + dst_state + " added with transition " + t_label)
 
+	if rpyld == "Timeout" and len(spyld) > 15:
+		t_label = abbr_spyld + " / " + rpyld
+	sm.add_transition(t_label, source = crnt_state, dest = dst_state)
 
 logging.basicConfig(level=logging.DEBUG, filename="ptmsg_log", filemode="a+", format="%(asctime)-15s %(levelname)-8s %(message)s")
 
