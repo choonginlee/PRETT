@@ -358,7 +358,7 @@ elif mode == 'b' :
 				#img = mplotimg.imread("diagram/sample_state.png")
 				#plt.imshow(img)
 				#plt.show()
-
+				
 		current_state = current_state + 1
 	
 	elapsed_time = time.time() - g_start_time
