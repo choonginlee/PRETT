@@ -1,0 +1,41 @@
+
+BFS
+
+State(numb, parent, token)
+
+StateList(state_list)
+	add_state(state)
+
+
+initial state는 0
+	-> 현 스테이트(초기값 0)의 상태가 되도록,fin 패킷 날리고 다음 진행
+	-> state_list에서, parent를 따라가며 역추적하여 token들을 얻고 이를 리스트에 저장함
+	-> 얻어진 토큰들을 이용해 순서대로 패킷을 날려 현 스테이트로 이동
+	-> 현 스테이트 값은 parent value가 되고, scan을 진행하면 현 스테이트를 parent로 갖는 state들이 생성, 저장됨 (총 스테이트 넘버에서 + 1씩 증가해가며 생성됨)
+	-> token을 모두 사용하면, 현 스테이트 값을 하나 증가
+	-> 현 스테이트 값이 state_num_list에 존재하지 않을 때 까지 반복 수행(검색 완료)
+
+
+	한번 돌고 나면
+	transition_info에 값이 채워짐 (유효한 state들)
+
+	
+
+
+DFS
+
+State(numb, parent, token, token_index)
+
+StateList(state_list)
+	add_state(state)
+
+
+initial state는 0
+	-> 다음 첫 스테이트 발견때까지 token 돌림
+	-> 다음 첫 스테이트 발견하면, 발견한 token의 db 내 인덱스값 및 state_number 저장, 현 스테이트는 새 스테이트의 parent가 됨
+	-> 발견한 스테이트로 넘어가서, 신규 state 발견때까지 token 돌림
+	-> 반복하다가 token을 다 쓰게 되면, 바로 위의 state로 전이
+	-> 아까 멈춘 index부터 반복
+	-> 반복
+	-> token db가 끝났을 때, parent가 None이면 끝
+
