@@ -35,13 +35,13 @@ def extract_token(path, file) :
 
 	result = []
 	result_first = []
-
+	
 	while True :
 		string_read = fr.readline()
 		if not string_read: break # eol
 
 		split_list = []
-		split_list = re.split('[:.-/_\s]+', string_read)
+		split_list = re.split(r'[^\w]', string_read)
 		for split in split_list:
 			result_first = re.findall('[A-Za-z]{2,}', split)
 			for res in result_first:

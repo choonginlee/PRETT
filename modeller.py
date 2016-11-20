@@ -23,6 +23,28 @@ class FTPModel(object):
 	def __init__(self, name):
 		self.name = name
 
+class State:
+	def __init__(self, numb, parent=None, token=None, token_index=0, child_list=[]):
+		self.numb = numb
+		self.parent = parent
+		self.token = token
+		self.token_index = token_index
+		self.child_list = child_list
+
+
+class StateList:
+	def __init__(self, state_list=[]):
+		self.state_list = state_list
+
+	def add_state(self, state):
+		self.state_list.append(state)
+
+state_numb_list = ['0']
+current_state = 0
+state_list = StateList()
+sample = State(0)
+state_list.add_state(sample)
+
 def handshake_init(dst_ip, dport, sport):
 	#Initiate TCP connection - 3 handshaking
 	#logging.info("[+] ======== Hand Shaking ========\n")
@@ -99,7 +121,7 @@ def send_receive_ftp(rp, token):
 	start_time = time.time()
 
 	# Generate message from tokens
-	payload = token[0]
+	payload = token
 	p = generate_ftp_msg(payload, rp)
 	#print "[+] Message to be sent \n", p.getlayer("Raw").show()
 
@@ -143,7 +165,7 @@ def send_receive_ftp(rp, token):
 
 	logging.debug("No response FTP packet!")
 	sys.exit()
-
+	
 def check_ftp_resp(pkt):
 	global start_time
 	#elapsed_time = time.time() - start_time
@@ -163,11 +185,12 @@ def check_fin_ack(pkt):
 		return False
 
 def generate_ftp_model():
+	global state_numb_list
 	ftpmodel = FTPModel("FTP Model")
 	ftpmachine = Machine(model = ftpmodel, states = ['0'], initial = '0', auto_transitions=False)
 	ftpmachine.add_transition(exit_label, source = '0', dest = '0')
 	return ftpmachine
-
+	
 def generate_ftp_ack(rp):
 	# Generates ack message to FTP Response packet
 	tcp_seg_len = len(rp.getlayer(Raw).load)
@@ -195,7 +218,7 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	# sm : state machine, crnt_state : current state, payload : response packet payload 
 	
 	# Build and fix a state machine based on the response
-	global num_of_states, transition_info, cnt
+	global num_of_states, transition_info, state_numb_list, state_list, current_state, cnt, state_found, new_state
 
 	#Check if the response already seen before
 	for t in sm.get_triggers(crnt_state):
@@ -210,7 +233,7 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 			# - Add input counts for each seen transition
 			transition_info[t][2] = transition_info[t][2] + 1
 			return
-		
+	
 	#If not seen before,
 	# - Add a new state
 	# - Add a new transition from current state
@@ -222,8 +245,13 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	# but store abbrebiated send/receive label in transition model (as well as state machine diagram)
 	t_label = spyld + " / " + rpyld
 	transition_info[t_label] = [crnt_state, dst_state, 1] # add transition info
-	logging.info("[+] Count : " + str(cnt) + " | State " + dst_state + " added with transition " + t_label)
+	state_numb_list.append(str(num_of_states))
+	state_list.add_state(State(num_of_states, parent=current_state, token=str(spyld)))
 
+	state_found = 1
+	logging.info("[+] Count : " + str(cnt) + " | State " + crnt_state + " added with transition " + t_label)
+	logging.info("[+] Count : " + str(cnt) + " | State " + dst_state + " added with transition " + t_label)
+	
 	if rpyld == "Timeout" and len(spyld) > 15:
 		t_label = abbr_spyld + " / " + rpyld
 	sm.add_transition(t_label, source = crnt_state, dest = dst_state)
@@ -234,15 +262,17 @@ dst_ip = sys.argv[1]
 
 #These informations are prerequisite.
 dport = 21
-sport = 1005
+sport = 2200
 delimiter = "\r\n"
 exit_label = "QUIT / 221 Goodbye."
 
 num_of_states = 0
 g_start_time = 0
+state_found = 0
+new_state = []
 
 #Mode Selection
-mode = raw_input("[!] Manual? or Auto? ( \'m\' - for testing / \'a\' - basic mode) : ")
+mode = raw_input("[!] Manual? or Auto(BFS, DFS)? ( \'m\' - for testing / \'b\' - bfs mode / \'d\' - dfs mode) : ")
 
 #Crate ftp machine and assign protocol model
 ftpmachine = generate_ftp_model()
@@ -262,7 +292,7 @@ if mode == 'm':
 	#Next Ack no. calculation : last seq + prev. tcp payload len
 	ftp_ack = generate_ftp_ack(rp)
 	send(ftp_ack, verbose=False)
-
+	
 	for i in range(10) :
 		payload = raw_input("[!] payload? : ")
 		p = generate_ftp_msg(payload, rp)
@@ -272,7 +302,7 @@ if mode == 'm':
 
 			print "[+] Program ends... \n"
 			break
-
+			
 		ans, unans = sr(p, multi=1, timeout=0.01, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
 
 		for sp, rcv in ans:
@@ -284,50 +314,199 @@ if mode == 'm':
 				ack_p = generate_ftp_ack(rp)
 				send(ack_p, verbose=False)
 
-elif mode == 'a' :
+elif mode == 'b' :
+	# bfs
 	with open("./tokenfile/total_tokens.txt") as f:
 		token_db = pickle.load(f)
 
-	# Simple message format ( 1 word )
-	for token in token_db:
-		if token[0] == "quit":
-			continue
-		sport = sport + 1
+	while True:
 
-		#Start with 3WHS
-		rp = handshake_init(dst_ip, dport, sport)
-
-		#If handshake finished, the server sends response. Send ack and get the last req packet info.
-		ftp_ack = generate_ftp_ack(rp)
-		send(ftp_ack, verbose=False)
+		if current_state > num_of_states:
+			break
+			
+		move_state_token =[]
+		target_state = current_state
 		
-		# Send message and listen
-		rp = send_receive_ftp(rp, token)
+		while True:
+			current_parent = state_list.state_list[target_state].parent
+			if current_parent is not None:
+				move_state_token.append(state_list.state_list[target_state].token)
+				target_state = current_parent
+				continue
+			else: # root node
+				break
+				
+		move_state_token.reverse()
 
-		# Finish TCP connection
-		disconnect_ftp(rp)
+		# Simple message format ( 1 word )
+		for token in token_db:
+			if token[0] == "quit":
+				continue
+			sport = sport + 1
 
-		#Initialize current state as 0
-		cs = 0
+			#Start with 3WHS
+			rp = handshake_init(dst_ip, dport, sport)
+			
+			#If handshake finished, the server sends response. Send ack and get the last req packet info.
+			ftp_ack = generate_ftp_ack(rp)
+			send(ftp_ack, verbose=False)
 
-		if cnt % 1000 == 0 :
-			elapsed_time = time.time() - g_start_time
-			print "[+] COUNT OF TRIALS : %d" % cnt, "Time Elapsed :", elapsed_time, "s"
-			graphname = "diagram/sample_state" + str(cnt) + ".png"
-			ftpmachine.model.graph.draw(graphname, prog='dot')
-			#img = mplotimg.imread("diagram/sample_state.png")
-			#plt.imshow(img)
-			#plt.show()
+			for tk in move_state_token:
+				rp = send_receive_ftp(rp, tk)
+			
+			# set state
+			ftpmachine.set_state(str(current_state))
+
+			# Send message and listen
+			rp = send_receive_ftp(rp, token[0])
+
+			# Finish TCP connection
+			disconnect_ftp(rp)
+
+			#Initialize current state as 0
+			cs = 0
+			
+			if cnt % 1000 == 0 :
+				elapsed_time = time.time() - g_start_time
+				print "[+] COUNT OF TRIALS : %d" % cnt, "Time Elapsed :", elapsed_time, "s"
+				graphname = "diagram/bfs_state" + str(cnt) + ".png"
+				ftpmachine.model.graph.draw(graphname, prog='dot')
+				#img = mplotimg.imread("diagram/sample_state.png")
+				#plt.imshow(img)
+				#plt.show()
+		'''
+		# validation check
+		valid_tokens = []
+		for state in state_list.state_list:
+			if state.parent == current_state: # get child node
+				valid_tokens.append(state.token)
+
+		for token in valid_tokens:
+			sport = sport + 1
+
+			#Start with 3WHS
+			rp = handshake_init(dst_ip, dport, sport)
+			
+			#If handshake finished, the server sends response. Send ack and get the last req packet info.
+			ftp_ack = generate_ftp_ack(rp)
+			send(ftp_ack, verbose=False)
+
+			# set state
+			ftpmachine.set_state(str(current_state))
+
+			# Send message and listen
+			rp = send_receive_ftp(rp, token[0])
+
+			# Finish TCP connection
+			disconnect_ftp(rp)
+		'''
+
+		current_state = current_state + 1
+
+		if current_state > num_of_states:
+			break
 	
 	elapsed_time = time.time() - g_start_time
 	print "Total elapsed time : ", elapsed_time, "\n"
 	# Program normally ends.
-	ftpmachine.model.graph.draw("diagram/sample_state_fin.png", prog='dot')
+	ftpmachine.model.graph.draw("diagram/bfs_state_fin.png", prog='dot')
 	logging.info(transition_info)
-	img = mplotimg.imread("diagram/sample_state_fin.png")
+	img = mplotimg.imread("diagram/bfs_state_fin.png")
 	plt.imshow(img)
 	plt.show()
 	sys.exit()
+
+elif mode == 'd':
+	# dfs
+	with open("./tokenfile/total_tokens.txt") as f:
+		token_db = pickle.load(f)
+
+	while True:
+
+		current_token_index = state_list.state_list[current_state].token_index
+
+		# search all states and tokens
+		if current_token_index == len(token_db) -1 and state_list.state_list[current_state].parent is None:
+			break
+
+		move_state_token =[]
+		target_state = current_state
+		
+		while True:
+			current_parent = state_list.state_list[target_state].parent
+			if current_parent is not None:
+				move_state_token.append(state_list.state_list[target_state].token)
+				target_state = current_parent
+				continue
+			else: # root node
+				break
+				
+		move_state_token.reverse() # very important in dfs
+
+		# Simple message format ( 1 word )
+		for i in range(current_token_index, len(token_db)):
+		# for token in token_db:
+			state_list.state_list[current_state].token_index = i
+			if token_db[i][0] == "quit":
+				continue
+			sport = sport + 1
+
+			#Start with 3WHS
+			rp = handshake_init(dst_ip, dport, sport)
+			
+			#If handshake finished, the server sends response. Send ack and get the last req packet info.
+			ftp_ack = generate_ftp_ack(rp)
+			send(ftp_ack, verbose=False)
+
+			for tk in move_state_token:
+				rp = send_receive_ftp(rp, tk)
+
+			# set state
+			ftpmachine.set_state(str(current_state))
+
+			# Send message and listen
+			rp = send_receive_ftp(rp, token_db[i][0])
+
+			# Finish TCP connection
+			disconnect_ftp(rp)
+
+			#Initialize current state as 0
+			cs = 0
+			
+			if cnt % 1000 == 0 :
+				elapsed_time = time.time() - g_start_time
+				print "[+] COUNT OF TRIALS : %d" % cnt, "Time Elapsed :", elapsed_time, "s"
+				graphname = "diagram/dfs_state" + str(cnt) + ".png"
+				ftpmachine.model.graph.draw(graphname, prog='dot')
+				#img = mplotimg.imread("diagram/sample_state.png")
+				#plt.imshow(img)
+				#plt.show()
+
+			# found a new state
+			if state_found == 1:
+				state_found = 0
+				current_state = num_of_states - 1
+				break
+
+		if state_list.state_list[current_state].token_index == len(token_db)-1:
+			# end for (token end)
+			current_state = current_parent
+			ftpmachine.set_state(str(current_state))
+
+			if current_state is None:
+				break
+			
+
+	elapsed_time = time.time() - g_start_time
+	print "Total elapsed time : ", elapsed_time, "\n"
+	# Program normally ends.
+	ftpmachine.model.graph.draw("diagram/dfs_state_fin.png", prog='dot')
+	logging.info(transition_info)
+	img = mplotimg.imread("diagram/dfs_state_fin.png")
+	plt.imshow(img)
+	plt.show()
+	sys.exit()
+
 
 else :
 	print "[-] Invalid Input... exit...\n"
@@ -395,4 +574,3 @@ for item in variable_paylds :
 print len(variable_paylds), "Variable payloads found"
 
 """
-
