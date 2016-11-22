@@ -1,351 +1,325 @@
    1070 /lib64/ld-linux-x86-64.so.2
-   3521 libpthread.so.0
-   3541 _ITM_deregisterTMCloneTable
-   3575 _Jv_RegisterClasses
-   3621 _ITM_registerTMCloneTable
-   3653 read
-   3660 __errno_location
-   3701 open
-   3706 close
-   3714 libc.so.6
-   3726 socket
-   3735 __printf_chk
-   3752 strncmp
-   3762 optind
-   3771 timerfd_create
-   4010 epoll_wait
-   4023 puts
-   4030 sigprocmask
-   4044 __stack_chk_fail
-   4065 __lxstat
-   4076 putchar
-   4106 abort
-   4114 strtol
-   4123 calloc
-   4132 signalfd
-   4143 sigemptyset
-   4157 writev
-   4166 bind
-   4173 shutdown
-   4204 __fprintf_chk
-   4222 sigaddset
-   4234 __vsnprintf_chk
-   4254 setsockopt
-   4267 malloc
-   4276 __ctype_b_loc
-   4314 optarg
-   4323 stderr
-   4332 timerfd_settime
-   4352 __snprintf_chk
-   4371 getopt_long
-   4405 __fxstat
-   4416 fwrite
-   4425 epoll_ctl
-   4437 epoll_create1
-   4455 __cxa_finalize
-   4474 __libc_start_main
-   4516 free
-   4523 manufacturer_mode_reset
-   4553 _IO_stdin_used
-   4572 __gmon_start__
-   4611 GLIBC_2.2.5
-   4625 GLIBC_2.3
-   4637 GLIBC_2.9
-   4651 GLIBC_2.8
-   4663 GLIBC_2.3.2
-   4677 GLIBC_2.7
-   4711 GLIBC_2.4
-   4723 GLIBC_2.3.4
-  10561 5"m 
-  10567 %$m 
-  10601 %"m 
-  10611 %"m 
-  10621 %"m 
-  10631 %"m 
-  10641 %"m 
-  10651 %"m 
-  10661 %"m 
-  10671 %*m 
-  10701 %*m 
-  10711 %*m 
-  10721 %*m 
-  10731 %*m 
-  10741 %*m 
-  10751 %*m 
-  10761 %*m 
-  10771 %*m 
-  11001 %*m 
-  11011 %*m 
-  11021 %2m 
-  11031 %2m 
-  11041 %:m 
-  11051 %:m 
-  11061 %:m 
-  11071 %:m 
-  11101 %:m 
-  11111 %:m 
-  11121 %:m 
-  11131 %:m 
-  11141 %:m 
-  11151 %Bm 
-  11161 %Bm 
-  11171 %Bm 
-  11201 %Jm 
-  11211 %Jm 
-  11221 %Jm 
-  11231 %Jm 
-  11241 %Rm 
-  11260 AWAVI
-  11273 AUATE1
-  11636 dH34%(
-  11664 []A\A]A^A_
-  12271 +-ak 
-  12525 =@k 
-  12567 =$k 
-  12760 -cj 
-  14466 -5g 
-  15213 =Ge 
-  15231 =je 
-  15706 =ud 
-  16730 =tb 
-  16766 =Eb 
-  17050 =$b 
-  17166 =%b 
-  17456 D$	j
-  20426 =%_ 
-  20500 AVAU1
-  20506 ATUH
-  20617 l$0H
-  20712 H9l$0
-  20756 5u^ 
-  21007 =l^ 
-  21340 []A\A]A^
-  22312 =q[ 
-  22520 5E[ 
-  22723 D$X1
-  23231 D$XdH3
-  23446 D$%H
-  23457 D$-H
-  23470 D$5H
-  23501 D$>H
-  23512 D$FH
-  23534 D$Vj
-  23543 =8Y 
-  23737 =oX 
-  23754 =aX 
-  24154 =/X 
-  24433 =`W 
-  24446 =)W 
-  24463 =_W 
-  26613 ~ dH
-  26630 D$X1
-  26725 L$XdH3
-  27013 T$ H
-  27112 L$@H
-  27340 AUATUSH
-  27470 []A\A]
-  27514 []A\A]
-  30260 ATUA
-  30444 []A\
-  32040 AWAVE1
-  32047 AUATUSH
-  32265 D$PI
-  32343 []A\A]A^A_
-  32747 tGUSH
-  33313 AWAVA
-  33322 AUATI
-  33511 []A\A]A^A_
-  33607 t?SH
-  34642 x|US
-  35103 t3SH
-  35263 AVAUATUStk
-  35432 ]A\A]A^
-  35455 ]A\A]A^
-  35503 AVAUATUStk
-  35652 ]A\A]A^
-  35675 ]A\A]A^
-  35723 AVAUATUStk
-  36075 ]A\A]A^
-  36115 ]A\A]A^
-  36163 tUATUA
-  36257 []A\
-  37320 AWAVAUATUSHc
-  37354 D$(1
-  37560 T$(dH3
-  37601 8[]A\A]A^A_
-  40213 =XD 
-  40340 AUATUSH
-  40377 D$x1
-  40566 =mC 
-  41202 L$xdH3
-  41227 []A\A]
-  41300 AVAUATUSH
-  41327 D$(1
-  41535 L$(dH3
-  41562 0[]A\A]A^
-  42062 D$(1
-  42230 L$(dH3
-  42342 AVAUI
-  42351 ATUI
-  42703 []A\A]A^
-  43203 t3SH
-  43323 t+SH
-  43443 t{USH
-  43467 H;3u	
-  43500 H93t
-  44141 tUAUATI
-  44250 []A\A]
-  44303 tRATUH
-  44410 []A\
-  44454 tbH;2u
-  44502 t4H90u
-  44530 St%H
-  44663 AVAUATUStsH
-  45041 ]A\A]A^
-  45066 ]A\A]A^
-  45120 AWAVAUATUSH
-  45272 []A\A]A^A_
-  45760 ATUH
-  46150 D$x1
-  46171 D$xdH3
-  46216 []A\
-  46242 d$ L
-  46400 AWAVAUATUSH
-  46431 D$h1
-  46512 T$ 1
-  46703 t<SA
-  46722 D$Q 
-  46727 D$R 
-  46761 D$  H
-  47007 |$ K
-  47021 T/3H
-  47075 D$Q 
-  47102 D$R 
-  47125 D$hdH3
-  47146 x[]A\A]A^A_
-  47600 AWAVA
-  47607 AUATL
-  47732 []A\A]A^A_
-  50010 bluemoon - Bluemoon configuration utility
-  50062 Usage:
-  50100 Options:
-  50111 	-A, --bdaddr [addr]    Set Bluetooth address
-  50167 	-F, --firmware [file]  Load firmware
-  50235 	-C, --check <file>     Check firmware image
-  50312 	-R, --reset            Reset controller
-  50363 	-B, --coldboot         Cold boot controller
-  50440 	-E, --exception        Trigger exception
-  50512 	-i, --index <num>      Use specified controller
-  50573 	-h, --help             Show help options
-  50650 Failed to read boot params (0x%02x)
-  50720 Size mismatch for read boot params
-  50770 	Min FW Build Number:	%u-%u.%u
-  51030 Failed to leave manufacturer mode (0x%02x)
-  51110 Failed to write address (0x%02x)
-  51160 Failed to write data (0x%02x)
-  51220 Failed to load firmware (0x%02x)
-  51270 Failed to activate traces (0x%02x)
-  51340 Failed to allocate firmware buffer
-  51410 Firmware size does not match buffer
-  51460 Firmware with %u commands and %u events
-  51540 Failed to read address (0x%02x)
-  51610 Setting address is not supported
-  51660 	Old BD_ADDR: %2.2X:%2.2X:%2.2X:%2.2X:%2.2X:%2.2X
-  51750 	New BD_ADDR: %2.2X:%2.2X:%2.2X:%2.2X:%2.2X:%2.2X
-  52040 	BD_ADDR: %2.2X:%2.2X:%2.2X:%2.2X:%2.2X:%2.2X
-  52120 	LMP Features: 0x%2.2x 0x%2.2x 0x%2.2x 0x%2.2x 0x%2.2x 0x%2.2x 0x%2.2x 0x%2.2x
-  52240 Failed to enter manufacturer mode (0x%02x)
-  52320 %s/%s/ibt-hw-%x.%x.%x-fw-%x.%x.%x.%x.%x.bseq
-  52400 Controller Version Information
-  52440 	Hardware Variant:	%s (0x%02x)
-  52500 	Firmware Variant:	%s (0x%02x)
-  52540 	Firmware Build Number:	%u-%u.%u
-  52610 Failed to read version (0x%02x)
-  52660 Size mismatch for read version response
-  52740 Invalid command line parameters
-  53010 Bluemoon configuration utility ver %s
-  53060 Failed to read complete firmware file
-  53130 Header len:	%u DWORDs / %u bytes
-  53200 Key size:	%u DWORDs / %u bytes
-  53240 Modulus size:	%u DWORDs / %u bytes
-  53310 Exponent size:	%u DWORDs / %u bytes
-  53360 CSS.size does not match file length
-  53430 CSS.headerLen does not match data sizes
-  53510 Failed to open HCI raw device
-  53550 Failed to open HCI user channel
-  53620 	bluemoon [options]
-  53644 Failed to reset (0x%02x)
-  53676 Secure Boot Parameters
-  53725 	OTP Format Version:	%u
-  53756 	OTP Content Version:	%u
-  54010 	OTP ROM Patch Version:	%u
-  54044 	Device Revision ID:	%u
-  54075 	Secure Boot Enable:	%u
-  54126 	Take Key From Header:	%u
-  54161 	RSA Key Type:		%u
-  54205 	OTP Lock:		%u
-  54225 	API Lock:		%u
-  54245 	Debug Lock:		%u
-  54267 	Limited CCE to ISSC:	%u
-  54321 	Unlocked State:		%u
-  54347 Failed to cold boot (0x%02x)
-  54405 Activating firmware
-  54431 Invalid packet in firmware
-  54465 Failed to open firmware %s
-  54521 Failed to get firmware size
-  54556 Failed to read firmware file
-  54614 Unexpected opcode 0x%02x
-  54646 Unexpected event 0x%02x
-  54677 Invalid firmware file
-  54726 Controller Address
-  54751 Failed to read data (0x%02x)
-  55007 Controller Data
-  55027 	LMP Version: %u
-  55051 	LE Features: 0x%2.2x
-  55100 iBT 2.0 (WP)
-  55115 Reserved
-  55126 iBT 1.1 (XG223)
-  55146 iBT 3.x Bluetooth FW
-  55173 iBT Bootloader
-  55212 iBT 1.0 - iBT 2.5
-  55234 Firmware: %s
-  55252 /lib/firmware
-  55270 intel
-  55276 Patch level: %d
-  55317 	Hardware Platform:	%u
-  55347 	Hardware Revision:	%u.%u
-  55402 	Firmware Revision:	%u.%u
-  55435 	Firmware Patch Number:	%u
-  55471 A::DF::C:TRBEi:rvh
-  55520 5.41
-  55525 Firmware file is too short
-  55561 Module type:	%u
-  55602 Header version:	%u.%u
-  55631 Module ID:	%u
-  55650 Module vendor:	%u
-  55673 Date:		%u
-  55706 Size:		%u DWORDs / %u bytes
-  55743 Firmware with %u commands
-  55776 bdaddr
-  56005 bddata
-  56014 check
-  56022 traces
-  56031 reset
-  56037 coldboot
-  56050 exception
-  56062 index
-  56074 version
-  56104 help
-  56111 iBT 2.5 (StP)
-  56127 iBT 1.5 (AG610)
-  56147 iBT 2.1 (AG620)
-  56167 iBT 3.0 (LnP)
-  56205 iBT 3.0 (WsP)
-  56554 failed to allocate %zu bytes
-  56612 %s/%s
-  56620 0123456789abcdef
-  60457 ;*3$"
- 100020 3dee03a5cc1d9353f8c62ec6769833eb18b402.debug
+   3701 libpthread.so.0
+   3721 _ITM_deregisterTMCloneTable
+   3755 _Jv_RegisterClasses
+   4001 _ITM_registerTMCloneTable
+   4033 read
+   4040 __errno_location
+   4061 open
+   4066 close
+   4074 libc.so.6
+   4106 socket
+   4115 __printf_chk
+   4132 strncmp
+   4142 optind
+   4151 timerfd_create
+   4170 epoll_wait
+   4203 puts
+   4210 sigprocmask
+   4224 __stack_chk_fail
+   4245 __lxstat
+   4256 putchar
+   4266 abort
+   4274 strtol
+   4303 calloc
+   4312 signalfd
+   4323 sigemptyset
+   4337 writev
+   4346 bind
+   4353 shutdown
+   4364 __fprintf_chk
+   4402 sigaddset
+   4414 __vsnprintf_chk
+   4434 setsockopt
+   4447 malloc
+   4456 __ctype_b_loc
+   4474 optarg
+   4503 stderr
+   4512 timerfd_settime
+   4532 __snprintf_chk
+   4551 getopt_long
+   4565 __fxstat
+   4576 fwrite
+   4605 epoll_ctl
+   4617 epoll_create1
+   4635 __cxa_finalize
+   4654 __libc_start_main
+   4676 free
+   4703 _edata
+   4712 __bss_start
+   4726 _end
+   4733 manufacturer_mode_reset
+   4763 _IO_stdin_used
+   5002 __gmon_start__
+   5021 GLIBC_2.2.5
+   5035 GLIBC_2.3
+   5047 GLIBC_2.9
+   5061 GLIBC_2.8
+   5073 GLIBC_2.3.2
+   5107 GLIBC_2.7
+   5121 GLIBC_2.4
+   5133 GLIBC_2.3.4
+  11500 AWAVI
+  11513 AUATE1
+  12101 []A\A]A^A_
+  13047 =tj 
+  13426 =]i 
+  14747 t"f=
+  15262 =Ye 
+  15271 5Re 
+  15401 =Ae 
+  15502 =Q_ 
+  15566 =%e 
+  17002 =9b 
+  17046 =ub 
+  17306 =ua 
+  17422 =aa 
+  17435 =2a 
+  17446 =&a 
+  17526 =Ea 
+  17656 D$	j
+  17746 =U` 
+  20030 =6` 
+  20700 AUAT1
+  21015 l$0H
+  21110 H9l$0
+  21422 =)] 
+  21520 []A\A]
+  21752 5y\ 
+  23103 D$X1
+  23411 D$XdH3
+  23626 D$%H
+  23637 D$-H
+  23650 D$5H
+  23661 D$>H
+  23672 D$FH
+  23714 D$Vj
+  23752 =QX 
+  24060 =RX 
+  24075 =FX 
+  24106 =LX 
+  24166 =%X 
+  24540 ="W 
+  25516 =MU 
+  26044 =wT 
+  26372 =AS 
+  26504 =WS 
+  26773 ~ dH
+  27010 D$X1
+  27105 L$XdH3
+  27173 T$ H
+  27272 L$@H
+  27520 AUATUSH
+  27650 []A\A]
+  27674 []A\A]
+  30440 ATUA
+  30624 []A\
+  32200 AWAVE1
+  32207 AUATUSH
+  32423 D$`I
+  32506 []A\A]A^A_
+  33107 tGUSH
+  33453 AWAVA
+  33462 AUATI
+  33651 []A\A]A^A_
+  33747 t?SH
+  35002 x|US
+  35243 t3SH
+  35423 AVAUATUStk
+  35572 ]A\A]A^
+  35615 ]A\A]A^
+  35643 AVAUATUStk
+  36012 ]A\A]A^
+  36035 ]A\A]A^
+  36063 AVAUATUStk
+  36235 ]A\A]A^
+  36255 ]A\A]A^
+  36323 tUATUA
+  36417 []A\
+  37460 AWAVAUATUSHc
+  37514 D$(1
+  37613 =XE 
+  37720 T$(dH3
+  37741 8[]A\A]A^A_
+  40303 w[UH
+  40500 AUATUSH
+  40537 D$x1
+  41151 %zB 
+  41167 -dB 
+  41262 %1B 
+  41342 L$xdH3
+  41367 []A\A]
+  41440 AVAUATUSH
+  41467 D$(1
+  41675 L$(dH3
+  41722 0[]A\A]A^
+  42222 D$(1
+  42370 L$(dH3
+  42502 AVAUI
+  42511 ATUI
+  43043 []A\A]A^
+  43343 t3SH
+  43463 t+SH
+  43603 t{USH
+  43627 H;3u	
+  43640 H93t
+  44037 tGUSH
+  44301 tUAUATI
+  44410 []A\A]
+  44443 tRATUH
+  44550 []A\
+  44603 StjH
+  44615 taH;2u
+  44652 t*H90u
+  45042 AVAUATUSH
+  45211 ]A\A]A^
+  45233 ]A\A]A^
+  45311 AWAVI
+  45320 AUATI
+  45462 []A\A]A^A_
+  46140 ATUH
+  46330 D$x1
+  46351 D$xdH3
+  46376 []A\
+  46422 d$ L
+  46560 AWAVAUATUSH
+  46611 D$h1
+  46652 |$ I
+  46672 |$ 1
+  46753 D<! 
+  46773 T<"H
+  47012 T<#H
+  47071 D$Q 
+  47076 D$R 
+  47130 D$  H
+  47156 |$ K
+  47170 T/3H
+  47245 D$Q 
+  47252 D$R 
+  47275 D$hdH3
+  47316 x[]A\A]A^A_
+  47740 AWAVA
+  47747 AUATL
+  50072 []A\A]A^A_
+  50150 bluemoon - Bluemoon configuration utility
+  50222 Usage:
+  50240 Options:
+  50251 	-A, --bdaddr [addr]    Set Bluetooth address
+  50327 	-F, --firmware [file]  Load firmware
+  50375 	-C, --check <file>     Check firmware image
+  50452 	-R, --reset            Reset controller
+  50523 	-B, --coldboot         Cold boot controller
+  50600 	-E, --exception        Trigger exception
+  50652 	-i, --index <num>      Use specified controller
+  50733 	-h, --help             Show help options
+  51010 Failed to read boot params (0x%02x)
+  51060 Size mismatch for read boot params
+  51130 	Min FW Build Number:	%u-%u.%u
+  51170 Failed to leave manufacturer mode (0x%02x)
+  51250 Failed to write address (0x%02x)
+  51320 Failed to write data (0x%02x)
+  51360 Failed to load firmware (0x%02x)
+  51430 Failed to activate traces (0x%02x)
+  51500 Failed to allocate firmware buffer
+  51550 Firmware size does not match buffer
+  51620 Firmware with %u commands and %u events
+  51700 Failed to read address (0x%02x)
+  51750 Setting address is not supported
+  52020 	Old BD_ADDR: %2.2X:%2.2X:%2.2X:%2.2X:%2.2X:%2.2X
+  52110 	New BD_ADDR: %2.2X:%2.2X:%2.2X:%2.2X:%2.2X:%2.2X
+  52200 	BD_ADDR: %2.2X:%2.2X:%2.2X:%2.2X:%2.2X:%2.2X
+  52260 	LMP Features: 0x%2.2x 0x%2.2x 0x%2.2x 0x%2.2x 0x%2.2x 0x%2.2x 0x%2.2x 0x%2.2x
+  52400 Failed to enter manufacturer mode (0x%02x)
+  52460 %s/%s/ibt-hw-%x.%x.%x-fw-%x.%x.%x.%x.%x.bseq
+  52540 Controller Version Information
+  52600 	Firmware Variant:	%s (0x%02x)
+  52640 	Firmware Build Number:	%u-%u.%u
+  52710 	Hardware Variant:	%s (0x%02x)
+  52750 Failed to read version (0x%02x)
+  53020 Size mismatch for read version response
+  53100 Invalid command line parameters
+  53150 Bluemoon configuration utility ver %s
+  53220 Failed to read complete firmware file
+  53270 Header len:	%u DWORDs / %u bytes
+  53340 Key size:	%u DWORDs / %u bytes
+  53400 Modulus size:	%u DWORDs / %u bytes
+  53450 Exponent size:	%u DWORDs / %u bytes
+  53520 CSS.size does not match file length
+  53570 CSS.headerLen does not match data sizes
+  53650 Failed to open HCI raw device
+  53710 Failed to open HCI user channel
+  53760 	bluemoon [options]
+  54004 Failed to reset (0x%02x)
+  54036 Secure Boot Parameters
+  54065 	OTP Format Version:	%u
+  54116 	OTP Content Version:	%u
+  54150 	OTP ROM Patch Version:	%u
+  54204 	Device Revision ID:	%u
+  54235 	Secure Boot Enable:	%u
+  54266 	Take Key From Header:	%u
+  54321 	RSA Key Type:		%u
+  54345 	OTP Lock:		%u
+  54365 	API Lock:		%u
+  54405 	Debug Lock:		%u
+  54427 	Limited CCE to ISSC:	%u
+  54461 	Unlocked State:		%u
+  54507 Failed to cold boot (0x%02x)
+  54545 Activating firmware
+  54571 Invalid packet in firmware
+  54625 Failed to open firmware %s
+  54661 Failed to get firmware size
+  54716 Failed to read firmware file
+  54754 Unexpected opcode 0x%02x
+  55006 Unexpected event 0x%02x
+  55037 Invalid firmware file
+  55066 Controller Address
+  55111 Failed to read data (0x%02x)
+  55147 Controller Data
+  55167 	LMP Version: %u
+  55211 	LE Features: 0x%2.2x
+  55240 iBT 2.0 (WP)
+  55255 iBT 3.x Bluetooth FW
+  55302 iBT Bootloader
+  55321 Reserved
+  55332 iBT 1.0 - iBT 2.5
+  55354 iBT 1.1 (XG223)
+  55374 Firmware: %s
+  55412 /lib/firmware
+  55430 intel
+  55436 Patch level: %d
+  55457 	Hardware Platform:	%u
+  55507 	Firmware Revision:	%u.%u
+  55542 	Firmware Patch Number:	%u
+  55576 	Hardware Revision:	%u.%u
+  55631 A::DF::C:TRBEi:rvh
+  55660 5.37
+  55665 Firmware file is too short
+  55721 Module type:	%u
+  55742 Header version:	%u.%u
+  55771 Module ID:	%u
+  56010 Module vendor:	%u
+  56033 Date:		%u
+  56046 Size:		%u DWORDs / %u bytes
+  56103 Firmware with %u commands
+  56136 bdaddr
+  56145 bddata
+  56154 check
+  56162 traces
+  56171 reset
+  56177 coldboot
+  56210 exception
+  56222 index
+  56234 version
+  56244 help
+  56251 iBT 2.5 (StP)
+  56267 iBT 1.5 (AG610)
+  56307 iBT 2.1 (AG620)
+  56327 iBT 3.0 (LnP)
+  56700 failed to allocate %zu bytes
+  56736 %s/%s
+  56760 0123456789abcdef
+  60617 ;*3$"
+ 100020 dec04516921c802e49228fd9968479a7cec946.debug
  100105 .shstrtab
  100117 .interp
  100127 .note.ABI-tag

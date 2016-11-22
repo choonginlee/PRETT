@@ -24,12 +24,13 @@ class FTPModel(object):
 		self.name = name
 
 class State:
-	def __init__(self, numb, parent=None, token=None, token_index=0, child_list=[]):
+	def __init__(self, numb, parent=None, token=None, token_index=0, child_list=[], depth=0):
 		self.numb = numb
 		self.parent = parent
 		self.token = token
 		self.token_index = token_index
 		self.child_list = child_list
+		self.depth = depth
 
 
 class StateList:
@@ -39,83 +40,46 @@ class StateList:
 	def add_state(self, state):
 		self.state_list.append(state)
 
-state_numb_list = ['0']
-current_state = 0
-state_list = StateList()
-sample = State(0)
-state_list.add_state(sample)
-
 def handshake_init(dst_ip, dport, sport):
 	#Initiate TCP connection - 3 handshaking
-	#logging.info("[+] ======== Hand Shaking ========\n")
+	global skt
 	SYN = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, flags = "S") # SYN
-	SYN_ACK = sr1(SYN, verbose=False) # Listen ACK
+	SYN_ACK = skt.sr1(SYN, verbose=False, retry=-1) # Listen ACK
 	ACK = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=SYN_ACK.ack, ack=SYN_ACK.seq + 1, flags = "A") # SYN - ACK
-	RESPONSE = sr1(ACK, verbose=False) # Send ACK, Listen FTP Response
-	logging.info("[+] Handshake over.")
-	#logging.info("[+] ===============================\n")
+	RESPONSE = skt.sr1(ACK, verbose=False, retry=-1) # Send ACK, Listen FTP Response
+	#logging.info("[+] Handshake over.")
 
 	return RESPONSE # This is FTP Response from server
 
 def disconnect_ftp(rp):
 	# Send Req. QUIT (c) -> Get Resp Goodbye (s) -> get FIN-ACK (s) -> send ACK (c) -> Send FIN-ACK (c) -> get ACK
-	#logging.info("[+] ======== Disconnection ========\n")
 	start_time = time.time()
+	global timeout, skt
 
 	p = generate_ftp_msg("QUIT", rp)
 	# Listen FIN-ACK
-	ans, unans = sr(p, filter = "tcp", multi=1, timeout=0.015, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
-	
-	"""
-	if len(ans) == 0 :
-		logging.error("No packet in timeout!")
-		rp = sniff(filter = "tcp", timeout = 10, count = 2)
-		if len(rp) == 0:
-			logging.error("It takes too long time! abort...")
-			sys.exit()
-	elif len(ans) == 1 :
-		logging.error("Not enough packet in timeout!")
-		# Wait for the next packet
-		rp = sniff(filter = "tcp", timeout = 10, count = 1)
-		if len(rp) == 0:
-			logging.error("It takes too long time! abort...")
-			sys.exit()
-		else:
-			ans[1][1] = rp
-			pass
-
-	elif len(ans) == 2 :
-		pass
-		
-	elif len(ans) >= 3:
-		logging.error("Unexpected packet received.")
-		return
-	"""
+	ans, unans = skt.sr(p, multi=1, timeout=timeout, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
+	#logging.info("[+] [Diconnect FTP] After sr")
 
 	if len(ans) < 2:
 		return
-
 	FIN_ACK = ans[1][1]
-
-	#elapsed_time = time.time() - start_time
-	#print "After sniffing and parsing FIN-ACK..." + str(elapsed_sudo time) + "\n"
 
 	# Send ack to fin-ack
 	ACK = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=FIN_ACK.ack, ack=FIN_ACK.seq, flags = "A") # SYN - ACK
-	send(ACK, verbose=False)
-
-	#elapsed_time = time.time() - start_time
-	#print "After sending ack to finack..." + str(elapsed_time) + "\n"
+	skt.send(ACK)
+	#logging.info("[+] [Diconnect FTP] After sending ACK")
 
 	# Finally, send FIN, ACK to the server
 	FIN_ACK = generate_ftp_fin_ack(FIN_ACK)
-	send(FIN_ACK, verbose=False)
-
-	logging.info("[+] FTP disconnected\n")
+	skt.send(FIN_ACK)
+	# next_seq = FIN_ACK.seq + 1
+	# print next_seq
+	#logging.info("[+] FTP disconnected\n")
 
 def send_receive_ftp(rp, token):
 	# SEND Req. -> Get ACK -> GET Rep. -> Send ACK (normal TCP-based protocol)
-	global cnt
+	global skt, cnt, timeout, sniff_timeout
 	temp_rp = rp
 	cnt = cnt + 1
 	start_time = time.time()
@@ -126,29 +90,34 @@ def send_receive_ftp(rp, token):
 	#print "[+] Message to be sent \n", p.getlayer("Raw").show()
 
 	# Send Req, then get ACK and Resp of tcp
-	ans, unans = sr(p, filter = "tcp", multi=1, timeout=0.015, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
-	
+	#logging.info("[+] [SND RCV FTP] BEFORE SR")
+	ans, unans = skt.sr(p, multi=1, timeout=timeout, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
+	#logging.info("[+] [SND RCV FTP] AFTER SR")
+
 	if len(ans) == 0:
 		logging.debug("No packet in short timeout!")
 		# It takes long time to get... sniff single tcp packet and determine...
-		rp = sniff(filter = "tcp", iface = "enp0s8", timeout = 10, count = 1)
+		rp = sniff(filter = "tcp", iface = myiface, timeout = sniff_timeout, count = 1)
 		if len(rp) == 0:
 			logging.debug("[!] Count : " + str(cnt) + " | It takes too long time! Add transition as timeout")
 			build_state_machine(ftpmachine, ftpmachine.model.state, p.getlayer("Raw").load, "Timeout")
 			return temp_rp
 		else:
+			logging.debug("[+] 1+ TCP packet captured. " + str(len(rp)) + "".join(str(x.summary()) for x in rp))
 			sentpayload = p.getlayer("Raw").load
-			rcvdpayload = rp.getlayer("Raw").load
+			rcvdpayload = rp[0].getlayer("Raw").load
 			#logging.info("[+] RESPONSE FTP PAYLOAD : " + rcvdpayload) # this is protocol response message
-			ack_p = generate_ftp_ack(rcv)
+			ack_p = generate_ftp_ack(rp[0])
+			#logging.info("[+] [SND RCV FTP] AFTER FTP MSG 2 FUNC")
 
 			#elapsed_time = time.time() - start_time
 			#print "After sniffing and parsing ftp..." + str(elapsed_time) + "\n"
 
-			send(ack_p, verbose=False)
-			logging.info("[+] FTP ACK sent.")
+			skt.send(ack_p)
+			#logging.info("[+] FTP ACK sent.")
 			build_state_machine(ftpmachine, ftpmachine.model.state, sentpayload, rcvdpayload)
-			return rp
+			#logging.info("[+] [SND RCV FTP] AFTER BUILDING MACHINE")
+			return rp[0]
 
 	for sp, rp in ans:
 		if rp.haslayer("Raw"):
@@ -158,13 +127,15 @@ def send_receive_ftp(rp, token):
 			ack_p = generate_ftp_ack(rp)
 			#elapsed_time = time.time() - start_time
 			#print "After sniffing and parsing ftp..." + str(elapsed_time) + "\n"
-			send(ack_p, verbose=False)
-			logging.info("[+] FTP ACK sent.")
+			skt.send(ack_p)
+			#logging.info("[+] FTP ACK sent.")
 			build_state_machine(ftpmachine, ftpmachine.model.state, sentpayload, rcvdpayload)
+			#logging.info("[+] [SND RCV FTP] AFTER BUILDING MACHINE")
 			return rp
 
 	logging.debug("No response FTP packet!")
-	sys.exit()
+	return "error"
+	# sys.exit()
 	
 def check_ftp_resp(pkt):
 	global start_time
@@ -195,6 +166,7 @@ def generate_ftp_ack(rp):
 	# Generates ack message to FTP Response packet
 	tcp_seg_len = len(rp.getlayer(Raw).load)
 	p = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=rp.ack, ack=rp.seq+tcp_seg_len, flags = "A")
+	#logging.info("[+] [GEN FTP ACK] - PKT GEN OVER.")
 	return p
 
 def generate_ftp_fin_ack(rp):
@@ -208,17 +180,18 @@ def generate_ftp_msg(payload, rp) :
 
 def clear_tcp_connection(dst_ip, dport, sport):
 	#Clear TCP connection
+	global skt
 	FIN = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, flags = 0x11) # FIN
-	FIN_ACK = sr1(FIN, verbose=False)
+	FIN_ACK = skt.sr1(FIN, verbose=False, retry=-1)
 	ACK = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=FIN_ACK.ack, ack=FIN_ACK.seq + 1, flags = "A")
-	send(ACK, verbose=False)
-	logging.info("[+] TCP connection clean ... \n")
+	skt.send(ACK)
+	#logging.info("[+] TCP connection clean ... \n")
 
 def build_state_machine(sm, crnt_state, spyld, rpyld):
 	# sm : state machine, crnt_state : current state, payload : response packet payload 
 	
 	# Build and fix a state machine based on the response
-	global num_of_states, transition_info, state_numb_list, state_list, current_state, cnt, state_found, new_state
+	global num_of_states, transition_info, state_numb_list, state_list, current_state, cnt, state_found, new_state, depth_count
 
 	#Check if the response already seen before
 	for t in sm.get_triggers(crnt_state):
@@ -243,18 +216,24 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 
 	# In case of timeout with huge inputs, store full send/receive label in transition_info
 	# but store abbrebiated send/receive label in transition model (as well as state machine diagram)
-	t_label = spyld + " / " + rpyld
+	if len(spyld) > 15:
+		abbr_spyld = spyld[0:15] + "-abbr"
+		t_label = abbr_spyld + " / " + rpyld
+	else:
+		t_label = spyld + " / " + rpyld
+
 	transition_info[t_label] = [crnt_state, dst_state, 1] # add transition info
 	state_numb_list.append(str(num_of_states))
-	state_list.add_state(State(num_of_states, parent=current_state, token=str(spyld)))
+	state_list.add_state(State(num_of_states, parent=current_state, token=str(spyld), depth=depth_count))
 
 	state_found = 1
 	logging.info("[+] Count : " + str(cnt) + " | State " + crnt_state + " added with transition " + t_label)
 	logging.info("[+] Count : " + str(cnt) + " | State " + dst_state + " added with transition " + t_label)
-	
-	if rpyld == "Timeout" and len(spyld) > 15:
-		t_label = abbr_spyld + " / " + rpyld
+
 	sm.add_transition(t_label, source = crnt_state, dest = dst_state)
+
+#################################################
+################ MAIN PART #####################
 
 logging.basicConfig(level=logging.DEBUG, filename="ptmsg_log", filemode="a+", format="%(asctime)-15s %(levelname)-8s %(message)s")
 
@@ -262,7 +241,7 @@ dst_ip = sys.argv[1]
 
 #These informations are prerequisite.
 dport = 21
-sport = 2200
+sport = 10000 # find sport_here
 delimiter = "\r\n"
 exit_label = "QUIT / 221 Goodbye."
 
@@ -270,6 +249,17 @@ num_of_states = 0
 g_start_time = 0
 state_found = 0
 new_state = []
+myiface = "enp0s8"
+# next_seq = 0
+
+state_numb_list = ['0']
+current_state = 0
+state_list = StateList()
+init_state = State(0)
+state_list.add_state(init_state)
+timeout = 0.004
+sniff_timeout = 5
+depth_count = 0
 
 #Mode Selection
 mode = raw_input("[!] Manual? or Auto(BFS, DFS)? ( \'m\' - for testing / \'b\' - bfs mode / \'d\' - dfs mode) : ")
@@ -282,16 +272,18 @@ ftpmachine = generate_ftp_model()
 transition_info = {}
 
 cnt = 0
+unique_cnt = 0
 
 # Disable Kernel's RST in iptable
 os.system("sudo iptables -A OUTPUT -p tcp --tcp-flags RST RST -j DROP")
 g_start_time = time.time()
+skt = conf.L3socket(iface = myiface)
 
 if mode == 'm':
 	rp = handshake_init(dst_ip, dport, sport)
 	#Next Ack no. calculation : last seq + prev. tcp payload len
 	ftp_ack = generate_ftp_ack(rp)
-	send(ftp_ack, verbose=False)
+	send(ftp_ack)
 	
 	for i in range(10) :
 		payload = raw_input("[!] payload? : ")
@@ -340,36 +332,50 @@ elif mode == 'b' :
 
 		# Simple message format ( 1 word )
 		for token in token_db:
-			if token[0] == "quit":
+			if token == "quit":
 				continue
 			sport = sport + 1
+			if sport > 60000:
+				sport = 1000
 
 			#Start with 3WHS
+			logging.info("[+] MSG Send Trial : %d" % cnt)
 			rp = handshake_init(dst_ip, dport, sport)
-			
+
 			#If handshake finished, the server sends response. Send ack and get the last req packet info.
 			ftp_ack = generate_ftp_ack(rp)
-			send(ftp_ack, verbose=False)
+			skt.send(ftp_ack)
+			#logging.info("[+] [MAIN] AFTER SEND")
 
 			for tk in move_state_token:
+				temp = rp
 				rp = send_receive_ftp(rp, tk)
+				if rp == "error":
+					print 'rp error when find state'
+					rp = temp
 			
 			# set state
 			ftpmachine.set_state(str(current_state))
+			unique_cnt = unique_cnt + 1
 
+			temp_rp = rp
 			# Send message and listen
-			rp = send_receive_ftp(rp, token[0])
-
-			# Finish TCP connection
-			disconnect_ftp(rp)
+			rp = send_receive_ftp(rp, token)
+			
+			if rp == "error":
+				print 'rp error before disconnect'
+				disconnect_ftp(temp_rp)
+			else:
+				# Finish TCP connection
+				disconnect_ftp(rp)
 
 			#Initialize current state as 0
 			cs = 0
 			
-			if cnt % 1000 == 0 :
+			if unique_cnt % 1000 == 0 :
 				elapsed_time = time.time() - g_start_time
-				print "[+] COUNT OF TRIALS : %d" % cnt, "Time Elapsed :", elapsed_time, "s"
-				graphname = "diagram/bfs_state" + str(cnt) + ".png"
+				print "[+] COUNT OF TRIALS : %d | " % unique_cnt, "Time Elapsed :", elapsed_time, "s"
+				graphname = "diagram/bfs_state" + str(unique_cnt) + ".png"
 				ftpmachine.model.graph.draw(graphname, prog='dot')
 				#img = mplotimg.imread("diagram/sample_state.png")
 				#plt.imshow(img)
@@ -386,7 +392,8 @@ elif mode == 'b' :
 
 			#Start with 3WHS
 			rp = handshake_init(dst_ip, dport, sport)
-			
+			global skt
+
 			#If handshake finished, the server sends response. Send ack and get the last req packet info.
 			ftp_ack = generate_ftp_ack(rp)
 			send(ftp_ack, verbose=False)
@@ -430,8 +437,9 @@ elif mode == 'd':
 			break
 
 		move_state_token =[]
+		target_parent = state_list.state_list[current_state].parent
 		target_state = current_state
-		
+
 		while True:
 			current_parent = state_list.state_list[target_state].parent
 			if current_parent is not None:
@@ -447,36 +455,50 @@ elif mode == 'd':
 		for i in range(current_token_index, len(token_db)):
 		# for token in token_db:
 			state_list.state_list[current_state].token_index = i
-			if token_db[i][0] == "quit":
+			# print token_db[i]
+			if token_db[i] == "quit":
 				continue
 			sport = sport + 1
+			if sport > 60000:
+				sport = 1000
 
 			#Start with 3WHS
 			rp = handshake_init(dst_ip, dport, sport)
-			
+
 			#If handshake finished, the server sends response. Send ack and get the last req packet info.
 			ftp_ack = generate_ftp_ack(rp)
-			send(ftp_ack, verbose=False)
+			skt.send(ftp_ack)
 
 			for tk in move_state_token:
+				temp = rp
 				rp = send_receive_ftp(rp, tk)
+				if rp == "error":
+					print 'rp error when find state'
+					rp = temp
+					continue
 
 			# set state
 			ftpmachine.set_state(str(current_state))
 
+			temp_rp = rp
 			# Send message and listen
-			rp = send_receive_ftp(rp, token_db[i][0])
+			rp = send_receive_ftp(rp, token_db[i])
+			unique_cnt = unique_cnt + 1
 
-			# Finish TCP connection
-			disconnect_ftp(rp)
+			if rp == "error":
+				print 'rp error before disconnect'
+				disconnect_ftp(temp_rp)
+			else:
+				# Finish TCP connection
+				disconnect_ftp(rp)
 
 			#Initialize current state as 0
 			cs = 0
 			
-			if cnt % 1000 == 0 :
+			if unique_cnt % 1000 == 0 :
 				elapsed_time = time.time() - g_start_time
-				print "[+] COUNT OF TRIALS : %d" % cnt, "Time Elapsed :", elapsed_time, "s"
-				graphname = "diagram/dfs_state" + str(cnt) + ".png"
+				print "[+] COUNT OF TRIALS : %d" % unique_cnt, "Time Elapsed :", elapsed_time, "s"
+				graphname = "diagram/dfs_state" + str(unique_cnt) + ".png"
 				ftpmachine.model.graph.draw(graphname, prog='dot')
 				#img = mplotimg.imread("diagram/sample_state.png")
 				#plt.imshow(img)
@@ -485,12 +507,17 @@ elif mode == 'd':
 			# found a new state
 			if state_found == 1:
 				state_found = 0
-				current_state = num_of_states - 1
-				break
+				if depth_count == 2: # max depth
+					continue
+				else:
+					depth_count = depth_count + 1
+					current_state = num_of_states
+					break
 
 		if state_list.state_list[current_state].token_index == len(token_db)-1:
 			# end for (token end)
-			current_state = current_parent
+			current_state = target_parent
+			depth_count = depth_count - 1
 			ftpmachine.set_state(str(current_state))
 
 			if current_state is None:

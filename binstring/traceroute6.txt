@@ -1,253 +1,196 @@
    1070 /lib64/ld-linux-x86-64.so.2
-   5331 libcap.so.2
-   5345 _ITM_deregisterTMCloneTable
-   5401 __gmon_start__
-   5420 _Jv_RegisterClasses
-   5444 _ITM_registerTMCloneTable
-   5476 _fini
-   5504 cap_free
-   5515 cap_set_proc
-   5532 cap_init
-   5543 libidn.so.11
-   5560 idna_to_ascii_lz
-   5601 libc.so.6
-   5613 setuid
-   5622 socket
-   5631 fflush
-   5640 __printf_chk
-   5655 exit
-   5662 _IO_putc
-   5673 setlocale
-   5705 gai_strerror
-   5722 optind
-   5731 perror
-   5740 connect
-   5750 __fdelt_chk
-   5764 inet_ntop
-   5776 __stack_chk_fail
-   6017 putchar
-   6027 select
-   6036 getpid
-   6045 inet_pton
-   6057 strtol
-   6066 getaddrinfo
-   6102 __errno_location
-   6123 bind
-   6130 memcmp
-   6137 getnameinfo
-   6153 getopt
-   6162 __fprintf_chk
-   6200 stdout
-   6207 setsockopt
-   6222 malloc
-   6231 optarg
-   6240 stderr
-   6247 getuid
-   6256 fwrite
-   6265 gettimeofday
-   6302 setlinebuf
-   6315 close
-   6323 getsockname
-   6337 sendto
-   6346 __cxa_finalize
-   6365 freeaddrinfo
-   6402 recvmsg
-   6412 __libc_start_main
-   6434 _edata
-   6443 __bss_start
-   6457 _end
-   6464 device
-   6473 sendbuff
-   6504 port
-   6511 icmp_sock
-   6523 options
-   6533 firsthop
-   6544 waittime
-   6555 _IO_stdin_used
-   6574 max_ttl
-   6604 nprobes
-   6614 hostname
-   6625 whereto
-   6635 packet
-   6644 nflag
-   6652 ident
-   6660 sndsock
-   6670 verbose
-   6700 saddr
-   6711 datalen
-   6721 source
-   6730 LIBIDN_1.0
-   6743 GLIBC_2.3.4
-   6757 GLIBC_2.15
-   6772 GLIBC_2.4
-   7004 GLIBC_2.2.5
-  12101 5:* 
-  12107 %<* 
-  12121 %:* 
-  12131 %:* 
-  12141 %:* 
-  12151 %B* 
-  12161 %B* 
-  12171 %B* 
-  12201 %B* 
-  12211 %B* 
-  12221 %B* 
-  12231 %B* 
-  12241 %B* 
-  12251 %B* 
-  12261 %B* 
-  12271 %B* 
-  12301 %B* 
-  12311 %B* 
-  12321 %B* 
-  12331 %B* 
-  12341 %B* 
-  12351 %B* 
-  12361 %B* 
-  12371 %B* 
-  12401 %B* 
-  12411 %B* 
-  12421 %B* 
-  12431 %B* 
-  12441 %B* 
-  12451 %B* 
-  12461 %B* 
-  12471 %B* 
-  12501 %J* 
-  12511 %J* 
-  12521 %J* 
-  12531 %J* 
-  12541 %J* 
-  12551 %J* 
-  12561 %J* 
-  12571 %J* 
-  12601 %R* 
-  12611 %R* 
-  12621 %R* 
-  12631 %R* 
-  12641 %R* 
-  12660 AWAV
-  12671 AUAT
-  12727 l$pdH
-  13436 =-) 
-  14204 -W( 
-  14501 =b' 
-  14520 \$<A
-  14554 =7' 
-  15342 =!( 
-  15351 5"( 
-  15716 =H$ 
-  16072 D$`D
-  16104 t$@L
-  16111 l$PH
-  16256 =M$ 
-  16374 =?# 
-  16433 5 # 
-  16611 []A\A]A^A_
-  16677 D$`H+D$PH
-  16753 D$hH+D$X
-  17347 5T! 
-  17413 =P! 
-  17475 t$`1
-  17546 L$H1
-  17571 D$HH
-  17775 |$`H
-  20352 T$`H
-  21440 AVAUA
-  21447 ATUI
-  21501 l$PdH
-  21772 d$ H
-  22020 D$0H
-  22051 t$8H
-  22064 T$0H
-  22102 )t[H
-  22224 []A\A]A^
-  22466 8ounHc
-  23500 AVAUA
-  23507 ATUH
-  23661 []A\A]A^
-  24302 tDE9
-  25111 []A\
-  25400 AWAVA
-  25407 AUATL
-  25532 []A\A]A^A_
-  25604 setsockopt
-  25617 sendto
-  25626 Error
-  25634 Destination Unreachable
-  25664 Packet Too Big
-  25703 Time Exceeded in Transit
-  25734 Parameter Problem
-  25756 Echo Request
-  25773 Echo Reply
-  26006 Membership Query
-  26027 Membership Report
-  26051 Membership Reduction
-  26076 Router Solicitation
-  26122 Router Advertisement
-  26147 Neighbor Solicitation
-  26175 Neighbor Advertisement
-  26224 Redirect
-  26235 OUT-OF-RANGE
-  26253 %d bytes from %s to %s
-  26302 : icmp type %d (%s) code %d
-  26337 %04x:
-  26345 %02x
-  26352 traceroute6: setuid
-  26376 traceroute6: cap_set_proc
-  26430 traceroute: port must be >0.
-  26466 s20150815
-  26500 dm:np:q:rs:t:w:vi:g:V
-  26526 traceroute: %s: %s
-  26552 malloc failed
-  26571 traceroute6: icmp socket
-  26622 traceroute: UDP socket
-  26651 traceroute: SO_SNDBUF
-  26677 WARNING: interface is ignored
-  26735 connect
-  26745 getsockname
-  26761 traceroute: unknown addr %s
-  27016 traceroute: bind icmp6 socket
-  27054 traceroute to %s (%s)
-  27102  from %s
-  27113 %2d 
-  27120   %g ms
-  27150 traceroute: wrote %s %d chars, ret=%d
-  27220 Usage: traceroute6 [-dnrvV] [-m max_ttl] [-p port#] [-q nqueries]
-  27322 	[-s src_addr] [-t tos] [-w wait] host [data size]
-  27410 traceroute: max ttl must be >1.
-  27460 traceroute: nprobes must be >0.
-  27530 Sorry, rthdr is not yet supported
-  27600 traceroute: wait must be >1 sec.
-  27650 traceroute6 utility, iputils-%s
-  27720 traceroute: packet size must be %d <= s < %d.
-  30000 setsockopt(RAW_CHECKSUM) failed - try to continue.
-  30070 traceroute: bind sending socket
-  30130 , %d hops max, %d byte packets
-  32017 ;*3$"
-  40044 traceroute6.iputils
-  40075 .shstrtab
-  40107 .interp
-  40117 .note.ABI-tag
-  40135 .note.gnu.build-id
-  40160 .gnu.hash
-  40172 .dynsym
-  40202 .dynstr
-  40212 .gnu.version
-  40227 .gnu.version_r
-  40246 .rela.dyn
-  40260 .init
-  40266 .plt
-  40273 .plt.got
-  40304 .text
-  40312 .fini
-  40320 .rodata
-  40330 .eh_frame_hdr
-  40346 .eh_frame
-  40360 .init_array
-  40374 .fini_array
-  40410 .jcr
-  40415 .dynamic
-  40426 .data
-  40434 .bss
-  40441 .gnu_debuglink
+   1207 fWAU
+   3701 libcap.so.2
+   3715 _ITM_deregisterTMCloneTable
+   3751 __gmon_start__
+   3770 _Jv_RegisterClasses
+   4014 _ITM_registerTMCloneTable
+   4046 _fini
+   4054 cap_free
+   4065 cap_set_proc
+   4102 cap_init
+   4113 libc.so.6
+   4125 setuid
+   4134 socket
+   4143 fflush
+   4152 __printf_chk
+   4167 exit
+   4174 _IO_putc
+   4205 optind
+   4214 perror
+   4223 connect
+   4233 __fdelt_chk
+   4247 inet_ntop
+   4261 __stack_chk_fail
+   4302 putchar
+   4312 select
+   4321 getpid
+   4330 inet_pton
+   4342 strtol
+   4351 __errno_location
+   4372 bind
+   4377 memcmp
+   4406 getopt
+   4415 __fprintf_chk
+   4433 stdout
+   4442 gethostbyaddr
+   4460 setsockopt
+   4473 malloc
+   4502 optarg
+   4511 stderr
+   4520 getuid
+   4527 fwrite
+   4536 gettimeofday
+   4553 setlinebuf
+   4566 close
+   4574 getsockname
+   4610 sendto
+   4617 gethostbyname2
+   4636 memmove
+   4646 recvmsg
+   4656 __libc_start_main
+   4700 _edata
+   4707 __bss_start
+   4723 _end
+   4730 GLIBC_2.3.4
+   4744 GLIBC_2.15
+   4757 GLIBC_2.4
+   4771 GLIBC_2.2.5
+  10041 %z@ 
+  10061 %r@ 
+  10101 %j@ 
+  10121 %b@ 
+  10141 %Z@ 
+  10161 %R@ 
+  10201 %J@ 
+  10221 %B@ 
+  10241 %:@ 
+  10261 %2@ 
+  10301 %*@ 
+  10321 %"@ 
+  10607 AVAUATU
+  11071 =B@ 
+  11476 ==? 
+  11771 =B> 
+  12267 =,> 
+  12306 L$ A
+  12346 L$ A
+  12434 L$ A
+  12737 =d? 
+  13075 =F< 
+  13472 t$0H
+  13477 |$@A
+  13550 T$pH
+  13605 t$0H
+  14747 t$`H
+  15031 D$PH+D$@
+  15072 D$XH+D$H
+  15737 D$`H
+  16212 []A\A]A^A_
+  16450 =[5 
+  17164 L$ A
+  17301 L$ A
+  17464 L$ A
+  17531 L$ A
+  17765 UH-(R`
+  20045 UH-(R`
+  20141 =)2 
+  20277 ATUH
+  20321 d$PdH
+  20551 $@S`
+  20606 d$ H
+  20634 D$0H
+  20666 |$8H
+  20701 L$0H
+  20717 )t^H
+  21045 []A\A]A^
+  21124 fff.
+  21306 8oufHc
+  21333 =h2 
+  22250 AVAUATI
+  22450 []A\A]A^A_
+  23003 D$0I
+  24452 []A\A]A^A_
+  24524 setsockopt
+  24537 sendto
+  24546 Error
+  24554 Destination Unreachable
+  24604 Packet Too Big
+  24623 Time Exceeded in Transit
+  24654 Parameter Problem
+  24676 Echo Request
+  24713 Echo Reply
+  24726 Membership Query
+  24747 Membership Report
+  24771 Membership Reduction
+  25016 Router Solicitation
+  25042 Router Advertisement
+  25067 Neighbor Solicitation
+  25115 Neighbor Advertisement
+  25144 Redirect
+  25155 OUT-OF-RANGE
+  25173 %d bytes from %s to %s
+  25222 : icmp type %d (%s) code %d
+  25257 %04x:
+  25265 %02x
+  25272 traceroute6: setuid
+  25316 traceroute6: cap_set_proc
+  25350 traceroute: port must be >0.
+  25406 dm:np:q:rs:t:w:vi:g:V
+  25434 traceroute: unknown host %s
+  25471 malloc failed
+  25510 traceroute6: icmp socket
+  25541 traceroute: UDP socket
+  25570 traceroute: SO_SNDBUF
+  25616 WARNING: interface is ignored
+  25654 connect
+  25664 getsockname
+  25700 traceroute: unknown addr %s
+  25735 traceroute: bind icmp6 socket
+  25773 traceroute to %s (%s)
+  26021  from %s
+  26032 %2d 
+  26037   %g ms
+  26070 traceroute: wrote %s %d chars, ret=%d
+  26140 Usage: traceroute6 [-dnrvV] [-m max_ttl] [-p port#] [-q nqueries]
+  26242 	[-s src_addr] [-t tos] [-w wait] host [data size]
+  26330 traceroute: max ttl must be >1.
+  26400 traceroute: nprobes must be >0.
+  26450 Sorry, rthdr is not yet supported
+  26520 traceroute: wait must be >1 sec.
+  26570 traceroute6 utility, iputils-%s
+  26640 traceroute: packet size must be %d <= s < %d.
+  26720 setsockopt(RAW_CHECKSUM) failed - try to continue.
+  27010 traceroute: bind sending socket
+  27050 , %d hops max, %d byte packets
+  36457 ;*3$"
+  50644 s20121221
+  50700 @(#) Copyright (c) 1990, 1993
+  50736 	The Regents of the University of California.  All rights reserved.
+  51043 traceroute6.iputils
+  51074 .shstrtab
+  51106 .interp
+  51116 .note.ABI-tag
+  51134 .note.gnu.build-id
+  51157 .gnu.hash
+  51171 .dynsym
+  51201 .dynstr
+  51211 .gnu.version
+  51226 .gnu.version_r
+  51245 .rela.dyn
+  51257 .rela.plt
+  51271 .init
+  51277 .text
+  51305 .fini
+  51313 .rodata
+  51323 .eh_frame_hdr
+  51341 .eh_frame
+  51353 .init_array
+  51367 .fini_array
+  51403 .jcr
+  51410 .dynamic
+  51421 .got
+  51426 .got.plt
+  51437 .data
+  51445 .bss
+  51452 .gnu_debuglink

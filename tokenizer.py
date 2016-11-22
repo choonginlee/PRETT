@@ -39,7 +39,7 @@ def extract_token(path, file) :
 	while True :
 		string_read = fr.readline()
 		if not string_read: break # eol
-
+		
 		split_list = []
 		split_list = re.split(r'[^\w]', string_read)
 		for split in split_list:

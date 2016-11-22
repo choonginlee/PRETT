@@ -1,1688 +1,1637 @@
    1070 /lib64/ld-linux-x86-64.so.2
+   1204  +FU
    1464 h OG
-  13711 libglib-2.0.so.0
-  13732 _ITM_deregisterTMCloneTable
-  13766 __gmon_start__
-  14005 _Jv_RegisterClasses
-  14031 _ITM_registerTMCloneTable
-  14063 g_source_remove
-  14103 g_io_channel_unix_new
-  14131 g_str_equal
-  14145 g_io_channel_set_buffered
-  14177 g_strdup
-  14210 g_getenv
-  14221 g_slist_free
-  14236 g_strfreev
-  14251 g_strdup_printf
-  14271 g_list_append
-  14307 g_list_remove
-  14325 g_strconcat
-  14341 g_ptr_array_add
-  14361 g_slist_reverse
-  14401 g_string_new
-  14416 g_malloc0
-  14430 g_list_copy
-  14444 g_hash_table_remove
-  14470 g_slist_prepend
-  14510 g_list_free_full
-  14531 g_string_append_printf
-  14560 g_string_free
-  14576 g_hash_table_remove_all
-  14626 g_list_delete_link
-  14651 g_slist_free_full
-  14673 g_io_add_watch
-  14712 g_try_malloc0
-  14730 g_list_free
-  14744 g_option_context_parse
-  14773 g_ptr_array_sized_new
-  15021 g_slist_foreach
-  15041 g_timeout_add
-  15057 g_io_channel_unix_get_fd
-  15110 g_hash_table_lookup
-  15134 g_slist_find
-  15151 g_option_context_add_main_entries
-  15213 g_option_context_new
-  15240 g_idle_add
-  15253 g_io_channel_set_encoding
-  15305 g_strv_length
-  15323 g_str_hash
-  15336 g_list_first
-  15353 g_list_find_custom
-  15376 g_list_nth
-  15411 g_strsplit
-  15424 g_main_loop_quit
-  15445 g_slist_append
-  15464 g_slist_remove
-  15503 g_hash_table_replace
-  15530 g_slist_delete_link
-  15554 g_hash_table_new_full
-  15602 g_malloc
-  15613 g_error_free
-  15630 g_io_channel_set_close_on_unref
-  15670 g_main_loop_run
-  15710 g_printerr
-  15723 _fini
-  15731 g_strcmp0
-  15743 g_ptr_array_set_free_func
-  15775 g_hash_table_destroy
-  16022 g_list_concat
-  16040 g_option_context_free
-  16066 g_main_loop_new
-  16106 g_list_find
-  16122 g_str_has_prefix
-  16143 g_io_channel_unref
-  16166 g_ptr_array_free
-  16207 g_main_loop_unref
-  16231 libdbus-1.so.3
-  16250 dbus_message_new_error
-  16277 dbus_bus_request_name
-  16325 dbus_connection_send
-  16352 dbus_watch_handle
-  16374 dbus_message_copy
-  16416 dbus_pending_call_steal_reply
-  16454 dbus_message_get_type
-  16502 dbus_bus_get_private
-  16527 dbus_bus_get
-  16544 dbus_watch_get_enabled
-  16573 dbus_connection_ref
-  16617 dbus_message_append_args
-  16650 dbus_connection_send_with_reply
-  16710 dbus_connection_close
-  16736 dbus_connection_set_exit_on_disconnect
-  17005 dbus_message_iter_get_arg_type
-  17044 dbus_bus_remove_match
-  17072 dbus_connection_list_registered
-  17132 dbus_message_iter_open_container
-  17173 dbus_message_get_member
-  17223 dbus_message_get_path
-  17251 dbus_message_ref
-  17272 dbus_connection_add_filter
-  17325 dbus_connection_set_dispatch_status_function
-  17402 dbus_message_iter_close_container
-  17444 dbus_message_new_signal
-  17474 dbus_message_iter_append_basic
-  17533 dbus_message_get_args
-  17561 dbus_timeout_get_enabled
-  17612 dbus_message_new_method_return
-  17651 dbus_malloc0
-  17666 dbus_connection_get_is_connected
-  17727 dbus_timeout_handle
-  17753 dbus_message_iter_get_fixed_array
-  20015 dbus_timeout_set_data
-  20043 dbus_error_is_set
-  20065 dbus_watch_get_flags
-  20112 dbus_connection_set_timeout_functions
-  20160 dbus_pending_call_unref
-  20210 dbus_timeout_get_interval
-  20242 dbus_message_iter_init_append
-  20300 dbus_connection_set_watch_functions
-  20344 dbus_message_append_args_valist
-  20404 dbus_message_is_method_call
-  20440 dbus_message_iter_append_fixed_array
-  20505 dbus_connection_get_dispatch_status
-  20551 dbus_connection_remove_filter
-  20607 dbus_pending_call_set_notify
-  20644 dbus_free_string_array
-  20673 dbus_message_iter_get_basic
-  20727 dbus_connection_register_object_path
-  20774 dbus_watch_set_data
-  21020 dbus_pending_call_cancel
-  21051 dbus_watch_get_unix_fd
-  21100 dbus_message_unref
-  21123 dbus_error_init
-  21143 dbus_message_iter_recurse
-  21175 dbus_message_set_no_reply
-  21227 dbus_connection_dispatch
-  21260 dbus_bus_add_match
-  21303 dbus_type_is_container
-  21332 dbus_type_is_fixed
-  21355 dbus_connection_unref
-  21403 dbus_set_error
-  21422 dbus_connection_unregister_object_path
-  21471 dbus_message_get_signature
-  21524 dbus_type_is_basic
-  21547 dbus_bus_get_unique_name
-  21600 dbus_message_get_interface
-  21633 dbus_message_iter_init
-  21662 dbus_message_iter_get_signature
-  21722 dbus_error_free
-  21742 dbus_message_new_method_call
-  21777 dbus_message_iter_next
-  22026 dbus_free
-  22040 dbus_message_get_sender
-  22070 dbus_message_new
-  22111 dbus_connection_get_object_path_data
-  22156 dbus_set_error_from_message
-  22212 dbus_message_has_signature
-  22245 dbus_message_get_no_reply
-  22277 libreadline.so.7
-  22320 rl_on_new_line
-  22337 rl_copy_text
-  22354 rl_set_prompt
-  22372 rl_erase_empty_line
-  22416 rl_save_prompt
-  22435 rl_end
-  22444 rl_replace_line
-  22464 rl_callback_read_char
-  22512 rl_completion_matches
-  22540 rl_line_buffer
-  22557 rl_crlf
-  22567 rl_prompt
-  22601 rl_callback_handler_remove
-  22634 rl_restore_prompt
-  22656 rl_point
-  22667 rl_attempted_completion_over
-  22724 rl_attempted_completion_function
-  22765 rl_message
-  23000 rl_callback_handler_install
-  23034 rl_completion_display_matches_hook
-  23077 rl_forced_update_display
-  23130 rl_insert_text
-  23147 rl_readline_state
-  23171 rl_redisplay
-  23206 add_history
-  23222 libpthread.so.0
-  23242 read
-  23247 libc.so.6
-  23261 __printf_chk
-  23276 exit
-  23303 wordexp
-  23313 strncmp
-  23323 wordfree
-  23334 strrchr
-  23344 __strdup
-  23355 perror
-  23364 puts
-  23371 sigprocmask
-  23405 __stack_chk_fail
-  23426 putchar
-  23436 stdin
-  23444 strtol
-  23453 strlen
-  23462 signalfd
-  23473 sigemptyset
-  23507 sigaddset
-  23521 stdout
-  23530 __vsnprintf_chk
-  23550 strcasecmp
-  23563 __ctype_b_loc
-  23601 sscanf
-  23610 __snprintf_chk
-  23627 strncasecmp
-  23643 fileno
-  23652 setlinebuf
-  23665 __vfprintf_chk
-  23704 __cxa_finalize
-  23723 strcmp
-  23732 __libc_start_main
-  23754 snprintf
-  23765 _edata
-  23774 __bss_start
-  24010 _IO_stdin_used
-  24027 GLIBC_2.2.5
-  24043 GLIBC_2.4
-  24055 GLIBC_2.3
-  24067 GLIBC_2.3.4
-  24103 GLIBC_2.7
-  24115 LIBDBUS_1_3
- 107501 4$dH
- 112001 D$X1
- 112052 L$XdH3
- 112200 ATUI
- 112245 D$X1
- 112270 D$XdH3
- 112315 `[]A\
- 112414 $t!H
- 112540 ATUI
- 112605 D$X1
- 112630 D$XdH3
- 112655 `[]A\
- 113236 t@<ou
- 113300 <yuL
- 113307 etfH
- 113520 AUATI
- 113553 D$H1
- 113732 D$HdH3
- 113757 X[]A\A]
- 114242 quKH
- 114362 st{H
- 115167 D$H1
- 115207 D$HdH3
- 115324 <oATUSH
- 115445 []A\H
- 115634 []A\
- 116015 t![]A\H
- 116067 []A\1
- 117001 D$X1
- 117100 D$XdH3
- 120100 AVAUI
- 120107 ATUSH
- 120132 D$X1
- 120300 L$XdH3
- 120324 `[]A\A]A^
- 120360 AUATUSH
- 120414 D$X1
- 120602 D$XdH3
- 120623 h[]A\A]
- 121466 D$(1
- 121637 D$(dH3
- 122127 D$(1
- 122201 D$(dH3
- 122347 D$(1
- 122421 D$(dH3
- 122540 ATUI
- 122574 D$(1
- 122673 D$(dH3
- 122714 0[]A\
- 123047 D$(1
- 123121 D$(dH3
- 123515 5^r!
- 123751 =	z!
- 124055 5~q!
- 124311 =)y!
- 124626 =\x!
- 124654 =Gx!
- 125172 =xw!
- 125211 =jw!
- 125362 AVAUATI
- 125373 USuqH
- 125440 Lc-}v!
- 125540 ]A\A]A^
- 125624 ]A\A]A^
- 125642 AVAUATI
- 125653 USuy
- 126034 ]A\A]A^
- 126124 ]A\A]A^
- 126146 =]u!
- 126206 =-u!
- 126250 =Ku!
- 126443 D$H1
- 126472 D$HdH3
- 126540 AVAUI
- 126547 ATUI
- 126653 d$`H
- 127055 []A\A]A^
- 127620 AVAUI
- 127627 ATUS
- 127746 t8Hc
- 130024 []A\A]A^
- 130076 ]A\A]A^
- 130220 ATUSH
- 130232 =Qq!
- 130252 D$X1
- 130601 D$XdH3
- 130622 `[]A\
- 130760 AUATI
- 131016 D$X1
- 131121 D$XdH3
- 131146 h[]A\A]
- 131707 =#n!
- 132570 =[l!
- 132662 =Hl!
- 132714 =?l!
- 133044 D$X1
- 133202 D$XdH3
- 133642 =9j!
- 133661 =Aj!
- 134300 ATUH
- 134334 D$(1
- 134420 D$(dH3
- 134441 0[]A\
- 134545 =fh!
- 134637 =<h!
- 134653 =(h!
- 134740 AWAVAUATUSH
- 135006 []A\A]A^A_
- 135073 $< u
- 135640 =sf!
- 135651 []A\A]A^A_
- 136322 5!e!
- 136336 =-e!
- 136500 AUATH
- 136626 []A\A]
- 136642 \$`H
- 137301 D$X1
- 137400 D$XdH3
- 140205 -fa!
- 140245 =.a!
- 140441 D$X1
- 140520 D$XdH3
- 141241 L$X1
- 141364 D$XdH3
- 142547 5DT!
- 143171 =b[!
- 143206 t8H;
- 143244 =/[!
- 143564 tz<*SH
- 143606 =MZ!
- 144020 ATUH
- 144054 D$(1
- 144137 D$(dH3
- 144160 0[]A\
- 144715 =FX!
- 145020 AVAUI
- 145027 ATUSH
- 145055 D$X1
- 145073 5pW!
- 145304 L$XdH3
- 145325 `[]A\A]A^
- 145460 AWAVH
- 145473 AUATUSH
- 145522 d$ L
- 145527 t$pH
- 145534 <$dH
- 146416 []A\A]A^A_
- 146560 ATUSH
- 146602 t$(H
- 146607 T$0H
- 146614 L$8L
- 146621 D$@L
- 146626 L$Ht7
- 146634 )D$P
- 146641 )L$`
- 146646 )T$p
- 147103 []A\
- 147360 AWAVAUATUSH
- 147411 D$X1
- 147662 D$A 
- 147667 D$B 
- 147744 T.3H
- 150026 D$A 
- 150033 D$B 
- 150053 D$XdH3
- 150074 h[]A\A]A^A_
- 150313 5`Q!
- 150364 57Q!
- 150412 5!Q!
- 150467 D$(1
- 150541 D$(dH3
- 150666 =uP!
- 151371 =2O!
- 151617 t$ H
- 152011 Pjq1
- 152340 ATUH
- 152374 D$(1
- 152513 D$(dH3
- 152534 0[]A\
- 152640 ATUH
- 152674 D$(1
- 152761 D$(dH3
- 153002 0[]A\
- 153272 D$(1
- 153355 t$0H
- 153400 ="K!
- 153406 ZYt6H
- 153445 T$(dH3
- 154012 D$(1
- 154026 L$ H
- 154074 t$,H
- 154125 ZYt7H
- 154164 T$(dH3
- 154355 =5I!
- 154724 =VH!
- 154740 ATUSH
- 154772 =0H!
- 155255 =~G!
- 155337 []A\
- 155352 5AG!
- 155726 ZYt>H
- 156540 ATUI
- 156605 D$X1
- 156630 D$XdH3
- 156655 `[]A\
- 157160 ATUI
- 157225 D$X1
- 157250 D$XdH3
- 157271 `[]A\
- 157500 ATUI
- 157545 D$X1
- 157570 D$XdH3
- 157611 `[]A\
- 160116 []A\
- 160135 []A\
- 160243 tdAVI
- 160257 ATUSH
- 160344 t*L;-{A!
- 160355 tAL;-jA!
- 160401 []A\A]A^
- 160434 5GA!
- 160567 D$(1
- 160623 D$(dH3
- 160740 ATUI
- 160774 D$(1
- 161072 D$(dH3
- 161113 0[]A\
- 161247 D$(1
- 161321 D$(dH3
- 161536 \$0H
- 161566 atWH
- 161765 Hct$
- 162123 D$H1
- 162152 D$HdH3
- 162220 AWAVAUATE1
- 162726 []A\A]A^A_
- 163140 ATUH
- 163202 l$PdH
- 163371 []A\
- 163420 AUATI
- 163564 t)f.
- 163753 []A\A]
- 164120 ATUH
- 164154 D$(1
- 164254 D$(dH3
- 164275 0[]A\
- 164431 =R9!
- 164511 ="9!
- 164660 D$X1
- 164703 D$XdH3
- 165044 =?8!
- 165320 D$X1
- 165343 D$XdH3
- 166002 5a6!
- 166031 5B6!
- 167431 =:3!
- 167520 ATUH
- 167636 ZYt>H
- 167711 []A\
- 167720 []A\H
- 167740 []A\H
- 167760 []A\H
- 170026 ==2!
- 170440 ATUSH
- 170647 []A\
- 171220 ATUSH
- 172000 AUATI
- 172232 []A\A]
- 172260 ATUI
- 172720 ATUH
- 173063 ATUSH
- 173400 ATUI
- 173501 []A\
- 173535 []A\
- 173560 ATUI
- 173661 []A\
- 173725 []A\
- 173740 AUATI
- 174124 []A\A]
- 174260 AWAVI
- 174267 AUATI
- 174447 []A\A]A^A_
- 174520 ATUSH
- 174571 t$(H
- 174620 ATUI
- 174646 D$(1
- 174754 D$(dH3
- 174775 0[]A\
- 175102 type='siATUSH
- 175131 gnalf
- 175234 L$ M
- 175242 t*Hc
- 175320 L$(M
- 175326 t*Hc
- 175404 L$0M
- 175412 t*Hc
- 175470 L$8M
- 175476 t0Hc
- 175536 []A\
- 175560 []A\
- 175620 AUATI
- 175645 d$ dH
- 176017 []A\A]
- 176100 ATUH
- 176120 d$ dH
- 176274 []A\
- 176413 0;V0u
- 176503 0;V0u
- 176620 H;:u
- 177400 AWAVA
- 177412 AUATI
- 177477 D$ Pjs1
- 177565 ([]A\A]A^A_
- 200240 AUATI
- 200433 []A\A]
- 200504 []A\A]
- 200520 AWAVAUATUSH
- 200562 D$(1
- 200614 T$(dH3
- 200646 8[]A\A]A^A_
- 200750 L$ H
- 201006 5m !
- 201620 AWAVI
- 201627 AUATI
- 201747 1L;6u
- 201774 :u2I
- 202226 |$`H
- 202327 ([]A\A]A^A_
- 202565 t2E1
- 202700 AWAVAUATUSH
- 203233 \$ H
- 203512 D$0H
- 203541 []A\A]A^A_
- 203720 ATUL
- 203773 ZYtAL
- 204001 L$ L
- 204006 D$(H
- 204064 E0[]A\
- 204160 AUATM
- 204247 ZYtEL
- 204255 D$0H
- 204344 []A\A]
- 204366 []A\A]
- 204440 AUATI
- 204506 M;,$t
- 204533  M;,$u
- 204554 l$@H
- 204723 []A\A]
- 205223 ATUSt?H
- 205317 []A\
- 205335 []A\
- 205371 AUATI
- 205564 []A\A]
- 206100 AUATH
- 206170 d$PH
- 206325 []A\A]
- 206360 ATUI
- 206562  []A\
- 207160 ATUI
- 207406 []A\
- 207540 AVAUI
- 207547 ATU1
- 207607 d$PdH
- 210002 []A\A]A^
- 210020 AVAUI
- 210027 ATUH
- 210102 D$H1
- 210273 D$HdH3
- 210314 P[]A\A]A^
- 210340 ATUH
- 210406 D$H1
- 210470 D$HdH3
- 210511 P[]A\
- 210540 AWAVAUATUSH
- 211044 C(E1
- 211465 []A\A]A^A_
- 211600 AUATUSH
- 212604 []A\A]
- 213200 AWAVAUATUSH
- 213231 L$81
- 213245 |$ H
- 213342 L$8dH3
- 213372 H[]A\A]A^A_
- 213434 D$(I
- 213667 t$ H
- 213762 (t#I
- 214324 0taI
- 214542 t$(H
- 214547 |$ H
- 214572 |$0H
- 214647 |$0H
- 215100 AUAT1
- 215142 l$PdH
- 215322 |$ H
- 215376 []A\A]
- 216320 AWAVI
- 216327 AUATM
- 216531 D$PI
- 216643 []A\A]A^A_
- 217100 ATUH
- 217303 D$@H
- 217440 []A\
- 217600 AWAVM
- 217607 AUATM
- 217723 []A\A]A^A_
- 217753 t$`L
- 217760 L$`M
- 220125 []A\A]A^A_
- 220560 ATUI
- 220741 []A\
- 221013 L$8L
- 221020 D$@L
- 221025 L$Ht7
- 221033 )D$P
- 221040 )L$`
- 221045 )T$p
- 221260 ATUH
- 221330 D$X1
- 221462 T$XdH3
- 221506 `[]A\
- 221600 AWAVAUATI
- 221637 \$ dH
- 221717 stNH
- 222022 []A\A]A^A_
- 222152 t$pH
- 222445 t$(H
- 222776 L$(H
- 223120 AVAUA
- 223132 ATUI
- 223555 t$`L
- 223711 []A\A]A^
- 224140 ATUI
- 224212 []A\
- 224253 T$0H
- 224260 L$8L
- 224265 D$@L
- 224272 L$Ht7
- 224300 )D$P
- 224305 )L$`
- 224312 )T$p
- 224540 AUATUSH
- 224721 []A\A]
- 225100 AUATI
- 225170 []A\A]
- 225251 []A\A]
- 225312 t{USH
- 225520 AUATA
- 225620 []A\A]
- 225772 t}AVAUL
- 226003 ATUSI
- 226137 []A\A]A^
- 226160 []A\A]A^
- 226213 D$@L
- 226220 L$Ht7
- 226226 )D$P
- 226233 )L$`
- 226240 )T$p
- 226460 AWAVAUATI
- 226744 t#f.
- 227176 []A\A]A^A_
- 227245 []A\A]A^A_
- 227560 AUATI
- 227665 []A\A]
- 227704 []A\A]
- 227733 L$8L
- 227740 D$@L
- 227745 L$Ht7
- 227753 )D$P
- 227760 )L$`
- 227765 )T$p
- 230213 D$@L
- 230220 L$Ht7
- 230226 )D$P
- 230233 )L$`
- 230240 )T$p
- 230460 AUATI
- 230555 []A\A]
- 230616 []A\A]
- 230653 L$8L
- 230660 D$@L
- 230665 L$Ht7
- 230673 )D$P
- 230700 )L$`
- 230705 )T$p
- 231220 AWAVE
- 231227 AUATI
- 231342 []A\A]A^A_
- 231533 L$Ht7
- 231541 )D$P
- 231546 )L$`
- 231553 )T$p
- 232000 AUATUSH
- 232210 []A\A]
- 232365 C tEH
- 233220 AVAUI
- 233227 ATUH
- 233372 []A\A]A^
- 233435 vtxL
- 233442 d$P1
- 233562 \$PL
- 233632 d$PH
- 234277 dH34%(
- 234460 ATUH
- 234506 D$(1
- 234634 D$(dH3
- 234655 0[]A\
- 234721 D$(1
- 235000 D$(dH3
- 235220 AUATI
- 235345 []A\A]
- 235372 ]A\A]
- 235400 AUATI
- 235440 D$H1
- 235554 D$HdH3
- 235575 X[]A\A]
- 235620 AWAVA
- 235627 AUATI
- 235674 D$H1
- 235710 vt%H
- 235715 D$HdH3
- 235742 X[]A\A]A^A_
- 236300 ATUI
- 236326 D$h1
- 236414 D$hdH3
- 236435 p[]A\
- 236452 \$ H
- 236540 AVAUA
- 236547 ATUI
- 236625 at(H
- 236666 []A\A]A^
- 236717 \$`H
- 237100 AUATH
- 237236 []A\A]
- 237357 l$`H
- 237600 AVAUATUI
- 237644 ]A\A]A^
- 240060 AUATI
- 240300 []A\A]
- 240326 []A\A]
- 240340 AWAVI
- 240347 AUATH
- 240400 l$ H
- 240412 \$pdH
- 241112 []A\A]A^A_
- 241550 t6SH
- 241660 AVAUATUSH
- 241707 L$h1
- 242104 t$ H
- 242344 L$hdH3
- 242365 p[]A\A]A^
- 242460 AWAVAUATA
- 243002 l$0H
- 243251 |$(H
- 243374 []A\A]A^A_
- 243500 AWAVAUATUSH
- 243523 L$ H
- 243530 t$(dH
- 244035 D$@H
- 244341 L$ t$I
- 244520 |$8H
- 244654 []A\A]A^A_
- 245000 AWAVAUATUSH
- 245031 D$X1
- 245424 L$XdH3
- 245445 h[]A\A]A^A_
- 245700 ATUH
- 246115 []A\
- 246223 tcATUI
- 246263 []A\H
- 246341 []A\
- 246762 AVAUI
- 246771 ATUH
- 247542 C89h
- 247554 []A\A]A^
- 247613 ]A\A]A^
- 247720 ATUSH
- 250072 {8;o
- 250314 []A\
- 250360 AUATUSH
- 250414 D$h1
- 250463 l$ L
- 250564 D$hdH3
- 250605 x[]A\A]
- 250740 AWAVH
- 250747 AUATI
- 250771 \$ dH
- 251076 []A\A]A^A_
- 251201 t$pH
- 251540 ATUH
- 251576 D$X1
- 251621 L$XdH3
- 251647 `[]A\
- 252200 AWAVAUATUSH
- 252326 d$0H
- 252477 []A\A]A^A_
- 253440 AVAUATUI
- 253654 []A\A]A^
- 253677 l$`H
- 254000 AWAVAUATUSH
- 254063 D$ D
- 254221 \$`H
- 254300 l$8D
- 254305 d$4L
- 254356 D$@H
- 254461 D$XH
- 254526 l$(H
- 254550 T$XL
- 254661 l$(L
- 255152 D$ I
- 255232 []A\A]A^A_
- 255360 AWAVA
- 255367 AUATL
- 255512 []A\A]A^A_
- 255564 Adapter
- 255574 <unknown>
- 255613 Alias
- 255621 %s%s%sDevice %s %s
- 255645 [default]
- 255657 %s%s%sController %s %s %s
- 255712 5.41
- 255717 Version %s
- 255733 Missing on/off argument
- 255764 Invalid argument %s
- 256020 %s%s is nil
- 256035 %s%s is invalid
- 256056 %s%s: %s
- 256070 %s%s: 0x%06x
- 256106 %s%s: 0x%04x
- 256124 %s%s: %d
- 256136 %s%s: 0x%02x
- 256154  Value
- 256163 %s%s has unsupported type
- 256220 Agent registration enabled
- 256254 Agent registration disabled
- 256311 [SIGNAL] %s.%s
- 256331 Invalid argument
- 256353 Missing argument
- 256375 No attribute selected
- 256424 Missing attribute argument
- 256460 Attribute %s not available
- 256514 org.bluez.GattService1
- 256543 Service - %s
- 256561 UUID
- 256566 Primary
- 256576 Characteristics
- 256616 Includes
- 256627 org.bluez.GattCharacteristic1
- 256665 Characteristic - %s
- 256712 Notifying
- 256724 Flags
- 256732 Descriptors
- 256746 org.bluez.GattDescriptor1
- 257000 Descriptor - %s
- 257021 Characteristic
- 257040 Paired
- 257047 RemoveDevice
- 257064 Failed to remove device
- 257115 StartDiscovery
- 257134 StopDiscovery
- 257152 start
- 257160 stop
- 257165 Failed to %s discovery
- 257215 SetDiscoveryFilter
- 257240 Failed to remove device: %s
- 257275 Device has been removed
- 257326 Failed to pair: %s
- 257352 Pairing successful
- 257376 started
- 257406 stopped
- 257416 Failed to %s discovery: %s
- 257452 Discovery %s
- 257470 SetDiscoveryFilter success
- 257530 discoverable %s
- 257550 Discoverable
- 257565 pairable %s
- 257601 Pairable
- 257612 power %s
- 257623 Powered
- 257633 Missing name argument
- 257662 list
- 257667 Failed to parse input
- 257716 Leaking proxy %p
- 257741 [0;94m[bluetooth]
- 257763 [0m# 
- 257772 [0;94m[%s%s%s]
- 260011 [0m# 
- 260017 org.bluez.Device1
- 260043 [0;93mCHG
- 260055 [0m] Device %s 
- 260075 Connected
- 260107 org.bluez.Adapter1
- 260133 [0;91mDEL
- 260151 org.bluez.AgentManager1
- 260201 org.bluez.GattManager1
- 260231 [0;92mNEW
- 260247 Failed to connect: %s
- 260276 Connection successful
- 260325 List available controllers
- 260360 show
- 260365 quit
- 260372 help
- 260377 Invalid command
- 260417 Available commands:
- 260443   %s %-*s %s
- 260461 Missing data argument
- 260510 UUIDs
- 260516 	UUID: %s%*c(%s)
- 260540 	UUID: %*c(%s)
- 260560 Controller %s not available
- 260615 Controller %s
- 260634 Class
- 260642 Modalias
- 260653 Discovering
- 260667 No device connected
- 260714 Device %s not available
- 260745 Device %s
- 260760 Appearance
- 260773 Icon
- 261000 Trusted
- 261010 Blocked
- 261020 LegacyPairing
- 261036 ManufacturerData
- 261057 ServiceData
- 261073 RSSI
- 261100 TxPower
- 261110 Disconnect
- 261123 Failed to disconnect
- 261151 Pair
- 261156 Failed to pair
- 261176 Attempting to pair with %s
- 261232 %s unblock
- 261245 %s block
- 261256 %s untrust
- 261271 %s trust
- 261302 Connect
- 261312 Failed to connect
- 261335 Attempting to connect to %s
- 261372 Failed to disconnect: %s
- 261424 Successful disconnected
- 261455 Failed to set %s: %s
- 261503 Changing %s succeeded
- 261532 Pathloss
- 261543 Transport
- 261555 An unknown error occurred
- 261610 Failed to set signal mask
- 261642 /org/bluez
- 261655 org.bluez
- 261667 Register agent handler
- 261716 CAPABILITY
- 261731 [ctrl]
- 261740 Controller information
- 261767 select
- 261776 <ctrl>
- 262005 Select default controller
- 262037 List available devices
- 262066 paired-devices
- 262105 List paired devices
- 262131 system-alias
- 262146 <name>
- 262155 reset-alias
- 262171 <on/off>
- 262202 Set controller power
- 262227 pairable
- 262240 Set controller pairable mode
- 262275 discoverable
- 262312 <on/off/capability>
- 262336 default-agent
- 262354 Set agent as the default one
- 262411 set-scan-filter-uuids
- 262437 [uuid1 uuid2 ...]
- 262461 Set scan filter uuids
- 262507 set-scan-filter-rssi
- 262534 [rssi]
- 262543 set-scan-filter-pathloss
- 262574 [pathloss]
- 262607 set-scan-filter-transport
- 262641 [transport]
- 262655 Set scan filter transport
- 262707 set-scan-filter-clear
- 262735 Clears discovery filter.
- 262766 scan
- 262773 Scan for devices
- 263014 [dev]
- 263022 Device information
- 263045 pair
- 263052 Pair with device
- 263073 Trust device
- 263110 Untrust device
- 263127 Block device
- 263144 Unblock device
- 263163 remove
- 263172 <dev>
- 263200 Remove device
- 263216 Connect device
- 263235 disconnect
- 263250 Disconnect device
- 263272 list-attributes
- 263312 List attributes
- 263332 select-attribute
- 263353 <attribute>
- 263367 Select attribute
- 263410 attribute-info
- 263427 [attribute]
- 263443 read
- 263450 Read attribute value
- 263475 write
- 263503 <data=[xx xx ...]>
- 263526 Write attribute value
- 263554 notify
- 263563 Notify attribute value
- 263612 <UUID ...>
- 263625 Register profile to connect
- 263661 unregister-profile
- 263704 Unregister profile
- 263727 Display version
- 263747 Quit program
- 263764 exit
- 263771 DisplayOnly
- 264005 DisplayYesNo
- 264022 KeyboardDisplay
- 264042 KeyboardOnly
- 264057 NoInputNoOutput
- 264100 Missing on/off/capability argument
- 264150 No default controller available
- 264220 Failed to set discovery filter
- 264260 SetDiscoveryFilter failed: %s
- 264320 Failed to clear discovery filter
- 264372 [0;93mCHG
- 264404 [0m] Controller %s 
- 264432 [0;93mCHG
- 264444 [0m] Attribute %s 
- 264470 Waiting to connect to bluetoothd...
- 264540 Missing device address argument
- 264610 Attempting to disconnect from %s
- 264660 Missing controller address argument
- 264730 Failed to create signal descriptor
- 265000 Show version information and exit
- 265050 Set controller discoverable mode
- 265120 Enable/disable agent with given capability
- 265200 Set scan filter rssi, and clears pathloss
- 265260 Set scan filter pathloss, and clears rssi
- 265340 0123456789abcdef
- 265361 org.bluez.Error.Rejected
- 265412 org.bluez.Error.Canceled
- 265443 org.bluez.Agent1
- 265464 /org/bluez/agent
- 265505 Request canceled
- 265527 Agent released
- 265547 %.6u
- 265554 Agent registered
- 265576 Failed to register agent: %s
- 265634 Agent unregistered
- 265661 [0;91m[agent]
- 265677 [0m %s
- 265706 Authorize service
- 265731 Request authorization
- 265760 Accept pairing (yes/no): 
- 266012 Request confirmation
- 266040 Request passkey
- 266061 Request PIN code
- 266103 Enter PIN code: 
- 266124 RequestPinCode
- 266143 RequestPasskey
- 266165 RequestConfirmation
- 266211 RequestAuthorization
- 266236 AuthorizeService
- 266257 Agent is already registered
- 266314 RegisterAgent
- 266332 No agent is registered
- 266362 UnregisterAgent
- 266402 RequestDefaultAgent
- 266426 Release
- 266436 DisplayPinCode
- 266455 DisplayPasskey
- 266474 Cancel
- 266503 uuid
- 266510 passkey
- 266520 entered
- 266532 pincode
- 266550 Failed to request default agent: %s
- 266620 Default agent request successful
- 266671 [0;91m[agent]
- 266707 [0m PIN code: %s
- 266741 [0;91m[agent]
- 266757 [0m Passkey: 
- 266775 [1;30m%.*s
- 267010 [1;37m%s
- 267030 Failed to unregister agent object
- 267100 Failed to unregister agent: %s
- 267140 Authorize service %s (yes/no): 
- 267200 Confirm passkey %06u (yes/no): 
- 267240 Enter passkey (number in 0-999999): 
- 267310 Failed to register agent object
- 267360 Failed to call register agent method
- 267430 Failed to call unregister agent method
- 267500 Failed to call request default agent method
- 267555 Secondary
- 267567 %s%s%s%s Service
- 267621 %s%s%sCharacteristic
- 267657 %s%s%sDescriptor
- 267711 Failed to write: %s
- 267736 Failed to %s notify: %s
- 267767 Notify %s
- 270002 Profile registered
- 270026 Failed to read: %s
- 270052 Invalid response to read
- 270104 Unable to parse value
- 270133 Too much data
- 270152 Invalid value at index %d
- 270205 Failed to write
- 270226 Attempting to write %s
- 270256 WriteValue
- 270271 /org/bluez/profile
- 270314 Profile unregistered
- 270342 org.bluez.GattProfile1
- 270371 ReadValue
- 270403 Failed to read
- 270423 Attempting to read %s
- 270452 Unable to read attribute %s
- 270507 Unable to write attribute %s
- 270545 Failed to %s notify
- 270572 StartNotify
- 270606 StopNotify
- 270621 RegisterProfile
- 270641 Failed register profile
- 270672 UnregisterProfile
- 270714 Failed unregister profile
- 270750 Failed to register profile: %s
- 271010 Failed to unregister profile: %s
- 271060 Unable to notify attribute %s
- 271120 Unable to find GattManager proxy
- 271170 Failed to register profile object
- 271233 RFCOMM
- 271242 Unknown
- 271256 Vendor specific
- 271276 -0000-1000-8000-00805f9b34fb
- 271333 Capabilities
- 271350 Active Slot
- 271364 Advertising Interval
- 271411 Radio Tx Power
- 271430 Lock State
- 271443 Unlock
- 271452 Public ECDH Key
- 271472 EID Identity Key
- 271513 ADV Slot Data
- 271531 (Advanced) Factory reset
- 271562 (Advanced) Remain Connectable
- 271620 TCS-BIN
- 271634 OBEX
- 271641 BNEP
- 271646 UPNP
- 271653 HIDP
- 271660 Hardcopy Control Channel
- 271711 Hardcopy Data Channel
- 271737 Hardcopy Notification
- 271765 AVCTP
- 271773 AVDTP
- 272001 CMTP
- 272006 MCAP Control Channel
- 272033 MCAP Data Channel
- 272055 Public Browse Root
- 272100 Serial Port
- 272114 LAN Access Using PPP
- 272141 Dialup Networking
- 272163 IrMC Sync
- 272175 OBEX Object Push
- 272216 OBEX File Transfer
- 272241 IrMC Sync Command
- 272263 Headset
- 272273 Cordless Telephony
- 272316 Audio Source
- 272333 Audio Sink
- 272346 A/V Remote Control Target
- 272400 Advanced Audio Distribution
- 272434 A/V Remote Control
- 272457 A/V Remote Control Controller
- 272515 Intercom
- 272532 Headset AG
- 272551 WAP Client
- 272564 PANU
- 272600 Direct Printing
- 272620 Reference Printing
- 272643 Basic Imaging Profile
- 272671 Imaging Responder
- 272713 Imaging Automatic Archive
- 272745 Imaging Referenced Objects
- 273000 Handsfree
- 273012 Handsfree Audio Gateway
- 273042 Reflected UI
- 273057 Basic Printing
- 273076 Printing Status
- 273116 Hardcopy Cable Replacement
- 273151 HCR Print
- 273163 HCR Scan
- 273174 Common ISDN Access
- 273217 SIM Access
- 273232 Phonebook Access Client
- 273262 Phonebook Access Server
- 273312 Phonebook Access
- 273333 Headset HS
- 273346 Message Access Server
- 273374 Message Notification Server
- 273430 Message Access Profile
- 273457 GNSS
- 273464 GNSS Server
- 273500 3D Display
- 273513 3D Glasses
- 273526 3D Synchronization
- 273551 MPS Profile
- 273565 MPS Service
- 273601 PnP Information
- 273621 Generic Networking
- 273644 Generic File Transfer
- 273672 Generic Audio
- 273710 Generic Telephony
- 273732 UPNP Service
- 273747 UPNP IP Service
- 273767 UPNP IP PAN
- 274003 UPNP IP LAP
- 274017 UPNP IP L2CAP
- 274035 Video Source
- 274052 Video Sink
- 274065 Video Distribution
- 274114 HDP Source
- 274127 HDP Sink
- 274140 Generic Access Profile
- 274167 Generic Attribute Profile
- 274221 Immediate Alert
- 274241 Link Loss
- 274253 Current Time Service
- 274300 Reference Time Update Service
- 274336 Next DST Change Service
- 274366 Glucose
- 274376 Health Thermometer
- 274421 Device Information
- 274444 Phone Alert Status Service
- 274477 Battery Service
- 274517 Blood Pressure
- 274536 Alert Notification Service
- 274571 Human Interface Device
- 274620 Scan Parameters
- 274640 Running Speed and Cadence
- 274672 Automation IO
- 274710 Cycling Speed and Cadence
- 274742 Cycling Power
- 274760 Location and Navigation
- 275010 Environmental Sensing
- 275036 Body Composition
- 275057 User Data
- 275071 Weight Scale
- 275106 Bond Management
- 275126 Continuous Glucose Monitoring
- 275164 Internet Protocol Support
- 275216 Indoor Positioning
- 275241 Pulse Oximeter
- 275260 HTTP Proxy
- 275273 Transport Discovery
- 275317 Object Transfer
- 275337 Primary Service
- 275357 Secondary Service
- 275401 Include
- 275411 Characteristic Format
- 275437 Valid Range
- 275453 External Report Reference
- 275505 Number of Digitals
- 275530 Value Trigger Setting
- 275556 Time Trigger Setting
- 275603 Device Name
- 275617 Peripheral Privacy Flag
- 275647 Reconnection Address
- 275674 Service Changed
- 275714 Alert Level
- 275730 Tx Power Level
- 275747 Day of Week
- 275763 Day Date Time
- 276001 Exact Time 256
- 276020 DST Offset
- 276033 Time Zone
- 276045 Local Time Information
- 276074 Time with DST
- 276112 Time Accuracy
- 276130 Time Source
- 276144 Reference Time Information
- 276177 Time Update Control Point
- 276231 Time Update State
- 276253 Glucose Measurement
- 276277 Battery Level
- 276315 Temperature Measurement
- 276345 Temperature Type
- 276366 Intermediate Temperature
- 276417 Measurement Interval
- 276444 Boot Keyboard Input Report
- 276477 System ID
- 276511 Model Number String
- 276535 Serial Number String
- 276562 Firmware Revision String
- 276613 Hardware Revision String
- 276644 Software Revision String
- 276675 Manufacturer Name String
- 276726 Current Time
- 276743 Magnetic Declination
- 276770 Scan Refresh
- 277005 Boot Keyboard Output Report
- 277041 Boot Mouse Input Report
- 277071 Glucose Measurement Context
- 277125 Blood Pressure Measurement
- 277160 Intermediate Cuff Pressure
- 277213 Heart Rate Measurement
- 277242 Body Sensor Location
- 277267 Heart Rate Control Point
- 277320 Ringer Control Point
- 277345 Ringer Setting
- 277364 Alert Category ID Bit Mask
- 277417 Alert Category ID
- 277441 Unread Alert Status
- 277465 New Alert
- 277477 Supported New Alert Category
- 277534 Blood Pressure Feature
- 277563 HID Information
- 277603 Report Map
- 277616 HID Control Point
- 277640 Protocol Mode
- 277656 Scan Interval Window
- 277703 PnP ID
- 277712 Glucose Feature
- 277732 Record Access Control Point
- 277766 RSC Measurement
- 300006 RSC Feature
- 300022 SC Control Point
- 300043 Digital
- 300053 Analog
- 300062 Aggregate
- 300074 CSC Measurement
- 300114 CSC Feature
- 300130 Cycling Power Measurement
- 300162 Cycling Power Vector
- 300207 Cycling Power Feature
- 300235 Cycling Power Control Point
- 300271 Location and Speed
- 300314 Position Quality
- 300335 LN Feature
- 300350 LN Control Point
- 300371 Elevation
- 300403 Humidity
- 300414 True Wind Speed
- 300434 True Wind Direction
- 300460 Apparent Wind Speed
- 300504 Apparent Wind Direction
- 300534 Gust Factor
- 300550 Pollen Concentration
- 300575 UV Index
- 300606 Irradiance
- 300621 Rainfall
- 300632 Wind Chill
- 300645 Heat Index
- 300660 Dew Point
- 300672 Descriptor Value Changed
- 300723 Aerobic Threshold
- 300751 Anaerobic Threshold
- 300775 Date of Birth
- 301013 Date of Threshold Assessment
- 301050 Email Address
- 301066 First Name
- 301101 Five Zone Heart Rate Limits
- 301135 Gender
- 301144 Heart Rate Max
- 301163 Height
- 301172 Hip Circumference
- 301214 Last Name
- 301226 Resting Heart Rate
- 301251 Three Zone Heart Rate Limits
- 301306 Two Zone Heart Rate Limit
- 301340 VO2 Max
- 301350 Waist Circumference
- 301374 Weight
- 301403 Database Change Increment
- 301435 User Index
- 301450 Body Composition Feature
- 301501 Body Composition Measurement
- 301536 Weight Measurement
- 301561 Weight Scale Feature
- 301606 User Control Point
- 301631 Magnetic Flux Density - 2D
- 301664 Magnetic Flux Density - 3D
- 301717 Language
- 301730 Barometric Pressure Trend
- 301762 Bond Management Control Point
- 302020 Bond Management Feature
- 302050 Central Address Resolution
- 302103 CGM Measurement
- 302123 CGM Feature
- 302137 CGM Status
- 302152 CGM Session Start Time
- 302201 CGM Session Run Time
- 302226 Latitude
- 302237 Longitude
- 302251 Local North Coordinate
- 302300 Local East Coordinate
- 302326 Floor Number
- 302343 Altitude
- 302354 Uncertainty
- 302370 Location Name
- 302412 HTTP Headers
- 302427 HTTP Status Code
- 302450 HTTP Entity Body
- 302471 HTTP Control Point
- 302514 HTTPS Security
- 302533 TDS Control Point
- 302555 OTS Feature
- 302571 Object Name
- 302605 Object Type
- 302621 Object Size
- 302635 Object First-Created
- 302662 Object Last-Modified
- 302707 Object ID
- 302721 Object Properties
- 302743 Object Action Control Point
- 302777 Object List Control Point
- 303031 Object List Filter
- 303054 Object Changed
- 303073 GN Netcom
- 303105 GN ReSound A/S
- 303124 Gimbal, Inc.
- 303141 Stollmann E+V GmbH
- 303164 PayPal, Inc.
- 303201 Aplix Corporation
- 303223 Wicentric, Inc.
- 303243 Dialog Semiconductor GmbH
- 303275 Google
- 303310 Intel
- 303316 Polar Electro Oy
- 303337 Tile, Inc.
- 303352 Swirl Networks, Inc.
- 303377 Quintic Corp.
- 303415 Tencent Holdings Limited
- 303446 Seed Labs, Inc.
- 303466 Nordic Semiconductor ASA
- 303517 Anki, Inc.
- 303532 Design SHIFT
- 303547 Coin, Inc.
- 303562 Jawbone
- 303572 Perka, Inc.
- 303606 ISSC Technologies Corporation
- 303644 Pebble Technology Corporation
- 303702 Broadcom Corporation
- 303727 Plantronics Inc.
- 303750 Apple, Inc.
- 303764 Kocomojo, LLC
- 304002 Realtek Semiconductor Corp.
- 304036 PLUS Location Systems
- 304064 360fly, Inc.
- 304101 Blue Spark Technologies, Inc.
- 304137 KDDI Corporation
- 304160 Nod, Inc.
- 304172 Bose Corporation
- 304213 Clover Network, Inc.
- 304240 Dexcom, Inc.
- 304255 adafruit industries
- 304301 LG Electronics
- 304320 Facebook, Inc.
- 304337 Vencer Co, Ltd
- 304356 WiSilica Inc.
- 304374 Taobao
- 304403 Microsoft Corporation
- 304431 Electronics Tomorrow Limited
- 304466 Nest Labs Inc.
- 304505 Nokia Corporation
- 304527 Savant Systems LLC
- 304552 UTC Fire and Security
- 304600 GoPro, Inc.
- 304614 Paxton Access Ltd
- 304636 ITT Industries
- 304655 Dialog Semiconductor B.V.
- 304707 Mobiquity Networks Inc
- 304736 GSI Laboratories, Inc.
- 304765 Samsara Networks, Inc
- 305013 Estimote
- 305024 Currant, Inc.
- 305042 Tesla Motor Inc.
- 305063 Xiaomi Inc.
- 305077 OttoQ Inc.
- 305112 Jarden Safety & Security
- 305143 JUMA
- 305150 ARM Ltd
- 305160 Interaxon Inc.
- 305177 TRON Forum
- 305212 B&O Play A/S
- 305227 SALTO SYSTEMS S.L.
- 305252 RF Digital Corp
- 305272 Blue Bite
- 305304 Medtronic Inc.
- 305323 Doppler Lab
- 305337 Awear Solutions Ltd
- 305363 Aterica Health Inc.
- 305407 Orion Labs, Inc.
- 305430 Bragi GmbH
- 305443 Zebra Technologies
- 305466 Hewlett-Packard Company
- 305516 TangoMe
- 305526 unwire
- 305535 St. Jude Medical, Inc.
- 305564 Plume Design Inc
- 305605 LINE Corporation
- 305626 The University of Tokyo
- 305656 TASER International, Inc.
- 305710 Qualcomm Life Inc
- 305732 Lab Sensor Solutions
- 305757 Intel Corporation
- 306010 a3c87500-8ed3-4bdf-8a39-a01bebede295
- 306060 Eddystone Configuration Service
- 306120 %08x-0000-1000-8000-00805f9b34fb
- 306170 a3c87501-8ed3-4bdf-8a39-a01bebede295
- 306240 a3c87502-8ed3-4bdf-8a39-a01bebede295
- 306310 a3c87503-8ed3-4bdf-8a39-a01bebede295
- 306360 a3c87504-8ed3-4bdf-8a39-a01bebede295
- 306430 a3c87505-8ed3-4bdf-8a39-a01bebede295
- 306500 (Advanced) Advertised Tx Power
- 306540 a3c87506-8ed3-4bdf-8a39-a01bebede295
- 306610 a3c87507-8ed3-4bdf-8a39-a01bebede295
- 306660 a3c87508-8ed3-4bdf-8a39-a01bebede295
- 306730 a3c87509-8ed3-4bdf-8a39-a01bebede295
- 307000 a3c8750a-8ed3-4bdf-8a39-a01bebede295
- 307050 a3c8750b-8ed3-4bdf-8a39-a01bebede295
- 307120 a3c8750c-8ed3-4bdf-8a39-a01bebede295
- 307170 Service Discovery Server Service Class
- 307240 Browse Group Descriptor Service Class
- 307310 Direct Printing Refrence Objects Service
- 307370 Human Interface Device Service
- 307430 Characteristic Extended Properties
- 307500 Characteristic User Description
- 307540 Client Characteristic Configuration
- 307610 Server Characteristic Configuration
- 307660 Characteristic Aggregate Formate
- 307730 Environmental Sensing Configuration
- 310000 Environmental Sensing Measurement
- 310050 Environmental Sensing Trigger Setting
- 310120 Peripheral Preferred Connection Parameters
- 310200 IEEE 11073-20601 Regulatory Cert. Data List
- 310260 Alert Notification Control Point
- 310330 Supported Unread Alert Category
- 310370 Aerobic Heart Rate Lower Limit
- 310430 Anaerobic Heart Rate Lower Limit
- 310500 Anaerobic Heart Rate Upper Limit
- 310550 Aerobic Heart Rate Upper Limit
- 310610 Fat Burn Heart Rate Lower Limit
- 310650 Fat Burn Heart Rate Upper Limit
- 310710 Maximum Recommended Heart Rate
- 310750 Sport Type for Aerobic/Anaerobic Thresholds
- 311030 CGM Specific Ops Control Point
- 311070 Indoor Positioning Configuration
- 311140 Anhui Huami Information Technology Co.
- 311210 Intrepid Control Systems, Inc.
- 311250 Shanghai Imilab Technology Co.,Ltd
- 311320 Qingdao Yeelink Information Technology Co., Ltd. ( 
- 311460 HUAWEI Technologies Co., Ltd. ( 
- 311560 Beijing Jingdong Century Trading Co., Ltd.
- 311640 Kontakt Micro-Location Sp. z o.o.
- 311710 Alliance for Wireless Power (A4WP)
- 311760 Fast IDentity Online Alliance (FIDO)
- 312025 Name already in use
- 312051 Disconnected
- 312066 org.freedesktop.DBus.Local
- 312121 ,sender='%s'
- 312136 ,path='%s'
- 312151 ,interface='%s'
- 312171 ,member='%s'
- 312206 ,arg0='%s'
- 312221 NameOwnerChanged
- 312242 org.freedesktop.DBus
- 312267 /org/freedesktop/DBus
- 312315 GetNameOwner
- 312332 PropertiesChanged
- 312360 org.freedesktop.DBus.Properties
- 312420 <arg name="%s" type="%s"
- 312451  direction="%s"/>
- 312474 GDBUS_EXPERIMENTAL
- 312517 InterfacesAdded
- 312537 InterfacesRemoved
- 312561 <node>
- 312570 <interface name="%s">
- 312616 <method name="%s">
- 312650 </method>
- 312662 <signal name="%s">
- 312705 </signal>
- 312720 </interface>
- 312735 </property>
- 312751 <node name="%s"/>
- 312773 </node>
- 313003 No such interface '%s'
- 313032 No arguments given
- 313055 Invalid argument type: '%c'
- 313111 No such property '%s'
- 313137 Property '%s' is not writable
- 313175 Invalid signature for '%s'
- 313230 Property '%s' is not readable
- 313270 object
- 313277 interfaces
- 313312 a{sa{sv}}
- 313324 GetManagedObjects
- 313346 objects
- 313356 a{oa{sa{sv}}}
- 313374 Introspect
- 313413 interface
- 313425 changed_properties
- 313450 a{sv}
- 313456 invalidated_properties
- 313515 GetAll
- 313530 org.freedesktop.DBus.ObjectManager
- 313600 <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
- 313717 "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
- 314020 <annotation name="org.freedesktop.DBus.Deprecated" value="true"/>
- 314130 <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
- 314240 <property name="%s" type="%s" access="%s%s">
- 314320 org.freedesktop.DBus.Introspectable
- 314370 <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
- 314507 "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
- 314607 <node></node>
- 314630 org.freedesktop.DBus.Error.InvalidArgs
- 314700 org.freedesktop.DBus.Error.UnknownProperty
- 314760 org.freedesktop.DBus.Error.PropertyReadOnly
- 315040 org.freedesktop.DBus.Error.InvalidSignature
- 315120 org.freedesktop.DBus.Error.AuthFailed
- 315166 AddMatch
- 315177 RemoveMatch
- 315220 type='signal',sender='%s',path_namespace='%s'
- 315276 (bba{ss})
- 315310 CheckAuthorization
- 315333 org.freedesktop.PolicyKit1
- 315366 system-bus-name
- 315406 {ss}
- 315420 org.freedesktop.policykit.exec
- 315460 org.freedesktop.PolicyKit1.Authority
- 315530 /org/freedesktop/PolicyKit1/Authority
- 322427 ;*3$"
- 420360 a093f69dd26a917fd8c17c0bd9cbbbb2e0d2c7.debug
- 420445 .shstrtab
- 420457 .interp
- 420467 .note.ABI-tag
- 420505 .note.gnu.build-id
- 420530 .gnu.hash
- 420542 .dynsym
- 420552 .dynstr
- 420562 .gnu.version
- 420577 .gnu.version_r
- 420616 .rela.dyn
- 420630 .init
- 420636 .plt
- 420643 .plt.got
- 420654 .text
- 420662 .fini
- 420670 .rodata
- 420700 .eh_frame_hdr
- 420716 .eh_frame
- 420730 .init_array
- 420744 .fini_array
- 420760 .jcr
- 420765 .data.rel.ro
- 421002 .dynamic
- 421013 .data
- 421021 .bss
- 421026 .gnu_debuglink
+  13601 libglib-2.0.so.0
+  13622 _ITM_deregisterTMCloneTable
+  13656 __gmon_start__
+  13675 _Jv_RegisterClasses
+  13721 _ITM_registerTMCloneTable
+  13753 g_source_remove
+  13773 g_io_channel_unix_new
+  14021 g_str_equal
+  14035 g_io_channel_set_buffered
+  14067 g_strdup
+  14100 g_getenv
+  14111 g_slist_free
+  14126 g_strdup_printf
+  14146 g_list_append
+  14164 g_list_remove
+  14202 g_strconcat
+  14216 g_ptr_array_add
+  14236 g_slist_reverse
+  14256 g_string_new
+  14273 g_malloc0
+  14305 g_list_copy
+  14321 g_hash_table_remove
+  14345 g_slist_prepend
+  14365 g_list_free_full
+  14406 g_string_append_printf
+  14435 g_string_free
+  14453 g_hash_table_remove_all
+  14503 g_list_delete_link
+  14526 g_slist_free_full
+  14550 g_io_add_watch
+  14567 g_try_malloc0
+  14605 g_list_free
+  14621 g_option_context_parse
+  14650 g_ptr_array_sized_new
+  14676 g_slist_foreach
+  14716 g_timeout_add
+  14734 g_io_channel_unix_get_fd
+  14765 g_hash_table_lookup
+  15011 g_slist_find
+  15026 g_option_context_add_main_entries
+  15070 g_option_context_new
+  15115 g_idle_add
+  15130 g_io_channel_set_encoding
+  15162 g_str_hash
+  15175 g_list_first
+  15212 g_list_find_custom
+  15235 g_list_nth
+  15250 g_main_loop_quit
+  15271 g_slist_append
+  15310 g_slist_remove
+  15327 g_hash_table_replace
+  15354 g_slist_delete_link
+  15400 g_hash_table_new_full
+  15426 g_malloc
+  15437 g_error_free
+  15454 g_io_channel_set_close_on_unref
+  15514 g_main_loop_run
+  15534 g_printerr
+  15547 _fini
+  15555 g_strcmp0
+  15567 g_ptr_array_set_free_func
+  15621 g_hash_table_destroy
+  15646 g_list_concat
+  15664 g_option_context_free
+  15712 g_main_loop_new
+  15732 g_list_find
+  15746 g_str_has_prefix
+  15767 g_io_channel_unref
+  16012 g_ptr_array_free
+  16033 g_main_loop_unref
+  16055 libdbus-1.so.3
+  16074 dbus_connection_set_dispatch_status_function
+  16151 dbus_bus_add_match
+  16174 dbus_bus_get
+  16211 dbus_message_has_signature
+  16244 dbus_message_iter_get_basic
+  16300 dbus_malloc0
+  16315 dbus_message_unref
+  16340 dbus_timeout_set_data
+  16366 dbus_message_append_args_valist
+  16426 dbus_watch_get_unix_fd
+  16455 dbus_watch_get_enabled
+  16504 dbus_connection_register_object_path
+  16551 dbus_message_iter_get_signature
+  16611 dbus_connection_close
+  16637 dbus_pending_call_set_notify
+  16674 dbus_message_new_signal
+  16724 dbus_connection_send
+  16751 dbus_free
+  16763 dbus_error_is_set
+  17005 dbus_timeout_get_enabled
+  17036 dbus_message_set_no_reply
+  17070 dbus_message_get_signature
+  17123 dbus_bus_remove_match
+  17151 dbus_connection_set_timeout_functions
+  17217 dbus_message_new_method_return
+  17256 dbus_connection_unregister_object_path
+  17325 dbus_message_iter_next
+  17354 dbus_message_get_path
+  17402 dbus_message_iter_get_fixed_array
+  17444 dbus_message_get_sender
+  17474 dbus_connection_set_watch_functions
+  17540 dbus_message_new
+  17561 dbus_watch_set_data
+  17605 dbus_message_copy
+  17627 dbus_free_string_array
+  17656 dbus_message_iter_get_arg_type
+  17715 dbus_connection_send_with_reply
+  17755 dbus_bus_get_unique_name
+  20006 dbus_bus_request_name
+  20034 dbus_message_iter_append_fixed_array
+  20101 dbus_message_iter_init_append
+  20137 dbus_message_append_args
+  20170 dbus_message_get_args
+  20216 dbus_connection_add_filter
+  20251 dbus_message_iter_init
+  20300 dbus_connection_set_exit_on_disconnect
+  20347 dbus_pending_call_steal_reply
+  20405 dbus_set_error_from_message
+  20441 dbus_watch_get_flags
+  20466 dbus_type_is_basic
+  20511 dbus_connection_get_dispatch_status
+  20555 dbus_timeout_handle
+  20601 dbus_connection_ref
+  20625 dbus_connection_list_registered
+  20665 dbus_message_new_error
+  20714 dbus_set_error
+  20733 dbus_message_iter_append_basic
+  20772 dbus_message_iter_recurse
+  21024 dbus_watch_handle
+  21046 dbus_message_iter_close_container
+  21110 dbus_message_is_method_call
+  21144 dbus_connection_get_object_path_data
+  21211 dbus_error_init
+  21231 dbus_message_get_no_reply
+  21263 dbus_type_is_fixed
+  21306 dbus_message_iter_open_container
+  21347 dbus_connection_unref
+  21375 dbus_message_get_member
+  21425 dbus_message_get_type
+  21453 dbus_connection_remove_filter
+  21511 dbus_error_free
+  21531 dbus_pending_call_cancel
+  21562 dbus_connection_dispatch
+  21613 dbus_bus_get_private
+  21640 dbus_message_new_method_call
+  21675 dbus_message_ref
+  21716 dbus_timeout_get_interval
+  21750 dbus_message_get_interface
+  22003 dbus_type_is_container
+  22032 dbus_pending_call_unref
+  22062 dbus_connection_get_is_connected
+  22123 libreadline.so.6
+  22144 rl_on_new_line
+  22163 rl_copy_text
+  22200 rl_set_prompt
+  22216 rl_erase_empty_line
+  22242 rl_save_prompt
+  22261 rl_end
+  22270 rl_replace_line
+  22310 rl_callback_read_char
+  22336 rl_completion_matches
+  22364 rl_line_buffer
+  22403 rl_crlf
+  22413 rl_prompt
+  22425 rl_callback_handler_remove
+  22460 rl_restore_prompt
+  22502 rl_point
+  22513 rl_attempted_completion_over
+  22550 rl_attempted_completion_function
+  22611 rl_message
+  22624 rl_callback_handler_install
+  22660 rl_completion_display_matches_hook
+  22723 rl_forced_update_display
+  22754 rl_insert_text
+  22773 rl_readline_state
+  23015 rl_redisplay
+  23032 add_history
+  23046 libpthread.so.0
+  23066 read
+  23073 libc.so.6
+  23105 __printf_chk
+  23122 exit
+  23127 wordexp
+  23137 strncmp
+  23147 wordfree
+  23160 strrchr
+  23170 __strdup
+  23201 perror
+  23210 puts
+  23215 sigprocmask
+  23231 __stack_chk_fail
+  23252 putchar
+  23262 stdin
+  23270 strtol
+  23277 strlen
+  23306 signalfd
+  23317 sigemptyset
+  23333 sigaddset
+  23345 stdout
+  23354 __vsnprintf_chk
+  23374 __ctype_b_loc
+  23412 sscanf
+  23421 __snprintf_chk
+  23440 strncasecmp
+  23454 fileno
+  23463 __vfprintf_chk
+  23502 __strtok_r
+  23515 __cxa_finalize
+  23534 strcmp
+  23543 __libc_start_main
+  23565 snprintf
+  23576 _edata
+  23605 __bss_start
+  23621 _IO_stdin_used
+  23640 GLIBC_2.2.5
+  23654 GLIBC_2.4
+  23666 GLIBC_2.3
+  23700 GLIBC_2.3.4
+  23714 GLIBC_2.7
+  23726 LIBDBUS_1_3
+ 105001 4$dH
+ 107127 ATUSH
+ 107222 []A\
+ 107301 D$X1
+ 107352 L$XdH3
+ 107500 ATUI
+ 107545 D$X1
+ 107570 D$XdH3
+ 107615 `[]A\
+ 107717 $t&H
+ 110060 ATUI
+ 110125 D$X1
+ 110150 D$XdH3
+ 110175 `[]A\
+ 110640 <yul
+ 111100 AUATI
+ 111133 D$H1
+ 111312 D$HdH3
+ 111337 X[]A\A]
+ 111622 quKH
+ 111742 st{H
+ 112547 D$H1
+ 112567 D$HdH3
+ 113035 []A\H
+ 113210 []A\
+ 113267 ft^<nu
+ 113357 tO[]A\H
+ 113507 []A\1
+ 113604 D$X1
+ 113742 D$XdH3
+ 114152 5iy!
+ 114202 =1y!
+ 114262 =	y!
+ 114601 =jx!
+ 115162 5aw!
+ 115171 =rw!
+ 115561 D$X1
+ 115660 D$XdH3
+ 116700 AVAUI
+ 116707 ATUSH
+ 116732 D$X1
+ 117114 L$XdH3
+ 117135 `[]A\A]A^
+ 117160 AUATUSH
+ 117174 =7s!
+ 117214 D$X1
+ 117402 D$XdH3
+ 117423 h[]A\A]
+ 117522 =ir!
+ 117644 =/r!
+ 120547 D$(1
+ 120621 D$(dH3
+ 120767 D$(1
+ 121041 D$(dH3
+ 121160 ATUI
+ 121214 D$(1
+ 121313 D$(dH3
+ 121334 0[]A\
+ 121467 D$(1
+ 121541 D$(dH3
+ 122135 5ne!
+ 123246 =,k!
+ 123612 =Hj!
+ 123631 =:j!
+ 124002 AVAUATI
+ 124013 UStaHc
+ 124044 Lc-ai!
+ 124141 ]A\A]A^
+ 124224 ]A\A]A^
+ 124240 AWAVAUATI
+ 124263 t{Hc
+ 124403 tKHc
+ 124437 []A\A]A^A_
+ 124527 []A\A]A^A_
+ 124566 5U`!
+ 124575 =&h!
+ 124720 AVAUI
+ 124727 ATUI
+ 125033 d$`H
+ 125235 []A\A]A^
+ 125260 AWAVH
+ 125273 AUATUSH
+ 125322 d$ H
+ 125402 l$pH
+ 126077 []A\A]A^A_
+ 126420 AVAUI
+ 126427 ATUS
+ 126465 5.d!
+ 126547 t7Hc
+ 126625 []A\A]A^
+ 126676 ]A\A]A^
+ 127020 ATUSH
+ 127052 D$X1
+ 127405 D$XdH3
+ 127426 `[]A\
+ 127506 =}b!
+ 127522 =yb!
+ 127560 AUATI
+ 127616 D$X1
+ 127721 D$XdH3
+ 127746 h[]A\A]
+ 131132 5y_!
+ 131162 =A_!
+ 131262 =	_!
+ 131620 ATUH
+ 131654 D$(1
+ 131740 D$(dH3
+ 131761 0[]A\
+ 132206 =5]!
+ 132222 =!]!
+ 132320 AWAVAUATUSH
+ 132366 []A\A]A^A_
+ 132453 $< u
+ 132606 -e&!
+ 133220 =c[!
+ 133231 []A\A]A^A_
+ 133562 5aZ!
+ 133576 =mZ!
+ 133740 ATUH
+ 134064 []A\
+ 134102 \$`H
+ 134521 D$X1
+ 134620 D$XdH3
+ 135641 D$X1
+ 135720 D$XdH3
+ 136441 L$X1
+ 136564 D$XdH3
+ 137247 5$K!
+ 140207 5DI!
+ 140406 t8H;
+ 140571 =:P!
+ 141260 ATUH
+ 141314 D$(1
+ 141377 D$(dH3
+ 141420 0[]A\
+ 141653 5 F!
+ 142560 AVAUI
+ 142567 ATUSH
+ 142615 D$X1
+ 143044 L$XdH3
+ 143065 `[]A\A]A^
+ 143220 ATUSH
+ 143242 t$(H
+ 143247 T$0H
+ 143254 L$8L
+ 143261 D$@L
+ 143266 L$Ht7
+ 143274 )D$P
+ 143301 )L$`
+ 143306 )T$p
+ 143425 =VJ!
+ 143543 []A\
+ 143755 %VI!
+ 144020 AWAVAUATUSH
+ 144051 D$X1
+ 144322 D$A 
+ 144327 D$B 
+ 144404 T.3H
+ 144466 D$A 
+ 144473 D$B 
+ 144513 D$XdH3
+ 144534 h[]A\A]A^A_
+ 144646 =]H!
+ 144753 5 H!
+ 145127 D$(1
+ 145201 D$(dH3
+ 145326 =5G!
+ 146257 t$ H
+ 146451 Pjq1
+ 147000 ATUH
+ 147034 D$(1
+ 147153 D$(dH3
+ 147174 0[]A\
+ 147300 ATUH
+ 147334 D$(1
+ 147421 D$(dH3
+ 147442 0[]A\
+ 147732 D$(1
+ 150015 t$0H
+ 150046 ZYt6H
+ 150105 T$(dH3
+ 150275 =EA!
+ 150452 D$(1
+ 150466 L$ H
+ 150534 t$,H
+ 150565 ZYt7H
+ 150624 T$(dH3
+ 151235 =e?!
+ 151400 ATUSH
+ 151646 5e>!
+ 151715 =>>!
+ 151777 []A\
+ 152261 =i=!
+ 152366 ZYt>H
+ 153200 ATUI
+ 153245 D$X1
+ 153270 D$XdH3
+ 153315 `[]A\
+ 153620 ATUI
+ 153665 D$X1
+ 153710 D$XdH3
+ 153731 `[]A\
+ 154140 ATUI
+ 154205 D$X1
+ 154230 D$XdH3
+ 154251 `[]A\
+ 154463 tJATI
+ 154556 []A\
+ 154703 tdAVI
+ 154717 ATUSH
+ 154775 L;-L8!
+ 155004 t*L;-;8!
+ 155015 tAL;-*8!
+ 155041 []A\A]A^
+ 155227 D$(1
+ 155263 D$(dH3
+ 155400 ATUI
+ 155434 D$(1
+ 155532 D$(dH3
+ 155553 0[]A\
+ 155707 D$(1
+ 155761 D$(dH3
+ 156176 \$0H
+ 156226 atWH
+ 156425 Hct$
+ 156520 AWAVAUATE1
+ 157226 []A\A]A^A_
+ 157440 ATUH
+ 157510 D$H1
+ 157564 D$HdH3
+ 157605 P[]A\
+ 157620 AUATI
+ 157764 t)f.
+ 160153 []A\A]
+ 160320 ATUH
+ 160354 D$(1
+ 160454 D$(dH3
+ 160475 0[]A\
+ 160732 =q0!
+ 161060 D$X1
+ 161103 D$XdH3
+ 161351 =Z/!
+ 161372 =I/!
+ 161520 D$X1
+ 161543 D$XdH3
+ 161704 =w.!
+ 162011 =2.!
+ 162032 =!.!
+ 162301 =j-!
+ 162335 =f-!
+ 162351 =R-!
+ 162403 =H-!
+ 162670 5o,!
+ 163671 =z*!
+ 163720 ATUH
+ 163730 =[*!
+ 164036 ZYt>H
+ 164111 []A\
+ 164120 []A\H
+ 164140 []A\H
+ 164160 []A\H
+ 165005 dH34%(
+ 165320 ATUSH
+ 166100 AUATI
+ 166337 []A\A]
+ 166360 ATUI
+ 167020 ATUH
+ 167163 ATUSH
+ 167500 ATUI
+ 167640 ATUI
+ 167741 []A\
+ 170005 []A\
+ 170020 AUATI
+ 170204 []A\A]
+ 170340 AWAVI
+ 170347 AUATI
+ 170527 []A\A]A^A_
+ 170600 ATUSH
+ 170651 t$(H
+ 170700 ATUI
+ 170726 D$(1
+ 171034 D$(dH3
+ 171055 0[]A\
+ 171162 type='siATUSH
+ 171211 gnalf
+ 171314 L$ M
+ 171322 t*Hc
+ 171400 L$(M
+ 171406 t*Hc
+ 171464 L$0M
+ 171472 t*Hc
+ 171550 L$8M
+ 171556 t0Hc
+ 171616 []A\
+ 171640 []A\
+ 171700 AUATI
+ 171725 d$ dH
+ 172077 []A\A]
+ 172160 ATUH
+ 172200 d$ dH
+ 172354 []A\
+ 172424 t8f.
+ 172474 ;r0u
+ 172564 ;r0u
+ 172700 H;:u
+ 173460 AWAVA
+ 173472 AUATI
+ 173557 D$ Pjs1
+ 173645 ([]A\A]A^A_
+ 174320 AUATI
+ 174513 []A\A]
+ 174564 []A\A]
+ 174600 AWAVAUATUSH
+ 174642 D$(1
+ 174674 T$(dH3
+ 174726 8[]A\A]A^A_
+ 175027 L$ H
+ 175137 .I9]
+ 175700 AWAVI
+ 175707 AUATI
+ 176027 1L;6u
+ 176054 :u2I
+ 176306 |$`H
+ 176407 ([]A\A]A^A_
+ 176645 t2E1
+ 176760 AWAVAUATUSH
+ 177313 \$ H
+ 177572 D$0H
+ 177621 []A\A]A^A_
+ 200000 ATUL
+ 200053 ZYtAL
+ 200061 L$ L
+ 200066 D$(H
+ 200144 E0[]A\
+ 200240 AUATM
+ 200327 ZYtEL
+ 200335 D$0H
+ 200424 []A\A]
+ 200446 []A\A]
+ 200520 AUATI
+ 200566 M;,$t
+ 200613  M;,$u
+ 200634 l$@H
+ 201003 []A\A]
+ 201052 t<SH
+ 201377 []A\
+ 201443 toATI
+ 201620 []A\
+ 202140 AUATH
+ 202230 d$PH
+ 202365 []A\A]
+ 202420 ATUI
+ 202622  []A\
+ 203220 ATUI
+ 203446 []A\
+ 203600 AVAUI
+ 203607 ATU1
+ 203647 d$PdH
+ 204042 []A\A]A^
+ 204060 AVAUI
+ 204067 ATUH
+ 204142 D$H1
+ 204224 0tAH
+ 204345 D$HdH3
+ 204366 P[]A\A]A^
+ 204420 ATUH
+ 204466 D$H1
+ 204550 D$HdH3
+ 204571 P[]A\
+ 204620 AWAVAUATUSH
+ 205124 C(E1
+ 205545 []A\A]A^A_
+ 205660 AUATUSH
+ 206664 []A\A]
+ 207260 AWAVAUATI
+ 207314 D$(1
+ 207366 T$@H
+ 207414 L$(dH3
+ 207444 8[]A\A]A^A_
+ 207501 |$@H
+ 210314 0tcI
+ 210552 |$ H
+ 210623 |$ H
+ 211120 AUAT1
+ 211162 l$PdH
+ 211342 |$ H
+ 211416 []A\A]
+ 212320 AWAVI
+ 212327 AUATM
+ 212531 D$PM
+ 212640 []A\A]A^A_
+ 213106 []A\A]A^A_
+ 213140 ATUH
+ 213343 D$@H
+ 213500 []A\
+ 213640 AWAVM
+ 213647 AUATM
+ 213763 []A\A]A^A_
+ 214013 t$`L
+ 214020 L$`M
+ 214165 []A\A]A^A_
+ 214620 ATUI
+ 215001 []A\
+ 215053 L$8L
+ 215060 D$@L
+ 215065 L$Ht7
+ 215073 )D$P
+ 215100 )L$`
+ 215105 )T$p
+ 215320 AUATE1
+ 215372 D$X1
+ 215527 T$XdH3
+ 215553 h[]A\A]
+ 215640 AWAVAUATI
+ 215677 \$ dH
+ 215757 stNH
+ 216062 []A\A]A^A_
+ 216212 t$pH
+ 216505 t$(H
+ 217036 L$(H
+ 217160 AVAUA
+ 217172 ATUH
+ 217505 t$(H
+ 217576 t$`L
+ 217637 T$(L
+ 217733 []A\A]A^
+ 220240 ATUI
+ 220373 T$0H
+ 220400 L$8L
+ 220405 D$@L
+ 220412 L$Ht7
+ 220420 )D$P
+ 220425 )L$`
+ 220432 )T$p
+ 220660 AUATUSH
+ 221041 []A\A]
+ 221220 AUATI
+ 221310 []A\A]
+ 221371 []A\A]
+ 221432 t{USH
+ 221640 AUATA
+ 221740 []A\A]
+ 222112 t}AVAUL
+ 222123 ATUSI
+ 222257 []A\A]A^
+ 222300 []A\A]A^
+ 222333 D$@L
+ 222340 L$Ht7
+ 222346 )D$P
+ 222353 )L$`
+ 222360 )T$p
+ 222600 AWAVAUATI
+ 223011 []A\A]A^A_
+ 223317 []A\A]A^A_
+ 223365 []A\A]A^A_
+ 223660 AUATI
+ 223765 []A\A]
+ 224004 []A\A]
+ 224033 L$8L
+ 224040 D$@L
+ 224045 L$Ht7
+ 224053 )D$P
+ 224060 )L$`
+ 224065 )T$p
+ 224313 D$@L
+ 224320 L$Ht7
+ 224326 )D$P
+ 224333 )L$`
+ 224340 )T$p
+ 224560 AUATI
+ 224655 []A\A]
+ 224716 []A\A]
+ 224753 L$8L
+ 224760 D$@L
+ 224765 L$Ht7
+ 224773 )D$P
+ 225000 )L$`
+ 225005 )T$p
+ 225320 AWAVE
+ 225327 AUATI
+ 225442 []A\A]A^A_
+ 225633 L$Ht7
+ 225641 )D$P
+ 225646 )L$`
+ 225653 )T$p
+ 226100 AUATUSH
+ 226310 []A\A]
+ 226465 C tEH
+ 227320 AVAUI
+ 227327 ATUH
+ 227472 []A\A]A^
+ 227535 vtxL
+ 227542 d$P1
+ 227662 \$PL
+ 227732 d$PH
+ 230377 dH34%(
+ 230560 ATUH
+ 230606 D$(1
+ 230734 D$(dH3
+ 230755 0[]A\
+ 231021 D$(1
+ 231100 D$(dH3
+ 231320 AUATI
+ 231445 []A\A]
+ 231466 []A\A]
+ 231500 AUATI
+ 231540 D$H1
+ 231654 D$HdH3
+ 231675 X[]A\A]
+ 231720 AWAVA
+ 231727 AUATI
+ 231774 D$H1
+ 232010 vt%H
+ 232015 D$HdH3
+ 232042 X[]A\A]A^A_
+ 232400 ATUI
+ 232426 D$h1
+ 232514 D$hdH3
+ 232535 p[]A\
+ 232552 \$ H
+ 232640 AVAUA
+ 232647 ATUI
+ 232725 at(H
+ 232766 []A\A]A^
+ 233017 \$`H
+ 233200 AUATH
+ 233336 []A\A]
+ 233457 l$`H
+ 233700 AVAUATUI
+ 233744 ]A\A]A^
+ 234160 AUATI
+ 234400 []A\A]
+ 234426 []A\A]
+ 234440 AWAVI
+ 234447 AUATI
+ 234501 \$`L
+ 235212 []A\A]A^A_
+ 235650 t6SH
+ 235760 AVAUATUSH
+ 236007 L$h1
+ 236204 t$ H
+ 236444 L$hdH3
+ 236465 p[]A\A]A^
+ 236560 AWAVAUATA
+ 237102 l$0H
+ 237351 |$(H
+ 237474 []A\A]A^A_
+ 237600 AWAVAUATUSH
+ 237623 L$ H
+ 237630 t$(dH
+ 240135 D$@H
+ 240441 L$ t$I
+ 240620 |$8H
+ 240754 []A\A]A^A_
+ 241100 AWAVAUATUSH
+ 241131 D$X1
+ 241524 L$XdH3
+ 241545 h[]A\A]A^A_
+ 241760 ATUH
+ 242175 []A\
+ 242303 tcATUI
+ 242343 []A\H
+ 242421 []A\
+ 243042 AVAUI
+ 243051 ATUH
+ 243616 C89h
+ 243630 []A\A]A^
+ 243673 ]A\A]A^
+ 244146 {8;o
+ 244440 AUATUSH
+ 244474 D$h1
+ 244543 l$ L
+ 244644 D$hdH3
+ 244665 x[]A\A]
+ 245020 AWAVH
+ 245027 AUATI
+ 245051 \$ dH
+ 245156 []A\A]A^A_
+ 245261 t$pH
+ 245620 ATUH
+ 245656 D$X1
+ 245701 L$XdH3
+ 245727 `[]A\
+ 246260 AWAVAUATUSH
+ 246412 d$0H
+ 246533 []A\A]A^A_
+ 246662 eucL
+ 246712 ouKL
+ 247520 AVAUATUI
+ 247734 []A\A]A^
+ 247757 l$`H
+ 250060 AWAVAUATUSH
+ 250143 D$ D
+ 250301 \$`H
+ 250360 l$8D
+ 250365 d$4L
+ 250436 D$@H
+ 250541 D$XH
+ 250606 l$(H
+ 250630 T$XL
+ 250741 l$(L
+ 251232 D$ I
+ 251312 []A\A]A^A_
+ 251440 AWAVA
+ 251447 AUATL
+ 251572 []A\A]A^A_
+ 251644 Adapter
+ 251654 <unknown>
+ 251673 Alias
+ 251701 %s%s%sDevice %s %s
+ 251725 [default]
+ 251737 %s%s%sController %s %s %s
+ 251772 5.37
+ 251777 Version %s
+ 252013 Missing on/off argument
+ 252044 Invalid argument %s
+ 252100 %s%s is nil
+ 252115 %s%s is invalid
+ 252136 %s%s: %s
+ 252150 %s%s: 0x%06x
+ 252166 %s%s: 0x%04x
+ 252204 %s%s: %d
+ 252216 %s%s: 0x%02x
+ 252234  Key
+ 252241  Value
+ 252250 %s%s has unsupported type
+ 252303 Agent registration enabled
+ 252337 Agent registration disabled
+ 252374 org.bluez.Device1
+ 252417 [0;92mNEW
+ 252435 org.bluez.Adapter1
+ 252460 org.bluez.AgentManager1
+ 252510 org.bluez.GattService1
+ 252537 org.bluez.GattCharacteristic1
+ 252575 org.bluez.GattDescriptor1
+ 252627 org.bluez.GattManager1
+ 252656 [SIGNAL] %s.%s
+ 252676 Invalid argument
+ 252720 Missing argument
+ 252742 No attribute selected
+ 252771 Missing attribute argument
+ 253025 Attribute %s not available
+ 253061 Service - %s
+ 253077 UUID
+ 253104 Primary
+ 253114 Characteristics
+ 253134 Includes
+ 253145 Characteristic - %s
+ 253172 Notifying
+ 253204 Flags
+ 253212 Descriptors
+ 253226 Descriptor - %s
+ 253247 Characteristic
+ 253266 Paired
+ 253275 StartDiscovery
+ 253314 StopDiscovery
+ 253332 start
+ 253340 stop
+ 253345 Failed to %s discovery
+ 253375 SetDiscoveryFilter
+ 253420 Failed to remove device: %s
+ 253455 Device has been removed
+ 253506 Failed to pair: %s
+ 253532 Pairing successful
+ 253556 started
+ 253566 stopped
+ 253576 Failed to %s discovery: %s
+ 253632 Discovery %s
+ 253650 SetDiscoveryFilter success
+ 253710 discoverable %s
+ 253730 Discoverable
+ 253745 pairable %s
+ 253761 Pairable
+ 253772 power %s
+ 254003 Powered
+ 254013 Missing name argument
+ 254042 list
+ 254047 UUIDs
+ 254055 Pathloss
+ 254066 RSSI
+ 254073 Transport
+ 254105 Leaking proxy %p
+ 254130 [0;94m[bluetooth]
+ 254152 [0m# 
+ 254161 [0;94m[%s%s%s]
+ 254200 [0m# 
+ 254210 [0;93mCHG
+ 254222 [0m] Device %s 
+ 254242 Connected
+ 254255 [0;91mDEL
+ 254273 Failed to connect: %s
+ 254322 Connection successful
+ 254351 [bluetooth]# 
+ 254367 List available controllers
+ 254422 show
+ 254427 quit
+ 254434 Invalid command
+ 254454   %s %-*s %s
+ 254472 Available commands:
+ 254516 help
+ 254523 Missing data argument
+ 254552 	UUID: %s%*c(%s)
+ 254574 	UUID: %*c(%s)
+ 254614 Controller %s not available
+ 254651 Controller %s
+ 254670 Class
+ 254676 Modalias
+ 254707 Discovering
+ 254723 No device connected
+ 254750 Device %s not available
+ 255001 Device %s
+ 255014 Appearance
+ 255027 Icon
+ 255034 Trusted
+ 255044 Blocked
+ 255054 LegacyPairing
+ 255072 ManufacturerData
+ 255113 ServiceData
+ 255127 TxPower
+ 255137 Disconnect
+ 255152 Failed to disconnect
+ 255200 Pair
+ 255205 Failed to pair
+ 255225 Attempting to pair with %s
+ 255261 %s unblock
+ 255274 %s block
+ 255305 %s untrust
+ 255320 %s trust
+ 255331 Connect
+ 255341 Failed to connect
+ 255364 Attempting to connect to %s
+ 255421 RemoveDevice
+ 255436 Failed to remove device
+ 255467 Failed to disconnect: %s
+ 255521 Successful disconnected
+ 255552 Failed to set %s: %s
+ 255600 Changing %s succeeded
+ 255632 An unknown error occurred
+ 255665 Failed to set signal mask
+ 255717 /org/bluez
+ 255732 org.bluez
+ 255744 Register agent handler
+ 255773 CAPABILITY
+ 256006 [ctrl]
+ 256015 Controller information
+ 256044 select
+ 256053 <ctrl>
+ 256062 Select default controller
+ 256114 List available devices
+ 256143 paired-devices
+ 256162 List paired devices
+ 256206 system-alias
+ 256223 <name>
+ 256232 reset-alias
+ 256246 <on/off>
+ 256257 Set controller power
+ 256304 pairable
+ 256315 Set controller pairable mode
+ 256352 discoverable
+ 256367 <on/off/capability>
+ 256413 default-agent
+ 256431 Set agent as the default one
+ 256466 set-scan-filter-uuids
+ 256514 [uuid1 uuid2 ...]
+ 256536 Set scan filter uuids
+ 256564 set-scan-filter-rssi
+ 256611 [rssi]
+ 256620 set-scan-filter-pathloss
+ 256651 [pathloss]
+ 256664 set-scan-filter-transport
+ 256716 [transport]
+ 256732 Set scan filter transport
+ 256764 set-scan-filter-clear
+ 257012 Clears discovery filter.
+ 257043 scan
+ 257050 Scan for devices
+ 257071 [dev]
+ 257077 Device information
+ 257122 pair
+ 257127 Pair with device
+ 257150 Trust device
+ 257165 Untrust device
+ 257204 Block device
+ 257221 Unblock device
+ 257240 remove
+ 257247 <dev>
+ 257255 Remove device
+ 257273 Connect device
+ 257312 disconnect
+ 257325 Disconnect device
+ 257347 list-attributes
+ 257367 List attributes
+ 257407 select-attribute
+ 257430 <attribute>
+ 257444 Select attribute
+ 257465 attribute-info
+ 257504 [attribute]
+ 257520 read
+ 257525 Read attribute value
+ 257552 write
+ 257560 <data=[xx xx ...]>
+ 257603 Write attribute value
+ 257631 notify
+ 257640 Notify attribute value
+ 257667 <UUID ...>
+ 257702 Register profile to connect
+ 257736 unregister-profile
+ 257761 Unregister profile
+ 260004 Display version
+ 260024 Quit program
+ 260041 exit
+ 260046 DisplayOnly
+ 260062 DisplayYesNo
+ 260077 KeyboardDisplay
+ 260117 KeyboardOnly
+ 260134 NoInputNoOutput
+ 260160 Missing on/off/capability argument
+ 260230 No default controller available
+ 260300 Failed to set discovery filter
+ 260340 SetDiscoveryFilter failed: %s
+ 260402 [0;93mCHG
+ 260414 [0m] Controller %s 
+ 260442 [0;93mCHG
+ 260454 [0m] Attribute %s 
+ 260500 Missing device address argument
+ 260550 Attempting to disconnect from %s
+ 260620 Missing controller address argument
+ 260670 Failed to create signal descriptor
+ 260740 Show version information and exit
+ 261010 Set controller discoverable mode
+ 261060 Enable/disable agent with given capability
+ 261140 Set scan filter rssi, and clears pathloss
+ 261220 Set scan filter pathloss, and clears rssi
+ 261300 0123456789abcdef
+ 261321 org.bluez.Error.Rejected
+ 261352 org.bluez.Error.Canceled
+ 261403 org.bluez.Agent1
+ 261424 /org/bluez/agent
+ 261445 Request canceled
+ 261467 Agent released
+ 261507 %.6u
+ 261514 Agent registered
+ 261536 Failed to register agent: %s
+ 261574 Agent unregistered
+ 261621 [0;91m[agent]
+ 261637 [0m %s
+ 261646 Authorize service
+ 261671 Request authorization
+ 261720 Accept pairing (yes/no): 
+ 261752 Request confirmation
+ 262000 Request passkey
+ 262021 Request PIN code
+ 262043 Enter PIN code: 
+ 262064 RequestPinCode
+ 262103 RequestPasskey
+ 262125 RequestConfirmation
+ 262151 RequestAuthorization
+ 262176 AuthorizeService
+ 262217 Agent is already registered
+ 262254 RegisterAgent
+ 262272 No agent is registered
+ 262322 UnregisterAgent
+ 262342 RequestDefaultAgent
+ 262366 Release
+ 262376 DisplayPinCode
+ 262415 DisplayPasskey
+ 262434 Cancel
+ 262443 uuid
+ 262450 passkey
+ 262460 entered
+ 262472 pincode
+ 262510 Failed to request default agent: %s
+ 262560 Default agent request successful
+ 262631 [0;91m[agent]
+ 262647 [0m PIN code: %s
+ 262701 [0;91m[agent]
+ 262717 [0m Passkey: 
+ 262735 [1;30m%.*s
+ 262750 [1;37m%s
+ 262770 Failed to unregister agent object
+ 263040 Failed to unregister agent: %s
+ 263100 Authorize service %s (yes/no): 
+ 263140 Confirm passkey %06u (yes/no): 
+ 263200 Enter passkey (number in 0-999999): 
+ 263250 Failed to register agent object
+ 263320 Failed to call register agent method
+ 263370 Failed to call unregister agent method
+ 263440 Failed to call request default agent method
+ 263515 Secondary
+ 263527 %s%s%s%s Service
+ 263561 %s%s%sCharacteristic
+ 263617 %s%s%sDescriptor
+ 263651 Failed to write: %s
+ 263676 Failed to %s notify: %s
+ 263727 Notify %s
+ 263742 Profile registered
+ 263766 Failed to read: %s
+ 264012 Invalid response to read
+ 264044 Unable to parse value
+ 264073 Too much data
+ 264112 Invalid value at index %d
+ 264145 Failed to write
+ 264166 Attempting to write %s
+ 264216 WriteValue
+ 264231 /org/bluez/profile
+ 264254 Profile unregistered
+ 264302 org.bluez.GattProfile1
+ 264331 ReadValue
+ 264343 Failed to read
+ 264363 Attempting to read %s
+ 264412 Unable to read attribute %s
+ 264447 Unable to write attribute %s
+ 264505 Failed to %s notify
+ 264532 StartNotify
+ 264546 StopNotify
+ 264561 RegisterProfile
+ 264601 Failed register profile
+ 264632 UnregisterProfile
+ 264654 Failed unregister profile
+ 264710 Failed to register profile: %s
+ 264750 Failed to unregister profile: %s
+ 265020 Unable to notify attribute %s
+ 265060 Unable to find GattManager proxy
+ 265130 Failed to register profile object
+ 265173 RFCOMM
+ 265202 Unknown
+ 265216 Vendor specific
+ 265236 -0000-1000-8000-00805f9b34fb
+ 265273 TCS-BIN
+ 265307 OBEX
+ 265314 BNEP
+ 265321 UPNP
+ 265326 HIDP
+ 265333 Hardcopy Control Channel
+ 265364 Hardcopy Data Channel
+ 265412 Hardcopy Notification
+ 265440 AVCTP
+ 265446 AVDTP
+ 265454 CMTP
+ 265461 MCAP Control Channel
+ 265506 MCAP Data Channel
+ 265530 Public Browse Root
+ 265553 Serial Port
+ 265567 LAN Access Using PPP
+ 265614 Dialup Networking
+ 265636 IrMC Sync
+ 265650 OBEX Object Push
+ 265671 OBEX File Transfer
+ 265714 IrMC Sync Command
+ 265736 Headset
+ 265746 Cordless Telephony
+ 265771 Audio Source
+ 266006 Audio Sink
+ 266021 A/V Remote Control Target
+ 266053 Advanced Audio Distribution
+ 266107 A/V Remote Control
+ 266132 A/V Remote Control Controller
+ 266170 Intercom
+ 266205 Headset AG
+ 266224 WAP Client
+ 266237 PANU
+ 266253 Direct Printing
+ 266273 Reference Printing
+ 266316 Basic Imaging Profile
+ 266344 Imaging Responder
+ 266366 Imaging Automatic Archive
+ 266420 Imaging Referenced Objects
+ 266453 Handsfree
+ 266465 Handsfree Audio Gateway
+ 266515 Reflected UI
+ 266532 Basic Printing
+ 266551 Printing Status
+ 266571 Hardcopy Cable Replacement
+ 266624 HCR Print
+ 266636 HCR Scan
+ 266647 Common ISDN Access
+ 266672 SIM Access
+ 266705 Phonebook Access Client
+ 266735 Phonebook Access Server
+ 266765 Phonebook Access
+ 267006 Headset HS
+ 267021 Message Access Server
+ 267047 Message Notification Server
+ 267103 Message Access Profile
+ 267132 GNSS
+ 267137 GNSS Server
+ 267153 3D Display
+ 267166 3D Glasses
+ 267201 3D Synchronization
+ 267224 MPS Profile
+ 267240 MPS Service
+ 267254 PnP Information
+ 267274 Generic Networking
+ 267317 Generic File Transfer
+ 267345 Generic Audio
+ 267363 Generic Telephony
+ 267405 UPNP Service
+ 267422 UPNP IP Service
+ 267442 UPNP IP PAN
+ 267456 UPNP IP LAP
+ 267472 UPNP IP L2CAP
+ 267510 Video Source
+ 267525 Video Sink
+ 267540 Video Distribution
+ 267567 HDP Source
+ 267602 HDP Sink
+ 267613 Generic Access Profile
+ 267642 Generic Attribute Profile
+ 267674 Immediate Alert
+ 267714 Link Loss
+ 267726 Tx Power
+ 267737 Current Time Service
+ 267764 Reference Time Update Service
+ 270022 Next DST Change Service
+ 270052 Glucose
+ 270062 Health Thermometer
+ 270105 Device Information
+ 270130 Phone Alert Status Service
+ 270163 Battery Service
+ 270203 Blood Pressure
+ 270222 Alert Notification Service
+ 270255 Human Interface Device
+ 270304 Scan Parameters
+ 270324 Running Speed and Cadence
+ 270356 Automation IO
+ 270374 Cycling Speed and Cadence
+ 270426 Cycling Power
+ 270444 Location and Navigation
+ 270474 Environmental Sensing
+ 270522 Body Composition
+ 270543 User Data
+ 270555 Weight Scale
+ 270572 Bond Management
+ 270612 Continuous Glucose Monitoring
+ 270650 Internet Protocol Support
+ 270702 Indoor Positioning
+ 270725 Pulse Oximeter
+ 270744 HTTP Proxy
+ 270757 Transport Discovery
+ 271003 Object Transfer
+ 271023 Primary Service
+ 271043 Secondary Service
+ 271065 Include
+ 271075 Characteristic Format
+ 271123 Valid Range
+ 271137 External Report Reference
+ 271171 Number of Digitals
+ 271214 Value Trigger Setting
+ 271242 Time Trigger Setting
+ 271267 Device Name
+ 271303 Peripheral Privacy Flag
+ 271333 Reconnection Address
+ 271360 Service Changed
+ 271400 Alert Level
+ 271414 Tx Power Level
+ 271433 Day of Week
+ 271447 Day Date Time
+ 271465 Exact Time 256
+ 271504 DST Offset
+ 271517 Time Zone
+ 271531 Local Time Information
+ 271560 Time with DST
+ 271576 Time Accuracy
+ 271614 Time Source
+ 271630 Reference Time Information
+ 271663 Time Update Control Point
+ 271715 Time Update State
+ 271737 Glucose Measurement
+ 271763 Battery Level
+ 272001 Temperature Measurement
+ 272031 Temperature Type
+ 272052 Intermediate Temperature
+ 272103 Measurement Interval
+ 272130 Boot Keyboard Input Report
+ 272163 System ID
+ 272175 Model Number String
+ 272221 Serial Number String
+ 272246 Firmware Revision String
+ 272277 Hardware Revision String
+ 272330 Software Revision String
+ 272361 Manufacturer Name String
+ 272412 Current Time
+ 272427 Magnetic Declination
+ 272454 Scan Refresh
+ 272471 Boot Keyboard Output Report
+ 272525 Boot Mouse Input Report
+ 272555 Glucose Measurement Context
+ 272611 Blood Pressure Measurement
+ 272644 Intermediate Cuff Pressure
+ 272677 Heart Rate Measurement
+ 272726 Body Sensor Location
+ 272753 Heart Rate Control Point
+ 273004 Ringer Control Point
+ 273031 Ringer Setting
+ 273050 Alert Category ID Bit Mask
+ 273103 Alert Category ID
+ 273125 Unread Alert Status
+ 273151 New Alert
+ 273163 Supported New Alert Category
+ 273220 Blood Pressure Feature
+ 273247 HID Information
+ 273267 Report Map
+ 273302 HID Control Point
+ 273324 Protocol Mode
+ 273342 Scan Interval Window
+ 273367 PnP ID
+ 273376 Glucose Feature
+ 273416 Record Access Control Point
+ 273452 RSC Measurement
+ 273472 RSC Feature
+ 273506 SC Control Point
+ 273527 Digital
+ 273537 Analog
+ 273546 Aggregate
+ 273560 CSC Measurement
+ 273600 CSC Feature
+ 273614 Cycling Power Measurement
+ 273646 Cycling Power Vector
+ 273673 Cycling Power Feature
+ 273721 Cycling Power Control Point
+ 273755 Location and Speed
+ 274000 Position Quality
+ 274021 LN Feature
+ 274034 LN Control Point
+ 274055 Elevation
+ 274067 Humidity
+ 274100 True Wind Speed
+ 274120 True Wind Direction
+ 274144 Apparent Wind Speed
+ 274170 Apparent Wind Direction
+ 274220 Gust Factor
+ 274234 Pollen Concentration
+ 274261 UV Index
+ 274272 Irradiance
+ 274305 Rainfall
+ 274316 Wind Chill
+ 274331 Heat Index
+ 274344 Dew Point
+ 274356 Descriptor Value Changed
+ 274407 Aerobic Threshold
+ 274435 Anaerobic Threshold
+ 274461 Date of Birth
+ 274477 Date of Threshold Assessment
+ 274534 Email Address
+ 274552 First Name
+ 274565 Five Zone Heart Rate Limits
+ 274621 Gender
+ 274630 Heart Rate Max
+ 274647 Height
+ 274656 Hip Circumference
+ 274700 Last Name
+ 274712 Resting Heart Rate
+ 274735 Three Zone Heart Rate Limits
+ 274772 Two Zone Heart Rate Limit
+ 275024 VO2 Max
+ 275034 Waist Circumference
+ 275060 Weight
+ 275067 Database Change Increment
+ 275121 User Index
+ 275134 Body Composition Feature
+ 275165 Body Composition Measurement
+ 275222 Weight Measurement
+ 275245 Weight Scale Feature
+ 275272 User Control Point
+ 275315 Magnetic Flux Density - 2D
+ 275350 Magnetic Flux Density - 3D
+ 275403 Language
+ 275414 Barometric Pressure Trend
+ 275446 Bond Management Control Point
+ 275504 Bond Management Feature
+ 275534 Central Address Resolution
+ 275567 CGM Measurement
+ 275607 CGM Feature
+ 275623 CGM Status
+ 275636 CGM Session Start Time
+ 275665 CGM Session Run Time
+ 275712 Latitude
+ 275723 Longitude
+ 275735 Local North Coordinate
+ 275764 Local East Coordinate
+ 276012 Floor Number
+ 276027 Altitude
+ 276040 Uncertainty
+ 276054 Location Name
+ 276076 HTTP Headers
+ 276113 HTTP Status Code
+ 276134 HTTP Entity Body
+ 276155 HTTP Control Point
+ 276200 HTTPS Security
+ 276217 TDS Control Point
+ 276241 OTS Feature
+ 276255 Object Name
+ 276271 Object Type
+ 276305 Object Size
+ 276321 Object First-Created
+ 276346 Object Last-Modified
+ 276373 Object ID
+ 276405 Object Properties
+ 276427 Object Action Control Point
+ 276463 Object List Control Point
+ 276515 Object List Filter
+ 276540 Object Changed
+ 276557 GN Netcom
+ 276571 GN ReSound A/S
+ 276610 Gimbal, Inc.
+ 276625 Stollmann E+V GmbH
+ 276650 PayPal, Inc.
+ 276665 Aplix Corporation
+ 276707 Wicentric, Inc.
+ 276727 Dialog Semiconductor GmbH
+ 276761 Google
+ 276774 Intel
+ 277002 Polar Electro Oy
+ 277023 Tile, Inc.
+ 277036 Swirl Networks, Inc.
+ 277063 Quintic Corp.
+ 277101 Tencent Holdings Limited
+ 277132 Seed Labs, Inc.
+ 277152 Nordic Semiconductor ASA
+ 277203 Anki, Inc.
+ 277216 Design SHIFT
+ 277233 Coin, Inc.
+ 277246 Jawbone
+ 277256 Perka, Inc.
+ 277272 ISSC Technologies Corporation
+ 277330 Pebble Technology Corporation
+ 277366 Broadcom Corporation
+ 277413 Plantronics Inc.
+ 277434 Apple, Inc.
+ 277450 Kocomojo, LLC
+ 277466 Realtek Semiconductor Corp.
+ 277522 PLUS Location Systems
+ 277550 360fly, Inc.
+ 277565 Blue Spark Technologies, Inc.
+ 277623 KDDI Corporation
+ 277644 Nod, Inc.
+ 277656 Bose Corporation
+ 277677 Clover Network, Inc.
+ 277724 Dexcom, Inc.
+ 277741 adafruit industries
+ 277765 LG Electronics
+ 300004 Facebook, Inc.
+ 300023 Vencer Co, Ltd
+ 300042 WiSilica Inc.
+ 300060 Taobao
+ 300067 Microsoft Corporation
+ 300115 Electronics Tomorrow Limited
+ 300152 Nest Labs Inc.
+ 300171 Nokia Corporation
+ 300213 Savant Systems LLC
+ 300236 UTC Fire and Security
+ 300264 GoPro, Inc.
+ 300300 Paxton Access Ltd
+ 300322 ITT Industries
+ 300341 Dialog Semiconductor B.V.
+ 300373 Mobiquity Networks Inc
+ 300422 GSI Laboratories, Inc.
+ 300451 Samsara Networks, Inc
+ 300477 Estimote
+ 300510 Currant, Inc.
+ 300526 Tesla Motor Inc.
+ 300547 Xiaomi Inc.
+ 300563 OttoQ Inc.
+ 300576 Jarden Safety & Security
+ 300627 JUMA
+ 300634 ARM Ltd
+ 300644 Interaxon Inc.
+ 300663 TRON Forum
+ 300676 B&O Play A/S
+ 300713 SALTO SYSTEMS S.L.
+ 300736 RF Digital Corp
+ 300756 Blue Bite
+ 300770 Medtronic Inc.
+ 301007 Doppler Lab
+ 301023 Awear Solutions Ltd
+ 301047 Aterica Health Inc.
+ 301073 Orion Labs, Inc.
+ 301120 %08x-0000-1000-8000-00805f9b34fb
+ 301170 Service Discovery Server Service Class
+ 301240 Browse Group Descriptor Service Class
+ 301310 Direct Printing Refrence Objects Service
+ 301370 Human Interface Device Service
+ 301430 Characteristic Extended Properties
+ 301500 Characteristic User Description
+ 301540 Client Characteristic Configuration
+ 301610 Server Characteristic Configuration
+ 301660 Characteristic Aggregate Formate
+ 301730 Environmental Sensing Configuration
+ 302000 Environmental Sensing Measurement
+ 302050 Environmental Sensing Trigger Setting
+ 302120 Peripheral Preferred Connection Parameters
+ 302200 IEEE 11073-20601 Regulatory Cert. Data List
+ 302260 Alert Notification Control Point
+ 302330 Supported Unread Alert Category
+ 302370 Aerobic Heart Rate Lower Limit
+ 302430 Anaerobic Heart Rate Lower Limit
+ 302500 Anaerobic Heart Rate Upper Limit
+ 302550 Aerobic Heart Rate Upper Limit
+ 302610 Fat Burn Heart Rate Lower Limit
+ 302650 Fat Burn Heart Rate Upper Limit
+ 302710 Maximum Recommended Heart Rate
+ 302750 Sport Type for Aerobic/Anaerobic Thresholds
+ 303030 CGM Specific Ops Control Point
+ 303070 Indoor Positioning Configuration
+ 303140 Anhui Huami Information Technology Co.
+ 303210 Intrepid Control Systems, Inc.
+ 303250 Shanghai Imilab Technology Co.,Ltd
+ 303320 Qingdao Yeelink Information Technology Co., Ltd. ( 
+ 303460 HUAWEI Technologies Co., Ltd. ( 
+ 303560 Alliance for Wireless Power (A4WP)
+ 303630 Fast IDentity Online Alliance (FIDO)
+ 303675 Name already in use
+ 303721 Disconnected
+ 303736 org.freedesktop.DBus.Local
+ 303771 ,sender='%s'
+ 304006 ,path='%s'
+ 304021 ,interface='%s'
+ 304041 ,member='%s'
+ 304056 ,arg0='%s'
+ 304071 NameOwnerChanged
+ 304112 org.freedesktop.DBus
+ 304137 /org/freedesktop/DBus
+ 304165 GetNameOwner
+ 304202 PropertiesChanged
+ 304230 org.freedesktop.DBus.Properties
+ 304270 <arg name="%s" type="%s"
+ 304321  direction="%s"/>
+ 304344 GDBUS_EXPERIMENTAL
+ 304367 InterfacesAdded
+ 304407 InterfacesRemoved
+ 304431 <node>
+ 304440 <interface name="%s">
+ 304466 <method name="%s">
+ 304520 </method>
+ 304532 <signal name="%s">
+ 304555 </signal>
+ 304570 </interface>
+ 304605 </property>
+ 304621 <node name="%s"/>
+ 304643 </node>
+ 304653 No such interface '%s'
+ 304702 No arguments given
+ 304725 Invalid argument type: '%c'
+ 304761 No such property '%s'
+ 305007 Property '%s' is not writable
+ 305045 Invalid signature for '%s'
+ 305100 Property '%s' is not readable
+ 305140 object
+ 305147 interfaces
+ 305162 a{sa{sv}}
+ 305174 GetManagedObjects
+ 305216 objects
+ 305226 a{oa{sa{sv}}}
+ 305244 Introspect
+ 305263 interface
+ 305275 changed_properties
+ 305320 a{sv}
+ 305326 invalidated_properties
+ 305365 GetAll
+ 305400 org.freedesktop.DBus.ObjectManager
+ 305450 <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+ 305567 "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+ 305670 <annotation name="org.freedesktop.DBus.Deprecated" value="true"/>
+ 306000 <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+ 306110 <property name="%s" type="%s" access="%s%s">
+ 306170 org.freedesktop.DBus.Introspectable
+ 306240 <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+ 306357 "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+ 306457 <node></node>
+ 306500 org.freedesktop.DBus.Error.InvalidArgs
+ 306550 org.freedesktop.DBus.Error.UnknownProperty
+ 306630 org.freedesktop.DBus.Error.PropertyReadOnly
+ 306710 org.freedesktop.DBus.Error.InvalidSignature
+ 306770 org.freedesktop.DBus.Error.AuthFailed
+ 307036 AddMatch
+ 307047 RemoveMatch
+ 307070 type='signal',sender='%s',path_namespace='%s'
+ 307146 (bba{ss})
+ 307160 CheckAuthorization
+ 307203 org.freedesktop.PolicyKit1
+ 307236 system-bus-name
+ 307256 {ss}
+ 307270 org.freedesktop.policykit.exec
+ 307330 org.freedesktop.PolicyKit1.Authority
+ 307400 /org/freedesktop/PolicyKit1/Authority
+ 314247 ;*3$"
+ 410360 2b4655af4021aa1ff3e131158d1f8d73abc22a.debug
+ 410445 .shstrtab
+ 410457 .interp
+ 410467 .note.ABI-tag
+ 410505 .note.gnu.build-id
+ 410530 .gnu.hash
+ 410542 .dynsym
+ 410552 .dynstr
+ 410562 .gnu.version
+ 410577 .gnu.version_r
+ 410616 .rela.dyn
+ 410630 .init
+ 410636 .plt
+ 410643 .plt.got
+ 410654 .text
+ 410662 .fini
+ 410670 .rodata
+ 410700 .eh_frame_hdr
+ 410716 .eh_frame
+ 410730 .init_array
+ 410744 .fini_array
+ 410760 .jcr
+ 410765 .data.rel.ro
+ 411002 .dynamic
+ 411013 .data
+ 411021 .bss
+ 411026 .gnu_debuglink
