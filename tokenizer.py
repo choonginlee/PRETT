@@ -14,6 +14,7 @@ exception_token = ['atuh', 'auati', 'avaui', 'atui', 'auatush', \
 					'uauh' ]
 ranklist = {}
 cnt = 0
+g_start_time = time.time()
 
 def count_token(file) :
 	global ranklist
@@ -23,6 +24,7 @@ def count_token(file) :
 	tempdic = dict((k,1) for k in words)
 	ranklist = Counter(ranklist) + Counter(tempdic)
 	print "======== [", cnt, "] Token analysis of file", file, "done.", "========="
+
 
 def extract_token(path, file) :
 
@@ -45,13 +47,14 @@ def extract_token(path, file) :
 		for split in split_list:
 			result_first = re.findall('[A-Za-z]{2,}', split)
 			for res in result_first:
-				result.append(res)
-
+				result.append(res)				
+	
 	fw.write((str(set(result))))
 
 	fw.close
 
 	count_token(file_write)
+
 
 def extract_token_dir(dir) :
 
@@ -61,7 +64,6 @@ def extract_token_dir(dir) :
 	for root, dirs, files in os.walk(dir):
 		for file in files:
 			extract_token(root, file)
-
 
 if __name__ == "__main__" :
 
@@ -90,13 +92,10 @@ if __name__ == "__main__" :
 	print("--- Total %s seconds ---" % (time.time() - start_time))
 
 	# write total tokens in one file
-	file_write_total = outputdir + "/total_tokens.txt"
+	file_write_total = outputdir + "/all_tokens.txt"
 	with open(file_write_total, "wb") as f:
 		pickle.dump(ranklist.most_common(), f)
 
-
 	print "[+] total unique tokens :", len(ranklist.most_common())
-
-
-
+	print 'total_time : ' + str(time.time()-g_start_time)
 

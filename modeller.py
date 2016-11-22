@@ -241,7 +241,7 @@ dst_ip = sys.argv[1]
 
 #These informations are prerequisite.
 dport = 21
-sport = 10000 # find sport_here
+sport = 1000 # find sport_here
 delimiter = "\r\n"
 exit_label = "QUIT / 221 Goodbye."
 
