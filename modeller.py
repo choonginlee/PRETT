@@ -262,7 +262,7 @@ dst_ip = sys.argv[1]
 
 #These informations are prerequisite.
 dport = 21
-sport = 2200
+sport = 3500
 delimiter = "\r\n"
 exit_label = "QUIT / 221 Goodbye."
 
