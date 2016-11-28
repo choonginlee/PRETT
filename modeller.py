@@ -128,7 +128,7 @@ def send_receive_ftp(rp, token):
 
 			#elapsed_time = time.time() - start_time
 			#print "After sniffing and parsing ftp..." + str(elapsed_time) + "\n"
-
+			
 			skt.send(ack_p)
 			#logging.info("[+] FTP ACK sent.")
 			build_state_machine(ftpmachine, ftpmachine.model.state, sentpayload, rcvdpayload)
@@ -288,8 +288,11 @@ timeout = 0.004
 sniff_timeout = 5
 depth_count = 0
 
+if not os.path.exists('./diagram'):
+	os.makedirs('./diagram')
+
 #Mode Selection
-mode = raw_input("[!] Manual? or Auto(BFS, DFS)? ( \'m\' - for testing / \'b\' - bfs mode / \'d\' - dfs mode) : ")
+mode = raw_input("[!] Manual? or Auto(BFS, DFS)? ( \'m\' - for testing / \'b\' - bfs mode / \'d\' - dfs mode / \'p\' - prune mode /) : ")
 
 #Crate ftp machine and assign protocol model
 ftpmachine = generate_ftp_model()
