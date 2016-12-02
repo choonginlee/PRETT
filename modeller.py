@@ -121,6 +121,8 @@ def send_receive_ftp(rp, token):
 		else:
 			logging.debug("[+] 1+ TCP packet captured. " + str(len(rp)) + "".join(str(x.summary()) for x in rp))
 			sentpayload = p.getlayer("Raw").load
+			if rp[0].getlayer("Raw") is None:
+				return "error"
 			rcvdpayload = rp[0].getlayer("Raw").load
 			#logging.info("[+] RESPONSE FTP PAYLOAD : " + rcvdpayload) # this is protocol response message
 			ack_p = generate_ftp_ack(rp[0])
@@ -215,7 +217,7 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	# sm : state machine, crnt_state : current state, payload : response packet payload 
 	
 	# Build and fix a state machine based on the response
-	global num_of_states, transition_info, state_numb_list, state_list, current_state, cnt, state_found, new_state, depth_count
+	global num_of_states, transition_info, state_numb_list, state_list, current_state, cnt, state_found, new_state, depth_count, is_pruning
 
 	#Check if the response already seen before
 	for t in sm.get_triggers(crnt_state):
@@ -234,9 +236,10 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	#If not seen before,
 	# - Add a new state
 	# - Add a new transition from current state
-	num_of_states = num_of_states + 1
-	dst_state = str(num_of_states)
-	sm.add_states(dst_state)
+	if is_pruning == 0:
+		num_of_states = num_of_states + 1
+		dst_state = str(num_of_states)
+		sm.add_states(dst_state)
 
 	# In case of timeout with huge inputs, store full send/receive label in transition_info
 	# but store abbrebiated send/receive label in transition model (as well as state machine diagram)
@@ -246,17 +249,19 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	else:
 		t_label = spyld + " / " + rpyld
 
-	transition_info[t_label] = [crnt_state, dst_state, 1] # add transition info
-	state_numb_list.append(str(num_of_states))
-	state_list.add_state(State(num_of_states, parent=current_state, token=str(spyld), depth=depth_count))
-	state_list.find_state(current_state).children.append(num_of_states)
-	state_list.find_state(current_state).child_dict[str(spyld)] = str(rpyld)
+	if is_pruning == 0:
 
-	state_found = 1
-	logging.info("[+] Count : " + str(cnt) + " | State " + crnt_state + " added with transition " + t_label)
-	logging.info("[+] Count : " + str(cnt) + " | State " + dst_state + " added with transition " + t_label)
+		transition_info[t_label] = [crnt_state, dst_state, 1] # add transition info
+		state_numb_list.append(str(num_of_states))
+		state_list.add_state(State(num_of_states, parent=current_state, token=str(spyld), depth=depth_count))
+		state_list.find_state(current_state).children.append(num_of_states)
+		state_list.find_state(current_state).child_dict[str(spyld)] = str(rpyld)
 
-	sm.add_transition(t_label, source = crnt_state, dest = dst_state)
+		state_found = 1
+		logging.info("[+] Count : " + str(cnt) + " | State " + crnt_state + " added with transition " + t_label)
+		logging.info("[+] Count : " + str(cnt) + " | State " + dst_state + " added with transition " + t_label)
+
+		sm.add_transition(t_label, source = crnt_state, dest = dst_state)
 
 
 #################################################
@@ -268,7 +273,7 @@ dst_ip = sys.argv[1]
 
 #These informations are prerequisite.
 dport = 21
-sport = 1000 # find sport_here
+sport = 30000 # find sport_here
 delimiter = "\r\n"
 exit_label = "QUIT / 221 Goodbye."
 
@@ -278,6 +283,7 @@ state_found = 0
 new_state = []
 myiface = "enp0s8"
 # next_seq = 0
+is_pruning = 0
 
 state_numb_list = ['0']
 current_state = 0
@@ -505,8 +511,6 @@ elif mode == 'd':
 				rp = send_receive_ftp(rp, tk)
 				if rp == "error":
 					print 'rp error when find state'
-					rp = temp
-					continue
 
 			# set state
 			ftpmachine.set_state(str(current_state))
@@ -572,6 +576,8 @@ elif mode == 'p':
 
 	while True:
 
+		print 'send total tokens'
+
 		if current_state > num_of_states:
 			break
 		
@@ -588,6 +594,8 @@ elif mode == 'p':
 				break
 		
 		move_state_token.reverse()
+
+		is_pruning = 0
 
 		# Simple message format ( 1 word )
 		for token in token_db:
@@ -610,14 +618,7 @@ elif mode == 'p':
 				temp = rp
 				rp = send_receive_ftp(rp, tk)
 				if rp == "error":
-					while True:
-						print 'rp error when find state'
-						rp = temp
-						rp = send_receive_ftp(rp, tk)
-						if rp == "error":
-							continue
-						else:
-							break
+				     print 'rp error when find state'
 
 			# set state
 			ftpmachine.set_state(str(current_state))
@@ -640,17 +641,18 @@ elif mode == 'p':
 			if unique_cnt % 1000 == 0 :
 				elapsed_time = time.time() - g_start_time
 				print "[+] COUNT OF TRIALS : %d | " % unique_cnt, "Time Elapsed :", elapsed_time, "s"
-				graphname = "diagram/bfs_state" + str(unique_cnt) + ".png"
+				graphname = "diagram/prune_bfs_state" + str(unique_cnt) + ".png"
 				ftpmachine.model.graph.draw(graphname, prog='dot')
-
 
 
 		prune_children = state_list.find_state(current_state).children
 		temp_children = []
 
+		print 'prune start in state ' + str(current_state)
+
+		is_pruning = 1
 		# pruning stage
 		for child_numb in prune_children:
-
 			prune_move_state_token =[]
 			prune_current_state = child_numb
 			prune_target_state = prune_current_state
@@ -667,8 +669,9 @@ elif mode == 'p':
 			prune_move_state_token.reverse()
 			prune_parent_child_dict = state_list.find_state(current_state).child_dict
 
+			temp_prune_parent_child_dict_keys = prune_parent_child_dict.keys()
 			# Simple message format ( 1 word )
-			for token in prune_parent_child_dict.keys():
+			for token in temp_prune_parent_child_dict_keys:
 				if token == "quit":
 					continue
 				sport = sport + 1
@@ -685,6 +688,7 @@ elif mode == 'p':
 				#logging.info("[+] [MAIN] AFTER SEND")
 
 				for tk in prune_move_state_token:
+					print tk + " prune move tokens "
 					temp = rp
 					rp = send_receive_ftp(rp, tk)
 					if rp == "error":
@@ -712,6 +716,15 @@ elif mode == 'p':
 					# Finish TCP connection
 					disconnect_ftp(rp)
 
+				#Initialize current state as 0
+				cs = 0
+
+				if unique_cnt % 1000 == 0 :
+					elapsed_time = time.time() - g_start_time
+					print "[+] COUNT OF TRIALS : %d | " % unique_cnt, "Time Elapsed :", elapsed_time, "s"
+					graphname = "diagram/prune_bfs_state" + str(unique_cnt) + ".png"
+					ftpmachine.model.graph.draw(graphname, prog='dot')
+
 
 			prune_child_dict = state_list.find_state(child_numb).child_dict
 			if cmp(prune_parent_child_dict, prune_child_dict) == 0: # same state, prune state
@@ -720,17 +733,30 @@ elif mode == 'p':
 				pass
 
 		for temp_numb in temp_children:
-			state_list.remove_state(state_list.find_state(temp_numb))
-			state_list.find_state(current_state).children.remove(temp_numb)
+			temp_state = state_list.find_state(temp_numb)
+			if temp_state is not None:
+				print str(temp_numb) + " / " + str(current_state)
+				ftpmachine.add_transition(temp_state.token + " / " + str(prune_parent_child_dict.get(temp_state.token, None)), source = str(current_state), dest = str(current_state))
+
+		for temp_numb in temp_children:
+			temp_state = state_list.find_state(temp_numb)
+			if temp_state is not None:
+				print str(temp_numb) + " / " + str(current_state)
+				# del ftpmachine.states[str(temp_numb)]
+				ftpmachine.states.pop(str(temp_numb), None)
+				state_list.remove_state(state_list.find_state(temp_numb))
+				state_list.find_state(current_state).children.remove(temp_numb)
 			# state_list.find_state(current_state).child_dict
 
+		print 'move state'
 
 		# move state
 		curs = state_list.find_state(current_state)
 		if curs.children is not []: # has some children
-			tars = curs.children[curs.next_child_idx]
-			curs.next_child_idx = curs.next_child_idx + 1
-			if tars == None: # no child
+			if curs.next_child_idx < len(curs.children):
+				tars = curs.children[curs.next_child_idx]
+				curs.next_child_idx = curs.next_child_idx + 1
+			else: # no child
 				tars = curs.parent
 				if tars == None: # no additional nodes
 					break
@@ -740,7 +766,7 @@ elif mode == 'p':
 					targets.next_child_idx = targets.next_child_idx + 1
 
 			current_state = tars
-
+			
 		else: # no child
 			tars = curs.parent
 			if tars == None: # no additional nodes
@@ -755,9 +781,9 @@ elif mode == 'p':
 	elapsed_time = time.time() - g_start_time
 	print "Total elapsed time : ", elapsed_time, "\n"
 	# Program normally ends.
-	ftpmachine.model.graph.draw("diagram/bfs_state_fin.png", prog='dot')
+	ftpmachine.model.graph.draw("diagram/prune_bfs_state_fin.png", prog='dot')
 	logging.info(transition_info)
-	img = mplotimg.imread("diagram/bfs_state_fin.png")
+	img = mplotimg.imread("diagram/prune_bfs_state_fin.png")
 	plt.imshow(img)
 	plt.show()
 	sys.exit()
