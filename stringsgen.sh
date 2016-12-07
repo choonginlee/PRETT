@@ -1,5 +1,11 @@
 #!/bin/bash
+timestamp() {
+	date +"%T.%N"
+}
+
 echo "Start creating strings"
+timestamp
+
 strings -to /bin/ping > ./binstring/ping.txt
 strings -to /bin/ping6 > ./binstring/ping6.txt
 strings -to /usr/bin/arping > ./binstring/arping.txt
@@ -45,4 +51,6 @@ strings -to /usr/bin/webbrowser-app > ./binstring/webbrowser-app.txt
 strings -to /usr/bin/wget > ./binstring/wget.txt
 strings -to /usr/bin/wireshark > ./binstring/wireshark.txt
 strings -to /usr/bin/xdg-email > ./binstring/xdg-email.txt
-strings -to /usr/bin/xhost > ./binstring/cd xhost.txt
+strings -to /usr/bin/xhost > ./binstring/xhost.txt
+
+timestamp
