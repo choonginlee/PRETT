@@ -2,3 +2,5 @@
 .DS_Store
 tokenfile/
 args/
+diagram/
+ptmsg_log
