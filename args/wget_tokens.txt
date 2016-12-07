@@ -1,0 +1,9 @@
+/lib64/ld-linux-x86-64.so.2
+/etc/wgetrc
+/usr/share/locale
+/dev/null
+/dev/null.
+/dev/null.
+/dev/null.
+/dev/tty
+/usr/lib

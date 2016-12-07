@@ -1,5 +1,4 @@
    1070 /lib64/ld-linux-x86-64.so.2
-   1216 vp_]
    1570 ;JY%Li^
    1671 ~?EnK
   15071 libfwupd.so.1
@@ -684,7 +683,7 @@
  137100 Update the stored metadata with current ROM contents
  137230 fu_util_add
  140517 ;*3$"
- 162770 7fad2091ae3401f29376705f5d8f25b9d717df.debug
+ 162770 7e64b5fd31bbafed7ba5e13b16f3d0f610d6ab.debug
  163055 .shstrtab
  163067 .interp
  163077 .note.ABI-tag
