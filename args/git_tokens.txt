@@ -1,0 +1,15 @@
+/lib64/ld-linux-x86-64.so.2
+/dev/null
+/dev/null
+/bin/sh
+/etc/gitattributes
+/etc/gitconfig
+/dev/null
+/dev/null
+/usr/lib/git-core
+/usr/share/locale
+/etc/mailname
+/dev/null
+/dev/null
+/dev/tty
+/bad-path/

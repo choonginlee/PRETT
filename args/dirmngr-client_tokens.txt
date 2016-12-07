@@ -1,0 +1,10 @@
+/lib64/ld-linux-x86-64.so.2
+/usr/share/locale
+/usr/bin
+/etc/gnupg2
+/usr/lib/gnupg2
+/usr/share/gnupg2
+/var/cache/gnupg2
+/var/run/gnupg2/S.dirmngr
+/usr/lib/x86_64-linux-gnu/gnupg2
+/dev/null

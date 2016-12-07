@@ -1,901 +1,758 @@
    1070 /lib64/ld-linux-x86-64.so.2
-   2350 =d1}*jVt
-   2564 DK\k
-   2616 icw[|
-   2637 $FC/
-   3124 5tf_
-   3164 N=?/
-  16301 libresolv.so.2
-  16320 _ITM_deregisterTMCloneTable
-  16354 __gmon_start__
-  16373 _Jv_RegisterClasses
-  16417 _ITM_registerTMCloneTable
-  16451 __res_query
-  16465 __res_nmkquery
-  16504 __dn_expand
-  16520 libm.so.6
-  16536 sqrt
-  16543 libncurses.so.5
-  16563 use_default_colors
-  16606 noecho
-  16615 wattr_on
-  16626 mvprintw
-  16637 wgetch
-  16646 endwin
-  16655 wattr_off
-  16667 wrefresh
-  16700 werase
-  16707 wmove
-  16715 init_pair
-  16727 initscr
-  16737 start_color
-  16753 libtinfo.so.5
-  16775 stdscr
-  17004 libc.so.6
-  17016 setuid
-  17025 socket
-  17034 __stpcpy_chk
-  17051 __res_init
-  17064 fflush
-  17073 hcreate
-  17103 strcpy
-  17112 __printf_chk
-  17127 exit
-  17134 srand
-  17142 fopen
-  17150 gai_strerror
-  17165 inet_aton
-  17177 optind
-  17206 __strdup
-  17217 __res_ninit
-  17233 perror
-  17242 connect
-  17252 __fdelt_chk
-  17266 inet_ntoa
-  17300 inet_ntop
-  17312 strncpy
-  17322 __stack_chk_fail
-  17343 putchar
-  17353 select
-  17362 abort
-  17370 stdin
-  17376 hdestroy
-  17407 getpid
-  17416 inet_pton
-  17430 __assert_fail
-  17446 strtod
-  17455 strtok
-  17464 strtol
-  17473 fgets
-  17501 calloc
-  17510 strlen
-  17517 getaddrinfo
-  17533 memset
-  17542 __errno_location
-  17563 bind
-  17570 memcmp
-  17577 clearerr
-  17610 __fprintf_chk
-  17626 ctime
-  17634 stdout
-  17643 gethostbyaddr
-  17661 fputc
-  17667 fputs
-  17675 fclose
-  17704 setsockopt
-  17717 malloc
-  17726 strcasecmp
-  17741 getgid
-  17750 __ctype_b_loc
-  17766 getenv
-  17775 recvfrom
-  20006 optarg
-  20015 stderr
-  20024 ioctl
-  20032 gethostbyname
-  20050 __snprintf_chk
-  20067 __memset_chk
-  20104 getuid
-  20113 getegid
-  20123 getopt_long
-  20137 __fxstat
-  20150 fileno
-  20157 gethostname
-  20173 fwrite
-  20202 gettimeofday
-  20217 geteuid
-  20227 __memcpy_chk
-  20244 strchr
-  20253 getsockname
-  20267 hsearch
-  20277 sendto
-  20306 __strcpy_chk
-  20323 __ctype_tolower_loc
-  20347 __cxa_finalize
-  20366 fcntl
-  20374 __sprintf_chk
-  20412 memmove
-  20422 setgid
-  20431 __strcat_chk
-  20446 strcmp
-  20455 __libc_start_main
-  20477 ferror
-  20506 snprintf
-  20517 free
-  20524 _edata
-  20533 __bss_start
-  20547 _end
-  20554 lastlog
-  20564 idbash
-  20573 recvsock4
-  20605 recvsock6
-  20617 expireresolves
-  20642 sourcesockaddr_struct
-  20670 mtrtype
-  20700 dnsinterval
-  20714 tempstring
-  20727 sourceaddress
-  20745 display_mode
-  20762 res_reversesuccess
-  21005 sourcesockaddr
-  21024 sendsock6_udp
-  21042 ipbash
-  21051 sendsock4_icmp
-  21070 fromlen
-  21100 timestamp
-  21112 debug
-  21120 cpacketsize
-  21134 res_nserror
-  21150 rrtypes
-  21164 ForceMaxPing
-  21201 LocalHostname
-  21217 lastresolve
-  21233 alignedip
-  21245 resolvecount
-  21262 res_nxdomain
-  21277 ssa6
-  21304 resourcetypes
-  21322 ssa4
-  21327 Lines
-  21335 hostbash
-  21346 bitpattern
-  21361 streamlog
-  21373 res_resend
-  21406 unspec_addr
-  21422 myres
-  21430 WaitTime
-  21441 res_iplookupsuccess
-  21465 res_unknownid
-  21503 localaddr
-  21515 idseed
-  21524 sweeptime
-  21536 sendstring
-  21551 items_a
-  21561 iiwidth_len
-  21575 aseed
-  21603 opcodes
-  21613 data_fields
-  21627 responsecodes
-  21645 recvsock
-  21656 _IO_stdin_used
-  21675 res_hostipmismatch
-  21720 DisplayMode
-  21734 nullstring
-  21747 mark
-  21754 rsa6
-  21761 rsa4
-  21766 fld_index
-  22000 txtrec
-  22007 localhost6
-  22022 sendsock6_icmp
-  22041 resfd6
-  22050 fmtinfo
-  22060 ipinfo_no
-  22072 remoteaddress
-  22110 PrintVersion
-  22125 remoteport
-  22140 InterfaceAddress
-  22161 show_ips
-  22172 from6
-  22200 from4
-  22206 resfd
-  22214 stackstring
-  22230 resrecvbuf
-  22243 fld_active
-  22256 LineCount
-  22270 reportwide
-  22303 namestring
-  22316 res_timeout
-  22332 use_dns
-  22342 iihash
-  22351 iiwidth
-  22361 sendsock4_udp
-  22377 sendsock6
-  22411 sendsock4
-  22423 items
-  22431 enablempls
-  22444 localhost
-  22456 fstTTL
-  22465 available_options
-  22507 Interactive
-  22523 from_sastruct
-  22541 sendsock
-  22552 ipinfo_max
-  22565 maxTTL
-  22574 remotesockaddr
-  22613 display_offset
-  22632 remotesockaddr_struct
-  22663 PrintHelp
-  22675 classtypes
-  22710 GLIBC_2.2.5
-  22724 NCURSES_TINFO_5.0.19991023
-  22757 NCURSES_5.0.19991023
-  23004 GLIBC_2.3
-  23016 GLIBC_2.15
-  23031 GLIBC_2.4
-  23043 GLIBC_2.3.4
-  42700 AWAVAUATUSH
-  42745 |$,H
-  43130 |$,H
-  43400 9D$,~1f.
-  43461 ;D$,|
-  43603 \$`L
-  43610 d$8H
-  43620 l$@L
-  44245 []A\A]A^A_
-  44262 UNKNOWNH
-  44322 T$8I
-  44375 L$TL
-  44712 =p`P
-  44776 =<`P
-  45052 D$ L
-  45346 D$ H
-  46055 D$ H
-  46274 D$ H
-  47420 AVAUATUSH
-  47456 D$(1
-  47622 L$(dH3
-  47651 0[]A\A]A^
-  54010 ju;H
-  54047 DR AGJMXf
-  55271 LS NABWV
-  55340 AWAVAUATUSH
-  55362 |$,dH
-  55432 5ANP
-  55455 D$0L
-  56027 T$,L
-  56062 T$(f
-  56307 T$(Hc
-  56427 l$ I
-  57303 D9t$(
-  57377 []A\A]A^A_
-  60040 ATUH
-  60430 []A\
-  61520 AWAVA
-  61527 AUATA
-  62107 5DEP
-  62246 []A\A]A^A_
-  62360 AWAVAUATUSH
-  63453 D$0L
-  63505 d$ 1
-  64160 []A\A]A^A_
-  65420 ATUI
-  65516 []A\
-  65600 ATUI
-  65736 []A\
-  65760 ATUI
-  66200 H;-)
-  66253 []A\
-  66442 =9=P
-  66640 AWAVAUATA
-  71306 []A\A]A^A_
-  71337 []A\A]A^A_
-  71660 ATUSH
-  72203 []A\
-  72544 AWAVAUATA
-  72765 D$	A
-  73142 dH3<%(
-  73161 [A\A]A^A_]
-  76472 =M2P
-  77032 =a1P
-  77045 =V0P
-  77076 =11P
-  77124 =+0P
-  77400 USHc
-  77760 USHc
- 100160 ATUH
- 100251 []A\
- 100271 []A\
- 100357 []A\
- 100521 =.-P
- 100677 5|-P
- 101340 AWAVAUATUSH
- 101410 =k,P
- 101442 5i&P
- 101543 []A\A]A^A_
- 101567 []A\A]A^A_
- 101700 AUATA
- 102722 \- L
- 102775 []A\A]
- 103051 5J)P
- 103560 AWAVA
- 103567 AUATUSH
- 104042 =e'P
- 104147 = 'P
- 104706 []A\A]A^A_
- 105155 D$ E
- 105201 D$"H
- 105233 L$$fD
- 105241 T$&H
- 105252 t$(D
- 105257 l$)fD
- 105265 \$*A
- 105712 |$,E
- 106143 =$#P
- 106440 AWAVAUATUSH
- 106625 HcT$
- 107124 []A\A]A^A_
- 107177 []A\A]A^A_
- 107400 AWAVAUATI
- 107413 USHc
- 107434 l$ dH
- 107452 D$81
- 107533 D$8dH3
- 107560 H[]A\A]A^A_
- 110372 Li$$X
- 113352 AWAVAUATUS
- 113416 J@E1
- 113636 []A\A]A^A_
- 113660 AWAV1
- 113666 AUATUSH
- 114226 []A\A]A^A_
- 114735 t$xL
- 115010 t$xH
- 115015 T$pH
- 115600 AWAVI
- 115607 AUATL
- 115665 ~!Hc
- 115745 []A\A]A^A_
- 115760 AWAVI
- 115767 AUAT1
- 115775 USE1
- 116051 D$x1
- 116063 Li,$@B
- 116361 t$hH
- 116447 t$hH
- 116454 T$`H
- 116512 D$xdH3
- 116537 []A\A]A^A_
- 117300 t#H=
- 117310 w=H)
- 117473 ?ATUH
- 117617 o^M<+
- 120026 []A\A]
- 120066 []A\A]
- 120161 []A\A]
- 123010 f;J`v#H
- 123050 f;J`s
- 123072 f;H`w H
- 123400 AWAVAUATUSH
- 123745 []A\A]A^A_
- 124320 AVAUL
- 124326 -eGQ
- 124333 ATUH
- 124340 oPSI
- 124557 \$ I
- 124564 D$(H
- 124615 []A\A]A^
- 124646 \$(I
- 124653 D$ H
- 124704 []A\A]A^
- 124751 A\A]A^
- 125151 .@@r2H
- 125172 .@@r!H
- 126440 f;H`r#H
- 126500 f;H`w
- 126524 f;z`u
- 126560 AVAUATUS
- 126745 l$0M
- 126757 l$8M
- 127002 D$0H
- 127032 l$8M
- 127044 t$HH
- 127073 ]A\A]A^
- 127113 ]A\A]A^
- 127140 AUATL
- 127414 []A\A]
- 127436 []A\A]
- 127720 AVAUA
- 127727 ATUE1
- 127745 =v@S
- 130125 =fFS
- 130237 []A\A]A^
- 130512 O@tzH
- 131004 f@UH
- 131120 ip6.arpaA
- 131141 $[]A\
- 131500 GQPD
- 132117 []A\
- 132140 ATUI
- 132234 []A\
- 132404 []A\
- 132544 kHY^H
- 132553 []A\
- 133120 AUATUSH
- 133173 ZC@f
- 133451 Z@@f
- 133504 []A\A]
- 133734 ZE@f
- 134020 ZC@f
- 134154 AUPH
- 134337 []A\A]
- 134402 AWAVAUATUSH
- 134705 8[]A\A]A^A_
- 134742 8[]A\A]A^A_
- 135211 |$PH
- 135216 5M<S
- 136027 []A\A]A^A_
- 136370 D$$tTf
- 136515 A[A_f
- 136640 D$PL
- 136715 tTfA
- 137041 ^_fA
- 137177 =\8S
- 137476 f9D$$A
- 137550 fD9d$
- 137752 T$'D
- 140055 T$'D
- 140327 5d/R
- 140676 5]=S
- 141115 AXAY
- 141131 D$PH
- 141145 =v4S
- 141170 D$QPE
- 141177 L$R1
- 141537 D$$f
- 142214 t$(H
- 142252 \$HH
- 142371 t$ H
- 142404 ]A\A]A^A_
- 142610 =71S
- 142630 5c5S
- 142677 5l=S
- 143323 []A\H
- 143527 5T/S
- 144012 %Q(S
- 144363 []A\H
- 144500 AUATUS
- 144614 []A\A]
- 145020 AWAVAUATUSH
- 145104 }.f.
- 145151 -Q9T
- 145207 %49S
- 145223 l$0H
- 145542 T$(ARWL
- 146112 []A\A]A^A_
- 147606 ATUSH
- 147754 []A\
- 150017 =Pp 
- 150031 5v{ 
- 150146 Y[]A\
- 150404 ~OATUI
- 150521 []A\
- 150540 AWAVAUATUSH
- 150710 \$@L
- 151166 t$8L
- 151467 L$PH
- 151544 l$ H
- 151554 D$(L
- 151613 d$8L
- 151670 |$0AUE
- 151746 _AXE
- 152057 D+d$
- 152331 W(Ic
- 152653 |$ L
- 153007 L$49L$0
- 153062 []A\A]A^A_
- 153077 |$8L
- 153156 D$8A
- 153367 D$PI
- 153533 50t 
- 153660 AWAVH
- 153673 AUATUSH
- 153723 D$x1
- 154162 l$ L
- 154266 =eg 
- 154516         
- 154531 <%s>
- 154604 </%s
- 155034 D$xdH3
- 155061 []A\A]A^A_
- 155240 AWAVAUATL
- 155303 D$x1
- 155367 -$e 
- 155402 D$ H
- 156137 D$xdH3
- 156164 []A\A]A^A_
- 156320 AWAV1
- 156326 AUATE1
- 157034 ;l$<H
- 157057 =#b 
- 157074 D$,L
- 157101 l$PH
- 157106 l$`I
- 157146 |$<1
- 157270 T$@H
- 157304 L$PH
- 157353 H+D$H
- 157431 t$`D
- 157465 H9L$`
- 157572 L$`H
- 157603 |$<1
- 157733 =w` 
- 160011 |$HH9
- 160032 D$PH
- 160037 T$XE
- 160047 D$@H
- 160054 T$Hu6
- 160062 |$ ;=1` 
- 160137 D$pH
- 160144 T$xH
- 160151 D$XH
- 160157 H+T$pi
- 160172 +T$x
- 160216 T$@A
- 160232 H+D$H
- 160324 T$`H
- 160443 H9t$hH
- 160531 D$XH
- 160675 ;l$<|
- 161014 ;l$<
- 161515 []A\A]A^A_
- 162234 VUUU
- 162346 Hc|$$
- 162460 AUATUSH
- 163171 dH34%(
- 163217 []A\A]
- 163673 <|u 1
- 163777 AVAUATUSH
- 164024 -wb 
- 164066 5Ub 
- 164310 []A\A]A^
- 164405 ]A\A]A^
- 164540 AUATL
- 164546 n USH
- 164720 []A\A]
- 164740 ATUSH
- 165010 =ra 
- 165361 []A\
- 165762 5i^ 
- 166520 AWAVA
- 166527 AUATL
- 166652 []A\A]A^A_
- 166744 Change Packet Size: %d
- 166777 Ping Bit Pattern: %d
- 167025 Type of Service(tos): %d
- 167057 Interval : %0.0f
- 167102 First TTL: %d
- 167122 Max TTL: %d
- 167140 Fields: %s
- 167155   %s
- 167163 Command:
- 167175   ?|h     help
- 167215   n       toggle DNS on/off
- 167252   r       reset all counters
- 167310   y       switching IP info
- 167345  press any key to go back...
- 167402 %2d. 
- 167410 %s (%s)
- 167421     
- 167437 My traceroute  [v0.86]
- 167466 Keys:  
- 167500 elp   
- 167511 isplay mode   
- 167532 estart statistics   
- 167557 rder of fields   
- 167610 %%%ds
- 167616  Host
- 167624  Last %3d pings
- 167644 Scale:
- 167653 :%d ms
- 167670 Size Range: %d-%d, < 0:random.
- 167730 Pattern Range: 0(0x00)-255(0xff), <0 random.
- 170010 default 0x00, min cost 0x02, rel 0x04,, thr 0x08, low del 0x10...
- 170120   p       pause (SPACE to resume)
- 170170   d       switching display mode
- 170240   e       toggle MPLS information on/off
- 170320   o str   set the columns to display, default str='LRS N BAWV'
- 170420   j       toggle latency(LS NABWV)/jitter(DR AGJMXI) stats
- 170520   c <n>   report cycle n, default n=infinite
- 170600   i <n>   set the ping interval to n seconds, default n=1
- 170700   f <n>   set the initial time-to-live(ttl), default n=1
- 171000   m <n>   set the max time-to-live, default n= # of hops
- 171100   s <n>   set the packet size to n or random(n<0)
- 171170   b <c>   set ping bit pattern to c(0..255) or random(c<0)
- 171270   Q <t>   set ping packet's TOS to t
- 171340   u       switch between ICMP ECHO and UDP datagrams
- 171430   z       toggle ASN info on/off
- 171501     [MPLS: Lbl %lu Exp %u S %u TTL %u]
- 171550    Packets               Pings
- 171727 ?%s: memory allocation failure
- 171770 hv46F:rwxtglCpnbo:y:zi:c:s:B:Q:ea:f:m:uTP:Z:M:
- 172050 mtr: wait time must be positive
- 172120 non-root users cannot request an interval < 1.0 seconds
- 172220 -u and -T are mutually exclusive.
- 172270 Warning: extra arguments ignored: %s
- 172340 mtr: unable to get raw sockets.
- 172410 mtr: Unable to drop permissions.
- 172460 mtr: Couldn't determine raw socket type.
- 172540 usage: %s [--help] [--version] [-4|-6] [-F FILENAME]
- 172625 		[--report] [--report-wide]
- 172662 		[--xml] [--gtk] [--curses] [--raw] [--csv] [--split]
- 172751 		[--no-dns] [--show-ips] [-o FIELDS] [-y IPINFO] [--aslookup]
- 173050 		[-i INTERVAL] [-c COUNT] [-s PACKETSIZE] [-B BITPATTERN]
- 173143 		[-Q TOS] [--mpls]
- 173167 		[-a ADDRESS] [-f FIRST-TTL] [-m MAX-TTL]
- 173242 		[--udp] [--tcp] [-P PORT] [-Z TIMEOUT]
- 173313 		[-M MARK] HOSTNAME
- 173350 mtr: Unable to start net module.
- 173420 mtr: Couldn't set interface address.
- 173466 %s: fopen: %s
- 173505 %s: ferror: %s
- 173525 Too many fields: %s
- 173552 Unknown field identifier: %c
- 173610 Illegal port number.
- 173636 SO_MARK must be positive.
- 173700 MTR_OPTIONS
- 173714 mtr 0.86
- 173725 See the man page for details.
- 173763 localhost
- 173775 Failed to resolve host
- 174024 Failed to resolve host: %s
- 174060 mtr unknown address type
- 174112 ../mtr.c
- 174123 %s: fcntl: %s (ignored)
- 174154 help
- 174161 version
- 174171 inet
- 174176 inet6
- 174204 filename
- 174215 report
- 174224 report-wide
- 174244 curses
- 174267 split
- 174275 no-dns
- 174304 show-ips
- 174315 order
- 174323 ipinfo
- 174332 aslookup
- 174343 interval
- 174354 report-cycles
- 174372 psize
- 174400 bitpattern
- 174417 mpls
- 174424 first-ttl
- 174436 max-ttl
- 174456 timeout
- 174466 mark
- 174473 <sp>: Space between fields
- 174526 L: Loss Ratio
- 174544 Loss%
- 174552  %4.1f%%
- 174563 D: Dropped Packets
- 174606 Drop
- 174613  %4d
- 174620 R: Received Packets
- 174650  %5d
- 174655 S: Sent Packets
- 174701 N: Newest RTT(ms)
- 174723 Last
- 174730  %5.1f
- 174737 B: Min/Best RTT(ms)
- 174763 Best
- 174770 A: Average RTT(ms)
- 175017 W: Max/Worst RTT(ms)
- 175044 Wrst
- 175051 V: Standard Deviation
- 175077 StDev
- 175105 G: Geometric Mean
- 175127 Gmean
- 175135 J: Current Jitter
- 175157 Jttr
- 175164  %4.1f
- 175173 M: Jitter Mean/Avg.
- 175217 Javg
- 175224 X: Worst Jitter
- 175244 Jmax
- 175251 I: Interarrival Jitter
- 175300 Jint
- 175744 unlock
- 175753 lock
- 175760 Couldn't get fd's flags
- 176010 Couldn't set fd's flags
- 176040 setsockopt(IP_HDRINCL,1)
- 176071 Could not open IPv6 socket
- 176125 net_open bad address type
- 176160 socket()
- 176171 bind()
- 176200 getsockname()
- 176216 ioctl FIONBIO
- 176234 setsockopt IP_TTL
- 176256 setsockopt IP_TOS
- 176300 setsockopt SO_MARK
- 176323 unknown AF?
- 176337 setsockopt IPV6_UNICAST_HOPS
- 176374 setsockopt IPV6_CHECKSUM
- 176425 net_reopen bad address type
- 176470 mtr: bad interface address: %s
- 176530 mtr: failed to bind to interface
- 176600 sockaddrtop unknown address type
- 176736 .Amalloc() of %u bytes failed: %s
- 177010 ERROR: Attempt to free pointer twice.
- 177060 ERROR: Corrupted free() buffer. (header)
- 177140 Unable to allocate IPv4 socket for nameserver communication: %s
- 177250 Unable to allocate IPv6 socket for nameserver communication: %s
- 177360 Unable to setsockopt() on IPv4 nameserver communication socket: %s
- 177470 Unable to setsockopt() on IPv6 nameserver communication socket: %s
- 177600 Resolver error: Query too large.
- 177650 Resolver: Lookup successful: %s
- 177720 Resolver: Sent domain lookup request for "%s".
- 200000 Resolver: Sent reverse authentication request for "%s".
- 200070 Resolver: Used cached record: %s == "%s".
- 200150 Resolver: Used failed record: %s == ???
- 200230 Resolver: Added to new record.
- 200270 Resolver: Cache record for "%s" (%s) has expired. (state: %u)  Marked for expire at: %g, time: %g.
- 200440 Resolver: Send #2 for "PTR" query...
- 200510 Resolver: Send #3 for "PTR" query...
- 200560 Resolver: "PTR" query timed out.
- 200630 Resolver error: Packet smaller than standard header size.
- 200730 Resolver error: Packet has empty body.
- 201000 Resolver error: Nameserver packet truncated.
- 201060 Resolver error: Query packet received on nameserver communication socket.
- 201200 Resolver error: Invalid opcode in response packet.
- 201270 Resolver: Received nameserver reply. (qd:%u an:%u ns:%u ar:%u)
- 201370 Resolver error: Reply does not contain one query.
- 201460 Resolver error: Reply too short.
- 201530 Resolver error: dn_expand() failed while expanding query domain.
- 201640 Resolver: Unknown query packet dropped. ("%s" does not match "%s")
- 201750 Resolver: Queried domain name: "%s"
- 202020 Resolver error: Query resource record truncated.
- 202110 Resolver error: Received unsupported query class: %u (%s)
- 202210 Resolver warning: Ignoring response with unexpected query type "PTR".
- 202320 Resolver error: Received unimplemented query type: %u (%s)
- 202420 Resolver error: Packet does not contain all specified resouce records.
- 202530 Resolver error: dn_expand() failed while expanding answer domain.
- 202640 Resolver: answered domain query: "%s"
- 202710 Resolver error: Resource record truncated.
- 202770 Resolver error: Answered class does not match queried class.
- 203070 Resolver error: Zero size rdata.
- 203140 Resolver error: Specified rdata length exceeds packet size.
- 203240 Resolver error: Unsupported rdata format for "A" type. (%u bytes)
- 203350 Resolver: Reverse authentication failed: %s != 
- 203430 Resolver: Reverse authentication complete: %s == "%s".
- 203520 Resolver error: dn_expand() failed while expanding domain in rdata.
- 203630 Resolver: Answered domain: "%s"
- 203670 Resolver error: Domain name too long.
- 203740 Resolver error: Received unimplemented data type: %u (%s)
- 204040 Resolver: Ignoring resource type %u. (%s)
- 204120 Resolver error: No error returned but no answers given.
- 204210 Resolver: Received error response %u. (%s)
- 204270 Resolver error: Received reply from unknown source: %s
- 204360 MD: mail destination (OBSOLETE)
- 204420 MB: mailbox domain name (EXPERIMENTAL)
- 204470 MG: mail group member (EXPERIMENTAL)
- 204540 MR: mail rename domain name (EXPERIMENTAL)
- 204620 WKS: well known service description
- 204670 MINFO: mailbox or mail list information
- 204740 queried domain name does not exist
- 205010 requested query type not implemented
- 205055 %lid
- 205062 %luh
- 205067 %lum
- 205074 %lus
- 205101 No nameservers defined.
- 205132 127.0.0.1
- 205150 statmalloc() failed: %s
- 205201 Resolver: Lookup failed.
- 205233 %x.%x.
- 205242 %u.%u.%u.%u.in-addr.arpa
- 205273 query class: %u (%s)
- 205320 rr class: %u (%s)
- 205342 Resolver: TTL: %s
- 205364 statmalloc() error: %s
- 205414 Resolver: Host not found.
- 205446 Resolver: Socket error: %s
- 205501 Unknown
- 205511 Query
- 205517 Answer
- 205526 Authority reference
- 205552 Resource reference
- 205575 unknown class
- 205613 IN: the Internet
- 205634 CS: CSNET (OBSOLETE)
- 205661 CH: CHAOS
- 205673 HS: Hesoid [Dyer 87]
- 205720 unknown type
- 205735 A: host address
- 205755 NS: authoritative name server
- 206013 MF: mail forwarder (OBSOLETE)
- 206051 CNAME: name alias
- 206073 SOA: authority record
- 206121 NULL: NULL RR (EXPERIMENTAL)
- 206156 PTR: domain name pointer
- 206207 HINFO: host information
- 206237 MX: mail exchange
- 206261 TXT: text string
- 206302 no error
- 206313 format error in query
- 206341 server failure
- 206360 refused by name server
- 206407 unknown error
- 206425 standard query
- 206444 inverse query
- 206462 server status request
- 206510 unknown
- 206577 @d %d %s
- 206611 p %d %d
- 206622 h %d %s
- 206640 %s %s
- 206646 %s %d %d %d %d %d %d
- 206774 No GTK support. Sorry.
- 207024 Start: %s
- 207037 HOST: %%-%ds
- 207054  %%2d. %%s%%-%ds
- 207075  %%2d.|-- %%-%ds
- 207116      %s%s
- 207131 Loss
- 207136 <?xml version="1.0"?>
- 207164 <MTR SRC="%s" DST="%s"
- 207213  TOS="0x%X"
- 207227  PSIZE="%d"
- 207243  PSIZE="rand(%d-%d)"
- 207270  BITPATTERN="0x%02X"
- 207315  BITPATTERN="rand(0x00-FF)"
- 207351  TESTS="%d">
- 207367 </MTR>
- 207376     </HUB>
- 207414 MTR.%s;%lld;%s;%s;%d;%s;%s;%d
- 207452 MTR.%s;%lld;%s;%s;%d;%s;%d
- 207505 , %.2f
- 207514 , %d
- 207530        [MPLS: Lbl %lu Exp %u S %u TTL %u]
- 207610     <HUB COUNT="%d" HOST="%s">
- 207650 Select failed
- 207754 @res_init failed
- 207776 @dn_expand failed
- 210020 @Broken DNS reply.
- 210043 @second dn_expand failed
- 210074 @Not a TXT record
- 210116 %s.origin6.asn.cymru.com
- 210147 %d.%d.%d.%d
- 210163 %s.origin.asn.cymru.com
- 210216 ipinfo hash
- 210240 @Broken TXT record (txtlen = %d, size = %d)
- 213137 ;*3$"
- 240040 LS NABWV
- 245230 1d5cd5ec4fb2a03ea96ff45e45886f1950111f.debug
- 245315 .shstrtab
- 245327 .interp
- 245337 .note.ABI-tag
- 245355 .note.gnu.build-id
- 245400 .gnu.hash
- 245412 .dynsym
- 245422 .dynstr
- 245432 .gnu.version
- 245447 .gnu.version_r
- 245466 .rela.dyn
- 245500 .init
- 245506 .plt
- 245513 .plt.got
- 245524 .text
- 245532 .fini
- 245540 .rodata
- 245550 .eh_frame_hdr
- 245566 .eh_frame
- 245600 .init_array
- 245614 .fini_array
- 245630 .jcr
- 245635 .dynamic
- 245646 .data
- 245654 .bss
- 245661 .gnu_debuglink
+   7111 libresolv.so.2
+   7130 _ITM_deregisterTMCloneTable
+   7164 __gmon_start__
+   7203 _Jv_RegisterClasses
+   7227 _ITM_registerTMCloneTable
+   7261 __res_query
+   7275 __res_nmkquery
+   7314 __dn_expand
+   7330 libm.so.6
+   7346 sqrt
+   7353 libncurses.so.5
+   7373 use_default_colors
+   7416 noecho
+   7425 wattr_on
+   7436 mvprintw
+   7447 wgetch
+   7456 endwin
+   7465 wattr_off
+   7477 wrefresh
+   7510 werase
+   7517 wmove
+   7525 init_pair
+   7537 initscr
+   7547 start_color
+   7563 libtinfo.so.5
+   7605 stdscr
+   7614 libc.so.6
+   7626 setuid
+   7635 socket
+   7644 __stpcpy_chk
+   7661 __res_init
+   7674 fflush
+   7703 hcreate
+   7713 strcpy
+   7722 __printf_chk
+   7737 exit
+   7744 srand
+   7752 fopen
+   7760 gai_strerror
+   7775 inet_aton
+  10007 optind
+  10016 __strdup
+  10027 __res_ninit
+  10043 perror
+  10052 connect
+  10062 __fdelt_chk
+  10076 inet_ntoa
+  10110 inet_ntop
+  10122 strncpy
+  10132 __stack_chk_fail
+  10153 putchar
+  10163 select
+  10172 abort
+  10200 stdin
+  10206 hdestroy
+  10217 getpid
+  10226 inet_pton
+  10240 __assert_fail
+  10256 strtod
+  10265 strtok
+  10274 strtol
+  10303 fgets
+  10311 calloc
+  10320 strlen
+  10327 getaddrinfo
+  10343 memset
+  10352 __errno_location
+  10373 bind
+  10400 memcmp
+  10407 clearerr
+  10420 __fprintf_chk
+  10436 ctime
+  10444 stdout
+  10453 gethostbyaddr
+  10471 fputc
+  10477 fputs
+  10505 fclose
+  10514 setsockopt
+  10527 malloc
+  10536 strcasecmp
+  10551 getgid
+  10560 __ctype_b_loc
+  10576 getenv
+  10605 recvfrom
+  10616 optarg
+  10625 stderr
+  10634 ioctl
+  10642 gethostbyname
+  10660 __snprintf_chk
+  10677 __memset_chk
+  10714 getuid
+  10723 getegid
+  10733 getopt_long
+  10747 index
+  10755 __fxstat
+  10766 fileno
+  10775 gethostname
+  11011 fwrite
+  11020 gettimeofday
+  11035 geteuid
+  11045 __memcpy_chk
+  11062 strchr
+  11071 getsockname
+  11105 hsearch
+  11115 sendto
+  11124 __strcpy_chk
+  11141 __ctype_tolower_loc
+  11165 fcntl
+  11173 __sprintf_chk
+  11211 memmove
+  11221 setgid
+  11230 __strcat_chk
+  11245 strcmp
+  11254 __libc_start_main
+  11276 ferror
+  11305 snprintf
+  11316 free
+  11323 GLIBC_2.2.5
+  11337 NCURSES_TINFO_5.0.19991023
+  11372 NCURSES_5.0.19991023
+  11417 GLIBC_2.3
+  11431 GLIBC_2.15
+  11444 GLIBC_2.4
+  11456 GLIBC_2.3.4
+  23520 AWAVAUATUSH
+  24370 \$@L
+  24375 d$pH
+  24632 =@dP
+  25015 []A\A]A^A_
+  25042 UNKNOWNH
+  25160 L$4L
+  25236 D$pH
+  25243 |$ H
+  25534 =~bP
+  27245 UH-0.a
+  27740 AVAUATUSH
+  27776 D$(1
+  30142 L$(dH3
+  30171 0[]A\A]A^
+  34307 DR AGJMXf
+  35455 LS NABWV
+  35520 AWAVAUATUSH
+  35611 -rQP
+  36240 D$ H
+  36437 D$ Ic
+  36502 t$ Mc
+  36644 EXA9
+  37473 []A\A]A^A_
+  40207 -tLP
+  41311 =qJP
+  41540 AWAVA
+  41547 AUATA
+  42254 []A\A]A^A_
+  42360 AUATUSH
+  43515 D$ L
+  44072 []A\A]
+  44156 |$ )
+  45300 ATUI
+  45376 []A\
+  45460 ATUI
+  45616 []A\
+  46460 AWAVAUATA
+  51066 []A\A]A^A_
+  51117 []A\A]A^A_
+  51440 ATUSH
+  51747 []A\
+  52304 AWAVAUATA
+  52525 D$	A
+  52702 dH3<%(
+  52721 [A\A]A^A_]
+  54716 =U9P
+  56511 =z5P
+  57500 ATUH
+  57567 []A\
+  57611 []A\
+  57677 []A\
+  60640 AWAVAUATUSH
+  60710 =K1P
+  61041 []A\A]A^A_
+  61067 []A\A]A^A_
+  61200 AUATA
+  62271 []A\A]
+  62341 52.P
+  63020 AWAVA
+  63027 AUATUSH
+  63276 =i,P
+  63401 =&,P
+  63514 D$ Mc
+  63542 5y P
+  64031 t$ 1
+  64146 []A\A]A^A_
+  64266 tD"H
+  64273 D$ f
+  64416 D$ EE
+  64443 D$"H
+  64457 |$,E1
+  64476 L$$fD
+  64504 T$&H
+  64515 l$(D
+  64522 d$)fD
+  64530 \$*A
+  64642 D$ Mc
+  65142 t$,E
+  65363 t$ L
+  65376 =)(P
+  65700 AWAVAUATUSH
+  66062 }xHcT$
+  66366 []A\A]A^A_
+  66450 []A\A]A^A_
+  66620 AWAVAUATI
+  66633 USHc
+  66654 |$ dH
+  66672 D$81
+  66742 D$8dH3
+  66767 H[]A\A]A^A_
+  67242 t$ D
+  70412 t$ L
+  70747 t$ H
+  71422 t$ D
+  72552 AWAVAUATUS
+  72616 J@E1
+  73036 []A\A]A^A_
+  73060 AVAU1
+  73066 ATUSH
+  73426 []A\A]A^
+  74165 t$xL
+  74240 t$xH
+  74245 T$pH
+  74506 T$ H
+  74576 T$ H
+  74737 T$ H
+  74775 T$ H
+  75100 AWAVI
+  75107 AUATA
+  75155 ~!Hc
+  75235 []A\A]A^A_
+  75260 AWAVI
+  75267 AUAT1
+  75275 USE1
+  75347 D$x1
+  75361 Li,$@B
+  75377 3HiC
+  75651 t$hH
+  75737 t$hH
+  75744 T$`H
+  76002 D$xdH3
+  76027 []A\A]A^A_
+  76600 t#H=
+  76610 w;H)
+  76773 ?ATUH
+  77117 o^M<+
+  77326 []A\A]
+  77366 []A\A]
+  77457 []A\A]
+ 102240 f;J`v#H
+ 102300 f;J`s
+ 102322 f;H`w(H
+ 102660 AVAUATUH
+ 103173 m8[J
+ 103206 ]A\A]A^
+ 103560 AUATI
+ 103572 oPSH
+ 104017 \$ I
+ 104024 D$(H
+ 104064 []A\A]
+ 104106 \$(I
+ 104113 D$ H
+ 104371 .@@r2H
+ 104412 .@@r!H
+ 105660 f;H`r#H
+ 105720 f;H`w
+ 105744 f;z`u
+ 106000 AUATUSH
+ 106165 l$0M
+ 106177 l$8M
+ 106222 D$0H
+ 106252 l$8M
+ 106264 t$HH
+ 106322 []A\A]
+ 106346 []A\A]
+ 106400 ATUH
+ 106644 []A\
+ 107120 AVAUA
+ 107127 ATUE1
+ 107432 []A\A]A^
+ 107451 =6KS
+ 107712 O@trH
+ 110164 f@UH
+ 110276 ip6.arpaA
+ 110317 $[]A\
+ 110626 GQPD
+ 111237 []A\
+ 111260 ATUI
+ 111354 []A\
+ 111515 []A\
+ 111645 kHY^H
+ 111654 []A\
+ 112240 AUATUSH
+ 112313 ZC@f
+ 112557 Z@@f
+ 112612 []A\A]
+ 113034 ZE@f
+ 113116 ZC@f
+ 113427 []A\A]
+ 113502 AWAVAUATUSH
+ 114001 8[]A\A]A^A_
+ 114030 8[]A\A]A^A_
+ 115055 []A\A]A^A_
+ 115371 D$$tLf
+ 115506 A[A_f
+ 115627 D$PL
+ 115705 tLfA
+ 116021 ^_fA
+ 116431 f9D$$A
+ 116503 fD9d$
+ 116677 T$'D
+ 116775 T$'D
+ 117775 AXAY
+ 120044 D$QPE
+ 120053 L$R1
+ 120373 D$$f
+ 121044 \$HH
+ 121063 ARSI
+ 121156 t$ H
+ 121171 ]A\A]A^A_
+ 121370 =g7S
+ 121377 ATUA
+ 122100 []A\
+ 123100 []A\
+ 123306 []A\H
+ 123520 AWAVAUATUSH
+ 123604 },f.
+ 124206 t$ A
+ 124572 []A\A]A^A_
+ 126246 ATUSH
+ 126404 []A\
+ 126565 Y[]A\
+ 127024 ~MATUI
+ 127137 []A\
+ 127160 AWAVAUATUSH
+ 127330 |$0A
+ 127401 D$01
+ 127627 |$0A
+ 127715 D$0L
+ 130035 L$@H
+ 130124 D$ L
+ 130163 |$0A
+ 130234 |$(AUE
+ 130247 D$@L
+ 130312 _AXE
+ 131327 L$,9L$(
+ 131402 []A\A]A^A_
+ 131417 |$0A
+ 131467 D$0A
+ 131672 D$@I
+ 132160 AWAV
+ 132171 AUATUSH
+ 132216 D$h1
+ 132734         L
+ 132765 <%s>H
+ 133034 </%s
+ 133264 D$hdH3
+ 133305 x[]A\A]A^A_
+ 133460 AWAVAUATUSH
+ 133511 D$h1
+ 133760 AVAU
+ 134270 $9L$
+ 134305 D$hdH3
+ 134326 x[]A\A]A^A_
+ 134367 RAVA
+ 134460 AWAV1
+ 134466 AUATE1
+ 134512 |$0L
+ 134517 t$pL
+ 135144 p;l$,H
+ 135170 =Zq 
+ 135261 |$,L
+ 135266 D$P1
+ 135376 |$@1
+ 135412 T$0H
+ 135426 L$@H
+ 135475 H+D$8
+ 135553 t$PD
+ 135607 H9L$P
+ 135714 L$PH
+ 135725 |$,L
+ 135732 D$P1
+ 136131 |$8H9
+ 136152 D$@H
+ 136157 T$HE
+ 136167 D$0H
+ 136174 T$8u3D;%do 
+ 136254 D$`H
+ 136261 T$hH
+ 136266 D$HH
+ 136274 H+T$`i
+ 136307 +T$h
+ 136333 T$0A
+ 136347 H+D$8
+ 136444 T$PH
+ 136563 H9t$XH
+ 136632 L$@H
+ 136637 D$HA
+ 136650 T$0H
+ 137001 p;l$,|
+ 137113 pD;d$,
+ 137207 =Xm 
+ 137575 []A\A]A^A_
+ 137612 t$,L
+ 140312 VUUU
+ 140520 ATUH
+ 141227 dH34%(
+ 141255 []A\
+ 141673 <|u 1
+ 141777 AVAUATUSH
+ 142310 []A\A]A^
+ 142405 ]A\A]A^
+ 142540 AUATL
+ 142546 n USH
+ 142716 []A\A]
+ 142740 ATUSH
+ 143361 []A\
+ 143603 5xf 
+ 143741 5"f 
+ 144460 AWAVA
+ 144467 AUATL
+ 144612 []A\A]A^A_
+ 144704 Change Packet Size: %d
+ 144737 Ping Bit Pattern: %d
+ 144765 Type of Service(tos): %d
+ 145017 Interval : %0.0f
+ 145042 First TTL: %d
+ 145062 Max TTL: %d
+ 145100 Fields: %s
+ 145115   %s
+ 145123 Command:
+ 145135   ?|h     help
+ 145155   n       toggle DNS on/off
+ 145212   r       reset all counters
+ 145250   y       switching IP info
+ 145305  press any key to go back...
+ 145342 %2d. 
+ 145350 %s (%s)
+ 145361     
+ 145377 My traceroute  [v0.86]
+ 145426 Keys:  
+ 145440 elp   
+ 145451 isplay mode   
+ 145472 estart statistics   
+ 145517 rder of fields   
+ 145550 %%%ds
+ 145556  Host
+ 145564  Last %3d pings
+ 145604 Scale:
+ 145613 :%d ms
+ 145630 Size Range: %d-%d, < 0:random.
+ 145670 Pattern Range: 0(0x00)-255(0xff), <0 random.
+ 145750 default 0x00, min cost 0x02, rel 0x04,, thr 0x08, low del 0x10...
+ 146060   p       pause (SPACE to resume)
+ 146130   d       switching display mode
+ 146200   e       toggle MPLS information on/off
+ 146260   o str   set the columns to display, default str='LRS N BAWV'
+ 146360   j       toggle latency(LS NABWV)/jitter(DR AGJMXI) stats
+ 146460   c <n>   report cycle n, default n=infinite
+ 146540   i <n>   set the ping interval to n seconds, default n=1
+ 146640   f <n>   set the initial time-to-live(ttl), default n=1
+ 146740   m <n>   set the max time-to-live, default n= # of hops
+ 147040   s <n>   set the packet size to n or random(n<0)
+ 147130   b <c>   set ping bit pattern to c(0..255) or random(c<0)
+ 147230   Q <t>   set ping packet's TOS to t
+ 147300   u       switch between ICMP ECHO and UDP datagrams
+ 147370   z       toggle ASN info on/off
+ 147441     [MPLS: Lbl %lu Exp %u S %u TTL %u]
+ 147510    Packets               Pings
+ 147667 ?%s: memory allocation failure
+ 147730 hv46F:rwxtglCpnbo:y:zi:c:s:B:Q:ea:f:m:uTP:Z:M:
+ 150010 mtr: wait time must be positive
+ 150060 non-root users cannot request an interval < 1.0 seconds
+ 150160 -u and -T are mutually exclusive.
+ 150230 Warning: extra arguments ignored: %s
+ 150300 mtr: unable to get raw sockets.
+ 150350 mtr: Unable to drop permissions.
+ 150420 mtr: Couldn't determine raw socket type.
+ 150500 usage: %s [--help] [--version] [-4|-6] [-F FILENAME]
+ 150565 		[--report] [--report-wide]
+ 150622 		[--xml] [--gtk] [--curses] [--raw] [--csv] [--split]
+ 150711 		[--no-dns] [--show-ips] [-o FIELDS] [-y IPINFO] [--aslookup]
+ 151010 		[-i INTERVAL] [-c COUNT] [-s PACKETSIZE] [-B BITPATTERN]
+ 151103 		[-Q TOS] [--mpls]
+ 151127 		[-a ADDRESS] [-f FIRST-TTL] [-m MAX-TTL]
+ 151202 		[--udp] [--tcp] [-P PORT] [-Z TIMEOUT]
+ 151253 		[-M MARK] HOSTNAME
+ 151310 mtr: Unable to start net module.
+ 151360 mtr: Couldn't set interface address.
+ 151426 %s: fopen: %s
+ 151445 %s: ferror: %s
+ 151465 Too many fields: %s
+ 151512 Unknown field identifier: %c
+ 151550 Illegal port number.
+ 151576 SO_MARK must be positive.
+ 151640 MTR_OPTIONS
+ 151654 mtr 0.86
+ 151665 See the man page for details.
+ 151723 localhost
+ 151735 Failed to resolve host
+ 151764 Failed to resolve host: %s
+ 152020 mtr unknown address type
+ 152052 ../mtr.c
+ 152063 %s: fcntl: %s (ignored)
+ 152114 help
+ 152121 version
+ 152131 inet
+ 152136 inet6
+ 152144 filename
+ 152155 report
+ 152164 report-wide
+ 152204 curses
+ 152227 split
+ 152235 no-dns
+ 152244 show-ips
+ 152255 order
+ 152263 ipinfo
+ 152272 aslookup
+ 152303 interval
+ 152314 report-cycles
+ 152332 psize
+ 152340 bitpattern
+ 152357 mpls
+ 152364 first-ttl
+ 152376 max-ttl
+ 152416 timeout
+ 152426 mark
+ 152433 <sp>: Space between fields
+ 152466 L: Loss Ratio
+ 152504 Loss%
+ 152512  %4.1f%%
+ 152523 D: Dropped Packets
+ 152546 Drop
+ 152553  %4d
+ 152560 R: Received Packets
+ 152610  %5d
+ 152615 S: Sent Packets
+ 152641 N: Newest RTT(ms)
+ 152663 Last
+ 152670  %5.1f
+ 152677 B: Min/Best RTT(ms)
+ 152723 Best
+ 152730 A: Average RTT(ms)
+ 152757 W: Max/Worst RTT(ms)
+ 153004 Wrst
+ 153011 V: Standard Deviation
+ 153037 StDev
+ 153045 G: Geometric Mean
+ 153067 Gmean
+ 153075 J: Current Jitter
+ 153117 Jttr
+ 153124  %4.1f
+ 153133 M: Jitter Mean/Avg.
+ 153157 Javg
+ 153164 X: Worst Jitter
+ 153204 Jmax
+ 153211 I: Interarrival Jitter
+ 153240 Jint
+ 154340 unlock
+ 154347 lock
+ 154354 Couldn't get fd's flags
+ 154404 Couldn't set fd's flags
+ 154434 setsockopt(IP_HDRINCL,1)
+ 154465 Could not open IPv6 socket
+ 154521 net_open bad address type
+ 154554 socket()
+ 154565 bind()
+ 154574 getsockname()
+ 154612 ioctl FIONBIO
+ 154630 setsockopt IP_TTL
+ 154652 setsockopt IP_TOS
+ 154674 setsockopt SO_MARK
+ 154717 unknown AF?
+ 154733 setsockopt IPV6_UNICAST_HOPS
+ 154770 setsockopt IPV6_CHECKSUM
+ 155021 net_reopen bad address type
+ 155060 mtr: bad interface address: %s
+ 155120 mtr: failed to bind to interface
+ 155170 sockaddrtop unknown address type
+ 155326 .Amalloc() of %u bytes failed: %s
+ 155400 ERROR: Attempt to free pointer twice.
+ 155450 ERROR: Corrupted free() buffer. (header)
+ 155530 Unable to allocate IPv4 socket for nameserver communication: %s
+ 155640 Unable to allocate IPv6 socket for nameserver communication: %s
+ 155750 Unable to setsockopt() on IPv4 nameserver communication socket: %s
+ 156060 Unable to setsockopt() on IPv6 nameserver communication socket: %s
+ 156170 Resolver error: Query too large.
+ 156240 Resolver: Lookup successful: %s
+ 156310 Resolver: Sent domain lookup request for "%s".
+ 156370 Resolver: Sent reverse authentication request for "%s".
+ 156460 Resolver: Used cached record: %s == "%s".
+ 156540 Resolver: Used failed record: %s == ???
+ 156620 Resolver: Added to new record.
+ 156660 Resolver: Cache record for "%s" (%s) has expired. (state: %u)  Marked for expire at: %g, time: %g.
+ 157030 Resolver: Send #2 for "PTR" query...
+ 157100 Resolver: Send #3 for "PTR" query...
+ 157150 Resolver: "PTR" query timed out.
+ 157220 Resolver error: Packet smaller than standard header size.
+ 157320 Resolver error: Packet has empty body.
+ 157370 Resolver error: Nameserver packet truncated.
+ 157450 Resolver error: Query packet received on nameserver communication socket.
+ 157570 Resolver error: Invalid opcode in response packet.
+ 157660 Resolver: Received nameserver reply. (qd:%u an:%u ns:%u ar:%u)
+ 157760 Resolver error: Reply does not contain one query.
+ 160050 Resolver error: Reply too short.
+ 160120 Resolver error: dn_expand() failed while expanding query domain.
+ 160230 Resolver: Unknown query packet dropped. ("%s" does not match "%s")
+ 160340 Resolver: Queried domain name: "%s"
+ 160410 Resolver error: Query resource record truncated.
+ 160500 Resolver error: Received unsupported query class: %u (%s)
+ 160600 Resolver warning: Ignoring response with unexpected query type "PTR".
+ 160710 Resolver error: Received unimplemented query type: %u (%s)
+ 161010 Resolver error: Packet does not contain all specified resouce records.
+ 161120 Resolver error: dn_expand() failed while expanding answer domain.
+ 161230 Resolver: answered domain query: "%s"
+ 161300 Resolver error: Resource record truncated.
+ 161360 Resolver error: Answered class does not match queried class.
+ 161460 Resolver error: Zero size rdata.
+ 161530 Resolver error: Specified rdata length exceeds packet size.
+ 161630 Resolver error: Unsupported rdata format for "A" type. (%u bytes)
+ 161740 Resolver: Reverse authentication failed: %s != 
+ 162020 Resolver: Reverse authentication complete: %s == "%s".
+ 162110 Resolver error: dn_expand() failed while expanding domain in rdata.
+ 162220 Resolver: Answered domain: "%s"
+ 162260 Resolver error: Domain name too long.
+ 162330 Resolver error: Received unimplemented data type: %u (%s)
+ 162430 Resolver: Ignoring resource type %u. (%s)
+ 162510 Resolver error: No error returned but no answers given.
+ 162600 Resolver: Received error response %u. (%s)
+ 162660 Resolver error: Received reply from unknown source: %s
+ 162750 MD: mail destination (OBSOLETE)
+ 163010 MB: mailbox domain name (EXPERIMENTAL)
+ 163060 MG: mail group member (EXPERIMENTAL)
+ 163130 MR: mail rename domain name (EXPERIMENTAL)
+ 163210 WKS: well known service description
+ 163260 MINFO: mailbox or mail list information
+ 163330 queried domain name does not exist
+ 163400 requested query type not implemented
+ 163445 %lid
+ 163452 %luh
+ 163457 %lum
+ 163464 %lus
+ 163471 No nameservers defined.
+ 163522 127.0.0.1
+ 163540 statmalloc() failed: %s
+ 163571 Resolver: Lookup failed.
+ 163623 %x.%x.
+ 163632 %u.%u.%u.%u.in-addr.arpa
+ 163663 query class: %u (%s)
+ 163710 rr class: %u (%s)
+ 163732 Resolver: TTL: %s
+ 163754 statmalloc() error: %s
+ 164004 Resolver: Host not found.
+ 164036 Resolver: Socket error: %s
+ 164071 Unknown
+ 164101 Query
+ 164107 Answer
+ 164116 Authority reference
+ 164142 Resource reference
+ 164165 unknown class
+ 164203 IN: the Internet
+ 164224 CS: CSNET (OBSOLETE)
+ 164251 CH: CHAOS
+ 164263 HS: Hesoid [Dyer 87]
+ 164310 unknown type
+ 164325 A: host address
+ 164345 NS: authoritative name server
+ 164403 MF: mail forwarder (OBSOLETE)
+ 164441 CNAME: name alias
+ 164463 SOA: authority record
+ 164511 NULL: NULL RR (EXPERIMENTAL)
+ 164546 PTR: domain name pointer
+ 164577 HINFO: host information
+ 164627 MX: mail exchange
+ 164651 TXT: text string
+ 164672 no error
+ 164703 format error in query
+ 164731 server failure
+ 164750 refused by name server
+ 164777 unknown error
+ 165015 standard query
+ 165034 inverse query
+ 165052 server status request
+ 165100 unknown
+ 165207 @d %d %s
+ 165221 p %d %d
+ 165232 h %d %s
+ 165250 %s %s
+ 165256 %s %d %d %d %d %d %d
+ 165510 No GTK support. Sorry.
+ 165540 Start: %s
+ 165553 HOST: %%-%ds
+ 165570  %%2d. %%s%%-%ds
+ 165611  %%2d.|-- %%-%ds
+ 165632      %s%s
+ 165645 Loss
+ 165652 <?xml version="1.0"?>
+ 165700 <MTR SRC="%s" DST="%s"
+ 165727  TOS="0x%X"
+ 165743  PSIZE="%d"
+ 165757  PSIZE="rand(%d-%d)"
+ 166004  BITPATTERN="0x%02X"
+ 166031  BITPATTERN="rand(0x00-FF)"
+ 166065  TESTS="%d">
+ 166103 </MTR>
+ 166112     </HUB>
+ 166130 MTR.%s;%lld;%s;%s;%d;%s;%s;%d
+ 166166 MTR.%s;%lld;%s;%s;%d;%s;%d
+ 166221 , %.2f
+ 166230 , %d
+ 166240        [MPLS: Lbl %lu Exp %u S %u TTL %u]
+ 166320     <HUB COUNT="%d" HOST="%s">
+ 166360 Select failed
+ 166550 @res_init failed
+ 166572 @dn_expand failed
+ 166614 @Broken DNS reply.
+ 166637 @second dn_expand failed
+ 166670 @Not a TXT record
+ 166712 %s.origin6.asn.cymru.com
+ 166743 %d.%d.%d.%d
+ 166757 %s.origin.asn.cymru.com
+ 167012 ipinfo hash
+ 167030 @Broken TXT record (txtlen = %d, size = %d)
+ 171727 ;*3$"
+ 225640 LS NABWV
+ 227054 c35fcb1ce8b7ed9abdb354fe432eb234f2d01a.debug
+ 227141 .shstrtab
+ 227153 .interp
+ 227163 .note.ABI-tag
+ 227201 .note.gnu.build-id
+ 227224 .gnu.hash
+ 227236 .dynsym
+ 227246 .dynstr
+ 227256 .gnu.version
+ 227273 .gnu.version_r
+ 227312 .rela.dyn
+ 227324 .rela.plt
+ 227336 .init
+ 227344 .plt.got
+ 227355 .text
+ 227363 .fini
+ 227371 .rodata
+ 227401 .eh_frame_hdr
+ 227417 .eh_frame
+ 227431 .init_array
+ 227445 .fini_array
+ 227461 .jcr
+ 227466 .dynamic
+ 227477 .got.plt
+ 227510 .data
+ 227516 .bss
+ 227523 .gnu_debuglink

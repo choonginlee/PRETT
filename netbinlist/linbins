@@ -57,3 +57,65 @@ wget
 wireshark
 xdg-email
 xhost
+
+# Total kinds of protocols
+Total : 
+
+# Protocols in binaries (Not all displayed)
+ICMP
+ARP
+Avahi
+DICT
+FILE
+FTP
+FTPS
+Gopher
+HTTP
+HTTPS
+IMAP
+IMAPS
+LDAP
+LDAPS
+POP3
+POP3S
+RTMP
+RTSP
+SCP
+SFTP
+SMB
+SMTP
+SMTPS
+Telnet
+TFTP
+SSL
+DNS
+OCSP
+GIT
+IPP
+TCP
+IP
+SSH
+SDP
+UDP
+
+# Text-based protocols in Ubuntu binaries
+DICT
+FILE
+FTP
+HTTP
+IMAP
+IPP
+LDAP
+POP3
+SMTP
+Telnet
+TFTP
+
+# Text-based protocols in others
+SIP
+CalDAV
+cosign
+IRC
+XMPP
+SOAP
+XML-RPC

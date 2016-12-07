@@ -1,613 +1,455 @@
    1070 /lib64/ld-linux-x86-64.so.2
-   1205 E^J,
-   1622 (;'A
-   2065 wxx *s
-   2156 >Vc+
-  11251 libcap.so.2
-  11265 _ITM_deregisterTMCloneTable
-  11321 __gmon_start__
-  11340 _Jv_RegisterClasses
-  11364 _ITM_registerTMCloneTable
-  11416 _fini
-  11424 cap_get_proc
-  11441 cap_free
-  11452 cap_get_flag
-  11467 cap_set_proc
-  11504 cap_init
-  11515 cap_set_flag
-  11532 libc.so.6
-  11544 setuid
-  11553 socket
-  11562 fflush
-  11571 __printf_chk
-  11606 exit
-  11613 _IO_putc
-  11624 setlocale
-  11636 gai_strerror
-  11653 strncmp
-  11663 inet_aton
-  11675 optind
-  11704 __longjmp_chk
-  11722 __strdup
-  11733 perror
-  11742 connect
-  11752 inet_ntoa
-  11764 strncpy
-  11774 puts
-  12001 sigprocmask
-  12015 __stack_chk_fail
-  12036 putchar
-  12046 abort
-  12054 memchr
-  12063 getpid
-  12072 inet_pton
-  12104 strtod
-  12113 strtol
-  12122 isatty
-  12131 sched_yield
-  12145 strlen
-  12154 prctl
-  12162 setitimer
-  12174 sigemptyset
-  12210 getaddrinfo
-  12224 __errno_location
-  12245 bind
-  12252 memcmp
-  12261 getnameinfo
-  12275 getsockopt
-  12310 getopt
-  12317 _setjmp
-  12327 poll
-  12334 __fprintf_chk
-  12352 stdout
-  12361 fputc
-  12367 memcpy
-  12376 strtoul
-  12406 setsockopt
-  12421 malloc
-  12430 __ctype_b_loc
-  12446 sscanf
-  12455 optarg
-  12464 stderr
-  12473 ioctl
-  12501 __snprintf_chk
-  12520 getuid
-  12527 freeifaddrs
-  12543 getifaddrs
-  12556 if_nametoindex
-  12575 sendmsg
-  12605 fwrite
-  12614 gettimeofday
-  12631 sigaction
-  12643 geteuid
-  12653 __memcpy_chk
-  12670 close
-  12676 strchr
-  12705 getsockname
-  12721 sendto
-  12730 __cxa_finalize
-  12747 freeaddrinfo
-  12764 setbuf
-  12773 strcmp
-  13002 recvmsg
-  13012 __libc_start_main
-  13034 snprintf
-  13045 _edata
-  13054 __bss_start
-  13070 _end
-  13075 ni_subject_len
-  13114 source6
-  13124 ping4_func_set
-  13143 device
-  13152 ni_subject
-  13165 nrepeats
-  13176 cmsg_len
-  13207 in_pr_addr
-  13222 rcvd_tbl
-  13233 ni_flag
-  13243 tsum
-  13250 sndbuf
-  13257 timing
-  13266 outpack
-  13276 confirm
-  13306 acked
-  13314 nchecksum
-  13326 tmin
-  13333 tmax
-  13340 pr_addr_jmp
-  13354 ping6_func_set
-  13373 _IO_stdin_used
-  13412 ntransmitted
-  13427 ni_subject_type
-  13447 npackets
-  13460 pipesize
-  13471 ni_query
-  13502 mark
-  13507 cur_time
-  13520 start_time
-  13533 exiting
-  13553 hostname
-  13564 tclass
-  13573 nerrors
-  13603 rtt_addend
-  13616 lingertime
-  13631 pmtudisc
-  13642 preload
-  13652 ident
-  13660 nreceived
-  13672 ni_group
-  13703 flowlabel
-  13715 tsum2
-  13723 confirm_flag
-  13740 deadline
-  13751 ni_nonce_secret
-  13771 niquery_options
-  14011 datalen
-  14021 interval
-  14032 status_snapshot
-  14052 GLIBC_2.11
-  14065 GLIBC_2.3
-  14077 GLIBC_2.14
-  14112 GLIBC_2.4
-  14124 GLIBC_2.3.4
-  14140 GLIBC_2.2.5
-  24560 AUAT
-  24611 d$@H
-  24651 D$x1
-  25024 <4tI<6tZ
-  30332 T$HE1
-  30552 d$0H
-  31046 T$HH
-  31154 L$ H
-  31571 L$xdH3
-  31626 []A\A]
-  33600 AWAVE
-  33607 AUATA
-  34021 []A\A]A^A_
-  34074 AX[]A\A]A^A_
-  34344 []A\
-  34360 AUAT1
-  35066 dH3<%(
-  35110 ([]A\A]
-  35560 AWAVAUATI
-  35741 |$ L
-  36077 t$ H
-  36520 t$ H
-  36627 \$@1
-  37313 D$r~ 
-  40675 T$81
-  40745 \$@1
-  41174 D$4H
-  41353 t$ L
-  41613 T$p1
-  41704 D$r'
-  42034 \$p1
-  42062 D$pD
-  42102 D$q$
-  42143 D$q1
-  42454 D$ H
-  42513 L$ 1
-  42723 D$q(
-  42744 D$q1
-  43317 L$ A
-  43774 D$4%
-  44273 D$q1
-  44442 D$PH
-  45240 dH34%(
-  45540 AWAVD
-  45550 AUATUSH
-  45575 D$81
-  45633 D$ H
-  46306 |$ H
-  46477 D$8dH3
-  46524 H[]A\A]A^A_
-  50040 HcD$
-  53120 AVAUATUH
-  53223 D$ H
-  53230 D$pH
-  53267 D$0H
-  53322 D$@H
-  53361 |$XH
-  53400 T$PH
-  53562 []A\A]A^
-  54034 9D$tte1
-  54640 AWAVAUATI
-  54674 D$(1
-  56021 D$ f
-  56125 |$(dH3<%(
-  56155 8[]A\A]A^A_
-  57562 D$(1
-  57706 xhHc
-  60027 |$(dH3<%(
-  60320 ATUSH
-  60762 []A\
-  61740 AUATI
-  62012 D$H1
-  62111 D$<H
-  62161 C4PH
-  62166 C0PH
-  62173 C,PH
-  62200 C(PH
-  62205 C$PH
-  62212 C PH
-  62417 D$HdH3
-  62444 X[]A\A]
-  63020 ATUSH
-  63074 dH34%(
-  63116  []A\
-  63647 f+5r
-  65740 ATUH
-  66236 []A\
-  66702 =$s 
-  67147 \$@1
-  67562 T$ 1
-  67615 D$"f
-  67642 t$ 1
-  67675 D$0H
-  70114 L$ A
-  70620 AWAVHc
-  70627 AUATH
-  70700 |$`H
-  71273 = q 
-  71453 []A\A]A^A_
-  71516 L$hH
-  71602 T$pL
-  72040 gfffffffH)
-  72162 =Ul 
-  74335 H+-T
-  76240 USE1
-  77060 AWAVAUATI
-  77134 D$0H
-  77141 \$PL
-  77155 L$,H
-  77162 T$0H
-  77365 t)H;
-  77401 =Rv 
-  77414 =Vv 
-  77575 5ja 
-  77617 t$@1
-  77633 L$FL
-  77677 D$F	
-  77716 HcD$,I
- 100127 D$81
- 100210 D$`H
- 100247 \$xI
- 100266 L$pH
- 100732 T$ L
- 101304 ATUS
- 103140 AVAULc
- 103213 D$H1
- 103417 Lc-jn 
- 103447 twHc
- 103475 =Fn 
- 103516 %5n 
- 103534 \$HdH3
- 103561 P[]A\A]A^
- 104224 []A\
- 104612  []A\
- 104670 |$ H
- 104730 l$0H
- 105242 =9Y 
- 105436 D$(L
- 105456 T$(A
- 105507 =tX 
- 105532 5aX 
- 106103 D$0I
- 106122 5iW 
- 106160 =KW 
- 107300 AVAUATUH
- 107371 t$`H
- 107452 d$ H
- 107500 D$0H
- 107533 |$8H
- 107552 L$0H
- 107727 []A\A]A^
- 110234 5'u 
- 110270 t$TH
- 110573 l$Vf
- 111000 AUATI
- 111116 thHck
- 111213 []A\A]
- 112000 ATUH
- 112042 D$H1
- 112273 d$ H
- 112350 \$HdH3
- 112371 P[]A\
- 112564 AWAVAUATI
- 112702 =pK 
- 113463 =_^ 
- 113512 %	J 
- 113764 =FI 
- 115341 =}F 
- 115762 5YE 
- 116264 ='G 
- 116463 =oh 
- 116775 %~}"
- 117004 -OC 
- 117760 =FA 
- 121020 AWAVA
- 121027 AUATL
- 121035 %69 
- 121045 -69 
- 121152 []A\A]A^A_
- 121250 Usage: ping [-aAbBdDfhLnOqrRUvV64] [-c count] [-i interval] [-I interface]
- 121363             [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
- 121501             [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
- 121610             [-w deadline] [-W timeout] [hop1 ...] destination
- 121710 ping: socket: %s, attempting raw socket...
- 121770 WARNING: failed to install socket filter
- 122050 Warning: error setting QOS sockopts
- 122120 Do you want to ping broadcast? Then -b
- 122170 WARNING: pinging broadcast address
- 122240 ping: broadcast ping with too short interval.
- 122320 ping: broadcast ping does not fragment.
- 122400 WARNING: setsockopt(ICMP_FILTER)
- 122450 WARNING: your kernel is veeery old. No problems.
- 122540 WARNING: setsockopt(IP_RECVTTL)
- 122600 WARNING: setsockopt(IP_RETOPTS)
- 122640 ping: can't disable multicast loopback
- 122710 ping: can't set multicast time-to-live
- 122760 ping: can't set unicast time-to-live
- 123030 Error: packet size %d is too large. Maximum is %d
- 123120 WARNING: packet size %d is too large. Maximum is %d
- 123210 ping: Warning: source address might be selected on device other than %s.
- 123330 ping: Only one -4 or -6 option may be specified
- 123420 Only one of -T or -R may be used
- 123470 ping: bad number of packets to transmit.
- 123550 ping: invalid source address %s
- 123620 ping: bad preload value, should be 1..%d
- 123700 ping: cannot set preload to value > 3
- 123750 ping: wrong value for -M: do, dont, want are valid ones.
- 124050 ping: the decimal value of TOS bits must be 0-254 (or zero)
- 124150 ping: illegal negative packet size %d.
- 124220 ping: packet size too large: %d
- 124270 h?4bRT:6F:N:aABc:dDfi:I:l:Lm:M:nOp:qQ:rs:S:t:UvVw:W:
- 124360 ping: unknown protocol family: %d
- 124430 Vr HL TOS  Len   ID Flg  off TTL Pro  cks      Src      Dst Data
- 124540 Destination Protocol Unreachable
- 124610 Frag needed and DF set (mtu = %u)
- 124660 Destination Net Unreachable for Type of Service
- 124740 Destination Host Unreachable for Type of Service
- 125030 Dest Unreachable, Bad Code: %d
- 125070 Redirect Type of Service and Network
- 125140 Redirect Type of Service and Host
- 125210 Parameter problem: pointer = %u
- 125260 ping: local error: Message too long, mtu=%u
- 125341 WARNING: setsockopt(ICMP_FILTER)
- 125410 ping: packet too short (%d bytes) from %s
- 125463 ping: socket: %s
- 125505  icmp_seq=%u
- 125522 ping: setsockopt: %s
- 125550 ping: %s: %s
- 125566 ping: unknown iface %s
- 125616 ping: IP_MULTICAST_IF
- 125644 ping: SO_BINDTODEVICE
- 125672 connect
- 125702 getsockname
- 125716 gatifaddrs() failed.
- 125744 ping: IP_MTU_DISCOVER
- 125772 bind
- 125777 ping: record route
- 126022 ping: ts option
- 126042 ping: can't set broadcasting
- 126077 ping: out of memory.
- 126125 PING %s (%s) 
- 126143 from %s %s: 
- 126160 %d(%d) bytes of data.
- 126207 tsonly
- 126216 tsandaddr
- 126230 tsprespec
- 126242 Invalid timestamp type
- 126272 ping: Invalid flowinfo %s
- 126325 ping: bad timing interval
- 126360 ping: out of memory
- 126405 mark cannot be negative
- 126436 dont
- 126443 want
- 126450 ping: "%s" bad value for TOS
- 126506 ping: Invalid tclass %s
- 126537 ping: bad sndbuf value.
- 126570 ping: ttl %u out of range
- 126623 s20150815
- 126635 ping utility, iputils-%s
- 126667 ping: bad wait time.
- 126715 ping: bad linger time.
- 126745 %s (%s)
- 126763 %cSRR: 
- 126773 	0.0.0.0
- 127010 	(same route)
- 127027 RR: 
- 127035 TS: 
- 127042 	%ld absolute not-standard
- 127075 	%ld not-standard
- 127117 	%ld absolute
- 127135 	%ld
- 127142 Unrecorded hops: %d
- 127170 unknown option %x
- 127212  %1x  %1x  %02x %04x %04x
- 127244    %1x %04x
- 127260   %02x  %02x %04x
- 127302  %s 
- 127307 Echo Reply
- 127322 Destination Net Unreachable
- 127356 Destination Host Unreachable
- 127413 Destination Port Unreachable
- 127450 Source Route Failed
- 127474 Destination Net Unknown
- 127524 Destination Host Unknown
- 127555 Source Host Isolated
- 127602 Destination Net Prohibited
- 127635 Destination Host Prohibited
- 127671 Packet filtered
- 127711 Precedence Violation
- 127736 Precedence Cutoff
- 127760 Source Quench
- 127776 Redirect Network
- 130017 Redirect Host
- 130035 Redirect, Bad Code: %d
- 130064 (New nexthop: %s)
- 130107 Echo Request
- 130124 Time to live exceeded
- 130152 Frag reassembly time exceeded
- 130210 Time exceeded, Bad Code: %d
- 130245 Timestamp
- 130257 Timestamp Reply
- 130277 Information Request
- 130323 Information Reply
- 130345 Address Mask Request
- 130372 Address Mask Reply
- 130415 Bad ICMP type: %d
- 130440 ping: local error: %s
- 130472 From %s icmp_seq=%u 
- 130517 From %s: icmp_seq=%u 
- 130545 (BAD CHECKSUM)
- 130573 %lu.%06lu 
- 130606 From %s: 
- 131613 RMb@A
- 131627 @[%lu.%06lu] 
- 131645 ping: cap_get_proc
- 131670 ping: cap_init
- 131707 ping: cap_set_proc
- 131732 ping: prctl
- 131746 setuid
- 131755 PATTERN: 0x
- 131771 %02x
- 132000 ping: sendmsg
- 132025 %d bytes from %s:
- 132047  ttl=%d
- 132057  (truncated)
- 132074  time=%ld ms
- 132111  time=%ld.%01ld ms
- 132134  time=%ld.%02ld ms
- 132157  time=%ld.%03ld ms
- 132202  (DUP!)
- 132212  (BAD CHECKSUM!)
- 132234 #%d	
- 132245 --- %s ping statistics ---
- 132301 %ld packets transmitted, 
- 132333 %ld received
- 132350 , +%ld duplicates
- 132372 , +%ld corrupted
- 132413 , +%ld errors
- 132431 , %d%% packet loss
- 132454 , time %ldms
- 132471 %spipe %d
- 132503 %sipg/ewma %d.%03d/%d.%03d ms
- 132542 %ld/%ld packets, %d%% loss
- 132575 ping: recvmsg
- 132620 ping: patterns must be specified as hex digits.
- 132710 %2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x
- 133000 no answer yet for icmp_seq=%lu
- 133040 WARNING: probably, rcvbuf is not enough to hold preload.
- 133140 ping: cannot flood; minimal interval allowed for user is %dms
- 133240 ping: illegal preload and/or interval
- 133310 Warning: no SO_TIMESTAMP support, falling back to SIOCGSTAMP
- 133410 Warning: Failed to set mark %d
- 133450 Warning: time of day goes back (%ldus), taking countermeasures.
- 133561 wrong data byte #%d should be 0x%x but was 0x%x
- 133650 rtt min/avg/max/mdev = %ld.%03ld/%lu.%03ld/%ld.%03ld/%ld.%03ld ms
- 133760 , min/avg/ewma/max = %ld.%03ld/%lu.%03ld/%d.%03d/%ld.%03ld ms
- 134060 ping6 -N suboptions
- 134104 	Help:
- 134113 		help
- 134122 	Query:
- 134132 		name,
- 134142 		ipv6,ipv6-all,ipv6-compatible,ipv6-linklocal,ipv6-sitelocal,ipv6-global,
- 134255 		ipv4,ipv4-all,
- 134276 	Subject:
- 134310 		subject-ipv6=addr,subject-ipv4=addr,subject-name=name,subject-fqdn=name,
- 134430 ping6: function not available; crypto disabled
- 134510 Beyond scope of source address
- 134550 ping: packet too short (%d bytes)
- 134620 Usage: %s [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
- 134727              [-l preload] [-m mark] [-M pmtudisc_option]
- 135020              [-N nodeinfo_option] [-p pattern] [-Q tclass] [-s packetsize]
- 135133              [-S sndbuf] [-t ttl] [-T timestamp_option] [-w deadline]
- 135241              [-W timeout] destination
- 135310 ping6: Source routing is deprecated by RFC5095.
- 135400 scope discrepancy among the nodes
- 135450 ping6: Warning: source address might be selected on device other than %s.
- 135570 ping: multicast ping with too short interval.
- 135650 ping: multicast ping does not fragment.
- 135730 setsockopt(RAW_CHECKSUM) failed - try to continue.
- 136020 can't disable multicast loopback
- 136070 Destination unreachable: 
- 136122 No route
- 136133 Administratively prohibited
- 136167 Address unreachable
- 136213 Port unreachable
- 136234 Unknown code %d
- 136254 Packet too big: mtu=%u
- 136303 , code=%d
- 136315 Time exceeded: 
- 136335 Hop limit
- 136347 Defragmentation failure
- 136377 Parameter problem: 
- 136423 Wrong header field 
- 136447 Unknown header 
- 136467 Unknown option 
- 136507 code %d 
- 136520 at %u
- 136526 Echo request
- 136543 Echo reply
- 136556 MLD Query
- 136570 MLD Report
- 136603 MLD Reduction
- 136621 unknown icmp type: %u
- 136647 Subject type conflict
- 136675 ping6: %s: %s
- 136714 Qtype conflict
- 136733 ping -6
- 136743 ping6
- 136751 setsockopt(SO_BINDTODEVICE)
- 137005 getifaddrs
- 137020 ping: IPV6_MTU_DISCOVER
- 137050 ping: bind icmp socket
- 137077 setsockopt(ICMP6_FILTER)
- 137130 can't set multicast hop limit
- 137166 can't set unicast hop limit
- 137222 can't receive hop limit
- 137252 setsockopt(IPV6_TCLASS)
- 137302 can't set flowlabel
- 137326 can't send flowinfo
- 137352 PING %s(%s) 
- 137367 , flow 0x%05x, 
- 137407 %d data bytes
- 137426 ipv6-all
- 137437 ipv6-compatible
- 137457 ipv6-linklocal
- 137476 ipv6-sitelocal
- 137515 ipv6-global
- 137531 ipv4-all
- 137542 subject-ipv6
- 137557 subject-ipv4
- 137574 subject-name
- 137611 subject-fqdn
- 137626 help
- 141127 ;*3$"
- 161700 ping
- 161715 .shstrtab
- 161727 .interp
- 161737 .note.ABI-tag
- 161755 .note.gnu.build-id
- 162000 .gnu.hash
- 162012 .dynsym
- 162022 .dynstr
- 162032 .gnu.version
- 162047 .gnu.version_r
- 162066 .rela.dyn
- 162100 .init
- 162106 .plt
- 162113 .plt.got
- 162124 .text
- 162132 .fini
- 162140 .rodata
- 162150 .eh_frame_hdr
- 162166 .eh_frame
- 162200 .init_array
- 162214 .fini_array
- 162230 .jcr
- 162235 .dynamic
- 162246 .data
- 162254 .bss
- 162261 .gnu_debuglink
+   5711 libcap.so.2
+   5725 _ITM_deregisterTMCloneTable
+   5761 __gmon_start__
+   6000 _Jv_RegisterClasses
+   6024 _ITM_registerTMCloneTable
+   6056 _fini
+   6064 cap_get_proc
+   6101 cap_free
+   6112 cap_get_flag
+   6127 cap_set_proc
+   6144 cap_init
+   6155 cap_set_flag
+   6172 libresolv.so.2
+   6211 __dn_comp
+   6223 __dn_expand
+   6237 libgnutls-openssl.so.27
+   6267 MD5_Final
+   6301 MD5_Update
+   6314 MD5_Init
+   6325 libc.so.6
+   6337 setuid
+   6346 socket
+   6355 fflush
+   6364 __printf_chk
+   6401 exit
+   6406 _IO_putc
+   6417 strncmp
+   6427 optind
+   6436 __longjmp_chk
+   6454 __strdup
+   6465 perror
+   6474 connect
+   6504 inet_ntop
+   6516 puts
+   6523 sigprocmask
+   6537 __stack_chk_fail
+   6560 putchar
+   6570 abort
+   6576 memchr
+   6605 getpid
+   6614 inet_pton
+   6626 strtod
+   6635 strtol
+   6644 isatty
+   6653 sched_yield
+   6667 strlen
+   6676 prctl
+   6704 setitimer
+   6716 sigemptyset
+   6732 getaddrinfo
+   6746 __errno_location
+   6767 bind
+   6774 memcmp
+   7003 getsockopt
+   7016 getopt
+   7025 _setjmp
+   7035 poll
+   7042 __fprintf_chk
+   7060 stdout
+   7067 gethostbyaddr
+   7105 fputc
+   7113 memcpy
+   7122 strtoul
+   7132 setsockopt
+   7145 malloc
+   7154 __ctype_b_loc
+   7172 sscanf
+   7201 optarg
+   7210 stderr
+   7217 ioctl
+   7225 getuid
+   7234 freeifaddrs
+   7250 getifaddrs
+   7263 if_nametoindex
+   7302 sendmsg
+   7312 fwrite
+   7321 gettimeofday
+   7336 sigaction
+   7350 geteuid
+   7360 __memcpy_chk
+   7375 close
+   7403 strchr
+   7412 getsockname
+   7426 sendto
+   7435 __ctype_tolower_loc
+   7461 freeaddrinfo
+   7476 __sprintf_chk
+   7514 setbuf
+   7523 strcmp
+   7532 recvmsg
+   7542 strerror
+   7553 __libc_start_main
+   7575 _edata
+   7604 __bss_start
+   7620 _end
+   7625 GLIBC_2.2.5
+   7641 GLIBC_2.11
+   7654 GLIBC_2.3
+   7666 GLIBC_2.14
+   7701 GLIBC_2.3.4
+   7715 GLIBC_2.4
+  17244 AWAVI
+  17260 ATSH
+  20460 Lc=i
+  23411 =a~ 
+  25021 =V| 
+  25060 =J{ 
+  27241 =)x 
+  27302 =(o 
+  31564 []A\
+  31720 AWAVAUATUSH
+  32124 D$Xt
+  32226 D$PL
+  32404 L$8L
+  32423 L$8H
+  32465 H;L$(u
+  32512 D$PH
+  32552 D$pH
+  32557 D$pL
+  32640 HcD$(I9
+  32702 |$`L
+  32717 t$`H
+  32741 l$XM
+  33137 |$DH
+  33162 %yp 
+  33175 |$(D
+  33202 =Yp 
+  33250 dH34%(
+  33272 []A\A]A^A_
+  33762 fffff.
+  35040 AVHc
+  35051 AUATUSH
+  35117 t	A9
+  35267 Hc-"l 
+  35405 @[]A\A]A^
+  35462 d$(M
+  35573 =Hk 
+  35722 fffff.
+  35745 ATUSH
+  35757 =lg 
+  36056 thHck
+  36153 []A\A]
+  36241 ffffff.
+  36260 AUATUSH
+  36347 l$`H
+  36430 d$ H
+  36456 D$0H
+  36511 |$8H
+  36530 T$0H
+  36557 )t~H
+  36713 dH3<%(
+  36741 []A\A]
+  37217 D$T;
+  37534 l$VfA
+  37663 ffff.
+  40375 =nd 
+  40477 5^w 
+  40645 5Fe 
+  41200 ={e 
+  41236 d$ H
+  41254 D$0 
+  41460 AWAVLc
+  41472 AUATL
+  42410 []A\A]A^A_
+  42500 AWAVAUATUHc
+  43115 []A\A]A^A_
+  43546 t0r>f
+  43720 AWAVAUI
+  44014 )t9I
+  44065 8[]A\A]A^A_
+  45000 |$ H
+  45405 ;5%[ 
+  45764 fff.
+  46263 ffff.
+  47421 ffffff.
+  47524 AAVAUATUSH
+  47637 []A\A]A^A_
+  47662 -	W 
+  50036 D$XH
+  50056 D$PH
+  50073 D$HH
+  50110 D$@H
+  50125 D$8H
+  50142 D$0H
+  50157 D$(H
+  50174 D$ H
+  50763 B	tE
+  51076 T$h9D$t
+  51262 =	T 
+  51567 =DS 
+  52202 =9R 
+  52542 =YQ 
+  52627 =,Q 
+  53603 ffff.
+  54366 =E_ 
+  54404 =Vu"
+  55035 f+50s"
+  56021 =YJ 
+  57120 -Op"
+  57322 fffff.
+  57340 AUATU
+  57404 =So"
+  57412 5aG 
+  57634 T$HH
+  57641 L$@A
+  57771 D$@)
+  60016 L$HH
+  61236 =%D 
+  62130 []A\A]
+  62142 T$P1
+  62175 D$Rf
+  62222 []A\A]
+  62442 t$0H
+  62543 =`A 
+  62602 t$P1
+  62635 D$`H
+  63262 L$ 1
+  63362 L$0E1
+  64240 AWHc
+  64262 ATUSD
+  64324 |$pH
+  65042 L$x1
+  65333 gfffffffH
+  65646 []A\A]A^A_
+  66411 5B`"
+  66772 = 8 
+  67142 |$ 1
+  67163 L$(H
+  67755 H+-|^"
+  70357 ={5 
+  70375 =F]"
+  70406 ~hHi
+  70562 5	5 
+  71642 =!3 
+  72010 5{Z"
+  72176 T$ A
+  72360 AWAVAUATUSH
+  72426 \$@H
+  72555 =%Y"
+  73101 t$ 1
+  73141 T$0Hi
+  73367 |$ 1
+  73440 D$&	
+  73457 Lct$
+  73575 D$PH
+  73613 l$`H
+  73651 t$hH
+  73702 |$ 1
+  73716 L$ H
+  74042 T$`H
+  74126 T$ 1
+  74462 =)- 
+  74623 %H$ 
+  74633 -H$ 
+  74732 []A\A]A^A_
+  75010 ping6 -N suboptions
+  75034 	Help:
+  75043 		help
+  75052 	Query:
+  75062 		name,
+  75072 		ipv6,ipv6-all,ipv6-compatible,ipv6-linklocal,ipv6-sitelocal,ipv6-global,
+  75205 		ipv4,ipv4-all,
+  75226 	Subject:
+  75240 		subject-ipv6=addr,subject-ipv4=addr,subject-name=name,subject-fqdn=name,
+  75360 Usage: ping6 [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
+  75472              [-l preload] [-m mark] [-M pmtudisc_option]
+  75563              [-N nodeinfo_option] [-p pattern] [-Q tclass] [-s packetsize]
+  75676              [-S sndbuf] [-t ttl] [-T timestamp_option] [-w deadline]
+  76004              [-W timeout] destination
+  76060 Beyond scope of source address
+  76120 ping6: Inappropriate subject name: %s
+  76170 ping6: dn_comp() returned too long result.
+  76250 ping: invalid source address %s
+  76320 ping: wrong value for -M: do, dont, want are valid ones.
+  76420 h?VQ:I:M:aUc:dfi:w:l:S:np:qrs:vLt:AW:Bm:DOF:N:
+  76500 ping6: Source routing is deprecated by RFC5095.
+  76570 scope discrepancy among the nodes
+  76640 ping: multicast ping with too short interval.
+  76720 ping: multicast ping does not fragment.
+  77000 WARNING: your kernel is veeery old. No problems.
+  77070 setsockopt(RAW_CHECKSUM) failed - try to continue.
+  77160 can't disable multicast loopback
+  77230 ping6: Warning: source address might be selected on device other than %s.
+  77350 ping: local error: Message too long, mtu=%u
+  77430  unexpeced error in inet_ntop(%s)
+  77500 ping: packet too short (%d bytes)
+  77550 WARNING: failed to install socket filter
+  77622 Destination unreachable: 
+  77654 No route
+  77665 Administratively prohibited
+  77721 Address unreachable
+  77745 Port unreachable
+  77766 Unknown code %d
+ 100006 Packet too big: mtu=%u
+ 100035 , code=%d
+ 100047 Time exceeded: 
+ 100067 Hop limit
+ 100101 Defragmentation failure
+ 100131 Parameter problem: 
+ 100155 Wrong header field 
+ 100201 Unknown header 
+ 100221 Unknown option 
+ 100241 code %d 
+ 100252 at %u
+ 100260 Echo request
+ 100275 Echo reply
+ 100310 MLD Query
+ 100322 MLD Report
+ 100335 MLD Reduction
+ 100353 unknown icmp type: %u
+ 100401  icmp_seq=%u
+ 100416 Qtype conflict
+ 100437 Subject type conflict
+ 100465 ping6: too long scope name.
+ 100522 ping6: out of memory.
+ 100551 ff02::2:%02x%02x:%02x%02x%s%s
+ 100607 Unknown host: %s
+ 100631 ping: unknown iface %s
+ 100661 ping: Invalid flowinfo %s
+ 100714 ping: Invalid tclass %s
+ 100745 ping: out of memory
+ 100772 dont
+ 100777 want
+ 101004 ping6 utility, iputils-%s
+ 101037 unknown host
+ 101055 setsockopt(SO_BINDTODEVICE)
+ 101111 connect
+ 101121 getsockname
+ 101135 getifaddrs
+ 101150 ping: icmp open socket
+ 101177 ping: IPV6_MTU_DISCOVER
+ 101227 ping: bind icmp socket
+ 101256 ping: out of memory.
+ 101304 setsockopt(ICMP6_FILTER)
+ 101335 can't set multicast hop limit
+ 101373 can't set unicast hop limit
+ 101427 can't receive hop limit
+ 101457 setsockopt(IPV6_TCLASS)
+ 101507 can't set flowlabel
+ 101533 can't send flowinfo
+ 101557 PING %s(%s) 
+ 101574 , flow 0x%05x, 
+ 101614 from %s %s: 
+ 101631 %d data bytes
+ 101650 ping: local error: %s
+ 101702 From %s icmp_seq=%u 
+ 101727  parse error (too short)
+ 101760  parse error (truncated)
+ 102011 \%03o
+ 102023  unknown qtype(0x%02x)
+ 102052  refused
+ 102063  unknown
+ 102074  unknown code(%02x)
+ 102120 ; seq=%u;
+ 102132 From %s: icmp_seq=%u 
+ 102160 From %s: 
+ 102172 ipv6-all
+ 102203 ipv6-compatible
+ 102223 ipv6-linklocal
+ 102242 ipv6-sitelocal
+ 102261 ipv6-global
+ 102275 ipv4-all
+ 102306 subject-ipv6
+ 102323 subject-ipv4
+ 102340 subject-name
+ 102355 subject-fqdn
+ 102372 help
+ 103340 ping: cap_get_proc
+ 103363 ping: cap_init
+ 103402 ping: cap_set_proc
+ 103425 ping: prctl
+ 103441 setuid
+ 103450 ping: bad timing interval
+ 103503 mark cannot be negative
+ 103534 ping: bad wait time.
+ 103562 ping: bad sndbuf value.
+ 103613 PATTERN: 0x
+ 103627 %02x
+ 103634 ping: ttl %u out of range
+ 103667 ping: bad linger time.
+ 103717 ping utility, iputils-%s
+ 103751 [%lu.%06lu] 
+ 103770 ping: sendmsg
+ 104015 %d bytes from %s:
+ 104037  ttl=%d
+ 104047  time=%ld ms
+ 104064  time=%ld.%01ld ms
+ 104107  time=%ld.%02ld ms
+ 104132  time=%ld.%03ld ms
+ 104155  (DUP!)
+ 104165  (BAD CHECKSUM!)
+ 104207 #%d	
+ 104220 --- %s ping statistics ---
+ 104254 %ld packets transmitted, 
+ 104306 %ld received
+ 104323 , +%ld duplicates
+ 104345 , +%ld corrupted
+ 104366 , +%ld errors
+ 104404 , %d%% packet loss
+ 104427 , time %ldms
+ 104444 %spipe %d
+ 104456 %sipg/ewma %d.%03d/%d.%03d ms
+ 104515 %ld/%ld packets, %d%% loss
+ 104550 ping: recvmsg
+ 104570 ping: bad number of packets to transmit.
+ 104650 ping: bad preload value, should be 1..%d
+ 104730 ping: cannot set preload to value > 3
+ 105000 ping: patterns must be specified as hex digits.
+ 105070 %2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x%2x
+ 105160 ping: illegal negative packet size %d.
+ 105230 ping: packet size too large: %d
+ 105300 no answer yet for icmp_seq=%lu
+ 105340 WARNING: probably, rcvbuf is not enough to hold preload.
+ 105440 ping: cannot flood; minimal interval allowed for user is %dms
+ 105540 ping: illegal preload and/or interval
+ 105610 Warning: no SO_TIMESTAMP support, falling back to SIOCGSTAMP
+ 105710 Warning: Failed to set mark %d
+ 105750 Warning: time of day goes back (%ldus), taking countermeasures.
+ 106061 wrong data byte #%d should be 0x%x but was 0x%x
+ 106150 rtt min/avg/max/mdev = %ld.%03ld/%lu.%03ld/%ld.%03ld/%ld.%03ld ms
+ 106260 , min/avg/ewma/max = %ld.%03ld/%lu.%03ld/%d.%03d/%ld.%03ld ms
+ 107353 RMb@A
+ 110327 ;*3$"
+ 122610 s20121221
+ 122640 @(#) Copyright (c) 1989 The Regents of the University of California.
+ 122745  All rights reserved.
+ 123164 s20121221
+ 123176 ping6
+ 123213 .shstrtab
+ 123225 .interp
+ 123235 .note.ABI-tag
+ 123253 .note.gnu.build-id
+ 123276 .gnu.hash
+ 123310 .dynsym
+ 123320 .dynstr
+ 123330 .gnu.version
+ 123345 .gnu.version_r
+ 123364 .rela.dyn
+ 123376 .rela.plt
+ 123410 .init
+ 123416 .text
+ 123424 .fini
+ 123432 .rodata
+ 123442 .eh_frame_hdr
+ 123460 .eh_frame
+ 123472 .init_array
+ 123506 .fini_array
+ 123522 .jcr
+ 123527 .dynamic
+ 123540 .got
+ 123545 .got.plt
+ 123556 .data
+ 123564 .bss
+ 123571 .gnu_debuglink

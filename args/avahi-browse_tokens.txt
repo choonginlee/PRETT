@@ -1,0 +1,2 @@
+/lib64/ld-linux-x86-64.so.2
+/usr/lib/x86_64-linux-gnu/avahi/service-types.db

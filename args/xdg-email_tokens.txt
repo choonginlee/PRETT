@@ -1,0 +1,16 @@
+/tmp/logo.png
+/dev/null
+/dev/null"
+/org/freedesktop/DBus
+/dev/null
+/dev/null
+/dev/null
+/dev/null
+/dev/null
+/desktop/gnome/url-handlers/mailto/command
+/dev/null
+/dev/null
+/dev/null
+/dev/null
+/[@a-zA-Z0-9.\-\\\/]/
+/dev/null

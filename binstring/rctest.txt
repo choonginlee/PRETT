@@ -1,2235 +1,2047 @@
    1070 /lib64/ld-linux-x86-64.so.2
-   1223 FLH1H
-   4561 libpthread.so.0
-   4601 _ITM_deregisterTMCloneTable
-   4635 _Jv_RegisterClasses
-   4661 _ITM_registerTMCloneTable
-   4713 write
-   4721 send
-   4726 read
-   4733 recv
-   4740 __errno_location
-   4761 accept
-   4770 sigaction
-   5002 connect
-   5012 open
-   5017 close
-   5025 libc.so.6
-   5037 socket
-   5046 __printf_chk
-   5063 exit
-   5070 sprintf
-   5100 optind
-   5107 __strdup
-   5120 perror
-   5127 __fdelt_chk
-   5143 strncpy
-   5153 puts
-   5160 fork
-   5165 __stack_chk_fail
-   5206 listen
-   5215 select
-   5224 realloc
-   5234 strtol
-   5243 calloc
-   5252 strlen
-   5261 openlog
-   5271 writev
-   5300 bind
-   5305 memcmp
-   5314 __syslog_chk
-   5331 getsockopt
-   5344 getopt
-   5353 shutdown
-   5364 poll
-   5371 stdout
-   5400 memcpy
-   5407 __vsnprintf_chk
-   5427 strtoul
-   5437 setsockopt
-   5452 malloc
-   5461 strcat
-   5470 strcasecmp
-   5503 __ctype_b_loc
-   5521 optarg
-   5530 ioctl
-   5536 __snprintf_chk
-   5555 strncasecmp
-   5571 usleep
-   5600 gettimeofday
-   5615 __memcpy_chk
-   5632 strchr
-   5641 getsockname
-   5655 __vfprintf_chk
-   5674 __cxa_finalize
-   5713 __sprintf_chk
-   5731 memmove
-   5741 strerror
-   5752 __libc_start_main
-   5774 closelog
-   6005 snprintf
-   6016 free
-   6023 _IO_stdin_used
-   6042 __gmon_start__
-   6061 GLIBC_2.2.5
-   6075 GLIBC_2.3
-   6107 GLIBC_2.14
-   6122 GLIBC_2.15
-   6135 GLIBC_2.4
-   6147 GLIBC_2.3.4
-  40160 AWAVE1
-  40167 AUATA
-  42720 []A\A]A^A_
-  46020 AWAVH
-  46033 AUAT
-  46074 D$h1
-  46167 L$\H
-  46237 d$@L
-  46402 L$8L
-  46407 D$0L
-  46552 |$ 1
-  46566 T$ H
-  46573 D$(H+T$
-  46603 H+D$
-  46624 L$@I
-  47046 D$hdH3
-  47067 x[]A\A]A^A_
-  47140 AWAV
-  47151 AUATI
-  47213 D$X1
-  47243 l$0f
-  47270 T$0H
-  47661 L$8H
-  50030 T$ D
-  50253 t$@H
-  50331 D$2P
-  50337 D$;PD
-  50346 L$D1
-  52020 AWAVAUATUSH
-  52063 D$X1
-  52162 t$0H
-  52226 t$HfD
-  52335 D$FL
-  52631 |$HH
-  52736 L$ f
-  53151 L$ H
-  53200 D$*PD
-  53207 L$31
-  53233 T$XdH3
-  53262 h[]A\A]A^A_
-  55363 tiUSH
-  55560 ATUH
-  55661 []A\
-  55733 t$(H
-  55740 T$0H
-  55745 L$8L
-  55752 D$@L
-  55757 L$Ht7
-  55765 )D$P
-  55772 )L$`
-  55777 )T$p
-  56253 T$0H
-  56260 L$8L
-  56265 D$@L
-  56272 L$Ht7
-  56300 )D$P
-  56305 )L$`
-  56312 )T$p
-  56553 T$0H
-  56560 L$8L
-  56565 D$@L
-  56572 L$Ht7
-  56600 )D$P
-  56605 )L$`
-  56612 )T$p
-  57073 L$8L
-  57100 D$@L
-  57105 L$Ht7
-  57113 )D$P
-  57120 )L$`
-  57125 )T$p
-  57560 ATUI
-  57712 []A\
- 120060 AVAUA
- 120067 ATUSH
- 120260 ]A\A]A^
- 120404 []A\
- 120456 []A\
- 120500 AWAVAUATUSH
- 121001 []A\A]A^A_
- 121060 AWAVE1
- 121067 AUATUSH
- 121341 []A\A]A^A_
- 121454 D$h1
- 121560 L$hdH3
- 121654 D$h1
- 121760 L$hdH3
- 122440 AUATUSH
- 122706 []A\A]
- 122722 DOWN
- 123124 =g~!
- 123150 =S~!
- 123245 =v}!
- 123342 SLAV
- 123464 =Gn!
+   4741 libpthread.so.0
+   4761 _ITM_deregisterTMCloneTable
+   5015 _Jv_RegisterClasses
+   5041 _ITM_registerTMCloneTable
+   5073 write
+   5101 send
+   5106 read
+   5113 recv
+   5120 __errno_location
+   5141 accept
+   5150 sigaction
+   5162 fork
+   5167 connect
+   5177 open
+   5204 close
+   5212 libc.so.6
+   5224 socket
+   5233 __printf_chk
+   5250 exit
+   5255 sprintf
+   5265 optind
+   5274 __strdup
+   5305 perror
+   5314 __fdelt_chk
+   5330 strncpy
+   5340 puts
+   5345 __stack_chk_fail
+   5366 listen
+   5375 select
+   5404 realloc
+   5414 strtol
+   5423 calloc
+   5432 strlen
+   5441 openlog
+   5451 writev
+   5460 bind
+   5465 memcmp
+   5474 __syslog_chk
+   5511 getsockopt
+   5524 getopt
+   5533 shutdown
+   5544 poll
+   5551 stdout
+   5560 memcpy
+   5567 __vsnprintf_chk
+   5607 strtoul
+   5617 setsockopt
+   5632 malloc
+   5641 strcat
+   5650 strcasecmp
+   5663 __ctype_b_loc
+   5701 optarg
+   5710 ioctl
+   5716 __snprintf_chk
+   5735 strncasecmp
+   5751 usleep
+   5760 gettimeofday
+   5775 __memcpy_chk
+   6012 strchr
+   6021 getsockname
+   6035 __vfprintf_chk
+   6054 __cxa_finalize
+   6073 __sprintf_chk
+   6111 memmove
+   6121 strerror
+   6132 __libc_start_main
+   6154 closelog
+   6165 snprintf
+   6176 free
+   6203 _edata
+   6212 __bss_start
+   6226 _end
+   6233 _IO_stdin_used
+   6252 __gmon_start__
+   6271 GLIBC_2.2.5
+   6305 GLIBC_2.3
+   6317 GLIBC_2.14
+   6332 GLIBC_2.15
+   6345 GLIBC_2.4
+   6357 GLIBC_2.3.4
+  40440 AWAVE1
+  40447 AUATA
+  43067 []A\A]A^A_
+  43227 Lc-"
+  43257 D;5f
+  46260 AWAVH
+  46273 AUAT
+  46335 D$X1
+  46344 t$ L
+  46351 l$0I
+  46433 L$L1
+  46624 L$(L
+  46631 D$ H
+  47031 $H+T$
+  47276 D$XdH3
+  47317 h[]A\A]A^A_
+  47400 AWAV
+  47411 AUATI
+  47453 D$X1
+  47507 l$01
+  47525 T$8H
+  47555 L$0f
+  50121 L$8H
+  50270 T$ 1
+  50512 t$@H
+  50565 D$2P
+  50573 D$;PD
+  50602 L$D1
+  52260 AWAVAUATUSH
+  52323 D$X1
+  52420 t$0H
+  52464 t$HfD
+  52573 D$FL
+  53067 |$HH
+  53174 L$ f
+  53407 L$ H
+  53436 D$*PD
+  53445 L$31
+  53473 T$XdH3
+  53520 h[]A\A]A^A_
+  53642 d$0L
+  53724 \$@E1
+  55603 tiUSH
+  56000 ATUH
+  56101 []A\
+  56153 t$(H
+  56160 T$0H
+  56165 L$8L
+  56172 D$@L
+  56177 L$Ht7
+  56205 )D$P
+  56212 )L$`
+  56217 )T$p
+  56473 T$0H
+  56500 L$8L
+  56505 D$@L
+  56512 L$Ht7
+  56520 )D$P
+  56525 )L$`
+  56532 )T$p
+  56773 T$0H
+  57000 L$8L
+  57005 D$@L
+  57012 L$Ht7
+  57020 )D$P
+  57025 )L$`
+  57032 )T$p
+  57313 L$8L
+  57320 D$@L
+  57325 L$Ht7
+  57333 )D$P
+  57340 )L$`
+  57345 )T$p
+  60000 ATUI
+  60132 []A\
+ 117000 AUATUSH
+ 117177 []A\A]
+ 117324 []A\
+ 117376 []A\
+ 117431 AWAVI
+ 117440 AUATUSH
+ 117721 []A\A]A^A_
+ 120011 AWAVE1
+ 120020 AUATI
+ 120261 []A\A]A^A_
+ 120374 D$h1
+ 120502 L$hdH3
+ 120574 D$h1
+ 120700 L$hdH3
+ 121320 AUATUSH
+ 121567 []A\A]
+ 121602 DOWN
+ 121644 =7r!
+ 121670 =#r!
+ 121724 =Gq!
+ 121750 =3q!
+ 122222 SLAV
+ 122310 =So!
+ 122360 AWAV
+ 122367 AUATI
+ 122411 =r`!
+ 122435 -^`!
+ 123034 L;l$
+ 123213 ([]A\A]A^A_
  123500 AWAV
- 123507 AUATUSH
- 123531 ="n!
- 124004 5wm!
- 124036 =]m!
- 124154 L;d$
- 124332 ([]A\A]A^A_
- 124544 =Wk!
- 124570 =Ck!
- 124620 AWAV
- 124627 AUATI
- 124655 D$$H
- 125205 D$$H
- 125311 H;l$
- 125515 D$(H
- 125523 8[]A\A]A^A_
- 125560 AWAVAUATI
- 126163 []A\A]A^A_
- 126640 AUAT
- 127052 []A\A]
- 127132 D$h1
- 127221 L$hdH3
- 127600 AWAVA
- 127607 AUATI
- 130113 $xJH
- 130277 []A\A]A^A_
- 130700 ATUSH
- 131066 []A\
- 131220 ATUf
- 131304 |$X1
- 131313 T$ H
- 131344 T$0H
- 131401 D$HH
- 131504 L$XdH3
- 131525 `[]A\
- 131540 AWAVI
- 131547 AUATA
- 131625 |$PL
- 131632 D$,1
- 132124 l$`L
- 132174 \$0f
- 132404 []A\A]A^A_
- 132545 D$a<
- 132564 to<>
- 132600 D$cA;F
- 132671 f;D$du
- 132726 F Hc
- 132752 f;D$eu
- 133122 A9N I
- 133140 NN A
- 133145 N Hc
- 133257 F Hc
- 133352 D$X1
- 133361 T$FH
- 133403 T$pH
- 133432 t$Df
- 133437 L$JH
- 133510 D$Lf
- 133577 D$1f
- 133611 \$XdH3
- 133737 D$H1
- 134002 t$ f
- 134124 L$HdH3
- 134273 D$H1
- 134302 D$@H
- 134467 L$HdH3
- 134633 D$H1
- 134642 D$@H
- 135027 L$HdH3
- 135225 D$81
- 135351 L$8dH3
- 135506 D$81
- 135651 L$8dH3
- 136001 T$@dH
- 136017 D$h1
- 136075 D$Et
- 136113 D$GH
- 136120 T$OM
- 136141 D$WH
- 136255 D$ '
- 136325 \$hdH3
- 136473 D$H1
- 136502 D$@H
- 136667 L$HdH3
- 137026 D$81
- 137171 L$8dH3
- 137365 D$81
- 137511 L$8dH3
- 137644 D$81
- 140025 L$8dH3
- 140140 ATUI
- 140171 \$0H
- 140423 []A\
- 140554 \$0dH
- 140775 []A\
- 141020 ATUD
- 141107 \$@dH
- 141137 D$0f
- 141144 t$4f
- 141151 L$8H
- 141210 D$0f
- 141371 []A\
- 141544 D$81
- 141666 D$0H
- 141710 L$8dH3
- 141772 D$H1
- 142012 t$ f
- 142017 D$ H
- 142175 L$HdH3
- 142332 D$X1
- 142364 D$@H
- 142511 T$CH
- 142521 L$XdH3
- 142647 D$X1
- 142705 D$@H
- 143056 T$EH
- 143067 L$XdH3
- 143232 D$H1
- 143252 t$ f
- 143257 D$ H
- 143414 L$HdH3
- 143577 D$81
- 143653 D$0	
- 143757 L$8dH3
- 144110 D$x1
- 144143 D$0H
- 144214 D$ A
- 144260 T$1H
- 144270 T$9H
- 144301 T$AH
- 144312 T$IH
- 144323 T$QH
- 144334 T$YH
- 144345 T$aH
- 144356 T$iH
- 144367 L$xdH3
- 144530 D$H1
- 144563 D$0H
- 144634 D$ 	
- 144674 T$1H
- 144704 L$HdH3
- 145054 D$X1
- 145153 D$@H
- 145261 T$CH
- 145272 L$XdH3
- 145430 D$81
- 145463 D$0H
- 145602 T$5f
- 145613 L$8dH3
- 145750 D$81
- 146003 D$0H
- 146105 D$1f
- 146127 L$8dH3
- 146311 D$0dH
- 146327 t$81
- 146335 L$1H
- 146434 T$8dH3
- 146557 D$81
- 146675 L$8dH3
- 147024 D$81
- 147154 L$8dH3
- 147220 ATUI
- 147252 l$0H
- 147433 D$1H
- 147546 []A\
- 150000 AUATA
- 150034 l$0dH
- 150305 []A\A]
- 150366 D$81
- 150374 T$6H
- 150423 D$0A
- 150436 t$4f
- 150537 L$8dH3
- 150642 D$H1
- 150651 D$0H
- 150666 D$1f
- 150673 t$5f
- 150735 L$7L
- 150742 T$?H
- 151021 L$HdH3
- 151106 D$81
- 151114 T$6H
- 151143 D$0A
- 151156 t$4f
- 151257 L$8dH3
- 151344 D$H1
- 151364 t$ f
- 151371 D$ H
- 151474 L$HdH3
+ 123507 AUATI
+ 123535 D$$H
+ 124107 D$$H
+ 124210 L;l$
+ 124423 D$(H
+ 124431 8[]A\A]A^A_
+ 124500 AWAVAUATI
+ 125104 []A\A]A^A_
+ 125560 AUAT
+ 125772 []A\A]
+ 126052 D$h1
+ 126141 L$hdH3
+ 126520 AWAVA
+ 126527 AUATI
+ 127032 $xJA
+ 127214 []A\A]A^A_
+ 127620 ATUSH
+ 130006 []A\
+ 130140 ATUf
+ 130224 |$X1
+ 130233 T$ H
+ 130264 T$0H
+ 130321 D$HH
+ 130424 L$XdH3
+ 130445 `[]A\
+ 130460 AWAVI
+ 130467 AUATA
+ 130545 |$PL
+ 130552 D$,1
+ 131046 l$`L
+ 131116 \$0f
+ 131123 D$4f.
+ 131334 []A\A]A^A_
+ 131505 D$a<
+ 131524 to<>
+ 131540 D$cA;F
+ 131631 f;D$du
+ 131666 F Hc
+ 131712 f;D$eu
+ 132062 A9N I
+ 132100 NN A
+ 132105 N Hc
+ 132217 F Hc
+ 132312 D$X1
+ 132321 T$FH
+ 132343 T$pH
+ 132372 t$Df
+ 132377 L$JH
+ 132450 D$Lf
+ 132537 D$1f
+ 132551 \$XdH3
+ 132677 D$H1
+ 132742 t$ f
+ 133064 L$HdH3
+ 133233 D$H1
+ 133242 D$@H
+ 133427 L$HdH3
+ 133573 D$H1
+ 133602 D$@H
+ 133767 L$HdH3
+ 134165 D$81
+ 134311 L$8dH3
+ 134446 D$81
+ 134611 L$8dH3
+ 134741 T$@dH
+ 134757 D$h1
+ 135035 D$Et
+ 135053 D$GH
+ 135060 T$OM
+ 135101 D$WH
+ 135215 D$ '
+ 135265 \$hdH3
+ 135433 D$H1
+ 135442 D$@H
+ 135627 L$HdH3
+ 135766 D$81
+ 136131 L$8dH3
+ 136325 D$81
+ 136451 L$8dH3
+ 136604 D$81
+ 136765 L$8dH3
+ 137100 ATUI
+ 137131 \$0H
+ 137363 []A\
+ 137514 \$0dH
+ 137735 []A\
+ 137760 ATUD
+ 140047 \$@dH
+ 140077 D$0f
+ 140104 t$4f
+ 140111 L$8H
+ 140150 D$0f
+ 140331 []A\
+ 140504 D$81
+ 140626 D$0H
+ 140650 L$8dH3
+ 140732 D$H1
+ 140752 t$ f
+ 140757 D$ H
+ 141135 L$HdH3
+ 141272 D$X1
+ 141324 D$@H
+ 141451 T$CH
+ 141461 L$XdH3
+ 141607 D$X1
+ 141645 D$@H
+ 142016 T$EH
+ 142027 L$XdH3
+ 142172 D$H1
+ 142212 t$ f
+ 142217 D$ H
+ 142354 L$HdH3
+ 142537 D$81
+ 142613 D$0	
+ 142717 L$8dH3
+ 143050 D$x1
+ 143103 D$0H
+ 143154 D$ A
+ 143220 T$1H
+ 143230 T$9H
+ 143241 T$AH
+ 143252 T$IH
+ 143263 T$QH
+ 143274 T$YH
+ 143305 T$aH
+ 143316 T$iH
+ 143327 L$xdH3
+ 143470 D$H1
+ 143523 D$0H
+ 143574 D$ 	
+ 143634 T$1H
+ 143644 L$HdH3
+ 144014 D$X1
+ 144113 D$@H
+ 144221 T$CH
+ 144232 L$XdH3
+ 144370 D$81
+ 144423 D$0H
+ 144542 T$5f
+ 144553 L$8dH3
+ 144710 D$81
+ 144743 D$0H
+ 145045 D$1f
+ 145067 L$8dH3
+ 145251 D$0dH
+ 145267 t$81
+ 145275 L$1H
+ 145374 T$8dH3
+ 145517 D$81
+ 145635 L$8dH3
+ 145764 D$81
+ 146114 L$8dH3
+ 146160 ATUI
+ 146212 l$0H
+ 146373 D$1H
+ 146506 []A\
+ 146740 AUATA
+ 146774 l$0dH
+ 147245 []A\A]
+ 147326 D$81
+ 147334 T$6H
+ 147363 D$0A
+ 147376 t$4f
+ 147477 L$8dH3
+ 147602 D$H1
+ 147611 D$0H
+ 147626 D$1f
+ 147633 t$5f
+ 147675 L$7L
+ 147702 T$?H
+ 147761 L$HdH3
+ 150046 D$81
+ 150054 T$6H
+ 150103 D$0A
+ 150116 t$4f
+ 150217 L$8dH3
+ 150304 D$H1
+ 150324 t$ f
+ 150331 D$ H
+ 150434 L$HdH3
+ 150557 D$H1
+ 150622 t$ f
+ 150722 L$HdH3
+ 151044 D$H1
+ 151064 t$ f
+ 151071 D$ H
+ 151107 D$$	
+ 151174 L$HdH3
+ 151317 D$H1
+ 151431 D$0H
+ 151443 D$@H
+ 151477 L$HdH3
  151617 D$H1
- 151662 t$ f
- 151762 L$HdH3
- 152104 D$H1
- 152124 t$ f
- 152131 D$ H
- 152147 D$$	
- 152234 L$HdH3
- 152357 D$H1
- 152471 D$0H
- 152503 D$@H
- 152537 L$HdH3
- 152657 D$H1
- 152723 t$ f
- 152730 T$"D
- 153053 L$HdH3
- 153204 D$H1
- 153224 t$ f
- 153231 D$ H
- 153356 L$HdH3
- 153537 D$81
- 153654 L$8dH3
- 154004 D$81
- 154165 L$8dH3
- 154357 D$81
- 154474 L$8dH3
- 154624 D$81
- 155005 L$8dH3
- 155177 D$81
- 155314 L$8dH3
- 155444 D$81
- 155625 L$8dH3
- 156037 D$0H
- 156145 D$1H
- 156156 t$2H
- 156172 D$2H
- 156444 L$A@
- 156451 t$@L
- 156467 |$IH
- 156500 D$AI
- 157117 D$81
- 157234 L$8dH3
- 157364 D$81
- 157545 L$8dH3
- 157716 D$X1
- 157751 D$0H
- 160022 D$ !
- 160053 D$1H
- 160060 T$9H
- 160075 D$AH
- 160102 T$IH
- 160120 L$XdH3
- 160277 D$81
- 160414 L$8dH3
- 160564 D$81
- 160745 L$8dH3
- 161103 D$H1
- 161157 t$ f
- 161164 T$"D
- 161301 L$HdH3
- 161432 D$H1
- 161464 D$ H
- 161476 t$ H
- 161525 D$(H
- 161623 L$HdH3
- 161765 D$H1
- 162070 D$"H
- 162150 L$HdH3
- 162312 D$H1
- 162344 D$ H
- 162356 t$ H
- 162405 D$(H
- 162503 L$HdH3
- 162645 D$H1
- 162750 D$"H
- 163030 L$HdH3
- 163164 D$X1
- 163313 D$@H
- 163361 L$XdH3
- 163512 D$H1
- 163544 D$ H
- 163556 t$ H
- 163605 D$(H
- 163702 L$HdH3
- 164052 D$H1
- 164104 D$ H
- 164116 t$ H
- 164145 D$(H
- 164242 L$HdH3
- 164414 D$X1
- 164513 D$@H
- 164606 D$DH
- 164616 D$Lf
- 164631 L$XdH3
- 164767 D$H1
- 165043 t$ f
- 165050 T$"D
- 165123 D$@	
- 165175 L$HdH3
- 165325 D$H1
- 165375 D$(H
- 165515 L$HdH3
- 165637 D$H1
- 165702 T$`@
- 165714 t$ H
- 165721 D$(H
- 166055 L$HdH3
- 166204 D$81
- 166365 L$8dH3
- 166535 T$`f
- 166624 L$dH
- 166636 D$eD
- 166643 L$ff
- 167047 D$@H
- 167131 D$Af
- 167311 T$`H
- 167316 t$ dH
- 167334 D$H1
- 167442 D$ fD
- 167450 L$"H
- 167506 D$@	
- 167540 L$HdH3
- 167672 D$X1
- 167724 D$@H
- 170051 T$CH
- 170061 L$XdH3
- 170231 ATUA
- 171122 tYAUATA
- 171231 []A\A]
- 171246 []A\A]
- 171541 []A\
- 172131 ARASAPL
- 172640 AWAVI
- 172647 AUATI
- 172721 D$81
- 173010 "wEH
- 173202 <?wjH
- 173362 \$8dH3
- 173413 H[]A\A]A^A_
- 173657 |$ H
- 173737 |$ H
- 174103 ATUStCI
- 174207 []A\
- 174500 ATUI
- 174572 <$5tq)
- 174601 []A\
- 174770 []A\
- 175401 D$81
- 175474 T$8dH3
- 176060 AUATI
- 176170 []A\A]
- 176224 []A\A]
- 176467 t H;w
- 176740 AWAVI
- 176747 AUAT
- 177127 []A\A]A^A_
- 177160 AVATI
- 177302 []A\A^
- 177363 tgAUATI
- 177526 []A\A]
- 177567 []A\A]
- 177623 t.ATI
- 177677 []A\
- 177720 AUATI
- 200301 []A\A]
- 201060 AVAUI
- 201067 ATUSH
- 201326 \$ I
- 201351 ;	u[H
- 201402 	uCA
- 201407 <$	u<
- 201467 ]A\A]A^
- 201556 []A\A]A^
- 201603 ]A\A]A^
- 201640 AVAUATUI
- 202313 5 	!
- 202346 ]A\A]A^
- 202437 []A\A]A^
- 202463 ]A\A]A^
- 202621 ;	u&H
- 203260 []A\
- 204200 AVAUD
- 204210 ATUA
- 204423 []A\A]A^
- 204472 []A\A]A^
- 204532 []A\A]A^
- 204571 []A\A]A^
- 204632 []A\A]A^
- 204670 []A\A]A^
- 205542 AVAUATUS
- 205650 E L9
- 205720 ]A\A]A^
- 205774 ]A\A]A^
- 206020 AVAUATUI
- 206446 []A\A]A^
- 206540 AVAUATUI
- 206575 D$(1
- 207254 t$(dH34%(
- 207277 0[]A\A]A^
- 207636 []A\
- 207660 []A\
- 207700 ATUI
- 207777 []A\
- 210020 AWAVAUATUSH
- 210212 []A\A]A^A_
- 210254 []A\A]A^A_
- 210370 ATU1
- 210517 D$ I
- 210541 []A\
- 211760 ATUSH
- 212053 []A\
- 212240 ATUI
- 212422 dH3<%(
- 212444  []A\
- 213440 AUATI
- 213627 t'<	u
- 213651 []A\A]
- 213743 tqAUATI
- 214062 []A\A]
- 214117 []A\A]
- 214257 $<6tD<7t(<5t
- 214274 []A\
- 214333 []A\
- 214355 []A\
- 214410 []A\
+ 151663 t$ f
+ 151670 T$"D
+ 152013 L$HdH3
+ 152144 D$H1
+ 152164 t$ f
+ 152171 D$ H
+ 152316 L$HdH3
+ 152477 D$81
+ 152614 L$8dH3
+ 152744 D$81
+ 153125 L$8dH3
+ 153317 D$81
+ 153434 L$8dH3
+ 153564 D$81
+ 153745 L$8dH3
+ 154137 D$81
+ 154254 L$8dH3
+ 154404 D$81
+ 154565 L$8dH3
+ 154777 D$0H
+ 155105 D$1H
+ 155116 t$2H
+ 155132 D$2H
+ 155404 L$A@
+ 155411 t$@L
+ 155427 |$IH
+ 155440 D$AI
+ 156057 D$81
+ 156174 L$8dH3
+ 156324 D$81
+ 156505 L$8dH3
+ 156656 D$X1
+ 156711 D$0H
+ 156762 D$ !
+ 157013 D$1H
+ 157020 T$9H
+ 157035 D$AH
+ 157042 T$IH
+ 157060 L$XdH3
+ 157237 D$81
+ 157354 L$8dH3
+ 157524 D$81
+ 157705 L$8dH3
+ 160043 D$H1
+ 160117 t$ f
+ 160124 T$"D
+ 160241 L$HdH3
+ 160372 D$H1
+ 160424 D$ H
+ 160436 t$ H
+ 160465 D$(H
+ 160563 L$HdH3
+ 160725 D$H1
+ 161030 D$"H
+ 161110 L$HdH3
+ 161252 D$H1
+ 161304 D$ H
+ 161316 t$ H
+ 161345 D$(H
+ 161443 L$HdH3
+ 161605 D$H1
+ 161710 D$"H
+ 161770 L$HdH3
+ 162124 D$X1
+ 162253 D$@H
+ 162321 L$XdH3
+ 162452 D$H1
+ 162504 D$ H
+ 162516 t$ H
+ 162545 D$(H
+ 162642 L$HdH3
+ 163012 D$H1
+ 163044 D$ H
+ 163056 t$ H
+ 163105 D$(H
+ 163202 L$HdH3
+ 163354 D$X1
+ 163453 D$@H
+ 163546 D$DH
+ 163556 D$Lf
+ 163571 L$XdH3
+ 163727 D$H1
+ 164003 t$ f
+ 164010 T$"D
+ 164063 D$@	
+ 164135 L$HdH3
+ 164265 D$H1
+ 164335 D$(H
+ 164455 L$HdH3
+ 164577 D$H1
+ 164642 T$`@
+ 164654 t$ H
+ 164661 D$(H
+ 165015 L$HdH3
+ 165144 D$81
+ 165325 L$8dH3
+ 165475 T$`f
+ 165564 L$dH
+ 165576 D$eD
+ 165603 L$ff
+ 166007 D$@H
+ 166071 D$Af
+ 166251 T$`H
+ 166256 t$ dH
+ 166274 D$H1
+ 166402 D$ fD
+ 166410 L$"H
+ 166446 D$@	
+ 166500 L$HdH3
+ 166632 D$X1
+ 166664 D$@H
+ 167011 T$CH
+ 167021 L$XdH3
+ 167171 ATUA
+ 170102 tYAUATA
+ 170211 []A\A]
+ 170226 []A\A]
+ 170521 []A\
+ 171111 ARASAPL
+ 171620 AWAVI
+ 171627 AUATI
+ 171702 D$81
+ 172005 "wHL
+ 172203 <?whH
+ 172361 \$8dH3
+ 172412 H[]A\A]A^A_
+ 172653 L$ I
+ 172736 L$ I
+ 173063 ATUStCI
+ 173167 []A\
+ 173460 ATUH
+ 173646 5t?D)
+ 173654 []A\
+ 173761 []A\
+ 174361 D$81
+ 174454 T$8dH3
+ 175040 AUATI
+ 175150 []A\A]
+ 175204 []A\A]
+ 175447 t H;w
+ 175720 AWAVI
+ 175727 AUAT
+ 176104 []A\A]A^A_
+ 176140 AVATI
+ 176262 []A\A^
+ 176343 tgAUATI
+ 176506 []A\A]
+ 176547 []A\A]
+ 176603 t.ATI
+ 176657 []A\
+ 176700 AUATI
+ 177261 []A\A]
+ 200040 AVAUI
+ 200047 ATUSH
+ 200311 \$ I
+ 200331 ;	u[H
+ 200362 	uCA
+ 200367 <$	u<
+ 200447 ]A\A]A^
+ 200536 []A\A]A^
+ 200563 ]A\A]A^
+ 200620 AVAUATUI
+ 201326 ]A\A]A^
+ 201417 []A\A]A^
+ 201443 ]A\A]A^
+ 201601 ;	u&H
+ 202240 []A\
+ 203160 AVAUD
+ 203170 ATUI
+ 203343 []A\A]A^
+ 203402 []A\A]A^
+ 203442 []A\A]A^
+ 203503 []A\A]A^
+ 203541 []A\A]A^
+ 203642 D$(M
+ 203647 d$ M
+ 203665 []A\A]A^
+ 204602 AVAUATUS
+ 204710 E L9
+ 204760 ]A\A]A^
+ 205031 ]A\A]A^
+ 205060 AVAUATUI
+ 205516 []A\A]A^
+ 205620 AVAUATUI
+ 205655 D$(1
+ 206336 t$(dH34%(
+ 206357 0[]A\A]A^
+ 206716 []A\
+ 206740 []A\
+ 206760 ATUI
+ 207057 []A\
+ 207100 AWAVAUATUSH
+ 207272 []A\A]A^A_
+ 207334 []A\A]A^A_
+ 207360 ATUS
+ 207437 []A\
+ 207552 D$ I
+ 211020 ATUSH
+ 211113 []A\
+ 211300 ATUI
+ 211462 dH3<%(
+ 211504  []A\
+ 212520 AUATI
+ 212707 t'<	u
+ 212731 []A\A]
+ 213023 tqAUATI
+ 213142 []A\A]
+ 213177 []A\A]
+ 213220 ATUH
+ 213357 <5t7[]A\
+ 213422 []A\
+ 213462 []A\
+ 213565 []A\
+ 213620 ATUI
+ 214034  []A\
+ 214060 ATUI
+ 214256 []A\
  214460 ATUI
- 214674  []A\
- 214720 ATUI
- 215116 []A\
- 215320 ATUI
- 215500 AWAVAUATUSH
- 215531 D$(1
- 215675 L$ H
- 215772 D$$E1
- 216022 E HcL$$I
- 216044 D;t$ 
- 216306 |$(dH3<%(
- 216336 8[]A\A]A^A_
- 217073 %tZH
- 220060 AWAVA
- 220067 AUATI
- 220137 D$81
- 220153 T$/H
- 220160 L$0D
- 220202 T$0Lc
- 220305 l$4H
- 220326 $HcT$
- 220363 T$09
- 220645 L$8dH3
- 220666 H[]A\A]A^A_
- 221000 AWAVI
- 221007 AUATUSH
- 221353 D$ A
- 221364 D$(L
- 221400 []A\A]A^A_
- 221420 AWAVAUATI
- 221632 D$0H
- 221644 \$ L
- 221660 d$,M
- 222164 d$,L
- 222171 |$ L
- 222277 []A\A]A^A_
- 222450 UStEH
- 222600 ATU1
- 223460 AWAVAUATI
- 223514 D$h1
- 223550 D$?	
- 223721 D$=L
- 223743 D$>H
- 223750 D$ H
- 223755 D$<H
- 223762 D$(H
- 223767 D$?H
- 224060 L$hdH3
- 224107 x[]A\A]A^A_
- 224132 D$(H
- 224137 D$@I
- 224150 D$PH
- 224162 t$PH
- 224201 D$HI
- 224333 D$@I
- 224362 D$ H
- 224367 D$@I
- 224543 t-USH
- 224640 AWAVAUATUSH
- 225454 ([]A\A]A^A_
- 225520 ATUA
- 225621 []A\
- 226263 ATUStGH
- 226364 []A\
- 226420 AWAVAUATUSH
- 226746 t$\H
- 226753 t$@H
- 226776 |$PL
- 227131 D$RA
- 227141 D$TA
- 227160 D$XA
- 227501 []A\A]A^A_
- 227557 t$PA
- 227572 /var/runA
- 227623 D$PH
- 227640 /sdp
- 227736 D$TA
- 230022 L$ A
- 230111 |$ L
- 230230 T$"f
- 230420 AWAVAUATUSH
- 230451 D$(1
- 230625 L$(dH3
- 230655 8[]A\A]A^A_
- 231520 AWAVA
- 231527 AUATI
- 231565 D$(1
- 231762 L$(dH3
- 232005 8[]A\A]A^A_
- 232300 AUATUSH
- 232530 []A\A]
- 233360 AVAUATUSH
- 233411 D$(1
- 233555 L$(dH3
- 233604 0[]A\A]A^
- 234031 t=<x
- 234460 AWAVAUATI
- 234534 D$H1
- 234711 D$0H
- 234730 D$(H
- 234762 D$4H
- 234767 D$DH
- 235001 t$4H
- 235024 L$0L
- 235447 T$DH
- 235525 L$HdH3
- 235556 X[]A\A]A^A_
- 236060 AWAVAUATUSH
- 236111 D$h1
- 236412 D$,H
- 236417 D$H1
- 236426 t$ M
- 236542 \$\H
- 236567 \$XM
- 236604 t$,H
- 236611 |$ L
- 236625 t$(H
- 236646 D$0H
- 237026 |$8H
- 237201 L$hdH3
- 237231 x[]A\A]A^A_
- 237504 |$8H
- 237551 AWAVAUATUSH
- 240036 V(Hc
- 240142 []A\A]A^A_
- 240371 AWAVAUATUSH
- 240772 []A\A]A^A_
- 241251 AWAVAUATUSH
- 241540 W(Lc
- 241714 []A\A]A^A_
- 242200 AWAVAUATUSH
- 242341 fA9U
- 242423 E E1
- 242534 []A\A]A^A_
- 244500 AWAVAUATUSH
- 244534 D$x1
- 244763 \$xdH3
- 245017 []A\A]A^A_
- 245241 D$ B
- 245257 D$(H
- 245264 D$8H
- 245306 D$,H
- 245313 D$TH
- 245411 D$`D
- 245416 d$lH
- 245440 d$hM
- 245471 t$,H
- 245476 |$ L
- 245522 t$(L
- 245527 D$0L
- 245656 |$@f
- 245676 d$HH
- 245706 L$LH9
- 246271 T$HM
- 246330 D$LD
- 246335 d$LH
- 246342 |$@H
- 246347 L$XH
- 246354 T$SL
- 246430 D$\1
- 246463 t$@H
- 246500 l$HH
- 247011 D$8L
- 247100 AWAVAUATI
- 247167 \$$H
- 250045 T$$H
- 250076 |$(H
- 250150 []A\A]A^A_
- 250304 8[]A\A]A^A_
- 250420 AWAVI
- 250427 AUAT
- 251072 []A\A]A^A_
- 251122 []A\A]A^A_
- 251460 AWAVA
- 251467 AUATL
- 251612 []A\A]A^A_
- 251710 rctest - RFCOMM testing
- 251740 Usage:
- 251750 	rctest <mode> [options] [bdaddr]
- 252020 Modes:
- 252027 	-r listen and receive
- 252056 	-w listen and send
- 252102 	-d listen and dump incoming data
- 252144 	-s connect and send
- 252171 	-u connect and receive
- 252221 	-n connect and be silent
- 252253 	-c connect, disconnect, connect, ...
- 252321 	-m multiple connects
- 252347 	-a automated test (receive hcix as parameter)
- 252430 Options:
- 252441 	[-b bytes] [-i device] [-P channel] [-U uuid]
- 252520 	[-L seconds] enabled SO_LINGER option
- 252567 	[-W seconds] enable deferred setup
- 252633 	[-B filename] use data packets from file
- 252705 	[-O filename] save received data to file
- 252757 	[-N num] number of frames to send
- 253022 	[-C num] send num frames before delay (default = 1)
- 253107 	[-D milliseconds] delay after sending num frames (default = 0)
- 253207 	[-Y priority] socket priority
- 253246 	[-A] request authentication
- 253303 	[-E] request encryption
- 253334 	[-S] secure connection
- 253364 	[-M] become master
- 253410 	[-T] enable timestamps
- 253440 Failed to open file to save recv data
- 253510 %s%ld bytes in %.2f sec, %.2f kB/s
- 253560 Can't set RFCOMM link mode: %s (%d)
- 253630 Can't enable deferred setup : %s (%d)
- 253700 Can not listen on the socket: %s (%d)
- 253750 Can't get socket name: %s (%d)
- 254010 Waiting for connection on channel %d ...
- 254070 Can't get RFCOMM connection information: %s (%d)
- 254160 Can't set socket priority: %s (%d)
- 254230 Can't get socket priority: %s (%d)
- 254300 Connect from %s [handle %d, class 0x%02x%02x%02x, priority %d]
- 254400 Can't enable SO_LINGER: %s (%d)
- 254440 Connected [handle %d, class 0x%02x%02x%02x, priority %d]
- 254540 rdscuwmna:b:i:P:U:B:O:N:MAESL:W:C:D:Y:T
- 254610 Failed to open file to save data
- 254651 Receiving ...
- 254667 Received %d bytes
- 254711 Exit
- 254716 Sending ...
- 254732 Open failed: %s (%d)
- 254757 Send failed: %s (%d)
- 255004 Closing channel ...
- 255030 Close failed: %m
- 255051 Done
- 255056 Read failed: %s (%d)
- 255103 [%ld.%ld] 
- 255116 Can't create socket: %s (%d)
- 255153 Can't bind socket: %s (%d)
- 255206 Accept failed: %s (%d)
- 255235 Waiting for %d seconds
- 255264 Disconnect: %m
- 255303 Can't get channel number
- 255334 Can't connect: %s (%d)
- 255376 Can't allocate data buffer
- 255431 rctest
- 256046 P?%2.2X:%2.2X:%2.2X:%2.2X:%2.2X:%2.2X
- 256120 Ceva, Inc. (formerly Parthus Technologies, Inc.)
- 256210 Mitsubishi Electric Corporation
- 256250 NXP Semiconductors (formerly Philips Semiconductors)
- 256340 Macronix International Co. Ltd.
- 256400 Computer Access Technology Corporation (CATC)
- 256460 Renesas Electronics Corporation
- 256520 Integrated System Solution Corp.
- 256570 Matsushita Electric Industrial Co., Ltd.
- 256650 BlackBerry Limited (formerly Research In Motion)
- 256740 Integrated Silicon Solution Taiwan, Inc.
- 257020 CONWISE Technology Corporation Ltd
- 257070 Continental Automotive Systems
- 257130 Sony Ericsson Mobile Communications
- 257200 Harman International Industries, Inc.
- 257250 Realtek Semiconductor Corporation
- 257320 Beautiful Enterprise Co., Ltd.
- 257360 Summit Data Communications, Inc.
- 257430 ShangHai Super Smart Electronics Co. Ltd.
- 257510 Sports Tracking Technologies Ltd.
- 257560 DeLorme Publishing Company, Inc.
- 257630 Topcorn Positioning Systems, LLC
- 257700 Gimbal Inc. (formerly Qualcomm Labs, Inc. and Qualcomm Retail Solutions, Inc.)
- 260020 Telit Wireless Solutions GmbH (Formerly Stollman E+V GmbH)
- 260120 Advanced PANMOBIL Systems GmbH & Co. KG
- 260170 i.Tech Dynamic Global Distribution Ltd.
- 260240 Jiangsu Toppower Automotive Electronics Co., Ltd.
- 260330 Kensington Computer Products Group
- 260400 Ingenieur-Systemgruppe Zahn GmbH
- 260450 Clarinox Technologies Pty. Ltd.
- 260510 Qualcomm Innovation Center, Inc. (QuIC)
- 260560 AMICCOM Electronics Corporation
- 260620 Shenzhen Excelsecu Data Technology Co.,Ltd
- 260700 Taixingbang Technology (HK) Co,. LTD.
- 260750 Qualcomm Connected Experiences, Inc.
- 261020 Eden Software Consultants Ltd.
- 261060 Aether Things Inc. (formerly Morse Project Inc.)
- 261150 PLUS Locations Systems Pty Ltd
- 261210 Ubiquitous Computing Technology Corporation
- 261270 HiSilicon Technologies Co., Ltd.
- 261340 Openbrain Technologies, Co., Ltd.
- 261410 Changzhou Yongse Infotech Co., Ltd
- 261460 Cypress Semiconductor Corporation
- 261530 Seed Labs, Inc. (formerly ETC sp. z.o.o.)
- 261610 Alpine Electronics (China) Co., Ltd
- 261660 Huizhou Desay SV Automotive CO., LTD.
- 261730 Anhui Huami Information Technology Co., Ltd.
- 262010 Qingdao Yeelink Information Technology Co., Ltd.
- 262100 Milwaukee Tool (formerly Milwaukee Electric Tools)
- 262170 Connovate Technology Private Limited
- 262240 Gecko Health Innovations, Inc.
- 262300 TRON Forum (formerly T-Engine Forum)
- 262350 Cochlear Bone Anchored Solutions AB
- 262420 Hong Kong HunterSun Electronic Limited
- 262470 Chengdu Synwing Technology Ltd
- 262530 Koninklijke Philips Electronics N.V.
- 262600 Minelab Electronics Pty Limited
- 262640 Advanced Application Design, Inc.
- 262710 Spreadtrum Communications Shanghai Ltd
- 262760 Zebra Technologies Corporation
- 263020 Anyka (Guangzhou) Microelectronics Technology Co, LTD
- 263110 Kontakt Micro-Location Sp. z o.o.
- 263160 Verifone Systems PTe Ltd. Taiwan Branch
- 263230 Huami (Shanghai) Culture Communication CO., LTD
- 263310 Shenzhen SuLong Communication Ltd
- 263360 FengFan (BeiJing) Technology Co, Ltd
- 263430 Beijing CarePulse Electronic Technology Co, Ltd
- 263510 University of Applied Sciences Valais/Haute Ecole Valaisanne
- 263610 Five Interactive, LLC dba Zendo
- 263650 NetEase (Hangzhou) Network co.Ltd.
- 263720 DEKA Research & Development Corp.
- 263770 E.G.O. Elektro-Ger
- 264014 tebau GmbH
- 264030 steute Schaltgerate GmbH & Co. KG
- 264100 HUAWEI Technologies Co., Ltd. ( 
- 264200 Tendyron Corporation ( 
- 264300 HANSHIN ELECTRIC RAILWAY CO.,LTD.
- 264350 Techtronic Power Tools Technology Limited
- 264430 Lenovo (Singapore) Pte Ltd. ( 
- 264520 VASCO Data Security International, Inc.
- 264570 Teva Branded Pharmaceutical Products R&D, Inc.
- 264650 Flint Rehabilitation Devices, LLC
- 264720 Espressif Incorporated ( 
- 265030 Shanghai Frequen Microelectronics Co., Ltd.
- 265110 Lierda Science & Technology Group Co., Ltd.
- 265170 Healthwear Technologies (Changzhou)Ltd
- 265240 iRiding(Xiamen)Technology Co.,Ltd.
- 265310 Medicom Innovation Partner a/s
- 265350 BOLTT Sports technologies Private limited
- 265430 Electronic Temperature Instruments Ltd
- 265500 Shenzhen iMCO Electronic Technology Co.,Ltd
- 265560 Embedded Electronic Solutions Ltd. dba e2Solutions
- 265650 South Silicon Valley Microelectronics
- 265720 ACE CAD Enterprise Co., Ltd. (ACECAD)
- 265766 %2.2X-%2.2X-%2.2X
- 266010 Ericsson Technology Licensing
- 266046 Nokia Mobile Phones
- 266072 Intel Corp.
- 266106 IBM Corp.
- 266120 Toshiba Corp.
- 266136 3Com
- 266143 Microsoft
- 266155 Lucent
- 266164 Motorola
- 266175 Infineon Technologies AG
- 266226 Cambridge Silicon Radio
- 266256 Silicon Wave
- 266273 Digianswer A/S
- 266312 Texas Instruments Inc.
- 266341 Broadcom Corporation
- 266366 Mitel Semiconductor
- 266412 Widcomm, Inc
- 266427 Zeevo, Inc.
- 266443 Atmel Corporation
- 266465 RTX Telecom A/S
- 266505 KC Technology Inc.
- 266530 NewLogic
- 266541 Transilica, Inc.
- 266562 Rohde & Schwarz GmbH & Co. KG
- 266620 TTPCom Limited
- 266637 Signia Technologies, Inc.
- 266671 Conexant Systems Inc.
- 266717 Qualcomm
- 266730 Inventel
- 266741 AVM Berlin
- 266754 BandSpeed, Inc.
- 266774 Mansella Ltd
- 267011 NEC Corporation
- 267031 WavePlus Technology Co., Ltd.
- 267067 Alcatel
- 267077 C Technologies
- 267116 Open Interface
- 267135 R F Micro Devices
- 267157 Hitachi Ltd
- 267173 Symbol Technologies, Inc.
- 267225 Tenovis
- 267235 GCT Semiconductor
- 267257 Norwood Systems
- 267277 MewTel Technology Inc.
- 267326 ST Microelectronics
- 267352 Synopsys, Inc.
- 267371 Red-M (Communications) Ltd
- 267424 Commil Ltd
- 267437 Eclipse (HQ Espana) S.L.
- 267470 Mobilian Corporation
- 267515 Terax
- 267523 Gennum Corporation
- 267546 IPextreme, Inc.
- 267566 Systems and Chips, Inc.
- 267616 Bluetooth SIG, Inc.
- 267642 Seiko Epson Corporation
- 267672 PARROT SA
- 267704 Socket Mobile
- 267722 Atheros Communications, Inc.
- 267757 MediaTek, Inc.
- 267776 Bluegiga
- 270007 Marvell Technology Group Ltd.
- 270045 3DSP Corporation
- 270066 Accel Semiconductor Ltd.
- 270117 Apple, Inc.
- 270133 Staccato Communications, Inc.
- 270171 Avago Technologies
- 270214 APT Licensing Ltd.
- 270237 SiRF Technology
- 270257 Tzero Technologies, Inc.
- 270310 J&M Corporation
- 270330 Free2move AB
- 270345 3DiJoy Corporation
- 270370 Plantronics, Inc.
- 270412 Vizio, Inc.
- 270426 Nordic Semiconductor ASA
- 270457 EM Microelectronic-Marin SA
- 270513 Ralink Technology Corporation
- 270551 Belkin International, Inc.
- 270604 Stonestreet One, LLC
- 270631 Wicentric, Inc.
- 270651 RivieraWaves S.A.S
- 270674 RDA Microelectronics
- 270721 Gibson Guitars
- 270740 MiCommand Inc.
- 270757 Band XI International, LLC
- 271012 Hewlett-Packard Company
- 271042 9Solutions Oy
- 271060 GN Netcom A/S
- 271076 General Motors
- 271115 A&D Engineering, Inc.
- 271143 MindTree Ltd.
- 271161 Polar Electro OY
- 271202 BriarTek, Inc.
- 271221 Sound ID
- 271232 Monster, LLC
- 271247 connectBlue AB
- 271266 Group Sense Ltd.
- 271307 Zomm, LLC
- 271321 Samsung Electronics Co. Ltd.
- 271356 Creative Technology Ltd.
- 271407 Laird Technologies
- 271432 Nike, Inc.
- 271445 lesswire AG
- 271461 MStar Semiconductor, Inc.
- 271513 Hanlynn Technologies
- 271540 A & R Cambridge
- 271560 Seers Technology Co. Ltd
- 271611 Autonet Mobile
- 271630 WuXi Vimicro
- 271645 Sennheiser Communications A/S
- 271703 TimeKeeping Systems, Inc.
- 271735 Ludus Helsinki Ltd.
- 271761 BlueRadios, Inc.
- 272002 equinox AG
- 272015 Garmin International, Inc.
- 272050 Ecotest
- 272060 GN ReSound A/S
- 272077 Jawbone
- 272107 Zscan Software
- 272126 Quintic Corp.
- 272144 Funai Electric Co., Ltd.
- 272175 ThinkOptics, Inc.
- 272217 Universal Electronics, Inc.
- 272253 Airoha Technology Corp.
- 272303 NEC Lighting, Ltd.
- 272326 ODM Technology, Inc.
- 272353 ConnecteDevice Ltd.
- 272377 zer01.tv GmbH
- 272415 Alpwise
- 272425 Colorfy, Inc.
- 272443 Geoforce Inc.
- 272461 Bose Corporation
- 272502 Suunto Oy
- 272514 SR-Medizinelektronik
- 272541 Vertu Corporation Limited
- 272573 Meta Watch Ltd.
- 272613 LINAK A/S
- 272625 OTL Dynamics LLC
- 272646 Panda Ocean Inc.
- 272667 Visteon Corporation
- 272713 ARP Devices Limited
- 272737 Magneti Marelli S.p.A
- 272765 CAEN RFID srl
- 273003 Green Throttle Games
- 273030 Peter Systemtechnik GmbH
- 273061 Omegawave Oy
- 273076 Cinetix
- 273106 Passif Semiconductor Corp
- 273140 Saris Cycling Group, Inc
- 273171 Bekey A/S
- 273203 BDE Technology Co., Ltd.
- 273234 Swirl Networks
- 273253 Meso international
- 273276 TreLab Ltd
- 273311 Johnson Controls, Inc.
- 273340 Starkey Laboratories Inc.
- 273372 S-Power Electronics Limited
- 273426 Ace Sensor Inc
- 273445 Aplix Corporation
- 273467 AAMP of America
- 273507 Stalmart Technology Limited
- 273543 Geneq Inc.
- 273556 adidas AG
- 273570 LG Electronics
- 273607 Onset Computer Corporation
- 273642 Selfly BV
- 273654 Quuppa Oy.
- 273667 GeLo Inc
- 273700 Evluma
- 273707 MC10
- 273714 Binauric SE
- 273730 Beats Electronics
- 273752 Microchip Technology Inc.
- 274004 Elgato Systems GmbH
- 274030 ARCHOS SA
- 274042 Dexcom, Inc.
- 274057 Polar Electro Europe B.V.
- 274111 Dialog Semiconductor B.V.
- 274143 Kawantech
- 274155 Austco Communication Systems
- 274212 Timex Group USA, Inc.
- 274240 Qualcomm Technologies, Inc.
- 274274 Voyetra Turtle Beach
- 274321 txtr GmbH
- 274333 Biosentronics
- 274351 Procter & Gamble
- 274372 Hosiden Corporation
- 274416 Muzik LLC
- 274430 Misfit Wearables Corp
- 274456 Google
- 274465 Danlers Ltd
- 274501 Semilink Inc
- 274516 inMusic Brands, Inc
- 274542 L.S. Research Inc.
- 274565 Freshtemp
- 274577 KS Technologies
- 274617 ACTS Technologies
- 274641 Vtrack Systems
- 274660 Nielsen-Kellerman Company
- 274712 Server Technology, Inc.
- 274742 BioResearch Associates
- 274771 Jolly Logic, LLC
- 275012 Above Average Outcomes, Inc.
- 275047 Bitsplitters GmbH
- 275071 PayPal, Inc.
- 275106 Witron Technology Limited
- 275140 Kent Displays Inc.
- 275163 Nautilus Inc.
- 275201 Smartifier Oy
- 275217 Elcometer Limited
- 275241 VSN Technologies Inc.
- 275267 AceUni Corp., Ltd.
- 275312 StickNFind
- 275325 Crystal Code AB
- 275345 KOUKAAM a.s.
- 275362 Delphi Corporation
- 275405 ValenceTech Limited
- 275431 Reserved
- 275442 Typo Products, LLC
- 275465 TomTom International BV
- 275515 Fugoo, Inc
- 275530 Keiser Corporation
- 275553 Bang & Olufsen A/S
- 275576 Innovative Yachtter Solutions
- 275634 William Demant Holding A/S
- 275667 Chicony Electronics Co., Ltd.
- 275725 Atus BV
- 275735 Codegate Ltd.
- 275753 ERi, Inc.
- 275765 Transducers Direct, LLC
- 276015 Fujitsu Ten Limited
- 276041 Audi AG
- 276051 Nippon Seiki Co., Ltd.
- 276100 Steelseries ApS
- 276120 Visybl Inc.
- 276134 Xensr
- 276142 e.solutions
- 276156 1OAK Technologies
- 276200 Wimoto Technologies Inc
- 276230 Radius Networks, Inc.
- 276256 Wize Technology Co., Ltd.
- 276310 Qualcomm Labs, Inc.
- 276334 Aruba Networks
- 276353 Baidu
- 276361 Arendi AG
- 276373 Skoda Auto a.s.
- 276413 Volkswagen AG
- 276431 Porsche AG
- 276444 Sino Wealth Electronic Ltd.
- 276500 AirTurn, Inc.
- 276516 Kinsa, Inc.
- 276532 HID Global
- 276545 SEAT es
- 276555 Promethean Ltd.
- 276575 Salutica Allied Solutions
- 276627 GPSI Group Pty Ltd
- 276652 Nimble Devices Oy
- 276674 SportIQ
- 276704 TEMEC Instruments B.V.
- 276733 Sony Corporation
- 276754 ASSA ABLOY
- 276767 Clarion Co., Ltd.
- 277011 Warehouse Innovations
- 277037 MADS Inc
- 277050 Blue Maestro Limited
- 277075 Resolution Products, Inc.
- 277127 Airewear LLC
- 277144 Prestigio Plaza Ltd.
- 277171 NTEO Inc.
- 277203 Focus Systems Corporation
- 277235 Tencent Holdings Limited
- 277266 Allegion
- 277277 Murata Manufacuring Co., Ltd.
- 277335 WirelessWERX
- 277352 Nod, Inc.
- 277364 B&B Manufacturing Company
- 277416 FedEx Services
- 277435 Grape Systems Inc.
- 277460 Bkon Connect
- 277475 Lintech GmbH
- 277512 Novatel Wireless
- 277533 Ciright
- 277543 Mighty Cast, Inc.
- 277565 Ambimat Electronics
- 277611 Perytons Ltd.
- 277627 Tivoli Audio, LLC
- 277651 Master Lock
- 277665 Mesh-Net Ltd
- 277702 Tangerine, Inc.
- 277722 B&W Group Ltd.
- 277741 Pioneer Corporation
- 277765 OnBeep
- 277774 Vernier Software & Technology
- 300032 ROL Ergo
- 300043 Pebble Technology
- 300065 NETATMO
- 300075 Accumulate AB
- 300113 Inmite s.r.o.
- 300131 ChefSteps, Inc.
- 300151 micas AG
- 300162 Biomedical Research Ltd.
- 300213 Pitius Tec S.L.
- 300233 Estimote, Inc.
- 300252 Unikey Technologies, Inc.
- 300304 Timer Cap Co.
- 300322 AwoX
- 300327 yikes
- 300335 MADSGlobal NZ Ltd.
- 300360 PCH International
- 300402 MISHIK Pte Ltd
- 300421 Bayer HealthCare
- 300442 Spicebox LLC
- 300457 emberlight
- 300472 Cooper-Atkins Corporation
- 300524 Qblinks
- 300534 MYSPHERA
- 300545 LifeScan Inc
- 300562 Volantic AB
- 300576 Podo Labs, Inc
- 300615 F. Hoffmann-La Roche AG
- 300645 Amazon Fulfillment Service
- 300700 Kocomojo, LLC
- 300716 Everykey LLC
- 300733 Dynamic Controls
- 300754 SentriLock
- 300767 I-SYST inc.
- 301003 CASIO COMPUTER CO., LTD.
- 301034 LAPIS Semiconductor Co., Ltd.
- 301072 Telemonitor, Inc.
- 301114 taskit GmbH
- 301130 Daimler AG
- 301143 BatAndCat
- 301155 BluDotz Ltd
- 301171 XTel ApS
- 301202 Gigaset Communications GmbH
- 301236 HOP Ubiquitous
- 301255 To Be Assigned
- 301274 Nectar
- 301303 bel'apps LLC
- 301320 CORE Lighting Ltd
- 301342 Seraphim Sense Ltd
- 301365 Unico RBC
- 301377 Physical Enterprises Inc.
- 301431 Able Trend Technology Limited
- 301467 Konica Minolta, Inc.
- 301514 Wilo SE
- 301524 Extron Design Services
- 301553 Fitbit, Inc.
- 301570 Fireflies Systems
- 301612 Intelletto Technologies Inc.
- 301647 FDK CORPORATION
- 301667 Cloudleaf, Inc
- 301706 Maveric Automation LLC
- 301735 Acoustic Stream Corporation
- 301771 Zuli
- 301776 Paxton Access Ltd
- 302020 WiSilica Inc
- 302035 Vengit Limited
- 302054 SALTO SYSTEMS S.L.
- 302077 CUBETECH s.r.o.
- 302117 Cokiya Incorporated
- 302143 CVS Health
- 302156 Ceruus
- 302165 Strainstall Ltd
- 302205 Channel Enterprises (HK) Ltd.
- 302243 FIAMM
- 302251 GIGALANE.CO.,LTD
- 302272 EROAD
- 302300 Mine Safety Appliances
- 302327 Icon Health and Fitness
- 302357 Asandoo GmbH
- 302374 ENERGOUS CORPORATION
- 302421 Taobao
- 302430 Canon Inc.
- 302443 Geophysical Technology Inc.
- 302477 Facebook, Inc.
- 302516 Nipro Diagnostics, Inc.
- 302546 FlightSafety International
- 302601 Earlens Corporation
- 302625 Sunrise Micro Devices, Inc.
- 302661 Star Micronics Co., Ltd.
- 302712 Netizens Sp. z o.o.
- 302736 Nymi Inc.
- 302750 Nytec, Inc.
- 302764 Trineo Sp. z o.o.
- 303006 Nest Labs Inc.
- 303025 LM Technologies Ltd
- 303051 General Electric Company
- 303102 i+D3 S.L.
- 303114 HANA Micron
- 303130 Stages Cycling LLC
- 303153 SenionLab AB
- 303170 Syszone Co., Ltd
- 303211 Pulsate Mobile Ltd.
- 303235 pironex GmbH
- 303252 BRADATECH Corp.
- 303272 Transenergooil AG
- 303314 Bunch
- 303322 DME Microelectronics
- 303347 Bitcraze AB
- 303363 HASWARE Inc.
- 303400 Abiogenix Inc.
- 303417 Poly-Control ApS
- 303440 Avi-on
- 303447 Laerdal Medical AS
- 303472 Fetch My Pet
- 303507 Sam Labs Ltd.
- 303525 HOUWA SYSTEM DESIGN, k.k.
- 303563 Primus Inter Pares Ltd
- 303612 August
- 303621 Gill Electronics
- 303642 Sky Wave Design
- 303662 Newlab S.r.l.
- 303700 ELAD srl
- 303711 G-wearables inc.
- 303732 Squadrone Systems Inc.
- 303761 Code Corporation
- 304002 Savant Systems LLC
- 304025 Logitech International SA
- 304057 Innblue Consulting
- 304102 iParking Ltd.
- 304120 Bison Group Ltd.
- 304141 Widex A/S
- 304153 Jolla Ltd
- 304165 Lectronix, Inc.
- 304205 Caterpillar Inc
- 304225 Freedom Innovations
- 304251 Dynamic Devices Ltd
- 304275 Technology Solutions (UK) Ltd
- 304333 IPS Group Inc.
- 304352 STIR
- 304357 Sano, Inc
- 304371 AutoMap LLC
- 304405 CuteCircuit LTD
- 304425 Valeo Service
- 304443 Fullpower Technologies, Inc.
- 304500 KloudNation
- 304514 Itron, Inc.
- 304530 The University of Tokyo
- 304560 UTC Fire and Security
- 304606 Cool Webthings Limited
- 304635 DJO Global
- 304650 Gelliner Limited
- 304671 Medtronic, Inc.
- 304711 Gozio, Inc.
- 304725 Form Lifting, LLC
- 304747 Wahoo Fitness, LLC
- 304772 Radio System Corporation
- 305023 Freescale Semiconductor, Inc.
- 305061 AR Timing
- 305073 Rigado LLC
- 305106 Kemppi Oy
- 305120 Tapcentive Inc.
- 305140 Smartbotics Inc.
- 305161 Otter Products, LLC
- 305205 STEMP Inc.
- 305220 LumiGeek LLC
- 305235 InvisionHeart Inc.
- 305260 Macnica Inc.
- 305275 Jaguar Land Rover Limited
- 305327 CoroWare Technologies, Inc
- 305362 Simplo Technology Co., LTD
- 305415 Omron Healthcare Co., LTD
- 305447 Comodule GMBH
- 305465 ikeGPS
- 305474 Telink Semiconductor Co. Ltd
- 305531 Interplan Co., Ltd
- 305554 Wyler AG
- 305565 IK Multimedia Production srl
- 305622 Lukoton Experience Oy
- 305650 MTI Ltd
- 305660 Tech4home, Lda
- 305677 Hiotech AB
- 305712 DOTT Limited
- 305727 Blue Speck Labs, LLC
- 305754 Cisco Systems Inc
- 305776 Mobicomm Inc
- 306013 Edamic
- 306022 Goodnet Ltd
- 306036 Luster Leaf Products Inc
- 306067 Manus Machina BV
- 306110 Mobiquity Networks Inc
- 306137 Praxis Dynamics
- 306157 Philip Morris Products S.A.
- 306213 Comarch SA
- 306226 Nestl
- 306235  Nespresso S.A.
- 306255 Merlinia A/S
- 306272 LifeBEAM Technologies
- 306320 Twocanoes Labs, LLC
- 306344 Muoverti Limited
- 306365 Stamer Musikanlagen GMBH
- 306416 Tesla Motors
- 306433 Pharynks Corporation
- 306460 Lupine
- 306467 Siemens AG
- 306502 Foster Electric Company, Ltd
- 306537 ETA SA
- 306546 x-Senso Solutions Kft
- 306574 Qrio Inc
- 306605 Pitpatpet Ltd
- 306623 MSHeli s.r.l.
- 306641 Trakm8 Ltd
- 306654 JIN CO, Ltd
- 306670 Alatech Technology
- 306713 Awarepoint
- 306726 ViCentra B.V.
- 306744 Raven Industries
- 306765 WaveWare Technologies
- 307013 Argenox Technologies
- 307040 Bragi GmbH
- 307053 16Lab Inc
- 307065 Masimo Corp
- 307101 Iotera Inc.
- 307115 Endress+Hauser
- 307134 ACKme Networks, Inc.
- 307161 FiftyThree Inc.
- 307201 Parker Hannifin Corp
- 307226 Transcranial Ltd
- 307247 Uwatec AG
- 307261 Orlan LLC
- 307273 Blue Clover Devices
- 307317 M-Way Solutions GmbH
- 307344 Microtronics Engineering GmbH
- 307402 Schneider Schreibger
- 307430 te GmbH
- 307440 Sapphire Circuits LLC
- 307466 Lumo Bodytech Inc.
- 307511 UKC Technosolution
- 307534 Xicato Inc.
- 307550 Playbrush
- 307562 Dai Nippon Printing Co., Ltd.
- 307620 G24 Power Limited
- 307642 AdBabble Local Commerce Inc.
- 307677 Devialet SA
- 307713 ALTYOR
- 307722 Lexmark International Inc.
- 307755 Fluke Corporation
- 307777 Yardarm Technologies
- 310024 SensaRx
- 310034 SECVRE GmbH
- 310050 Glacial Ridge Technologies
- 310103 Identiv, Inc.
- 310121 DDS, Inc.
- 310133 SMK Corporation
- 310153 Schawbel Technologies LLC
- 310205 XMI Systems SA
- 310224 Cerevo
- 310233 Torrox GmbH & Co KG
- 310257 Gemalto
- 310267 Domster Tadeusz Szydlowski
- 310322 Technogym SPA
- 310340 FLEURBAEY BVBA
- 310357 Aptcode Solutions
- 310401 LSI ADL Technology
- 310424 Animas Corp
- 310440 Alps Electric Co., Ltd.
- 310470 OCEASOFT
- 310501 Motsai Research
- 310521 Geotab
- 310530 bewhere inc
- 310544 Johnson Outdoors Inc
- 310571 Ekomini inc.
- 310606 DEFA AS
- 310616 Aseptika Ltd
- 310633 HabitAware, LLC
- 310653 ruwido austria gmbh
- 310677 ITEC corporation
- 310720 StoneL
- 310727 Sonova AG
- 310741 Maven Machines, Inc.
- 310766 Synapse Electronics
- 311012 Standard Innovation Inc.
- 311043 RF Code, Inc.
- 311061 Wally Ventures S.L.
- 311105 Willowbank Electronics Ltd
- 311140 SK Telecom
- 311153 Jetro AS
- 311164 Code Gears LTD
- 311203 NANOLINK APS
- 311220 IF, LLC
- 311230 RF Digital Corp
- 311250 Church & Dwight Co., Inc
- 311301 Multibit Oy
- 311315 CliniCloud Inc
- 311334 SwiftSensors
- 311351 Blue Bite
- 311363 ELIAS GmbH
- 311376 Sivantos GmbH
- 311414 Petzl
- 311422 storm power ltd
- 311442 EISST Ltd
- 311454 Inexess Technology Simma KG
- 311510 Currant, Inc.
- 311526 C2 Development, Inc.
- 311553 Blue Sky Scientific, LLC
- 311604 ALOTTAZS LABS, LLC
- 311627 Kupson spol. s r.o.
- 311653 Areus Engineering GmbH
- 311702 Impossible Camera GmbH
- 311731 InventureTrack Systems
- 311760 LockedUp
- 311771 Itude
- 311777 Pacific Lock Company
- 312024 Robert Bosch GmbH
- 312046 Illuxtron international B.V.
- 312103 miSport Ltd.
- 312120 Chargelib
- 312132 Doppler Lab
- 312146 BBPOS Limited
- 312164 RTB Elektronik GmbH & Co. KG
- 312221 Rx Networks, Inc.
- 312243 WeatherFlow, Inc.
- 312265 Technicolor USA Inc.
- 312312 Bestechnic(Shanghai),Ltd
- 312343 Raden Inc
- 312355 JouZen Oy
- 312367 CLABER S.P.A.
- 312405 Hyginex, Inc.
- 312423 Schneider Electric
- 312446 Oort Technologies LLC
- 312474 Chrono Therapeutics
- 312520 Rinnai Corporation
- 312543 Swissprime Technologies AG
- 312576 Koha.,Co.Ltd
- 312613 Genevac Ltd
- 312627 Chemtronics
- 312643 Seguro Technology Sp. z o.o.
- 312700 Redbird Flight Simulations
- 312733 Dash Robotics
- 312751 LINE Corporation
- 312772 Guillemot Corporation
- 313020 Wilson Sporting Goods
- 313046 Ayatan Sensors
- 313065 Electronics Tomorrow Limited
- 313122 PayRange Inc.
- 313140 ABOV Semiconductor
- 313163 AINA-Wireless Inc.
- 313206 Eijkelkamp Soil & Water
- 313236 BMA ergonomics b.v.
- 313262 Anima
- 313273 Empatica Srl
- 313310 Afero, Inc.
- 313324 Powercast Corporation
- 313352 Secuyou ApS
- 313366 OMRON Corporation
- 313410 Send Solutions
- 313427 NIPPON SYSTEMWARE CO.,LTD.
- 313462 Neosfar
- 313472 Fliegl Agrartechnik GmbH
- 313523 Gilvader
- 313534 Digi International Inc (R)
- 313567 DeWalch Technologies, Inc.
- 313622 Samsung SDS Co., Ltd.
- 313650 Blur Product Development
- 313701 University of Michigan
- 313730 Victron Energy BV
- 313752 NTT docomo
- 313765 Carmanah Technologies Corp.
- 314021 Bytestorm Ltd.
- 314040 Unwire
- 314047 Connected Yard, Inc.
- 314074 American Music Environments
- 314130 Sensogram Technologies, Inc.
- 314165 Fujitsu Limited
- 314205 Ardic Technology
- 314226 Delta Systems, Inc
- 314251 HTC Corporation
- 314271 Citizen Holdings Co., Ltd.
- 314324 SMART-INNOVATION.inc
- 314351 Blackrat Software
- 314373 The Idea Cave, LLC
- 314416 GoPro, Inc.
- 314432 AuthAir, Inc
- 314447 Vensi, Inc.
- 314463 Indagem Tech LLC
- 314504 Intemo Technologies
- 314530 DreamVisions co., Ltd.
- 314557 Runteq Oy Ltd
- 314575 IMAGINATION TECHNOLOGIES LTD
- 314632 CoSTAR Technologies
- 314656 Clarius Mobile Health Corp.
- 314712 Uwanna, Inc.
- 314727 Silicon Laboratories
- 314754 World Moto Inc.
- 314774 Giatec Scientific Inc.
- 315023 Loop Devices, Inc
- 315045 IACA electronique
- 315067 Martians Inc
- 315104 Swipp ApS
- 315116 Life Laboratory Inc.
- 315143 FUJI INDUSTRIAL CO.,LTD.
- 315174 Surefire, LLC
- 315212 Dolby Labs
- 315225 Ellisys
- 315235 Magnitude Lighting Converters
- 315273 Hilti AG
- 315304 Devdata S.r.l.
- 315323 Deviceworx
- 315336 Shortcut Labs
- 315354 SGL Italia S.r.l.
- 315376 PEEQ DATA
- 315410 Ducere Technologies Pvt Ltd
- 315444 DiveNav, Inc.
- 315462 RIIG AI Sp. z o.o.
- 315505 Thermo Fisher Scientific
- 315536 AG Measurematics Pvt. Ltd.
- 315571 CHUO Electronics CO., LTD.
- 315624 Aspenta International
- 315652 Eugster Frismag AG
- 315675 Amber wireless GmbH
- 315721 HQ Inc
- 315730 Lab Sensor Solutions
- 315755 Enterlab ApS
- 315772 Eyefi, Inc.
- 316006 MetaSystem S.p.A
- 316027 SONO ELECTRONICS. CO., LTD
- 316062 Jewelbots
- 316074 Compumedics Limited
- 316120 Rotor Bike Components
- 316146 Astro, Inc.
- 316162 Amotus Solutions
- 316203 Essex Electronics
- 316225 Grundfos A/S
- 316242 Eargo, Inc.
- 316256 Electronic Design Lab
- 316304 ESYLUX
- 316313 NIPPON SMT.CO.,Ltd
- 316336 BM innovations GmbH
- 316362 indoormap
- 316374 OttoQ Inc
- 316406 North Pole Engineering
- 316435 3flares Technologies Inc.
- 316467 Electrocompaniet A.S.
- 316515 Mul-T-Lock
- 316530 Corentium AS
- 316545 Enlighted Inc
- 316563 GISTIC
- 316572 AJP2 Holdings, LLC
- 316615 COBI GmbH
- 316627 Appception, Inc.
- 316650 Courtney Thorne Limited
- 316700 Virtuosys
- 316712 TPV Technology Limited
- 316741 Monitra SA
- 316754 Automation Components, Inc.
- 317010 Letsense s.r.l.
- 317030 Etesian Technologies LLC
- 317061 GERTEC BRASIL LTDA.
- 317105 Drekker Development Pty. Ltd.
- 317143 Whirl Inc
- 317155 Locus Positioning
- 317177 Acuity Brands Lighting, Inc
- 317233 Prevent Biometrics
- 317256 Arioneo
- 317266 VersaMe
- 317276 Vaddio
- 317305 Libratone A/S
- 317323 HM Electronics, Inc.
- 317350 TASER International, Inc.
- 317402 Safe Trust Inc.
- 317422 Heartland Payment Systems
- 317454 Bitstrata Systems Inc.
- 317503 Pieps GmbH
- 317516 Alpha Audiotronics, Inc.
- 317547 TOPPAN FORMS CO.,LTD.
- 317575 Sigma Designs, Inc.
- 317621 Spectrum Brands, Inc.
- 317647 Polymap Wireless
- 317670 MagniWare Ltd.
- 317707 Novotec Medical GmbH
- 317734 Matrix Inc.
- 317750 Eaton Corporation
- 317776 Naya Health, Inc.
- 320020 Acromag
- 320030 Insulet Corporation
- 320054 Wellinks Inc.
- 320072 ON Semiconductor
- 320113 FREELAP SA
- 320126 Favero Electronics Srl
- 320155 BioMech Sensor LLC
- 320200 Saphe International
- 320224 Metormote AB
- 320241 littleBits
- 320254 SetPoint Medical
- 320275 BRControls Products BV
- 320324 Zipcar
- 320333 AirBolt Pty Ltd
- 320353 KeepTruckin Inc
- 320373 Motiv, Inc.
- 320407 Wazombi Labs O
- 320430 ORBCOMM
- 320440 Nixie Labs, Inc.
- 320461 AppNearMe Ltd
- 320477 Holman Industries
- 320521 Expain AS
- 320533 Plejd AB
- 320544 Propeller Health
- 320565 Algoria
- 320575 Apption Labs Inc.
- 320617 Cronologics Corporation
- 320647 MICRODIA Ltd.
- 320665 lulabytes S.L.
- 320704 Nestec S.A.
- 320720 LLC "MEGA-F service"
- 320745 Sharp Corporation
- 320767 Precision Outcomes Ltd
- 321016 Kronos Incorporated
- 321042 OCOSMOS Co., Ltd.
- 321064 Aterica Inc.
- 321101 BluStor PMC, Inc.
- 321123 Kapsch TrafficCom AB
- 321150 ActiveBlu Corporation
- 321176 Kohler Mira Limited
- 321222 Noke
- 321227 Appion Inc.
- 321243 Resmed Ltd
- 321256 Crownstone B.V.
- 321276 Xiaomi Inc.
- 321312 INFOTECH s.r.o.
- 321332 Thingsquare AB
- 321355 LAVAZZA S.p.A.
- 321374 Netclearance Systems, Inc.
- 321427 SDATAWAY
- 321440 BLOKS GmbH
- 321453 LEGO System A/S
- 321473 Thetatronics Ltd
- 321514 Nikon Corporation
- 321536 NeST
- 321543 ALE International
- 321565 CareView Communications, Inc.
- 321623 SchoolBoard Limited
- 321647 Molex Corporation
- 321671 IVT Wireless Limited
- 321716 Alpine Labs LLC
- 321736 Candura Instruments
- 321762 SmartMovt Technology Co., Ltd
- 322020 Token Zero Ltd
- 322037 Medela, Inc
- 322053 AeroScout
- 322065 Esrille Inc.
- 322102 THINKERLY SRL
- 322120 Exon Sp. z o.o.
- 322140 Meizu Technology Co., Ltd.
- 322173 Smablo LTD
- 322206 internal use
- 322223 not assigned
- 322263 hhhg(
- 322271 G]o&&G&_&&GGG&_&_
- 322313 &_o_
- 322331 Virtual
- 322345 PCCARD
- 322354 UART
- 322361 RS232
- 322373 SDIO
- 322410 Unknown
- 322420 Primary
- 322440 '%s' 
- 322446 <3-slot packets>
- 322467 <5-slot packets>
- 322510 <encryption>
- 322525 <slot offset>
- 322543 <timing accuracy>
- 322565 <role switch>
- 322603 <hold mode>
- 322617 <sniff mode>
- 322634 <park state>
- 322651 <RSSI>
- 322660 <channel quality>
- 322702 <SCO link>
- 322715 <HV2 packets>
- 322733 <HV3 packets>
- 322751 <u-law log>
- 322765 <A-law log>
- 323001 <CVSD>
- 323010 <paging scheme>
- 323030 <power control>
- 323050 <transparent SCO>
- 323072 <broadcast encrypt>
- 323116 <no. 24>
- 323127 <EDR ACL 2 Mbps>
- 323150 <EDR ACL 3 Mbps>
- 323171 <enhanced iscan>
- 323212 <interlaced iscan>
- 323235 <interlaced pscan>
- 323260 <inquiry with RSSI>
- 323304 <extended SCO>
- 323323 <EV4 packets>
- 323341 <EV5 packets>
- 323357 <no. 34>
- 323370 <AFH cap. slave>
- 323411 <AFH class. slave>
- 323434 <BR/EDR not supp.>
- 323457 <LE support>
- 323474 <3-slot EDR ACL>
- 323515 <5-slot EDR ACL>
- 323536 <sniff subrating>
- 323560 <pause encryption>
- 323603 <AFH cap. master>
- 323625 <AFH class. master>
- 323651 <EDR eSCO 2 Mbps>
- 323673 <EDR eSCO 3 Mbps>
- 323715 <3-slot EDR eSCO>
- 323737 <extended inquiry>
- 323762 <LE and BR/EDR>
- 324002 <no. 50>
- 324013 <simple pairing>
- 324034 <encapsulated PDU>
- 324057 <err. data report>
- 324102 <non-flush flag>
- 324123 <no. 55>
- 324134 <LSTO>
- 324143 <inquiry TX power>
- 324166 <EPC>
- 324174 <no. 59>
- 324205 <no. 60>
- 324216 <no. 61>
- 324227 <no. 62>
- 324240 <extended features>
- 324270 1.0b
- 324331 Inquiry
- 324341 Inquiry Cancel
- 324360 Exit Periodic Inquiry Mode
- 324413 Disconnect
- 324426 Add SCO Connection
- 324451 Cancel Create Connection
- 324502 Accept Connection Request
- 324534 Reject Connection Request
- 324566 Link Key Request Reply
- 324615 PIN Code Request Reply
- 324644 Change Connection Packet Type
- 324702 Authentication Requested
- 324733 Set Connection Encryption
- 324765 Change Connection Link Key
- 325020 Master Link Key
- 325040 Cancel Remote Name Request
- 325073 Read Remote Extended Features
- 325131 Read Clock Offset
- 325153 Read LMP Handle
- 325173 Hold Mode
- 325205 Exit Sniff Mode
- 325225 Exit Park State
- 325245 QoS Setup
- 325257 Role Discovery
- 325276 Switch Role
- 325312 Read Link Policy Settings
- 325344 Write Link Policy Settings
- 325377 Flow Specification
- 325422 Reset
- 325430 Set Event Filter
- 325451 Read PIN Type
- 325467 Write PIN Type
- 325506 Create New Unit Key
- 325532 Read Stored Link Key
- 325557 Write Stored Link Key
- 325605 Delete Stored Link Key
- 325634 Write Local Name
- 325655 Read Local Name
- 325675 Read Page Timeout
- 325717 Write Page Timeout
- 325742 Read Scan Enable
- 325763 Write Scan Enable
- 326005 Read Page Scan Activity
- 326035 Write Page Scan Activity
- 326066 Read Inquiry Scan Activity
- 326121 Write Inquiry Scan Activity
- 326155 Read Authentication Enable
- 326210 Write Authentication Enable
- 326244 Read Encryption Mode
- 326271 Write Encryption Mode
- 326317 Read Class Of Device
- 326344 Write Class Of Device
- 326372 Read Voice Setting
- 326415 Write Voice Setting
- 326441 Read Automatic Flush Timeout
- 326476 Write Automatic Flush Timeout
- 326534 Read Hold Mode Activity
- 326564 Write Hold Mode Activity
- 326615 Read Transmit Power Level
- 326647 Host Buffer Size
- 326670 Read Link Supervision Timeout
- 326726 Read Number of Supported IAC
- 326763 Read Current IAC LAP
- 327010 Write Current IAC LAP
- 327036 Read Page Scan Period Mode
- 327071 Write Page Scan Period Mode
- 327125 Read Page Scan Mode
- 327151 Write Page Scan Mode
- 327176 Read Inquiry Scan Type
- 327225 Write Inquiry Scan Type
- 327255 Read Inquiry Mode
- 327277 Write Inquiry Mode
- 327322 Read Page Scan Type
- 327346 Write Page Scan Type
- 327373 Read Local Supported Commands
- 327431 Read Local Supported Features
- 327467 Read Local Extended Features
- 327524 Read Country Code
- 327546 Read BD ADDR
- 327563 Read Failed Contact Counter
- 327617 Reset Failed Contact Counter
- 327654 Get Link Quality
- 327675 Read RSSI
- 327707 Read AFH Channel Map
- 327734 Read BD Clock
- 327752 Read Loopback Mode
- 327775 Write Loopback Mode
- 330021 Enable Device Under Test Mode
- 330057 Setup Synchronous Connection
- 330114 Accept Synchronous Connection
- 330152 Reject Synchronous Connection
- 330210 Refresh Encryption Key
- 330237 Sniff Subrating
- 330257 Read Simple Pairing Mode
- 330310 Write Simple Pairing Mode
- 330342 Read Local OOB Data
- 330366 IO Capability Request Reply
- 330422 User Passkey Request Reply
- 330455 Remote OOB Data Request Reply
- 330513 Enhanced Flush
- 330532 Send Keypress Notification
- 330565 Read Encryption Key Size
- 330616 Create Physical Link
- 330643 Accept Physical Link
- 330670 Disconnect Physical Link
- 330721 Create Logical Link
- 330745 Accept Logical Link
- 330771 Disconnect Logical Link
- 331021 Logical Link Cancel
- 331045 Flow Specification Modify
- 331077 Set Event Mask Page 2
- 331125 Read Location Data
- 331150 Write Location Data
- 331174 Read Local AMP Info
- 331220 Read Local AMP_ASSOC
- 331245 Write Remote AMP_ASSOC
- 331274 Read Flow Control Mode
- 331323 Write Flow Control Mode
- 331353 Read Data Block Size
- 331400 Enable AMP Receiver Reports
- 331434 AMP Test End
- 331451 AMP Test Command
- 331472 Short Range Mode
- 331513 Read LE Host Support
- 331540 Write LE Host Support
- 331566 LE Set Event Mask
- 331610 LE Read Buffer Size
- 331634 LE Set Random Address
- 331662 LE Set Advertising Parameters
- 331720 LE Set Advertising Data
- 331750 LE Set Scan Response Data
- 332002 LE Set Advertise Enable
- 332032 LE Set Scan Parameters
- 332061 LE Set Scan Enable
- 332104 LE Create Connection
- 332131 LE Create Connection Cancel
- 332165 LE Read White List Size
- 332215 LE Clear White List
- 332241 LE Add Device To White List
- 332275 LE Connection Update
- 332322 LE Read Channel Map
- 332346 LE Read Remote Used Features
- 332403 LE Encrypt
- 332416 LE Rand
- 332426 LE Start Encryption
- 332452 LE Read Supported States
- 332503 LE Receiver Test
- 332524 LE Transmitter Test
- 332550 LE Test End
- 332564 NONE
- 332571 ACCEPT
- 332600 MASTER
- 332607 AUTH
- 332614 ENCRYPT
- 332624 TRUSTED
- 332634 RELIABLE
- 332645 SECURE
- 332654 RSWITCH
- 332664 HOLD
- 332671 SNIFF
- 332677 PARK
- 332724 2-EV3
- 332732 2-EV5
- 332740 3-EV3
- 332746 3-EV5
- 332770 2-DH1
- 332776 2-DH3
- 333004 2-DH5
- 333012 3-DH1
- 333020 3-DH3
- 333026 3-DH5
- 333037 INIT
- 333044 RUNNING
- 333060 PSCAN
- 333066 ISCAN
- 333074 INQUIRY
- 333150 Link Key Request Negative Reply
- 333210 PIN Code Request Negative Reply
- 333250 Read Remote Supported Features
- 333310 Read Remote Version Information
- 333350 Read Default Link Policy Settings
- 333420 Write Default Link Policy Settings
- 333470 Read Connection Accept Timeout
- 333530 Write Connection Accept Timeout
- 333570 Read Num Broadcast Retransmissions
- 333640 Write Num Broadcast Retransmissions
- 333710 Read Synchronous Flow Control Enable
- 333760 Write Synchronous Flow Control Enable
- 334030 Set Host Controller To Host Flow Control
- 334110 Host Number Of Completed Packets
- 334160 Write Link Supervision Timeout
- 334220 Set AFH Channel Classification
- 334260 Read AFH Channel Assessment Mode
- 334330 Write AFH Channel Assessment Mode
- 334400 Read Local Version Information
- 334440 Read Extended Inquiry Response
- 334500 Write Extended Inquiry Response
- 334540 Read Inquiry Response Transmit Power Level
- 334620 Write Inquiry Transmit Power Level
- 334670 Read Default Erroneous Data Reporting
- 334740 Write Default Erroneous Data Reporting
- 335010 User Confirmation Request Reply
- 335050 User Confirmation Request Negative Reply
- 335130 User Passkey Request Negative Reply
- 335200 Write Simple Pairing Debug Mode
- 335240 Remote OOB Data Request Negative Reply
- 335310 IO Capability Request Negative Reply
- 335360 Read Logical Link Accept Timeout
- 335430 Write Logical Link Accept Timeout
- 335500 Read Enhanced Transmit Power Level
- 335550 Read Best Effort Flush Timeout
- 335610 Write Best Effort Flush Timeout
- 335650 LE Read Local Supported Features
- 335720 LE Read Advertising Channel TX Power
- 335770 LE Remove Device From White List
- 336040 LE Set Host Channel Classification
- 336110 LE Long Term Key Request Reply
- 336150 LE Long Term Key Request Negative Reply
- 336220 %s: Continuation state size exceeds internal buffer
- 336310 %s: Unknown sequence type, aborting
- 336360 %s: Strings of size > USHRT_MAX not supported
- 336440 %s: Unknown data type : %d expecting a svc UUID
- 336530 %s: Not enough room for 16-bit UUID
- 336600 %s: Not enough room for 32-bit UUID
- 336650 %s: Not enough room for 128-bit UUID
- 336720 %s: Sizeof text string > UINT16_MAX
- 336770 %s: String too long to fit in packet
- 337040 %s: Not enough memory for incoming string
- 337120 %s: Packet not big enough to hold sequence.
- 337200 %s: Unknown data descriptor : 0x%x terminating
- 337260 %s: Unexpected end of packet: continuation state data missing
- 337360 %s: Response buffer alloc failure:%m (%d)
- 337440 %s: Protocol error: transaction id does not match
- 337530 %s: Protocol error: invalid length
- 337600 %s: Protocol error: wrong current service record count value.
- 337700 %s: Protocol error: invalid PDU size
- 337750 %s: Protocol error: invalid AttrList size
- 340030 %s: Protocol error: wrong PDU size.
- 340100 %s: Error sending data:%m(%d)
- 340140 %s: Client timed out
- 340166 NULL
- 340173 %.8x
- 340200 %.8x-%.4x-%.4x-%.4x-%.8x%.4x
- 340235 Type of UUID (%x) unknown.
- 340270 %s: Unexpected end of packet
- 340326 Service Name: %.*s
- 340352 Service Description: %.*s
- 340405 Service Provider: %.*s
- 340435 %s: Error sending data:%m
- 340470 %s: Invalid session
- 340515 %s: Inquiry failed:%m
- 340544 %s: Read response:%m (%d)
- 340577 %s: Illegal PDU ID: 0x%x
- 340631 %s: SVC REC is null
- 340656 SDP Server
- 340671 Browse Group Descriptor
- 340721 Public Browse Group
- 340745 Serial Port
- 340761 LAN Access Using PPP
- 341006 Dialup Networking
- 341030 IrMC Sync
- 341042 OBEX Object Push
- 341063 OBEX File Transfer
- 341106 IrMC Sync Command
- 341130 Headset
- 341140 Cordless Telephony
- 341163 Audio Source
- 341200 Audio Sink
- 341213 AV Remote Target
- 341234 Advanced Audio
- 341253 AV Remote
- 341265 AV Remote Controller
- 341312 Intercom
- 341327 Headset Audio Gateway
- 341361 WAP Client
- 341374 PAN User
- 341405 Network Access Point
- 341432 PAN Group Network
- 341454 Direct Printing
- 341474 Reference Printing
- 341517 Imaging
- 341527 Imaging Responder
- 341551 Imaging Automatic Archive
- 341603 Imaging Referenced Objects
- 341636 Handsfree
- 341650 Handsfree Audio Gateway
- 341700 Direct Printing Ref. Objects
- 341735 Reflected UI
- 341752 Basic Printing
- 341771 Printing Status
- 342011 Human Interface Device
- 342040 Hardcopy Cable Replacement
- 342073 HCR Print
- 342105 HCR Scan
- 342116 Common ISDN Access
- 342141 Video Conferencing Gateway
- 342174 UDI MT
- 342203 UDI TA
- 342212 Audio/Video
- 342226 SIM Access
- 342241 Phonebook Access - PCE
- 342270 Phonebook Access - PSE
- 342317 Phonebook Access
- 342340 Message Access - MAS
- 342365 Message Access - MNS
- 342412 Message Access
- 342431 PnP Information
- 342451 Generic Networking
- 342474 Generic File Transfer
- 342522 Generic Audio
- 342540 Generic Telephony
- 342562 UPnP
- 342567 UPnP IP
- 342577 UPnP PAN
- 342610 UPnP LAP
- 342621 UPnP L2CAP
- 342634 Video Source
- 342651 Video Sink
- 342664 Video Distribution
- 342713 HDP Source
- 342726 HDP Sink
- 342737 Generic Access
- 342756 Generic Attribute
- 343000 Apple Agent
- 343024 RFCOMM
- 343037 TCS-BIN
- 343047 TCS-AT
- 343056 OBEX
- 343067 HTTP
- 343100 BNEP
- 343105 UPNP
- 343112 HIDP
- 343117 HCRP-Ctrl
- 343131 HCRP-Data
- 343143 HCRP-Notify
- 343157 AVCTP
- 343165 AVDTP
- 343173 CMTP
- 343204 MCAP-Ctrl
- 343216 MCAP-Data
- 346520 sdp_general_inquiry
- 346560 sdp_service_search_attr_req
- 346620 sdp_process
- 346640 sdp_get_error
- 346660 sdp_service_search_attr_async
- 346720 sdp_service_attr_async
- 346760 sdp_service_search_async
- 347020 sdp_service_attr_req
- 347060 extract_record_handle_seq
- 347120 copy_cstate
- 347140 sdp_service_search_req
- 347200 sdp_device_record_update
- 347240 sdp_device_record_unregister_binary
- 347340 sdp_device_record_register_binary
- 347410 sdp_read_rsp
- 347440 sdp_send_req_w4_rsp
- 347500 sdp_extract_pdu
- 347520 extract_seq
- 347540 extract_str
- 347560 extract_int
- 347600 sdp_extract_attr
- 347640 sdp_extract_seqtype
- 347700 sdp_uuid_extract
- 347740 sdp_data_alloc_with_length
- 354077 ;*3$"
- 426700 e598864c8072ea293aff2688dadd464c483148.debug
- 426765 .shstrtab
- 426777 .interp
- 427007 .note.ABI-tag
- 427025 .note.gnu.build-id
- 427050 .gnu.hash
- 427062 .dynsym
- 427072 .dynstr
- 427102 .gnu.version
- 427117 .gnu.version_r
- 427136 .rela.dyn
- 427150 .init
- 427156 .plt
- 427163 .plt.got
- 427174 .text
- 427202 .fini
- 427210 .rodata
- 427220 .eh_frame_hdr
- 427236 .eh_frame
- 427250 .init_array
- 427264 .fini_array
- 427300 .jcr
- 427305 .dynamic
- 427316 .data
- 427324 .bss
- 427331 .gnu_debuglink
+ 214640 AWAVAUATUSH
+ 214671 D$(1
+ 215035 L$ H
+ 215102 T$ Lc
+ 215132 D$$E1
+ 215162 E HcL$$I
+ 215204 D;t$ 
+ 215451 |$(dH3<%(
+ 215476 8[]A\A]A^A_
+ 216233 %tRH
+ 217200 AWAVI
+ 217207 AUATUSH
+ 217256 D$81
+ 217272 T$/H
+ 217320 T$0Lc
+ 217426 l$4H
+ 217446 $HcT$
+ 217503 T$09
+ 217616 L$4H
+ 217760 L$8dH3
+ 220006 H[]A\A]A^A_
+ 220120 AWAVI
+ 220127 AUATUSH
+ 220474 D$ A
+ 220505 D$(L
+ 220521 []A\A]A^A_
+ 220560 AWAVAUATI
+ 220772 D$0H
+ 221004 \$ L
+ 221020 d$,M
+ 221324 d$,L
+ 221331 |$ L
+ 221437 []A\A]A^A_
+ 221610 UStEH
+ 221740 ATU1
+ 222620 AWAVAUATI
+ 222654 D$h1
+ 222710 D$?	
+ 223061 D$=L
+ 223103 D$>H
+ 223110 D$ H
+ 223115 D$<H
+ 223122 D$(H
+ 223127 D$?H
+ 223222 L$hdH3
+ 223247 x[]A\A]A^A_
+ 223272 D$(H
+ 223277 D$@I
+ 223310 D$PH
+ 223322 t$PH
+ 223341 D$HI
+ 223473 D$@I
+ 223522 D$ H
+ 223527 D$@I
+ 223703 t-USH
+ 224000 AWAVAUATUSH
+ 224614 ([]A\A]A^A_
+ 224660 ATUA
+ 224761 []A\
+ 225423 tKATUSH
+ 225524 []A\
+ 225560 AWAVAUATUSH
+ 226106 t$\H
+ 226113 t$@H
+ 226136 |$PL
+ 226271 D$RA
+ 226301 D$TA
+ 226320 D$XA
+ 226637 t$PA
+ 226652 /var/runA
+ 226703 D$PH
+ 226720 /sdp
+ 227006 []A\A]A^A_
+ 227046 D$TA
+ 227132 L$ A
+ 227221 |$ L
+ 227334 T$"f
+ 227560 AWAVAUATUSH
+ 227611 D$(1
+ 227770 L$(dH3
+ 230015 8[]A\A]A^A_
+ 230660 AWAVA
+ 230667 AUATI
+ 230725 D$(1
+ 231123 L$(dH3
+ 231146 8[]A\A]A^A_
+ 231440 AUATUSH
+ 231670 []A\A]
+ 232540 AVAUATUSH
+ 232571 D$(1
+ 232737 L$(dH3
+ 232764 0[]A\A]A^
+ 233212 t<<x
+ 233640 AWAVAUATUSH
+ 233714 D$H1
+ 234110 D$(H
+ 234141 D$4H
+ 234146 D$DH
+ 234153 D$8f
+ 234161 t$4H
+ 234204 L$0L
+ 234627 T$DH
+ 234716 L$HdH3
+ 234747 X[]A\A]A^A_
+ 235260 AWAVAUATUSH
+ 235311 D$h1
+ 235615 D$4H
+ 235622 D$HE1
+ 235632 t$(H
+ 235670 L$ H
+ 235742 \$\H
+ 235763 L$ L
+ 235772 \$XM
+ 236012 t$4H
+ 236017 |$(L
+ 236040 t$0L
+ 236415 L$hdH3
+ 236442 x[]A\A]A^A_
+ 236654 D$XH
+ 236751 AWAVAUATUSH
+ 237234 V(Hc
+ 237337 []A\A]A^A_
+ 237631 AWAVAUATUSH
+ 240240 []A\A]A^A_
+ 240571 AWAVAUATUSH
+ 241055 S(Lc
+ 241235 []A\A]A^A_
+ 241560 AWAVAUATUSH
+ 241721 fA9V
+ 242003 E E1
+ 242113 ([]A\A]A^A_
+ 244060 AWAVAUATUSH
+ 244114 D$x1
+ 244345 \$xdH3
+ 244376 []A\A]A^A_
+ 244462 D$XL
+ 244610 l$8L
+ 244633 D$ B
+ 244651 D$(H
+ 244656 D$@H
+ 244700 D$,H
+ 244705 D$TH
+ 245001 D$`D
+ 245006 d$lH
+ 245030 d$hL
+ 245054 t$8L
+ 245070 t$,H
+ 245075 |$ L
+ 245121 t$(L
+ 245126 D$0L
+ 245273 d$HH
+ 245303 L$LH9
+ 245651 T$HL
+ 245701 D$hH
+ 245706 L$XH
+ 245721 DD$LI
+ 246011 t$\1
+ 246023 t$ H
+ 246040 |$LH
+ 246057 t$HH
+ 246325 t$ H
+ 246356 D$@M
+ 246401 t$ H
+ 246440 AWAVAUATUSH
+ 246527 \$$H
+ 247406 T$$H
+ 247437 |$(H
+ 247511 []A\A]A^A_
+ 247645 8[]A\A]A^A_
+ 247760 AWAVI
+ 247767 AUAT
+ 250433 []A\A]A^A_
+ 250472 []A\A]A^A_
+ 251020 AWAVA
+ 251027 AUATL
+ 251152 []A\A]A^A_
+ 251250 rctest - RFCOMM testing
+ 251300 Usage:
+ 251310 	rctest <mode> [options] [bdaddr]
+ 251360 Modes:
+ 251367 	-r listen and receive
+ 251416 	-w listen and send
+ 251442 	-d listen and dump incoming data
+ 251504 	-s connect and send
+ 251531 	-u connect and receive
+ 251561 	-n connect and be silent
+ 251613 	-c connect, disconnect, connect, ...
+ 251661 	-m multiple connects
+ 251707 	-a automated test (receive hcix as parameter)
+ 251770 Options:
+ 252001 	[-b bytes] [-i device] [-P channel] [-U uuid]
+ 252060 	[-L seconds] enabled SO_LINGER option
+ 252127 	[-W seconds] enable deferred setup
+ 252173 	[-B filename] use data packets from file
+ 252245 	[-O filename] save received data to file
+ 252317 	[-N num] number of frames to send
+ 252362 	[-C num] send num frames before delay (default = 1)
+ 252447 	[-D milliseconds] delay after sending num frames (default = 0)
+ 252547 	[-Y priority] socket priority
+ 252606 	[-A] request authentication
+ 252643 	[-E] request encryption
+ 252674 	[-S] secure connection
+ 252724 	[-M] become master
+ 252750 	[-T] enable timestamps
+ 253000 Failed to open file to save recv data
+ 253050 %s%ld bytes in %.2f sec, %.2f kB/s
+ 253120 Can't set RFCOMM link mode: %s (%d)
+ 253170 Can't enable deferred setup : %s (%d)
+ 253240 Can not listen on the socket: %s (%d)
+ 253310 Can't get socket name: %s (%d)
+ 253350 Waiting for connection on channel %d ...
+ 253430 Can't get RFCOMM connection information: %s (%d)
+ 253520 Can't set socket priority: %s (%d)
+ 253570 Can't get socket priority: %s (%d)
+ 253640 Connect from %s [handle %d, class 0x%02x%02x%02x, priority %d]
+ 253740 Can't enable SO_LINGER: %s (%d)
+ 254000 Connected [handle %d, class 0x%02x%02x%02x, priority %d]
+ 254100 rdscuwmna:b:i:P:U:B:O:N:MAESL:W:C:D:Y:T
+ 254150 Failed to open file to save data
+ 254211 Receiving ...
+ 254227 Received %d bytes
+ 254251 Exit
+ 254256 Sending ...
+ 254272 Open failed: %s (%d)
+ 254317 Send failed: %s (%d)
+ 254344 Closing channel ...
+ 254370 Close failed: %m
+ 254411 Done
+ 254416 Read failed: %s (%d)
+ 254443 [%ld.%ld] 
+ 254456 Can't create socket: %s (%d)
+ 254513 Can't bind socket: %s (%d)
+ 254546 Accept failed: %s (%d)
+ 254575 Waiting for %d seconds
+ 254624 Disconnect: %m
+ 254643 Can't get channel number
+ 254674 Can't connect: %s (%d)
+ 254736 Can't allocate data buffer
+ 254771 rctest
+ 255416 P?%2.2X:%2.2X:%2.2X:%2.2X:%2.2X:%2.2X
+ 255470 Ceva, Inc. (formerly Parthus Technologies, Inc.)
+ 255560 Mitsubishi Electric Corporation
+ 255620 NXP Semiconductors (formerly Philips Semiconductors)
+ 255710 Macronix International Co. Ltd.
+ 255750 Computer Access Technology Corporation (CATC)
+ 256030 Renesas Electronics Corporation
+ 256070 Integrated System Solution Corp.
+ 256140 Matsushita Electric Industrial Co., Ltd.
+ 256220 BlackBerry Limited (formerly Research In Motion)
+ 256310 Integrated Silicon Solution Taiwan, Inc.
+ 256370 CONWISE Technology Corporation Ltd
+ 256440 Continental Automotive Systems
+ 256500 Sony Ericsson Mobile Communications
+ 256550 Harman International Industries, Inc.
+ 256620 Realtek Semiconductor Corporation
+ 256670 Beautiful Enterprise Co., Ltd.
+ 256730 Summit Data Communications, Inc.
+ 257000 ShangHai Super Smart Electronics Co. Ltd.
+ 257060 Sports Tracking Technologies Ltd.
+ 257130 DeLorme Publishing Company, Inc.
+ 257200 Topcorn Positioning Systems, LLC
+ 257250 Gimbal Inc. (formerly Qualcomm Labs, Inc. and Qualcomm Retail Solutions, Inc.)
+ 257370 Advanced PANMOBIL Systems GmbH & Co. KG
+ 257440 i.Tech Dynamic Global Distribution Ltd.
+ 257510 Jiangsu Toppower Automotive Electronics Co., Ltd.
+ 257600 Kensington Computer Products Group
+ 257650 Ingenieur-Systemgruppe Zahn GmbH
+ 257720 Clarinox Technologies Pty. Ltd.
+ 257760 Qualcomm Innovation Center, Inc. (QuIC)
+ 260030 AMICCOM Electronics Corporation
+ 260070 Shenzhen Excelsecu Data Technology Co.,Ltd
+ 260150 Taixingbang Technology (HK) Co,. LTD.
+ 260220 Qualcomm Connected Experiences, Inc.
+ 260270 Eden Software Consultants Ltd.
+ 260330 Aether Things Inc. (formerly Morse Project Inc.)
+ 260420 PLUS Locations Systems Pty Ltd
+ 260460 Ubiquitous Computing Technology Corporation
+ 260540 HiSilicon Technologies Co., Ltd.
+ 260610 Openbrain Technologies, Co., Ltd.
+ 260660 Changzhou Yongse Infotech Co., Ltd
+ 260730 Cypress Semiconductor Corporation
+ 261000 Seed Labs, Inc. (formerly ETC sp. z.o.o.)
+ 261060 Alpine Electronics (China) Co., Ltd
+ 261130 Huizhou Desay SV Automotive CO., LTD.
+ 261200 Anhui Huami Information Technology Co., Ltd.
+ 261260 Qingdao Yeelink Information Technology Co., Ltd.
+ 261350 Milwaukee Tool (formerly Milwaukee Electric Tools)
+ 261440 Connovate Technology Private Limited
+ 261510 Gecko Health Innovations, Inc.
+ 261550 TRON Forum (formerly T-Engine Forum)
+ 261620 Cochlear Bone Anchored Solutions AB
+ 261670 Hong Kong HunterSun Electronic Limited
+ 261740 Chengdu Synwing Technology Ltd
+ 262000 Koninklijke Philips Electronics N.V.
+ 262050 Minelab Electronics Pty Limited
+ 262110 Advanced Application Design, Inc.
+ 262160 Spreadtrum Communications Shanghai Ltd
+ 262230 Zebra Technologies Corporation
+ 262270 Anyka (Guangzhou) Microelectronics Technology Co, LTD
+ 262360 Kontakt Micro-Location Sp. z o.o.
+ 262430 Verifone Systems PTe Ltd. Taiwan Branch
+ 262500 Huami (Shanghai) Culture Communication CO., LTD
+ 262560 Shenzhen SuLong Communication Ltd
+ 262630 FengFan (BeiJing) Technology Co, Ltd
+ 262700 Beijing CarePulse Electronic Technology Co, Ltd
+ 262760 University of Applied Sciences Valais/Haute Ecole Valaisanne
+ 263060 Five Interactive, LLC dba Zendo
+ 263120 NetEase (Hangzhou) Network co.Ltd.
+ 263170 DEKA Research & Development Corp.
+ 263240 E.G.O. Elektro-Ger
+ 263264 tebau GmbH
+ 263300 steute Schaltgerate GmbH & Co. KG
+ 263350 HUAWEI Technologies Co., Ltd. ( 
+ 263450 Tendyron Corporation ( 
+ 263550 HANSHIN ELECTRIC RAILWAY CO.,LTD.
+ 263620 Techtronic Power Tools Technology Limited
+ 263700 Lenovo (Singapore) Pte Ltd. ( 
+ 263770 VASCO Data Security International, Inc.
+ 264040 Teva Branded Pharmaceutical Products R&D, Inc.
+ 264120 Flint Rehabilitation Devices, LLC
+ 264170 Espressif Incorporated ( 
+ 264272 %2.2X-%2.2X-%2.2X
+ 264314 Ericsson Technology Licensing
+ 264352 Nokia Mobile Phones
+ 264376 Intel Corp.
+ 264412 IBM Corp.
+ 264424 Toshiba Corp.
+ 264442 3Com
+ 264447 Microsoft
+ 264461 Lucent
+ 264470 Motorola
+ 264501 Infineon Technologies AG
+ 264532 Cambridge Silicon Radio
+ 264562 Silicon Wave
+ 264577 Digianswer A/S
+ 264616 Texas Instruments Inc.
+ 264645 Broadcom Corporation
+ 264672 Mitel Semiconductor
+ 264716 Widcomm, Inc
+ 264733 Zeevo, Inc.
+ 264747 Atmel Corporation
+ 264771 RTX Telecom A/S
+ 265011 KC Technology Inc.
+ 265034 NewLogic
+ 265045 Transilica, Inc.
+ 265066 Rohde & Schwarz GmbH & Co. KG
+ 265124 TTPCom Limited
+ 265143 Signia Technologies, Inc.
+ 265175 Conexant Systems Inc.
+ 265223 Qualcomm
+ 265234 Inventel
+ 265245 AVM Berlin
+ 265260 BandSpeed, Inc.
+ 265300 Mansella Ltd
+ 265315 NEC Corporation
+ 265335 WavePlus Technology Co., Ltd.
+ 265373 Alcatel
+ 265403 C Technologies
+ 265422 Open Interface
+ 265441 R F Micro Devices
+ 265463 Hitachi Ltd
+ 265477 Symbol Technologies, Inc.
+ 265531 Tenovis
+ 265541 GCT Semiconductor
+ 265563 Norwood Systems
+ 265603 MewTel Technology Inc.
+ 265632 ST Microelectronics
+ 265656 Synopsis
+ 265667 Red-M (Communications) Ltd
+ 265722 Commil Ltd
+ 265735 Eclipse (HQ Espana) S.L.
+ 265766 Mobilian Corporation
+ 266013 Terax
+ 266021 Gennum Corporation
+ 266044 IPextreme, Inc.
+ 266064 Systems and Chips, Inc.
+ 266114 Bluetooth SIG, Inc.
+ 266140 Seiko Epson Corporation
+ 266170 PARROT SA
+ 266202 Socket Mobile
+ 266220 Atheros Communications, Inc.
+ 266255 MediaTek, Inc.
+ 266274 Bluegiga
+ 266305 Marvell Technology Group Ltd.
+ 266343 3DSP Corporation
+ 266364 Accel Semiconductor Ltd.
+ 266415 Apple, Inc.
+ 266431 Staccato Communications, Inc.
+ 266467 Avago Technologies
+ 266512 APT Licensing Ltd.
+ 266535 SiRF Technology
+ 266555 Tzero Technologies, Inc.
+ 266606 J&M Corporation
+ 266626 Free2move AB
+ 266643 3DiJoy Corporation
+ 266666 Plantronics, Inc.
+ 266710 Vizio, Inc.
+ 266724 Nordic Semiconductor ASA
+ 266755 EM Microelectronic-Marin SA
+ 267011 Ralink Technology Corporation
+ 267047 Belkin International, Inc.
+ 267102 Stonestreet One, LLC
+ 267127 Wicentric, Inc.
+ 267147 RivieraWaves S.A.S
+ 267172 RDA Microelectronics
+ 267217 Gibson Guitars
+ 267236 MiCommand Inc.
+ 267255 Band XI International, LLC
+ 267310 Hewlett-Packard Company
+ 267340 9Solutions Oy
+ 267356 GN Netcom A/S
+ 267374 General Motors
+ 267413 A&D Engineering, Inc.
+ 267441 MindTree Ltd.
+ 267457 Polar Electro OY
+ 267500 BriarTek, Inc.
+ 267517 Sound ID
+ 267530 Monster, LLC
+ 267545 connectBlue AB
+ 267564 Group Sense Ltd.
+ 267605 Zomm, LLC
+ 267617 Samsung Electronics Co. Ltd.
+ 267654 Creative Technology Ltd.
+ 267705 Laird Technologies
+ 267730 Nike, Inc.
+ 267743 lesswire AG
+ 267757 MStar Semiconductor, Inc.
+ 270011 Hanlynn Technologies
+ 270036 A & R Cambridge
+ 270056 Seers Technology Co. Ltd
+ 270107 Autonet Mobile
+ 270126 WuXi Vimicro
+ 270143 Sennheiser Communications A/S
+ 270201 TimeKeeping Systems, Inc.
+ 270233 Ludus Helsinki Ltd.
+ 270257 BlueRadios, Inc.
+ 270300 equinox AG
+ 270313 Garmin International, Inc.
+ 270346 Ecotest
+ 270356 GN ReSound A/S
+ 270375 Jawbone
+ 270405 Zscan Software
+ 270424 Quintic Corp.
+ 270442 Stollman E+V GmbH
+ 270464 Funai Electric Co., Ltd.
+ 270515 ThinkOptics, Inc.
+ 270537 Universal Electronics, Inc.
+ 270573 Airoha Technology Corp.
+ 270623 NEC Lighting, Ltd.
+ 270646 ODM Technology, Inc.
+ 270673 ConnecteDevice Ltd.
+ 270717 zer01.tv GmbH
+ 270735 Alpwise
+ 270745 Colorfy, Inc.
+ 270763 Geoforce Inc.
+ 271001 Bose Corporation
+ 271022 Suunto Oy
+ 271034 SR-Medizinelektronik
+ 271061 Vertu Corporation Limited
+ 271113 Meta Watch Ltd.
+ 271133 LINAK A/S
+ 271145 OTL Dynamics LLC
+ 271166 Panda Ocean Inc.
+ 271207 Visteon Corporation
+ 271233 ARP Devices Limited
+ 271257 Magneti Marelli S.p.A
+ 271305 CAEN RFID srl
+ 271323 Green Throttle Games
+ 271350 Peter Systemtechnik GmbH
+ 271401 Omegawave Oy
+ 271416 Cinetix
+ 271426 Passif Semiconductor Corp
+ 271460 Saris Cycling Group, Inc
+ 271511 Bekey A/S
+ 271523 BDE Technology Co., Ltd.
+ 271554 Swirl Networks
+ 271573 Meso international
+ 271616 TreLab Ltd
+ 271631 Johnson Controls, Inc.
+ 271660 Starkey Laboratories Inc.
+ 271712 S-Power Electronics Limited
+ 271746 Ace Sensor Inc
+ 271765 Aplix Corporation
+ 272007 AAMP of America
+ 272027 Stalmart Technology Limited
+ 272063 Geneq Inc.
+ 272076 adidas AG
+ 272110 LG Electronics
+ 272127 Onset Computer Corporation
+ 272162 Selfly BV
+ 272174 Quuppa Oy.
+ 272207 GeLo Inc
+ 272220 Evluma
+ 272227 MC10
+ 272234 Binauric SE
+ 272250 Beats Electronics
+ 272272 Microchip Technology Inc.
+ 272324 Elgato Systems GmbH
+ 272350 ARCHOS SA
+ 272362 Dexcom, Inc.
+ 272377 Polar Electro Europe B.V.
+ 272431 Dialog Semiconductor B.V.
+ 272463 Kawantech
+ 272475 Austco Communication Systems
+ 272532 Timex Group USA, Inc.
+ 272560 Qualcomm Technologies, Inc.
+ 272614 Voyetra Turtle Beach
+ 272641 txtr GmbH
+ 272653 Biosentronics
+ 272671 Procter & Gamble
+ 272712 Hosiden Corporation
+ 272736 Muzik LLC
+ 272750 Misfit Wearables Corp
+ 272776 Google
+ 273005 Danlers Ltd
+ 273021 Semilink Inc
+ 273036 inMusic Brands, Inc
+ 273062 L.S. Research Inc.
+ 273105 Freshtemp
+ 273117 KS Technologies
+ 273137 ACTS Technologies
+ 273161 Vtrack Systems
+ 273200 Nielsen-Kellerman Company
+ 273232 Server Technology, Inc.
+ 273262 BioResearch Associates
+ 273311 Jolly Logic, LLC
+ 273332 Above Average Outcomes, Inc.
+ 273367 Bitsplitters GmbH
+ 273411 PayPal, Inc.
+ 273426 Witron Technology Limited
+ 273460 Kent Displays Inc.
+ 273503 Nautilus Inc.
+ 273521 Smartifier Oy
+ 273537 Elcometer Limited
+ 273561 VSN Technologies Inc.
+ 273607 AceUni Corp., Ltd.
+ 273632 StickNFind
+ 273645 Crystal Code AB
+ 273665 KOUKAAM a.s.
+ 273702 Delphi Corporation
+ 273725 ValenceTech Limited
+ 273751 Reserved
+ 273762 Typo Products, LLC
+ 274005 TomTom International BV
+ 274035 Fugoo, Inc
+ 274050 Keiser Corporation
+ 274073 Bang & Olufsen A/S
+ 274116 Innovative Yachtter Solutions
+ 274154 William Demant Holding A/S
+ 274207 Chicony Electronics Co., Ltd.
+ 274245 Atus BV
+ 274255 Codegate Ltd.
+ 274273 ERi, Inc.
+ 274305 Transducers Direct, LLC
+ 274335 Fujitsu Ten Limited
+ 274361 Audi AG
+ 274371 Nippon Seiki Co., Ltd.
+ 274420 Steelseries ApS
+ 274440 Visybl Inc.
+ 274454 Xensr
+ 274462 e.solutions
+ 274476 1OAK Technologies
+ 274520 Wimoto Technologies Inc
+ 274550 Radius Networks, Inc.
+ 274576 Wize Technology Co., Ltd.
+ 274630 Qualcomm Labs, Inc.
+ 274654 Aruba Networks
+ 274673 Baidu
+ 274701 Arendi AG
+ 274713 Skoda Auto a.s.
+ 274733 Volkswagon AG
+ 274751 Porsche AG
+ 274764 Sino Wealth Electronic Ltd.
+ 275020 AirTurn, Inc.
+ 275036 Kinsa, Inc.
+ 275052 HID Global
+ 275065 SEAT es
+ 275075 Promethean Ltd.
+ 275115 Salutica Allied Solutions
+ 275147 GPSI Group Pty Ltd
+ 275172 Nimble Devices Oy
+ 275214 SportIQ
+ 275224 TEMEC Instruments B.V.
+ 275253 Sony Corporation
+ 275274 ASSA ABLOY
+ 275307 Clarion Co., Ltd.
+ 275331 Warehouse Innovations
+ 275357 MADS Inc
+ 275370 Blue Maestro Limited
+ 275415 Resolution Products, Inc.
+ 275447 Airewear LLC
+ 275464 Prestigio Plaza Ltd.
+ 275511 NTEO Inc.
+ 275523 Focus Systems Corporation
+ 275555 Tencent Holdings Limited
+ 275606 Allegion
+ 275617 Murata Manufacuring Co., Ltd.
+ 275655 WirelessWERX
+ 275672 Nod, Inc.
+ 275704 B&B Manufacturing Company
+ 275736 FedEx Services
+ 275755 Grape Systems Inc.
+ 276000 Bkon Connect
+ 276015 Lintech GmbH
+ 276032 Novatel Wireless
+ 276053 Ciright
+ 276063 Mighty Cast, Inc.
+ 276105 Ambimat Electronics
+ 276131 Perytons Ltd.
+ 276147 Tivoli Audio, LLC
+ 276171 Master Lock
+ 276205 Mesh-Net Ltd
+ 276222 Tangerine, Inc.
+ 276242 B&W Group Ltd.
+ 276261 Pioneer Corporation
+ 276305 OnBeep
+ 276314 Vernier Software & Technology
+ 276352 ROL Ergo
+ 276363 Pebble Technology
+ 276405 NETATMO
+ 276415 Accumulate AB
+ 276433 Inmite s.r.o.
+ 276451 ChefSteps, Inc.
+ 276471 micas AG
+ 276502 Biomedical Research Ltd.
+ 276533 Pitius Tec S.L.
+ 276553 Estimote, Inc.
+ 276572 Unikey Technologies, Inc.
+ 276624 Timer Cap Co.
+ 276642 AwoX
+ 276647 yikes
+ 276655 MADSGlobal NZ Ltd.
+ 276700 PCH International
+ 276722 MISHIK Pte Ltd
+ 276741 Bayer HealthCare
+ 276762 Spicebox LLC
+ 276777 emberlight
+ 277012 Cooper-Atkins Corporation
+ 277044 Qblinks
+ 277054 MYSPHERA
+ 277065 LifeScan Inc
+ 277102 Volantic AB
+ 277116 Podo Labs, Inc
+ 277135 Roche Diabetes Care AG
+ 277164 Amazon Fulfillment Service
+ 277217 Kocomojo, LLC
+ 277235 Everykey LLC
+ 277252 Dynamic Controls
+ 277273 SentriLock
+ 277306 I-SYST inc.
+ 277322 CASIO COMPUTER CO., LTD.
+ 277353 LAPIS Semiconductor Co., Ltd.
+ 277411 Telemonitor, Inc.
+ 277433 taskit GmbH
+ 277447 Daimler AG
+ 277462 BatAndCat
+ 277474 BluDotz Ltd
+ 277510 XTel ApS
+ 277521 Gigaset Communications GmbH
+ 277555 HOP Ubiquitous
+ 277574 To Be Assigned
+ 277613 Nectar
+ 277622 bel'apps LLC
+ 277637 CORE Lighting Ltd
+ 277661 Seraphim Sense Ltd
+ 277704 Unico RBC
+ 277716 Physical Enterprises Inc.
+ 277750 Able Trend Technology Limited
+ 300006 Konica Minolta, Inc.
+ 300033 Wilo SE
+ 300043 Extron Design Services
+ 300072 Fitbit, Inc.
+ 300107 Fireflies Systems
+ 300131 Intelletto Technologies Inc.
+ 300166 FDK CORPORATION
+ 300206 Cloudleaf, Inc
+ 300225 Maveric Automation LLC
+ 300254 Acoustic Stream Corporation
+ 300310 Zuli
+ 300315 Paxton Access Ltd
+ 300337 WiSilica Inc
+ 300354 Vengit Limited
+ 300373 SALTO SYSTEMS S.L.
+ 300416 CUBETECH s.r.o.
+ 300436 Cokiya Incorporated
+ 300462 CVS Health
+ 300475 Ceruus
+ 300504 Strainstall Ltd
+ 300524 Channel Enterprises (HK) Ltd.
+ 300562 FIAMM
+ 300570 GIGALANE.CO.,LTD
+ 300611 EROAD
+ 300617 Mine Safety Appliances
+ 300646 Icon Health and Fitness
+ 300676 Asandoo GmbH
+ 300713 ENERGOUS CORPORATION
+ 300740 Taobao
+ 300747 Canon Inc.
+ 300762 Geophysical Technology Inc.
+ 301016 Facebook, Inc.
+ 301035 Nipro Diagnostics, Inc.
+ 301065 FlightSafety International
+ 301120 Earlens Corporation
+ 301144 Sunrise Micro Devices, Inc.
+ 301200 Star Micronics Co., Ltd.
+ 301231 Netizens Sp. z o.o.
+ 301255 Nymi Inc.
+ 301267 Nytec, Inc.
+ 301303 Trineo Sp. z o.o.
+ 301325 Nest Labs Inc.
+ 301344 LM Technologies Ltd
+ 301370 General Electric Company
+ 301421 i+D3 S.L.
+ 301433 HANA Micron
+ 301447 Stages Cycling LLC
+ 301472 SenionLab AB
+ 301507 Syszone Co., Ltd
+ 301530 Pulsate Mobile Ltd.
+ 301554 pironex GmbH
+ 301571 BRADATECH Corp.
+ 301611 Transenergooil AG
+ 301633 Bunch
+ 301641 DME Microelectronics
+ 301666 Bitcraze AB
+ 301702 HASWARE Inc.
+ 301717 Abiogenix Inc.
+ 301736 Poly-Control ApS
+ 301757 Avi-on
+ 301766 Laerdal Medical AS
+ 302011 Fetch My Pet
+ 302026 Sam Labs Ltd.
+ 302044 HOUWA SYSTEM DESIGN, k.k.
+ 302102 Primus Inter Pares Ltd
+ 302131 August
+ 302140 Gill Electronics
+ 302161 Sky Wave Design
+ 302201 Newlab S.r.l.
+ 302217 ELAD srl
+ 302230 G-wearables inc.
+ 302251 Squadrone Systems Inc.
+ 302300 Code Corporation
+ 302321 Savant Systems LLC
+ 302344 Logitech International SA
+ 302376 Innblue Consulting
+ 302421 iParking Ltd.
+ 302437 Bison Group Ltd.
+ 302460 Widex A/S
+ 302472 Jolla Ltd
+ 302504 Lectronix, Inc.
+ 302524 Caterpillar Inc
+ 302544 Freedom Innovations
+ 302570 Dynamic Devices Ltd
+ 302614 Technology Solutions (UK) Ltd
+ 302652 IPS Group Inc.
+ 302671 STIR
+ 302676 Sano, Inc
+ 302710 AutoMap LLC
+ 302724 CuteCircuit LTD
+ 302744 Valeo Service
+ 302762 Fullpower Technologies, Inc.
+ 303017 KloudNation
+ 303033 Itron, Inc.
+ 303047 The University of Tokyo
+ 303077 UTC Fire and Security
+ 303125 Cool Webthings Limited
+ 303154 DJO Global
+ 303167 Gelliner Limited
+ 303210 Medtronic, Inc.
+ 303230 Gozio, Inc.
+ 303244 Form Lifting, LLC
+ 303266 Wahoo Fitness, LLC
+ 303311 Radio System Corporation
+ 303342 Freescale Semiconductor, Inc.
+ 303400 AR Timing
+ 303412 Rigado LLC
+ 303425 Kemppi Oy
+ 303437 Tapcentive Inc.
+ 303457 Smartbotics Inc.
+ 303500 Otter Products, LLC
+ 303524 STEMP Inc.
+ 303537 LumiGeek LLC
+ 303554 InvisionHeart Inc.
+ 303577 Macnica Inc.
+ 303614 Jaguar Land Rover Limited
+ 303646 CoroWare Technologies, Inc
+ 303701 Simplo Technology Co., LTD
+ 303734 Omron Healthcare Co., LTD
+ 303766 Comodule GMBH
+ 304004 ikeGPS
+ 304013 Telink Semiconductor Co. Ltd
+ 304050 Interplan Co., Ltd
+ 304073 Wyler AG
+ 304104 IK Multimedia Production srl
+ 304141 Lukoton Experience Oy
+ 304167 MTI Ltd
+ 304177 Tech4home, Lda
+ 304216 Hiotech AB
+ 304231 DOTT Limited
+ 304246 Blue Speck Labs, LLC
+ 304273 Cisco Systems Inc
+ 304315 Mobicomm Inc
+ 304332 Edamic
+ 304341 Goodnet Ltd
+ 304355 Luster Leaf Products Inc
+ 304406 Manus Machina BV
+ 304427 Mobiquity Networks Inc
+ 304456 Praxis Dynamics
+ 304476 Philip Morris Products S.A.
+ 304532 Comarch SA
+ 304545 Nestl
+ 304554  Nespresso S.A.
+ 304574 Merlinia A/S
+ 304611 LifeBEAM Technologies
+ 304637 Twocanoes Labs, LLC
+ 304663 Muoverti Limited
+ 304704 Stamer Musikanlagen GMBH
+ 304735 Tesla Motors
+ 304752 Pharynks Corporation
+ 304777 Lupine
+ 305006 Siemens AG
+ 305021 Foster Electric Company, Ltd
+ 305056 ETA SA
+ 305065 x-Senso Solutions Kft
+ 305113 Qrio Inc
+ 305124 Pitpatpet Ltd
+ 305142 MSHeli s.r.l.
+ 305160 Trakm8 Ltd
+ 305173 JIN CO, Ltd
+ 305207 Alatech Technology
+ 305232 Awarepoint
+ 305245 ViCentra B.V.
+ 305263 Raven Industries
+ 305304 WaveWare Technologies
+ 305332 Argenox Technologies
+ 305357 Bragi GmbH
+ 305372 16Lab Inc
+ 305404 Masimo Corp
+ 305420 Iotera Inc.
+ 305434 Endress+Hauser
+ 305453 ACKme Networks, Inc.
+ 305500 FiftyThree Inc.
+ 305520 Parker Hannifin Corp
+ 305545 Transcranial Ltd
+ 305566 Uwatec AG
+ 305600 Orlan LLC
+ 305612 Blue Clover Devices
+ 305636 M-Way Solutions GmbH
+ 305663 Microtronics Engineering GmbH
+ 305721 Schneider Schreibger
+ 305747 te GmbH
+ 305757 Sapphire Circuits LLC
+ 306005 Lumo Bodytech Inc.
+ 306030 UKC Technosolution
+ 306053 Xicato Inc.
+ 306067 Playbrush
+ 306101 Dai Nippon Printing Co., Ltd.
+ 306137 G24 Power Limited
+ 306161 AdBabble Local Commerce Inc.
+ 306216 Devialet SA
+ 306232 ALTYOR
+ 306241 Lexmark International Inc.
+ 306274 Fluke Corporation
+ 306316 Yardarm Technologies
+ 306343 SensaRx
+ 306353 SECVRE GmbH
+ 306367 Glacial Ridge Technologies
+ 306422 Identiv, Inc.
+ 306440 DDS, Inc.
+ 306452 SMK Corporation
+ 306472 Schawbel Technologies LLC
+ 306524 XMI Systems SA
+ 306543 Cerevo
+ 306552 Torrox GmbH & Co KG
+ 306576 Gemalto
+ 306606 Domster Tadeusz Szydlowski
+ 306641 Technogym SPA
+ 306657 FLEURBAEY BVBA
+ 306676 Aptcode Solutions
+ 306720 LSI ADL Technology
+ 306743 Animas Corp
+ 306757 Alps Electric Co., Ltd.
+ 307007 OCEASOFT
+ 307020 Motsai Research
+ 307040 Geotab
+ 307047 bewhere inc
+ 307063 Johnson Outdoors Inc
+ 307110 Ekomini inc.
+ 307125 DEFA AS
+ 307135 Aseptika Ltd
+ 307152 HabitAware, LLC
+ 307172 ruwido austria gmbh
+ 307216 ITEC corporation
+ 307237 StoneL
+ 307246 Sonova AG
+ 307260 Maven Machines, Inc.
+ 307305 Synapse Electronics
+ 307331 Standard Innovation Inc.
+ 307362 RF Code, Inc.
+ 307400 Wally Ventures S.L.
+ 307424 Willowbank Electronics Ltd
+ 307457 SK Telecom
+ 307472 Jetro AS
+ 307503 Code Gears LTD
+ 307522 NANOLINK APS
+ 307537 IF, LLC
+ 307547 RF Digital Corp
+ 307567 Church & Dwight Co., Inc
+ 307620 Multibit Oy
+ 307634 CliniCloud Inc
+ 307653 SwiftSensors
+ 307670 Blue Bite
+ 307702 ELIAS GmbH
+ 307715 Sivantos GmbH
+ 307733 Petzl
+ 307741 storm power ltd
+ 307761 EISST Ltd
+ 307773 Inexess Technology Simma KG
+ 310027 Currant, Inc.
+ 310045 C2 Development, Inc.
+ 310072 Blue Sky Scientific, LLC
+ 310123 ALOTTAZS LABS, LLC
+ 310146 Kupson spol. s r.o.
+ 310172 Areus Engineering GmbH
+ 310221 Impossible Camera GmbH
+ 310250 InventureTrack Systems
+ 310277 LockedUp
+ 310310 Itude
+ 310316 Pacific Lock Company
+ 310343 Robert Bosch GmbH
+ 310365 Illuxtron international B.V.
+ 310422 miSport Ltd.
+ 310437 Chargelib
+ 310451 Doppler Lab
+ 310465 BBPOS Limited
+ 310503 RTB Elektronik GmbH & Co. KG
+ 310540 Rx Networks, Inc.
+ 310562 WeatherFlow, Inc.
+ 310604 Technicolor USA Inc.
+ 310631 Bestechnic(Shanghai),Ltd
+ 310662 Raden Inc
+ 310674 JouZen Oy
+ 310706 CLABER S.P.A.
+ 310724 Hyginex, Inc.
+ 310742 Schneider Electric
+ 310765 Oort Technologies LLC
+ 311013 Chrono Therapeutics
+ 311037 Rinnai Corporation
+ 311062 Swissprime Technologies AG
+ 311115 Koha.,Co.Ltd
+ 311132 Genevac Ltd
+ 311146 Chemtronics
+ 311162 Seguro Technology Sp. z o.o.
+ 311217 Redbird Flight Simulations
+ 311252 Dash Robotics
+ 311270 LINE Corporation
+ 311311 Guillemot Corporation
+ 311337 Wilson Sporting Goods
+ 311365 Ayatan Sensors
+ 311404 Electronics Tomorrow Limited
+ 311441 PayRange Inc.
+ 311457 ABOV Semiconductor
+ 311502 AINA-Wireless Inc.
+ 311525 Eijkelkamp Soil & Water
+ 311555 BMA ergonomics b.v.
+ 311601 Anima
+ 311612 Empatica Srl
+ 311627 Afero, Inc.
+ 311643 Powercast Corporation
+ 311671 Secuyou ApS
+ 311705 OMRON Corporation
+ 311727 Send Solutions
+ 311746 NIPPON SYSTEMWARE CO.,LTD.
+ 312001 Neosfar
+ 312011 Fliegl Agrartechnik GmbH
+ 312042 Gilvader
+ 312053 Digi International Inc (R)
+ 312106 DeWalch Technologies, Inc.
+ 312141 Samsung SDS Co., Ltd.
+ 312167 Blur Product Development
+ 312220 University of Michigan
+ 312247 Victron Energy BV
+ 312271 NTT docomo
+ 312304 Carmanah Technologies Corp.
+ 312340 Bytestorm Ltd.
+ 312357 internal use
+ 312374 not assigned
+ 312463 hhhg(
+ 312471 G]o&&G&_&&GGG&_&_
+ 312513 &_o_
+ 312531 VIRTUAL
+ 312545 PCCARD
+ 312554 UART
+ 312561 RS232
+ 312573 SDIO
+ 312600 UNKNOWN
+ 312610 BR/EDR
+ 312627 '%s' 
+ 312635 <3-slot packets>
+ 312656 <5-slot packets>
+ 312677 <encryption>
+ 312714 <slot offset>
+ 312732 <timing accuracy>
+ 312754 <role switch>
+ 312772 <hold mode>
+ 313006 <sniff mode>
+ 313023 <park state>
+ 313040 <RSSI>
+ 313047 <channel quality>
+ 313071 <SCO link>
+ 313104 <HV2 packets>
+ 313122 <HV3 packets>
+ 313140 <u-law log>
+ 313154 <A-law log>
+ 313170 <CVSD>
+ 313177 <paging scheme>
+ 313217 <power control>
+ 313237 <transparent SCO>
+ 313261 <broadcast encrypt>
+ 313305 <no. 24>
+ 313316 <EDR ACL 2 Mbps>
+ 313337 <EDR ACL 3 Mbps>
+ 313360 <enhanced iscan>
+ 313401 <interlaced iscan>
+ 313424 <interlaced pscan>
+ 313447 <inquiry with RSSI>
+ 313473 <extended SCO>
+ 313512 <EV4 packets>
+ 313530 <EV5 packets>
+ 313546 <no. 34>
+ 313557 <AFH cap. slave>
+ 313600 <AFH class. slave>
+ 313623 <BR/EDR not supp.>
+ 313646 <LE support>
+ 313663 <3-slot EDR ACL>
+ 313704 <5-slot EDR ACL>
+ 313725 <sniff subrating>
+ 313747 <pause encryption>
+ 313772 <AFH cap. master>
+ 314014 <AFH class. master>
+ 314040 <EDR eSCO 2 Mbps>
+ 314062 <EDR eSCO 3 Mbps>
+ 314104 <3-slot EDR eSCO>
+ 314126 <extended inquiry>
+ 314151 <LE and BR/EDR>
+ 314171 <no. 50>
+ 314202 <simple pairing>
+ 314223 <encapsulated PDU>
+ 314246 <err. data report>
+ 314271 <non-flush flag>
+ 314312 <no. 55>
+ 314323 <LSTO>
+ 314332 <inquiry TX power>
+ 314355 <EPC>
+ 314363 <no. 59>
+ 314374 <no. 60>
+ 314405 <no. 61>
+ 314416 <no. 62>
+ 314427 <extended features>
+ 314457 1.0b
+ 314520 Inquiry
+ 314530 Inquiry Cancel
+ 314547 Exit Periodic Inquiry Mode
+ 314602 Disconnect
+ 314615 Add SCO Connection
+ 314640 Cancel Create Connection
+ 314671 Accept Connection Request
+ 314723 Reject Connection Request
+ 314755 Link Key Request Reply
+ 315004 PIN Code Request Reply
+ 315033 Change Connection Packet Type
+ 315071 Authentication Requested
+ 315122 Set Connection Encryption
+ 315154 Change Connection Link Key
+ 315207 Master Link Key
+ 315227 Cancel Remote Name Request
+ 315262 Read Remote Extended Features
+ 315320 Read Clock Offset
+ 315342 Read LMP Handle
+ 315362 Hold Mode
+ 315374 Exit Sniff Mode
+ 315414 Exit Park State
+ 315434 QoS Setup
+ 315446 Role Discovery
+ 315465 Switch Role
+ 315501 Read Link Policy Settings
+ 315533 Write Link Policy Settings
+ 315566 Flow Specification
+ 315611 Reset
+ 315617 Set Event Filter
+ 315640 Read PIN Type
+ 315656 Write PIN Type
+ 315675 Create New Unit Key
+ 315721 Read Stored Link Key
+ 315746 Write Stored Link Key
+ 315774 Delete Stored Link Key
+ 316023 Write Local Name
+ 316044 Read Local Name
+ 316064 Read Page Timeout
+ 316106 Write Page Timeout
+ 316131 Read Scan Enable
+ 316152 Write Scan Enable
+ 316174 Read Page Scan Activity
+ 316224 Write Page Scan Activity
+ 316255 Read Inquiry Scan Activity
+ 316310 Write Inquiry Scan Activity
+ 316344 Read Authentication Enable
+ 316377 Write Authentication Enable
+ 316433 Read Encryption Mode
+ 316460 Write Encryption Mode
+ 316506 Read Class Of Device
+ 316533 Write Class Of Device
+ 316561 Read Voice Setting
+ 316604 Write Voice Setting
+ 316630 Read Automatic Flush Timeout
+ 316665 Write Automatic Flush Timeout
+ 316723 Read Hold Mode Activity
+ 316753 Write Hold Mode Activity
+ 317004 Read Transmit Power Level
+ 317036 Host Buffer Size
+ 317057 Read Link Supervision Timeout
+ 317115 Read Number of Supported IAC
+ 317152 Read Current IAC LAP
+ 317177 Write Current IAC LAP
+ 317225 Read Page Scan Period Mode
+ 317260 Write Page Scan Period Mode
+ 317314 Read Page Scan Mode
+ 317340 Write Page Scan Mode
+ 317365 Read Inquiry Scan Type
+ 317414 Write Inquiry Scan Type
+ 317444 Read Inquiry Mode
+ 317466 Write Inquiry Mode
+ 317511 Read Page Scan Type
+ 317535 Write Page Scan Type
+ 317562 Read Local Supported Commands
+ 317620 Read Local Supported Features
+ 317656 Read Local Extended Features
+ 317713 Read Country Code
+ 317735 Read BD ADDR
+ 317752 Read Failed Contact Counter
+ 320006 Reset Failed Contact Counter
+ 320043 Get Link Quality
+ 320064 Read RSSI
+ 320076 Read AFH Channel Map
+ 320123 Read BD Clock
+ 320141 Read Loopback Mode
+ 320164 Write Loopback Mode
+ 320210 Enable Device Under Test Mode
+ 320246 Setup Synchronous Connection
+ 320303 Accept Synchronous Connection
+ 320341 Reject Synchronous Connection
+ 320377 Refresh Encryption Key
+ 320426 Sniff Subrating
+ 320446 Read Simple Pairing Mode
+ 320477 Write Simple Pairing Mode
+ 320531 Read Local OOB Data
+ 320555 IO Capability Request Reply
+ 320611 User Passkey Request Reply
+ 320644 Remote OOB Data Request Reply
+ 320702 Enhanced Flush
+ 320721 Send Keypress Notification
+ 320754 Read Encryption Key Size
+ 321005 Create Physical Link
+ 321032 Accept Physical Link
+ 321057 Disconnect Physical Link
+ 321110 Create Logical Link
+ 321134 Accept Logical Link
+ 321160 Disconnect Logical Link
+ 321210 Logical Link Cancel
+ 321234 Flow Specification Modify
+ 321266 Set Event Mask Page 2
+ 321314 Read Location Data
+ 321337 Write Location Data
+ 321363 Read Local AMP Info
+ 321407 Read Local AMP_ASSOC
+ 321434 Write Remote AMP_ASSOC
+ 321463 Read Flow Control Mode
+ 321512 Write Flow Control Mode
+ 321542 Read Data Block Size
+ 321567 Enable AMP Receiver Reports
+ 321623 AMP Test End
+ 321640 AMP Test Command
+ 321661 Short Range Mode
+ 321702 Read LE Host Support
+ 321727 Write LE Host Support
+ 321755 LE Set Event Mask
+ 321777 LE Read Buffer Size
+ 322023 LE Set Random Address
+ 322051 LE Set Advertising Parameters
+ 322107 LE Set Advertising Data
+ 322137 LE Set Scan Response Data
+ 322171 LE Set Advertise Enable
+ 322221 LE Set Scan Parameters
+ 322250 LE Set Scan Enable
+ 322273 LE Create Connection
+ 322320 LE Create Connection Cancel
+ 322354 LE Read White List Size
+ 322404 LE Clear White List
+ 322430 LE Add Device To White List
+ 322464 LE Connection Update
+ 322511 LE Read Channel Map
+ 322535 LE Read Remote Used Features
+ 322572 LE Encrypt
+ 322605 LE Rand
+ 322615 LE Start Encryption
+ 322641 LE Read Supported States
+ 322672 LE Receiver Test
+ 322713 LE Transmitter Test
+ 322737 LE Test End
+ 322753 NONE
+ 322760 ACCEPT
+ 322767 MASTER
+ 322776 AUTH
+ 323003 ENCRYPT
+ 323013 TRUSTED
+ 323023 RELIABLE
+ 323034 SECURE
+ 323043 RSWITCH
+ 323053 HOLD
+ 323060 SNIFF
+ 323066 PARK
+ 323113 2-EV3
+ 323121 2-EV5
+ 323127 3-EV3
+ 323135 3-EV5
+ 323157 2-DH1
+ 323165 2-DH3
+ 323173 2-DH5
+ 323201 3-DH1
+ 323207 3-DH3
+ 323215 3-DH5
+ 323226 INIT
+ 323233 RUNNING
+ 323247 PSCAN
+ 323255 ISCAN
+ 323263 INQUIRY
+ 323330 Link Key Request Negative Reply
+ 323370 PIN Code Request Negative Reply
+ 323430 Read Remote Supported Features
+ 323470 Read Remote Version Information
+ 323530 Read Default Link Policy Settings
+ 323600 Write Default Link Policy Settings
+ 323650 Read Connection Accept Timeout
+ 323710 Write Connection Accept Timeout
+ 323750 Read Num Broadcast Retransmissions
+ 324020 Write Num Broadcast Retransmissions
+ 324070 Read Synchronous Flow Control Enable
+ 324140 Write Synchronous Flow Control Enable
+ 324210 Set Host Controller To Host Flow Control
+ 324270 Host Number Of Completed Packets
+ 324340 Write Link Supervision Timeout
+ 324400 Set AFH Channel Classification
+ 324440 Read AFH Channel Assessment Mode
+ 324510 Write AFH Channel Assessment Mode
+ 324560 Read Local Version Information
+ 324620 Read Extended Inquiry Response
+ 324660 Write Extended Inquiry Response
+ 324720 Read Inquiry Response Transmit Power Level
+ 325000 Write Inquiry Transmit Power Level
+ 325050 Read Default Erroneous Data Reporting
+ 325120 Write Default Erroneous Data Reporting
+ 325170 User Confirmation Request Reply
+ 325230 User Confirmation Request Negative Reply
+ 325310 User Passkey Request Negative Reply
+ 325360 Write Simple Pairing Debug Mode
+ 325420 Remote OOB Data Request Negative Reply
+ 325470 IO Capability Request Negative Reply
+ 325540 Read Logical Link Accept Timeout
+ 325610 Write Logical Link Accept Timeout
+ 325660 Read Enhanced Transmit Power Level
+ 325730 Read Best Effort Flush Timeout
+ 325770 Write Best Effort Flush Timeout
+ 326030 LE Read Local Supported Features
+ 326100 LE Read Advertising Channel TX Power
+ 326150 LE Remove Device From White List
+ 326220 LE Set Host Channel Classification
+ 326270 LE Long Term Key Request Reply
+ 326330 LE Long Term Key Request Negative Reply
+ 326400 %s: Continuation state size exceeds internal buffer
+ 326470 %s: Unknown sequence type, aborting
+ 326540 %s: Strings of size > USHRT_MAX not supported
+ 326620 %s: Unknown data type : %d expecting a svc UUID
+ 326710 %s: Not enough room for 16-bit UUID
+ 326760 %s: Not enough room for 32-bit UUID
+ 327030 %s: Not enough room for 128-bit UUID
+ 327100 %s: Sizeof text string > UINT16_MAX
+ 327150 %s: String too long to fit in packet
+ 327220 %s: Not enough memory for incoming string
+ 327300 %s: Packet not big enough to hold sequence.
+ 327360 %s: Unknown data descriptor : 0x%x terminating
+ 327440 %s: Unexpected end of packet: continuation state data missing
+ 327540 %s: Response buffer alloc failure:%m (%d)
+ 327620 %s: Protocol error: transaction id does not match
+ 327710 %s: Protocol error: invalid length
+ 327760 %s: Protocol error: wrong current service record count value.
+ 330060 %s: Protocol error: invalid PDU size
+ 330130 %s: Protocol error: invalid AttrList size
+ 330210 %s: Protocol error: wrong PDU size.
+ 330260 %s: Error sending data:%m(%d)
+ 330320 %s: Client timed out
+ 330346 NULL
+ 330353 %.8x
+ 330360 %.8x-%.4x-%.4x-%.4x-%.8x%.4x
+ 330415 Type of UUID (%x) unknown.
+ 330450 %s: Unexpected end of packet
+ 330506 Service Name: %.*s
+ 330532 Service Description: %.*s
+ 330565 Service Provider: %.*s
+ 330615 %s: Error sending data:%m
+ 330650 %s: Invalid session
+ 330675 %s: Inquiry failed:%m
+ 330724 %s: Read response:%m (%d)
+ 330757 %s: Illegal PDU ID: 0x%x
+ 331011 %s: SVC REC is null
+ 331036 SDP Server
+ 331051 Browse Group Descriptor
+ 331101 Public Browse Group
+ 331125 Serial Port
+ 331141 LAN Access Using PPP
+ 331166 Dialup Networking
+ 331210 IrMC Sync
+ 331222 OBEX Object Push
+ 331243 OBEX File Transfer
+ 331266 IrMC Sync Command
+ 331310 Headset
+ 331320 Cordless Telephony
+ 331343 Audio Source
+ 331360 Audio Sink
+ 331373 AV Remote Target
+ 331414 Advanced Audio
+ 331433 AV Remote
+ 331445 AV Remote Controller
+ 331472 Intercom
+ 331507 Headset Audio Gateway
+ 331541 WAP Client
+ 331554 PAN User
+ 331565 Network Access Point
+ 331612 PAN Group Network
+ 331634 Direct Printing
+ 331654 Reference Printing
+ 331677 Imaging
+ 331707 Imaging Responder
+ 331731 Imaging Automatic Archive
+ 331763 Imaging Referenced Objects
+ 332016 Handsfree
+ 332030 Handsfree Audio Gateway
+ 332060 Direct Printing Ref. Objects
+ 332115 Reflected UI
+ 332132 Basic Printing
+ 332151 Printing Status
+ 332171 Human Interface Device
+ 332220 Hardcopy Cable Replacement
+ 332253 HCR Print
+ 332265 HCR Scan
+ 332276 Common ISDN Access
+ 332321 Video Conferencing Gateway
+ 332354 UDI MT
+ 332363 UDI TA
+ 332372 Audio/Video
+ 332406 SIM Access
+ 332421 Phonebook Access - PCE
+ 332450 Phonebook Access - PSE
+ 332477 Phonebook Access
+ 332520 Message Access - MAS
+ 332545 Message Access - MNS
+ 332572 Message Access
+ 332611 PnP Information
+ 332631 Generic Networking
+ 332654 Generic File Transfer
+ 332702 Generic Audio
+ 332720 Generic Telephony
+ 332742 UPnP
+ 332747 UPnP IP
+ 332757 UPnP PAN
+ 332770 UPnP LAP
+ 333001 UPnP L2CAP
+ 333014 Video Source
+ 333031 Video Sink
+ 333044 Video Distribution
+ 333073 HDP Source
+ 333106 HDP Sink
+ 333117 Generic Access
+ 333136 Generic Attribute
+ 333160 Apple Agent
+ 333204 RFCOMM
+ 333217 TCS-BIN
+ 333227 TCS-AT
+ 333236 OBEX
+ 333247 HTTP
+ 333260 BNEP
+ 333265 UPNP
+ 333272 HIDP
+ 333277 HCRP-Ctrl
+ 333311 HCRP-Data
+ 333323 HCRP-Notify
+ 333337 AVCTP
+ 333345 AVDTP
+ 333353 CMTP
+ 333364 MCAP-Ctrl
+ 333376 MCAP-Data
+ 336720 sdp_general_inquiry
+ 336760 sdp_service_search_attr_req
+ 337020 sdp_process
+ 337040 sdp_get_error
+ 337060 sdp_service_search_attr_async
+ 337120 sdp_service_attr_async
+ 337160 sdp_service_search_async
+ 337220 sdp_service_attr_req
+ 337260 extract_record_handle_seq
+ 337320 copy_cstate
+ 337340 sdp_service_search_req
+ 337400 sdp_device_record_update
+ 337440 sdp_device_record_unregister_binary
+ 337540 sdp_device_record_register_binary
+ 337610 sdp_read_rsp
+ 337640 sdp_send_req_w4_rsp
+ 337700 sdp_extract_pdu
+ 337720 extract_seq
+ 337740 extract_str
+ 337760 extract_int
+ 340000 sdp_extract_attr
+ 340040 sdp_extract_seqtype
+ 340100 sdp_uuid_extract
+ 340140 sdp_data_alloc_with_length
+ 344277 ;*3$"
+ 416700 501b2018c5b742d896a5c8e09f51e159d18f6e.debug
+ 416765 .shstrtab
+ 416777 .interp
+ 417007 .note.ABI-tag
+ 417025 .note.gnu.build-id
+ 417050 .gnu.hash
+ 417062 .dynsym
+ 417072 .dynstr
+ 417102 .gnu.version
+ 417117 .gnu.version_r
+ 417136 .rela.dyn
+ 417150 .init
+ 417156 .plt
+ 417163 .plt.got
+ 417174 .text
+ 417202 .fini
+ 417210 .rodata
+ 417220 .eh_frame_hdr
+ 417236 .eh_frame
+ 417250 .init_array
+ 417264 .fini_array
+ 417300 .jcr
+ 417305 .dynamic
+ 417316 .data
+ 417324 .bss
+ 417331 .gnu_debuglink

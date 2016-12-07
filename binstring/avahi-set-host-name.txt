@@ -1,154 +1,135 @@
    1070 /lib64/ld-linux-x86-64.so.2
-   3451 libavahi-client.so.3
-   3476 _ITM_deregisterTMCloneTable
-   3532 __gmon_start__
-   3551 avahi_init_i18n
-   3571 _Jv_RegisterClasses
-   3615 _ITM_registerTMCloneTable
-   3647 _fini
-   3655 avahi_client_errno
-   3700 avahi_client_new
-   3721 avahi_client_free
-   3743 avahi_client_get_host_name_fqdn
-   4003 avahi_client_get_version_string
-   4043 avahi_client_set_host_name
-   4076 _init
-   4104 libavahi-common.so.3
-   4131 avahi_simple_poll_get
-   4157 avahi_simple_poll_new
-   4205 avahi_simple_poll_quit
-   4234 avahi_strerror
-   4253 avahi_simple_poll_free
-   4302 libpthread.so.0
-   4322 write
-   4330 read
-   4335 __errno_location
-   4356 fcntl
-   4364 sigaction
-   4376 close
-   4404 libc.so.6
-   4416 __printf_chk
-   4433 setlocale
-   4445 optind
-   4454 strrchr
-   4464 pipe
-   4471 dcgettext
-   4503 __assert_fail
-   4521 __fprintf_chk
-   4537 stdout
-   4546 stderr
-   4555 getopt_long
-   4571 __cxa_finalize
-   4610 __libc_start_main
-   4632 _edata
-   4641 __bss_start
-   4655 _end
-   4662 _IO_stdin_used
-   4701 GLIBC_2.3.4
-   4715 GLIBC_2.2.5
-   7241 52  
-   7247 %4  
-   7261 %2  
-   7271 %2  
-   7301 %:  
-   7311 %:  
-   7321 %:  
-   7331 %:  
-   7341 %:  
-   7351 %:  
-   7361 %:  
-   7371 %:  
-   7401 %:  
-   7411 %:  
-   7421 %:  
-   7431 %:  
-   7441 %:  
-   7451 %:  
-   7461 %:  
-   7471 %:  
-   7501 %:  
-   7511 %:  
-   7521 %:  
-   7531 %:  
-   7541 %:  
-   7551 %:  
-   7561 %B  
-   7571 %B  
-   7601 %J  
-   7611 %J  
-   7621 %J  
-   7631 %J  
-   7640 AVAUATU
-  10035 =.  
-  10063 =   
-  10110 []A\A]A^
-  13242 SxB1
-  13420 ATUSH
-  14023 []A\
-  14700 AWAVA
-  14707 AUATL
-  15032 []A\A]A^A_
-  15104 Client failure, exiting: %s
-  15141 avahi
-  15153 %s 0.6.32
-  15166 help
-  15173 version
-  15203 verbose
-  15220 Invalid number of arguments, expecting exactly one.
-  15310 %s [options] <new host name>
-  15346     -h --help            Show this help
-  15416     -V --version         Show version
-  15464     -v --verbose         Enable verbose mode
-  15550 Failed to create simple poll object.
-  15620 Failed to create client object: %s
-  15670 Failed to query version string: %s
-  15740 Failed to query host name: %s
-  16000 Server version: %s; Host name: %s
-  16050 Failed to create host name resolver: %s
-  16130 Host name successfully changed to %s
-  16176 SIGINT
-  16205 SIGTERM
-  16215 sigint.c
-  16230 fd == pipe_fds[0]
-  16252 event == AVAHI_WATCH_IN
-  16302 l == sizeof(s)
-  16321 Got %s, quitting.
-  16344 fd >= 0
-  16354 spoll
-  16362 !simple_poll
-  16377 pipe() failed: %s
-  16422 sigaction() failed: %s
-  16452 watch
-  16460 pipe_fds[0] == -1 && pipe_fds[1] == -1
-  16540 sigint_uninstall
-  16570 set_nonblock
-  16610 watch_callback
-  16630 sigint_install
-  17177 ;*3$"
-  30030 a4587853e0d2f4f448d381adb75ba31f962d5f.debug
-  30115 .shstrtab
-  30127 .interp
-  30137 .note.ABI-tag
-  30155 .note.gnu.build-id
-  30200 .gnu.hash
-  30212 .dynsym
-  30222 .dynstr
-  30232 .gnu.version
-  30247 .gnu.version_r
-  30266 .rela.dyn
-  30300 .init
-  30306 .plt
-  30313 .plt.got
-  30324 .text
-  30332 .fini
-  30340 .rodata
-  30350 .eh_frame_hdr
-  30366 .eh_frame
-  30400 .init_array
-  30414 .fini_array
-  30430 .jcr
-  30435 .data.rel.ro
-  30452 .dynamic
-  30463 .data
-  30471 .bss
-  30476 .gnu_debuglink
+   3321 libavahi-client.so.3
+   3346 _ITM_deregisterTMCloneTable
+   3402 __gmon_start__
+   3421 avahi_init_i18n
+   3441 _Jv_RegisterClasses
+   3465 _ITM_registerTMCloneTable
+   3517 _fini
+   3525 avahi_client_errno
+   3550 avahi_client_new
+   3571 avahi_client_free
+   3613 avahi_client_get_host_name_fqdn
+   3653 avahi_client_get_version_string
+   3713 avahi_client_set_host_name
+   3746 _init
+   3754 libavahi-common.so.3
+   4001 avahi_simple_poll_get
+   4027 avahi_simple_poll_new
+   4055 avahi_simple_poll_quit
+   4104 avahi_strerror
+   4123 avahi_simple_poll_free
+   4152 libpthread.so.0
+   4172 write
+   4200 read
+   4205 __errno_location
+   4226 fcntl
+   4234 sigaction
+   4246 close
+   4254 libc.so.6
+   4266 __printf_chk
+   4303 setlocale
+   4315 optind
+   4324 strrchr
+   4334 pipe
+   4341 dcgettext
+   4353 __assert_fail
+   4371 __fprintf_chk
+   4407 stdout
+   4416 stderr
+   4425 getopt_long
+   4441 __libc_start_main
+   4463 _edata
+   4472 __bss_start
+   4506 _end
+   4513 GLIBC_2.3.4
+   4527 GLIBC_2.2.5
+   6761 %z" 
+   7001 %r" 
+   7021 %j" 
+   7041 %b" 
+   7061 %Z" 
+   7101 %R" 
+   7121 %J" 
+   7141 %B" 
+   7161 %:" 
+   7201 %2" 
+   7221 %*" 
+   7241 %"" 
+   7420 AVAUATU
+   7662 []A\A]A^
+   7767 ;-+! 
+  10057 =$! 
+  10315 =~  
+  10345 =f  
+  10421 =*  
+  12642 SxB1
+  13000 ATUSH
+  13370 []A\
+  14140 AWAVA
+  14147 AUATL
+  14272 []A\A]A^A_
+  14344 Client failure, exiting: %s
+  14401 avahi
+  14413 %s 0.6.32-rc
+  14431 help
+  14436 version
+  14446 verbose
+  14460 Invalid number of arguments, expecting exactly one.
+  14550 %s [options] <new host name>
+  14606     -h --help            Show this help
+  14656     -V --version         Show version
+  14724     -v --verbose         Enable verbose mode
+  15010 Failed to create simple poll object.
+  15060 Failed to create client object: %s
+  15130 Failed to query version string: %s
+  15200 Failed to query host name: %s
+  15240 Server version: %s; Host name: %s
+  15310 Failed to create host name resolver: %s
+  15370 Host name successfully changed to %s
+  15640 SIGINT
+  15647 SIGTERM
+  15657 sigint.c
+  15672 fd == pipe_fds[0]
+  15714 event == AVAHI_WATCH_IN
+  15744 l == sizeof(s)
+  15763 Got %s, quitting.
+  16006 fd >= 0
+  16016 spoll
+  16024 !simple_poll
+  16041 pipe() failed: %s
+  16064 sigaction() failed: %s
+  16114 watch
+  16130 pipe_fds[0] == -1 && pipe_fds[1] == -1
+  16200 sigint_uninstall
+  16230 set_nonblock
+  16250 watch_callback
+  16270 sigint_install
+  16637 ;*3$"
+  30420 990ef3fb4b8d9b040017dac672fa15a009c1a1.debug
+  30505 .shstrtab
+  30517 .interp
+  30527 .note.ABI-tag
+  30545 .note.gnu.build-id
+  30570 .gnu.hash
+  30602 .dynsym
+  30612 .dynstr
+  30622 .gnu.version
+  30637 .gnu.version_r
+  30656 .rela.dyn
+  30670 .rela.plt
+  30702 .init
+  30710 .plt.got
+  30721 .text
+  30727 .fini
+  30735 .rodata
+  30745 .eh_frame_hdr
+  30763 .eh_frame
+  30775 .init_array
+  31011 .fini_array
+  31025 .jcr
+  31032 .dynamic
+  31043 .got.plt
+  31054 .data
+  31062 .bss
+  31067 .gnu_debuglink

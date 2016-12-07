@@ -1,763 +1,712 @@
    1070 /lib64/ld-linux-x86-64.so.2
-   1600 ;JY%Li^
-   1711 ~?EnK
-  15601 libfwupd.so.1
-  15617 g_intern_static_string
-  15646 g_main_loop_unref
-  15670 g_string_new
-  15705 g_once_init_enter
-  15727 _ITM_deregisterTMCloneTable
-  15763 g_object_unref
-  16002 g_strsplit
-  16015 g_variant_unref
-  16035 g_once_init_leave
-  16057 g_ptr_array_unref
-  16101 g_set_error
-  16115 g_type_class_adjust_private_offset
-  16160 g_return_if_fail_warning
-  16211 g_string_free
-  16227 g_object_new
-  16244 g_bus_get_sync
-  16263 g_strcmp0
-  16275 g_ptr_array_add
-  16315 g_strdup_printf
-  16335 g_type_class_peek_parent
-  16366 g_ptr_array_new_with_free_func
-  16425 __gmon_start__
-  16444 g_type_add_instance_private
-  16500 g_type_check_class_cast
-  16530 g_main_loop_new
-  16550 g_main_loop_run
-  16570 g_type_register_static_simple
-  16626 g_strfreev
-  16641 g_string_append_printf
-  16670 g_log
-  16676 g_string_append
-  16716 g_type_check_instance_is_a
-  16751 g_type_check_instance_cast
-  17004 _Jv_RegisterClasses
-  17030 g_malloc0
-  17042 g_strdup
-  17053 g_signal_connect_data
-  17101 g_main_loop_quit
-  17122 _ITM_registerTMCloneTable
-  17154 g_propagate_error
-  17176 g_error_free
-  17213 fwupd_client_unlock
-  17237 fwupd_result_set_device_version
-  17277 fwupd_result_set_device_created
-  17337 fwupd_client_get_results
-  17370 fwupd_client_connect
-  17415 fwupd_client_update_metadata
-  17452 fwupd_result_get_update_state
-  17510 fwupd_result_get_device_id
-  17543 fwupd_result_set_device_provider
-  17604 fwupd_result_set_device_id
-  17637 fwupd_result_get_update_id
-  17672 fwupd_error_quark
-  17714 fwupd_result_set_update_error
-  17752 fwupd_result_get_update_version
-  20012 fwupd_result_get_guid_default
-  20050 fwupd_result_set_update_state
-  20106 fwupd_result_get_device_provider
-  20147 fwupd_result_get_update_description
-  20213 fwupd_result_get_update_uri
-  20247 fwupd_result_set_update_version
-  20307 fwupd_result_get_update_checksum
-  20350 fwupd_result_get_type
-  20376 fwupd_result_get_update_filename
-  20437 fwupd_result_get_guids
-  20466 fwupd_result_new
-  20507 fwupd_result_get_device_name
-  20544 fwupd_result_to_string
-  20573 fwupd_client_clear_results
-  20626 fwupd_client_get_devices
-  20657 fwupd_result_set_update_filename
-  20720 fwupd_client_get_updates
-  20751 fwupd_client_get_details_local
-  21010 fwupd_client_install
-  21035 fwupd_client_new
-  21056 fwupd_result_get_device_version
-  21116 fwupd_update_state_to_string
-  21153 fwupd_client_verify
-  21177 fwupd_result_set_device_name
-  21234 fwupd_result_add_guid
-  21262 fwupd_result_get_update_checksum_kind
-  21330 libappstream-glib.so.8
-  21357 g_checksum_update
-  21401 _SOUP_METHOD_GET
-  21422 g_input_stream_read
-  21446 g_file_read
-  21462 g_unlink
-  21473 g_checksum_new
-  21512 soup_session_send_message
-  21544 g_str_hash
-  21557 g_path_get_basename
-  21603 g_print
-  21613 g_key_file_get_string
-  21641 g_input_stream_get_type
-  21671 g_key_file_new
-  21710 g_hash_table_insert
-  21734 g_list_free
-  21750 g_malloc
-  21761 g_key_file_unref
-  22002 g_strv_length
-  22020 g_object_ref
-  22035 g_checksum_free
-  22055 g_strstr_len
-  22072 g_hash_table_new_full
-  22120 g_strdelimit
-  22135 g_ascii_strtoull
-  22156 g_error_matches
-  22176 g_ptr_array_ref
-  22216 g_ascii_table
-  22234 g_strchomp
-  22247 g_str_has_prefix
-  22270 g_strchug
-  22302 g_key_file_load_from_file
-  22334 g_ptr_array_sort
-  22355 g_hash_table_lookup
-  22401 g_set_error_literal
-  22425 g_string_insert_c
-  22447 g_build_filename
-  22470 soup_session_new_with_options
-  22526 g_file_get_path
-  22546 g_hash_table_unref
-  22571 g_file_new_for_path
-  22615 g_compute_checksum_for_data
-  22651 g_prefix_error
-  22670 g_str_equal
-  22704 g_file_test
-  22720 as_app_add_provide
-  22743 as_utils_vercmp
-  22763 as_release_add_checksum
-  23013 as_store_set_api_version
-  23044 as_app_set_id
-  23062 as_profile_start_literal
-  23113 as_release_new
-  23132 as_provide_set_kind
-  23156 as_app_set_kind
-  23176 as_app_add_release
-  23221 as_release_set_version
-  23250 as_checksum_set_target
-  23277 as_profile_task_free
-  23324 as_app_new
-  23337 as_checksum_set_kind
-  23364 as_store_new
-  23401 as_utils_guid_is_valid
-  23430 as_checksum_set_value
-  23456 as_markup_convert
-  23500 as_checksum_new
-  23520 as_provide_set_value
-  23545 as_store_from_file
-  23570 as_provide_new
-  23607 as_utils_guid_from_string
-  23641 as_store_add_app
-  23662 as_profile_new
-  23701 as_utils_string_replace
-  23731 as_app_set_source_kind
-  23760 as_store_to_file
-  24001 libsqlite3.so.0
-  24021 sqlite3_mprintf
-  24041 sqlite3_errmsg
-  24060 sqlite3_free
-  24075 sqlite3_exec
-  24112 sqlite3_close
-  24130 sqlite3_open
-  24145 libsoup-2.4.so.1
-  24166 g_memdup
-  24177 g_checksum_get_string
-  24225 g_list_foreach
-  24244 g_output_stream_write
-  24272 g_file_set_contents
-  24316 g_output_stream_get_type
-  24347 g_get_user_cache_dir
-  24374 g_cancellable_new
-  24416 g_cancellable_cancel
-  24443 soup_content_decoder_get_type
-  24501 soup_session_remove_feature_by_type
-  24545 soup_message_new
-  24566 soup_status_get_phrase
-  24615 libgudev-1.0.so.0
-  24637 g_udev_client_new
-  24661 g_udev_device_get_sysfs_path
-  24716 g_udev_client_query_by_subsystem
-  24757 libgio-2.0.so.0
-  24777 g_option_context_free
-  25025 g_file_read_link
-  25046 g_string_set_size
-  25070 g_setenv
-  25101 g_option_context_new
-  25126 g_file_replace
-  25145 g_dbus_connection_call_sync
-  25201 g_file_query_exists
-  25225 g_file_make_directory_with_parents
-  25270 libgobject-2.0.so.0
-  25314 libglib-2.0.so.0
-  25335 g_log_set_handler
-  25357 g_unix_signal_add_full
-  25406 g_option_context_get_help
-  25440 g_option_context_parse
-  25467 g_option_context_add_main_entries
-  25531 g_option_context_set_summary
-  25566 g_set_application_name
-  25615 g_get_tmp_dir
-  25633 libpthread.so.0
-  25653 libc.so.6
-  25665 setlocale
-  25677 dcgettext
-  25711 __stack_chk_fail
-  25732 bind_textdomain_codeset
-  25762 strtol
-  25771 strlen
-  26000 memcmp
-  26007 getuid
-  26016 geteuid
-  26026 __cxa_finalize
-  26045 bindtextdomain
-  26064 __libc_start_main
-  26106 _edata
-  26115 __bss_start
-  26131 _end
-  26136 fu_rom_get_checksum
-  26162 fu_device_set_alternate
-  26212 fu_device_get_equivalent_id
-  26246 _IO_stdin_used
-  26265 fu_rom_get_kind
-  26305 fu_rom_get_vendor
-  26327 fu_pending_get_device
-  26355 fu_rom_get_type
-  26375 fu_pending_get_type
-  26421 fu_device_get_type
-  26444 fu_device_set_metadata
-  26473 fu_pending_new
-  26512 fu_device_add_guid
-  26535 fu_rom_get_guid
-  26555 fu_pending_add_device
-  26603 fu_device_get_alternate
-  26633 fu_pending_set_error_msg
-  26664 fu_rom_kind_to_string
-  26712 __data_start
-  26727 fu_device_new
-  26745 fu_pending_remove_device
-  26776 fu_device_set_name
-  27021 fu_rom_get_checksum_kind
-  27052 __libc_csu_init
-  27072 fu_rom_get_model
-  27113 fu_rom_load_file
-  27134 __libc_csu_fini
-  27154 fu_pending_set_state
-  27201 fu_device_get_metadata
-  27230 fu_rom_extract_all
-  27253 fu_rom_new
-  27266 fu_device_set_equivalent_id
-  27322 fu_rom_get_version
-  27345 fu_pending_get_devices
-  27374 GLIBC_2.4
-  27406 GLIBC_2.2.5
-  45500 AWAV
-  45511 AUAT
-  45573 |$@H
-  45716 D$@H
-  45727 D$HvH
-  45747 D$`H
-  46001 D$pH
-  46006 D$0H
-  46075 D$,H
-  46164 D$(H
-  46253 D$$H
-  50657 D$4E
-  51056 D$(E1
-  51271 |$(H
-  51365 |$8H
-  51442 []A\A]A^A_
-  52131 D$8H
-  52205 D$8H
-  52277 D$8H
-  54020 ATUH
-  54111 u%[]A\H
-  54203 []A\
-  54400 ATUH
-  54471 u%[]A\H
-  54620 []A\
-  54640 ATUH
-  54714 []A\
-  55320 AUATI
-  55343 Hc-N
-  55451 []A\A]
-  55541 []A\A]H
-  55620 ATUI
-  55762 []A\
-  56220 AVAUI
-  56227 ATUA
-  56507 ]A\A]A^
-  57640 AWAVI
-  57647 AUATUSH
-  60143 []A\A]A^A_
-  61400 AWAVAUATUSH
-  61423 (Lc%5
-  61770 UAUH
-  62047 D$ 1
-  62073 ZYu1H
-  62114 dH34%(
-  62134 ([]A\A]A^A_
-  62320 AVAUI
-  62327 ATUI
-  62345 Hc-d
-  62730 []A\A]A^
-  62752 ,$E1
-  63100 AUATI
-  63544 []A\A]
-  64000 AUATI
-  64427 []A\A]
-  64600 AWAVI
-  64607 AUATA
-  65241 []A\A]A^A_
-  65262 ,$E1
-  65420 AWAVI
-  65427 AUATI
-  66046 []A\A]A^A_
-  66072 ,$E1
-  66576 ATUSH
-  67034 ]A\A]A^
-  67074 ]A\A]A^
-  67120 AWAVH
-  67133 AUAT1
-  70661 []A\A]A^A_
-  71720 AWAVAUATUSH
-  72021 wML)
-  72053 H;D$
-  72125 []A\A]A^A_
-  72343 =x{ 
+   1570 ;JY%Li^
+   1671 ~?EnK
+  15071 libfwupd.so.1
+  15107 g_intern_static_string
+  15136 g_main_loop_unref
+  15160 g_string_new
+  15175 g_once_init_enter
+  15217 _ITM_deregisterTMCloneTable
+  15253 g_object_unref
+  15272 g_variant_unref
+  15312 g_once_init_leave
+  15334 g_set_error
+  15350 g_type_class_adjust_private_offset
+  15413 g_return_if_fail_warning
+  15444 g_string_free
+  15462 g_object_new
+  15477 g_bus_get_sync
+  15516 g_strcmp0
+  15530 g_ptr_array_add
+  15550 g_type_class_peek_parent
+  15601 g_ptr_array_new_with_free_func
+  15640 __gmon_start__
+  15657 g_type_add_instance_private
+  15713 g_type_check_class_cast
+  15743 g_main_loop_new
+  15763 g_type_register_static_simple
+  16021 g_string_append_printf
+  16050 g_log
+  16056 g_string_append
+  16076 g_type_check_instance_is_a
+  16131 g_type_check_instance_cast
+  16164 _Jv_RegisterClasses
+  16210 g_malloc0
+  16222 g_strdup
+  16233 g_signal_connect_data
+  16261 _ITM_registerTMCloneTable
+  16313 g_propagate_error
+  16335 g_error_free
+  16352 fwupd_client_unlock
+  16376 fwupd_result_set_device_version
+  16436 fwupd_result_set_device_created
+  16476 fwupd_client_get_results
+  16527 fwupd_client_get_details
+  16560 fwupd_client_update_metadata
+  16615 fwupd_result_get_update_state
+  16653 fwupd_result_get_device_id
+  16706 fwupd_result_set_device_provider
+  16747 fwupd_result_get_guid
+  16775 fwupd_result_set_device_id
+  17030 fwupd_result_get_update_id
+  17063 fwupd_error_quark
+  17105 fwupd_result_set_update_error
+  17143 fwupd_result_get_update_version
+  17203 fwupd_result_set_update_state
+  17241 fwupd_result_get_device_provider
+  17302 fwupd_result_get_update_description
+  17346 fwupd_result_get_update_uri
+  17402 fwupd_result_set_update_version
+  17442 fwupd_result_get_update_checksum
+  17503 fwupd_result_get_type
+  17531 fwupd_result_get_update_filename
+  17572 fwupd_result_new
+  17613 fwupd_result_get_device_name
+  17650 fwupd_result_to_string
+  17677 fwupd_client_clear_results
+  17732 fwupd_client_get_devices
+  17763 fwupd_result_set_update_filename
+  20024 fwupd_client_get_updates
+  20055 fwupd_client_install
+  20102 fwupd_client_new
+  20123 fwupd_result_get_device_version
+  20163 fwupd_update_state_to_string
+  20220 fwupd_client_verify
+  20244 fwupd_result_set_device_name
+  20301 fwupd_result_get_update_checksum_kind
+  20347 libappstream-glib.so.8
+  20376 g_checksum_update
+  20420 _SOUP_METHOD_GET
+  20441 g_input_stream_read
+  20465 g_file_read
+  20501 g_unlink
+  20512 g_checksum_new
+  20531 soup_session_send_message
+  20563 g_str_hash
+  20576 g_path_get_basename
+  20622 g_print
+  20632 g_key_file_get_string
+  20660 g_input_stream_get_type
+  20710 g_key_file_new
+  20727 g_hash_table_insert
+  20753 g_list_free
+  20767 g_malloc
+  21000 g_key_file_unref
+  21021 g_strv_length
+  21037 g_object_ref
+  21054 g_checksum_free
+  21074 g_strdup_printf
+  21114 g_strstr_len
+  21131 g_hash_table_new_full
+  21157 g_strdelimit
+  21174 g_ascii_strtoull
+  21215 g_error_matches
+  21235 g_ptr_array_ref
+  21255 g_ascii_table
+  21273 g_strchomp
+  21306 g_str_has_prefix
+  21327 g_strchug
+  21341 g_key_file_load_from_file
+  21373 g_ptr_array_sort
+  21414 g_strsplit
+  21427 g_hash_table_lookup
+  21453 g_set_error_literal
+  21477 g_string_insert_c
+  21521 g_build_filename
+  21542 soup_session_new_with_options
+  21600 g_file_get_path
+  21620 g_hash_table_unref
+  21643 g_strfreev
+  21656 g_ptr_array_unref
+  21700 g_file_new_for_path
+  21724 g_compute_checksum_for_data
+  21760 g_prefix_error
+  21777 g_str_equal
+  22013 g_file_test
+  22027 as_profile_start_literal
+  22060 as_utils_guid_from_string
+  22112 as_app_set_kind
+  22132 as_profile_new
+  22151 as_store_from_file
+  22174 as_store_set_api_version
+  22225 as_markup_convert
+  22247 as_app_add_provide
+  22272 as_store_add_app
+  22313 as_checksum_set_value
+  22341 as_app_set_source_kind
+  22370 as_checksum_set_target
+  22417 as_provide_new
+  22436 as_store_to_file
+  22457 as_checksum_set_kind
+  22504 as_app_add_release
+  22527 as_release_set_version
+  22556 as_release_new
+  22575 as_provide_set_kind
+  22621 as_utils_vercmp
+  22641 as_profile_task_free
+  22666 as_app_set_id
+  22704 as_app_new
+  22717 as_store_new
+  22734 as_release_add_checksum
+  22764 as_checksum_new
+  23004 as_provide_set_value
+  23031 libsqlite3.so.0
+  23051 sqlite3_close
+  23067 sqlite3_exec
+  23104 sqlite3_open
+  23121 sqlite3_errmsg
+  23140 sqlite3_mprintf
+  23160 sqlite3_free
+  23175 libsoup-2.4.so.1
+  23216 g_memdup
+  23227 g_checksum_get_string
+  23255 g_list_foreach
+  23274 g_output_stream_write
+  23322 g_file_set_contents
+  23346 g_output_stream_get_type
+  23377 g_get_user_cache_dir
+  23424 soup_content_decoder_get_type
+  23462 soup_session_remove_feature_by_type
+  23526 soup_message_new
+  23547 soup_status_get_phrase
+  23576 libgudev-1.0.so.0
+  23620 g_udev_client_new
+  23642 g_udev_device_get_sysfs_path
+  23677 g_udev_client_query_by_subsystem
+  23740 libgio-2.0.so.0
+  23760 g_setenv
+  23771 g_file_read_link
+  24012 g_option_context_free
+  24040 g_string_set_size
+  24062 g_option_context_new
+  24107 g_file_replace
+  24126 g_dbus_connection_call_sync
+  24162 g_file_query_exists
+  24206 g_file_make_directory_with_parents
+  24251 libgobject-2.0.so.0
+  24275 libglib-2.0.so.0
+  24316 g_log_set_handler
+  24340 g_option_context_get_help
+  24372 g_option_context_parse
+  24421 g_option_context_add_main_entries
+  24463 g_option_context_set_summary
+  24520 g_set_application_name
+  24547 g_get_tmp_dir
+  24565 libpthread.so.0
+  24605 libc.so.6
+  24617 setlocale
+  24631 dcgettext
+  24643 __stack_chk_fail
+  24664 bind_textdomain_codeset
+  24714 strtol
+  24723 strlen
+  24732 memcmp
+  24741 getuid
+  24750 geteuid
+  24760 __cxa_finalize
+  24777 bindtextdomain
+  25016 __libc_start_main
+  25040 _edata
+  25047 __bss_start
+  25063 _end
+  25070 fu_rom_get_checksum
+  25114 fu_device_get_equivalent_id
+  25150 _IO_stdin_used
+  25167 fu_rom_get_kind
+  25207 fu_rom_get_vendor
+  25231 fu_pending_get_device
+  25257 fu_rom_get_type
+  25277 fu_pending_get_type
+  25323 fu_device_get_type
+  25346 fu_device_set_metadata
+  25375 fu_pending_new
+  25414 fu_rom_get_guid
+  25434 fu_pending_add_device
+  25462 fu_pending_set_error_msg
+  25513 fu_rom_kind_to_string
+  25541 __data_start
+  25556 fu_device_new
+  25574 fu_pending_remove_device
+  25625 fu_rom_get_checksum_kind
+  25656 __libc_csu_init
+  25676 fu_rom_get_model
+  25717 fu_rom_load_file
+  25740 __libc_csu_fini
+  25760 fu_pending_set_state
+  26005 fu_device_get_metadata
+  26034 fu_rom_extract_all
+  26057 fu_rom_new
+  26072 fu_device_set_equivalent_id
+  26126 fu_rom_get_version
+  26151 fu_pending_get_devices
+  26200 GLIBC_2.4
+  26212 GLIBC_2.2.5
+  46520 AWAV
+  46531 AUAT
+  46604 |$@H
+  46716 D$HvH
+  46724 D$@H
+  46731 D$4H
+  46750 D$`H
+  47002 D$pH
+  47007 D$0H
+  47076 D$,H
+  47165 D$(H
+  51570 E E1
+  52050 |$8H
+  52125 []A\A]A^A_
+  52624 D$8H
+  52670 D$8H
+  52762 D$8H
+  54420 ATUH
+  54511 u%[]A\H
+  54603 []A\
+  55060 AUATI
+  55211 []A\A]
+  55301 []A\A]H
+  55600 AVAUI
+  55607 ATUA
+  56063 ]A\A]A^
+  57220 AWAVI
+  57227 AUATUSH
+  57473 []A\A]A^A_
+  61020 AWAVAUATUSH
+  61043 (Lc%
+  61415 UAUH
+  61467 D$ 1
+  61513 ZYu1H
+  61536 dH34%(
+  61554 ([]A\A]A^A_
+  61740 AUATI
+  61763 Hc-F
+  62346 []A\A]
+  62520 AUATI
+  63164 []A\A]
+  63420 AUATI
+  64047 []A\A]
+  64240 AVAUI
+  64247 ATUI
+  64677 []A\A]A^
+  65060 AVAUI
+  65067 ATUI
+  65474 []A\A]A^
+  66216 ATUSH
+  66460 []A\A]A^
+  66521 ]A\A]A^
+  66540 AWAVH
+  66553 AUAT1
+  70301 []A\A]A^A_
+  71340 AWAVAUATUSH
+  71451 wUL)
+  71503 H;|$
+  71561 []A\A]A^A_
+  72003 =Hr 
+  72400 AWAVI
+  72407 AUATI
+  72641 T$89Z
+  72662 []A\A]A^A_
+  72724 []A\A]A^A_
   72740 AWAVI
-  72747 AUATL
-  73217 T$89Z
-  73240 []A\A]A^A_
-  73304 []A\A]A^A_
-  73320 AWAVI
-  73327 AUATI
-  73346 hHc-zy 
-  73364 T$DL
-  73417 D$X1
-  73472 |$(H
-  73655 T$PI
-  74516 D$ H
-  74636 |$PH
-  74655 t$XdH34%(
-  74704 h[]A\A]A^A_
-  74722 D$PE1
-  75240 l$0H
-  75256 \$8H
-  75263 L$HE
-  75426 D$0E
-  75435 L;l$8M
-  76052 C&fE
-  76774 L$HD
-  77261 G(fA
-  77352 E8E1
-  77425 E8D9`
-  77536 |$0I9
- 100053 D$0H
- 100063 E t"H
- 100225 E89X
- 101160 PAQAPQP1
- 101523 d$(A
- 101551 T$81
- 104640 ATUH
- 104730 []A\
- 105620 ATUI
- 105723 []A\
- 105742 |$(H
- 106055 []A\
- 106100 AUAT1
- 106242 A9\$
- 106272 []A\A]
- 106366 []A\A]
- 106411 AWAV1
- 106417 AUATUSH
- 106705 []A\A]A^A_
- 106740 AWAV1
- 106746 AUATUSH
- 107244 t8f.
- 110045 []A\A]A^A_
- 110066 []A\A]A^A_
- 110120 AUATI
- 110221 []A\A]
- 110242 |$(H
- 110372 A9\$
- 110422 []A\A]
- 110460 AWAVH
- 110467 AUATI
- 111240 ([]A\A]A^A_
- 111340 AWAVI
- 111347 AUATH
- 111413 D$81
- 111535 L$8dH3
- 111564 H[]A\A]A^A_
- 112271 L$(H
- 112536 d$01
- 112725 |$0H
- 113340 |$ 1
- 113361 D$0H
- 113420 ATUI
- 113522 |$(H
- 113532 3[]A\1
- 113560 ATUI
- 113662 |$(H
- 113672 3[]A\1
- 113720 AWAVAUATUSH
- 113750 T$8dH
- 113766 D$H1
- 114042 D$8H
- 114047 t$01
- 114056 |$ 1
- 114147 D$@H
- 114202 D$@H
- 114231 |$@H
- 115036 |$ H
- 115053 |$@H
- 115232 D$8H
- 115237 t$01
- 115274 D$0H
- 115316 D$ H
- 115340 T$HdH3
- 115363 X[]A\A]A^A_
- 115420 AWAVAUATUSH
- 115463 |$ H
- 115506 D$H1
- 115515 \$0H
- 115533 t$0H
- 115556 =-R 
- 116134 L$HdH3
- 116157 X[]A\A]A^A_
- 116440 AWAVI
- 116447 AUATH
- 116715 =NR 
- 117176 ([]A\A]A^A_
- 117670 =cP 
- 117720 AWAVAUATI
- 120045 []A\A]A^A_
- 120105 []A\A]A^A_
- 121300 AWAVAUATI
- 121465 []A\A]A^A_
- 121502 |$(H
- 121532 |$(1
- 121736 |$(1
- 122120 AWAVI
- 122127 AUATI
- 122164 <$E1
- 122351 []A\A]A^A_
- 122540 AWAV1
- 122546 AUATUSH
- 123333 []A\A]A^A_
- 123410 []A\A]A^A_
- 123431 []A\A]A^A_
- 123460 ATUH
- 123551 []A\
- 123713 AWAVH
- 123722 AUATH
- 124227 []A\A]A^A_
- 124400 AWAVA
- 124407 AUATL
- 124532 []A\A]A^A_
- 124604 FuDevice
- 124615 FU_IS_DEVICE (device)
- 124646 using %s for %s
- 124666 key != NULL
- 124702 value != NULL
- 124726 (TM)
- 124740 fu_device_set_metadata
- 125000 fu_device_get_metadata
- 125040 fu_device_set_alternate
- 125100 fu_device_get_alternate
- 125140 fu_device_set_equivalent_id
- 125200 fu_device_get_equivalent_id
- 125234 FuPending: got sql result %s
- 125271 device_id
- 125303 filename
- 125314 display_name
- 125331 version_old
- 125345 version_new
- 125361 provider
- 125372 state
- 125400 timestamp
- 125412 error
- 125420 unhandled %s=%s
- 125440 FuPending
- 125452 FU_IS_PENDING (pending)
- 125502 pending.db
- 125515 Can't open %s: %s
- 125537 SELECT * FROM pending LIMIT 1
- 125575 Cannot create database: %s
- 125634 /var
- 125641 priv->db == NULL
- 125662 FuPending: add device %s
- 125713 SQL error: %s
- 125731 FuPending: remove device %s
- 125765 FuPending: get res
- 126010 No devices found
- 126031 FuPending: get devices
- 126060 SELECT * FROM pending;
- 126110 FuPending: trying to open database '%s'
- 126160 FuPending: creating table to repair: %s
- 126230 CREATE TABLE pending (device_id TEXT PRIMARY KEY,state INTEGER DEFAULT 0,timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,error TEXT,filename TEXT,display_name TEXT,provider TEXT,version_old TEXT,version_new TEXT);
- 126570 SELECT provider FROM pending LIMIT 1
- 126640 FuPending: altering table to repair: %s
- 126710 ALTER TABLE pending ADD COLUMN state INTEGER DEFAULT 0;
- 127000 ALTER TABLE pending ADD COLUMN error TEXT;
- 127060 ALTER TABLE pending ADD COLUMN provider TEXT;
- 127140 SELECT timestamp FROM pending LIMIT 1
- 127210 ALTER TABLE pending ADD COLUMN timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL0;
- 127340 INSERT INTO pending (device_id,state,filename,display_name,provider,version_old,version_new) VALUES ('%q','%i','%q','%q','%q','%q','%q')
- 127560 DELETE FROM pending WHERE device_id = '%q';
- 127640 SELECT * FROM pending WHERE device_id = '%q';
- 127720 FuPending: set state of %s to %s
- 127770 UPDATE pending SET state='%i' WHERE device_id = '%q';
- 130060 FuPending: add comment to %s: %s
- 130130 UPDATE pending SET error='%q' WHERE device_id = '%q';
- 130220 fu_pending_set_error_msg
- 130260 fu_pending_set_state
- 130320 fu_pending_get_devices
- 130360 fu_pending_get_device
- 130420 fu_pending_remove_device
- 130460 fu_pending_load
- 130500 fu_pending_add_device
- 130526 %02x 
- 130543 Intel86
- 130553 OpenFirmware
- 130570 PA-RISC
- 130604 reserved
- 130624 PCI Header
- 130637  RomOffset: 0x%04x
- 130662  RomSize:   0x%04x
- 130705  EntryPnt:  0x%06x
- 130730  Reserved:  %s
- 130747  CpiPtr:    0x%04x
- 130772   PCI Data
- 131005    VendorID:  0x%04x
- 131032    DeviceID:  0x%04x
- 131057    DevList:   0x%04x
- 131104    DataLen:   0x%04x
- 131131    DataRev:   0x%04x
- 131156    ImageLen:  0x%04x [%s]
- 131210    ImageLen:  0x%04x [%s...]
- 131245    RevLevel:  0x%04x
- 131272    CodeType:  0x%02x [%s]
- 131324    LastImg:   0x%02x [%s]
- 131356    MaxRunLen: 0x%04x
- 131403    ConfigHdr: 0x%04x
- 131430    ClpPtr:    0x%04x
- 131455 ISBN
- 131462     ISBN header: %s
- 131506      ISBN segment @%02x: %s
- 131542 %s(%i)
- 131551 unknown segment kind %i
- 131601    ChkSum:    0x%02x [valid]
- 131636    ChkSum:    0x?? [unknown]
- 131673 FuRom
- 131701 unknown
- 131715 nvidia
- 131724 intel
- 131736 %s/%02i.bin
- 131752 FU_IS_ROM (rom)
- 131772 FuRom:reading-data
- 132015 /sys
- 132022 Firmware too small: %li bytes
- 132060 ROM buffer filled %likb/%likb
- 132116 NVGI
- 132123 looking for PCI ROM @ 0x%04x
- 132166 -- using NVIDIA ROM quirk
- 132220 Not PCI ROM %s
- 132237 fixing up last image size
- 132271 looking for PCI DATA @ 0x%04x
- 132327 No PCI DATA @ 0x%04x
- 132354 Invalid PCI DATA @ 0x%04x
- 132406 PCIR
- 132413 RGIS
- 132420 NPDS
- 132425 NPDE
- 132432 -- using NVIDIA DATA quirk
- 132465 00000000000
- 132501 firmware corrupt (overflow)
- 132541 Version 
- 132552 $VBT
- 132557 Build Number:
- 132575  761295520
- 132610  VER0
- 132616 BIOS: 
- 132625 Vension:
- 132636 VBIOS Ver
- 132652 VBIOS 
- 132671 no serial numbers likely
- 132722 PCI\VEN_%04X&DEV_%04X
- 132750 looking for PPID at 0x%04x
- 133003 PPID
- 133010 cleared %i chars @ 0x%04lx
- 133043 found junk data, adding fake
- 133100 ignoring padding
- 133130    ChkSum:    0x%02x [failed, got 0x%02x]
- 133210 dumping ROM #%i at 0x%04x [0x%02x] to %s
- 133270 ROM returned 0x%04x bytes, adding 0x%04x...
- 133350 firmware not fulfilling requests
- 133420 No available PCI DATA @ 0x%04x : 0x%04x > 0x%04x
- 133510 Not PCI DATA: %02x%02x%02x%02x [%c%c%c%c]
- 133570 Failed to detect firmware header [%02x%02x]
- 133650 Firmware version extractor not known
- 133740 fu_rom_get_model
- 134000 fu_rom_get_vendor
- 134040 fu_rom_get_guid
- 134060 fu_rom_get_version
- 134120 fu_rom_get_kind
- 134140 fu_rom_load_file
- 134161 Idle
- 134166  * %s
- 134175 Decompressing firmware
- 134224 Loading firmware
- 134245 Restarting device
- 134267 Writing firmware to device
- 134322 Scheduling upgrade
- 134345 Changed
- 134355 Handling SIGINT
- 134375 device-added
- 134412 device-removed
- 134431 device-changed
- 134450 cancelled
- 134462 Cancelled
- 134474 Device changed:
- 134522 Device removed:
- 134542 Device added:
- 134564 sha1
- 134571 sha256
- 134600 sha512
- 134607 %s has firmware updates:
- 134640 Update Version
- 134657 Update Checksum
- 134677 GUID
- 134704 Update Checksum Type
- 134731 Update Location
- 134751 Update Description
- 135001 0x%04x:0x%04x -> %s [%s]
- 135033 /system-update
- 135052 No %s, exiting
- 135071 /var/lib/fwupd
- 135110 No updates prepared
- 135134 Reinstalling %s with %s... 
- 135170 Updating %s from %s to %s... 
- 135226 Reboot
- 135235 /org/freedesktop/systemd1
- 135267 org.freedesktop.systemd1
- 135320 Failed to reboot: %s
- 135346 Done!
- 135354 Processing %s...
- 135376 %s.firmware
- 135412 No hardware with ROM
- 135437 0.7.2
- 135445 %s/%s
- 135453 user-agent
- 135466 downloading %s to %s:
- 135520 Failed to download %s: %s
- 135552 Failed to save file: %s
- 135602 fwupd.conf
- 135615 /etc
- 135622 Failed to load %s: 
- 135646 fwupdmgr
- 135657 DownloadURI
- 135673 %s.asc
- 135702 firmware.xml.gz
- 135722 %s	FAILED: %s
- 135744 %s	%s
- 135753 Retrying as an offline update
- 136011 Downloading %s for %s...
- 136043 Updating %s on %s...
- 136073 Alias to %s
- 136107 name != NULL
- 136124 description != NULL
- 136152 callback != NULL
- 136173 verbose
- 136203 offline
- 136213 allow-reinstall
- 136233 allow-older
- 136247 force
- 136255 Override provider warning
- 136307 /usr/share/locale
- 136331 UTF-8
- 136337 get-devices
- 136353 Install prepared updates now
- 136410 install-prepared
- 136431 get-details
- 136445 get-updates
- 136461 verify
- 136470 unlock
- 136477 clear-results
- 136515 get-results
- 136531 refresh
- 136541 Dump the ROM checksum
- 136567 dump-rom
- 136600 verify-update
- 136616 Monitor the daemon for events
- 136654 monitor
- 136664 Firmware Utility
- 136705 Failed to parse arguments
- 136737 %s: %s
- 136747 FWUPD_VERBOSE
- 136765 status-changed
- 137004 Command not found
- 137040 Verifying firmware from device
- 137100 Invalid arguments: expected 'DeviceID'
- 137150 No hardware detected with firmware update capability
- 137240 Invalid arguments: expected 'filename'
- 137310 Invalid arguments: expected 'filename.rom'
- 137370 Another framework set up the trigger, exiting
- 137450 Invalid arguments: none expected
- 137520 This function can only be used as root
- 137570 Downgrading %s from %s to %s... 
- 137640 org.freedesktop.systemd1.Manager
- 137710 Invalid arguments: expected 'id'
- 137760 /var/cache/app-info/xmls/fwupd-verify.xml
- 140040 %s: failed to setup networking
- 140100 Checksum invalid, expected %s got %s
- 140150 Invalid arguments: expected 'filename.xml' 'filename.xml.asc'
- 140250 Invalid arguments: expected 'filename' [id]
- 140330 Show extra debugging information
- 140400 Perform the installation offline where possible
- 140460 Allow re-installing existing firmware versions
- 140540 Allow downgrading firmware versions
- 140610 Get all devices that support firmware updates
- 140670 Install a firmware file on this hardware
- 140750 Gets details about a firmware file
- 141020 Gets the list of updates for connected hardware
- 141100 Updates all firmware to latest versions available
- 141170 Gets the cryptographic hash of the dumped firmware
- 141260 Unlocks the device for firmware access
- 141330 Clears the results from the last update
- 141400 Gets the results from the last update
- 141450 Refresh metadata from remote server
- 141520 Update the stored metadata with current ROM contents
- 141650 fu_util_add
- 143267 ;*3$"
- 170020 b64fc01de89e31ca637e9979f67cf099fdd7c1.debug
- 170105 .shstrtab
- 170117 .interp
- 170127 .note.ABI-tag
- 170145 .note.gnu.build-id
- 170170 .gnu.hash
- 170202 .dynsym
- 170212 .dynstr
- 170222 .gnu.version
- 170237 .gnu.version_r
- 170256 .rela.dyn
- 170270 .init
- 170276 .plt
- 170303 .plt.got
- 170314 .text
- 170322 .fini
- 170330 .rodata
- 170340 .eh_frame_hdr
- 170356 .eh_frame
- 170370 .init_array
- 170404 .fini_array
- 170420 .jcr
- 170425 .dynamic
- 170436 .data
- 170444 .bss
- 170451 .gnu_debuglink
+  72747 AUATI
+  72766 xHc-Zp 
+  73004 T$LL
+  73040 D$h1
+  73113 |$0H
+  73275 T$`I
+  74031 D$ t3
+  74146 D$(H
+  74212 D$ H
+  74266 |$`H
+  74305 L$hdH3
+  74334 x[]A\A]A^A_
+  74362 D$`E1
+  74665 t$8H
+  74710 l$8H+D$XE1
+  74725 \$@H
+  74732 D$PE
+  75076 D$8E
+  75105 L;l$@M
+  75523 C&fE
+  76444 t$PD
+  76731 F(fA
+  77022 E8E1
+  77075 E8D9`
+  77204 H;\$X
+  77220 \$8H
+  77513 D$8H
+  77523 E t"H
+  77665 E89X
+ 100200 D$8H
+ 100572 PAQAPQP1
+ 101137 d$0A
+ 101165 T$81
+ 104140 ATUI
+ 104243 []A\
+ 104262 |$ H
+ 104375 []A\
+ 104420 ATU1
+ 104546 A9\$
+ 104711 AUAT1
+ 105145 []A\A]
+ 105200 AVAU1
+ 105206 ATUSH
+ 106165 A9l$
+ 106206 ]A\A]A^
+ 106223 ]A\A]A^
+ 106240 ATUI
+ 106343 []A\
+ 106362 |$ H
+ 106475 []A\
+ 106520 AWAVH
+ 106527 AUATI
+ 107300 ([]A\A]A^A_
+ 107400 AWAVI
+ 107407 AUATH
+ 107453 D$81
+ 107632 L$8dH3
+ 107661 H[]A\A]A^A_
+ 110371 L$(H
+ 110736 d$01
+ 111131 |$0H
+ 111465 |$0H
+ 111517 D$0H
+ 111560 ATUI
+ 111662 |$ H
+ 111672 3[]A\1
+ 111720 ATUI
+ 112022 |$ H
+ 112032 3[]A\1
+ 112060 AWAVAUATUSH
+ 112110 T$8dH
+ 112126 D$H1
+ 112202 D$8H
+ 112207 t$01
+ 112216 |$ 1
+ 112342 D$@H
+ 112371 |$@H
+ 113176 |$ H
+ 113213 |$@H
+ 113372 D$8H
+ 113377 t$01
+ 113434 D$0H
+ 113456 D$ H
+ 113500 T$HdH3
+ 113523 X[]A\A]A^A_
+ 113560 AWAVAUATUSH
+ 113612 4$dH
+ 113627 D$81
+ 113667 l$ H
+ 114251 L$8dH3
+ 114274 H[]A\A]A^A_
+ 114560 AWAVI
+ 114567 AUATH
+ 115316 ([]A\A]A^A_
+ 116040 AWAVAUATI
+ 116165 []A\A]A^A_
+ 116225 []A\A]A^A_
+ 117420 AWAVAUATI
+ 117605 []A\A]A^A_
+ 117622 |$ H
+ 117652 |$ H
+ 120056 |$ 1
+ 120240 AWAVI
+ 120247 AUATI
+ 120304 <$E1
+ 120471 []A\A]A^A_
+ 120660 AWAV1
+ 120666 AUATUSH
+ 121463 []A\A]A^A_
+ 121530 []A\A]A^A_
+ 121551 []A\A]A^A_
+ 121600 ATUH
+ 121671 []A\
+ 122033 AWAVH
+ 122042 AUATH
+ 122347 []A\A]A^A_
+ 122520 AWAVA
+ 122527 AUATL
+ 122652 []A\A]A^A_
+ 122724 FuDevice
+ 122735 FU_IS_DEVICE (device)
+ 122766 key != NULL
+ 123002 value != NULL
+ 123020 fu_device_set_metadata
+ 123060 fu_device_get_metadata
+ 123120 fu_device_set_equivalent_id
+ 123160 fu_device_get_equivalent_id
+ 123214 FuPending: got sql result %s
+ 123251 device_id
+ 123263 filename
+ 123274 display_name
+ 123311 version_old
+ 123325 version_new
+ 123341 provider
+ 123352 state
+ 123360 timestamp
+ 123372 error
+ 123400 unhandled %s=%s
+ 123420 FuPending
+ 123432 FU_IS_PENDING (pending)
+ 123462 pending.db
+ 123475 Can't open %s: %s
+ 123517 SELECT * FROM pending LIMIT 1
+ 123555 Cannot create database: %s
+ 123614 /var
+ 123621 priv->db == NULL
+ 123642 FuPending: add device %s
+ 123673 SQL error: %s
+ 123711 FuPending: remove device %s
+ 123745 FuPending: get res
+ 123770 No devices found
+ 124011 FuPending: get devices
+ 124040 SELECT * FROM pending;
+ 124070 FuPending: trying to open database '%s'
+ 124140 FuPending: creating table to repair: %s
+ 124210 CREATE TABLE pending (device_id TEXT PRIMARY KEY,state INTEGER DEFAULT 0,timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,error TEXT,filename TEXT,display_name TEXT,provider TEXT,version_old TEXT,version_new TEXT);
+ 124550 SELECT provider FROM pending LIMIT 1
+ 124620 FuPending: altering table to repair: %s
+ 124670 ALTER TABLE pending ADD COLUMN state INTEGER DEFAULT 0;
+ 124760 ALTER TABLE pending ADD COLUMN error TEXT;
+ 125040 ALTER TABLE pending ADD COLUMN provider TEXT;
+ 125120 SELECT timestamp FROM pending LIMIT 1
+ 125170 ALTER TABLE pending ADD COLUMN timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL0;
+ 125320 INSERT INTO pending (device_id,state,filename,display_name,provider,version_old,version_new) VALUES ('%q','%i','%q','%q','%q','%q','%q')
+ 125540 DELETE FROM pending WHERE device_id = '%q';
+ 125620 SELECT * FROM pending WHERE device_id = '%q';
+ 125700 FuPending: set state of %s to %s
+ 125750 UPDATE pending SET state='%i' WHERE device_id = '%q';
+ 126040 FuPending: add comment to %s: %s
+ 126110 UPDATE pending SET error='%q' WHERE device_id = '%q';
+ 126200 fu_pending_set_error_msg
+ 126240 fu_pending_set_state
+ 126300 fu_pending_get_devices
+ 126340 fu_pending_get_device
+ 126400 fu_pending_remove_device
+ 126440 fu_pending_load
+ 126460 fu_pending_add_device
+ 126506 %02x 
+ 126523 Intel86
+ 126533 OpenFirmware
+ 126550 PA-RISC
+ 126564 reserved
+ 126604 PCI Header
+ 126617  RomOffset: 0x%04x
+ 126642  RomSize:   0x%04x
+ 126665  EntryPnt:  0x%06x
+ 126710  Reserved:  %s
+ 126727  CpiPtr:    0x%04x
+ 126752   PCI Data
+ 126765    VendorID:  0x%04x
+ 127012    DeviceID:  0x%04x
+ 127037    DevList:   0x%04x
+ 127064    DataLen:   0x%04x
+ 127111    DataRev:   0x%04x
+ 127136    ImageLen:  0x%04x [%s]
+ 127170    ImageLen:  0x%04x [%s...]
+ 127225    RevLevel:  0x%04x
+ 127252    CodeType:  0x%02x [%s]
+ 127304    LastImg:   0x%02x [%s]
+ 127336    MaxRunLen: 0x%04x
+ 127363    ConfigHdr: 0x%04x
+ 127410    ClpPtr:    0x%04x
+ 127435 ISBN
+ 127442     ISBN header: %s
+ 127466      ISBN segment @%02x: %s
+ 127522 %s(%i)
+ 127531 unknown segment kind %i
+ 127561    ChkSum:    0x%02x [valid]
+ 127616    ChkSum:    0x?? [unknown]
+ 127653 FuRom
+ 127661 unknown
+ 127675 nvidia
+ 127704 intel
+ 127716 %s/%02i.bin
+ 127732 FU_IS_ROM (rom)
+ 127752 FuRom:reading-data
+ 127775 /sys
+ 130002 Firmware too small: %li bytes
+ 130040 ROM buffer filled %likb/%likb
+ 130076 NVGI
+ 130103 looking for PCI ROM @ 0x%04x
+ 130146 -- using NVIDIA ROM quirk
+ 130200 Not PCI ROM %s
+ 130217 fixing up last image size
+ 130251 looking for PCI DATA @ 0x%04x
+ 130307 No PCI DATA @ 0x%04x
+ 130334 Invalid PCI DATA @ 0x%04x
+ 130366 PCIR
+ 130373 RGIS
+ 130400 NPDS
+ 130405 NPDE
+ 130412 -- using NVIDIA DATA quirk
+ 130445 00000000000
+ 130461 firmware corrupt (overflow)
+ 130521 Version 
+ 130532 $VBT
+ 130537 Build Number:
+ 130555  761295520
+ 130570  VER0
+ 130576 BIOS: 
+ 130605 Vension:
+ 130616 Version
+ 130626 VBIOS Ver
+ 130642 VBIOS 
+ 130661 no serial numbers likely
+ 130712 PCI\VEN_%04X&DEV_%04X
+ 130740 using %s for %s
+ 130760 looking for PPID at 0x%04x
+ 131013 PPID
+ 131020 cleared %i chars @ 0x%04lx
+ 131053 found junk data, adding fake
+ 131110 ignoring padding
+ 131140    ChkSum:    0x%02x [failed, got 0x%02x]
+ 131220 dumping ROM #%i at 0x%04x [0x%02x] to %s
+ 131300 ROM returned 0x%04x bytes, adding 0x%04x...
+ 131360 firmware not fulfilling requests
+ 131430 No available PCI DATA @ 0x%04x : 0x%04x > 0x%04x
+ 131520 Not PCI DATA: %02x%02x%02x%02x [%c%c%c%c]
+ 131600 Failed to detect firmware header [%02x%02x]
+ 131660 Firmware version extractor not known
+ 131760 fu_rom_get_model
+ 132020 fu_rom_get_vendor
+ 132060 fu_rom_get_guid
+ 132100 fu_rom_get_version
+ 132140 fu_rom_get_kind
+ 132160 fu_rom_load_file
+ 132201 Idle
+ 132206  * %s
+ 132215 Decompressing firmware
+ 132244 Loading firmware
+ 132265 Restarting device
+ 132307 Writing firmware to device
+ 132342 Scheduling upgrade
+ 132371 sha1
+ 132376 sha256
+ 132405 sha512
+ 132414 %s has firmware updates:
+ 132445 GUID
+ 132452 Checksum
+ 132463 Checksum Type
+ 132501 Location
+ 132512 Description
+ 132533 0x%04x:0x%04x -> %s [%s]
+ 132565 /system-update
+ 132604 No %s, exiting
+ 132623 /var/lib/fwupd
+ 132642 No updates prepared
+ 132666 Reinstalling %s with %s... 
+ 132722 Updating %s from %s to %s... 
+ 132760 Reboot
+ 132767 /org/freedesktop/systemd1
+ 133021 org.freedesktop.systemd1
+ 133052 Failed to reboot: %s
+ 133100 Done!
+ 133106 Processing %s...
+ 133130 %s.firmware
+ 133144 No hardware with ROM
+ 133171 0.7.0
+ 133177 %s/%s
+ 133205 user-agent
+ 133220 downloading %s to %s:
+ 133252 Failed to download %s: %s
+ 133304 Failed to save file: %s
+ 133334 fwupd.conf
+ 133347 /etc
+ 133354 Failed to load %s: 
+ 133400 fwupdmgr
+ 133411 DownloadURI
+ 133425 %s.asc
+ 133434 firmware.xml.gz
+ 133454 %s	FAILED: %s
+ 133476 %s	%s
+ 133505 Retrying as an offline update
+ 133543 Downloading %s for %s...
+ 133575 Updating %s on %s...
+ 133625 Alias to %s
+ 133641 name != NULL
+ 133656 description != NULL
+ 133704 callback != NULL
+ 133725 verbose
+ 133735 offline
+ 133745 allow-reinstall
+ 133765 allow-older
+ 134001 /usr/share/locale
+ 134023 UTF-8
+ 134031 get-devices
+ 134045 Install prepared updates now
+ 134102 install-prepared
+ 134123 get-details
+ 134137 get-updates
+ 134153 verify
+ 134162 unlock
+ 134171 clear-results
+ 134207 get-results
+ 134223 refresh
+ 134233 Dump the ROM checksum
+ 134261 dump-rom
+ 134272 verify-update
+ 134310 Firmware Utility
+ 134331 Failed to parse arguments
+ 134363 %s: %s
+ 134373 FWUPD_VERBOSE
+ 134411 status-changed
+ 134430 Command not found
+ 134470 Verifying firmware from device
+ 134530 Invalid arguments: expected 'id'
+ 134600 No hardware detected with firmware update capability
+ 134670 Invalid arguments: expected 'filename'
+ 134740 Invalid arguments: expected 'filename.rom'
+ 135020 Another framework set up the trigger, exiting
+ 135100 Invalid arguments: none expected
+ 135150 This function can only be used as root
+ 135220 Downgrading %s from %s to %s... 
+ 135270 org.freedesktop.systemd1.Manager
+ 135340 /var/cache/app-info/xmls/fwupd-verify.xml
+ 135420 %s: failed to setup networking
+ 135460 Checksum invalid, expected %s got %s
+ 135530 Invalid arguments: expected 'filename.xml' 'filename.xml.asc'
+ 135630 Invalid arguments: expected 'filename' [id]
+ 135710 Show extra debugging information
+ 135760 Perform the installation offline where possible
+ 136040 Allow re-installing existing firmware versions
+ 136120 Allow downgrading firmware versions
+ 136170 Get all devices that support firmware updates
+ 136250 Install a firmware file on this hardware
+ 136330 Gets details about a firmware file
+ 136400 Gets the list of updates for connected hardware
+ 136460 Updates all firmware to latest versions available
+ 136550 Gets the cryptographic hash of the dumped firmware
+ 136640 Unlocks the device for firmware access
+ 136710 Clears the results from the last update
+ 136760 Gets the results from the last update
+ 137030 Refresh metadata from remote server
+ 137100 Update the stored metadata with current ROM contents
+ 137230 fu_util_add
+ 140517 ;*3$"
+ 162770 7e64b5fd31bbafed7ba5e13b16f3d0f610d6ab.debug
+ 163055 .shstrtab
+ 163067 .interp
+ 163077 .note.ABI-tag
+ 163115 .note.gnu.build-id
+ 163140 .gnu.hash
+ 163152 .dynsym
+ 163162 .dynstr
+ 163172 .gnu.version
+ 163207 .gnu.version_r
+ 163226 .rela.dyn
+ 163240 .rela.plt
+ 163252 .init
+ 163260 .plt.got
+ 163271 .text
+ 163277 .fini
+ 163305 .rodata
+ 163315 .eh_frame_hdr
+ 163333 .eh_frame
+ 163345 .init_array
+ 163361 .fini_array
+ 163375 .jcr
+ 163402 .dynamic
+ 163413 .got.plt
+ 163424 .data
+ 163432 .bss
+ 163437 .gnu_debuglink

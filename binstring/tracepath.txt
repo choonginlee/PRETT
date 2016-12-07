@@ -1,155 +1,131 @@
    1070 /lib64/ld-linux-x86-64.so.2
-   1474 sKy[%2
-   4221 libc.so.6
-   4233 socket
-   4242 fflush
-   4251 __printf_chk
-   4266 exit
-   4273 gai_strerror
-   4310 optind
-   4317 perror
-   4326 __fdelt_chk
-   4342 inet_ntop
-   4354 puts
-   4361 __stack_chk_fail
-   4402 putchar
-   4412 select
-   4421 strtol
-   4430 getaddrinfo
-   4444 memset
-   4453 __errno_location
-   4474 getnameinfo
-   4510 getopt
-   4517 __fprintf_chk
-   4535 stdout
-   4544 recv
-   4551 setsockopt
-   4564 malloc
-   4573 optarg
-   4602 stderr
-   4611 fwrite
-   4620 gettimeofday
-   4635 strchr
-   4644 sendto
-   4653 __cxa_finalize
-   4672 freeaddrinfo
-   4707 recvmsg
-   4717 __libc_start_main
-   4741 _edata
-   4750 __bss_start
-   4764 _end
-   4771 base_port
-   5003 no_resolve
-   5016 hops_to
-   5026 target
-   5035 hisptr
-   5044 _IO_stdin_used
-   5063 hops_from
-   5075 show_both
-   5107 overhead
-   5120 pktbuf
-   5127 max_hops
-   5150 _ITM_deregisterTMCloneTable
-   5204 __gmon_start__
-   5223 _Jv_RegisterClasses
-   5247 _ITM_registerTMCloneTable
-   5301 GLIBC_2.3.4
-   5315 GLIBC_2.15
-   5330 GLIBC_2.4
-   5342 GLIBC_2.2.5
-  10300 AVAU
-  10355 D$H1
-  11722 Hc=?
-  11764 D;%!
-  13574 []A\
-  13660 AWAV
-  13671 AUATUSH
-  13753 t$<H
-  14024 D$PH
-  14031 D$(H
-  14051 D$ H
-  14056 D$`H
-  14063 D$0H
-  14115 D$@H
-  14132 D$HH
-  14144 |$01
-  14202 \$PH
-  14217 D$(H
-  14307 D$ H
-  14444 |$8)
-  14453 >w(Hc
-  14636 []A\A]A^A_
-  15041 L$`I+
-  15077 A+L$
-  16141 T$<L
-  16274 Ht$<D
-  16542 T$@H
-  16655 t$HH
-  16732 T$XE1
-  17003 t$@H
-  17026 T$<H
-  17061 9T$<
-  17140 AWAVL
-  17153 AUATA
-  17576 []A\A]A^A_
-  17761 []A\A]A^A_
-  20000 AWAVA
-  20007 AUATL
-  20132 []A\A]A^A_
-  20210 Usage: tracepath [-n] [-b] [-l <len>] [-p port] <destination>
-  20310 (This broken router returned corrupted payload) 
-  20400 Error: pktlen must be > %d and <= %d.
-  20450 Error: max hops must be 0 .. %d (inclusive).
-  20533  (%s)
-  20545 no info
-  20555 cmsg:%d
-  20567 [LOCALHOST]
-  20603 %2d?: %*s 
-  20616 %2d:  
-  20625 %2d?: 
-  20634 %3d.%03dms 
-  20650 reached
-  20663 asymm %2d 
-  20707 NET ERROR
-  20721 %2d?: reply received 8)
-  20752 %2d:  send failed
-  20775 nbh?l:m:p:
-  21010 socket
-  21017 tracepath: %s: %s
-  21042 IP_MTU_DISCOVER
-  21062 IP_RECVERR
-  21075 IP_RECVTTL
-  21110 malloc
-  21117 IP_TTL
-  21126 %2d:  no reply
-  21146      Too many hops: pmtu %d
-  21203      Resume: pmtu %d 
-  21231 hops %d 
-  21242 back %d 
-  21657 ;*3$"
-  30040 tracepath
-  30061 .shstrtab
-  30073 .interp
-  30103 .note.ABI-tag
-  30121 .note.gnu.build-id
-  30144 .gnu.hash
-  30156 .dynsym
-  30166 .dynstr
-  30176 .gnu.version
-  30213 .gnu.version_r
-  30232 .rela.dyn
-  30244 .init
-  30252 .plt
-  30257 .plt.got
-  30270 .text
-  30276 .fini
-  30304 .rodata
-  30314 .eh_frame_hdr
-  30332 .eh_frame
-  30344 .init_array
-  30360 .fini_array
-  30374 .jcr
-  30401 .dynamic
-  30412 .data
-  30420 .bss
-  30425 .gnu_debuglink
+   1205 ~ZO$
+   3001 libc.so.6
+   3013 socket
+   3022 fflush
+   3031 __printf_chk
+   3046 exit
+   3053 optind
+   3062 perror
+   3071 __fdelt_chk
+   3105 inet_ntop
+   3117 puts
+   3124 __stack_chk_fail
+   3145 putchar
+   3155 select
+   3164 strtol
+   3173 memset
+   3202 __errno_location
+   3223 herror
+   3232 getopt
+   3241 __fprintf_chk
+   3257 stdout
+   3266 gethostbyaddr
+   3304 recv
+   3311 setsockopt
+   3324 malloc
+   3333 optarg
+   3342 stderr
+   3351 fwrite
+   3360 gettimeofday
+   3375 strchr
+   3404 sendto
+   3413 gethostbyname2
+   3432 recvmsg
+   3442 __libc_start_main
+   3464 __gmon_start__
+   3503 GLIBC_2.3.4
+   3517 GLIBC_2.15
+   3532 GLIBC_2.4
+   3544 GLIBC_2.2.5
+   5701 %z$ 
+   5721 %r$ 
+   5741 %j$ 
+   5761 %b$ 
+   6001 %Z$ 
+   6021 %R$ 
+   6041 %J$ 
+   6061 %B$ 
+   6101 %:$ 
+   6121 %2$ 
+   6141 %*$ 
+   6161 %"$ 
+   6500 AUATUH
+   7223 =G# 
+   7657 Hc=z! 
+   7721 D;-h! 
+  10525 UH-H1`
+  10605 UH-H1`
+  11355 []A\)
+  11440 AWAVAUATUSH
+  11543 |$01
+  11571 D$`H
+  11576 D$ H
+  11613 \$ H
+  11631 D$pH
+  12041 >w/Hc
+  12231 []A\A]A^A_
+  12515 D$0I+
+  12533 L$8A+L$
+  14740 AVAUE1
+  15406 []A\A]A^
+  15674 []A\A]A^
+  16072 []A\A]A^A_
+  16150 Usage: tracepath [-n] [-b] [-l <len>] [-p port] <destination>
+  16250 (This broken router returned corrupted payload) 
+  16340 Error: pktlen must be > %d and <= %d.
+  16410 Error: max hops must be 0 .. %d (inclusive).
+  16473  (%s)
+  16505 no info
+  16515 cmsg:%d
+  16527 [LOCALHOST]
+  16543 %2d?: %*s 
+  16556 %2d:  
+  16565 %2d?: 
+  16574 %3d.%03dms 
+  16610 reached
+  16623 asymm %2d 
+  16647 NET ERROR
+  16661 %2d?: reply received 8)
+  16712 %2d:  send failed
+  16735 nbh?l:m:p:
+  16750 socket
+  16757 gethostbyname2
+  16776 IP_MTU_DISCOVER
+  17016 IP_RECVERR
+  17031 IP_RECVTTL
+  17044 malloc
+  17053 IP_TTL
+  17062 %2d:  no reply
+  17102      Too many hops: pmtu %d
+  17137      Resume: pmtu %d 
+  17165 hops %d 
+  17176 back %d 
+  17707 ;*3$"
+  30504 tracepath
+  30525 .shstrtab
+  30537 .interp
+  30547 .note.ABI-tag
+  30565 .note.gnu.build-id
+  30610 .gnu.hash
+  30622 .dynsym
+  30632 .dynstr
+  30642 .gnu.version
+  30657 .gnu.version_r
+  30676 .rela.dyn
+  30710 .rela.plt
+  30722 .init
+  30730 .text
+  30736 .fini
+  30744 .rodata
+  30754 .eh_frame_hdr
+  30772 .eh_frame
+  31004 .init_array
+  31020 .fini_array
+  31034 .jcr
+  31041 .dynamic
+  31052 .got
+  31057 .got.plt
+  31070 .data
+  31076 .bss
+  31103 .gnu_debuglink

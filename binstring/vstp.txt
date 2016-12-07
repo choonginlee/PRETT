@@ -1,263 +1,216 @@
    1070 /lib64/ld-linux-x86-64.so.2
-   1213 zd6	D|^
    1457 |j	C
-   5541 libbrlapi.so.0.6
-   5562 _ITM_deregisterTMCloneTable
-   5616 __gmon_start__
-   5635 _Jv_RegisterClasses
-   5661 _ITM_registerTMCloneTable
-   5713 brlapi_getDriverName
-   5740 brlapi_closeConnection
-   5767 brlapi_sendRaw
-   6006 brlapi_enterRawMode
-   6032 brlapi_perror
-   6050 brlapi_openConnection
-   6076 brlapi_recvRaw
-   6115 brlapi_leaveRawMode
-   6141 libpthread.so.0
-   6161 read
-   6166 __errno_location
-   6207 libc.so.6
-   6221 __stpcpy_chk
-   6236 fflush
-   6245 strcpy
-   6254 __printf_chk
-   6271 exit
-   6276 fopen
-   6304 strrchr
-   6314 signal
-   6323 strncpy
-   6333 puts
-   6340 __stack_chk_fail
-   6361 fgets
-   6367 strlen
-   6376 strstr
-   6405 chdir
-   6413 __fprintf_chk
-   6431 stdout
-   6440 fputc
-   6446 memcpy
-   6455 fclose
-   6464 malloc
-   6473 strcat
-   6502 getenv
-   6511 stderr
-   6520 alarm
-   6526 fwrite
-   6535 rename
-   6544 __memcpy_chk
-   6561 strchr
-   6570 __strcpy_chk
-   6605 __ctype_tolower_loc
-   6631 __cxa_finalize
-   6650 __sprintf_chk
-   6666 __xstat
-   6676 strerror
-   6707 __libc_start_main
-   6731 stpcpy
-   6740 free
-   6745 _edata
-   6754 __bss_start
-   6770 _end
-   6775 __libc_csu_fini
-   7015 visiobases_dir
-   7034 fileget
-   7044 transfer_finish
-   7064 renameBackups
-   7102 __data_start
-   7117 keyname
-   7127 _IO_stdin_used
-   7146 transfer_timeout
-   7167 backup
-   7176 transfer_abort
-   7215 __libc_csu_init
-   7235 visiobases_ext
-   7254 socketport
-   7267 fileput
-   7277 handleint
-   7311 burstmode
-   7323 transfer_init
-   7341 transferring
-   7356 GLIBC_2.2.5
-   7372 GLIBC_2.3
-   7404 GLIBC_2.14
-   7417 GLIBC_2.3.4
-   7433 GLIBC_2.4
-  13021 5*8 
-  13027 %,8 
-  13041 %*8 
-  13051 %*8 
-  13061 %*8 
-  13071 %*8 
-  13101 %28 
-  13111 %28 
-  13121 %28 
-  13131 %28 
-  13141 %28 
-  13151 %28 
-  13161 %28 
-  13171 %28 
-  13201 %28 
-  13211 %28 
-  13221 %28 
-  13231 %28 
-  13241 %28 
-  13251 %28 
-  13261 %28 
-  13271 %28 
-  13301 %28 
-  13311 %28 
-  13321 %:8 
-  13331 %:8 
-  13341 %:8 
-  13351 %B8 
-  13361 %B8 
-  13371 %B8 
-  13401 %B8 
-  13411 %B8 
-  13421 %B8 
-  13431 %B8 
-  13441 %B8 
-  13451 %B8 
-  13461 %B8 
-  13471 %B8 
-  13501 %B8 
-  13511 %B8 
-  13521 %J8 
-  13531 %J8 
-  13541 %J8 
-  13551 %J8 
-  13561 %J8 
-  13571 %J8 
-  13601 %R8 
-  13611 %R8 
-  13621 %R8 
-  13631 %R8 
-  13641 %R8 
-  13664 AWAVAUATSH
-  14072 /.vstprc
-  14461 =*7 
-  15457 =,5 
-  15544 ?-tiH
-  15706 [A\A]A^A_]
-  15725 <kt5
-  15733 <-u 
-  16722 =I2 
-  16731 5B2 
-  17041 =!2 
-  17300 AWAVH
-  17313 AUATUSH
-  20462 []A\A]A^A_
-  21102 =Y0 
-  21152 =10 
-  21233 .vis
-  21323 .Vis
-  21413 .VIS
-  21464 AWAVAUATI
-  22306 [A\A]A^A_]
-  22555 --- 
-  22654 gfff
-  22711 5r* 
-  22764 []A\
-  23044 -w, 
-  23060 Hc5M, 
-  23071 =B* 
-  23171 <#t.
-  23201 <Yt	
-  23564 AWAVAUATI
-  24163 =	( 
-  24730 [A\A]A^A_]
-  25332 D58% 
-  25451 -r' 
-  25562 =	% 
-  25652 =q$ 
-  26001 t*<Du
-  26041 Hc5\& 
-  26067 Hc5F& 
-  26117 5N& 
-  27240 AVAUATUH
-  30062 =I  
-  31115 []A\A]A^
-  31567 &Hc5
-  31740 AWAVA
-  31747 AUATL
-  32072 []A\A]A^A_
-  32144 aborting on signal %d
-  32173 keyname
-  32203 socketport
-  32216 vbs_ext
-  32226 vbs_dir
-  32236 nobackup
-  32247 Usage: %s [options] [files]
-  32304 [files] are Unix filenames
-  32337 vstpp
-  32345 vstpg
-  32353 HOME
-  32360 ifbnskd
-  32370 option not recognized : -%c
-  32425 Couldn't get driver name
-  32456 VisioBraille
-  32473 Couldn't get raw mode
-  32522 transfers finished
-  32550 vstpg/vstpp : get files from / put files to a VisioBraille terminal
-  32660  -i            ask for confirmation
-  32730  -f            don't ask for confirmation (default)
-  33020  -b            create backup (.vis~) file if file already exists
-  33130  -n            do not create backup (.vis~) file (default)
-  33230  -s port       use port as port number instead of default
-  33330  -k filename   use filename as key path instead of default
-  33430  -d            put files into current directory
-  33510  -o filename   also use filename as options file
-  33600 Please call me as vstpp or as vstpg.
-  33650 long option not recognized : %s
-  33720 Couldn't initialize connection with BrlAPI
-  34000 braille driver is not VisioBraille
-  34050 couldn't chdir to download dir, please use -d if you want to store files in .
-  34177 %s -> %s failed
-  34222 %2x 
-  34227 while sending
-  34245 while receiving
-  34265 transfer interrupt by user !
-  34323 getting %s in %s
-  34345 getting %s
-  34362 %s: %dKo...
-  34401 putting %s
-  34415 .vis
-  34430 unexpected %c packet, size %d, content :
-  34510 couldn't recover, so aborting...
-  34560 name too long, giving up that file
-  34630 couldn't rename backups, overwriting
-  34700 open failed, giving up that file
-  34750 writing data on disk for file %s
-  35011 So giving up
-  35030 couldn't get it from download directory, trying from current directory.
-  35150 reading data on disk for file %s failed: %s
-  35224 So giving up for this file
-  35260 No reply from terminal ! Assuming dead, hence aborting
-  35767 ;*3$"
-  50040 vstp
-  50055 .shstrtab
-  50067 .interp
-  50077 .note.ABI-tag
-  50115 .note.gnu.build-id
-  50140 .gnu.hash
-  50152 .dynsym
-  50162 .dynstr
-  50172 .gnu.version
-  50207 .gnu.version_r
-  50226 .rela.dyn
-  50240 .init
-  50246 .plt
-  50253 .plt.got
-  50264 .text
-  50272 .fini
-  50300 .rodata
-  50310 .eh_frame_hdr
-  50326 .eh_frame
-  50340 .init_array
-  50354 .fini_array
-  50370 .jcr
-  50375 .dynamic
-  50406 .data
-  50414 .bss
-  50421 .gnu_debuglink
+   5511 libbrlapi.so.0.6
+   5532 _ITM_deregisterTMCloneTable
+   5566 __gmon_start__
+   5605 _Jv_RegisterClasses
+   5631 _ITM_registerTMCloneTable
+   5663 brlapi_getDriverName
+   5710 brlapi_closeConnection
+   5737 brlapi_sendRaw
+   5756 brlapi_enterRawMode
+   6002 brlapi_perror
+   6020 brlapi_openConnection
+   6046 brlapi_recvRaw
+   6065 brlapi_leaveRawMode
+   6111 libpthread.so.0
+   6131 read
+   6136 __errno_location
+   6157 libc.so.6
+   6171 __stpcpy_chk
+   6206 fflush
+   6215 strcpy
+   6224 __printf_chk
+   6241 exit
+   6246 fopen
+   6254 strrchr
+   6264 signal
+   6273 strncpy
+   6303 puts
+   6310 __stack_chk_fail
+   6331 fgets
+   6337 strlen
+   6346 strstr
+   6355 chdir
+   6363 __fprintf_chk
+   6401 stdout
+   6410 fputc
+   6416 memcpy
+   6425 fclose
+   6434 malloc
+   6443 strcat
+   6452 getenv
+   6461 stderr
+   6470 alarm
+   6476 fwrite
+   6505 rename
+   6514 __memcpy_chk
+   6531 strchr
+   6540 __strcpy_chk
+   6555 __ctype_tolower_loc
+   6601 __sprintf_chk
+   6617 __xstat
+   6627 strerror
+   6640 __libc_start_main
+   6662 stpcpy
+   6671 free
+   6676 _edata
+   6705 __bss_start
+   6721 _end
+   6726 __libc_csu_fini
+   6746 visiobases_dir
+   6765 fileget
+   6775 transfer_finish
+   7015 renameBackups
+   7033 __data_start
+   7050 keyname
+   7060 _IO_stdin_used
+   7077 transfer_timeout
+   7120 backup
+   7127 transfer_abort
+   7146 __libc_csu_init
+   7166 visiobases_ext
+   7205 socketport
+   7220 fileput
+   7230 handleint
+   7242 burstmode
+   7254 transfer_init
+   7272 transferring
+   7307 GLIBC_2.2.5
+   7323 GLIBC_2.3
+   7335 GLIBC_2.14
+   7350 GLIBC_2.3.4
+   7364 GLIBC_2.4
+  12761 %z: 
+  13001 %r: 
+  13021 %j: 
+  13041 %b: 
+  13061 %Z: 
+  13101 %R: 
+  13121 %J: 
+  13141 %B: 
+  13161 %:: 
+  13201 %2: 
+  13221 %*: 
+  13241 %": 
+  13761 %z9 
+  14001 %r9 
+  14021 %j9 
+  14041 %b9 
+  14061 %Z9 
+  14101 %R9 
+  14144 AWAVAUATSH
+  14343 /.vstprc
+  14727 =$8 
+  15710 =36 
+  16040 <ktZ
+  16144 [A\A]A^A_]
+  17270 =#3 
+  17340 AUAT
+  20442 []A\A]
+  21064 5w/ 
+  21160 .vis
+  21240 .Vis
+  21324 .VIS
+  21404 AWAVAUATSH
+  22142 [A\A]A^A_]
+  22260 AUATA
+  22415 gfff
+  22545 5v, 
+  22630 []A\A]
+  22730 Hc5E. 
+  23046 <#t'
+  23056 <Yt	
+  23424 AWAVAUATSH
+  24533 [A\A]A^A_]
+  25120 D5Z' 
+  25546 t*<Du
+  26557 =<$ 
+  26620 =K$ 
+  26720 AVAUATUH
+  27627 =$" 
+  30570 []A\A]A^
+  31247 $Hc5u! 
+  31420 AWAVA
+  31427 AUATL
+  31552 []A\A]A^A_
+  31624 aborting on signal %d
+  31653 keyname
+  31663 socketport
+  31676 vbs_ext
+  31706 vbs_dir
+  31716 nobackup
+  31727 Usage: %s [options] [files]
+  31764 [files] are Unix filenames
+  32017 vstpp
+  32025 vstpg
+  32033 HOME
+  32040 ifbnskd
+  32050 option not recognized : -%c
+  32105 Couldn't get driver name
+  32136 VisioBraille
+  32153 Couldn't get raw mode
+  32202 transfers finished
+  32230 vstpg/vstpp : get files from / put files to a VisioBraille terminal
+  32340  -i            ask for confirmation
+  32410  -f            don't ask for confirmation (default)
+  32500  -b            create backup (.vis~) file if file already exists
+  32610  -n            do not create backup (.vis~) file (default)
+  32710  -s port       use port as port number instead of default
+  33010  -k filename   use filename as key path instead of default
+  33110  -d            put files into current directory
+  33170  -o filename   also use filename as options file
+  33260 Please call me as vstpp or as vstpg.
+  33330 long option not recognized : %s
+  33400 Couldn't initialize connection with BrlAPI
+  33460 braille driver is not VisioBraille
+  33530 couldn't chdir to download dir, please use -d if you want to store files in .
+  33657 %s -> %s failed
+  33702 %2x 
+  33707 while sending
+  33725 while receiving
+  33745 transfer interrupt by user !
+  34003 getting %s in %s
+  34025 getting %s
+  34042 %s: %dKo...
+  34061 putting %s
+  34075 .vis
+  34110 unexpected %c packet, size %d, content :
+  34170 couldn't recover, so aborting...
+  34240 name too long, giving up that file
+  34310 couldn't rename backups, overwriting
+  34360 open failed, giving up that file
+  34430 writing data on disk for file %s
+  34471 So giving up
+  34510 couldn't get it from download directory, trying from current directory.
+  34630 reading data on disk for file %s failed: %s
+  34704 So giving up for this file
+  34740 No reply from terminal ! Assuming dead, hence aborting
+  35447 ;*3$"
+  50670 Avstp
+  50706 .shstrtab
+  50720 .interp
+  50730 .note.ABI-tag
+  50746 .note.gnu.build-id
+  50771 .gnu.hash
+  51003 .dynsym
+  51013 .dynstr
+  51023 .gnu.version
+  51040 .gnu.version_r
+  51057 .rela.dyn
+  51071 .rela.plt
+  51103 .init
+  51111 .plt.got
+  51122 .text
+  51130 .fini
+  51136 .rodata
+  51146 .eh_frame_hdr
+  51164 .eh_frame
+  51176 .init_array
+  51212 .fini_array
+  51226 .jcr
+  51233 .dynamic
+  51244 .got.plt
+  51255 .data
+  51263 .bss
+  51270 .gnu_debuglink
