@@ -1,6 +1,0 @@
-/lib64/ld-linux-x86-64.so.2
-/usr/bin
-/usr/share/webbrowser-app
-/webbrowser/searchengines
-/build/webbrowser-app-4Hx99o/webbrowser-app-0.23+16.04.20160413/src/app
-/build/webbrowser-app-4Hx99o/webbrowser-app-0.23+16.04.20160413/obj-x86_64-linux-gnu/src

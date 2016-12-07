@@ -53,7 +53,7 @@ class StateList:
 			if state.numb == numb:
 				return state
 		return None
-		
+
 	def remove_state(self, state):
 		self.state_list.remove(state)
 
@@ -613,7 +613,7 @@ elif mode == 'p':
 	with open("./tokenfile/total_tokens.txt") as f:
 		token_db = pickle.load(f)
 
-	with open("./args/all_tokens.txt") as a:
+	with open("./args/total_args.txt") as a:
 		args_db = pickle.load(a)
 
 	multiple_token_db = []

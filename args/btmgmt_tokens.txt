@@ -1,4 +1,0 @@
-/lib64/ld-linux-x86-64.so.2
-/var/runA
-/dev/urandom
-/sys/kernel/debug/bluetooth/hci%u/identity

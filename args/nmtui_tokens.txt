@@ -1,7 +1,0 @@
-/lib64/ld-linux-x86-64.so.2
-/usr/share/locale
-/usr/sbin/
-/usr/local/sbin/
-/usr/bin/
-/usr/local/bin/
-/usr/sbin/openconnect

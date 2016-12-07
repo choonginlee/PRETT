@@ -1,6 +1,0 @@
-/lib64/ld-linux-x86-64.so.2
-/org/bluez
-/org/bluez/agent
-/org/bluez/profile
-/org/freedesktop/DBus
-/org/freedesktop/PolicyKit1/Authority

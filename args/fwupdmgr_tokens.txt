@@ -1,5 +1,0 @@
-/lib64/ld-linux-x86-64.so.2
-/var/lib/fwupd
-/org/freedesktop/systemd1
-/usr/share/locale
-/var/cache/app-info/xmls/fwupd-verify.xml
