@@ -1,0 +1,34 @@
+n = 1
+
+while True:
+	get states in level(n)
+	if len(states) == 0:
+		break;
+		# modelleing ends
+
+	# expansion
+	for state in states[level(n)]:
+		send single
+			if new :
+				add the state in the level(n+1)
+				store that s/r message
+		send multiple
+			if new :
+				add the state in the next level(n+1)
+				store that s/r message
+	
+	# prune
+	for state in states[level(n+1)]:
+		get parent of state
+		get s/r messages of the parent
+		for message in s/r messages:
+			send message and get response
+			temporarily store s/r messages
+
+		compare parent's s/r with child's s/r
+		if same:
+			destroy itself
+		else:
+			continue
+
+	cur level++;

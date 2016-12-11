@@ -68,7 +68,7 @@ def extract_token(path, file) :
 
 	for res in result:
 		fw.write(str(res) + '\n')
-
+		
 	result = []
 	result_first = []
 	url_re = '(http|https):\/\/(([\xA1-\xFEa-z0-9_\-]+\.[\xA1-\xFEa-z0-9:;&#@=_~%\?\/\.\,\+\-]+))'
