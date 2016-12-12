@@ -569,123 +569,123 @@ elif mode == 'p':
 					graphname = "diagram/prune_bfs_state" + str(unique_cnt) + ".png"
 					ftpmachine.model.graph.draw(graphname, prog='dot')
 
-		# pruning stage
-		is_pruning = 1
+			# pruning stage
+			is_pruning = 1
 
-		next_state_list = level_dict.get(current_level+1, [])
+			next_state_list = level_dict.get(current_level+1, [])
 
-		if next_state_list == []: # no valid states found
-			break
+			if next_state_list == []: # no valid states found
+				break
 
-		valid_states = []	
-		invalid_states = []
+			valid_states = []	
+			invalid_states = []
 
-		for child_state in next_state_list:
+			for child_state in next_state_list:
 
-			print 'prune start in state ' + str(child_state)
+				print 'prune start in state ' + str(child_state)
 
-			parent_numb = state_list.find_state(child_state).parent
-			parent_sr_dict = {}
-			for next_state_numb in next_state_list:
-				next_state = state_list.find_state(next_state_numb)
-				if next_state.parent == parent_numb:
-					parent_sr_dict[next_state.spyld] = next_state.rpyld
-			
-
-			prune_move_state_token =[]
-			prune_current_state = child_state
-			prune_target_state = prune_current_state
-			child_sr_dict = {}
-			
-			while True:
-				prune_current_parent = state_list.find_state(prune_target_state).parent
-				if prune_current_parent is not None:
-					prune_move_state_token.append(state_list.find_state(prune_target_state).spyld)
-					prune_target_state = prune_current_parent
-					continue
-				else: # root node
-					break
-			
-			prune_move_state_token.reverse()
-
-			parent_spyld = parent_sr_dict.keys()
-			# Simple message format ( 1 word )
-			for token in parent_spyld:
-				if token == "quit":
-					continue
-				sport = sport + 1
-				if sport > 60000:
-					sport = 1000
-
-				#Start with 3WHS
-				rp = handshake_init(dst_ip, dport, sport)
-
-				#If handshake finished, the server sends response. Send ack and get the last req packet info.
-				ftp_ack = generate_ftp_ack(rp)
-				skt.send(ftp_ack)
-				#logging.info("[+] [MAIN] AFTER SEND")
-
-				for tk in prune_move_state_token:
-					temp = rp
-					tk_dlm = tk + '\r\n'
-					logging.info("[+] [port no. %d] Prune Move tokens : " % sport + str(tk))
-					rp = send_receive_ftp(rp, tk_dlm)
-					if rp == "error":
-					     print 'rp error when find state in pruning'
-
-				# set state
-				# ftpmachine.set_state(str(prune_current_state))
-				unique_cnt = unique_cnt + 1
-
-				temp_rp = rp
-				# Send message and listen
-				logging.info("[+] [port no. %d] Prune Send token : " % sport + str(token))
-				rp = send_receive_ftp(rp, token)
+				parent_numb = state_list.find_state(child_state).parent
+				parent_sr_dict = {}
+				for next_state_numb in next_state_list:
+					next_state = state_list.find_state(next_state_numb)
+					if next_state.parent == parent_numb:
+						parent_sr_dict[next_state.spyld] = next_state.rpyld
 				
-				if rp == "error":
-					print 'rp error before disconnect'
-					disconnect_ftp(temp_rp)
-				else:
-					child_sr_dict[str(token).replace('\r\n', '')] = rp.getlayer("Raw").load
-					# Finish TCP connection
-					disconnect_ftp(rp)
 
-				#Initialize current state as 0
-				cs = 0
+				prune_move_state_token =[]
+				prune_current_state = child_state
+				prune_target_state = prune_current_state
+				child_sr_dict = {}
+				
+				while True:
+					prune_current_parent = state_list.find_state(prune_target_state).parent
+					if prune_current_parent is not None:
+						prune_move_state_token.append(state_list.find_state(prune_target_state).spyld)
+						prune_target_state = prune_current_parent
+						continue
+					else: # root node
+						break
+				
+				prune_move_state_token.reverse()
 
-				if unique_cnt % 1000 == 0 :
-					elapsed_time = time.time() - g_start_time
-					print "[+] COUNT OF TRIALS : %d | " % unique_cnt, "Time Elapsed :", elapsed_time, "s"
-					graphname = "diagram/prune_bfs_state" + str(unique_cnt) + ".png"
-					ftpmachine.model.graph.draw(graphname, prog='dot')
-			
-			if cmp(parent_sr_dict, child_sr_dict) == 0: # same state, prune state
-				invalid_states.append(child_state)
-			else: # different state
-				# add transition here
-				valid_states.append(child_state)
+				parent_spyld = parent_sr_dict.keys()
+				# Simple message format ( 1 word )
+				for token in parent_spyld:
+					if token == "quit":
+						continue
+					sport = sport + 1
+					if sport > 60000:
+						sport = 1000
 
-		for invalid_state_numb in invalid_states:
-			invalid_state = state_list.find_state(invalid_state_numb)
-			if invalid_state is not None:
-				# print str(temp_numb) + " / " + str(current_state)
-				ftpmachine.add_transition(invalid_state.spyld + " / " + str(parent_sr_dict.get(invalid_state.spyld, None)), source = str(invalid_state.parent), dest = str(invalid_state.parent))
-				print "invalid state : " + str(invalid_state_numb) + " in level " + str(current_level+1)
-				state_list.remove_state(state_list.find_state(invalid_state_numb))
-				level_dict[current_level+1].remove(str(invalid_state_numb))
+					#Start with 3WHS
+					rp = handshake_init(dst_ip, dport, sport)
 
-		for valid_state_numb in valid_states:
-			valid_state = state_list.find_state(valid_state_numb)
-			if valid_state is not None:
-				print "valid state : " + str(valid_state_numb) + " in level " + str(current_level+1)
-				ftpmachine.add_states(str(valid_state_numb))
-				ftpmachine.add_transition(valid_state.spyld + " / " + str(parent_sr_dict.get(valid_state.spyld, None)), source = str(valid_state.parent), dest = str(valid_state_numb))
-	
+					#If handshake finished, the server sends response. Send ack and get the last req packet info.
+					ftp_ack = generate_ftp_ack(rp)
+					skt.send(ftp_ack)
+					#logging.info("[+] [MAIN] AFTER SEND")
 
-		elapsed_time = time.time() - start_time
-		print "Level %d elapsed time : " % current_level, elapsed_time, "\n"	
-		current_level = current_level + 1
-		print 'move to level ' + str(current_level)
+					for tk in prune_move_state_token:
+						temp = rp
+						tk_dlm = tk + '\r\n'
+						logging.info("[+] [port no. %d] Prune Move tokens : " % sport + str(tk))
+						rp = send_receive_ftp(rp, tk_dlm)
+						if rp == "error":
+						     print 'rp error when find state in pruning'
+
+					# set state
+					# ftpmachine.set_state(str(prune_current_state))
+					unique_cnt = unique_cnt + 1
+
+					temp_rp = rp
+					# Send message and listen
+					logging.info("[+] [port no. %d] Prune Send token : " % sport + str(token))
+					rp = send_receive_ftp(rp, token)
+					
+					if rp == "error":
+						print 'rp error before disconnect'
+						disconnect_ftp(temp_rp)
+					else:
+						child_sr_dict[str(token).replace('\r\n', '')] = rp.getlayer("Raw").load
+						# Finish TCP connection
+						disconnect_ftp(rp)
+
+					#Initialize current state as 0
+					cs = 0
+
+					if unique_cnt % 1000 == 0 :
+						elapsed_time = time.time() - g_start_time
+						print "[+] COUNT OF TRIALS : %d | " % unique_cnt, "Time Elapsed :", elapsed_time, "s"
+						graphname = "diagram/prune_bfs_state" + str(unique_cnt) + ".png"
+						ftpmachine.model.graph.draw(graphname, prog='dot')
+				
+				if cmp(parent_sr_dict, child_sr_dict) == 0: # same state, prune state
+					invalid_states.append(child_state)
+				else: # different state
+					# add transition here
+					valid_states.append(child_state)
+
+			for invalid_state_numb in invalid_states:
+				invalid_state = state_list.find_state(invalid_state_numb)
+				if invalid_state is not None:
+					# print str(temp_numb) + " / " + str(current_state)
+					ftpmachine.add_transition(invalid_state.spyld + " / " + str(parent_sr_dict.get(invalid_state.spyld, None)), source = str(invalid_state.parent), dest = str(invalid_state.parent))
+					print "invalid state : " + str(invalid_state_numb) + " in level " + str(current_level+1)
+					state_list.remove_state(state_list.find_state(invalid_state_numb))
+					level_dict[current_level+1].remove(str(invalid_state_numb))
+
+			for valid_state_numb in valid_states:
+				valid_state = state_list.find_state(valid_state_numb)
+				if valid_state is not None:
+					print "valid state : " + str(valid_state_numb) + " in level " + str(current_level+1)
+					ftpmachine.add_states(str(valid_state_numb))
+					ftpmachine.add_transition(valid_state.spyld + " / " + str(parent_sr_dict.get(valid_state.spyld, None)), source = str(valid_state.parent), dest = str(valid_state_numb))
+		
+
+			elapsed_time = time.time() - start_time
+			print "Level %d elapsed time : " % current_level, elapsed_time, "\n"	
+			current_level = current_level + 1
+			print 'move to level ' + str(current_level)
 
 	elapsed_time = time.time() - g_start_time
 	print "Total elapsed time : ", elapsed_time, "\n"
