@@ -29,7 +29,7 @@ os.system("rm -rf ./diagram/*")
 
 logging.basicConfig(level=logging.DEBUG, filename="ptmsg_log", filemode="a+", format="%(asctime)-15s %(levelname)-8s %(message)s")
 
-sport = 1000 # find sport here
+sport = 3000 # find sport here
 
 dst_ip = sys.argv[1]
 if len(sys.argv) == 3:
@@ -594,7 +594,7 @@ elif mode == 'p':
 
 				sport = sport + 1
 				if sport > 60000:
-					sport = 1000
+					sport = 3000
 				
 			# --------- Find valid message with multiple keywords  ---------
 			mul_start = 1
@@ -650,7 +650,7 @@ elif mode == 'p':
 
 				sport = sport + 1
 				if sport > 60000:
-					sport = 1000
+					sport = 3000
 
 
 		### Pruning ###
@@ -735,7 +735,7 @@ elif mode == 'p':
 
 				sport = sport + 1
 				if sport > 60000:
-					sport = 1000
+					sport = 3000
 
 				if sport % 1000 == 0 :
 					elapsed_time = time.time() - g_start_time
