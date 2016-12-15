@@ -58,7 +58,7 @@ if not os.path.exists('./diagram'):
 	os.makedirs('./diagram')
 
 #Mode Selection
-mode = raw_input("[!] Manual? or Auto? ( \'m\' - for testing / \'a\' - auto mode /) : ")
+mode = raw_input("[ ] Manual? or Auto? ( \'m\' - for testing / \'a\' - auto mode /) : ")
 
 # It will contain trasition info like 
 # trigger as key (string) : [src_state (string), dest_state (string), cnt]
@@ -626,12 +626,12 @@ elif mode == 'a' or mode == 'A':
 					
 			if compare_ordered_dict(parent_sr_msg_dict, child_sr_dict) == True: # same state, prune state
 				invalid_states.append(child_state)
-				print "[+] -> Success."
+				print "[+] -> Same as parent. Merge."
 				logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state))
 			else: # different state
 				# add transition here
 				valid_states.append(child_state)
-				print "[-] -> Failed."
+				print "[-] -> Differnt from parent. Let it be alive."
 				logging.debug("[!] [port no. %d] Parent != Child. Refer the dict below !" % sport)
 				logging.debug("[+] parent_sr_msg_dict : \n")
 				logging.info(json.dumps(parent_sr_msg_dict, indent=4))
