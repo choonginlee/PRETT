@@ -39,7 +39,7 @@ if len(sys.argv) == 3:
 dport = 21
 
 delimiter = "\r\n"
-exit_label = "QUIT / 221 Goodbye."
+exit_label = "QUIT / 221 Goodbye.\n"
 num_of_states = 0
 g_start_time = 0
 mul_start = 0
@@ -190,6 +190,8 @@ def send_receive_ftp(rp, payload):
 			for pkt in rp:
 				if pkt.haslayer("Raw"):
 					return send_ftp_ack_build(p, pkt)
+
+		logging.debug("[!] [port no. %d] No FTP packet in two sniffed packets" % sport)
 					
 	elif len(ans) == 1:
 		logging.debug("[ ] [port no. %d] Answer length is 1." % sport)
@@ -229,10 +231,14 @@ def send_receive_ftp(rp, payload):
 
 	# More than 3 tcp packets
 	else:
+		last_rp = None
 		logging.debug("[!] [port no. %d] Answer length is %d. finding FTP Response." % (sport, len(ans)))
 		for sp, rp in ans:
 			if rp.haslayer("Raw"):
-				return send_ftp_ack_build(sp, rp)
+				last_rp = rp
+				# return the last ftp packet. Scapy bug.
+		if last_rp is not None:
+			return send_ftp_ack_build(sp, last_rp)
 
 		logging.debug("[!] [port no. %d] Answer length is %d. not yet found FTP Response." % (sport, len(ans)))
 		rp = sniff(filter = "tcp", iface = myiface, timeout = timeout, count = 10)
@@ -500,7 +506,8 @@ elif mode == 'a' or mode == 'A':
 				if child_state.parent == cur_state:
 					child_spyld = child_state.spyld
 					single_cmds.append(child_spyld)
-			print "[+] Single Commands are:".join(single_cmds)
+			print "[+] Single Commands are:"
+			print single_cmds
 			
 			# for cmd in single_cmds:
 			# 	for args in args_db:
