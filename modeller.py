@@ -74,11 +74,13 @@ class FTPModel(object):
 		self.name = name
 
 class State:
-	def __init__(self, numb, parent=None, spyld=None, rpyld=None):
+	def __init__(self, numb, parent=None, spyld=None, rpyld=None, group=None, child_dict=None):
 		self.numb = numb
 		self.parent = parent
 		self.spyld = spyld
 		self.rpyld = rpyld
+		self.group = group
+		self.child_dict = child_dict
 
 class StateList:
 	def __init__(self, state_list=[]):
@@ -305,6 +307,7 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	global num_of_states, transition_info, state_list, cur_state, new_state, is_pruning, mul_start, current_level
 
 	send_payload = spyld.replace('\r\n', '')
+	command = send_payload.split()[0]
 	#Check if the response already seen before
 	if mul_start == 0:
 		# search each transition label in transition info data structure
@@ -344,7 +347,7 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 		else:
 			mul_transition_info[t_label] = [crnt_state, dst_state, 1] # add transition info
 
-		state_list.add_state(State(str(num_of_states), parent=str(cur_state), spyld=str(send_payload), rpyld=str(rpyld)))
+		state_list.add_state(State(str(num_of_states), parent=str(cur_state), spyld=str(send_payload), rpyld=str(rpyld), group=str(command)))
 		print "[+} State added : " + str(num_of_states)
 		if level_dict.get(current_level+1) is None:
 			level_dict[current_level+1] = [str(num_of_states)]
@@ -498,42 +501,45 @@ elif mode == 'a' or mode == 'A':
 					single_cmds.append(child_spyld)
 			print "[+] Single Commands are:".join(single_cmds)
 			
-			for cmd in single_cmds:
-				for args in args_db:
-					msg = cmd + ' ' + str(args[0])
-					multiple_msg_db.append(msg)
+			# for cmd in single_cmds:
+			# 	for args in args_db:
+			# 		msg = cmd + ' ' + str(args[0])
+			# 		multiple_msg_db.append(msg)
 
-			for msg in multiple_msg_db:
-				if msg == "quit":
-					continue
+			for msg in single_cmds: # group name
+				for args in args_db: # argument
+					if msg == "quit":
+						continue
 					
-				#Start with 3WHS	
-				rp = handshake_init(dst_ip, dport, sport)
+					multiple_msg = msg + ' ' + str(args[0])
 
-				#If handshake finished, the server sends response. Send ack and get the last req packet info.
-				ftp_ack = generate_ftp_ack(rp)
-				skt.send(ftp_ack)
+					#Start with 3WHS	
+					rp = handshake_init(dst_ip, dport, sport)
 
-				for mv_msg in move_state_msg:
-					handshake_rp = rp
-					rp = send_receive_ftp(rp, mv_msg)
+					#If handshake finished, the server sends response. Send ack and get the last req packet info.
+					ftp_ack = generate_ftp_ack(rp)
+					skt.send(ftp_ack)
 
-				# set state
-				ftpmachine.set_state(str(cur_state))
+					for mv_msg in move_state_msg:
+						handshake_rp = rp
+						rp = send_receive_ftp(rp, mv_msg)
 
-				temp_rp = rp
-				# Send multiple message and listen
-				rp = send_receive_ftp(rp, msg)
+					# set state
+					ftpmachine.set_state(str(cur_state))
 
-				# Finish TCP connection
-				disconnect_ftp(rp)
+					temp_rp = rp
+					# Send multiple message and listen
+					rp = send_receive_ftp(rp, multiple_msg)
 
-				#Initialize current state as 0
-				cs = 0
+					# Finish TCP connection
+					disconnect_ftp(rp)
 
-				sport = sport + 1
-				if sport > 60000:
-					sport = 3000
+					#Initialize current state as 0
+					cs = 0
+
+					sport = sport + 1
+					if sport > 60000:
+						sport = 3000
 
 
 		### Pruning ###
@@ -547,13 +553,14 @@ elif mode == 'a' or mode == 'A':
 		valid_states = []	
 		invalid_states = []
 
-		# child_state : every sub state to be pruned (deepest states)
-		for child_state in states_candidate:
-			print '[+] Pruning in ' + str(child_state)
-			logging.info("\n[+] [port no. %d] PRUNING starts in state " % sport + str(child_state) +"\n")
+		# child_state_numb : every sub state to be pruned (deepest states)
+		for child_state_numb in states_candidate:
+			child_state = state_list.find_state(child_state_numb)
+			print '[+] Pruning in ' + str(child_state_numb)
+			logging.info("\n[+] [port no. %d] PRUNING starts in state " % sport + str(child_state_numb) +"\n")
 
 			# Get the parent name of the child state
-			parent_numb = state_list.find_state(child_state).parent
+			parent_numb = child_state.parent
 
 			# parent_sr_msg_dict : parent node -> child node sent and received message ( key : payload sent. value : resposnses )
 			parent_sr_msg_dict = OrderedDict()
@@ -564,7 +571,7 @@ elif mode == 'a' or mode == 'A':
 
 			# For each state, store every message to get to the state itself.
 			prune_move_state_msg =[]
-			prune_current_state = child_state
+			prune_current_state = child_state_numb
 			prune_target_state = prune_current_state
 			child_sr_dict = OrderedDict()
 			
@@ -617,42 +624,77 @@ elif mode == 'a' or mode == 'A':
 				sport = sport + 1
 				if sport > 60000:
 					sport = 3000
-
+					
 				if sport % 1000 == 0 :
 					elapsed_time = time.time() - g_start_time
 					print "[+] Port No. : %d | " % sport, "Time Elapsed :", elapsed_time, "s"
 					graphname = "diagram/level_" + str(current_level) + "_port_" + str(sport) + ".png"
 					ftpmachine.model.graph.draw(graphname, prog='dot')
-					
+			
+			# After searching all the parent's s/r
+			# Check below for merging
+
+			# STEP1. Parent
+			# - Compare child dict with parent dict
+			# - If differnt, let it be alive.
+			# If same merge with parent.
 			if compare_ordered_dict(parent_sr_msg_dict, child_sr_dict) == True: # same state, prune state
-				invalid_states.append(child_state)
+				invalid_states.append([child_state_numb, parent_numb, parent_numb, child_state.spyld + " / " + child_state.rpyld])
 				print "[+] -> Same as parent. Merge."
-				logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state))
+				logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state_numb))
 			else: # different state
 				# add transition here
-				valid_states.append(child_state)
-				print "[-] -> Differnt from parent. Let it be alive."
-				logging.debug("[!] [port no. %d] Parent != Child. Refer the dict below !" % sport)
-				logging.debug("[+] parent_sr_msg_dict : \n")
-				logging.info(json.dumps(parent_sr_msg_dict, indent=4))
-				logging.debug("[+] child_sr_dict : \n")
-				logging.info(json.dumps(child_sr_dict, indent=4))
+				print "[-] -> Differnt from parent. Now check with siblings!"
+				# STEP2. Sibling
+				# - Compare its child dict with other childs' dict
+				# - If different with all the childs' dict (or first), let it be alive
+				# - If any same dict found, merge with the child
+				unique_state = True
+				for self_numb, vs_parent, vs_child, vs_label in valid_states:
+					# Find the same group
+					prev_state = state_list.find_state(vs_parent)
+					self_state = state_list.find_state(child_state_numb)
+					if prev_state.parent == self_state.parent and prev_state.group == self_state.group: # same group
+						# compare child_dict between prev and current state
+						if compare_ordered_dict(prev_state.child_dict, self_state.child_dict) == True: # same state! Merge with prev_state!
+							invalid_states.append([child_state_numb, parent_numb, prev_state_numb, self_state.spyld + " / " + self_state.rpyld])
+							unique_state = False
+							break
+						else:
+							continue
+					else: # different group
+						continue
 
-		for invalid_state_numb in invalid_states:
-			invalid_state = state_list.find_state(invalid_state_numb)
-			if invalid_state is not None:
-				ftpmachine.add_transition(invalid_state.spyld + " / " + str(parent_sr_msg_dict.get(invalid_state.spyld, None) + "\n"), source = str(invalid_state.parent), dest = str(invalid_state.parent))
-				print "invalid state : " + str(invalid_state_numb) + " in level " + str(current_level+1)
-				state_list.remove_state(state_list.find_state(invalid_state_numb))
-				level_dict[current_level+1].remove(str(invalid_state_numb))
+				# I am unique! different from parent and other siblings!
+				if unique_state:
+					valid_states.append([child_state_numb, parent_numb, child_state_numb, child_state.spyld + " / " + child_state.rpyld])
+					state_list.find_state(child_state_numb).child_dict = child_sr_dict
+					print "[+] -> Unique state found!!!"
 
-		for valid_state_numb in valid_states:
-			valid_state = state_list.find_state(valid_state_numb)
-			if valid_state is not None:
-				print "valid state : " + str(valid_state_numb) + " in level " + str(current_level+1)
-				ftpmachine.add_states(str(valid_state_numb))
-				ftpmachine.add_transition(valid_state.spyld + " / " + str(parent_sr_msg_dict.get(valid_state.spyld, None)), source = str(valid_state.parent), dest = str(valid_state_numb))
-	
+		for self_numb, src_state, dst_state, ivs_label in invalid_states:
+			self_state = state_list.find_state(self_numb)
+			ftpmachine.add_transition(ivs_label + "\n", source = src_state, dest = dst_state)
+			print "[+] Invalid state : " + self_numb + " in level " + str(current_level+1)
+			state_list.remove_state(self_state)
+			level_dict[current_level+1].remove(str(self_numb))
+
+		current_states = level_dict.get(current_level)
+		for cur_state in current_states:
+			# give all the valid childs to each parent
+			valid_child_dict = {}
+			for self_numb, src_state, dst_state, vs_label in valid_states:
+				valid_state = state_list.find_state(self_numb)
+				# is this child yours?
+				if cur_state == valid_state.parent:
+					# Then collect your child's shit
+					valid_child_dict[valid_state.spyld] = valid_state.rpyld
+					print "[+] Valid state : " + str(self_numb) + " in level " + str(current_level+1)
+					ftpmachine.add_states(str(self_numb))
+					ftpmachine.add_transition(vs_label + "\n", source = src_state, dest = dst_state)
+			
+			# Have your child's sr
+			state_list.find_state(cur_state).child_dict = valid_child_dict
+			
 		elapsed_time = time.time() - g_start_time
 		print "[+] Level %d | Port No. %d | " % (current_level, sport), "Time Elapsed :", elapsed_time, "s"
 		graphname = "diagram/level_" + str(current_level) + "_port_" + str(sport) + ".png"
