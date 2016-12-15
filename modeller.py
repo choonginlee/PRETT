@@ -242,8 +242,8 @@ def send_receive_ftp(rp, payload):
 
 		# Timeout (Internal server error). Pass to disconnect.
 		return origin_rp
-
-	logging.debug("[!] [port no. %d] Sucks~~! no process in if" % (sport, len(ans)))
+	
+	logging.debug("[!] [port no. %d] Sucks~~! no process in if. %d" % (sport, len(ans)))
 
 def send_ftp_ack_build(sp, rp):
 	global skt, ftpmachine, mul_start
@@ -417,11 +417,12 @@ elif mode == 'a' or mode == 'A':
 	# get all command candidates
 	with open("./tokenfile/total_tokens.txt") as f:
 		token_db = pickle.load(f)
+		token_db = ['data', 'user', 'pass', 'opts']
 
 	# get all argument candidates
 	with open("./args/total_args.txt") as a:
 		args_db = pickle.load(a)
-
+		args_db = [['anonymous'], ['510123124512'], ['/'], ['127.0.0.1']]
 	while True:
 		start_time = time.time()
 		print '[+] Send total tokens in level ' + str(current_level)
@@ -640,7 +641,7 @@ elif mode == 'a' or mode == 'A':
 			# If same merge with parent.
 			if compare_ordered_dict(parent_sr_msg_dict, child_sr_dict) == True: # same state, prune state
 				invalid_states.append([child_state_numb, parent_numb, parent_numb, child_state.spyld + " / " + child_state.rpyld])
-				print "[+] -> Same as parent. Merge."
+				print "[+] -> Same as parent. Merge with state " + parent_numb
 				logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state_numb))
 			else: # different state
 				# add transition here
@@ -652,12 +653,13 @@ elif mode == 'a' or mode == 'A':
 				unique_state = True
 				for self_numb, vs_parent, vs_child, vs_label in valid_states:
 					# Find the same group
-					prev_state = state_list.find_state(vs_parent)
+					prev_state = state_list.find_state(self_numb)
 					self_state = state_list.find_state(child_state_numb)
 					if prev_state.parent == self_state.parent and prev_state.group == self_state.group: # same group
 						# compare child_dict between prev and current state
-						if compare_ordered_dict(prev_state.child_dict, self_state.child_dict) == True: # same state! Merge with prev_state!
-							invalid_states.append([child_state_numb, parent_numb, prev_state_numb, self_state.spyld + " / " + self_state.rpyld])
+						if compare_ordered_dict(prev_state.child_dict, child_sr_dict) == True: # same state! Merge with prev_state!
+							invalid_states.append([child_state_numb, parent_numb, prev_state.numb, self_state.spyld + " / " + self_state.rpyld])
+							print "[+] -> Same as " + prev_state.numb + ". Merge with state " + prev_state.numb
 							unique_state = False
 							break
 						else:
@@ -671,17 +673,10 @@ elif mode == 'a' or mode == 'A':
 					state_list.find_state(child_state_numb).child_dict = child_sr_dict
 					print "[+] -> Unique state found!!!"
 
-		for self_numb, src_state, dst_state, ivs_label in invalid_states:
-			self_state = state_list.find_state(self_numb)
-			ftpmachine.add_transition(ivs_label + "\n", source = src_state, dest = dst_state)
-			print "[+] Invalid state : " + self_numb + " in level " + str(current_level+1)
-			state_list.remove_state(self_state)
-			level_dict[current_level+1].remove(str(self_numb))
-
 		current_states = level_dict.get(current_level)
 		for cur_state in current_states:
 			# give all the valid childs to each parent
-			valid_child_dict = {}
+			valid_child_dict = OrderedDict()
 			for self_numb, src_state, dst_state, vs_label in valid_states:
 				valid_state = state_list.find_state(self_numb)
 				# is this child yours?
@@ -694,6 +689,13 @@ elif mode == 'a' or mode == 'A':
 			
 			# Have your child's sr
 			state_list.find_state(cur_state).child_dict = valid_child_dict
+
+		for self_numb, src_state, dst_state, ivs_label in invalid_states:
+			self_state = state_list.find_state(self_numb)
+			ftpmachine.add_transition(ivs_label + "\n", source = src_state, dest = dst_state)
+			print "[+] Invalid state : " + self_numb + " in level " + str(current_level+1)
+			state_list.remove_state(self_state)
+			level_dict[current_level+1].remove(str(self_numb))
 			
 		elapsed_time = time.time() - g_start_time
 		print "[+] Level %d | Port No. %d | " % (current_level, sport), "Time Elapsed :", elapsed_time, "s"
