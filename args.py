@@ -19,7 +19,9 @@ g_start_time = time.time()
 most_tokens = ['data', 'so', 'to', 'got', 'end', 'free', 'name', 'version', 'from', 'failed',
 'set', 'hh', 'lib', 'main', 'init', 'fini', 'bss', 'dyn', 'ld', 'array']
 user_id = ['user', 'admin', 'root', 'guest', 'anonymous']
-ip_addr = ['127.0.0.1', '192.168.0.1', '192.168.10.1']
+ip_addr = ['127.0.0.1', '192.168.0.1', '10.0.0.1']
+file_path = ['/', 'C:\\']
+urls = ['http://www.example.com']
 rand_numb = []
 
 
@@ -31,7 +33,7 @@ def count_token(file) :
 	res_file = open(file, 'r')
 	for line in res_file.readlines():
 		words.append(line.replace('\n', ''))
-
+		
 	tempdic = dict((k,1) for k in words)
 	ranklist = Counter(ranklist) + Counter(tempdic)
 	print "======== [", cnt, "] Token analysis of file", file, "done.", "========="
@@ -49,44 +51,44 @@ def extract_token(path, file) :
 	result = []
 	result_first = []
 	
-	while True :
-		string_read = fr.readline()
-		if not string_read: break # eol
+	# while True :
+	# 	string_read = fr.readline()
+	# 	if not string_read: break # eol
 		
-		split_list = []
-		split_list = string_read.split()
-		for split in split_list:
-			result_first = re.findall('^(/.*/)?(?:$|(.+?)(?:(\.[^.]*$)|$))', split)
-			for res in result_first:
-				if res[0] != '':
-					final = res[0] + res[1] + res[2]
-					temp_final = final
-					final_filter = re.search('[<>,:;]', temp_final)
-					if final_filter == None:
-						result.append(final)
+	# 	split_list = []
+	# 	split_list = string_read.split()
+	# 	for split in split_list:
+	# 		result_first = re.findall('^(/.*/)?(?:$|(.+?)(?:(\.[^.]*$)|$))', split)
+	# 		for res in result_first:
+	# 			if res[0] != '':
+	# 				final = res[0] + res[1] + res[2]
+	# 				temp_final = final
+	# 				final_filter = re.search('[<>,:;]', temp_final)
+	# 				if final_filter == None:
+	# 					result.append(final)
 		
 
-	for res in result:
-		fw.write(str(res) + '\n')
+	# for res in result:
+	# 	fw.write(str(res) + '\n')
 		
-	result = []
-	result_first = []
-	url_re = '(http|https):\/\/(([\xA1-\xFEa-z0-9_\-]+\.[\xA1-\xFEa-z0-9:;&#@=_~%\?\/\.\,\+\-]+))'
+	# result = []
+	# result_first = []
+	# url_re = '(http|https):\/\/(([\xA1-\xFEa-z0-9_\-]+\.[\xA1-\xFEa-z0-9:;&#@=_~%\?\/\.\,\+\-]+))'
 
-	while True:
-		string_read = fr.readline()
-		if not string_read: break #eol
+	# while True:
+	# 	string_read = fr.readline()
+	# 	if not string_read: break #eol
 
-		split_list = []
-		split_list = re.split('[<>]', string_read)
-		for split in split_list:
-			result_first = re.findall(url_re, split)
-			for res in result_first:
-				result.append(res)
-				print res
+	# 	split_list = []
+	# 	split_list = re.split('[<>]', string_read)
+	# 	for split in split_list:
+	# 		result_first = re.findall(url_re, split)
+	# 		for res in result_first:
+	# 			result.append(res)
+	# 			print res
 
-	for res in result:
-		fw.write(str(res) + '\n')
+	# for res in result:
+	# 	fw.write(str(res) + '\n')
 	#fw.write((str(set(result))))
 
 	fw.close()
@@ -131,9 +133,9 @@ if __name__ == "__main__" :
 	rand_numb.append(str(random.randint(513, 65536)))
 	rand_numb.append(str(random.randint(65537, 4294967296)))
 
-	for tok in most_tokens:
-		ranklist[tok] = ranklist[tok] + 1
-
+	# for tok in most_tokens:
+	# 	ranklist[tok] = ranklist[tok] + 1
+	
 	for tok in user_id:
 		ranklist[tok] = ranklist[tok] + 1
 
@@ -143,6 +145,11 @@ if __name__ == "__main__" :
 	for tok in rand_numb:
 		ranklist[tok] = ranklist[tok] + 1
 
+	for tok in file_path:
+		ranklist[tok] = ranklist[tok] + 1
+
+	for tok in urls:
+		ranklist[tok] = ranklist[tok] + 1
 
 	print("[+] Plase check the \'args\' directory.")
 	print("--- Total %s seconds ---" % (time.time() - start_time))
