@@ -29,14 +29,17 @@ os.system("rm -rf ./diagram/*")
 
 logging.basicConfig(level=logging.DEBUG, filename="ptmsg_log", filemode="a+", format="%(asctime)-15s %(levelname)-8s %(message)s")
 
+sport = 1000 # find sport here
+
 dst_ip = sys.argv[1]
+if len(sys.argv) == 3:
+	sport = int(sys.argv[2])
 
 #These informations are prerequisite.
 dport = 21
-sport = 3000 # find sport here
+
 delimiter = "\r\n"
 exit_label = "QUIT / 221 Goodbye."
-
 num_of_states = 0
 g_start_time = 0
 state_found = 0
@@ -117,7 +120,7 @@ def disconnect_ftp(rp):
 	global timeout, skt, finack_timeout, sniff_timeout
 
 	temp_rp = rp
-	p = generate_ftp_msg("QUIT", rp)
+	p = generate_ftp_msg("quit", rp)
 	# Listen FIN-ACK
 	ans, unans = skt.sr(p, multi=1, timeout=timeout*5, verbose=False) # SEND -> GET RESPONSE (normal case) -> GET FINACK
 	ans = filter_tcp_ans(ans)
@@ -218,7 +221,7 @@ def disconnect_ftp(rp):
 		
 def send_receive_ftp(rp, payload):
 	# SEND Req. -> Get ACK -> GET Rep. -> Send ACK (normal TCP-based protocol)
-	global skt, timeout, sniff_timeout, long_timeout
+	global skt, timeout, sniff_timeout, long_timeout, mul_start
 	origin_rp = rp
 	start_time = time.time()
 
@@ -293,9 +296,11 @@ def send_receive_ftp(rp, payload):
 		return origin_rp
 
 def send_ftp_ack_build(sp, rp):
-	global skt, ftpmachine
+	global skt, ftpmachine, mul_start
 	sentpayload = sp.getlayer("Raw").load.replace('\r\n', '')
 	rcvdpayload = rp.getlayer("Raw").load.replace('\r\n', '')
+	if mul_start == 1 and rcvdpayload.find("ogin") >= 0:
+		logging.debug("[port no. %d] [SEND_FTP_ACK_BUILD] " % sport + rcvdpayload)
 	ack_p = generate_ftp_ack(rp)				
 	skt.send(ack_p)
 	build_state_machine(ftpmachine, ftpmachine.model.state, sentpayload, rcvdpayload)
@@ -326,17 +331,24 @@ def generate_ftp_model():
 	ftpmachine.add_transition(exit_label, source = '0', dest = '0')
 	return ftpmachine
 
+def get_tcp_seg_len(rp):
+	ip_total_len = rp.getlayer(IP).len
+	ip_header_len = rp.getlayer(IP).ihl * 32 / 8
+	tcp_header_len = rp.getlayer(TCP).dataofs * 32/8
+	tcp_seg_len = ip_total_len - ip_header_len - tcp_header_len
+	return tcp_seg_len
 	
 def generate_ftp_ack(rp):
 	# Generates ack message to FTP Response packet
-	tcp_seg_len = len(rp.getlayer(Raw).load)
+	tcp_seg_len = get_tcp_seg_len(rp)
+	#tcp_seg_len = len(rp.getlayer("TCP"))-len(rp.getlayer("IP").options)-len(rp.getlayer("TCP").options)
 	p = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=rp.ack, ack=rp.seq+tcp_seg_len, flags = "A")
 	#logging.info("[+] [GEN FTP ACK] - PKT GEN OVER.")
 	return p
 
 def generate_tcp_ack(rp): 
 	# Generate ack to the normal tco (ack to the ack)
-	p = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=rp.ack, ack=rp.seq+1, flags = "A")
+	p = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=rp.ack, ack=rp.seq, flags = "A")
 	return p
 
 def generate_ftp_fin_ack(rp):
@@ -344,7 +356,8 @@ def generate_ftp_fin_ack(rp):
 	return p
 
 def generate_ftp_msg(payload, rp) :
-	tcp_seg_len = len(rp.getlayer(Raw).load)
+	tcp_seg_len = get_tcp_seg_len(rp)
+	#tcp_seg_len = len(rp.getlayer("TCP"))-len(rp.getlayer("IP").options)-len(rp.getlayer("TCP").options)
 	p = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=rp.ack, ack=rp.seq+tcp_seg_len, flags = 0x18)/(payload+delimiter)
 	return p
 
@@ -423,6 +436,8 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 		else:
 			mul_transition_info[t_label] = [crnt_state, dst_state, 1] # add transition info
 
+		if mul_start == 1 and rpyld.find("ogin"):
+			logging.debug("[port no. %d] [BUILD_STATE_MACHINE_BEFORE_ADDSTATE] " % sport + rpyld)
 		state_list.add_state(State(str(num_of_states), parent=str(cur_state), spyld=str(send_payload), rpyld=str(rpyld)))
 		print "state added : " + str(num_of_states)
 		if level_dict.get(current_level+1) is None:
@@ -471,32 +486,40 @@ def filter_tcp_ans(ans):
 ftpmachine = generate_ftp_model()
 
 if mode == 'm':
-	rp = handshake_init(dst_ip, dport, sport)
-	#Next Ack no. calculation : last seq + prev. tcp payload len
-	ftp_ack = generate_ftp_ack(rp)
-	send(ftp_ack)
-	
-	for i in range(10) :
-		payload = raw_input("[!] payload? : ")
-		p = generate_ftp_msg(payload, rp)
-		logging.info(p.getlayer("Raw").show())
-		if raw_input("[ ] Send Packet? (y/n) : ") != 'y' :
-			# Disconnect with pretty FIN ANK
-
-			print "[+] Program ends... \n"
-			break
-			
-		ans, unans = sr(p, multi=1, timeout=timeout, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
-		ans = filter_tcp_ans(ans)
+	while True:
+		rp = handshake_init(dst_ip, dport, sport)
+		#Next Ack no. calculation : last seq + prev. tcp payload len
+		ftp_ack = generate_ftp_ack(rp)
+		send(ftp_ack)
 		
-		for sp, rcv in ans:
-			if rcv.haslayer("Raw"):
-				# FTP packet received
-				#logging.info("[+] FTP PACKET :::\n")
-				#logging.info("[+] RESPONSE FTP PAYLOAD : \n", rcv.getlayer("Raw").load) # this is protocol response message
-				rp = rcv
-				ack_p = generate_ftp_ack(rp)
-				send(ack_p, verbose=False)
+		for i in range(100) :
+			payload = raw_input("[!] payload? : ")
+			if payload == "quit":
+				disconnect_ftp(rp)
+				sport = sport + 1
+				break
+			p = generate_ftp_msg(payload, rp)
+			#logging.info(p.getlayer("Raw").show())
+			"""
+			if raw_input("[ ] Send Packet? (y/n) : ") != 'y' :
+				# Disconnect with pretty FIN ANK
+
+				print "[+] Program ends... \n"
+				break
+			"""
+			ans, unans = sr(p, multi=1, timeout=timeout, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
+			ans = filter_tcp_ans(ans)
+			
+			for sp, rcv in ans:
+				if rcv.haslayer("Raw"):
+					# FTP packet received
+					#logging.info("[+] FTP PACKET :::\n")
+					#logging.info("[+] RESPONSE FTP PAYLOAD : \n", rcv.getlayer("Raw").load) # this is protocol response message
+					print str(rcv.getlayer("Raw").load)
+					rp = rcv
+					ack_p = generate_ftp_ack(rp)
+					send(ack_p, verbose=False)
+
 
 elif mode == 'p':
 	# pruning
@@ -508,7 +531,6 @@ elif mode == 'p':
 
 	while True:
 		start_time = time.time()
-
 		print 'send total tokens in level ' + str(current_level)
 
 		level_state_list = level_dict.get(current_level, [])
@@ -536,17 +558,14 @@ elif mode == 'p':
 
 			# --------- Find command with single command  ---------
 			mul_start = 0
-
 			single_cnt = 0
 			for token in token_db:
+				token = str(token)
 				single_cnt = single_cnt + 1
 				if single_cnt == 1001:
 					break
 				if token == "quit":
 					continue
-				sport = sport + 1
-				if sport > 60000:
-					sport = 1000
 
 				#Start with 3WHS
 				rp = handshake_init(dst_ip, dport, sport)
@@ -572,10 +591,13 @@ elif mode == 'p':
 
 				#Initialize current state as 0
 				cs = 0
+
+				sport = sport + 1
+				if sport > 60000:
+					sport = 1000
 				
 			# --------- Find valid message with multiple keywords  ---------
 			mul_start = 1
-			time.sleep(0.5)
 			single_cmds = []
 			multiple_msg_db = []
 
@@ -589,15 +611,16 @@ elif mode == 'p':
 			
 			for cmd in single_cmds:
 				for args in args_db:
-					msg = cmd + ' ' + args[0]
+					args = str(args[0])
+					msg = cmd + ' ' + args
 					multiple_msg_db.append(msg)
+
+
+			time.sleep(2)
 
 			for msg in multiple_msg_db:
 				if msg == "quit":
 					continue
-				sport = sport + 1
-				if sport > 60000:
-					sport = 1000
 					
 				#Start with 3WHS	
 				rp = handshake_init(dst_ip, dport, sport)
@@ -605,11 +628,10 @@ elif mode == 'p':
 				#If handshake finished, the server sends response. Send ack and get the last req packet info.
 				ftp_ack = generate_ftp_ack(rp)
 				skt.send(ftp_ack)
-				#logging.info("[+] [MAIN] AFTER SEND")
 
 				for mv_msg in move_state_msg:
 					handshake_rp = rp
-					logging.info("[+] [port no. %d] (State moving) Parent msg : " % sport + str(mv_msg))
+					#logging.info("[+] [port no. %d] (State moving) Parent msg : " % sport + str(mv_msg))
 					rp = send_receive_ftp(rp, mv_msg)
 
 				# set state
@@ -617,7 +639,7 @@ elif mode == 'p':
 
 				temp_rp = rp
 				# Send multiple message and listen
-				logging.info("[+] [port no. %d] (MM) msg : " % sport + str(msg))
+				#logging.info("[+] [port no. %d] (MM) msg : " % sport + str(msg))
 				rp = send_receive_ftp(rp, msg)
 
 				# Finish TCP connection
@@ -625,6 +647,10 @@ elif mode == 'p':
 
 				#Initialize current state as 0
 				cs = 0
+
+				sport = sport + 1
+				if sport > 60000:
+					sport = 1000
 
 
 		### Pruning ###
@@ -677,9 +703,6 @@ elif mode == 'p':
 			for msg_sent in parent_spyld:
 				if msg_sent == "quit":
 					continue
-				sport = sport + 1
-				if sport > 60000:
-					sport = 1000
 
 				#Start with 3WHS
 				rp = handshake_init(dst_ip, dport, sport)
@@ -709,6 +732,10 @@ elif mode == 'p':
 
 				#Initialize current state as 0
 				cs = 0
+
+				sport = sport + 1
+				if sport > 60000:
+					sport = 1000
 
 				if sport % 1000 == 0 :
 					elapsed_time = time.time() - g_start_time
