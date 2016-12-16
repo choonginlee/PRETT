@@ -46,6 +46,7 @@ mul_start = 0
 new_state = []
 myiface = "enp0s8"
 is_pruning = 0
+is_moving = 0
 
 level_dict = {1 : ['0']}
 cur_state = '0'
@@ -229,7 +230,26 @@ def send_receive_ftp(rp, payload):
 			if pkt.haslayer("Raw"):
 				return send_ftp_ack_build(p, pkt)	
 
-	# More than 3 tcp packets
+	# 1 FTP packet and 2 Retransmission packets
+	elif len(ans) == 3:
+		logging.debug("[!] [port no. %d] Answer length is %d. finding FTP Response." % (sport, len(ans)))
+		for sp, rp in ans:
+			if rp.haslayer("Raw"):
+				last_rp = rp
+				# return the last ftp packet. Scapy bug.
+		if last_rp is not None:
+			return send_ftp_ack_build(sp, last_rp)
+
+		logging.debug("[!] [port no. %d] Answer length is %d. not yet found FTP Response." % (sport, len(ans)))
+		rp = sniff(filter = "tcp", iface = myiface, timeout = timeout, count = 10)
+		for pkt in rp:
+			if pkt.haslayer("Raw"):
+				return send_ftp_ack_build(p, pkt)	
+				
+		# Timeout (Internal server error). Pass to disconnect.
+		return origin_rp
+
+	# More than 4 tcp packets
 	else:
 		last_rp = None
 		logging.debug("[!] [port no. %d] Answer length is %d. finding FTP Response." % (sport, len(ans)))
@@ -245,7 +265,7 @@ def send_receive_ftp(rp, payload):
 		for pkt in rp:
 			if pkt.haslayer("Raw"):
 				return send_ftp_ack_build(p, pkt)	
-
+		
 		# Timeout (Internal server error). Pass to disconnect.
 		return origin_rp
 	
@@ -310,7 +330,7 @@ def generate_ftp_msg(payload, rp) :
 def build_state_machine(sm, crnt_state, spyld, rpyld):
 	# sm : state machine, crnt_state : current state, payload : response packet payload 
 	# Build and fix a state machine based on the response
-	global num_of_states, transition_info, state_list, cur_state, new_state, is_pruning, mul_start, current_level
+	global num_of_states, transition_info, state_list, cur_state, new_state, is_pruning, is_moving, mul_start, current_level
 
 	send_payload = spyld.replace('\r\n', '')
 	command = send_payload.split()[0]
@@ -334,7 +354,7 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	#If not seen before,
 	# - Add a new state
 	# - Add a new transition from current state
-	if is_pruning == 0:
+	if is_pruning == 0 and is_moving == 0:
 		num_of_states = num_of_states + 1
 		dst_state = str(num_of_states)
 
@@ -346,7 +366,7 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	else:
 		t_label = send_payload + " / " + rpyld
 
-	if is_pruning == 0:
+	if is_pruning == 0 and is_moving == 0:
 
 		if mul_start == 0:
 			transition_info[t_label] = [crnt_state, dst_state, 1] # add transition info
@@ -476,9 +496,11 @@ elif mode == 'a' or mode == 'A':
 				skt.send(ftp_ack)
 
 				# Go to the target state
+				is_moving = 1
 				for cmd in move_state_msg:
 					handshake_rp = rp
 					rp = send_receive_ftp(rp, cmd)
+				is_moving = 0
 
 				# set state
 				ftpmachine.set_state(str(cur_state))
@@ -504,16 +526,16 @@ elif mode == 'a' or mode == 'A':
 			for child_state_numb in level_dict.get(current_level+1):
 				child_state = state_list.find_state(child_state_numb)
 				if child_state.parent == cur_state:
-					child_spyld = child_state.spyld
-					single_cmds.append(child_spyld)
+					child_single_cmds = child_state.group
+					if child_single_cmds not in single_cmds:
+						single_cmds.append(child_single_cmds)
 			print "[+] Single Commands are:"
 			print single_cmds
-			
 			# for cmd in single_cmds:
 			# 	for args in args_db:
 			# 		msg = cmd + ' ' + str(args[0])
 			# 		multiple_msg_db.append(msg)
-
+			
 			for msg in single_cmds: # group name
 				for args in args_db: # argument
 					if msg == "quit":
@@ -528,9 +550,11 @@ elif mode == 'a' or mode == 'A':
 					ftp_ack = generate_ftp_ack(rp)
 					skt.send(ftp_ack)
 
+					is_moving = 1
 					for mv_msg in move_state_msg:
 						handshake_rp = rp
 						rp = send_receive_ftp(rp, mv_msg)
+					is_moving = 0
 
 					# set state
 					ftpmachine.set_state(str(cur_state))
@@ -673,7 +697,7 @@ elif mode == 'a' or mode == 'A':
 							continue
 					else: # different group
 						continue
-
+				
 				# I am unique! different from parent and other siblings!
 				if unique_state:
 					valid_states.append([child_state_numb, parent_numb, child_state_numb, child_state.spyld + " / " + child_state.rpyld])
