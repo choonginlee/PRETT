@@ -100,6 +100,12 @@ class StateList:
 				return state
 		return None
 
+	def print_state(self):
+		print "state list length : " + str(len(self.state_list))
+		for state in self.state_list:
+			print state.numb,
+
+
 state_list = StateList([State('0')])
 
 def handshake_init(dst_ip, dport, sport):
@@ -729,41 +735,48 @@ elif mode == 'a' or mode == 'A':
 			# Have your child's sr
 			state_list.find_state(cur_state).child_dict = valid_child_dict
 
+
 		# Step 3
 		# Compare with the other parents and ancesters
 		parent_level = current_level
+
 		while True:
+			to_be_removed_states = []
+			# get all parents in previous level
+			for parent_numb in level_dict[parent_level]:
+				# get valid state's info
+				for self_numb, src_state, dst_state, vs_label in valid_states:
+					# validition
+					target_state = state_list.find_state(self_numb)
+
+					# compare with other parents
+					if parent_numb != target_state.parent:
+						print "compare unique_state " + self_numb + " with ancestor state " + parent_numb
+						parent_state = state_list.find_state(parent_numb)
+						# compare child_dict between prev and current state
+						if compare_ordered_dict(parent_state.sr_dict, target_state.sr_dict) == True: # same state! Add transition to parent_state!
+							print "[+] -> Same as " + parent_state.numb + ". Add transitions to state " + parent_state.numb
+							to_be_removed_states.append(self_numb)
+							ftpmachine.add_transition(vs_label + "\n", source = self_numb, dest = parent_numb)
+						else:
+							print "[-] -> Differnt from parent state " + parent_numb
+							continue
+
+			parent_level = parent_level - 1
+			print "parent level : " + str(parent_level)
 			if parent_level == 0:
 				break
-			else:
-				to_be_removed_states = []
-				# get all parents in previous level
-				for parent_numb in level_dict[parent_level]:
-					# get valid state's info
-					for self_numb, src_state, dst_state, vs_label in valid_states:
-						# validition
-						print "target state : " + self_numb
-						print "parent state : " + parent_numb
-						target_state = state_list.find_state(self_numb)
-						print "target parent : " + target_state.parent
-						# compare with other parents
-						if parent_numb != target_state.parent:
-							print "compare unique_state " + self_numb + " with ancestor state " + parent_numb
-							parent_state = state_list.find_state(parent_numb)
-							# compare child_dict between prev and current state
-							if compare_ordered_dict(parent_state.sr_dict, target_state.sr_dict) == True: # same state! Add transition to parent_state!
-								print "[+] -> Same as " + parent_state.numb + ". Add transitions to state " + parent_state.numb
-								to_be_removed_states.append(self_numb)
-								ftpmachine.add_transition(vs_label + "\n", source = self_numb, dest = parent_numb)
-							else:
-								print "[-] -> Differnt from parent state " + parent_numb
-								continue
+		
+		# remove invalid states
+		for rs in to_be_removed_states:
+			state_list.remove_state(state_list.find_state(rs))
+			
+			for level in range(0, current_level+1):
+				level_state_list = level_dict[level+1]
+				if rs in level_state_list:
+					print "state " + rs + " removed from level_dict[%d]" % (level+1)
+					level_dict[level+1].remove(rs)
 
-				# remove invalid states
-				for rs in to_be_removed_states:
-					state_list.remove_state(state_list.find_state(rs))
-				
-				parent_level = parent_level - 1
 
 		for self_numb, src_state, dst_state, ivs_label in invalid_states:
 			self_state = state_list.find_state(self_numb)
