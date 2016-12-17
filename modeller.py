@@ -75,13 +75,14 @@ class FTPModel(object):
 		self.name = name
 
 class State:
-	def __init__(self, numb, parent=None, spyld=None, rpyld=None, group=None, child_dict=None):
+	def __init__(self, numb, parent=None, spyld=None, rpyld=None, group=None, child_dict=None, sr_dict=None):
 		self.numb = numb
 		self.parent = parent
 		self.spyld = spyld
 		self.rpyld = rpyld
 		self.group = group
 		self.child_dict = child_dict
+		self.sr_dict = sr_dict
 
 class StateList:
 	def __init__(self, state_list=[]):
@@ -582,7 +583,7 @@ elif mode == 'a' or mode == 'A':
 		if states_candidate == []: # there is no valid sub state. last level.
 			break
 
-		valid_states = []	
+		valid_states = []
 		invalid_states = []
 
 		# child_state_numb : every sub state to be pruned (deepest states)
@@ -600,6 +601,8 @@ elif mode == 'a' or mode == 'A':
 				child = state_list.find_state(state)
 				if child.parent == parent_numb:
 					parent_sr_msg_dict[child.spyld] = child.rpyld
+
+			state_list.find_state(parent_numb).sr_dict = parent_sr_msg_dict
 
 			# For each state, store every message to get to the state itself.
 			prune_move_state_msg =[]
@@ -666,6 +669,8 @@ elif mode == 'a' or mode == 'A':
 			# After searching all the parent's s/r
 			# Check below for merging
 
+
+			state_list.find_state(child_state_numb).sr_dict = child_sr_dict
 			# STEP1. Parent
 			# - Compare child dict with parent dict
 			# - If differnt, let it be alive.
@@ -704,6 +709,9 @@ elif mode == 'a' or mode == 'A':
 					state_list.find_state(child_state_numb).child_dict = child_sr_dict
 					print "[+] -> Unique state found!!!"
 
+
+
+		# state validation
 		current_states = level_dict.get(current_level)
 		for cur_state in current_states:
 			# give all the valid childs to each parent
@@ -720,6 +728,42 @@ elif mode == 'a' or mode == 'A':
 			
 			# Have your child's sr
 			state_list.find_state(cur_state).child_dict = valid_child_dict
+
+		# Step 3
+		# Compare with the other parents and ancesters
+		parent_level = current_level
+		while True:
+			if parent_level == 0:
+				break
+			else:
+				to_be_removed_states = []
+				# get all parents in previous level
+				for parent_numb in level_dict[parent_level]:
+					# get valid state's info
+					for self_numb, src_state, dst_state, vs_label in valid_states:
+						# validition
+						print "target state : " + self_numb
+						print "parent state : " + parent_numb
+						target_state = state_list.find_state(self_numb)
+						print "target parent : " + target_state.parent
+						# compare with other parents
+						if parent_numb != target_state.parent:
+							print "compare unique_state " + self_numb + " with ancestor state " + parent_numb
+							parent_state = state_list.find_state(parent_numb)
+							# compare child_dict between prev and current state
+							if compare_ordered_dict(parent_state.sr_dict, target_state.sr_dict) == True: # same state! Add transition to parent_state!
+								print "[+] -> Same as " + parent_state.numb + ". Add transitions to state " + parent_state.numb
+								to_be_removed_states.append(self_numb)
+								ftpmachine.add_transition(vs_label + "\n", source = self_numb, dest = parent_numb)
+							else:
+								print "[-] -> Differnt from parent state " + parent_numb
+								continue
+
+				# remove invalid states
+				for rs in to_be_removed_states:
+					state_list.remove_state(state_list.find_state(rs))
+				
+				parent_level = parent_level - 1
 
 		for self_numb, src_state, dst_state, ivs_label in invalid_states:
 			self_state = state_list.find_state(self_numb)
