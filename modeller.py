@@ -453,8 +453,8 @@ if mode == 'm':
 elif mode == 'a' or mode == 'A':
 	# get all command candidates
 	with open("./tokenfile/total_tokens.txt") as f:
-		#token_db = pickle.load(f)
-		token_db = ['data', 'user', 'pass', 'opts']
+		token_db = pickle.load(f)
+		#token_db = ['data', 'user', 'pass', 'opts']
 
 	# get all argument candidates
 	with open("./args/total_args.txt") as a:
@@ -763,7 +763,7 @@ elif mode == 'a' or mode == 'A':
 		for remove_valid in to_be_removed_states:
 			if remove_valid in valid_states:
 				valid_states.remove(remove_valid)
-		
+
 
 		# remove invalid states
 		for self_numb, src_state, dst_state, ivs_label in invalid_states:
