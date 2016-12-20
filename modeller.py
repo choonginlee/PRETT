@@ -152,12 +152,12 @@ def disconnect_ftp(rp):
 			rp = sniff(filter = "tcp", iface = myiface, timeout = sniff_timeout, count = 1)
 			if len(rp) == 0:
 				# Timeout (Internal server error). No FINACK at all
-				logging.debug("[!] [port no. %d] DISCONNECT :Timeout (Internal server error). No FINACK at all" % sport)
+				logging.warning("[!] [port no. %d] DISCONNECT :Timeout (Internal server error). No FINACK at all" % sport)
 				for sp, rp in ans:
 					if rp.haslayer("TCP"):
 						FIN_ACK = rp # not FINACK
 				# SUCKS!
-				logging.debug("[!] [port no. %d] DISCONNECT :Timeout (Internal server error). No FINACK at all. No answered in sr." % sport)
+				logging.warning("[!] [port no. %d] DISCONNECT :Timeout (Internal server error). No FINACK at all. No answered in sr." % sport)
 				FIN_ACK = temp_rp
 			elif rp[0].getlayer("TCP").flags == 0x11:
 				# FIN_ACK found
@@ -176,6 +176,7 @@ def disconnect_ftp(rp):
 def send_receive_ftp(rp, payload):
 	# SEND Req. -> Get ACK -> GET Rep. -> Send ACK (normal TCP-based protocol)
 	global skt, timeout, sniff_timeout, long_timeout, mul_start
+	received_tcp_list = []
 	origin_rp = rp
 	start_time = time.time()
 
@@ -184,14 +185,15 @@ def send_receive_ftp(rp, payload):
 
 	# Send Req, then get 1. ACK and 2. FTP response
 	ans, unans = skt.sr(p, multi=1, timeout=timeout, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
-	ans = filter_tcp_ans(ans)
+	ans= filter_tcp_ans(ans)
 
 	if len(ans) == 0:
-		logging.debug("[!] [port no. %d] Answer length is 0. Check wireshark" % sport)
+		logging.debug("[!] [port no. %d] Answer length is 0. Listening for 2 packets." % sport)
 		
 		rp = sniff(filter = "tcp", iface = myiface, timeout = long_timeout, count = 2)
 		if len(rp) < 2:
 			# Timeout (Internal server error). Pass to disconnect.
+			logging.warning("[!] [port no. %d] Listened for %d packets in %d sec. Timeout. Check wireshark." % (sport, len(rp), long_timeout))
 			return origin_rp
 		else:
 			# Good 2 packets
@@ -276,7 +278,7 @@ def send_receive_ftp(rp, payload):
 		# Timeout (Internal server error). Pass to disconnect.
 		return origin_rp
 	
-	logging.debug("[!] [port no. %d] Sucks~~! no process in if. %d" % (sport, len(ans)))
+	logging.debug("[!] [port no. %d] Sucks! no process in if. Answer length is %d." % (sport, len(ans)))
 
 def send_ftp_ack_build(sp, rp):
 	global skt, ftpmachine, mul_start
@@ -409,6 +411,8 @@ def filter_tcp_ans(ans):
 	for sr in ans:
 		# TCP layer in sr
 		if sr[1].haslayer("TCP"):
+			# Exclude TCP retransmission packet
+			#if sr
 			result_list.append(sr)
 		else:
 			continue
@@ -449,13 +453,13 @@ if mode == 'm':
 elif mode == 'a' or mode == 'A':
 	# get all command candidates
 	with open("./tokenfile/total_tokens.txt") as f:
-		token_db = pickle.load(f)
+		#token_db = pickle.load(f)
 		token_db = ['data', 'user', 'pass', 'opts']
 
 	# get all argument candidates
 	with open("./args/total_args.txt") as a:
 		args_db = pickle.load(a)
-		args_db = [['anonymous'], ['510123124512'], ['/'], ['127.0.0.1']]
+		#args_db = [['anonymous'], ['510123124512'], ['/'], ['127.0.0.1']]
 	while True:
 		start_time = time.time()
 		print '[+] Send total tokens in level ' + str(current_level)
@@ -489,8 +493,8 @@ elif mode == 'a' or mode == 'A':
 			for token in token_db:
 				token = str(token)
 				single_cnt = single_cnt + 1
-				if single_cnt == 1001:
-					break
+				#if single_cnt == 1001:
+				#	break
 				if token == "quit":
 					continue
 
@@ -596,7 +600,7 @@ elif mode == 'a' or mode == 'A':
 		for child_state_numb in states_candidate:
 			child_state = state_list.find_state(child_state_numb)
 			print '[+] Pruning in ' + str(child_state_numb)
-			logging.info("\n[+] [port no. %d] PRUNING starts in state " % sport + str(child_state_numb) +"\n")
+			logging.info("[+] === [port no. %d] PRUNING starts in state " % sport + str(child_state_numb) + " ===")
 
 			# Get the parent name of the child state
 			parent_numb = child_state.parent
@@ -756,8 +760,8 @@ elif mode == 'a' or mode == 'A':
 						# compare child_dict between prev and current state
 						if compare_ordered_dict(parent_state.sr_dict, target_state.sr_dict) == True: # same state! Add transition to parent_state!
 							print "[+] -> Same as " + parent_state.numb + ". Add transitions to state " + parent_state.numb
-							to_be_removed_states.append(self_numb)
-							ftpmachine.add_transition(vs_label + "\n", source = self_numb, dest = parent_numb)
+							invalid_states.append([self_numb, target_state.parent, parent_numb, target_state.spyld + " / " + target_state.rpyld])
+							ftpmachine.add_transition(vs_label + "\n", source = target_state.parent, dest = parent_numb)
 						else:
 							print "[-] -> Differnt from parent state " + parent_numb
 							continue
