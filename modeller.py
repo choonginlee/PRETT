@@ -721,31 +721,11 @@ elif mode == 'a' or mode == 'A':
 
 
 
-		# state validation
-		current_states = level_dict.get(current_level)
-		for cur_state in current_states:
-			# give all the valid childs to each parent
-			valid_child_dict = OrderedDict()
-			for self_numb, src_state, dst_state, vs_label in valid_states:
-				valid_state = state_list.find_state(self_numb)
-				# is this child yours?
-				if cur_state == valid_state.parent:
-					# Then collect your child's shit
-					valid_child_dict[valid_state.spyld] = valid_state.rpyld
-					print "[+] Valid state : " + str(self_numb) + " in level " + str(current_level+1)
-					ftpmachine.add_states(str(self_numb))
-					ftpmachine.add_transition(vs_label + "\n", source = src_state, dest = dst_state)
-			
-			# Have your child's sr
-			state_list.find_state(cur_state).child_dict = valid_child_dict
-
-
 		# Step 3
 		# Compare with the other parents and ancesters
 		parent_level = current_level
 
 		while True:
-			to_be_removed_states = []
 			# get all parents in previous level
 			for parent_numb in level_dict[parent_level]:
 				# get valid state's info
@@ -770,24 +750,48 @@ elif mode == 'a' or mode == 'A':
 			print "parent level : " + str(parent_level)
 			if parent_level == 0:
 				break
+
+
+		to_be_removed_states = []
+		for invalid in invalid_states:
+			invalid_numb = invalid[0]
+			for seem_to_valid in valid_states:
+				if seem_to_valid[0] == invalid_numb:
+					to_be_removed_states.append(seem_to_valid)
+
+
+		for remove_valid in to_be_removed_states:
+			if remove_valid in valid_states:
+				valid_states.remove(remove_valid)
 		
+
 		# remove invalid states
-		for rs in to_be_removed_states:
-			state_list.remove_state(state_list.find_state(rs))
-			
-			for level in range(0, current_level+1):
-				level_state_list = level_dict[level+1]
-				if rs in level_state_list:
-					print "state " + rs + " removed from level_dict[%d]" % (level+1)
-					level_dict[level+1].remove(rs)
-
-
 		for self_numb, src_state, dst_state, ivs_label in invalid_states:
 			self_state = state_list.find_state(self_numb)
 			ftpmachine.add_transition(ivs_label + "\n", source = src_state, dest = dst_state)
 			print "[+] Invalid state : " + self_numb + " in level " + str(current_level+1)
 			state_list.remove_state(self_state)
 			level_dict[current_level+1].remove(str(self_numb))
+
+
+
+		# state validation
+		current_states = level_dict.get(current_level)
+		for cur_state in current_states:
+			# give all the valid childs to each parent
+			valid_child_dict = OrderedDict()
+			for self_numb, src_state, dst_state, vs_label in valid_states:
+				valid_state = state_list.find_state(self_numb)
+				# is this child yours?
+				if cur_state == valid_state.parent:
+					# Then collect your child's shit
+					valid_child_dict[valid_state.spyld] = valid_state.rpyld
+					print "[+] Valid state : " + str(self_numb) + " in level " + str(current_level+1)
+					ftpmachine.add_states(str(self_numb))
+					ftpmachine.add_transition(vs_label + "\n", source = src_state, dest = dst_state)
+			
+			# Have your child's sr
+			state_list.find_state(cur_state).child_dict = valid_child_dict
 			
 		elapsed_time = time.time() - g_start_time
 		print "[+] Level %d | Port No. %d | " % (current_level, sport), "Time Elapsed :", elapsed_time, "s"
