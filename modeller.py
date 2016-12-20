@@ -239,26 +239,26 @@ def send_receive_ftp(rp, payload):
 			if pkt.haslayer("Raw"):
 				return send_ftp_ack_build(p, pkt)	
 
-	# 1 FTP packet and 2 Retransmission packets
-	elif len(ans) == 3:
-		logging.debug("[!] [port no. %d] Answer length is %d. finding FTP Response." % (sport, len(ans)))
-		for sp, rp in ans:
-			if rp.haslayer("Raw"):
-				last_rp = rp
-				# return the last ftp packet. Scapy bug.
-		if last_rp is not None:
-			return send_ftp_ack_build(sp, last_rp)
+	# # 1 FTP packet and 2 Retransmission packets
+	# elif len(ans) == 3:
+	# 	logging.debug("[!] [port no. %d] Answer length is %d. finding FTP Response." % (sport, len(ans)))
+	# 	for sp, rp in ans:
+	# 		if rp.haslayer("Raw"):
+	# 			last_rp = rp
+	# 			# return the last ftp packet. Scapy bug.
+	# 	if last_rp is not None:
+	# 		return send_ftp_ack_build(sp, last_rp)
 
-		logging.debug("[!] [port no. %d] Answer length is %d. not yet found FTP Response." % (sport, len(ans)))
-		rp = sniff(filter = "tcp", iface = myiface, timeout = timeout, count = 10)
-		for pkt in rp:
-			if pkt.haslayer("Raw"):
-				return send_ftp_ack_build(p, pkt)	
+	# 	logging.debug("[!] [port no. %d] Answer length is %d. not yet found FTP Response." % (sport, len(ans)))
+	# 	rp = sniff(filter = "tcp", iface = myiface, timeout = timeout, count = 10)
+	# 	for pkt in rp:
+	# 		if pkt.haslayer("Raw"):
+	# 			return send_ftp_ack_build(p, pkt)	
 				
-		# Timeout (Internal server error). Pass to disconnect.
-		return origin_rp
+	# 	# Timeout (Internal server error). Pass to disconnect.
+	# 	return origin_rp
 
-	# More than 4 tcp packets
+	# More than 3 tcp packets
 	else:
 		last_rp = None
 		logging.debug("[!] [port no. %d] Answer length is %d. finding FTP Response." % (sport, len(ans)))
@@ -768,7 +768,7 @@ elif mode == 'a' or mode == 'A':
 		# remove invalid states
 		for self_numb, src_state, dst_state, ivs_label in invalid_states:
 			self_state = state_list.find_state(self_numb)
-			ftpmachine.add_transition(ivs_label + "\n", source = src_state, dest = dst_state)
+			# ftpmachine.add_transition(ivs_label + "\n", source = src_state, dest = dst_state)
 			print "[+] Invalid state : " + self_numb + " in level " + str(current_level+1)
 			state_list.remove_state(self_state)
 			level_dict[current_level+1].remove(str(self_numb))

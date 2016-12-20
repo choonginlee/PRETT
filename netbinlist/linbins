@@ -18,10 +18,9 @@ curl
 dig
 dirmngr
 dirmngr-client
-ftp -> /etc/alternatives/ftp
+ftp
 fwupdate
 fwupdmgr
-git
 l2ping
 l2test
 lpstat
@@ -32,29 +31,22 @@ nmtui
 nslookup
 obexctl
 openssl
-pftp -> /etc/alternatives/pftp
+pftp
 rctest
 rfcomm
 scp
 sdptool
 sftp
 ssh
-ssh-add
 ssh-agent
-ssh-argv0
-ssh-copy-id
-ssh-keygen
-ssh-keyscan
-telnet -> /etc/alternatives/telnet
+telnet
 telnet.netkit
 tracepath
 tracepath6
-traceroute6 -> /etc/alternatives/traceroute6
-traceroute6.iputils
+traceroute6
 vstp
 webbrowser-app
 wget
-wireshark
 xdg-email
 xhost
 
