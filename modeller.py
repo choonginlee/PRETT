@@ -407,7 +407,7 @@ def compare_ftp_packet(pkt1, pkt2):
 	# Compare two packets by looking at the FTP load
 	p1 = pkt1.getlayer("TCP")
 	p2 = pkt2.getlayer("TCP")
-	if pkt1.haslayer("Raw") and pkt2.haslayer{"Raw"}:
+	if pkt1.haslayer("Raw") and pkt2.haslayer("Raw"):
 		if p1.seq == p2.seq and p1.ack == p2.ack:
 			return True
 		else:
@@ -810,7 +810,8 @@ elif mode == 'a' or mode == 'A':
 		# remove invalid states
 		for self_numb, src_state, dst_state, ivs_label in invalid_states:
 			self_state = state_list.find_state(self_numb)
-			# ftpmachine.add_transition(ivs_label + "\n", source = src_state, dest = dst_state)
+			if self_state is not None:
+				ftpmachine.add_transition(ivs_label + "\n", source = src_state, dest = dst_state)
 			print "[+] Invalid state : " + self_numb + " in level " + str(current_level+1)
 			state_list.remove_state(self_state)
 			level_dict[current_level+1].remove(str(self_numb))
