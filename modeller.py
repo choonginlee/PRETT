@@ -190,19 +190,19 @@ def send_receive_ftp(rp, payload):
 	if len(ans) == 0:
 		logging.debug("[!] [port no. %d] Answer length is 0. Listening for 2 packets." % sport)
 		
-		rp = sniff(filter = "tcp", iface = myiface, timeout = long_timeout, count = 2)
+		rp = sniff(filter = "tcp", iface = myiface, timeout = 5, count = 3)
 		rp, prev_ftp_packet = filter_tcp_rp(rp, prev_ftp_packet)
 		if len(rp) < 2:
 			# Timeout (Internal server error). Pass to disconnect.
 			logging.warning("[!] [port no. %d] Listened for %d packets in %d sec. Timeout. Check wireshark." % (sport, len(rp), long_timeout))
-			return origin_rp
-		else:
-			# Good 2 packets
-			for pkt in rp:
-				if pkt.haslayer("Raw"):
-					return send_ftp_ack_build(p, pkt)
+		# Good 2 packets expected.
+		for pkt in rp:
+			origin_rp = pkt
+			if pkt.haslayer("Raw"):
+				return send_ftp_ack_build(p, pkt)
 
 		logging.debug("[!] [port no. %d] No FTP packet in two sniffed packets" % sport)
+		return origin_rp
 					
 	elif len(ans) == 1:
 		logging.debug("[ ] [port no. %d] Answer length is 1." % sport)
@@ -225,7 +225,7 @@ def send_receive_ftp(rp, payload):
 		# No packet after ACK
 		else:
 			logging.debug("[+] [port no. %d] Waited for 15 seconds... Timeout!" % sport)
-			return origin_rp
+			return ans[0][1]
 
 	# Got ACK and FTP response
 	elif len(ans) == 2:
@@ -495,8 +495,8 @@ if mode == 'm':
 elif mode == 'a' or mode == 'A':
 	# get all command candidates
 	with open("./tokenfile/total_tokens.txt") as f:
-		token_db = pickle.load(f)
-		#token_db = ['data', 'user', 'pass', 'opts']
+		# token_db = pickle.load(f)
+		token_db = ['data', 'user', 'pass', 'opts']
 
 	# get all argument candidates
 	with open("./args/total_args.txt") as a:
@@ -767,6 +767,7 @@ elif mode == 'a' or mode == 'A':
 		# Compare with the other parents and ancesters
 		parent_level = current_level
 
+		to_be_removed_states = []
 		while True:
 			# get all parents in previous level
 			for parent_numb in level_dict[parent_level]:
@@ -782,8 +783,9 @@ elif mode == 'a' or mode == 'A':
 						# compare child_dict between prev and current state
 						if compare_ordered_dict(parent_state.sr_dict, target_state.sr_dict) == True: # same state! Add transition to parent_state!
 							print "[+] -> Same as " + parent_state.numb + ". Add transitions to state " + parent_state.numb
-							invalid_states.append([self_numb, target_state.parent, parent_numb, target_state.spyld + " / " + target_state.rpyld])
-							ftpmachine.add_transition(vs_label + "\n", source = target_state.parent, dest = parent_numb)
+							to_be_removed_states.append([self_numb, src_state, dst_state, vs_label])
+							# ftpmachine.add_transition(vs_label + "\n", source = target_state.parent, dest = parent_numb)
+							invalid_states.append([self_numb, target_state.parent, parent_numb, vs_label + "\n"])
 						else:
 							print "[-] -> Differnt from parent state " + parent_numb
 							continue
@@ -794,29 +796,17 @@ elif mode == 'a' or mode == 'A':
 				break
 
 
-		to_be_removed_states = []
-		for invalid in invalid_states:
-			invalid_numb = invalid[0]
-			for seem_to_valid in valid_states:
-				if seem_to_valid[0] == invalid_numb:
-					to_be_removed_states.append(seem_to_valid)
+		# to_be_removed_states = []
+		# for invalid in invalid_states:
+		# 	invalid_numb = invalid[0]
+		# 	for seem_to_valid in valid_states:
+		# 		if seem_to_valid[0] == invalid_numb:
+		# 			to_be_removed_states.append(seem_to_valid)
 
-
+		to_be_removed_valid_states = []
 		for remove_valid in to_be_removed_states:
 			if remove_valid in valid_states:
 				valid_states.remove(remove_valid)
-
-
-		# remove invalid states
-		for self_numb, src_state, dst_state, ivs_label in invalid_states:
-			self_state = state_list.find_state(self_numb)
-			if self_state is not None:
-				ftpmachine.add_transition(ivs_label + "\n", source = src_state, dest = dst_state)
-			print "[+] Invalid state : " + self_numb + " in level " + str(current_level+1)
-			state_list.remove_state(self_state)
-			level_dict[current_level+1].remove(str(self_numb))
-
-
 
 		# state validation
 		current_states = level_dict.get(current_level)
@@ -835,6 +825,15 @@ elif mode == 'a' or mode == 'A':
 			
 			# Have your child's sr
 			state_list.find_state(cur_state).child_dict = valid_child_dict
+			
+		# remove invalid states
+		for self_numb, src_state, dst_state, ivs_label in invalid_states:
+			self_state = state_list.find_state(self_numb)
+			# if self_state is not None:
+			ftpmachine.add_transition(ivs_label + "\n", source = src_state, dest = dst_state)
+			print "[+] Invalid state : " + self_numb + " in level " + str(current_level+1)
+			state_list.remove_state(self_state)
+			level_dict[current_level+1].remove(str(self_numb))
 			
 		elapsed_time = time.time() - g_start_time
 		print "[+] Level %d | Port No. %d | " % (current_level, sport), "Time Elapsed :", elapsed_time, "s"
