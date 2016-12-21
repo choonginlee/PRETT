@@ -428,7 +428,7 @@ def filter_tcp_ans(ans, prev_ftp_resp):
 			# Exclude TCP retransmission packet
 			# if the FTP packet received is previously seen, filter out.
 			if prev_ftp_resp is not None and compare_ftp_packet(sr[1], prev_ftp_resp) is True:
-				print "[!] Retransmission found in port no. %d. Skip this packet..." % sport
+				#print "[!] Retransmission found in port no. %d. Skip this packet..." % sport
 				continue
 			else:
 				result_list.append(sr)
@@ -785,7 +785,7 @@ elif mode == 'a' or mode == 'A':
 							print "[+] -> Same as " + parent_state.numb + ". Add transitions to state " + parent_state.numb
 							to_be_removed_states.append([self_numb, src_state, dst_state, vs_label])
 							# ftpmachine.add_transition(vs_label + "\n", source = target_state.parent, dest = parent_numb)
-							invalid_states.append([self_numb, target_state.parent, parent_numb, vs_label + "\n"])
+							invalid_states.append([self_numb, target_state.parent, parent_numb, vs_label])
 						else:
 							print "[-] -> Differnt from parent state " + parent_numb
 							continue
@@ -829,11 +829,18 @@ elif mode == 'a' or mode == 'A':
 		# remove invalid states
 		for self_numb, src_state, dst_state, ivs_label in invalid_states:
 			self_state = state_list.find_state(self_numb)
-			# if self_state is not None:
-			ftpmachine.add_transition(ivs_label + "\n", source = src_state, dest = dst_state)
+			if self_state is not None:
+				try:
+					state_list.remove_state(self_state)
+					level_dict[current_level+1].remove(str(self_numb))
+				except:
+					print "[+] remove invalid state error : state " + str(self_numb)
+			try:
+				ftpmachine.add_transition(ivs_label + "\n", source = src_state, dest = dst_state)
+			except:
+				print "[+] add transition error : state " +  str(self_numb)
+		
 			print "[+] Invalid state : " + self_numb + " in level " + str(current_level+1)
-			state_list.remove_state(self_state)
-			level_dict[current_level+1].remove(str(self_numb))
 			
 		elapsed_time = time.time() - g_start_time
 		print "[+] Level %d | Port No. %d | " % (current_level, sport), "Time Elapsed :", elapsed_time, "s"
