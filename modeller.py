@@ -128,7 +128,7 @@ def disconnect_ftp(rp):
 	p = generate_ftp_msg("quit", rp)
 	# Listen FIN-ACK
 	ans, unans = skt.sr(p, multi=1, timeout=timeout*5, verbose=False) # SEND -> GET RESPONSE (normal case) -> GET FINACK
-	ans = filter_tcp_ans(ans)
+	ans, x = filter_tcp_ans(ans, None)
 
 	FIN_ACK = None
 
@@ -176,7 +176,7 @@ def disconnect_ftp(rp):
 def send_receive_ftp(rp, payload):
 	# SEND Req. -> Get ACK -> GET Rep. -> Send ACK (normal TCP-based protocol)
 	global skt, timeout, sniff_timeout, long_timeout, mul_start
-	received_tcp_list = []
+	prev_ftp_packet = None
 	origin_rp = rp
 	start_time = time.time()
 
@@ -185,12 +185,13 @@ def send_receive_ftp(rp, payload):
 
 	# Send Req, then get 1. ACK and 2. FTP response
 	ans, unans = skt.sr(p, multi=1, timeout=timeout, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
-	ans= filter_tcp_ans(ans)
+	ans, prev_ftp_packet = filter_tcp_ans(ans, prev_ftp_packet)
 
 	if len(ans) == 0:
 		logging.debug("[!] [port no. %d] Answer length is 0. Listening for 2 packets." % sport)
 		
 		rp = sniff(filter = "tcp", iface = myiface, timeout = long_timeout, count = 2)
+		rp, prev_ftp_packet = filter_tcp_rp(rp, prev_ftp_packet)
 		if len(rp) < 2:
 			# Timeout (Internal server error). Pass to disconnect.
 			logging.warning("[!] [port no. %d] Listened for %d packets in %d sec. Timeout. Check wireshark." % (sport, len(rp), long_timeout))
@@ -213,6 +214,7 @@ def send_receive_ftp(rp, payload):
 
 		# Maybe waiting for the FTP response
 		rp = sniff(filter = "tcp", iface = myiface, timeout = long_timeout, count = 1)
+		rp, prev_ftp_packet = filter_tcp_rp(rp, prev_ftp_packet)
 
 		# FTP response obtained (Good)
 		# ACK -> FTP response (Auth)
@@ -271,6 +273,7 @@ def send_receive_ftp(rp, payload):
 
 		logging.debug("[!] [port no. %d] Answer length is %d. not yet found FTP Response." % (sport, len(ans)))
 		rp = sniff(filter = "tcp", iface = myiface, timeout = timeout, count = 10)
+		rp, prev_ftp_packet = filter_tcp_rp(rp, prev_ftp_packet)
 		for pkt in rp:
 			if pkt.haslayer("Raw"):
 				return send_ftp_ack_build(p, pkt)	
@@ -279,6 +282,7 @@ def send_receive_ftp(rp, payload):
 		return origin_rp
 	
 	logging.debug("[!] [port no. %d] Sucks! no process in if. Answer length is %d." % (sport, len(ans)))
+	return origin_rp
 
 def send_ftp_ack_build(sp, rp):
 	global skt, ftpmachine, mul_start
@@ -401,23 +405,61 @@ def compare_ordered_dict(dict1, dict2):
 
 def compare_ftp_packet(pkt1, pkt2):
 	# Compare two packets by looking at the FTP load
-	if pkt1.getlayer("TCP").seq == pkt2.getlayer("TCP").seq:
-		return True
+	p1 = pkt1.getlayer("TCP")
+	p2 = pkt2.getlayer("TCP")
+	if pkt1.haslayer("Raw") and pkt2.haslayer{"Raw"}:
+		if p1.seq == p2.seq and p1.ack == p2.ack:
+			return True
+		else:
+			return False
 	else:
 		return False
 
-def filter_tcp_ans(ans):
+def filter_tcp_ans(ans, prev_ftp_resp):
 	result_list = []
 	for sr in ans:
 		# TCP layer in sr
 		if sr[1].haslayer("TCP"):
+			# If first FTP response found, store and go to the next packet.
+			if prev_ftp_resp is None and sr[1].haslayer("Raw"):
+				prev_ftp_resp = sr[1]
+				result_list.append(sr)
+				continue
 			# Exclude TCP retransmission packet
-			#if sr
-			result_list.append(sr)
+			# if the FTP packet received is previously seen, filter out.
+			if prev_ftp_resp is not None and compare_ftp_packet(sr[1], prev_ftp_resp) is True:
+				print "[!] Retransmission found in port no. %d. Skip this packet..." % sport
+				continue
+			else:
+				result_list.append(sr)
 		else:
 			continue
 
-	return result_list
+	new_ftp_resp = prev_ftp_resp
+	return result_list, new_ftp_resp
+
+def filter_tcp_rp(rp, prev_ftp_resp):
+	result_list = []
+	for p in rp:
+		# TCP layer in sr
+		if p.haslayer("TCP"):
+			# If first FTP response found, store and go to the next packet.
+			if prev_ftp_resp is None and p.haslayer("Raw"):
+				prev_ftp_resp = p
+				result_list.append(p)
+				continue
+			# Exclude TCP retransmission packet
+			# if the FTP packet received is previously seen, filter out.
+			if prev_ftp_resp is not None and compare_ftp_packet(p, prev_ftp_resp) is True:
+				print "[!] Retransmission found in port no. %d. Skip this packet..." % sport
+				continue
+			else:
+				result_list.append(p)
+		else:
+			continue
+
+	new_ftp_resp = prev_ftp_resp
+	return result_list, new_ftp_resp
 
 #################################################
 ################ MAIN PART #####################
@@ -440,7 +482,7 @@ if mode == 'm':
 				break
 			p = generate_ftp_msg(payload, rp)
 			ans, unans = sr(p, multi=1, timeout=timeout, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
-			ans = filter_tcp_ans(ans)
+			#ans = filter_tcp_ans(ans)
 			
 			for sp, rcv in ans:
 				if rcv.haslayer("Raw"):
