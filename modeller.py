@@ -223,9 +223,25 @@ def process_ftp_response(ans, p, origin_rp):
 			last_rp = pkt
 
 	if last_rp is not None:
-		return send_ftp_ack_build(p, last_rp)	
-	
+		return send_ftp_ack_build(p, last_rp)
+
 	# No FTP respone in short time!
+	logging.debug("[!] [port no. %d] Answer length is %d. not yet found FTP Response in short time." % (sport, len(ans)))
+	# Listen for 1 sec.
+	rp = sniff(filter = "tcp", iface = myiface, timeout = 1)
+	rp, prev_ftp_packet = filter_tcp_rp(rp, prev_ftp_packet)
+
+	# FTP response obtained (Good)
+	# ACK -> FTP response (Auth)
+	if len(rp) > 0:
+		for pkt in rp:
+			if pkt.haslayer("Raw") and origin_rp.seq != pkt.seq:
+				last_rp = pkt
+
+		if last_rp is not None:
+			return send_ftp_ack_build(p, last_rp)	
+	
+	# Listen 5 sec again!
 	logging.debug("[!] [port no. %d] Answer length is %d. not yet found FTP Response in short time." % (sport, len(ans)))
 	rp = sniff(filter = "tcp", iface = myiface, timeout = sniff_timeout)
 	rp, prev_ftp_packet = filter_tcp_rp(rp, prev_ftp_packet)
@@ -450,8 +466,8 @@ if mode == 'm':
 elif mode == 'a' or mode == 'A':
 	# get all command candidates
 	with open("./tokenfile/total_tokens.txt") as f:
-		# token_db = pickle.load(f)
-		token_db = ['data', 'user', 'pass', 'opts']
+		token_db = pickle.load(f)
+		#token_db = ['data', 'user', 'pass', 'opts']
 
 	# get all argument candidates
 	with open("./args/total_args.txt") as a:
