@@ -434,13 +434,9 @@ if mode == 'm':
 			ans, unans = sr(p, multi=1, timeout=timeout, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
 			#ans = filter_tcp_ans(ans)
 			
-			for sp, rcv in ans:
-				if rcv.haslayer("Raw"):
-					# FTP packet received
-					print str(rcv.getlayer("Raw").load)
-					rp = rcv
-					ack_p = generate_ftp_ack(rp)
-					send(ack_p, verbose=False)
+			rp = process_ftp_response(ans, p, rp)
+			disconnect_ftp(rp)
+
 
 elif mode == 'a' or mode == 'A':
 	# get all command candidates
