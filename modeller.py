@@ -450,8 +450,8 @@ if mode == 'm':
 elif mode == 'a' or mode == 'A':
 	# get all command candidates
 	with open("./tokenfile/total_tokens.txt") as f:
-		token_db = pickle.load(f)
-		#token_db = ['data', 'user', 'pass', 'opts']
+		# token_db = pickle.load(f)
+		token_db = ['data', 'user', 'pass', 'opts']
 
 	# get all argument candidates
 	with open("./args/total_args.txt") as a:
@@ -725,7 +725,6 @@ elif mode == 'a' or mode == 'A':
 						currently_unique = True
 
 					while True:
-						
 						if target_level == current_level + 1:
 							for valid_state_numb, src_state, dst_state, vs_payload in valid_states:
 								first_cousin = state_list.find_state(valid_state_numb)
@@ -744,6 +743,9 @@ elif mode == 'a' or mode == 'A':
 								else:
 									currently_unique = True
 									continue
+							
+							if len(valid_states) == 0:
+								currently_unique = True
 
 						else:
 							# get all parents in previous level
