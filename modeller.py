@@ -128,7 +128,7 @@ def disconnect_ftp(rp):
 	p = generate_ftp_msg("quit", rp)
 	# Listen FIN-ACK
 	ans, unans = skt.sr(p, multi=1, timeout=timeout*5, verbose=False) # SEND -> GET RESPONSE (normal case) -> GET FINACK
-	ans, x = filter_tcp_ans(ans, None)
+	#ans, x = filter_tcp_ans(ans, None)
 
 	FIN_ACK = None
 
@@ -139,10 +139,11 @@ def disconnect_ftp(rp):
 
 	# Second barrier
 	if FIN_ACK is None:
-		rp = sniff(filter = "tcp", iface = myiface, timeout = timeout*5, count = 10)
+		rp = sniff(filter = "tcp", iface = myiface, timeout = timeout*20, count = 10)
 		for pkt in rp:
 			if pkt.haslayer("TCP"):
-				FIN_ACK = pkt 
+				if pkt.getlayer("TCP").flags == 0x11:
+					FIN_ACK = pkt 
 
 	# Third barrier, Timeout checker
 	while True:
@@ -428,7 +429,7 @@ def filter_tcp_ans(ans, prev_ftp_resp):
 			# Exclude TCP retransmission packet
 			# if the FTP packet received is previously seen, filter out.
 			if prev_ftp_resp is not None and compare_ftp_packet(sr[1], prev_ftp_resp) is True:
-				print "[!] Retransmission found in port no. %d. Skip this packet..." % sport
+				#print "[!] Retransmission found in port no. %d. Skip this packet..." % sport
 				continue
 			else:
 				result_list.append(sr)
@@ -495,8 +496,8 @@ if mode == 'm':
 elif mode == 'a' or mode == 'A':
 	# get all command candidates
 	with open("./tokenfile/total_tokens.txt") as f:
-		# token_db = pickle.load(f)
-		token_db = ['data', 'user', 'pass', 'opts']
+		token_db = pickle.load(f)
+		#token_db = ['data', 'user', 'pass', 'opts']
 
 	# get all argument candidates
 	with open("./args/total_args.txt") as a:
