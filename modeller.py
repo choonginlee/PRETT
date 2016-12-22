@@ -128,7 +128,7 @@ def disconnect_ftp(rp):
 	p = generate_ftp_msg("quit", rp)
 	# Listen FIN-ACK
 	ans, unans = skt.sr(p, multi=1, timeout=timeout*5, verbose=False) # SEND -> GET RESPONSE (normal case) -> GET FINACK
-	ans, x = filter_tcp_ans(ans, None)
+	#ans, x = filter_tcp_ans(ans, None)
 
 	FIN_ACK = None
 
@@ -139,10 +139,11 @@ def disconnect_ftp(rp):
 
 	# Second barrier
 	if FIN_ACK is None:
-		rp = sniff(filter = "tcp", iface = myiface, timeout = timeout*5, count = 10)
+		rp = sniff(filter = "tcp", iface = myiface, timeout = timeout*20, count = 10)
 		for pkt in rp:
 			if pkt.haslayer("TCP"):
-				FIN_ACK = pkt 
+				if pkt.getlayer("TCP").flags == 0x11:
+					FIN_ACK = pkt 
 
 	# Third barrier, Timeout checker
 	while True:
@@ -178,8 +179,6 @@ def send_receive_ftp(rp, payload):
 	global skt, timeout, sniff_timeout, long_timeout, mul_start, myiface, sport
 	prev_ftp_packet = None
 	origin_rp = rp
-	last_rp = None
-	start_time = time.time()
 	
 	# Generate message from tokens
 	p = generate_ftp_msg(payload, rp)
@@ -193,12 +192,15 @@ def send_receive_ftp(rp, payload):
 	return origin_rp
 
 def send_ftp_ack_build(sp, rp):
-	global skt, ftpmachine, mul_start
+	global skt, ftpmachine, mul_start, mode
 	sentpayload = sp.getlayer("Raw").load.replace('\r\n', '')
 	rcvdpayload = rp.getlayer("Raw").load.replace('\r\n', '')
 	ack_p = generate_ftp_ack(rp)				
 	skt.send(ack_p)
-	build_state_machine(ftpmachine, ftpmachine.model.state, sentpayload, rcvdpayload)
+	if mode == 'm' :
+		print rcvdpayload
+	else :
+		build_state_machine(ftpmachine, ftpmachine.model.state, sentpayload, rcvdpayload)
 	return rp
 
 def process_ftp_response(ans, p, origin_rp):
@@ -424,6 +426,7 @@ if mode == 'm':
 		#Next Ack no. calculation : last seq + prev. tcp payload len
 		ftp_ack = generate_ftp_ack(rp)
 		send(ftp_ack)
+		print "[ ] Enter message. If you want to stop, type \"quit\""
 		
 		for i in range(100) :
 			payload = raw_input("[!] payload? : ")
@@ -435,19 +438,20 @@ if mode == 'm':
 			ans, unans = sr(p, multi=1, timeout=timeout, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
 			#ans = filter_tcp_ans(ans)
 			
-			for sp, rcv in ans:
-				if rcv.haslayer("Raw"):
-					# FTP packet received
-					print str(rcv.getlayer("Raw").load)
-					rp = rcv
-					ack_p = generate_ftp_ack(rp)
-					send(ack_p, verbose=False)
+			rp = process_ftp_response(ans, p, rp)
+
+		isquit = raw_input("[!] Are you sure to quit the program? (y/n)")
+		if isquit == "y":
+			print "Goodbye..."
+			break
+		else :
+			print "Start from the beginning..."
 
 elif mode == 'a' or mode == 'A':
 	# get all command candidates
 	with open("./tokenfile/total_tokens.txt") as f:
-		# token_db = pickle.load(f)
-		token_db = ['data', 'user', 'pass', 'opts']
+		token_db = pickle.load(f)
+		#token_db = ['data', 'user', 'pass', 'opts']
 
 	# get all argument candidates
 	with open("./args/total_args.txt") as a:
