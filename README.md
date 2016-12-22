@@ -32,6 +32,8 @@ ptmsg is a tool that automatically infering network protocol models from binary 
 6. You will see the requests automatically generated and responses of them.
 
 ! For the better performance, disable PAM in vsftpd.
-(Ubuntu) in /etc/pam.d/vsftpd,
-add the line
-SEC_PAM_BYPASS=Y
+(Ubuntu)
+- in /etc/pam.d/vsftpd, add the line SEC_PAM_BYPASS=Y
+- in /etc/pam.d/vsftpd, make comments to all the content
+- in /etc/vsftpd.conf, make comment in pam_service_name=vsftpd
+then reboot!
