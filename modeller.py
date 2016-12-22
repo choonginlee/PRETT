@@ -176,9 +176,10 @@ def disconnect_ftp(rp):
 		
 def send_receive_ftp(rp, payload):
 	# SEND Req. -> Get ACK -> GET Rep. -> Send ACK (normal TCP-based protocol)
-	global skt, timeout, sniff_timeout, long_timeout, mul_start
+	global skt, timeout, sniff_timeout, long_timeout, mul_start, myiface, sport
 	prev_ftp_packet = None
 	origin_rp = rp
+	last_rp = None
 	start_time = time.time()
 
 	# Generate message from tokens
@@ -192,26 +193,22 @@ def send_receive_ftp(rp, payload):
 		logging.debug("[!] [port no. %d] Answer length is 0. Listening for 2 packets." % sport)
 		
 		rp = sniff(filter = "tcp", iface = myiface, timeout = 5, count = 3)
-		rp, prev_ftp_packet = filter_tcp_rp(rp, prev_ftp_packet)
 		if len(rp) < 2:
 			# Timeout (Internal server error). Pass to disconnect.
 			logging.warning("[!] [port no. %d] Listened for %d packets in %d sec. Timeout. Check wireshark." % (sport, len(rp), long_timeout))
 		# Good 2 packets expected.
-		for pkt in rp:
-			origin_rp = pkt
-			if pkt.haslayer("Raw"):
-				return send_ftp_ack_build(p, pkt)
 
-		logging.debug("[!] [port no. %d] No FTP packet in two sniffed packets" % sport)
-		return origin_rp
-					
+		return process_ftp_response_rp(rp, p, origin_rp)
+
 	elif len(ans) == 1:
 		logging.debug("[ ] [port no. %d] Answer length is 1." % sport)
 
 		# FTP reponse -> ACK (Strange, but normal)
 		for sp, rp in ans:
-			if rp.haslayer("Raw"):
-				return send_ftp_ack_build(sp, rp)
+			if rp.haslayer("Raw") and origin_rp.seq != rp.seq:
+				last_rp = rp
+		if last_rp is not None:
+			return send_ftp_ack_build(p, last_rp)
 
 		# Maybe waiting for the FTP response
 		rp = sniff(filter = "tcp", iface = myiface, timeout = long_timeout, count = 1)
@@ -219,70 +216,22 @@ def send_receive_ftp(rp, payload):
 
 		# FTP response obtained (Good)
 		# ACK -> FTP response (Auth)
-		if len(rp) > 0 and rp[0].haslayer("Raw") :
+		if len(rp) > 0 and rp[0].haslayer("Raw") and origin_rp.seq != rp.seq :
 			# It is normal FTP.
 			return send_ftp_ack_build(p, rp[0])
 
 		# No packet after ACK
 		else:
 			logging.debug("[+] [port no. %d] Waited for 15 seconds... Timeout!" % sport)
+			# Manually build
+			build_state_machine(ftpmachine, ftpmachine.model.state, p.getlayer("Raw"),load.replace('\r\n', ''), "Timeout")
+			# Poceed with the first response packet
 			return ans[0][1]
 
-	# Got ACK and FTP response
-	elif len(ans) == 2:
-		logging.debug("[ ] [port no. %d] Answer length is 2. finding FTP Response." % sport)
-		for sp, rp in ans:
-			if rp.haslayer("Raw"):
-				return send_ftp_ack_build(sp, rp)
-
-		# Strange packet is in
-		logging.debug("[!] [port no. %d] Answer length is 2. not yet found FTP Response." % sport)
-		rp = sniff(filter = "tcp", iface = myiface, timeout = timeout, count = 10)
-		for pkt in rp:
-			if pkt.haslayer("Raw"):
-				return send_ftp_ack_build(p, pkt)	
-
-	# # 1 FTP packet and 2 Retransmission packets
-	# elif len(ans) == 3:
-	# 	logging.debug("[!] [port no. %d] Answer length is %d. finding FTP Response." % (sport, len(ans)))
-	# 	for sp, rp in ans:
-	# 		if rp.haslayer("Raw"):
-	# 			last_rp = rp
-	# 			# return the last ftp packet. Scapy bug.
-	# 	if last_rp is not None:
-	# 		return send_ftp_ack_build(sp, last_rp)
-
-	# 	logging.debug("[!] [port no. %d] Answer length is %d. not yet found FTP Response." % (sport, len(ans)))
-	# 	rp = sniff(filter = "tcp", iface = myiface, timeout = timeout, count = 10)
-	# 	for pkt in rp:
-	# 		if pkt.haslayer("Raw"):
-	# 			return send_ftp_ack_build(p, pkt)	
-				
-	# 	# Timeout (Internal server error). Pass to disconnect.
-	# 	return origin_rp
-
-	# More than 3 tcp packets
 	else:
-		last_rp = None
-		logging.debug("[!] [port no. %d] Answer length is %d. finding FTP Response." % (sport, len(ans)))
-		for sp, rp in ans:
-			if rp.haslayer("Raw"):
-				last_rp = rp
-				# return the last ftp packet. Scapy bug.
-		if last_rp is not None:
-			return send_ftp_ack_build(sp, last_rp)
+		return process_ftp_response_ans(ans, p, origin_rp)
 
-		logging.debug("[!] [port no. %d] Answer length is %d. not yet found FTP Response." % (sport, len(ans)))
-		rp = sniff(filter = "tcp", iface = myiface, timeout = timeout, count = 10)
-		rp, prev_ftp_packet = filter_tcp_rp(rp, prev_ftp_packet)
-		for pkt in rp:
-			if pkt.haslayer("Raw"):
-				return send_ftp_ack_build(p, pkt)	
-		
-		# Timeout (Internal server error). Pass to disconnect.
-		return origin_rp
-	
-	logging.debug("[!] [port no. %d] Sucks! no process in if. Answer length is %d." % (sport, len(ans)))
+	logging.debug("[!] [port no. %d] Sucks! What can we do? no process in if. Answer length is %d." % (sport, len(ans)))
 	return origin_rp
 
 def send_ftp_ack_build(sp, rp):
@@ -293,6 +242,48 @@ def send_ftp_ack_build(sp, rp):
 	skt.send(ack_p)
 	build_state_machine(ftpmachine, ftpmachine.model.state, sentpayload, rcvdpayload)
 	return rp
+
+def process_ftp_response_ans(ans, p, origin_rp):
+	global skt, timeout, sniff_timeout, long_timeout, mul_start, myiface, sport
+	logging.debug("[!] [port no. %d] PROCESSFTPRESPONSE_ANS Answer length is %d. finding FTP Response." % (sport, len(ans)))
+	for sp, rp in ans:
+		if rp.haslayer("Raw") and origin_rp.seq != rp.seq:
+			last_rp = rp
+			# return the last ftp packet. Scapy bug.
+	if last_rp is not None:
+		return send_ftp_ack_build(p, last_rp)
+
+	# Second barrier s - r ftp
+	logging.debug("[!] [port no. %d] Answer length is %d. not yet found FTP Response." % (sport, len(ans)))
+	rp = sniff(filter = "tcp", iface = myiface, timeout = timeout, count = 10)
+	rp, prev_ftp_packet = filter_tcp_rp(rp, prev_ftp_packet)
+	for pkt in rp:
+		if pkt.haslayer("Raw") and origin_rp.seq != pkt.seq:
+			last_rp = pkt
+
+	if last_rp is not None:
+		return send_ftp_ack_build(p, last_rp)	
+
+def process_ftp_response_rp(rp, p, origin_rp):
+	global skt, timeout, sniff_timeout, long_timeout, mul_start, myiface, sport
+	logging.debug("[!] [port no. %d] PROCESSFTPRESPONSE_RP Answer length is %d. finding FTP Response." % (sport, len(rp)))
+	for pkt in rp:
+		if pkt.haslayer("Raw") and origin_rp.seq != pkt.seq:
+			last_rp = pkt
+			# return the last ftp packet. Scapy bug.
+	if last_rp is not None:
+		return send_ftp_ack_build(p, last_rp)
+
+	# Second barrier s - r ftp
+	logging.debug("[!] [port no. %d] Answer length is %d. not yet found FTP Response." % (sport, len(rp)))
+	rp = sniff(filter = "tcp", iface = myiface, timeout = timeout, count = 10)
+	rp, prev_ftp_packet = filter_tcp_rp(rp, prev_ftp_packet)
+	for pkt in rp:
+		if pkt.haslayer("Raw") and origin_rp.seq != pkt.seq:
+			last_rp = pkt
+
+	if last_rp is not None:
+		return send_ftp_ack_build(p, last_rp)	
 
 def check_ftp_resp(pkt):
 	global start_time
@@ -353,10 +344,6 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 		# search each transition label in transition info data structure
 		for t in transition_info.keys(): # No!
 			if transition_info[t][0] == crnt_state:
-				#logging.info("Trigger t : \n", t)
-				if rpyld == "Timeout" and len(send_payload) > 15:
-					abbr_spyld = send_payload[0:15] + "-abbr"
-					break
 				if re.search(rpyld, t):
 					# if it is already seen,
 					# - No need to make new state
@@ -364,6 +351,10 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 					# - Add input counts for each seen transition
 					transition_info[t][2] = transition_info[t][2] + 1
 					return
+
+	# if long payload, abbreviate
+	if rpyld == "Timeout" and len(send_payload) > 15:
+		abbr_spyld = send_payload[0:15] + "-abbr"
 	
 	#If not seen before,
 	# - Add a new state
@@ -778,7 +769,7 @@ elif mode == 'a' or mode == 'A':
 							# validition
 							# compare with other parents
 							if parent_numb_in_level != child_state.parent:
-								print "compare state " + child_state.numb + " with ancestor state " + parent_numb_in_level
+								print "[-] -> compare state " + child_state.numb + " with ancestor state " + parent_numb_in_level
 								parent_state_in_level = state_list.find_state(parent_numb_in_level)
 								# compare child_dict between prev and current state
 								if compare_ordered_dict(parent_state_in_level.sr_dict, child_state.sr_dict) == True: # same state! Add transition to parent_state_in_level!
@@ -789,11 +780,12 @@ elif mode == 'a' or mode == 'A':
 									break
 								else:
 									print "[-] -> Differnt from relative state " + parent_numb_in_level
+									currently_unique = True
 									continue
-
+						
 						if currently_unique == True: # valid yet
 							parent_level = parent_level - 1
-							# print "parent level : " + str(parent_level)
+							print "[-] target parent level : " + str(parent_level)
 							if parent_level == 0:
 								break
 							else:
