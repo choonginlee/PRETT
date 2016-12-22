@@ -452,7 +452,7 @@ def filter_tcp_rp(rp, prev_ftp_resp):
 			# Exclude TCP retransmission packet
 			# if the FTP packet received is previously seen, filter out.
 			if prev_ftp_resp is not None and compare_ftp_packet(p, prev_ftp_resp) is True:
-				print "[!] Retransmission found in port no. %d. Skip this packet..." % sport
+				# print "[!] Retransmission found in port no. %d. Skip this packet..." % sport
 				continue
 			else:
 				result_list.append(p)
@@ -638,6 +638,7 @@ elif mode == 'a' or mode == 'A':
 
 		valid_states = []
 		invalid_states = []
+		to_be_removed_states = []
 
 		# child_state_numb : every sub state to be pruned (deepest states)
 		for child_state_numb in states_candidate:
@@ -722,125 +723,110 @@ elif mode == 'a' or mode == 'A':
 			# After searching all the parent's s/r
 			# Check below for merging
 
-
 			state_list.find_state(child_state_numb).sr_dict = child_sr_dict
 			# STEP1. Parent
 			# - Compare child dict with parent dict
 			# - If differnt, let it be alive.
 			# If same merge with parent.
 			if compare_ordered_dict(parent_sr_msg_dict, child_sr_dict) == True: # same state, prune state
-				invalid_states.append([child_state_numb, parent_numb, parent_numb, child_state.spyld + " / " + child_state.rpyld])
 				print "[+] -> Same as parent. Merge with state " + parent_numb
+				invalid_states.append([child_state_numb, parent_numb, parent_numb, child_state.spyld + " / " + child_state.rpyld])
 				logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state_numb))
-			else: # different state
-				# add transition here
+			else: 
 				print "[-] -> Differnt from parent. Now check with siblings!"
 				# STEP2. Sibling
 				# - Compare its child dict with other childs' dict
 				# - If different with all the childs' dict (or first), let it be alive
 				# - If any same dict found, merge with the child
-				unique_state = True
-				for self_numb, vs_parent, vs_child, vs_label in valid_states:
-					# Find the same group
-					prev_state = state_list.find_state(self_numb)
-					self_state = state_list.find_state(child_state_numb)
-					if prev_state.parent == self_state.parent and prev_state.group == self_state.group: # same group
-						# compare child_dict between prev and current state
-						if compare_ordered_dict(prev_state.child_dict, child_sr_dict) == True: # same state! Merge with prev_state!
-							invalid_states.append([child_state_numb, parent_numb, prev_state.numb, self_state.spyld + " / " + self_state.rpyld])
-							print "[+] -> Same as " + prev_state.numb + ". Merge with state " + prev_state.numb
-							unique_state = False
+				unique_in_step_2 = True
+
+				child_level = current_level + 1
+				for sibling_state_numb, src_state, dst_state, vs_payload in valid_states:
+
+					if sibling_state_numb == child_state.numb:
+						continue
+										
+					sibling_state = state_list.find_state(sibling_state_numb)
+					if sibling_state.parent == child_state.parent and sibling_state.group == child_state.group: # same group
+						# compare child_dict between sibling and current state
+						if compare_ordered_dict(sibling_state.sr_dict, child_state.sr_dict) == True: # same state! Merge with sibling!
+							invalid_states.append([child_state_numb, parent_numb, sibling_state_numb, child_state.spyld + " / " + child_state.rpyld])
+							unique_in_step_2 = False
+							print "[+] -> Same as " + sibling_state_numb + ". Merge with state " + sibling_state_numb
+							logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state_numb))
 							break
 						else:
 							continue
-					else: # different group
+					else:
 						continue
-				
+
 				# I am unique! different from parent and other siblings!
-				if unique_state:
-					valid_states.append([child_state_numb, parent_numb, child_state_numb, child_state.spyld + " / " + child_state.rpyld])
-					state_list.find_state(child_state_numb).child_dict = child_sr_dict
-					print "[+] -> Unique state found!!!"
+				# But we have to compare it with other relatives...
+				# Step 3
+				# Compare with the other relatives
+				if unique_in_step_2:
+					parent_level = current_level
+					currently_unique = True
+					if parent_level > 1:
+						currently_unique = False
+					else: # state in level 2
+						currently_unique = True
 
+					while True:
+						# get all parents in previous level
+						for parent_numb_in_level in level_dict[parent_level]:
+							# validition
+							# compare with other parents
+							if parent_numb_in_level != child_state.parent:
+								print "compare state " + child_state.numb + " with ancestor state " + parent_numb_in_level
+								parent_state_in_level = state_list.find_state(parent_numb_in_level)
+								# compare child_dict between prev and current state
+								if compare_ordered_dict(parent_state_in_level.sr_dict, child_state.sr_dict) == True: # same state! Add transition to parent_state_in_level!
+									invalid_states.append([child_state_numb, child_state.parent, parent_numb_in_level, child_state.spyld + " / " + child_state.rpyld])
+									print "[+] -> Same as " + parent_state_in_level.numb + ". Add transitions to state " + parent_state_in_level.numb
+									logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state_numb))
+									currently_unique = False
+									break
+								else:
+									print "[-] -> Differnt from relative state " + parent_numb_in_level
+									continue
 
-
-		# Step 3
-		# Compare with the other parents and ancesters
-		parent_level = current_level
-
-		to_be_removed_states = []
-		while True:
-			# get all parents in previous level
-			for parent_numb in level_dict[parent_level]:
-				# get valid state's info
-				for self_numb, src_state, dst_state, vs_label in valid_states:
-					# validition
-					target_state = state_list.find_state(self_numb)
-
-					# compare with other parents
-					if parent_numb != target_state.parent:
-						print "compare unique_state " + self_numb + " with ancestor state " + parent_numb
-						parent_state = state_list.find_state(parent_numb)
-						# compare child_dict between prev and current state
-						if compare_ordered_dict(parent_state.sr_dict, target_state.sr_dict) == True: # same state! Add transition to parent_state!
-							print "[+] -> Same as " + parent_state.numb + ". Add transitions to state " + parent_state.numb
-							to_be_removed_states.append([self_numb, src_state, dst_state, vs_label])
-							# ftpmachine.add_transition(vs_label + "\n", source = target_state.parent, dest = parent_numb)
-							invalid_states.append([self_numb, target_state.parent, parent_numb, vs_label + "\n"])
+						if currently_unique == True: # valid yet
+							parent_level = parent_level - 1
+							# print "parent level : " + str(parent_level)
+							if parent_level == 0:
+								break
+							else:
+								continue
 						else:
-							print "[-] -> Differnt from parent state " + parent_numb
-							continue
-
-			parent_level = parent_level - 1
-			print "parent level : " + str(parent_level)
-			if parent_level == 0:
-				break
+							break
 
 
-		# to_be_removed_states = []
-		# for invalid in invalid_states:
-		# 	invalid_numb = invalid[0]
-		# 	for seem_to_valid in valid_states:
-		# 		if seem_to_valid[0] == invalid_numb:
-		# 			to_be_removed_states.append(seem_to_valid)
-
-		to_be_removed_valid_states = []
-		for remove_valid in to_be_removed_states:
-			if remove_valid in valid_states:
-				valid_states.remove(remove_valid)
-
+					if currently_unique == True: # real valid state
+						print "[+] -> Unique state " + child_state_numb + " found!!!"
+						valid_states.append([child_state_numb, child_state.parent, child_state_numb, child_state.spyld + " / " + child_state.rpyld])
+		
 		# state validation
-		current_states = level_dict.get(current_level)
-		for cur_state in current_states:
-			# give all the valid childs to each parent
-			valid_child_dict = OrderedDict()
-			for self_numb, src_state, dst_state, vs_label in valid_states:
-				valid_state = state_list.find_state(self_numb)
-				# is this child yours?
-				if cur_state == valid_state.parent:
-					# Then collect your child's shit
-					valid_child_dict[valid_state.spyld] = valid_state.rpyld
-					print "[+] Valid state : " + str(self_numb) + " in level " + str(current_level+1)
-					ftpmachine.add_states(str(self_numb))
-					ftpmachine.add_transition(vs_label + "\n", source = src_state, dest = dst_state)
-			
-			# Have your child's sr
-			state_list.find_state(cur_state).child_dict = valid_child_dict
-			
-		# remove invalid states
-		for self_numb, src_state, dst_state, ivs_label in invalid_states:
+		# add valid states
+		for self_numb, src_state, dst_state, vs_payload in valid_states:
 			self_state = state_list.find_state(self_numb)
-			# if self_state is not None:
-			ftpmachine.add_transition(ivs_label + "\n", source = src_state, dest = dst_state)
-			print "[+] Invalid state : " + self_numb + " in level " + str(current_level+1)
-			state_list.remove_state(self_state)
-			level_dict[current_level+1].remove(str(self_numb))
-			
+			ftpmachine.add_state(self_numb)
+			ftpmachine.add_transition(vs_payload + "\n", source = self_state.parent, dest = self_numb)
+			print "[+] Valid state " + self_numb + " in level " + str(current_level) + " added"
+
+		# remove invalid states
+		for self_numb, src_state, dst_state, vs_payload in invalid_states:
+			child_state = state_list.find_state(self_numb)
+			ftpmachine.add_transition(vs_payload + "\n", source = src_state, dest = dst_state)
+			level_dict[current_level+1].remove(self_numb)
+			state_list.remove_state(child_state)
+			print "[+] Invalid state " + self_numb + " in level " + str(current_level) + " removed"
+					
 		elapsed_time = time.time() - g_start_time
-		print "[+] Level %d | Port No. %d | " % (current_level, sport), "Time Elapsed :", elapsed_time, "s"
 		graphname = "diagram/level_" + str(current_level) + "_port_" + str(sport) + ".png"
 		ftpmachine.model.graph.draw(graphname, prog='dot')
 		current_level = current_level + 1
+		print "[+] Level %d | Port No. %d | " % (current_level, sport), "Time Elapsed :", elapsed_time, "s"
 		print '[+] Move to level ' + str(current_level)
 
 	elapsed_time = time.time() - g_start_time
