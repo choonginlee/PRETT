@@ -30,3 +30,8 @@ ptmsg is a tool that automatically infering network protocol models from binary 
 - Ex ) $ sudo python modeller.py [Target IP]
 
 6. You will see the requests automatically generated and responses of them.
+
+! For the better performance, disable PAM in vsftpd.
+(Ubuntu) in /etc/pam.d/vsftpd,
+add the line
+SEC_PAM_BYPASS=Y
