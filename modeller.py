@@ -179,8 +179,6 @@ def send_receive_ftp(rp, payload):
 	global skt, timeout, sniff_timeout, long_timeout, mul_start, myiface, sport
 	prev_ftp_packet = None
 	origin_rp = rp
-	last_rp = None
-	start_time = time.time()
 	
 	# Generate message from tokens
 	p = generate_ftp_msg(payload, rp)
@@ -194,12 +192,15 @@ def send_receive_ftp(rp, payload):
 	return origin_rp
 
 def send_ftp_ack_build(sp, rp):
-	global skt, ftpmachine, mul_start
+	global skt, ftpmachine, mul_start, mode
 	sentpayload = sp.getlayer("Raw").load.replace('\r\n', '')
 	rcvdpayload = rp.getlayer("Raw").load.replace('\r\n', '')
 	ack_p = generate_ftp_ack(rp)				
 	skt.send(ack_p)
-	build_state_machine(ftpmachine, ftpmachine.model.state, sentpayload, rcvdpayload)
+	if mode == 'm' :
+		print rcvdpayload
+	else :
+		build_state_machine(ftpmachine, ftpmachine.model.state, sentpayload, rcvdpayload)
 	return rp
 
 def process_ftp_response(ans, p, origin_rp):
@@ -241,7 +242,7 @@ def process_ftp_response(ans, p, origin_rp):
 
 	logging.debug("[+] [port no. %d] Waited for %d seconds... No FTP response! Timeout!" % (sport, sniff_timeout))
 	# Manually build
-	build_state_machine(ftpmachine, ftpmachine.model.state, p.getlayer("Raw"),load.replace('\r\n', ''), "Timeout")
+	build_state_machine(ftpmachine, ftpmachine.model.state, p.getlayer("Raw").load.replace('\r\n', ''), "Timeout")
 	# Poceed with the first response packet
 	return ans[0][1]
 
@@ -425,6 +426,7 @@ if mode == 'm':
 		#Next Ack no. calculation : last seq + prev. tcp payload len
 		ftp_ack = generate_ftp_ack(rp)
 		send(ftp_ack)
+		print "[ ] Enter message. If you want to stop, type \"quit\""
 		
 		for i in range(100) :
 			payload = raw_input("[!] payload? : ")
@@ -437,8 +439,13 @@ if mode == 'm':
 			#ans = filter_tcp_ans(ans)
 			
 			rp = process_ftp_response(ans, p, rp)
-			disconnect_ftp(rp)
 
+		isquit = raw_input("[!] Are you sure to quit the program? (y/n)")
+		if isquit == "y":
+			print "Goodbye..."
+			break
+		else :
+			print "Start from the beginning..."
 
 elif mode == 'a' or mode == 'A':
 	# get all command candidates
