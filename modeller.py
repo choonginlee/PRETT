@@ -181,55 +181,14 @@ def send_receive_ftp(rp, payload):
 	origin_rp = rp
 	last_rp = None
 	start_time = time.time()
-
+	
 	# Generate message from tokens
 	p = generate_ftp_msg(payload, rp)
 
 	# Send Req, then get 1. ACK and 2. FTP response
 	ans, unans = skt.sr(p, multi=1, timeout=timeout, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
 	ans, prev_ftp_packet = filter_tcp_ans(ans, prev_ftp_packet)
-
-	if len(ans) == 0:
-		logging.debug("[!] [port no. %d] Answer length is 0. Listening for 2 packets." % sport)
-		
-		rp = sniff(filter = "tcp", iface = myiface, timeout = 5, count = 3)
-		if len(rp) < 2:
-			# Timeout (Internal server error). Pass to disconnect.
-			logging.warning("[!] [port no. %d] Listened for %d packets in %d sec. Timeout. Check wireshark." % (sport, len(rp), long_timeout))
-		# Good 2 packets expected.
-
-		return process_ftp_response_rp(rp, p, origin_rp)
-
-	elif len(ans) == 1:
-		logging.debug("[ ] [port no. %d] Answer length is 1." % sport)
-
-		# FTP reponse -> ACK (Strange, but normal)
-		for sp, rp in ans:
-			if rp.haslayer("Raw") and origin_rp.seq != rp.seq:
-				last_rp = rp
-		if last_rp is not None:
-			return send_ftp_ack_build(p, last_rp)
-
-		# Maybe waiting for the FTP response
-		rp = sniff(filter = "tcp", iface = myiface, timeout = long_timeout, count = 1)
-		rp, prev_ftp_packet = filter_tcp_rp(rp, prev_ftp_packet)
-
-		# FTP response obtained (Good)
-		# ACK -> FTP response (Auth)
-		if len(rp) > 0 and rp[0].haslayer("Raw") and origin_rp.seq != rp.seq :
-			# It is normal FTP.
-			return send_ftp_ack_build(p, rp[0])
-
-		# No packet after ACK
-		else:
-			logging.debug("[+] [port no. %d] Waited for 15 seconds... Timeout!" % sport)
-			# Manually build
-			build_state_machine(ftpmachine, ftpmachine.model.state, p.getlayer("Raw"),load.replace('\r\n', ''), "Timeout")
-			# Poceed with the first response packet
-			return ans[0][1]
-
-	else:
-		return process_ftp_response_ans(ans, p, origin_rp)
+	return process_ftp_response(ans, p, origin_rp)
 
 	logging.debug("[!] [port no. %d] Sucks! What can we do? no process in if. Answer length is %d." % (sport, len(ans)))
 	return origin_rp
@@ -243,9 +202,8 @@ def send_ftp_ack_build(sp, rp):
 	build_state_machine(ftpmachine, ftpmachine.model.state, sentpayload, rcvdpayload)
 	return rp
 
-def process_ftp_response_ans(ans, p, origin_rp):
+def process_ftp_response(ans, p, origin_rp):
 	global skt, timeout, sniff_timeout, long_timeout, mul_start, myiface, sport
-	logging.debug("[!] [port no. %d] PROCESSFTPRESPONSE_ANS Answer length is %d. finding FTP Response." % (sport, len(ans)))
 	for sp, rp in ans:
 		if rp.haslayer("Raw") and origin_rp.seq != rp.seq:
 			last_rp = rp
@@ -253,7 +211,7 @@ def process_ftp_response_ans(ans, p, origin_rp):
 	if last_rp is not None:
 		return send_ftp_ack_build(p, last_rp)
 
-	# Second barrier s - r ftp
+	# Listen again in short time (save time!)
 	logging.debug("[!] [port no. %d] Answer length is %d. not yet found FTP Response." % (sport, len(ans)))
 	rp = sniff(filter = "tcp", iface = myiface, timeout = timeout, count = 10)
 	rp, prev_ftp_packet = filter_tcp_rp(rp, prev_ftp_packet)
@@ -263,27 +221,27 @@ def process_ftp_response_ans(ans, p, origin_rp):
 
 	if last_rp is not None:
 		return send_ftp_ack_build(p, last_rp)	
-
-def process_ftp_response_rp(rp, p, origin_rp):
-	global skt, timeout, sniff_timeout, long_timeout, mul_start, myiface, sport
-	logging.debug("[!] [port no. %d] PROCESSFTPRESPONSE_RP Answer length is %d. finding FTP Response." % (sport, len(rp)))
-	for pkt in rp:
-		if pkt.haslayer("Raw") and origin_rp.seq != pkt.seq:
-			last_rp = pkt
-			# return the last ftp packet. Scapy bug.
-	if last_rp is not None:
-		return send_ftp_ack_build(p, last_rp)
-
-	# Second barrier s - r ftp
-	logging.debug("[!] [port no. %d] Answer length is %d. not yet found FTP Response." % (sport, len(rp)))
-	rp = sniff(filter = "tcp", iface = myiface, timeout = timeout, count = 10)
+	
+	# No FTP respone in short time!
+	logging.debug("[!] [port no. %d] Answer length is %d. not yet found FTP Response in short time." % (sport, len(ans)))
+	rp = sniff(filter = "tcp", iface = myiface, timeout = sniff_timeout)
 	rp, prev_ftp_packet = filter_tcp_rp(rp, prev_ftp_packet)
-	for pkt in rp:
-		if pkt.haslayer("Raw") and origin_rp.seq != pkt.seq:
-			last_rp = pkt
 
-	if last_rp is not None:
-		return send_ftp_ack_build(p, last_rp)	
+	# FTP response obtained (Good)
+	# ACK -> FTP response (Auth)
+	if len(rp) > 0:
+		for pkt in rp:
+			if pkt.haslayer("Raw") and origin_rp.seq != pkt.seq:
+				last_rp = pkt
+
+		if last_rp is not None:
+			return send_ftp_ack_build(p, last_rp)	
+
+	logging.debug("[+] [port no. %d] Waited for %d seconds... No FTP response! Timeout!" % (sport, sniff_timeout))
+	# Manually build
+	build_state_machine(ftpmachine, ftpmachine.model.state, p.getlayer("Raw"),load.replace('\r\n', ''), "Timeout")
+	# Poceed with the first response packet
+	return ans[0][1]
 
 def check_ftp_resp(pkt):
 	global start_time
@@ -355,7 +313,7 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	# if long payload, abbreviate
 	if rpyld == "Timeout" and len(send_payload) > 15:
 		abbr_spyld = send_payload[0:15] + "-abbr"
-	
+
 	#If not seen before,
 	# - Add a new state
 	# - Add a new transition from current state
