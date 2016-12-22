@@ -451,7 +451,7 @@ def filter_tcp_rp(rp, prev_ftp_resp):
 			# Exclude TCP retransmission packet
 			# if the FTP packet received is previously seen, filter out.
 			if prev_ftp_resp is not None and compare_ftp_packet(p, prev_ftp_resp) is True:
-				print "[!] Retransmission found in port no. %d. Skip this packet..." % sport
+				# print "[!] Retransmission found in port no. %d. Skip this packet..." % sport
 				continue
 			else:
 				result_list.append(p)
@@ -722,7 +722,6 @@ elif mode == 'a' or mode == 'A':
 			# After searching all the parent's s/r
 			# Check below for merging
 
-
 			state_list.find_state(child_state_numb).sr_dict = child_sr_dict
 			# STEP1. Parent
 			# - Compare child dict with parent dict
@@ -741,14 +740,16 @@ elif mode == 'a' or mode == 'A':
 				unique_in_step_2 = True
 
 				child_level = current_level + 1
-				for sibling_state_numb in level_dict[child_level]:
+				for sibling_state_numb, src_state, dst_state, vs_payload in valid_states:
+
+					if sibling_state_numb == child_state.numb:
+						continue
+										
 					sibling_state = state_list.find_state(sibling_state_numb)
 					if sibling_state.parent == child_state.parent and sibling_state.group == child_state.group: # same group
 						# compare child_dict between sibling and current state
-						if compare_ordered_dict(sibling_state.sr_dict, child_state.sr_dict) == True: # same state! Merge with prev_state!
+						if compare_ordered_dict(sibling_state.sr_dict, child_state.sr_dict) == True: # same state! Merge with sibling!
 							invalid_states.append([child_state_numb, parent_numb, sibling_state_numb, child_state.spyld + " / " + child_state.rpyld])
-							level_dict[current_level+1].remove(child_state_numb)
-							state_list.remove_state(self_state)
 							unique_in_step_2 = False
 							print "[+] -> Same as " + sibling_state_numb + ". Merge with state " + sibling_state_numb
 							logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state_numb))
@@ -774,16 +775,13 @@ elif mode == 'a' or mode == 'A':
 						# get all parents in previous level
 						for parent_numb_in_level in level_dict[parent_level]:
 							# validition
-							target_state_in_step_3 = state_list.find_state(child_state_numb)
 							# compare with other parents
-							if parent_numb_in_level != target_state_in_step_3.parent:
-								print "compare state " + target_state_in_step_3.numb + " with ancestor state " + parent_numb_in_level
+							if parent_numb_in_level != child_state.parent:
+								print "compare state " + child_state.numb + " with ancestor state " + parent_numb_in_level
 								parent_state_in_level = state_list.find_state(parent_numb_in_level)
 								# compare child_dict between prev and current state
-								if compare_ordered_dict(parent_state_in_level.sr_dict, target_state_in_step_3.sr_dict) == True: # same state! Add transition to parent_state_in_level!
-									invalid_states.append([child_state_numb, target_state_in_step_3.parent, parent_numb_in_level, target_state_in_step_3.spyld + " / " + target_state_in_step_3.rpyld])
-									level_dict[current_level+1].remove(child_state_numb)
-									state_list.remove_state(target_state_in_step_3)										
+								if compare_ordered_dict(parent_state_in_level.sr_dict, child_state.sr_dict) == True: # same state! Add transition to parent_state_in_level!
+									invalid_states.append([child_state_numb, child_state.parent, parent_numb_in_level, child_state.spyld + " / " + child_state.rpyld])
 									print "[+] -> Same as " + parent_state_in_level.numb + ". Add transitions to state " + parent_state_in_level.numb
 									logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state_numb))
 									currently_unique = False
@@ -794,7 +792,7 @@ elif mode == 'a' or mode == 'A':
 
 						if currently_unique == True: # valid yet
 							parent_level = parent_level - 1
-							print "parent level : " + str(parent_level)
+							# print "parent level : " + str(parent_level)
 							if parent_level == 0:
 								break
 							else:
@@ -805,10 +803,7 @@ elif mode == 'a' or mode == 'A':
 
 					if currently_unique == True: # real valid state
 						print "[+] -> Unique state " + child_state_numb + " found!!!"
-						valid_states.append([child_state_numb, child_state.parent, child_state_numb, child_state.sqyld + " / " + child_state.rpyld])
-
-				else:
-					continue
+						valid_states.append([child_state_numb, child_state.parent, child_state_numb, child_state.spyld + " / " + child_state.rpyld])
 		
 		# state validation
 		# add valid states
@@ -820,7 +815,10 @@ elif mode == 'a' or mode == 'A':
 
 		# remove invalid states
 		for self_numb, src_state, dst_state, vs_payload in invalid_states:
+			child_state = state_list.find_state(self_numb)
 			ftpmachine.add_transition(vs_payload + "\n", source = src_state, dest = dst_state)
+			level_dict[current_level+1].remove(self_numb)
+			state_list.remove_state(child_state)
 			print "[+] Invalid state " + self_numb + " in level " + str(current_level) + " removed"
 					
 		elapsed_time = time.time() - g_start_time
