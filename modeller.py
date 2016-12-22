@@ -203,6 +203,8 @@ def send_ftp_ack_build(sp, rp):
 
 def process_ftp_response(ans, p, origin_rp):
 	global skt, timeout, sniff_timeout, long_timeout, mul_start, myiface, sport
+	prev_ftp_packet = None
+	last_rp = None
 	for sp, rp in ans:
 		if rp.haslayer("Raw") and origin_rp.seq != rp.seq:
 			last_rp = rp
@@ -587,7 +589,7 @@ elif mode == 'a' or mode == 'A':
 		valid_states = []
 		invalid_states = []
 		to_be_removed_states = []
-
+		
 		# child_state_numb : every sub state to be pruned (deepest states)
 		for child_state_numb in states_candidate:
 			child_state = state_list.find_state(child_state_numb)
@@ -682,25 +684,22 @@ elif mode == 'a' or mode == 'A':
 				logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state_numb))
 			else: 
 				print "[-] -> Differnt from parent. Now check with siblings!"
-				# STEP2. Sibling
+				# STEP 2. Sibling
 				# - Compare its child dict with other childs' dict
 				# - If different with all the childs' dict (or first), let it be alive
 				# - If any same dict found, merge with the child
 				unique_in_step_2 = True
 
 				child_level = current_level + 1
-				for sibling_state_numb, src_state, dst_state, vs_payload in valid_states:
+				for valid_state_numb, src_state, dst_state, vs_payload in valid_states:
 
-					if sibling_state_numb == child_state.numb:
-						continue
-										
-					sibling_state = state_list.find_state(sibling_state_numb)
-					if sibling_state.parent == child_state.parent and sibling_state.group == child_state.group: # same group
+					sibling_state = state_list.find_state(valid_state_numb)
+					if sibling_state.parent == child_state.parent: # siblings which have same parent
 						# compare child_dict between sibling and current state
 						if compare_ordered_dict(sibling_state.sr_dict, child_state.sr_dict) == True: # same state! Merge with sibling!
-							invalid_states.append([child_state_numb, parent_numb, sibling_state_numb, child_state.spyld + " / " + child_state.rpyld])
+							invalid_states.append([child_state_numb, parent_numb, valid_state_numb, child_state.spyld + " / " + child_state.rpyld])
 							unique_in_step_2 = False
-							print "[+] -> Same as " + sibling_state_numb + ". Merge with state " + sibling_state_numb
+							print "[+] -> Same as " + valid_state_numb + ". Merge with state " + valid_state_numb
 							logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state_numb))
 							break
 						else:
@@ -713,47 +712,66 @@ elif mode == 'a' or mode == 'A':
 				# Step 3
 				# Compare with the other relatives
 				if unique_in_step_2:
-					parent_level = current_level
+					target_level = current_level + 1
 					currently_unique = True
-					if parent_level > 1:
+					if target_level > 2:
 						currently_unique = False
 					else: # state in level 2
 						currently_unique = True
 
 					while True:
-						# get all parents in previous level
-						for parent_numb_in_level in level_dict[parent_level]:
-							# validition
-							# compare with other parents
-							if parent_numb_in_level != child_state.parent:
-								print "[-] -> compare state " + child_state.numb + " with ancestor state " + parent_numb_in_level
-								parent_state_in_level = state_list.find_state(parent_numb_in_level)
-								# compare child_dict between prev and current state
-								if compare_ordered_dict(parent_state_in_level.sr_dict, child_state.sr_dict) == True: # same state! Add transition to parent_state_in_level!
-									invalid_states.append([child_state_numb, child_state.parent, parent_numb_in_level, child_state.spyld + " / " + child_state.rpyld])
-									print "[+] -> Same as " + parent_state_in_level.numb + ". Add transitions to state " + parent_state_in_level.numb
-									logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state_numb))
-									currently_unique = False
-									break
-								else:
-									print "[-] -> Differnt from relative state " + parent_numb_in_level
-									currently_unique = True
-									continue
 						
+						if target_level == current_level + 1:
+							for valid_state_numb, src_state, dst_state, vs_payload in valid_states:
+								first_cousin = state_list.find_state(valid_state_numb)
+								if first_cousin.parent != child_state.parent: # siblings which have same parent
+									# compare child_dict between sibling and current state
+									if compare_ordered_dict(first_cousin.sr_dict, child_state.sr_dict) == True: # same state! Merge with sibling!
+										invalid_states.append([child_state_numb, child_state.parent, valid_state_numb, child_state.spyld + " / " + child_state.rpyld])
+										currently_unique = False
+										print "[+] -> Same as " + valid_state_numb + " in Step 3. Merge with state " + valid_state_numb
+										logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state_numb))
+										break
+									else:
+										continue
+								else:
+									continue
+
+						else:
+							# get all parents in previous level
+							for target_numb_in_level in level_dict[target_level]:
+								# validition
+								# compare with other parents
+								if target_numb_in_level != child_state.parent:
+									print "[-] -> compare state " + child_state.numb + " with ancestor state " + target_numb_in_level
+									parent_state_in_level = state_list.find_state(target_numb_in_level)
+									# compare child_dict between prev and current state
+									if compare_ordered_dict(parent_state_in_level.sr_dict, child_state.sr_dict) == True: # same state! Add transition to parent_state_in_level!
+										invalid_states.append([child_state_numb, child_state.parent, target_numb_in_level, child_state.spyld + " / " + child_state.rpyld])
+										print "[+] -> Same as " + parent_state_in_level.numb + ". Add transitions to state " + parent_state_in_level.numb
+										logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state_numb))
+										currently_unique = False
+										break
+									else:
+										print "[-] -> Differnt from relative state " + target_numb_in_level
+										currently_unique = True
+										continue
+						
+
 						if currently_unique == True: # valid yet
-							parent_level = parent_level - 1
-							print "[-] target parent level : " + str(parent_level)
-							if parent_level == 0:
+							target_level = target_level - 1
+							print "[-] target parent level : " + str(target_level)
+							if target_level == 0:
 								break
 							else:
 								continue
 						else:
 							break
 
-
 					if currently_unique == True: # real valid state
 						print "[+] -> Unique state " + child_state_numb + " found!!!"
 						valid_states.append([child_state_numb, child_state.parent, child_state_numb, child_state.spyld + " / " + child_state.rpyld])
+
 		
 		# state validation
 		# add valid states
@@ -770,7 +788,7 @@ elif mode == 'a' or mode == 'A':
 			level_dict[current_level+1].remove(self_numb)
 			state_list.remove_state(child_state)
 			print "[+] Invalid state " + self_numb + " in level " + str(current_level) + " removed"
-					
+		
 		elapsed_time = time.time() - g_start_time
 		graphname = "diagram/level_" + str(current_level) + "_port_" + str(sport) + ".png"
 		ftpmachine.model.graph.draw(graphname, prog='dot')
