@@ -240,7 +240,7 @@ def process_ftp_response(ans, p, origin_rp):
 
 	logging.debug("[+] [port no. %d] Waited for %d seconds... No FTP response! Timeout!" % (sport, sniff_timeout))
 	# Manually build
-	build_state_machine(ftpmachine, ftpmachine.model.state, p.getlayer("Raw"),load.replace('\r\n', ''), "Timeout")
+	build_state_machine(ftpmachine, ftpmachine.model.state, p.getlayer("Raw").load.replace('\r\n', ''), "Timeout")
 	# Poceed with the first response packet
 	return ans[0][1]
 
@@ -589,7 +589,7 @@ elif mode == 'a' or mode == 'A':
 		valid_states = []
 		invalid_states = []
 		to_be_removed_states = []
-		
+
 		# child_state_numb : every sub state to be pruned (deepest states)
 		for child_state_numb in states_candidate:
 			child_state = state_list.find_state(child_state_numb)
@@ -712,6 +712,7 @@ elif mode == 'a' or mode == 'A':
 				# Step 3
 				# Compare with the other relatives
 				if unique_in_step_2:
+					print "[ ] -> No same siblings, but we have to compare it with other relatives..."
 					target_level = current_level + 1
 					currently_unique = True
 					if target_level > 2:
@@ -725,6 +726,7 @@ elif mode == 'a' or mode == 'A':
 							for valid_state_numb, src_state, dst_state, vs_payload in valid_states:
 								first_cousin = state_list.find_state(valid_state_numb)
 								if first_cousin.parent != child_state.parent: # siblings which have same parent
+									print "[-] -> compare state " + child_state.numb + " with other state " + target_numb_in_level + " in same level"
 									# compare child_dict between sibling and current state
 									if compare_ordered_dict(first_cousin.sr_dict, child_state.sr_dict) == True: # same state! Merge with sibling!
 										invalid_states.append([child_state_numb, child_state.parent, valid_state_numb, child_state.spyld + " / " + child_state.rpyld])
@@ -733,8 +735,10 @@ elif mode == 'a' or mode == 'A':
 										logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state_numb))
 										break
 									else:
+										currently_unique = True
 										continue
 								else:
+									currently_unique = True
 									continue
 
 						else:
