@@ -17,7 +17,7 @@ strings -to /usr/bin/bluemoon > ./binstring/bluemoon.txt
 strings -to /usr/bin/bluetoothctl > ./binstring/bluetoothctl.txt
 strings -to /usr/bin/bluetooth-sendto > ./binstring/bluetooth-sendto.txt
 strings -to /usr/bin/btmgmt > ./binstring/btmgmt.txt
-strings -to /usr/bin/curl > ./binstring/curl.txt
+#strings -to /usr/bin/curl > ./binstring/curl.txt
 strings -to /usr/bin/dig > ./binstring/dig.txt
 strings -to /usr/bin/dirmngr > ./binstring/dirmngr.txt
 strings -to /usr/bin/dirmngr-client > ./binstring/dirmngr-client.txt
@@ -48,7 +48,7 @@ strings -to /usr/bin/tracepath6 > ./binstring/tracepath6.txt
 strings -to /usr/bin/traceroute6 > ./binstring/traceroute6.txt
 strings -to /usr/bin/vstp > ./binstring/vstp.txt
 strings -to /usr/bin/webbrowser-app > ./binstring/webbrowser-app.txt
-strings -to /usr/bin/wget > ./binstring/wget.txt
+#strings -to /usr/bin/wget > ./binstring/wget.txt
 strings -to /usr/bin/wireshark > ./binstring/wireshark.txt
 strings -to /usr/bin/xdg-email > ./binstring/xdg-email.txt
 strings -to /usr/bin/xhost > ./binstring/xhost.txt

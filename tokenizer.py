@@ -21,8 +21,11 @@ def count_token(file) :
 	global ranklist
 	global cnt
 	cnt = cnt + 1
-	words = re.findall(r'\w+', open(file).read().lower())
-	tempdic = dict((k,1) for k in words)
+
+	with open(file) as f:
+		tokens = pickle.load(f)
+
+	tempdic = dict((k,1) for k in tokens)
 	ranklist = Counter(ranklist) + Counter(tempdic)
 	print "======== [", cnt, "] Token analysis of file", file, "done.", "========="
 
@@ -50,9 +53,8 @@ def extract_token(path, file) :
 			for res in result_first:
 				result.append(res)
 
-	fw.write((str(set(result))))
-
-	fw.close
+	pickle.dump(set(result), fw)
+	fw.close()
 
 	count_token(file_write)
 
