@@ -504,7 +504,7 @@ elif mode == 'a' or mode == 'A':
 			mul_start = 0
 			single_cnt = 0
 			for token in token_db:
-				token = str(token)
+				token = str(token[0])
 				single_cnt = single_cnt + 1
 				#if single_cnt == 1001:
 				#	break
