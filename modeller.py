@@ -29,37 +29,39 @@ os.system("rm -rf ./diagram/*")
 
 logging.basicConfig(level=logging.DEBUG, filename="ptmsg_log", filemode="a+", format="%(asctime)-15s %(levelname)-8s %(message)s")
 
-sport = 3000 # find sport here
-
 dst_ip = sys.argv[1]
 if len(sys.argv) == 3:
 	sport = int(sys.argv[2])
 
 #These informations are prerequisite.
 dport = 21
-
+sport = 4000 # find sport here
 delimiter = "\r\n"
 exit_label = "QUIT / 221 Goodbye.\n"
 num_of_states = 0
 g_start_time = 0
 mul_start = 0
 new_state = []
-myiface = "enp0s8"
-is_pruning = 0
-is_moving = 0
+myiface = "ens34"
+is_pruning = False
+is_moving = False
 
-level_dict = {1 : ['0']}
 cur_state = '0'
 timeout = 0.01
 sniff_timeout = 5
 long_timeout = 15
 current_level = 1
 
+skip_msg_list = ['USER ANONYMOUS', 'PASS '] # for shortcut
+
 if not os.path.exists('./diagram'):
 	os.makedirs('./diagram')
 
 #Mode Selection
-mode = raw_input("[ ] Manual? or Auto? ( \'m\' - for testing / \'a\' - auto mode /) : ")
+mode1 = raw_input("[ ] Manual? or Auto? ( \'m\' - for testing / \'a\' - auto mode /) : ")
+print skip_msg_list
+if len(skip_msg_list) > 0:
+	mode2 = raw_input("[ ] Take shortcut? ( \'y\' / \'n\' ) : ")
 
 # It will contain trasition info like 
 # trigger as key (string) : [src_state (string), dest_state (string), cnt]
@@ -70,7 +72,7 @@ g_start_time = time.time()
 skt = conf.L3socket(iface = myiface)
 
 #Contains a FTP Protocol model
-class FTPModel(object):
+class ProtoModel(object):
 	def __init__(self, name):
 		self.name = name
 
@@ -107,8 +109,9 @@ class StateList:
 
 
 state_list = StateList([State('0')])
+level_dict = {1 : ['0']} # contains states for each level
 
-def handshake_init(dst_ip, dport, sport):
+def three_handshake(dst_ip, dport, sport):
 	#Initiate TCP connection - 3 handshaking
 	global skt
 	SYN = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, flags = "S") # SYN
@@ -117,7 +120,6 @@ def handshake_init(dst_ip, dport, sport):
 	RESPONSE = skt.sr1(ACK, verbose=False, retry=-1) # Send ACK, Listen FTP Response
 
 	return RESPONSE # This is FTP Response from server
-
 
 def disconnect_ftp(rp):
 	# Send Req. QUIT (c) -> Get Resp Goodbye (s) -> get FIN-ACK (s) -> send ACK (c) -> Send FIN-ACK (c) -> get ACK
@@ -160,9 +162,9 @@ def disconnect_ftp(rp):
 				# SUCKS!
 				logging.warning("[!] [port no. %d] DISCONNECT :Timeout (Internal server error). No FINACK at all. No answered in sr." % sport)
 				FIN_ACK = temp_rp
-			elif rp[0].getlayer("TCP").flags == 0x11:
+			#elif rp[0].getlayer("TCP").flags == 0x11:
 				# FIN_ACK found
-				FIN_ACK = rp[0]
+			#	FIN_ACK = rp[0]
 			else:
 				continue
 	
@@ -174,36 +176,23 @@ def disconnect_ftp(rp):
 	FIN_ACK = generate_ftp_fin_ack(FIN_ACK)
 	skt.send(FIN_ACK)
 		
-def send_receive_ftp(rp, payload):
+def send_receive(rp, payload):
 	# SEND Req. -> Get ACK -> GET Rep. -> Send ACK (normal TCP-based protocol)
 	global skt, timeout, sniff_timeout, long_timeout, mul_start, myiface, sport
-	prev_ftp_packet = None
 	origin_rp = rp
 	
-	# Generate message from tokens
+	# Generate message with tokens
 	p = generate_ftp_msg(payload, rp)
-
-	# Send Req, then get 1. ACK and 2. FTP response
-	ans, unans = skt.sr(p, multi=1, timeout=timeout, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
-	ans, prev_ftp_packet = filter_tcp_ans(ans, prev_ftp_packet)
-	return process_ftp_response(ans, p, origin_rp)
+	ans, unans = skt.sr(p, multi=1, timeout=timeout, verbose=False)
+	
+	# Filter out only TCP packets
+	ans = filter_tcp_ans(ans)
+	return process_response(ans, p, origin_rp)
 
 	logging.debug("[!] [port no. %d] Sucks! What can we do? no process in if. Answer length is %d." % (sport, len(ans)))
 	return origin_rp
 
-def send_ftp_ack_build(sp, rp):
-	global skt, ftpmachine, mul_start, mode
-	sentpayload = sp.getlayer("Raw").load.replace('\r\n', '')
-	rcvdpayload = rp.getlayer("Raw").load.replace('\r\n', '')
-	ack_p = generate_ftp_ack(rp)				
-	skt.send(ack_p)
-	if mode == 'm' :
-		print rcvdpayload
-	else :
-		build_state_machine(ftpmachine, ftpmachine.model.state, sentpayload, rcvdpayload)
-	return rp
-
-def process_ftp_response(ans, p, origin_rp):
+def process_response(ans, p, origin_rp):
 	global skt, timeout, sniff_timeout, long_timeout, mul_start, myiface, sport
 	prev_ftp_packet = None
 	last_rp = None
@@ -258,9 +247,21 @@ def process_ftp_response(ans, p, origin_rp):
 
 	logging.debug("[+] [port no. %d] Waited for %d seconds... No FTP response! Timeout!" % (sport, sniff_timeout))
 	# Manually build
-	build_state_machine(ftpmachine, ftpmachine.model.state, p.getlayer("Raw").load.replace('\r\n', ''), "Timeout")
+	build_state_machine(pm, pm.model.state, p.getlayer("Raw").load.replace('\r\n', ''), "Timeout")
 	# Poceed with the first response packet
 	return ans[0][1]
+
+def send_ftp_ack_build(sp, rp):
+	global skt, pm, mul_start, mode1
+	sentpayload = sp.getlayer("Raw").load.replace('\r\n', '')
+	rcvdpayload = rp.getlayer("Raw").load.replace('\r\n', '')
+	ack_p = generate_ftp_ack(rp)				
+	skt.send(ack_p)
+	if mode1 == 'm' :
+		print rcvdpayload
+	else :
+		build_state_machine(pm, pm.model.state, sentpayload, rcvdpayload)
+	return rp
 
 def check_ftp_resp(pkt):
 	global start_time
@@ -276,11 +277,11 @@ def check_fin_ack(pkt):
 	else :
 		return False
 
-def generate_ftp_model():
-	ftpmodel = FTPModel("FTP Model")
-	ftpmachine = Machine(model = ftpmodel, states = ['0'], initial = '0', auto_transitions=False)
-	ftpmachine.add_transition(exit_label, source = '0', dest = '0')
-	return ftpmachine
+def generate_state_machine():
+	pmodel = ProtoModel("Protocol Model")
+	pmachine = Machine(model = pmodel, states = ['0'], initial = '0', auto_transitions=False)
+	pmachine.add_transition(exit_label, source = '0', dest = '0')
+	return pmachine
 
 def get_tcp_seg_len(rp):
 	ip_total_len = rp.getlayer(IP).len
@@ -296,7 +297,7 @@ def generate_ftp_ack(rp):
 	return p
 
 def generate_tcp_ack(rp): 
-	# Generate ack to the normal tco (ack to the ack)
+	# Generate ack to the normal tcp (ack to the ack)
 	p = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=rp.ack, ack=rp.seq, flags = "A")
 	return p
 
@@ -312,22 +313,28 @@ def generate_ftp_msg(payload, rp) :
 def build_state_machine(sm, crnt_state, spyld, rpyld):
 	# sm : state machine, crnt_state : current state, payload : response packet payload 
 	# Build and fix a state machine based on the response
-	global num_of_states, transition_info, state_list, cur_state, new_state, is_pruning, is_moving, mul_start, current_level
+	global num_of_states, transition_info, state_list, cur_state, new_state, is_pruning, is_moving, mul_start, current_level, skip_msg_list
 
 	send_payload = spyld.replace('\r\n', '')
 	command = send_payload.split()[0]
+
+	#In case of shortcut, ignore the shortcut messages
+	for msg in skip_msg_list:
+		if send_payload == msg:
+			return
+
 	#Check if the response already seen before
-	if mul_start == 0:
-		# search each transition label in transition info data structure
-		for t in transition_info.keys(): # No!
-			if transition_info[t][0] == crnt_state:
-				if re.search(rpyld, t):
-					# if it is already seen,
-					# - No need to make new state
-					# - Find the corresponding src & dst state
-					# - Add input counts for each seen transition
-					transition_info[t][2] = transition_info[t][2] + 1
-					return
+	#if mul_start == 0:
+	# search each transition label in transition info data structure
+	for t in transition_info.keys(): # No!
+		if transition_info[t][0] == crnt_state:
+			if re.search(rpyld, t):
+				# if it is already seen,
+				# - No need to make new state
+				# - Find the corresponding src & dst state
+				# - Add input counts for each seen transition
+				transition_info[t][2] = transition_info[t][2] + 1
+				return
 
 	# if long payload, abbreviate
 	if rpyld == "Timeout" and len(send_payload) > 15:
@@ -336,7 +343,7 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	#If not seen before,
 	# - Add a new state
 	# - Add a new transition from current state
-	if is_pruning == 0 and is_moving == 0:
+	if is_pruning == False and is_moving == False:
 		num_of_states = num_of_states + 1
 		dst_state = str(num_of_states)
 
@@ -348,7 +355,7 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	else:
 		t_label = send_payload + " / " + rpyld
 
-	if is_pruning == 0 and is_moving == 0:
+	if is_pruning == False and is_moving == False:
 
 		if mul_start == 0:
 			transition_info[t_label] = [crnt_state, dst_state, 1] # add transition info
@@ -384,28 +391,16 @@ def compare_ftp_packet(pkt1, pkt2):
 	else:
 		return False
 
-def filter_tcp_ans(ans, prev_ftp_resp):
+def filter_tcp_ans(ans):
 	result_list = []
 	for sr in ans:
 		# TCP layer in sr
 		if sr[1].haslayer("TCP"):
-			# If first FTP response found, store and go to the next packet.
-			if prev_ftp_resp is None and sr[1].haslayer("Raw"):
-				prev_ftp_resp = sr[1]
-				result_list.append(sr)
-				continue
-			# Exclude TCP retransmission packet
-			# if the FTP packet received is previously seen, filter out.
-			if prev_ftp_resp is not None and compare_ftp_packet(sr[1], prev_ftp_resp) is True:
-				#print "[!] Retransmission found in port no. %d. Skip this packet..." % sport
-				continue
-			else:
-				result_list.append(sr)
+			result_list.append(sr)
 		else:
 			continue
 
-	new_ftp_resp = prev_ftp_resp
-	return result_list, new_ftp_resp
+	return result_list
 
 def filter_tcp_rp(rp, prev_ftp_resp):
 	result_list = []
@@ -430,15 +425,153 @@ def filter_tcp_rp(rp, prev_ftp_resp):
 	new_ftp_resp = prev_ftp_resp
 	return result_list, new_ftp_resp
 
+def expand_states(states_in_the_level, token_db, args_db):
+	global mode2, sport, dport, dst_ip, is_pruning
+
+	is_pruning = False
+	for current_state in states_in_the_level:
+		print "[+] Current_state : " + str(current_state)
+		
+		# Set state moving message for current state
+		move_state_msg = []
+		target_state = current_state
+		while True:
+			parent_state = state_list.find_state(target_state).parent
+			if parent_state is not None:
+				move_state_msg.append(state_list.find_state(target_state).spyld)
+				target_state = parent_state
+				continue
+			else: # root node
+				break
+		
+		move_state_msg.reverse()
+
+		# --------- Find command with single command  ---------
+		mul_start = 0
+		for token in token_db:
+			token = str(token)
+
+			if token == "quit":
+				continue
+
+			#Start with 3WHS
+			rp = three_handshake(dst_ip, dport, sport)
+
+			# In case of FTP,
+			# If handshake finished, the server sends response.
+			# Send ack and get the last req packet info.
+			ftp_ack = generate_ftp_ack(rp)
+			skt.send(ftp_ack)
+
+			# Take shortcut
+			if mode2 == 'y':
+				rp = shortcut(rp, skip_msg_list)
+
+			# Go to the target state
+			is_moving = True
+			for cmd in move_state_msg:
+				handshake_rp = rp
+				rp = send_receive(rp, cmd)
+			is_moving = False
+
+			# set state
+			pm.set_state(str(current_state))
+
+			# Send message and listen
+			rp = send_receive(rp, token)
+
+			# Finish TCP connection
+			disconnect_ftp(rp)
+
+			#Initialize current state as 0
+			cs = 0
+
+			sport = sport + 1
+			if sport > 60000:
+				sport = 3000
+			
+		# --------- Find valid message with multiple keywords  ---------
+		mul_start = 1
+		single_cmds = []
+		multiple_msg_db = []
+
+		for child_state_numb in level_dict.get(current_level+1):
+			child_state = state_list.find_state(child_state_numb)
+			if child_state.parent == current_state:
+				child_single_cmds = child_state.group
+				if child_single_cmds not in single_cmds:
+					single_cmds.append(child_single_cmds)
+		print "[+] Single Commands are:"
+		print single_cmds
+		# for cmd in single_cmds:
+		# 	for args in args_db:
+		# 		msg = cmd + ' ' + str(args[0])
+		# 		multiple_msg_db.append(msg)
+		
+		for msg in single_cmds: # group name
+			for args in args_db: # argument
+				if msg == "quit":
+					continue
+				
+				multiple_msg = msg + ' ' + str(args)
+
+				#Start with 3WHS	
+				rp = three_handshake(dst_ip, dport, sport)
+
+				#If handshake finished, the server sends response. Send ack and get the last req packet info.
+				ftp_ack = generate_ftp_ack(rp)
+				skt.send(ftp_ack)
+
+				# Take shortcut
+				rp = shortcut(rp, skip_msg_list)
+
+				is_moving = True
+				for mv_msg in move_state_msg:
+					handshake_rp = rp
+					rp = send_receive(rp, mv_msg)
+				is_moving = False
+
+				# set state
+				pm.set_state(str(current_state))
+
+				temp_rp = rp
+				# Send multiple message and listen
+				rp = send_receive(rp, multiple_msg)
+
+				# Finish TCP connection
+				disconnect_ftp(rp)
+
+				#Initialize current state as 0
+				cs = 0
+
+				sport = sport + 1
+				if sport > 60000:
+					sport = 3000
+
+def shortcut(rp, skip_msg_list):
+	# Take messages to skip. Using the messages, 
+	# it goes to the new starting point fast.
+	
+	# There is not shortcut
+	if len(skip_msg_list) == 0:
+		return
+	
+	for msg in skip_msg_list:
+		handshake_rp = rp
+		rp = send_receive(rp, msg)
+
+	return rp
+
+
 #################################################
 ################ MAIN PART #####################
 
-#Crate ftp machine and assign protocol model
-ftpmachine = generate_ftp_model()
+#Crate protocol state machine
+pm = generate_state_machine()
 
-if mode == 'm':
+if mode1 == 'm':
 	while True:
-		rp = handshake_init(dst_ip, dport, sport)
+		rp = three_handshake(dst_ip, dport, sport)
 		#Next Ack no. calculation : last seq + prev. tcp payload len
 		ftp_ack = generate_ftp_ack(rp)
 		send(ftp_ack)
@@ -454,7 +587,7 @@ if mode == 'm':
 			ans, unans = sr(p, multi=1, timeout=timeout, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
 			#ans = filter_tcp_ans(ans)
 			
-			rp = process_ftp_response(ans, p, rp)
+			rp = process_response(ans, p, rp)
 
 		isquit = raw_input("[!] Are you sure to quit the program? (y/n)")
 		if isquit == "y":
@@ -463,143 +596,32 @@ if mode == 'm':
 		else :
 			print "Start from the beginning..."
 
-elif mode == 'a' or mode == 'A':
+elif mode1 == 'a' or mode == 'A':
 	# get all command candidates
 	with open("./tokenfile/total_tokens.txt") as f:
-		token_db = pickle.load(f)
-		#token_db = ['data', 'user', 'pass', 'opts']
+		#token_db = pickle.load(f)
+		token_db = ['retr', 'data', 'type', 'get', 'size', 'list', 'help', 'mode', 'user', 'port', 'pass', 'opts', 'pwd', 'cwd', 'rest', 'stat', 'acct', 'prot', 'noop', 'pasv']
 
 	# get all argument candidates
 	with open("./args/total_args.txt") as a:
 		args_db = pickle.load(a)
 		#args_db = [['anonymous'], ['510123124512'], ['/'], ['127.0.0.1']]
-	while True:
-		start_time = time.time()
-		print '[+] Send total tokens in level ' + str(current_level)
 
-		level_state_list = level_dict.get(current_level, [])
-		if level_state_list == []: # program end
+	while True: # for each level
+		start_time = time.time()
+		print '[+] Send total %d tokens in level ' % len(token_db) + str(current_level)
+
+		#states_in_the_level : contains states which are present at each level
+		states_in_the_level = level_dict.get(current_level, [])
+		if states_in_the_level == []: # program end
 			break
 
-		### Expansion ###
-		is_pruning = 0
-		for current_state in level_state_list:
-			cur_state = current_state
-			print "[+] Current_state : " + str(cur_state)
-			move_state_msg =[]
-			target_state = cur_state
-			
-			while True:
-				current_parent = state_list.find_state(target_state).parent
-				if current_parent is not None:
-					move_state_msg.append(state_list.find_state(target_state).spyld)
-					target_state = current_parent
-					continue
-				else: # root node
-					break
-			
-			move_state_msg.reverse()
-
-			# --------- Find command with single command  ---------
-			mul_start = 0
-			single_cnt = 0
-			for token in token_db:
-				token = str(token[0])
-				single_cnt = single_cnt + 1
-				#if single_cnt == 1001:
-				#	break
-				if token == "quit":
-					continue
-
-				#Start with 3WHS
-				rp = handshake_init(dst_ip, dport, sport)
-
-				#If handshake finished, the server sends response.
-				# Send ack and get the last req packet info.
-				ftp_ack = generate_ftp_ack(rp)
-				skt.send(ftp_ack)
-
-				# Go to the target state
-				is_moving = 1
-				for cmd in move_state_msg:
-					handshake_rp = rp
-					rp = send_receive_ftp(rp, cmd)
-				is_moving = 0
-
-				# set state
-				ftpmachine.set_state(str(cur_state))
-
-				# Send message and listen
-				rp = send_receive_ftp(rp, token)
-
-				# Finish TCP connection
-				disconnect_ftp(rp)
-
-				#Initialize current state as 0
-				cs = 0
-
-				sport = sport + 1
-				if sport > 60000:
-					sport = 3000
-				
-			# --------- Find valid message with multiple keywords  ---------
-			mul_start = 1
-			single_cmds = []
-			multiple_msg_db = []
-
-			for child_state_numb in level_dict.get(current_level+1):
-				child_state = state_list.find_state(child_state_numb)
-				if child_state.parent == cur_state:
-					child_single_cmds = child_state.group
-					if child_single_cmds not in single_cmds:
-						single_cmds.append(child_single_cmds)
-			print "[+] Single Commands are:"
-			print single_cmds
-			# for cmd in single_cmds:
-			# 	for args in args_db:
-			# 		msg = cmd + ' ' + str(args[0])
-			# 		multiple_msg_db.append(msg)
-			
-			for msg in single_cmds: # group name
-				for args in args_db: # argument
-					if msg == "quit":
-						continue
-					
-					multiple_msg = msg + ' ' + str(args[0])
-
-					#Start with 3WHS	
-					rp = handshake_init(dst_ip, dport, sport)
-
-					#If handshake finished, the server sends response. Send ack and get the last req packet info.
-					ftp_ack = generate_ftp_ack(rp)
-					skt.send(ftp_ack)
-
-					is_moving = 1
-					for mv_msg in move_state_msg:
-						handshake_rp = rp
-						rp = send_receive_ftp(rp, mv_msg)
-					is_moving = 0
-
-					# set state
-					ftpmachine.set_state(str(cur_state))
-
-					temp_rp = rp
-					# Send multiple message and listen
-					rp = send_receive_ftp(rp, multiple_msg)
-
-					# Finish TCP connection
-					disconnect_ftp(rp)
-
-					#Initialize current state as 0
-					cs = 0
-
-					sport = sport + 1
-					if sport > 60000:
-						sport = 3000
+		### Phase 1. Expansion ###
+		expand_states(states_in_the_level, token_db, args_db)
 
 
 		### Pruning ###
-		is_pruning = 1
+		is_pruning = True
 
 		# states in the last level to be tested for pruning
 		states_candidate = level_dict.get(current_level+1, [])
@@ -654,21 +676,24 @@ elif mode == 'a' or mode == 'A':
 					continue
 
 				#Start with 3WHS
-				rp = handshake_init(dst_ip, dport, sport)
+				rp = three_handshake(dst_ip, dport, sport)
 
 				#If handshake finished, the server sends response. Send ack and get the last req packet info.
 				ftp_ack = generate_ftp_ack(rp)
 				skt.send(ftp_ack)
 
+				# Take shortcut
+				rp = shortcut(rp, skip_msg_list)
+
 				for msg in prune_move_state_msg:
 					logging.info("[+] [port no. %d] Prune Move (depth %d -> %d) msg : " % (sport, current_level, current_level+1) + str(msg))
-					rp = send_receive_ftp(rp, msg)
+					rp = send_receive(rp, msg)
 
 				# Send message and listen
 				logging.info("[+] [port no. %d] Prune Send msg : " % sport + str(msg_sent))
 
 				origin_rp = rp
-				rp = send_receive_ftp(rp, msg_sent)
+				rp = send_receive(rp, msg_sent)
 				
 				# if normal, add to child_sr_dict
 				if compare_ftp_packet(rp, origin_rp) is False:
@@ -688,7 +713,7 @@ elif mode == 'a' or mode == 'A':
 					elapsed_time = time.time() - g_start_time
 					print "[+] Port No. : %d | " % sport, "Time Elapsed :", elapsed_time, "s"
 					graphname = "diagram/level_" + str(current_level) + "_port_" + str(sport) + ".png"
-					ftpmachine.model.graph.draw(graphname, prog='dot')
+					pm.model.graph.draw(graphname, prog='dot')
 			
 			# After searching all the parent's s/r
 			# Check below for merging
@@ -803,21 +828,21 @@ elif mode == 'a' or mode == 'A':
 		# add valid states
 		for self_numb, src_state, dst_state, vs_payload in valid_states:
 			self_state = state_list.find_state(self_numb)
-			ftpmachine.add_state(self_numb)
-			ftpmachine.add_transition(vs_payload + "\n", source = self_state.parent, dest = self_numb)
+			pm.add_state(self_numb)
+			pm.add_transition(vs_payload + "\n", source = self_state.parent, dest = self_numb)
 			print "[+] Valid state " + self_numb + " in level " + str(current_level) + " added"
 
 		# remove invalid states
 		for self_numb, src_state, dst_state, vs_payload in invalid_states:
 			child_state = state_list.find_state(self_numb)
-			ftpmachine.add_transition(vs_payload + "\n", source = src_state, dest = dst_state)
+			pm.add_transition(vs_payload + "\n", source = src_state, dest = dst_state)
 			level_dict[current_level+1].remove(self_numb)
 			state_list.remove_state(child_state)
 			print "[+] Invalid state " + self_numb + " in level " + str(current_level) + " removed"
 		
 		elapsed_time = time.time() - g_start_time
 		graphname = "diagram/level_" + str(current_level) + "_port_" + str(sport) + ".png"
-		ftpmachine.model.graph.draw(graphname, prog='dot')
+		pm.model.graph.draw(graphname, prog='dot')
 		current_level = current_level + 1
 		print "[+] Level %d | Port No. %d | " % (current_level, sport), "Time Elapsed :", elapsed_time, "s"
 		print '[+] Move to level ' + str(current_level)
@@ -825,7 +850,7 @@ elif mode == 'a' or mode == 'A':
 	elapsed_time = time.time() - g_start_time
 	print "Total elapsed time : ", elapsed_time, "\n"
 	# Program normally ends.
-	ftpmachine.model.graph.draw("diagram/prune_bfs_state_fin.png", prog='dot')
+	pm.model.graph.draw("diagram/prune_bfs_state_fin.png", prog='dot')
 	logging.info(transition_info)
 	img = mplotimg.imread("diagram/prune_bfs_state_fin.png")
 	plt.imshow(img)
