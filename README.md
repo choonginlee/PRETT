@@ -10,6 +10,8 @@ ptmsg is a tool that automatically infering network protocol models from binary 
 - python-tk (apt-get)
 - graphviz libgraphviz-dev pkg-config (apt-get)
 - pygraphviz (pip)
+* Use the following command when installing pygraphviz
+pip install pygraphviz --install-option="--include-path=/usr/include/graphviz" --install-option="--library-path=/usr/lib/graphviz/"
 
 ## Easy Running Example ##
 
