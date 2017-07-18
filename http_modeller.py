@@ -39,7 +39,7 @@ if len(sys.argv) == 3:
 
 #These informations are prerequisite.
 dport = 80
-sport = 4000 # find sport here
+sport = 3000 # find sport here
 delimiter = "\r\n"
 exit_label = "QUIT / 221 Goodbye.\n"
 num_of_states = 0
@@ -229,6 +229,7 @@ def process_response(ans, p, origin_rp):
 
 	if raw_resp is None and finack_resp is None:
 		#Case3.
+		print 'Case 3'
 		#Slow response.
 		resp_list = sniff(filter = "tcp", iface = myiface, timeout = slowresp_timeout, count = 2)
 		for resp in resp_list:
@@ -267,7 +268,7 @@ def process_response(ans, p, origin_rp):
 				build_state_machine(pm, pm.model.state, sentpayload, rcvdpayload, 1)
 				return raw_resp, 0 # needs to disconnect later
 		else:
-			# print "case2"
+			# print "Case 2"
 			# Case 2.
 			# Send ACK and FINACK
 			ACK = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=finack_resp.ack, ack=finack_resp.seq, flags = "A") # SYN - ACK
@@ -290,7 +291,7 @@ def process_response(ans, p, origin_rp):
 
 	else:
 		# Crash?
-		# print "case4"
+		print "Case 4"
 		logging.debug("[!] [port no. %d] No raw response. Possibly crash." % (sport))
 		if len(resp_list) == 0:
 			rp = origin_rp
@@ -368,7 +369,7 @@ def generate_http_fin_ack(rp):
 
 def generate_http_msg(payload, rp):
 	tcp_seg_len = get_tcp_seg_len(rp)
-	p = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=rp.ack, ack=rp.seq + 1, flags = 'A')/(payload + ' / HTTP/1.1' + delimiter + 'Host:' + str(dst_ip) + delimiter + delimiter)
+	p = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=rp.ack, ack=rp.seq + 1, flags = 'A')/(payload + ' HTTP/1.1' + delimiter + 'Host:' + str(dst_ip) + delimiter + delimiter)
 	return p
 
 
@@ -378,7 +379,7 @@ def build_state_machine(sm, crnt_state, spyld, rpyld, case_num):
 	global num_of_states, transition_info, state_list, cur_state, new_state, is_pruning, is_moving, mul_start, current_level, skip_msg_list
 
 	send_payload = spyld.replace('\r\n', '')
-	send_payload = send_payload[:send_payload.find(' / HTTP/1.1')]
+	send_payload = send_payload[:send_payload.find(' HTTP/1.1')]
 	command = send_payload.split()[0]
 
 	#In case of shortcut, ignore the shortcut messages
@@ -391,7 +392,8 @@ def build_state_machine(sm, crnt_state, spyld, rpyld, case_num):
 	# search each transition label in transition info data structure
 	for t in transition_info.keys(): # No!
 		if transition_info[t][0] == crnt_state:
-			if re.search(rpyld, t):
+			spyld_cmd = spyld.split(' ')[0]
+			if re.search(spyld_cmd, t) and re.search(rpyld, t):
 				# if it is already seen,
 				# - No need to make new state
 				# - Find the corresponding src & dst state
@@ -435,7 +437,7 @@ def build_state_machine(sm, crnt_state, spyld, rpyld, case_num):
 			mul_transition_info[t_label] = [crnt_state, dst_state, 1] # add transition info
 
 		# Add child state for each parent
-		print str(cur_state)
+		# print str(cur_state)
 		state_list.add_state(State(str(num_of_states), parent=str(cur_state), spyld=str(send_payload), rpyld=str(rpyld), group=str(command)))
 		print "[+] State added (%s -> %d) : " % (cur_state, num_of_states) + str(num_of_states)
 		logging.info("[+] [port no. %d] State (%s -> %d)" % (sport, cur_state, num_of_states) + " added with transition " + t_label)
@@ -702,7 +704,7 @@ elif mode1 == 'a' or mode == 'A':
 		
 		### Pruning ###
 		is_pruning = True
-
+		
 		# states in the last level to be tested for pruning
 		states_candidate = level_dict.get(current_level+1, [])
 		if states_candidate == []: # there is no valid sub state. last level.
@@ -747,16 +749,16 @@ elif mode1 == 'a' or mode == 'A':
 			# Change the order
 			prune_move_state_msg.reverse()
 
-			print prune_move_state_msg
+			# print prune_move_state_msg
 
 			parent_spyld = parent_sr_msg_dict.keys()
 
 			# every payload sent in parent nodes
 			for msg_sent in parent_spyld:
-				print msg_sent
+				# print msg_sent
 				if msg_sent == "quit":
 					continue
-					
+				
 				#Start with 3WHS
 				rp = three_handshake(dst_ip, dport, sport)
 
@@ -779,19 +781,22 @@ elif mode1 == 'a' or mode == 'A':
 				
 				# if normal, add to child_sr_dict
 				if compare_http_packet(rp, origin_rp) is False:
-					rcvdpayload = rp.getlayer("Raw").load.replace('\r\n', '')
+					if rp.getlayer("Raw") is not None:
+						rcvdpayload = rp.getlayer("Raw").load.replace('\r\n', '')
 
-					if rcvdpayload.find('Connection') != -1:
-							rcvdpayload = rcvdpayload[:rcvdpayload.find('Connection')]
+						if rcvdpayload.find('Connection') != -1:
+								rcvdpayload = rcvdpayload[:rcvdpayload.find('Connection')]
+								rcvdpayload = rcvdpayload[:rcvdpayload.find('Date')]
+								rcvdpayload = rcvdpayload[:rcvdpayload.find('Server')]
+						elif rcvdpayload.find('Date') != -1:
 							rcvdpayload = rcvdpayload[:rcvdpayload.find('Date')]
 							rcvdpayload = rcvdpayload[:rcvdpayload.find('Server')]
-					elif rcvdpayload.find('Date') != -1:
-						rcvdpayload = rcvdpayload[:rcvdpayload.find('Date')]
-						rcvdpayload = rcvdpayload[:rcvdpayload.find('Server')]
-					else:
-						rcvdpayload = rcvdpayload[:rcvdpayload.find('Server')]
+						else:
+							rcvdpayload = rcvdpayload[:rcvdpayload.find('Server')]
 
-					child_sr_dict[str(msg_sent)] = rcvdpayload
+						child_sr_dict[str(msg_sent)] = rcvdpayload
+					else:
+						res = 1
 				
 				# Finish TCP connection
 				if res == 0:
@@ -804,7 +809,7 @@ elif mode1 == 'a' or mode == 'A':
 				if sport > 60000:
 					sport = 3000
 					
-				if sport % 1000 == 0 :
+				if sport % 100 == 0 :
 					elapsed_time = time.time() - g_start_time
 					print "[+] Port No. : %d | " % sport, "Time Elapsed :", elapsed_time, "s"
 					graphname = "diagram/level_" + str(current_level) + "_port_" + str(sport) + ".png"
@@ -818,9 +823,9 @@ elif mode1 == 'a' or mode == 'A':
 			# - Compare child dict with parent dict
 			# - If differnt, let it be alive.
 			# If same merge with parent.
-			print parent_sr_msg_dict
-			print '***************************************'
-			print child_sr_dict
+			# print parent_sr_msg_dict
+			# print '***************************************'
+			# print child_sr_dict
 			if compare_ordered_dict(parent_sr_msg_dict, child_sr_dict) == True: # same state, prune state
 				print "[+] -> Same as parent. Merge with state " + parent_numb
 				invalid_states.append([child_state_numb, parent_numb, parent_numb, child_state.spyld + " / " + child_state.rpyld])
