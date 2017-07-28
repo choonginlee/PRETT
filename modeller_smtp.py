@@ -30,7 +30,7 @@ os.system("rm -rf ./diagram/*")
 logging.basicConfig(level=logging.DEBUG, filename="ptmsg_log", filemode="a+", format="%(asctime)-15s %(levelname)-8s %(message)s")
 
 #These informations are prerequisite.
-dport = 21
+dport = 25
 sport = 3000 # find sport here
 delimiter = "\r\n"
 exit_label = "QUIT / 221 Goodbye.\n"
@@ -231,6 +231,54 @@ def expand_states(states_in_the_level, token_db, args_db):
 			if res == 0:
 				disconnect_ftp(rp)
 			
+
+		# # --------- Find valid message with the form of CMD:ARG  ---------
+
+		
+		# for cmd in token_db: # group name
+		# 	for args in args_db: # argument
+		# 		if cmd == "quit":
+		# 			continue
+				
+		# 		multiple_msg = cmd + ': ' + str(args)
+
+		# 		#Start with 3WHS
+		# 		rp = three_handshake(dst_ip, dport, sport)
+
+		# 		# In case of FTP,
+		# 		# If handshake finished, the server sends response.
+		# 		# Send ack and get the last req packet info.
+		# 		ftp_ack = generate_ftp_ack(rp)
+		# 		skt.send(ftp_ack)
+
+		# 		# Take shortcut
+		# 		if mode2 == 'y':
+		# 			rp, res = shortcut(rp, skip_msg_list)
+		# 			# Check if end in shortcut
+		# 			if res == 1:
+		# 				continue
+
+		# 		# Go to the target state
+		# 		is_moving = True
+		# 		for move_msg in move_state_msg:
+		# 			handshake_rp = rp
+		# 			rp, res = send_receive(rp, move_msg)
+		# 			if res == 1: # Over while moving
+		# 				is_moving = False
+		# 				continue
+		# 		is_moving = False
+
+		# 		# res is 0, which means it is not over.
+
+		# 		# set state
+		# 		pm.set_state(str(current_state))
+
+		# 		# Send message and listen
+		# 		rp, res = send_receive(rp, multiple_msg)
+
+		# 		if res == 0:
+		# 			disconnect_ftp(rp)
+
 		# --------- Find valid message with multiple keywords  ---------
 		mul_start = 1
 		single_cmds = []
@@ -292,6 +340,8 @@ def expand_states(states_in_the_level, token_db, args_db):
 
 				if res == 0:
 					disconnect_ftp(rp)
+
+
 
 def disconnect_ftp(rp):
 	# Send Req. QUIT (c) -> Get Resp Goodbye (s) -> get FIN-ACK (s) -> send ACK (c) -> Send FIN-ACK (c) -> get ACK
@@ -692,14 +742,15 @@ if mode1 == 'm':
 elif mode1 == 'a' or mode == 'A':
 	# get all command candidates
 	with open("./tokenfile/total_tokens.txt") as f:
-		#token_db = pickle.load(f)
-		token_db = ['retr', 'data', 'type', 'get', 'size', 'list', 'help', 'mode', 'user', 'port', 'pass', 'opts', 'pwd', 'cwd', 'rest', 'stat', 'acct', 'prot', 'noop', 'pasv']
+		token_db = pickle.load(f)
+		#token_db = ['retr', 'data', 'type', 'get', 'size', 'list', 'help', 'mode', 'user', 'port', 'pass', 'opts', 'pwd', 'cwd', 'rest', 'stat', 'acct', 'prot', 'noop', 'pasv']
 		#token_db = ['user', 'pass', 'pasv', 'opts']
+		token_db = ['data', 'helo', 'rcpt', 'auth', 'mail', 'rset', 'ehlo', 'blabla']
 
 	# get all argument candidates
 	with open("./args/total_args.txt") as a:
 		#args_db = pickle.load(a)
-		args_db = ['anonymous', 'example', '/']
+		args_db = ['PLAIN anonymous', '500', 'AUTH=example@example.com', 'my.kr', 'TO: admin@my.kr', 'FROM: admin@my.kr']
 
 	while True: # for each level
 		start_time = time.time()
@@ -854,10 +905,10 @@ elif mode1 == 'a' or mode == 'A':
 							logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(state_tobe_pruned_num))
 							break
 						else:
-							# print "sibling_state_sr_dict : "
-							# print sibling_state.child_sr_dict
-							# print "child_sr_dict : "
-							# print state_tobe_pruned.child_sr_dict
+							print "sibling_state_sr_dict : "
+							print sibling_state.child_sr_dict
+							print "child_sr_dict : "
+							print state_tobe_pruned.child_sr_dict
 
 							continue
 					else:
@@ -933,8 +984,8 @@ elif mode1 == 'a' or mode == 'A':
 					if currently_unique == True: # real valid state
 						print "[+] -> **** Unique state " + state_tobe_pruned_num + " found ****"
 						valid_states.append([state_tobe_pruned_num, cur_state, state_tobe_pruned_num, state_tobe_pruned.spyld + " / " + state_tobe_pruned.rpyld])
-						# print "mydict : ", state_tobe_pruned.child_sr_dict
-						# print "parentdict : ", parent_sr_msg_dict
+						print "mydict : ", state_tobe_pruned.child_sr_dict
+						print "parentdict : ", parent_sr_msg_dict
 
 						time.sleep(10)
 		
