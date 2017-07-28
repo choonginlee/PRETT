@@ -29,18 +29,23 @@ os.system("rm -rf ./diagram/*")
 
 logging.basicConfig(level=logging.DEBUG, filename="ptmsg_log", filemode="a+", format="%(asctime)-15s %(levelname)-8s %(message)s")
 
+# 23.23.228.46 www.example.com
+# 50.19.84.227 httpbin.org
+# 192.168.1.96 Jaesangsin
+
 dst_ip = sys.argv[1]
 if len(sys.argv) == 3:
 	sport = int(sys.argv[2])
 
 #These informations are prerequisite.
 dport = 80
-sport = 6000 # find sport here
+sport = 3000 # find sport here
 delimiter = "\r\n"
 exit_label = "QUIT / 221 Goodbye.\n"
 num_of_states = 0
 g_start_time = 0
 mul_start = 0
+slowresp_timeout = 10
 new_state = []
 myiface = "enp0s3"
 is_pruning = False
@@ -114,9 +119,10 @@ level_dict = {1 : ['0']} # contains states for each level
 def three_handshake(dst_ip, dport, sport):
 	#Initiate TCP connection - 3 handshaking
 	global skt
-	SYN = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, flags = "S") # SYN
+	seq = 0
+	SYN = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, flags = "S", seq=seq) # SYN
 	SYN_ACK = skt.sr1(SYN, verbose=False, retry=-1) # Listen ACK
-	ACK = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=SYN_ACK.ack, ack=SYN_ACK.seq + 1, flags = "A") # SYN - ACK
+	ACK = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=seq + 1, ack=SYN_ACK.seq + 1, flags = "A") # SYN - ACK
 	skt.send(ACK) # Send ACK, Listen http Response	
 	
 	return SYN_ACK # This is http Response from server
@@ -201,68 +207,116 @@ def send_receive(rp, payload):
 
 def process_response(ans, p, origin_rp):
 	global skt, timeout, sniff_timeout, long_timeout, mul_start, myiface, sport
-	prev_http_packet = None
-	last_rp = None
-	for sp, rp in ans:
-		if rp.haslayer("Raw") and origin_rp.seq != rp.seq:
-			last_rp = rp
+	resp_list = []
+	if len(ans) == 0:
+		# Listen again in short time (save time!)
+		resp_list = sniff(filter = "tcp", iface = myiface, timeout = timeout, count = 10)
+	else:
+		# Convert send-reponse pair to only responses
+		for s, r in ans:
+			resp_list.append(r)
+
+	# Wait for MSG from server
+	raw_resp = None
+	finack_resp = None
+	for resp in resp_list:
+		# return the last http packet. Scapy bug.
+		if resp.haslayer("TCP") and resp.haslayer("Raw"):
+			raw_resp = resp
+		# check if finack
+		elif resp.getlayer("TCP").flags == 0x11:
+			finack_resp = resp
+
+	if raw_resp is None and finack_resp is None:
+		#Case3.
+		print 'Case 3'
+		#Slow response.
+		resp_list = sniff(filter = "tcp", iface = myiface, timeout = slowresp_timeout, count = 2)
+		for resp in resp_list:
 			# return the last http packet. Scapy bug.
-	if last_rp is not None:
-		return send_http_ack_build(p, last_rp)
-	
-	# Listen again in short time (save time!)
-	logging.debug("[!] [port no. %d] Answer length is %d. not yet found http Response." % (sport, len(ans)))
-	rp = sniff(filter = "tcp", iface = myiface, timeout = timeout, count = 10)
-	rp, prev_http_packet = filter_tcp_rp(rp, prev_http_packet)
-	for pkt in rp:
-		if pkt.haslayer("Raw") and origin_rp.seq != pkt.seq:
-			last_rp = pkt
+			# print resp.show()
+			if resp.haslayer("TCP") and resp.haslayer("Raw"):
+				raw_resp = resp
+			# check if finack
+			elif resp.getlayer("TCP").flags == 0x11:
+				finack_resp = resp
 
-	if last_rp is not None:
-		return send_http_ack_build(p, last_rp)
+	if raw_resp is not None:
+		# MSG (Raw) packet found
+		sentpayload = p.getlayer("Raw").load.replace('\r\n', '')
+		rcvdpayload = raw_resp.getlayer("Raw").load.replace('\r\n', '')
 
-	# No http respone in short time!
-	logging.debug("[!] [port no. %d] Answer length is %d. not yet found http Response in short time." % (sport, len(ans)))
-	# Listen for 1 sec.
-	rp = sniff(filter = "tcp", iface = myiface, timeout = 1)
-	rp, prev_http_packet = filter_tcp_rp(rp, prev_http_packet)
+		if rcvdpayload.find('Connection') != -1:
+			rcvdpayload = rcvdpayload[:rcvdpayload.find('Connection')]
+			rcvdpayload = rcvdpayload[:rcvdpayload.find('Date')]
+			rcvdpayload = rcvdpayload[:rcvdpayload.find('Server')]
+		elif rcvdpayload.find('Date') != -1:
+			rcvdpayload = rcvdpayload[:rcvdpayload.find('Date')]
+			rcvdpayload = rcvdpayload[:rcvdpayload.find('Server')]
+		else:
+			rcvdpayload = rcvdpayload[:rcvdpayload.find('Server')]
 
-	# http response obtained (Good)
-	# ACK -> http response (Auth)
-	if len(rp) > 0:
-		for pkt in rp:
-			if pkt.haslayer("Raw") and origin_rp.seq != pkt.seq:
-				last_rp = pkt
+		if finack_resp is None:
+			#print "case1"
+			# Case 1.
+			# Send ACK and disconnect
+			ack_p = generate_http_ack(raw_resp)
+			skt.send(ack_p)
+			if mode1 == 'm':
+				print rcvdpayload
+			else:
+				build_state_machine(pm, pm.model.state, sentpayload, rcvdpayload, 1)
+				return raw_resp, 0 # needs to disconnect later
+		else:
+			# print "Case 2"
+			# Case 2.
+			# Send ACK and FINACK
+			ACK = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=finack_resp.ack, ack=finack_resp.seq, flags = "A") # SYN - ACK
+			skt.send(ACK)
 
-		if last_rp is not None:
-			return send_http_ack_build(p, last_rp)	
-	
-	# Listen 5 sec again!
-	logging.debug("[!] [port no. %d] Answer length is %d. not yet found http Response in short time." % (sport, len(ans)))
-	rp = sniff(filter = "tcp", iface = myiface, timeout = sniff_timeout)
-	rp, prev_http_packet = filter_tcp_rp(rp, prev_http_packet)
+			if mode1 == 'm':
+				print rcvdpayload
+			else:
+				build_state_machine(pm, pm.model.state, sentpayload, rcvdpayload, 2)
+			
+			# Finally, send FIN, ACK to the server
+			FIN_ACK = generate_http_fin_ack(finack_resp)
+			skt.send(FIN_ACK)
 
-	# http response obtained (Good)
-	# ACK -> http response (Auth)
-	if len(rp) > 0:
-		for pkt in rp:
-			if pkt.haslayer("Raw") and origin_rp.seq != pkt.seq:
-				last_rp = pkt
+			sport = sport + 1
+			if sport > 60000:
+				sport = 3000
 
-		if last_rp is not None:
-			return send_http_ack_build(p, last_rp)	
+			return FIN_ACK, 1
 
-	logging.debug("[+] [port no. %d] Waited for %d seconds... No http response! Timeout!" % (sport, sniff_timeout))
-	# Manually build
-	build_state_machine(pm, pm.model.state, p.getlayer("Raw").load.replace('\r\n', ''), "Timeout")
-	# Poceed with the first response packet
-	return ans[0][1]
+	else:
+		# Crash?
+		print "Case 4"
+		logging.debug("[!] [port no. %d] No raw response. Possibly crash." % (sport))
+		if len(resp_list) == 0:
+			rp = origin_rp
+		else:
+			for resp in resp_list:
+				rp = resp
+		disconnect_http(rp)
+		return rp, 1
+
 
 def send_http_ack_build(sp, rp):
 	global skt, pm, mul_start, mode1
 	sentpayload = sp.getlayer("Raw").load.replace('\r\n', '')
 	rcvdpayload = rp.getlayer("Raw").load.replace('\r\n', '')
-	rcvdpayload = rcvdpayload[:rcvdpayload.find('Date')]
+
+	if rcvdpayload.find('Connection') != -1:
+			rcvdpayload = rcvdpayload[:rcvdpayload.find('Connection')]
+			rcvdpayload = rcvdpayload[:rcvdpayload.find('Date')]
+			rcvdpayload = rcvdpayload[:rcvdpayload.find('Server')]
+	elif rcvdpayload.find('Date') != -1:
+		rcvdpayload = rcvdpayload[:rcvdpayload.find('Date')]
+		rcvdpayload = rcvdpayload[:rcvdpayload.find('Server')]
+	else:
+		rcvdpayload = rcvdpayload[:rcvdpayload.find('Server')]
+
 	ack_p = generate_http_ack(rp)
 	skt.send(ack_p)
 	if mode1 == 'm' :
@@ -273,7 +327,7 @@ def send_http_ack_build(sp, rp):
 
 def check_http_resp(pkt):
 	global start_time
-	if pkt.haslayer(Raw) :
+	if pkt.haslayer(Raw):
 		return True
 	else :
 		return False
@@ -313,30 +367,33 @@ def generate_http_fin_ack(rp):
 	p = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=rp.ack, ack=rp.seq+1, flags = 0x11)
 	return p
 
-def generate_http_msg(payload, rp) :
+def generate_http_msg(payload, rp):
 	tcp_seg_len = get_tcp_seg_len(rp)
-	p = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=rp.ack, ack=rp.seq + 1, flags = 'A')/Raw(payload + ' / HTTP/1.1' + delimiter + 'Host: ' + dst_ip + delimiter + delimiter)
+	p = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=rp.ack, ack=rp.seq + 1, flags = 'A')/(payload + ' HTTP/1.1' + delimiter + 'Host:' + str(dst_ip) + delimiter + delimiter)
 	return p
 
-def build_state_machine(sm, crnt_state, spyld, rpyld):
+
+def build_state_machine(sm, crnt_state, spyld, rpyld, case_num):
 	# sm : state machine, crnt_state : current state, payload : response packet payload 
 	# Build and fix a state machine based on the response
 	global num_of_states, transition_info, state_list, cur_state, new_state, is_pruning, is_moving, mul_start, current_level, skip_msg_list
 
 	send_payload = spyld.replace('\r\n', '')
+	send_payload = send_payload[:send_payload.find(' HTTP/1.1')]
 	command = send_payload.split()[0]
 
 	#In case of shortcut, ignore the shortcut messages
-	# for msg in skip_msg_list:
-	# 	if send_payload == msg:
-	# 		return
+	for msg in skip_msg_list:
+		if send_payload == msg:
+			return
 
 	#Check if the response already seen before
 	#if mul_start == 0:
 	# search each transition label in transition info data structure
 	for t in transition_info.keys(): # No!
 		if transition_info[t][0] == crnt_state:
-			if re.search(rpyld, t):
+			spyld_cmd = spyld.split(' ')[0]
+			if re.search(spyld_cmd, t) and re.search(rpyld, t):
 				# if it is already seen,
 				# - No need to make new state
 				# - Find the corresponding src & dst state
@@ -351,7 +408,7 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	#If not seen before,
 	# - Add a new state
 	# - Add a new transition from current state
-	if is_pruning == False and is_moving == False:
+	if is_pruning == False and is_moving == False and case_num != 2:
 		num_of_states = num_of_states + 1
 		dst_state = str(num_of_states)
 
@@ -363,6 +420,15 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 	else:
 		t_label = send_payload + " / " + rpyld
 
+	if case_num == 2:
+		# Abrupt disconnection from server case
+		# Set transition from this state to initial state
+		dst_state = '0'
+		transition_info[t_label] = [crnt_state, dst_state, 1]
+		logging.info("[+] [port no. %d] State " % sport + dst_state + " added with transition " + t_label + " (Case 2)")
+		pm.add_transition(t_label + "\n", source = crnt_state, dest = dst_state)
+		return
+
 	if is_pruning == False and is_moving == False:
 
 		if mul_start == 0:
@@ -370,14 +436,17 @@ def build_state_machine(sm, crnt_state, spyld, rpyld):
 		else:
 			mul_transition_info[t_label] = [crnt_state, dst_state, 1] # add transition info
 
+		# Add child state for each parent
+		# print str(cur_state)
 		state_list.add_state(State(str(num_of_states), parent=str(cur_state), spyld=str(send_payload), rpyld=str(rpyld), group=str(command)))
-		print "[+} State added : " + str(num_of_states)
+		print "[+] State added (%s -> %d) : " % (cur_state, num_of_states) + str(num_of_states)
+		logging.info("[+] [port no. %d] State (%s -> %d)" % (sport, cur_state, num_of_states) + " added with transition " + t_label)
+
 		if level_dict.get(current_level+1) is None:
 			level_dict[current_level+1] = [str(num_of_states)]
 		else:
 			level_dict[current_level+1].append(str(num_of_states))
-		
-		logging.info("[+] [port no. %d] State " % sport + dst_state + " added with transition " + t_label)
+
 
 def compare_ordered_dict(dict1, dict2):
 	for i,j in zip(dict1.items(), dict2.items()):
@@ -525,14 +594,14 @@ def expand_states(states_in_the_level, token_db, args_db):
 				if msg == "quit":
 					continue
 				
-				multiple_msg = msg + ' /' + str(args)
+				multiple_msg = msg + ' ' + str(args)
 
-				#Start with 3WHS	
+				#Start with 3WHS
 				rp = three_handshake(dst_ip, dport, sport)
 
 				#If handshake finished, the server sends response. Send ack and get the last req packet info.
-				http_ack = generate_http_ack(rp)
-				skt.send(http_ack)
+				# http_ack = generate_http_ack(rp)
+				# skt.send(http_ack)
 
 				# Take shortcut
 				# rp = shortcut(rp, skip_msg_list)
@@ -540,7 +609,7 @@ def expand_states(states_in_the_level, token_db, args_db):
 				is_moving = True
 				for mv_msg in move_state_msg:
 					handshake_rp = rp
-					rp = send_receive(rp, mv_msg)
+					rp, res = send_receive(rp, mv_msg)
 				is_moving = False
 
 				# set state
@@ -548,17 +617,18 @@ def expand_states(states_in_the_level, token_db, args_db):
 
 				temp_rp = rp
 				# Send multiple message and listen
-				rp = send_receive(rp, multiple_msg)
+				rp, res = send_receive(rp, multiple_msg)
 
 				# Finish TCP connection
-				disconnect_http(rp)
+				if res == 0:
+					disconnect_http(rp)
+					sport = sport + 1
+					if sport > 60000:
+						sport = 3000
 
 				#Initialize current state as 0
 				cs = 0
 
-				sport = sport + 1
-				if sport > 60000:
-					sport = 3000
 
 def shortcut(rp, skip_msg_list):
 	# Take messages to skip. Using the messages, 
@@ -570,7 +640,7 @@ def shortcut(rp, skip_msg_list):
 	
 	for msg in skip_msg_list:
 		handshake_rp = rp
-		rp = send_receive(rp, msg)
+		rp, res = send_receive(rp, msg)
 
 	return rp
 
@@ -585,8 +655,8 @@ if mode1 == 'm':
 	while True:
 		rp = three_handshake(dst_ip, dport, sport)
 		#Next Ack no. calculation : last seq + prev. tcp payload len
-		http_ack = generate_http_ack(rp)
-		send(http_ack)
+		# http_ack = generate_http_ack(rp)
+		# send(http_ack)
 		print "[ ] Enter message. If you want to stop, type \"quit\""
 		
 		for i in range(100) :
@@ -613,7 +683,7 @@ elif mode1 == 'a' or mode == 'A':
 	with open("./tokenfile/total_tokens.txt") as f:
 		# token_db = pickle.load(f)
 		# token_db = ['retr', 'data', 'type', 'get', 'size', 'list', 'help', 'mode', 'user', 'port', 'pass', 'opts', 'pwd', 'cwd', 'rest', 'stat', 'acct', 'prot', 'noop', 'pasv']
-		token_db = ['get', 'post', 'head', 'put', 'delete', 'trace', 'connect', 'options']
+		token_db = ['GET', 'POST', 'HEAD', 'PUT', "DELETE", 'TRACE', 'CONNECT', 'OPTIONS']
 
 	# get all argument candidates
 	with open("./args/total_args.txt") as a:
@@ -634,7 +704,7 @@ elif mode1 == 'a' or mode == 'A':
 		
 		### Pruning ###
 		is_pruning = True
-
+		
 		# states in the last level to be tested for pruning
 		states_candidate = level_dict.get(current_level+1, [])
 		if states_candidate == []: # there is no valid sub state. last level.
@@ -659,9 +729,8 @@ elif mode1 == 'a' or mode == 'A':
 				child = state_list.find_state(state)
 				if child.parent == parent_numb:
 					parent_sr_msg_dict[child.spyld] = child.rpyld
-					
-			state_list.find_state(parent_numb).sr_dict = parent_sr_msg_dict
 
+			state_list.find_state(parent_numb).sr_dict = parent_sr_msg_dict
 			# For each state, store every message to get to the state itself.
 			prune_move_state_msg =[]
 			prune_current_state = child_state_numb
@@ -680,39 +749,58 @@ elif mode1 == 'a' or mode == 'A':
 			# Change the order
 			prune_move_state_msg.reverse()
 
+			# print prune_move_state_msg
+
 			parent_spyld = parent_sr_msg_dict.keys()
 
 			# every payload sent in parent nodes
 			for msg_sent in parent_spyld:
+				# print msg_sent
 				if msg_sent == "quit":
 					continue
-					
+				
 				#Start with 3WHS
 				rp = three_handshake(dst_ip, dport, sport)
 
 				#If handshake finished, the server sends response. Send ack and get the last req packet info.
-				http_ack = generate_http_ack(rp)
-				skt.send(http_ack)
+				# http_ack = generate_http_ack(rp)
+				# skt.send(http_ack)
 
 				# Take shortcut
 				# rp = shortcut(rp, skip_msg_list)
 
 				for msg in prune_move_state_msg:
 					logging.info("[+] [port no. %d] Prune Move (depth %d -> %d) msg : " % (sport, current_level, current_level+1) + str(msg))
-					rp = send_receive(rp, msg)
+					rp, res = send_receive(rp, msg)
 
 				# Send message and listen
 				logging.info("[+] [port no. %d] Prune Send msg : " % sport + str(msg_sent))
 
 				origin_rp = rp
-				rp = send_receive(rp, msg_sent)
+				rp, res = send_receive(rp, msg_sent)
 				
 				# if normal, add to child_sr_dict
 				if compare_http_packet(rp, origin_rp) is False:
-					child_sr_dict[str(msg_sent)] = rp.getlayer("Raw").load.replace('\r\n', '')
-					
+					if rp.getlayer("Raw") is not None:
+						rcvdpayload = rp.getlayer("Raw").load.replace('\r\n', '')
+
+						if rcvdpayload.find('Connection') != -1:
+								rcvdpayload = rcvdpayload[:rcvdpayload.find('Connection')]
+								rcvdpayload = rcvdpayload[:rcvdpayload.find('Date')]
+								rcvdpayload = rcvdpayload[:rcvdpayload.find('Server')]
+						elif rcvdpayload.find('Date') != -1:
+							rcvdpayload = rcvdpayload[:rcvdpayload.find('Date')]
+							rcvdpayload = rcvdpayload[:rcvdpayload.find('Server')]
+						else:
+							rcvdpayload = rcvdpayload[:rcvdpayload.find('Server')]
+
+						child_sr_dict[str(msg_sent)] = rcvdpayload
+					else:
+						res = 1
+				
 				# Finish TCP connection
-				disconnect_http(rp)
+				if res == 0:
+					disconnect_http(rp)
 
 				#Initialize current state as 0
 				cs = 0
@@ -721,7 +809,7 @@ elif mode1 == 'a' or mode == 'A':
 				if sport > 60000:
 					sport = 3000
 					
-				if sport % 1000 == 0 :
+				if sport % 100 == 0 :
 					elapsed_time = time.time() - g_start_time
 					print "[+] Port No. : %d | " % sport, "Time Elapsed :", elapsed_time, "s"
 					graphname = "diagram/level_" + str(current_level) + "_port_" + str(sport) + ".png"
@@ -735,11 +823,14 @@ elif mode1 == 'a' or mode == 'A':
 			# - Compare child dict with parent dict
 			# - If differnt, let it be alive.
 			# If same merge with parent.
+			# print parent_sr_msg_dict
+			# print '***************************************'
+			# print child_sr_dict
 			if compare_ordered_dict(parent_sr_msg_dict, child_sr_dict) == True: # same state, prune state
 				print "[+] -> Same as parent. Merge with state " + parent_numb
 				invalid_states.append([child_state_numb, parent_numb, parent_numb, child_state.spyld + " / " + child_state.rpyld])
 				logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(child_state_numb))
-			else: 
+			else:
 				print "[-] -> Differnt from parent. Now check with siblings!"
 				# STEP 2. Sibling
 				# - Compare its child dict with other childs' dict

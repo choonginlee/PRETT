@@ -18,7 +18,7 @@ most_tokens = ['data', 'so', 'to', 'got', 'end', 'free', 'name', 'version', 'fro
 user_id = ['anonymous', 'test', 'root']
 ip_addr = ['127.0.0.1', '192.168.0.1', '10.0.0.1']
 file_path = ['/']
-urls = ['http://www.example.com']
+urls = ['http://www.example.com', '/index.php', '/index.html']
 unknown = ['list', 'I', 'A', 'TLS']
 rand_numb = []
 
