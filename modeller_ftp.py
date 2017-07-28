@@ -171,19 +171,7 @@ def expand_states(states_in_the_level, token_db, args_db):
 		print "[+] Current_state : " + str(current_state)
 		cur_state = str(current_state)
 		
-		# Set state moving message for current state
-		move_state_msg = []
-		target_state = current_state
-		while True:
-			parent_state = state_list.get_state_by_num(target_state).parent
-			if parent_state is not None:
-				move_state_msg.append(state_list.get_state_by_num(target_state).spyld)
-				target_state = parent_state
-				continue
-			else: # root node
-				break
-		
-		move_state_msg.reverse()
+		move_state_msg = find_path_of_the_state(target_state)
 
 		# --------- Find command with single command  ---------
 		mul_start = 0
@@ -656,6 +644,84 @@ def shortcut(rp, skip_msg_list):
 
 	return rp, res
 
+def find_path_of_the_state(target_state_numb):
+
+	global state_list
+
+	move_state_msg = []
+	target_state = target_state_numb
+	while True:
+		parent_state = state_list.get_state_by_num(target_state).parent
+		if parent_state is not None:
+			move_state_msg.append(state_list.get_state_by_num(target_state).spyld)
+			target_state = parent_state
+			continue
+		else: # root node
+			break
+	
+	move_state_msg.reverse()
+
+	return move_state_msg
+
+
+# target means something to be compared!!!!!!!!!
+def move_and_find_sr(target_state_numb, target_sr_dict):
+
+	# Set state moving message for current state
+
+	move_state_msg = find_path_of_the_state(target_state_numb)
+
+	child_sr_dict = OrderedDict()
+
+	parent_spyld = target_sr_dict.keys()
+
+	for msg in parent_spyld:
+		msg = str(msg)
+
+		if msg == "quit":
+			continue
+
+		#Start with 3WHS
+		rp = three_handshake(dst_ip, dport, sport)
+
+		# In case of FTP,
+		# If handshake finished, the server sends response.
+		# Send ack and get the last req packet info.
+		ftp_ack = generate_ftp_ack(rp)
+		skt.send(ftp_ack)
+		
+		# Take shortcut
+		# if mode2 == 'y':
+		# 	rp, res = shortcut(rp, skip_msg_list)
+		# 	# Check if end in shortcut
+		# 	if res == 1:
+		# 		continue
+
+		# Go to the target state
+		is_moving = True
+		for move_msg in move_state_msg:
+			handshake_rp = rp
+			rp, res = send_receive(rp, move_msg)
+			# if res == 1: # Over while moving
+			# 	is_moving = False
+			# 	continue
+		is_moving = False
+
+		# res is 0, which means it is not over.
+
+		# set state
+		# pm.set_state(str(current_state))
+
+		# Send message and listen
+		rp, res = send_receive(rp, msg)
+
+		child_sr_dict[msg] = rp.getlayer("Raw").load.replace('\r\n', '')
+
+		if res == 0:
+			disconnect_ftp(rp)
+
+	return child_sr_dict
+
 
 #################################################
 ################ MAIN PART #####################
@@ -742,31 +808,20 @@ elif mode1 == 'a' or mode == 'A':
 					parent_sr_msg_dict[child.spyld] = child.rpyld
 
 			state_list.get_state_by_num(parent_numb).child_sr_dict = parent_sr_msg_dict
-
-			# For each state, store every message to get to the state itself.
-			prune_move_state_msg =[]
+			
 			prune_target_state = state_tobe_pruned_num
 			child_sr_dict = OrderedDict()
-			
-			while True:
-				prune_current_parent = state_list.get_state_by_num(prune_target_state).parent
-				if prune_current_parent is not None:
-					prune_move_state_msg.append(state_list.get_state_by_num(prune_target_state).spyld)
-					prune_target_state = prune_current_parent
-					continue
-				else: # root node
-					break
-			
-			# Change the order
-			prune_move_state_msg.reverse()
 
+			# For each state, store every message to get to the state itself.
+			prune_move_state_msg = find_path_of_the_state(prune_target_state)
+			
 			parent_spyld = parent_sr_msg_dict.keys()
 
 			# every payload sent in parent nodes
 			for msg_sent in parent_spyld:
 				if msg_sent == "quit":
 					continue
-
+					
 				#Start with 3WHS
 				rp = three_handshake(dst_ip, dport, sport)
 
@@ -883,6 +938,9 @@ elif mode1 == 'a' or mode == 'A':
 								if first_cousin.parent != state_tobe_pruned.parent: # siblings which have different parent
 									print "[-] -> compare state " + state_tobe_pruned.numb + " with other sibling state " + str(valid_state_numb) + " in same level"
 									# compare child_dict between sibling and current state
+
+									first_cousin.child_sr_dict = move_and_find_sr(valid_state_numb, state_tobe_pruned.child_sr_dict)
+
 									if compare_ordered_dict(first_cousin.child_sr_dict, state_tobe_pruned.child_sr_dict) == True: # same state! Merge with sibling!
 										invalid_states.append([state_tobe_pruned_num, state_tobe_pruned.parent, valid_state_numb, state_tobe_pruned.spyld + " / " + state_tobe_pruned.rpyld])
 										currently_unique = False
@@ -907,6 +965,9 @@ elif mode1 == 'a' or mode == 'A':
 								if target_numb_in_level != state_tobe_pruned.parent:
 									print "[-] -> compare state " + state_tobe_pruned.numb + " with ancestor state " + target_numb_in_level
 									parent_state_in_level = state_list.get_state_by_num(target_numb_in_level)
+
+									parent_state_in_level.child_sr_dict = move_and_find_sr(target_numb_in_level, state_tobe_pruned.child_sr_dict)
+
 									# compare child_dict between prev and current state
 									if compare_ordered_dict(parent_state_in_level.child_sr_dict, state_tobe_pruned.child_sr_dict) == True: # same state! Add transition to parent_state_in_level!
 										invalid_states.append([state_tobe_pruned_num, state_tobe_pruned.parent, target_numb_in_level, state_tobe_pruned.spyld + " / " + state_tobe_pruned.rpyld])
