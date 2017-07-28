@@ -181,7 +181,7 @@ def expand_states(states_in_the_level, token_db, args_db):
 		mul_start = 0
 		for token in token_db:
 			token = str(token)
-
+			
 			if token == "quit":
 				continue
 
