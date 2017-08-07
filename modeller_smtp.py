@@ -41,6 +41,12 @@ new_state = []
 myiface = "ens34"
 is_pruning = False
 is_moving = False
+is_data = False
+is_data_quit = False
+is_mailfrom = False
+is_rcptto = False
+is_content_written = False
+
 
 cur_state = '0'
 timeout = 0.01
@@ -121,11 +127,16 @@ level_dict = {1 : ['0']} # contains states for each level
 
 def three_handshake(dst_ip, dport, sport):
 	#Initiate TCP connection - 3 handshaking
-	global skt
+	global skt, is_content_written, is_mailfrom, is_rcptto, is_data
 	SYN = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, flags = "S") # SYN
 	SYN_ACK = skt.sr1(SYN, verbose=False, retry=-1) # Listen ACK
 	ACK = IP(dst=dst_ip)/TCP(sport = sport, dport = dport, seq=SYN_ACK.ack, ack=SYN_ACK.seq + 1, flags = "A") # SYN - ACK
 	RESPONSE = skt.sr1(ACK, verbose=False, retry=-1) # Send ACK, Listen FTP Response
+
+	is_content_written = False
+	is_mailfrom = False
+	is_rcptto = False
+	is_data = False
 
 	return RESPONSE # This is FTP Response from server
 
@@ -164,7 +175,7 @@ def generate_ftp_msg(payload, rp) :
 
 
 def expand_states(states_in_the_level, token_db, args_db):
-	global mode2, sport, dport, dst_ip, is_moving, is_pruning, mul_start, cur_state
+	global mode2, sport, dport, dst_ip, is_moving, is_pruning, mul_start, cur_state, is_mailfrom, is_rcptto, is_data
 
 	is_pruning = False
 	for current_state in states_in_the_level:
@@ -193,6 +204,9 @@ def expand_states(states_in_the_level, token_db, args_db):
 			if token == "quit":
 				continue
 
+			# if current_state == 35 or current_state == 43:
+			# 	token = token + '\r\n.'
+
 			#Start with 3WHS
 			rp = three_handshake(dst_ip, dport, sport)
 
@@ -213,11 +227,13 @@ def expand_states(states_in_the_level, token_db, args_db):
 			# Go to the target state
 			is_moving = True
 			for move_msg in move_state_msg:
-				handshake_rp = rp
 				rp, res = send_receive(rp, move_msg)
-				# if res == 1: # Over while moving
-				# 	is_moving = False
-				# 	continue
+				if move_msg.find("mail FROM") >= 0:
+					is_mailfrom = True
+				if move_msg.find("rcpt TO") >= 0:
+					is_rcptto = True
+				if move_msg == 'data' or move_msg == 'DATA':
+		 			is_data = True
 			is_moving = False
 
 			# res is 0, which means it is not over.
@@ -225,7 +241,6 @@ def expand_states(states_in_the_level, token_db, args_db):
 			# set state
 			pm.set_state(str(current_state))
 
-			# Send message and listen
 			rp, res = send_receive(rp, token)
 
 			if res == 0:
@@ -303,6 +318,9 @@ def expand_states(states_in_the_level, token_db, args_db):
 					continue
 				
 				multiple_msg = msg + ' ' + str(args)
+				
+				# if current_state == 35 or current_state == 43:
+				# 	multiple_msg = msg +  ' ' + str(args) + '\r\n.'
 
 				#Start with 3WHS
 				rp = three_handshake(dst_ip, dport, sport)
@@ -323,11 +341,13 @@ def expand_states(states_in_the_level, token_db, args_db):
 				# Go to the target state
 				is_moving = True
 				for move_msg in move_state_msg:
-					handshake_rp = rp
 					rp, res = send_receive(rp, move_msg)
-					if res == 1: # Over while moving
-						is_moving = False
-						continue
+					if move_msg.find("mail FROM") >= 0:
+						is_mailfrom = True
+					if move_msg.find("rcpt TO") >= 0:
+						is_rcptto = True
+					if move_msg == 'data' or move_msg == 'DATA':
+			 			is_data = True
 				is_moving = False
 
 				# res is 0, which means it is not over.
@@ -346,7 +366,19 @@ def expand_states(states_in_the_level, token_db, args_db):
 def disconnect_ftp(rp):
 	# Send Req. QUIT (c) -> Get Resp Goodbye (s) -> get FIN-ACK (s) -> send ACK (c) -> Send FIN-ACK (c) -> get ACK
 	start_time = time.time()
-	global timeout, skt, cs, sport, finack_timeout, sniff_timeout
+	global timeout, skt, cs, sport, finack_timeout, sniff_timeout, is_data_quit
+
+	resp_list = []
+	if is_data_quit == True:
+		time.sleep(timeout)
+		tmp_p = generate_ftp_msg("end\r\n.", rp)
+		ans, unans = skt.sr(tmp_p, multi=1, timeout=timeout, verbose=False)
+		for s, r in ans:
+			resp_list.append(r)
+		for resp in resp_list:
+			if resp.haslayer("TCP") and resp.haslayer("Raw"):
+				rp = resp
+		is_data_quit = False
 
 	temp_rp = rp
 	p = generate_ftp_msg("quit", rp)
@@ -407,20 +439,41 @@ def disconnect_ftp(rp):
 
 def send_receive(rp, payload):
 	# SEND Req. -> Get ACK -> GET Rep. -> Send ACK (normal TCP-based protocol)
-	global skt, timeout, sniff_timeout, long_timeout, mul_start, myiface, sport
+	global skt, timeout, sniff_timeout, is_content_written, is_moving, is_mailfrom, is_rcptto, is_data, is_data_quit
 	origin_rp = rp
 	
-	# Generate message with tokens
-	p = generate_ftp_msg(payload, rp)
-	ans, unans = skt.sr(p, multi=1, timeout=timeout, verbose=False)
-	
+	if is_mailfrom == True and is_rcptto == True and is_data == True:
+		#print "send_after_data called. port no. %d" % sport
+		if is_content_written == False:
+			p = generate_ftp_msg(payload+'\r\n.', rp)
+			is_content_written = True
+		else:
+			p = generate_ftp_msg(payload, rp)
+		ans, unans = skt.sr(p, multi=1, timeout=timeout, verbose=False)
+		
+	else:
+		# Generate message with tokens
+		p = generate_ftp_msg(payload, rp)
+		ans, unans = skt.sr(p, multi=1, timeout=timeout, verbose=False)
+
+	if is_moving == False and is_mailfrom == True and is_rcptto == True and is_data == False and payload == "data":
+		#print "Data and quit... port no. %d" % sport
+		is_data_quit = True
+
 	# Filter out only TCP packets
 	ans = filter_tcp_ans(ans)
 	return process_response(p, ans, origin_rp)
 
+def send_after_data(rp):
+	global skt, timeout
+	p = generate_ftp_msg("\r\n.", rp)
+	ans, unans = skt.sr(p, multi=1, timeout=timeout, verbose=False)
+	ans = filter_tcp_ans(ans)
+	return ans
+
 def process_response(p, ans, origin_rp):
 	# e
-	global skt, timeout, sniff_timeout, long_timeout, mul_start, myiface, sport
+	global skt, timeout, sniff_timeout, long_timeout, mul_start, myiface, sport, is_data_quit
 
 	"""
 	There could be 3 cases of response in case of FTP.
@@ -488,6 +541,10 @@ def process_response(p, ans, origin_rp):
 		# MSG (Raw) packet found
 		sentpayload = p.getlayer("Raw").load.replace('\r\n', '')
 		rcvdpayload = raw_resp.getlayer("Raw").load.replace('\r\n', '')
+
+		if rcvdpayload.find("queue") >= 0:
+			rcvdpayload = rcvdpayload[0:23]
+
 		if finack_resp is None:
 			#print "case1"
 			# Case 1.
@@ -496,6 +553,7 @@ def process_response(p, ans, origin_rp):
 			skt.send(ack_p)
 			if mode1 == 'm':
 				print rcvdpayload
+				return raw_resp, 0 
 			else:
 				build_state_machine(pm, pm.model.state, sentpayload, rcvdpayload, 1)
 				return raw_resp, 0 # needs to disconnect later
@@ -646,9 +704,9 @@ def compare_ordered_dict(dict1, dict2):
 	for i,j in zip(dict1.items(), dict2.items()):
 		s1, r1 = i
 		s2, r2 = j
-		if len(r1) > 40 and len(r2) > 40:
-			i = (s1, r1[0:41])
-			j = (s2, r2[0:41])
+		if len(r1) > 23 and len(r2) > 23:
+			i = (s1, r1[0:23])
+			j = (s2, r2[0:23])
 			#print i, j
 		if i != j:
 			return False
@@ -707,6 +765,89 @@ def shortcut(rp, skip_msg_list):
 	return rp, res
 
 
+def find_path_of_the_state(target_state_numb):
+
+	global state_list
+
+	move_state_msg = []
+	target_state = target_state_numb
+	while True:
+		parent_state = state_list.get_state_by_num(target_state).parent
+		if parent_state is not None:
+			move_state_msg.append(state_list.get_state_by_num(target_state).spyld)
+			target_state = parent_state
+			continue
+		else: # root node
+			break
+	
+	move_state_msg.reverse()
+
+	return move_state_msg
+
+
+# target means something to be compared!!!!!!!!!
+def move_and_find_sr(target_state_numb, target_sr_dict):
+	global is_mailfrom, is_rcptto, is_data
+	# Set state moving message for current state
+
+	move_state_msg = find_path_of_the_state(target_state_numb)
+
+	child_sr_dict = OrderedDict()
+
+	parent_spyld = target_sr_dict.keys()
+
+	for msg in parent_spyld:
+		msg = str(msg)
+
+		if msg == "quit":
+			continue
+
+		#Start with 3WHS
+		rp = three_handshake(dst_ip, dport, sport)
+
+		# In case of FTP,
+		# If handshake finished, the server sends response.
+		# Send ack and get the last req packet info.
+		ftp_ack = generate_ftp_ack(rp)
+		skt.send(ftp_ack)
+		
+		# Take shortcut
+		# if mode2 == 'y':
+		# 	rp, res = shortcut(rp, skip_msg_list)
+		# 	# Check if end in shortcut
+		# 	if res == 1:
+		# 		continue
+
+		# Go to the target state
+		is_moving = True
+		for move_msg in move_state_msg:
+			handshake_rp = rp
+			rp, res = send_receive(rp, move_msg)
+			if move_msg.find("mail FROM") >= 0:
+				is_mailfrom = True
+			if move_msg.find("rcpt TO") >= 0:
+				is_rcptto = True
+			if move_msg == 'data' or move_msg == 'DATA':
+				is_data = True
+			# if res == 1: # Over 
+		is_moving = False
+
+		# res is 0, which means it is not over.
+
+		# set state
+		# pm.set_state(str(current_state))
+
+		# Send message and listen
+		rp, res = send_receive(rp, msg)
+
+		child_sr_dict[msg] = rp.getlayer("Raw").load.replace('\r\n', '')
+
+		if res == 0:
+			disconnect_ftp(rp)
+
+	return child_sr_dict
+
+
 #################################################
 ################ MAIN PART #####################
 
@@ -723,6 +864,9 @@ if mode1 == 'm':
 		
 		for i in range(100) :
 			payload = raw_input("[!] payload? : ")
+			if is_data == True:
+				payload = payload + '\r\n.'
+				is_data = False
 			if payload == "quit":
 				disconnect_ftp(rp)
 				break
@@ -730,7 +874,9 @@ if mode1 == 'm':
 			ans, unans = sr(p, multi=1, timeout=timeout, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
 			#ans = filter_tcp_ans(ans)
 			
-			rp = process_response(ans, p, rp)
+			rp, garbage = process_response(p, ans, rp)
+			if payload == "DATA" or payload == "data":
+				is_data = True
 
 		isquit = raw_input("[!] Are you sure to quit the program? (y/n)")
 		if isquit == "y":
@@ -742,7 +888,7 @@ if mode1 == 'm':
 elif mode1 == 'a' or mode == 'A':
 	# get all command candidates
 	with open("./tokenfile/total_tokens.txt") as f:
-		token_db = pickle.load(f)
+		#token_db = pickle.load(f)
 		#token_db = ['retr', 'data', 'type', 'get', 'size', 'list', 'help', 'mode', 'user', 'port', 'pass', 'opts', 'pwd', 'cwd', 'rest', 'stat', 'acct', 'prot', 'noop', 'pasv']
 		#token_db = ['user', 'pass', 'pasv', 'opts']
 		token_db = ['data', 'helo', 'rcpt', 'auth', 'mail', 'rset', 'ehlo', 'blabla']
@@ -750,7 +896,7 @@ elif mode1 == 'a' or mode == 'A':
 	# get all argument candidates
 	with open("./args/total_args.txt") as a:
 		#args_db = pickle.load(a)
-		args_db = ['PLAIN anonymous', '500', 'AUTH=example@example.com', 'my.kr', 'TO: admin@my.kr', 'FROM: admin@my.kr']
+		args_db = ['PLAIN', '500', 'AUTH=example@example.com', 'my.kr', 'TO: admin@my.kr', 'FROM: admin@my.kr']
 
 	while True: # for each level
 		start_time = time.time()
@@ -779,7 +925,7 @@ elif mode1 == 'a' or mode == 'A':
 		for state_tobe_pruned_num in states_candidate_for_prune:
 			state_tobe_pruned = state_list.get_state_by_num(state_tobe_pruned_num)
 			cur_state = str(state_tobe_pruned_num)
-			print '[+] Pruning in ' + str(state_tobe_pruned_num)
+			print '[+] Pruning in '  + str(state_tobe_pruned_num) + " port : %d" % sport
 			logging.info("[+] === [port no. %d] PRUNING starts in state " % sport + str(state_tobe_pruned_num) + " ===")
 
 			# Get the parent name of the child state
@@ -795,21 +941,11 @@ elif mode1 == 'a' or mode == 'A':
 			state_list.get_state_by_num(parent_numb).child_sr_dict = parent_sr_msg_dict
 
 			# For each state, store every message to get to the state itself.
-			prune_move_state_msg =[]
+			
 			prune_target_state = state_tobe_pruned_num
 			child_sr_dict = OrderedDict()
 			
-			while True:
-				prune_current_parent = state_list.get_state_by_num(prune_target_state).parent
-				if prune_current_parent is not None:
-					prune_move_state_msg.append(state_list.get_state_by_num(prune_target_state).spyld)
-					prune_target_state = prune_current_parent
-					continue
-				else: # root node
-					break
-			
-			# Change the order
-			prune_move_state_msg.reverse()
+			prune_move_state_msg = find_path_of_the_state(prune_target_state)
 
 			parent_spyld = parent_sr_msg_dict.keys()
 
@@ -833,22 +969,32 @@ elif mode1 == 'a' or mode == 'A':
 					if res == 1:
 						continue
 
+				is_moving = True
 				for msg in prune_move_state_msg:
 					logging.info("[+] [port no. %d] Prune Move (depth %d -> %d) msg : " % (sport, current_level, current_level+1) + str(msg))
 					rp, res = send_receive(rp, msg)
+					if msg.find("mail FROM") >= 0:
+						is_mailfrom = True
+					if msg.find("rcpt TO") >= 0:
+						is_rcptto = True
+					if msg == 'data' or msg == 'DATA':
+						is_data = True
+				is_moving = False
 
 				# Send message and listen
 				logging.info("[+] [port no. %d] Prune Send msg : " % sport + str(msg_sent))
 
 				origin_rp = rp
-				rp, res = send_receive(rp, msg_sent)
 
-				if res == 0:
-					disconnect_ftp(rp)
+				rp, res = send_receive(rp, msg_sent)
 				
 				# if normal, add to child_sr_dict
 				if compare_ftp_packet(rp, origin_rp) is False:
 					child_sr_dict[str(msg_sent)] = rp.getlayer("Raw").load.replace('\r\n', '')
+
+				if res == 0:
+					disconnect_ftp(rp)
+				
 
 				#Initialize current state as 0
 				cs = 0
@@ -875,14 +1021,16 @@ elif mode1 == 'a' or mode == 'A':
 			# If same merge with parent.
 			if compare_ordered_dict(parent_sr_msg_dict, child_sr_dict) == True: # same state, prune state
 				print "[+] -> Same as parent. Merge with state " + parent_numb
+				if current_level == 5:
+					print "parent_sr_msg_dict : "
+					print parent_sr_msg_dict
+					print "child_sr_dict : "
+					print child_sr_dict 
+
 				invalid_states.append([state_tobe_pruned_num, parent_numb, parent_numb, state_tobe_pruned.spyld + " / " + state_tobe_pruned.rpyld])
 				logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(state_tobe_pruned_num))
 			else: 
 				print "[-] -> Different from parent. Now check with siblings!"
-				# print "parent_sr_msg_dict : "
-				# print parent_sr_msg_dict
-				# print "child_sr_dict : "
-				# print child_sr_dict 
 
 				# STEP 2. Sibling
 				# - Compare its child dict with other childs' dict
@@ -905,10 +1053,10 @@ elif mode1 == 'a' or mode == 'A':
 							logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(state_tobe_pruned_num))
 							break
 						else:
-							print "sibling_state_sr_dict : "
-							print sibling_state.child_sr_dict
-							print "child_sr_dict : "
-							print state_tobe_pruned.child_sr_dict
+							# print "sibling_state_sr_dict : "
+							# print sibling_state.child_sr_dict
+							# print "child_sr_dict : "
+							# print state_tobe_pruned.child_sr_dict
 
 							continue
 					else:
@@ -933,6 +1081,9 @@ elif mode1 == 'a' or mode == 'A':
 								first_cousin = state_list.get_state_by_num(valid_state_numb)
 								if first_cousin.parent != state_tobe_pruned.parent: # siblings which have different parent
 									print "[-] -> compare state " + state_tobe_pruned.numb + " with other sibling state " + str(valid_state_numb) + " in same level"
+									
+									first_cousin.child_sr_dict = move_and_find_sr(valid_state_numb, state_tobe_pruned.child_sr_dict)
+
 									# compare child_dict between sibling and current state
 									if compare_ordered_dict(first_cousin.child_sr_dict, state_tobe_pruned.child_sr_dict) == True: # same state! Merge with sibling!
 										invalid_states.append([state_tobe_pruned_num, state_tobe_pruned.parent, valid_state_numb, state_tobe_pruned.spyld + " / " + state_tobe_pruned.rpyld])
@@ -958,6 +1109,9 @@ elif mode1 == 'a' or mode == 'A':
 								if target_numb_in_level != state_tobe_pruned.parent:
 									print "[-] -> compare state " + state_tobe_pruned.numb + " with ancestor state " + target_numb_in_level
 									parent_state_in_level = state_list.get_state_by_num(target_numb_in_level)
+									
+									parent_state_in_level.child_sr_dict = move_and_find_sr(target_numb_in_level, state_tobe_pruned.child_sr_dict)
+
 									# compare child_dict between prev and current state
 									if compare_ordered_dict(parent_state_in_level.child_sr_dict, state_tobe_pruned.child_sr_dict) == True: # same state! Add transition to parent_state_in_level!
 										invalid_states.append([state_tobe_pruned_num, state_tobe_pruned.parent, target_numb_in_level, state_tobe_pruned.spyld + " / " + state_tobe_pruned.rpyld])
@@ -984,10 +1138,9 @@ elif mode1 == 'a' or mode == 'A':
 					if currently_unique == True: # real valid state
 						print "[+] -> **** Unique state " + state_tobe_pruned_num + " found ****"
 						valid_states.append([state_tobe_pruned_num, cur_state, state_tobe_pruned_num, state_tobe_pruned.spyld + " / " + state_tobe_pruned.rpyld])
-						print "mydict : ", state_tobe_pruned.child_sr_dict
-						print "parentdict : ", parent_sr_msg_dict
+						# print "mydict : ", state_tobe_pruned.child_sr_dict
+						# print "parentdict : ", parent_sr_msg_dict
 
-						time.sleep(10)
 		
 		# state validation
 		# add valid states

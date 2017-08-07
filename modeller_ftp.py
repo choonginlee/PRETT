@@ -171,7 +171,7 @@ def expand_states(states_in_the_level, token_db, args_db):
 		print "[+] Current_state : " + str(current_state)
 		cur_state = str(current_state)
 		
-		move_state_msg = find_path_of_the_state(target_state)
+		move_state_msg = find_path_of_the_state(current_state)
 
 		# --------- Find command with single command  ---------
 		mul_start = 0
@@ -434,6 +434,7 @@ def process_response(p, ans, origin_rp):
 			skt.send(ack_p)
 			if mode1 == 'm':
 				print rcvdpayload
+				return raw_resp, 0
 			else:
 				build_state_machine(pm, pm.model.state, sentpayload, rcvdpayload, 1)
 				return raw_resp, 0 # needs to disconnect later
@@ -584,6 +585,8 @@ def compare_ordered_dict(dict1, dict2):
 	for i,j in zip(dict1.items(), dict2.items()):
 		s1, r1 = i
 		s2, r2 = j
+		if s1.find("stat") >= 0 and s2.find("stat") >= 0 :
+			continue
 		if len(r1) > 40 and len(r2) > 40:
 			i = (s1, r1[0:41])
 			j = (s2, r2[0:41])
@@ -746,7 +749,7 @@ if mode1 == 'm':
 			ans, unans = sr(p, multi=1, timeout=timeout, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
 			#ans = filter_tcp_ans(ans)
 			
-			rp = process_response(ans, p, rp)
+			rp, garbage = process_response(p, ans, rp)
 
 		isquit = raw_input("[!] Are you sure to quit the program? (y/n)")
 		if isquit == "y":
@@ -759,7 +762,7 @@ elif mode1 == 'a' or mode == 'A':
 	# get all command candidates
 	with open("./tokenfile/total_tokens.txt") as f:
 		#token_db = pickle.load(f)
-		token_db = ['retr', 'data', 'type', 'get', 'size', 'list', 'help', 'mode', 'user', 'port', 'pass', 'opts', 'pwd', 'cwd', 'rest', 'stat', 'acct', 'prot', 'noop', 'pasv']
+		token_db = ['retr', 'data', 'type', 'get', 'size', 'list', 'help', 'mode', 'user', 'port', 'pass', 'opts', 'pwd', 'cwd', 'rest', 'stat', 'acct', 'prot', 'noop', 'pasv', 'site']
 		#token_db = ['user', 'pass', 'pasv', 'opts']
 
 	# get all argument candidates
@@ -794,7 +797,7 @@ elif mode1 == 'a' or mode == 'A':
 		for state_tobe_pruned_num in states_candidate_for_prune:
 			state_tobe_pruned = state_list.get_state_by_num(state_tobe_pruned_num)
 			cur_state = str(state_tobe_pruned_num)
-			print '[+] Pruning in ' + str(state_tobe_pruned_num)
+			print '[+] Pruning in ' + str(state_tobe_pruned_num) + " port [%d]" % sport
 			logging.info("[+] === [port no. %d] PRUNING starts in state " % sport + str(state_tobe_pruned_num) + " ===")
 
 			# Get the parent name of the child state
@@ -939,6 +942,8 @@ elif mode1 == 'a' or mode == 'A':
 									print "[-] -> compare state " + state_tobe_pruned.numb + " with other sibling state " + str(valid_state_numb) + " in same level"
 									# compare child_dict between sibling and current state
 
+									# print "[!!!] MOVE AND FIND SR starts in sachon... Port : %d" % sport
+									# print state_tobe_pruned.child_sr_dict
 									first_cousin.child_sr_dict = move_and_find_sr(valid_state_numb, state_tobe_pruned.child_sr_dict)
 
 									if compare_ordered_dict(first_cousin.child_sr_dict, state_tobe_pruned.child_sr_dict) == True: # same state! Merge with sibling!
