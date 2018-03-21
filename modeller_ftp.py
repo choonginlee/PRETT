@@ -38,27 +38,27 @@ num_of_states = 0
 g_start_time = 0
 mul_start = 0
 new_state = []
-myiface = "ens34"
+myiface = "eth1"
 is_pruning = False
 is_moving = False
 
 cur_state = '0'
 timeout = 0.01
-slowresp_timeout = 10
+slowresp_timeout = 1
 long_timeout = 45
 current_level = 1
 
-skip_msg_list = ['USER ANONYMOUS', 'PASS ', 'PASV'] # for shortcut
 #skip_msg_list = ['USER ANONYMOUS', 'PASS ', 'PORT 1000'] # for shortcut
+test_msg_list = ['USER ANONYMOUS', 'PASV', 'PASV', 'PASV', 'PASV', 'PASV','PASV','PASV']
 
 if not os.path.exists('./diagram'):
 	os.makedirs('./diagram')
 
 #Mode Selection
-mode1 = raw_input("[ ] Manual? or Auto? ( \'m\' - for testing / \'a\' - auto mode /) : ")
-print skip_msg_list
-if len(skip_msg_list) > 0:
-	mode2 = raw_input("[ ] Take shortcut? ( \'y\' / \'n\' ) : ")
+mode1 = raw_input("[ ] Manual? or Auto? ( \'m\' - for testing / \'a\' - auto mode / \'t\' - test mode ): ")
+#print skip_msg_list
+#if len(skip_msg_list) > 0:
+#	mode2 = raw_input("[ ] Take shortcut? ( \'y\' / \'n\' ) : ")
 
 dst_ip = sys.argv[1]
 if len(sys.argv) == 3:
@@ -66,8 +66,8 @@ if len(sys.argv) == 3:
 
 # It will contain trasition info like 
 # trigger as key (string) : [src_state (string), dest_state (string), cnt]
-transition_info = {}
-mul_transition_info = {}
+receive_info = {}
+mul_receive_info = {}
 
 g_start_time = time.time()
 skt = conf.L3socket(iface = myiface)
@@ -164,10 +164,13 @@ def generate_ftp_msg(payload, rp) :
 
 
 def expand_states(states_in_the_level, token_db, args_db):
-	global mode2, sport, dport, dst_ip, is_moving, is_pruning, mul_start, cur_state
+	global sport, dport, dst_ip, is_moving, is_pruning, mul_start, cur_state, receive_info, mul_receive_info
 
 	is_pruning = False
 	for current_state in states_in_the_level:
+		#clear previous level data
+		receive_info = {}
+		mul_receive_info = {}
 		print "[+] Current_state : " + str(current_state)
 		cur_state = str(current_state)
 		
@@ -190,14 +193,15 @@ def expand_states(states_in_the_level, token_db, args_db):
 			ftp_ack = generate_ftp_ack(rp)
 			skt.send(ftp_ack)
 
-			
+			"""
 			# Take shortcut
 			if mode2 == 'y':
 				rp, res = shortcut(rp, skip_msg_list)
 				# Check if end in shortcut
 				if res == 1:
 					continue
-
+			"""
+			
 			# Go to the target state
 			is_moving = True
 			for move_msg in move_state_msg:
@@ -254,11 +258,11 @@ def expand_states(states_in_the_level, token_db, args_db):
 				skt.send(ftp_ack)
 
 				# Take shortcut
-				if mode2 == 'y':
-					rp, res = shortcut(rp, skip_msg_list)
-					# Check if end in shortcut
-					if res == 1:
-						continue
+				# if mode2 == 'y':
+				# 	rp, res = shortcut(rp, skip_msg_list)
+				# 	# Check if end in shortcut
+				# 	if res == 1:
+				# 		continue
 
 				# Go to the target state
 				is_moving = True
@@ -401,13 +405,16 @@ def process_response(p, ans, origin_rp):
 	# Wait for MSG from server
 	raw_resp = None
 	finack_resp = None
+	ack_resp = None
 	for resp in resp_list:
 		# return the last ftp packet. Scapy bug.
-		if resp.haslayer("TCP") and resp.haslayer("Raw"):
+		if resp.haslayer("TCP") and resp.haslayer("Raw") and resp.getlayer("TCP").dport == sport:
 			raw_resp = resp
 		# check if finack
 		elif resp.haslayer("TCP") and resp.getlayer("TCP").flags == 0x11:
 			finack_resp = resp
+		elif resp.haslayer("TCP"):
+			ack_resp = resp
 
 	if raw_resp is None and finack_resp is None:
 		#Case3.
@@ -416,11 +423,13 @@ def process_response(p, ans, origin_rp):
 		for resp in resp_list:
 			# return the last ftp packet. Scapy bug.
 			# print resp.show()
-			if resp.haslayer("TCP") and resp.haslayer("Raw"):
+			if resp.haslayer("TCP") and resp.haslayer("Raw") and resp.getlayer("TCP").dport == sport:
 				raw_resp = resp
 			# check if finack
 			elif resp.haslayer("TCP") and resp.getlayer("TCP").flags == 0x11:
 				finack_resp = resp
+			elif resp.haslayer("TCP"):
+				ack_resp = resp
 
 	if raw_resp is not None:
 		# MSG (Raw) packet found
@@ -458,32 +467,51 @@ def process_response(p, ans, origin_rp):
 			if sport > 60000:
 				sport = 3000
 
-			return FIN_ACK, 1
+			return raw_resp, 1
 
 	else:
 		# Crash?
-		print "case4"
+		print "case4", len(resp_list), "port : ", sport
 		logging.debug("[!] [port no. %d] No raw response. Possibly crash." % (sport))
 		if len(resp_list) == 0:
 			rp = origin_rp
 		else:
 			for resp in resp_list:
 				rp = resp
-		disconnect_ftp(rp)
+		if mode1 == 't':
+			pass
+		else:
+			disconnect_ftp(rp)
 		return rp, 1
 
-def build_state_machine(sm, crnt_state, spyld, rpyld, case_num):
-	# sm : state machine, crnt_state : current state, payload : response packet payload 
+def build_state_machine(pm, crnt_state, spyld, rpyld, case_num):
+	# pm : state machine, crnt_state : current state, payload : response packet payload 
 	# Build and fix a state machine based on the response
-	global num_of_states, transition_info, state_list, cur_state, new_state, is_pruning, is_moving, mul_start, current_level, skip_msg_list
+	global num_of_states, receive_info, state_list, cur_state, new_state, is_pruning, is_moving, mul_start, current_level, skip_msg_list
 
 	send_payload = spyld.replace('\r\n', '')
+	rpyld = rpyld.replace('\r\n', '')
+
+	if send_payload[0:4] == "STAT":
+		if len(send_payload) == 4:
+			rpyld = "211"
+		elif len(send_payload) > 4:
+			if send_payload[4] == " ":
+				rpyld = "213"
+		else:
+			pass
+	elif send_payload[0:4] == "HELP":
+		rpyld = "214"
+	elif send_payload[0:4] == "FEAT":
+		rpyld = "211"
+	#if rpyld[0] == "5":
+	rpyld = rpyld[0:3]
 	command = send_payload.split()[0]
 
-	#In case of shortcut, ignore the shortcut messages
-	for msg in skip_msg_list:
-		if send_payload == msg:
-			return
+	# #In case of shortcut, ignore the shortcut messages
+	# for msg in skip_msg_list:
+	# 	if send_payload == msg:
+	# 		return
 
 	# Check if the response already seen before
 	# We separate two cases: Single, Multiple.
@@ -492,26 +520,30 @@ def build_state_machine(sm, crnt_state, spyld, rpyld, case_num):
 	# Compare among single, among multiple
 	if mul_start == 0:
 		# search each transition label in transition info data structure
-		for t in transition_info.keys(): # No!
-			if transition_info[t][0] == crnt_state:
+		for t in receive_info.keys(): # No!
+			if receive_info[t][0] == crnt_state:
 				if re.search(rpyld, t):
 					# if it is already seen,
 					# - No need to make new state
 					# - Find the corresponding src & dst state
 					# - Add input counts for each seen transition
-					transition_info[t][2] = transition_info[t][2] + 1
-					return
+					receive_info[t][2] = receive_info[t][2] + 1
+					#print receive_info
+					if receive_info[t][2] > 1: # save upto 5 times
+						return
+					else:
+						break
 
 	else:
 		# search each transition label in transition info data structure
-		for t in mul_transition_info.keys(): # No!
-			if mul_transition_info[t][0] == crnt_state:
+		for t in mul_receive_info.keys(): # No!
+			if mul_receive_info[t][0] == crnt_state:
 				if re.search(rpyld, t):
 					# if it is already seen,
 					# - No need to make new state
 					# - Find the corresponding src & dst state
 					# - Add input counts for each seen transition
-					mul_transition_info[t][2] = mul_transition_info[t][2] + 1
+					mul_receive_info[t][2] = mul_receive_info[t][2] + 1
 					return
 
 	# if long payload, abbreviate
@@ -525,7 +557,7 @@ def build_state_machine(sm, crnt_state, spyld, rpyld, case_num):
 		num_of_states = num_of_states + 1
 		dst_state = str(num_of_states)
 
-	# In case of timeout with huge inputs, store full send/receive label in transition_info
+	# In case of timeout with huge inputs, store full send/receive label in receive_info
 	# but store abbrebiated send/receive label in transition model (as well as state machine diagram)
 	if len(send_payload) > 100:
 		abbr_spyld = send_payload[0:15] + "-abbr"
@@ -537,20 +569,30 @@ def build_state_machine(sm, crnt_state, spyld, rpyld, case_num):
 		# Abrupt disconnection from server case
 		# Set transition from this state to initial state
 		dst_state = '0'
-		transition_info[t_label] = [crnt_state, dst_state, 1]
+		receive_info[rpyld] = [crnt_state, dst_state, 1]
 		logging.info("[+] [port no. %d] State " % sport + dst_state + " added with transition " + t_label + "(Case 2)")
 		pm.add_transition(t_label + "\n", source = crnt_state, dest = dst_state)
 		return
 
 	if is_pruning == False and is_moving == False:
-
 		if mul_start == 0:
-			transition_info[t_label] = [crnt_state, dst_state, 1] # add transition info
+			if rpyld in receive_info:
+				pass
+			else:
+				receive_info[rpyld] = [crnt_state, dst_state, 1] # add transition info
+				print "New rpyld found in single! " + rpyld
 		else:
-			mul_transition_info[t_label] = [crnt_state, dst_state, 1] # add transition info
+			if rpyld in mul_receive_info:
+				pass
+			else:
+				print "New rpyld found in multi! " + rpyld
+				mul_receive_info[rpyld] = [crnt_state, dst_state, 1] # add transition info
 
 		# Add child state for each parent
 		state_list.add_state(State(str(num_of_states), current_level+1, parent=str(cur_state), spyld=str(send_payload), rpyld=str(rpyld), group=str(command)))
+		#pm.add_state(str(num_of_states))
+		#vs_payload = send_payload + " / " + receive_payload
+		#pm.add_transition(vs_payload + "\n", source = cur_state, dest = str(num_of_states))
 		print "[+] State added (%s -> %d) : " % (cur_state, num_of_states) + str(num_of_states)
 		logging.info("[+] [port no. %d] State (%s -> %d)" % (sport, cur_state, num_of_states) + " added with transition " + t_label)
 
@@ -585,8 +627,8 @@ def compare_ordered_dict(dict1, dict2):
 	for i,j in zip(dict1.items(), dict2.items()):
 		s1, r1 = i
 		s2, r2 = j
-		if s1.find("stat") >= 0 and s2.find("stat") >= 0 :
-			continue
+		#if s1.find("stat") >= 0 and s2.find("stat") >= 0 :
+		#	continue
 		if len(r1) > 40 and len(r2) > 40:
 			i = (s1, r1[0:41])
 			j = (s2, r2[0:41])
@@ -611,10 +653,12 @@ def compare_ftp_packet(pkt1, pkt2):
 		return False
 
 def filter_tcp_ans(ans):
+	global sport
+
 	result_list = []
 	for sr in ans:
-		# TCP layer in sr
-		if sr[1].haslayer("TCP"):
+		# TCP layer in sr and coherent port no.
+		if sr[1].haslayer("TCP") and sr[1].getlayer("TCP").dport == sport:
 			result_list.append(sr)
 		else:
 			continue
@@ -642,6 +686,7 @@ def shortcut(rp, skip_msg_list):
 		return
 	
 	for msg in skip_msg_list:
+		print msg
 		handshake_rp = rp
 		rp, res = send_receive(rp, msg)
 
@@ -718,7 +763,19 @@ def move_and_find_sr(target_state_numb, target_sr_dict):
 		# Send message and listen
 		rp, res = send_receive(rp, msg)
 
-		child_sr_dict[msg] = rp.getlayer("Raw").load.replace('\r\n', '')
+		rpyld = rp.getlayer("Raw").load.replace('\r\n', '')
+		if msg[0:4] == "STAT":
+			if len(msg) == 4:
+				rpyld = "211"
+			else:
+				rpyld = "213"
+		elif msg[0:4] == "HELP":
+			rpyld = "214"
+		elif msg[0:4] == "FEAT":
+			rpyld = "211"
+		
+		rpyld = rpyld[0:3]
+		child_sr_dict[msg] = rpyld
 
 		if res == 0:
 			disconnect_ftp(rp)
@@ -732,7 +789,24 @@ def move_and_find_sr(target_state_numb, target_sr_dict):
 #Crate protocol state machine
 pm = generate_state_machine()
 
-if mode1 == 'm':
+if mode1 == 't':
+	rp = three_handshake(dst_ip, dport, sport)
+	ftp_ack = generate_ftp_ack(rp)
+	send(ftp_ack)
+
+	for i in range(10000):
+		test_msg_list.append("RETR")
+		# p = generate_ftp_msg("PASV", rp)
+		# skt.send(p)
+
+	for msg in test_msg_list:
+		p = generate_ftp_msg(msg, rp)
+		ans, unans = sr(p, multi=1, timeout=timeout, verbose=False) # SEND -> GET ACK -> GET RESPONSE (normal case)
+		rp, garbage = process_response(p, ans, rp)
+
+
+
+elif mode1 == 'm':
 	while True:
 		rp = three_handshake(dst_ip, dport, sport)
 		#Next Ack no. calculation : last seq + prev. tcp payload len
@@ -761,8 +835,33 @@ if mode1 == 'm':
 elif mode1 == 'a' or mode == 'A':
 	# get all command candidates
 	with open("./tokenfile/total_tokens.txt") as f:
-		#token_db = pickle.load(f)
-		token_db = ['retr', 'data', 'type', 'get', 'size', 'list', 'help', 'mode', 'user', 'port', 'pass', 'opts', 'pwd', 'cwd', 'rest', 'stat', 'acct', 'prot', 'noop', 'pasv', 'site']
+		token_db = []
+
+		ftp_trace_token = ['USER', 'PASS', 'SYST', 'PWD', 'TYPE', 'PASV', 'RETR', 'PORT', 'FEAT', 'LIST', 'CWD', 'STOR', 'OPTS', 'MDTM', 'QUIT', 'opts', 'syst', 'site', 'noop']
+		for token in ftp_trace_token:
+			token_db.append(token)
+		print "[+] Total tokens in traces : %d" % len(ftp_trace_token)
+				
+		token_db_dict = pickle.load(f)
+		token_db_set = set()
+		for token in token_db_dict:
+			token_db_set.add(token[0].upper())
+		
+		print "[+] Total tokens in binaries : %d" % len(token_db_set)
+		for token in token_db_set:
+			if token not in token_db:
+				token_db.append(token)
+		
+		flag_print = None
+		for token in token_db:
+			if flag_print == True:
+				print token
+				flag_print = False
+			if token == "Mandatory":
+				flag_print = True
+
+
+		#token_db = ['user', 'syst', 'data', 'type', 'get', 'size', 'list', 'help', 'mode', 'retr', 'port', 'pass', 'opts', 'pwd', 'cwd', 'rest', 'stat', 'acct', 'prot', 'noop', 'pasv', 'site', 'nlst']
 		#token_db = ['user', 'pass', 'pasv', 'opts']
 
 	# get all argument candidates
@@ -781,6 +880,10 @@ elif mode1 == 'a' or mode == 'A':
 
 		### Phase 1. Expansion ###
 		expand_states(states_in_the_level, token_db, args_db)
+
+		elapsed_time = time.time() - g_start_time
+		#graphname = "diagram/level_" + str(current_level) + "_port_" + str(sport) + "_expandfin" + ".png"
+		#pm.model.graph.draw(graphname, prog='dot')
 
 		### Pruning ###
 		is_pruning = True
@@ -832,15 +935,15 @@ elif mode1 == 'a' or mode == 'A':
 				ftp_ack = generate_ftp_ack(rp)
 				skt.send(ftp_ack)
 
-				# Take shortcut
-				if mode2 == 'y':
-					rp, res = shortcut(rp, skip_msg_list)
+				# # Take shortcut
+				# if mode2 == 'y':
+				# 	rp, res = shortcut(rp, skip_msg_list)
 
-					# Check if end in shortcut
-					if res == 1:
-						continue
+				# 	# Check if end in shortcut
+				# 	if res == 1:
+				# 		continue
 
-				for msg in prune_move_state_msg:
+				for msg in prune_move_state_msg
 					logging.info("[+] [port no. %d] Prune Move (depth %d -> %d) msg : " % (sport, current_level, current_level+1) + str(msg))
 					rp, res = send_receive(rp, msg)
 
@@ -855,7 +958,20 @@ elif mode1 == 'a' or mode == 'A':
 				
 				# if normal, add to child_sr_dict
 				if compare_ftp_packet(rp, origin_rp) is False:
-					child_sr_dict[str(msg_sent)] = rp.getlayer("Raw").load.replace('\r\n', '')
+					rpyld = rp.getlayer("Raw").load.replace('\r\n', '')
+					#if rpyld[0] == "5":
+					if msg_sent[0:4] == "STAT":
+						if len(msg_sent) == 4:
+							rpyld = "211"
+						else:
+							rpyld = "213"
+					elif msg_sent[0:4] == "HELP":
+						rpyld = "214"
+					elif msg_sent[0:4] == "FEAT":
+						rpyld = "211"
+					
+					rpyld = rpyld[0:3]
+					child_sr_dict[str(msg_sent)] = rpyld
 
 				#Initialize current state as 0
 				cs = 0
@@ -867,8 +983,8 @@ elif mode1 == 'a' or mode == 'A':
 				if sport % 1000 == 0 :
 					elapsed_time = time.time() - g_start_time
 					print "[+] Port No. : %d | " % sport, "Time Elapsed :", elapsed_time, "s"
-					graphname = "diagram/level_" + str(current_level) + "_port_" + str(sport) + ".png"
-					pm.model.graph.draw(graphname, prog='dot')
+					#graphname = "diagram/level_" + str(current_level) + "_port_" + str(sport) + ".png"
+					#pm.model.graph.draw(graphname, prog='dot')
 			
 			# After searching all the parent's s/r
 			# Check below for merging
@@ -883,7 +999,7 @@ elif mode1 == 'a' or mode == 'A':
 			if compare_ordered_dict(parent_sr_msg_dict, child_sr_dict) == True: # same state, prune state
 				print "[+] -> Same as parent. Merge with state " + parent_numb
 				invalid_states.append([state_tobe_pruned_num, parent_numb, parent_numb, state_tobe_pruned.spyld + " / " + state_tobe_pruned.rpyld])
-				logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(state_tobe_pruned_num))
+				logging.debug("[+] [port no. %d] state number to eb pruned : " % sport + str(state_tobe_pruned_num))
 			else: 
 				print "[-] -> Different from parent. Now check with siblings!"
 				# print "parent_sr_msg_dict : "
@@ -892,7 +1008,7 @@ elif mode1 == 'a' or mode == 'A':
 				# print child_sr_dict 
 
 				# STEP 2. Sibling
-				# - Compare its child dict with other childs' dict
+				# - Compare its child dict iwth other childs' dict
 				# - If different with all the childs' dict (or first), let it be alive
 				# - If any same dict found, merge with the child
 				unique_in_step_2 = True
@@ -905,6 +1021,7 @@ elif mode1 == 'a' or mode == 'A':
 					sibling_state = state_list.get_state_by_num(valid_state_numb)
 					if sibling_state.parent == state_tobe_pruned.parent: # siblings which have same parent
 						# compare child_dict between sibling and current state
+						print "[-] -> compare state " + state_tobe_pruned.numb + " with other sibling state " + sibling_state.numb + " in same level"
 						if compare_ordered_dict(sibling_state.child_sr_dict, state_tobe_pruned.child_sr_dict) == True: # same state! Merge with sibling!
 							invalid_states.append([state_tobe_pruned_num, parent_numb, valid_state_numb, state_tobe_pruned.spyld + " / " + state_tobe_pruned.rpyld])
 							unique_in_step_2 = False
@@ -912,6 +1029,24 @@ elif mode1 == 'a' or mode == 'A':
 							logging.debug("[+] [port no. %d] state number to be pruned : " % sport + str(state_tobe_pruned_num))
 							break
 						else:
+							only_in_mydict = {}
+							only_in_sibling_dict = {}
+							
+							d1 = state_tobe_pruned.child_sr_dict
+							d2 = sibling_state.child_sr_dict
+							for key1 in d1:
+								for key2 in d2:
+									if key1 == key2 and d1[key1] != d2[key2]:
+										only_in_mydict[key1] = d1[key1]
+										only_in_sibling_dict[key2] = d2[key2]
+
+							print "only in mydict : "
+							print only_in_mydict
+							print "only in sibling dict %s:" % sibling_state.numb
+							print only_in_sibling_dict
+							
+							#print "mydict : ", state_tobe_pruned.child_sr_dict
+							#print "parent dict : ", parent_sr_msg_dict
 							# print "sibling_state_sr_dict : "
 							# print sibling_state.child_sr_dict
 							# print "child_sr_dict : "
@@ -939,7 +1074,7 @@ elif mode1 == 'a' or mode == 'A':
 							for valid_state_numb, src_state, dst_state, vs_payload in valid_states:
 								first_cousin = state_list.get_state_by_num(valid_state_numb)
 								if first_cousin.parent != state_tobe_pruned.parent: # siblings which have different parent
-									print "[-] -> compare state " + state_tobe_pruned.numb + " with other sibling state " + str(valid_state_numb) + " in same level"
+									print "[-] -> compare state " + state_tobe_pruned.numb + " with other relative state " + str(valid_state_numb) + " in same level"
 									# compare child_dict between sibling and current state
 
 									# print "[!!!] MOVE AND FIND SR starts in sachon... Port : %d" % sport
@@ -999,10 +1134,26 @@ elif mode1 == 'a' or mode == 'A':
 					if currently_unique == True: # real valid state
 						print "[+] -> **** Unique state " + state_tobe_pruned_num + " found ****"
 						valid_states.append([state_tobe_pruned_num, cur_state, state_tobe_pruned_num, state_tobe_pruned.spyld + " / " + state_tobe_pruned.rpyld])
-						# print "mydict : ", state_tobe_pruned.child_sr_dict
-						# print "parentdict : ", parent_sr_msg_dict
+						only_in_mydict = {}
+						only_in_parent_dict = {}
+						
+						d1 = state_tobe_pruned.child_sr_dict
+						d2 = parent_sr_msg_dict
+						for key1 in d1:
+							for key2 in d2:
+								if key1 == key2 and d1[key1] != d2[key2]:
+									only_in_mydict[key1] = d1[key1]
+									only_in_parent_dict[key2] = d2[key2]
 
-						time.sleep(10)
+						print "only in mydict : "
+						print only_in_mydict
+						print "only in parent dict:"
+						print only_in_parent_dict
+						
+						#print "mydict : ", state_tobe_pruned.child_sr_dict
+						#print "parent dict : ", parent_sr_msg_dict
+
+						#time.sleep(10)
 		
 		# state validation
 		# add valid states
@@ -1010,11 +1161,12 @@ elif mode1 == 'a' or mode == 'A':
 			self_state = state_list.get_state_by_num(self_numb)
 			pm.add_state(self_numb)
 			pm.add_transition(vs_payload + "\n", source = self_state.parent, dest = self_numb)
-			print "[+] Valid state " + self_numb + " in level " + str(current_level) + " added"
+			print "[+] Valid state " + self_numb + " in level " + str(current_level) + " fixed"
 
 		# remove invalid states
 		for self_numb, src_state, dst_state, vs_payload in invalid_states:
 			child_state = state_list.get_state_by_num(self_numb)
+			#pm.remove_model(self_numb)
 			pm.add_transition(vs_payload + "\n", source = src_state, dest = dst_state)
 			#level_dict[current_level+1].remove(self_numb)
 			state_list.remove_state(child_state)
@@ -1031,7 +1183,7 @@ elif mode1 == 'a' or mode == 'A':
 	print "Total elapsed time : ", elapsed_time, "\n"
 	# Program normally ends.
 	pm.model.graph.draw("diagram/prune_bfs_state_fin.png", prog='dot')
-	logging.info(transition_info)
+	logging.info(receive_info)
 	img = mplotimg.imread("diagram/prune_bfs_state_fin.png")
 	plt.imshow(img)
 	plt.show()

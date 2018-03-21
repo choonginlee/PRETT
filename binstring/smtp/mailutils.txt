@@ -1,0 +1,1416 @@
+   1070 /lib64/ld-linux-x86-64.so.2
+   1343 )Bg$
+   2163 xi OG
+   2261 sx0_Pz
+   2400 dnK>
+  24021 libmu_argp.so.4
+  24041 mu_diag_funcall
+  24061 _ITM_deregisterTMCloneTable
+  24115 mu_list_is_empty
+  24136 mu_error
+  24147 mu_libcfg_parse_config
+  24176 mu_load_rcfile
+  24215 mu_load_site_rcfile
+  24241 __gmon_start__
+  24260 mu_stdio_stream_create
+  24307 mu_list_append
+  24326 mu_stream_destroy
+  24350 argp_program_version
+  24375 mu_list_destroy
+  24415 argp_error
+  24430 mu_asprintf
+  24444 mu_cfg_tree_create
+  24467 mu_cfg_tree_add_node
+  24514 _Jv_RegisterClasses
+  24540 mu_site_rcfile
+  24557 mu_alloc
+  24570 argp_parse
+  24603 _ITM_registerTMCloneTable
+  24635 mu_program_name
+  24655 mu_load_user_rcfile
+  24701 mu_strerror
+  24715 argp_program_version_hook
+  24747 mu_cfg_tree_reduce
+  24772 mu_cfg_destroy_tree
+  25016 _fini
+  25024 mu_argp_init
+  25041 mu_app_init
+  25055 libmu_cfg.so.4
+  25074 mu_string_to_syslog_facility
+  25131 mu_cfg_parse_config
+  25155 mu_list_set_destroy_item
+  25206 mu_list_create
+  25225 mu_list_free_item
+  25247 mu_acl_cfg_init
+  25267 libmuaux.so.4
+  25305 mu_url_to_string
+  25326 mu_spawnvp
+  25341 mu_file_stream_create
+  25367 mu_stream_seek
+  25406 mu_iterator_first
+  25430 mu_iterator_is_done
+  25454 mu_wordsplit_strerror
+  25502 mu_opool_append
+  25522 mu_true_answer_p
+  25543 mu_opool_finish
+  25563 mu_diag_output
+  25602 mu_iterator_destroy
+  25626 mu_stream_read
+  25645 mu_iterator_next
+  25666 mu_wordsplit_free
+  25710 mu_wordsplit
+  25725 mu_strdup
+  25737 mu_opool_create
+  25757 mu_iterator_current
+  26003 mu_set_signals
+  26022 libmu_mbox.so.4
+  26042 mu_c_strcasecmp
+  26062 mu_str_skip_cset
+  26103 mu_iterator_current_kv
+  26132 mu_scan_datetime
+  26153 mu_address_destroy
+  26176 mu_stream_copy
+  26215 mu_message_get_header
+  26243 mu_rtrim_class
+  26262 mu_stream_size
+  26301 mu_stream_unref
+  26321 mu_stream_write
+  26341 mu_address_create
+  26363 mu_header_sget_value_n
+  26412 mu_stream_printf
+  26433 mu_stream_close
+  26453 mu_stream_flush
+  26473 mu_c_tab
+  26504 mu_mbox_record
+  26523 libmu_imap.so.4
+  26543 mu_msgset_create
+  26564 mu_stream_ref
+  26602 mu_sockaddr_free
+  26623 mu_imap_flag_to_attribute
+  26655 mu_msgset_free
+  26674 mu_memory_stream_create
+  26724 mu_kwd_xlat_name_ci
+  26750 mu_address_create_null
+  26777 mu_kwd_xlat_name
+  27020 mu_tcp_stream_create_from_sa
+  27055 mu_list_foreach
+  27075 mu_c_streamftime
+  27116 mu_msgset_count
+  27136 mu_tls_client_stream_create
+  27172 mu_imap_append_stream
+  27220 mu_imap_login
+  27236 mu_imap_trace
+  27254 mu_imap_lsub_new
+  27275 mu_imap_check
+  27313 mu_imap_noop
+  27330 mu_imap_subscribe
+  27352 mu_imap_list_new
+  27373 mu_imap_capability_test
+  27423 mu_imap_destroy
+  27443 mu_imap_connect
+  27463 mu_imap_id
+  27476 mu_imap_session_state
+  27524 mu_imap_disconnect
+  27547 mu_imap_store
+  27565 mu_imaps_record
+  27605 mu_imap_record
+  27624 mu_imap_delete
+  27643 mu_imap_select
+  27662 mu_imap_search
+  27701 mu_imap_trace_mask
+  27724 mu_imap_rename
+  27743 mu_imap_create
+  27762 mu_imap_capability
+  30005 mu_imap_strerror
+  30026 mu_imap_copy
+  30043 mu_imap_starttls
+  30064 mu_imap_fetch
+  30102 mu_imap_set_carrier
+  30126 mu_imap_mailbox_create
+  30155 mu_imap_status
+  30174 _mu_imap_status_name_table
+  30227 mu_imap_logout
+  30246 mu_imap_expunge
+  30266 mu_imap_close
+  30304 mu_imap_register_callback_function
+  30347 mu_imap_unsubscribe
+  30373 mu_imap_session_state_str
+  30425 libmu_pop.so.4
+  30444 mu_stream_vprintf
+  30466 mu_stream_getline
+  30510 mu_c_strncasecmp
+  30531 mu_stream_ioctl
+  30551 mu_pop3_noop
+  30566 mu_pop3_dele
+  30603 mu_pop3_rset
+  30620 mu_pop3_trace
+  30636 mu_pop3_pass
+  30653 mu_pop_record
+  30671 mu_pop3_stat
+  30706 mu_pop3_quit
+  30723 mu_pop3_uidl_all
+  30744 mu_pop3_top
+  30760 mu_pop3_retr
+  30775 mu_pop3_create
+  31014 mu_pop3_disconnect
+  31037 mu_pop3_uidl
+  31054 mu_pop3_connect
+  31074 mu_pop3_set_carrier
+  31120 mu_pop3_capa
+  31135 mu_pop3_destroy
+  31155 mu_pop3_list_all
+  31176 mu_pop3_list
+  31213 mu_pop3_trace_mask
+  31236 mu_pop3_user
+  31253 mu_pop3_capa_test
+  31275 mu_pops_record
+  31314 mu_pop3_stls
+  31331 mu_pop3_apop
+  31346 libmu_mh.so.4
+  31364 mu_mh_record
+  31401 libmu_maildir.so.4
+  31424 mu_maildir_record
+  31446 libmu_mailer.so.4
+  31470 mu_mailer_destroy
+  31512 mu_url_create
+  31530 mu_argcv_free
+  31546 mu_mailer_open
+  31565 mu_mailer_send_message
+  31614 mu_mailer_create_from_url
+  31646 mu_mailer_close
+  31666 mu_str_stripws
+  31705 mu_address_union
+  31726 mu_address_get_count
+  31753 mu_str_skip_class_comp
+  32002 mu_tilde_expansion
+  32025 mu_smtp_trace
+  32043 mu_smtp_clear_auth_mech
+  32073 mu_smtp_set_param
+  32115 mu_smtp_replcode
+  32136 mu_smtp_starttls
+  32157 mu_smtp_set_carrier
+  32203 mu_smtp_create
+  32222 mu_smtp_add_auth_mech
+  32250 mu_smtp_open
+  32265 mu_smtps_record
+  32305 mu_smtp_trace_mask
+  32330 mu_smtp_capa_test
+  32352 mu_smtp_mail_basic
+  32375 mu_smtp_dot
+  32411 mu_sendmail_record
+  32434 mu_smtp_get_param
+  32456 mu_smtp_rset
+  32473 mu_smtp_rcpt_basic
+  32516 mu_smtp_send_stream
+  32542 mu_smtp_capa_iterator
+  32570 mu_smtp_sget_reply
+  32613 mu_smtp_record
+  32632 mu_prog_record
+  32651 mu_smtp_quit
+  32666 mu_smtp_get_reply_iterator
+  32721 mu_smtp_destroy
+  32741 mu_smtp_cmd
+  32755 mu_smtp_disconnect
+  33000 mu_smtp_auth
+  33015 mu_smtp_test_param
+  33040 libmu_auth.so.4
+  33060 mu_assoc_get_iterator
+  33106 mu_assoc_ref
+  33123 mu_auth_virtual_module
+  33152 mu_auth_pam_module
+  33175 mu_auth_radius_module
+  33223 mu_tls_module_init
+  33246 mu_auth_sql_module
+  33271 mu_auth_ldap_module
+  33315 libmailutils.so.4
+  33337 mu_sockaddr_from_node
+  33365 mu_cfg_format_node
+  33410 mu_str_skip_cset_comp
+  33436 mu_auth_data_free
+  33460 mu_auth_generic_module
+  33507 mu_str_skip_class
+  33531 mu_gocs_register
+  33552 mu_printf
+  33564 mu_wordsplit_c_quote_char
+  33616 mu_auth_system_module
+  33644 mu_calloc
+  33656 mu_base64_decode
+  33677 mu_wordsplit_c_unquote_copy
+  33733 mu_rtrim_cset
+  33751 mu_stdstream_strerr_create
+  34004 mu_opool_clear
+  34023 mu_msgset_parse_imap
+  34050 mu_base64_encode
+  34071 mu_format_options
+  34113 mu_stream_format_address
+  34144 mu_registrar_record
+  34170 mu_ltrim_class
+  34207 mu_wordsplit_c_unquote_char
+  34243 _mu_severity_num
+  34264 mu_registrar_set_default_record
+  34324 mu_msgset_print
+  34344 mu_getpass
+  34357 mu_stream_to_message
+  34404 get_port
+  34415 mu_check_option
+  34435 mu_realloc
+  34450 mu_wicket_stream_match_url
+  34503 mu_strout
+  34515 mu_linelen_filter_create
+  34546 mu_msgset_destroy
+  34570 mu_init_nls
+  34604 mu_auth_register_module
+  34634 _mu_severity_str
+  34655 mu_tempname
+  34671 mu_command_stream_create
+  34722 mu_sockaddr_free_list
+  34750 mu_cfg_find_node
+  34771 mu_url_create_hint
+  35014 mu_imap_format_flags
+  35041 mu_format_conf_option
+  35067 mu_strerr
+  35101 mu_strin
+  35112 mu_string_to_syslog_priority
+  35147 mu_rfc2047_decode
+  35171 mu_assoc_destroy
+  35212 mu_get_auth_by_uid
+  35235 mu_filter_create_args
+  35263 mu_get_auth_by_name
+  35307 mu_url_invalidate
+  35331 mu_rfc2047_encode
+  35353 mu_acl_check_sockaddr
+  35401 mu_filter_get_list
+  35424 libmu_dbm.so.4
+  35443 mu_dbm_datum_free
+  35465 mu_dbm_delete
+  35503 mu_dbm_store
+  35520 mu_dbm_create
+  35536 mu_dbm_strerror
+  35556 mu_dbm_nextkey
+  35575 mu_dbm_open
+  35611 mu_dbm_get_name
+  35631 mu_dbm_destroy
+  35650 mu_dbm_firstkey
+  35670 mu_dbm_fetch
+  35705 mu_dbm_get_fd
+  35723 libreadline.so.6
+  35744 write_history
+  35762 rl_getc_function
+  36003 rl_readline_name
+  36024 history_length
+  36043 rl_pre_input_hook
+  36065 read_history
+  36102 readline
+  36113 history_expand
+  36132 rl_completion_matches
+  36160 history_list
+  36175 rl_attempted_completion_function
+  36236 rl_insert_text
+  36255 rl_redisplay
+  36272 add_history
+  36306 libpthread.so.0
+  36326 __errno_location
+  36347 libc.so.6
+  36361 fchmod
+  36370 exit
+  36375 fnmatch
+  36405 setlocale
+  36417 strncmp
+  36427 strrchr
+  36437 regexec
+  36447 getgrgid
+  36460 puts
+  36465 regfree
+  36475 __stack_chk_fail
+  36516 unlink
+  36525 abort
+  36533 strftime
+  36544 strtol
+  36553 isatty
+  36562 strlen
+  36571 memset
+  36600 strcspn
+  36610 memcmp
+  36617 dgettext
+  36630 ctime
+  36636 getgrnam
+  36647 fchown
+  36656 regerror
+  36667 memcpy
+  36676 strtoul
+  36706 strcat
+  36715 getenv
+  36724 regcomp
+  36734 getservbyname
+  36752 getuid
+  36761 fileno
+  36770 strchr
+  36777 __cxa_finalize
+  37016 strcmp
+  37025 __libc_start_main
+  37047 ntohs
+  37055 __xstat
+  37065 __fxstat
+  37076 _edata
+  37105 __bss_start
+  37121 _end
+  37126 flt2047_docstring
+  37150 mutool_shell_interactive
+  37201 ldflags_docstring
+  37223 imap_comtab
+  37237 mutool_action_tab
+  37261 filter_docstring
+  37302 help_docstring
+  37321 pop_comtab
+  37334 lib_descr
+  37346 nentry
+  37355 mu_tool_param
+  37373 logger_docstring
+  37414 acl_docstring
+  37432 cflags_docstring
+  37453 pop_docstring
+  37471 smtp_comtab
+  37505 imap_docstring
+  37524 mutool_prompt_env
+  37546 query_docstring
+  37566 mutool_shell_prompt
+  37612 shell_verbose_flags
+  37636 smtp_docstring
+  37655 send_docstring
+  37674 wicket_docstring
+  37715 dbm_docstring
+  37733 info_docstring
+  37752 default_comtab
+  37771 mode_tab
+  40002 _IO_stdin_used
+  40021 lib_entry
+  40033 GLIBC_2.2.5
+  40047 GLIBC_2.3.4
+  40063 GLIBC_2.4
+  40075 GLIBC_2.14
+ 113501 5ZO!
+ 113507 %\O!
+ 113521 %ZO!
+ 113531 %ZO!
+ 113541 %ZO!
+ 113551 %ZO!
+ 113561 %ZO!
+ 113571 %ZO!
+ 113601 %ZO!
+ 113611 %ZO!
+ 113621 %ZO!
+ 113631 %ZO!
+ 113641 %ZO!
+ 113651 %ZO!
+ 113661 %ZO!
+ 113671 %ZO!
+ 113701 %bO!
+ 113711 %bO!
+ 113721 %bO!
+ 113731 %bO!
+ 113741 %bO!
+ 113751 %bO!
+ 113761 %bO!
+ 113771 %bO!
+ 114001 %bO!
+ 114011 %bO!
+ 114021 %bO!
+ 114031 %bO!
+ 114041 %bO!
+ 114051 %bO!
+ 114061 %bO!
+ 114071 %bO!
+ 114101 %bO!
+ 114111 %bO!
+ 114121 %bO!
+ 114131 %bO!
+ 114141 %bO!
+ 114151 %bO!
+ 114161 %bO!
+ 114171 %bO!
+ 114201 %bO!
+ 114211 %bO!
+ 114221 %bO!
+ 114231 %bO!
+ 114241 %bO!
+ 114251 %bO!
+ 114261 %bO!
+ 114271 %bO!
+ 114301 %bO!
+ 114311 %bO!
+ 114321 %bO!
+ 114331 %bO!
+ 114341 %bO!
+ 114351 %bO!
+ 114361 %bO!
+ 114371 %bO!
+ 114401 %bO!
+ 114411 %bO!
+ 114421 %bO!
+ 114431 %bO!
+ 114441 %bO!
+ 114451 %bO!
+ 114461 %bO!
+ 114471 %jO!
+ 114501 %jO!
+ 114511 %jO!
+ 114521 %jO!
+ 114531 %jO!
+ 114541 %jO!
+ 114551 %jO!
+ 114561 %jO!
+ 114571 %jO!
+ 114601 %jO!
+ 114611 %jO!
+ 114621 %jO!
+ 114631 %jO!
+ 114641 %jO!
+ 114651 %jO!
+ 114661 %jO!
+ 114671 %jO!
+ 114701 %jO!
+ 114711 %jO!
+ 114721 %jO!
+ 114731 %jO!
+ 114741 %jO!
+ 114751 %jO!
+ 114761 %jO!
+ 114771 %jO!
+ 115001 %jO!
+ 115011 %jO!
+ 115021 %jO!
+ 115031 %jO!
+ 115041 %jO!
+ 115051 %jO!
+ 115061 %jO!
+ 115071 %jO!
+ 115101 %jO!
+ 115111 %jO!
+ 115121 %jO!
+ 115131 %jO!
+ 115141 %jO!
+ 115151 %jO!
+ 115161 %jO!
+ 115171 %jO!
+ 115201 %jO!
+ 115211 %jO!
+ 115221 %jO!
+ 115231 %jO!
+ 115241 %jO!
+ 115251 %jO!
+ 115261 %jO!
+ 115271 %jO!
+ 115301 %jO!
+ 115311 %jO!
+ 115321 %jO!
+ 115331 %jO!
+ 115341 %jO!
+ 115351 %jO!
+ 115361 %jO!
+ 115371 %jO!
+ 115401 %jO!
+ 115411 %jO!
+ 115421 %jO!
+ 115431 %jO!
+ 115441 %jO!
+ 115451 %jO!
+ 115461 %jO!
+ 115471 %jO!
+ 115501 %jO!
+ 115511 %jO!
+ 115521 %rO!
+ 115531 %rO!
+ 115541 %rO!
+ 115551 %rO!
+ 115561 %rO!
+ 115571 %rO!
+ 115601 %rO!
+ 115611 %rO!
+ 115621 %rO!
+ 115631 %rO!
+ 115641 %rO!
+ 115651 %rO!
+ 115661 %rO!
+ 115671 %rO!
+ 115701 %rO!
+ 115711 %rO!
+ 115721 %rO!
+ 115731 %rO!
+ 115741 %rO!
+ 115751 %rO!
+ 115761 %rO!
+ 115771 %rO!
+ 116001 %rO!
+ 116011 %rO!
+ 116021 %rO!
+ 116031 %rO!
+ 116041 %rO!
+ 116051 %rO!
+ 116061 %rO!
+ 116071 %rO!
+ 116101 %rO!
+ 116111 %rO!
+ 116121 %rO!
+ 116131 %rO!
+ 116141 %rO!
+ 116151 %rO!
+ 116161 %rO!
+ 116171 %rO!
+ 116201 %rO!
+ 116211 %rO!
+ 116221 %rO!
+ 116231 %rO!
+ 116241 %rO!
+ 116251 %rO!
+ 116261 %rO!
+ 116271 %rO!
+ 116301 %rO!
+ 116311 %rO!
+ 116321 %zO!
+ 116331 %zO!
+ 116341 %zO!
+ 116351 %zO!
+ 116361 %zO!
+ 116371 %zO!
+ 116401 %zO!
+ 116411 %zO!
+ 116421 %zO!
+ 116431 %zO!
+ 120242 =1{!
+ 120473 =7F!
+ 120562 =yB!
+ 122662 dH34%(
+ 124774 5?H!
+ 125202 =yq!
+ 125246 =5v!
+ 127224 7weH
+ 131715 ~/.mf
+ 132034 _historyH
+ 136024 dH34%(
+ 136216 dH3<%(
+ 140217 dH34%(
+ 141510 =s1!
+ 143233 =@/!
+ 143457 ATSH
+ 144120 0[A\]
+ 147334 =/T!
+ 150631 <"u<H
+ 150740 <	tYH
+ 150753 <\tNH
+ 171200 ATSH
+ 174325 [A\]
+ 200352 dH34%(
+ 202444 ATSH
+ 202777 0[A\]
+ 226423 ATSH
+ 227611 <-u\
+ 230474 [A\]
+ 236217 dH3<%(
+ 237527 dH34%(
+ 242776 <:u]H
+ 243302 ATSH
+ 245013 @[A\]
+ 257175 dH34%(
+ 257654 FuzH
+ 271520 dH34%(
+ 302660 fu*H
+ 303753 ATSH
+ 304714 0[A\]
+ 304740 AWAVA
+ 304747 AUATL
+ 305072 []A\A]A^A_
+ 305230 2047
+ 305241 cflags
+ 305254 filter
+ 305263 help
+ 305270 imap
+ 305275 info
+ 305302 ldflags
+ 305312 logger
+ 305325 query
+ 305333 send
+ 305340 smtp
+ 305345 wicket
+ 305354 Commands are:
+ 305372 mailutils
+ 305414   %s %-16s - %s
+ 305441 Try `%s COMMAND --help' to get help on a particular COMMAND.
+ 305540 Options are:
+ 305564 Please answer one of [%s]: 
+ 305620 mailutils
+ 305641 true
+ 305655 false
+ 305663 bad port number: %s
+ 305713 unknown port name
+ 305740 Please answer yes or no: 
+ 305772 mailutils
+ 306007 mailutils
+ 306021 common
+ 306030 debug
+ 306036 locking
+ 306046 mailbox
+ 306056 auth
+ 306063 --help
+ 306077 what do you want me to do?
+ 306132 don't know what %s is
+ 306160 %s %s
+ 306170 Interrupt
+ 306203 mailutils
+ 306215 prompt
+ 306224 STRING
+ 306233 set command prompt
+ 306256 exit
+ 306263 exit program
+ 306300 help
+ 306305 [COMMAND]
+ 306317 display this text
+ 306343 synonym for `help'
+ 306366 history
+ 306376 show command history
+ 306434 %-*s
+ 306441 %-*s
+ 306460 No commands match `%s'.  Possibilties are:
+ 306534 PAGER
+ 306542 cannot start pager: %s
+ 306575 %4d) %s
+ 306606 %s: too few arguments
+ 306634 cannot parse input line: %s
+ 306675 %s: no such command.
+ 306722 %s: too many arguments
+ 306751 Error: %s
+ 306763 secure
+ 306772 payload
+ 307002 unknown level: %s
+ 307024 verbose is on
+ 307045 %ssecure
+ 307061 %spayload
+ 307077 verbose is off
+ 307117 mask
+ 307124 unmask
+ 307133 unknown subcommand
+ 307160 file
+ 307165 FILE
+ 307172 read ACLs from FILE
+ 307216 path
+ 307223 PATH
+ 307230 path to the ACL in the configuration tree
+ 307306 access control list
+ 307332 not enough arguments
+ 307357 mailutils
+ 307371 cannot find node: %s
+ 307416 No ACL found in config
+ 307445 mu_sockaddr_from_node: %s
+ 307477 Testing %s:
+ 307520 mu_acl_check_sockaddr failed: %s
+ 307561 %s: undefined
+ 307600 %s: accept
+ 307614 %s: deny
+ 307626 -I/usr/include
+ 307660 database name not given
+ 307710 mailutils
+ 307730 unable to create database %s: %s
+ 307771 mu_dbm_open
+ 310005 mu_dbm_get_fd
+ 310023 no such user: %s
+ 310044 no such group: %s
+ 310066 fstat
+ 310074 fchmod
+ 310103 fchown
+ 310130 unsupported format version: %s
+ 310167 null
+ 310174 #:null
+ 310213 malformed line
+ 310234 %03o
+ 310244 empty line
+ 310257 unfinished string
+ 310301 invalid escape sequence (\%c)
+ 310337 unrecognized line
+ 310361 mu_linelen_filter_create
+ 310412 mu_opool_create
+ 310432 unrecognized input line
+ 310462 invalid length
+ 310501 mu_base64_decode
+ 310522 #:len=%lu
+ 310535 mu_base64_encode
+ 310556 database fetch error: %s
+ 310607 error compiling `%s': %s
+ 310640 #:len=
+ 310650 bad value for `null' directive: %s
+ 310713 invalid UID
+ 310727 invalid GID
+ 310743 invalid file mode
+ 310765 version
+ 310775 file
+ 311006 user
+ 311017 group
+ 311025 mode
+ 311034 cannot split input line: %s
+ 311070 directive %s cannot be ignored
+ 311127 unknown directive: %s
+ 311157 directive %s appeared twice
+ 311220 directive requires argument: %s
+ 311260 directive does not take argument: %s
+ 311330 unknown or unsupported directive %s
+ 311400 Database dump file created by %s on %s
+ 311447 GNU Mailutils 2.99.99
+ 311475 #:version=%s
+ 311513 #:file=%s
+ 311531 %suid=%lu
+ 311543 %suser=%s
+ 311555 %sgid=%lu
+ 311567 %sgroup=%s
+ 311602 %smode=%03o
+ 311616 inline-comment
+ 311645 cannot open input file %s: %s
+ 311703 mu_filter_create_args
+ 311731 <stdin>
+ 311741 cannot store datum: %s
+ 311770 --copy-permissions used without --file
+ 312037 stat
+ 312044 mu_list_append
+ 312070 cannot remove record for %s: %s
+ 312130 not enough arguments for delete
+ 312170 mu_list_create
+ 312207 Create Options
+ 312226 FILE
+ 312240 read input from FILE (with create, delete, add and replace)
+ 312334 permissions
+ 312360 set permissions on the created database
+ 312430 USER
+ 312435 set database owner name
+ 312465 GROUP
+ 312473 set database owner group
+ 312524 copy-permissions
+ 312550 copy database permissions and ownership from the input file
+ 312644 ignore-meta
+ 312660 ignore meta-information from input file headers
+ 312740 ignore-directives
+ 312762 NAMES
+ 312770 ignore the listed directives
+ 313025 List and Dump Options
+ 313053 format
+ 313062 TYPE
+ 313067 select output format
+ 313114 no-header
+ 313126 suppress format header
+ 313155 List, Dump and Delete Options
+ 313213 glob
+ 313220 treat keys as globbing patterns
+ 313260 regex
+ 313270 treat keys as regular expressions
+ 313332 ignore-case
+ 313346 case-insensitive matches
+ 313400 Options for Use with Format 0.0
+ 313440 count-null
+ 313460 data length accounts for terminating zero
+ 313532 no-count-null
+ 313550 data length does not account for terminating zero
+ 313632 invalid file mode: %s
+ 313660 user,uid
+ 313671 group,gid
+ 314204 create
+ 314213 load
+ 314220 list
+ 314225 replace
+ 314235 delete
+ 314244 dump
+ 314251 subcommand not given
+ 314276 unknown subcommand: %s
+ 314325 too many arguments for create
+ 314363 too many arguments for add
+ 314420 too many arguments for replace
+ 314510 mu_msgset_create
+ 314540 failed to parse message set near "%s": %s
+ 314612 mailutils
+ 314624 %s failed: %s
+ 314642 server reply: %s
+ 314663 user
+ 314670 [nouser]
+ 314701 host
+ 314706 [nohost]
+ 314717 program-name
+ 314734 canonical-program-name
+ 314766 package
+ 314776 version
+ 315006 2.99.99
+ 315016 status
+ 315025 session authenticated: %s
+ 315057 session authenticated
+ 315110 server is closing connection: %s
+ 315151 server is closing connection
+ 315206 SERVER ALERT: %s
+ 315227   %s = 
+ 315245 %a %b %e %H:%M:%S
+ 315267   %s = %s
+ 315313 %02d%02d
+ 315325 %*s%s:
+ 315335 %*s%d: %s=%s
+ 315353 %*sPart #%d
+ 315370 %*s%s: 
+ 315400 %*sEnvelope:
+ 315416 %*sTime: 
+ 315430 %c%n
+ 315435 %*sSubject: %s
+ 315455 From
+ 315462 Sender
+ 315471 Reply-to
+ 315514 %*sIn-Reply-To: %s
+ 315540 %*sMessage-ID: %s
+ 315563 %*sbody_type=%s
+ 315604 %*sbody_subtype=%s
+ 315630 Parameters
+ 315643 %*sbody_id=%s
+ 315662 %*sbody_descr=%s
+ 315704 %*sbody_encoding=%s
+ 315731 %*sbody_size=%lu
+ 315753 %*sbody_md5=%s
+ 315773 %*sbody_disposition=%s
+ 316023 Disposition Parameters
+ 316052 %*sbody_language=%s
+ 316077 %*sbody_location=%s
+ 316124 %*sType 
+ 316135 mu_message_other
+ 316160 mu_message_text:
+ 316201 %*sbody_lines=%lu
+ 316230 mu_message_rfc822:
+ 316253 %*sbody_lines=%lu
+ 316276 mu_message_multipart:
+ 316325 BODY [
+ 316334 %lu.
+ 316347 BEGIN
+ 316365 BODYSTRUCTURE:
+ 316404 BEGIN
+ 316420 ENVELOPE:
+ 316433 date
+ 316440   subject = %s
+ 316460 from
+ 316465 sender
+ 316474 reply-to
+ 316517   in-reply-to = %s
+ 316543   message-id = %s
+ 316566   flags = 
+ 316601 internaldate
+ 316616   size = %lu
+ 316634   UID = %lu
+ 316710 Message #%lu:
+ 316732 UID is on
+ 316744 UID is off
+ 316763 invalid boolean value
+ 317011 -tls
+ 317016 cannot create TLS stream: %s
+ 317053 Failed to connect: %s
+ 317101 server response: %s
+ 317130 Failed to create imap connection: %s
+ 317175 starttls
+ 317206 Try 'exit' to leave %s
+ 317236 -reread
+ 317246 %s: %s
+ 317256 %s is set
+ 317271 %s is not set
+ 317310 CAPA: %s
+ 317322 you need to connect first
+ 317354 login: password required
+ 317405 Password:
+ 317417 login
+ 317425 -test
+ 317433 id -test requires an argument
+ 317471 ID: %s %s
+ 317504 Flags defined: 
+ 317524 Flags permanent: 
+ 317546 Total messages: %lu
+ 317573 Recent messages: %lu
+ 317621 First unseen message: %lu
+ 317654 Next UID: %lu
+ 317673 UID validity: %lu
+ 317716 select
+ 317725 unknown data item: %s
+ 317753 noop
+ 317760 check
+ 317766 fetch
+ 317774 store
+ 320002 close
+ 320010 unselect
+ 320021 delete
+ 320030 rename
+ 320037 expunge
+ 320047 create
+ 320056 subscribe
+ 320070 unsubscribe
+ 320104 -time
+ 320112 -time requires argument
+ 320142 %e-%b-%Y%$ %H:%M:%S %z
+ 320171 cannot parse time
+ 320213 -flag
+ 320221 -flag requires argument
+ 320251 unrecognized flag: %s
+ 320302 unrecognized option: %s
+ 320332 wrong number of arguments
+ 320364 cannot open file %s: %s
+ 320414 append
+ 320423 copy
+ 320430 search
+ 320437 no matches
+ 320452 %lu matches:
+ 320467 %c%c %c %4d %s
+ 320507 list
+ 320514 lsub
+ 320521 capability
+ 320534 [-reread] [NAME...]
+ 320560 list server capabilities
+ 320611 verbose
+ 320630 [on|off|mask|unmask] [secure [payload]]
+ 320700 control the protocol tracing
+ 320735 connect
+ 320745 [-tls] HOSTNAME [PORT]
+ 320774 open connection
+ 321014 disconnect
+ 321027 close connection
+ 321050 Establish TLS encrypted channel
+ 321110 USER [PASS]
+ 321124 login to the server
+ 321150 logout
+ 321157 quit imap session
+ 321204 [-test KW] [ARG [ARG...]]
+ 321236 send ID command
+ 321256 no operation (keepalive)
+ 321307 request a server checkpoint
+ 321343 [MBOX]
+ 321352 select a mailbox
+ 321373 examine
+ 321403 examine a mailbox
+ 321425 MBOX KW [KW...]
+ 321445 get mailbox status
+ 321470 MSGSET ITEMS
+ 321505 fetch message data
+ 321530 alter mailbox data
+ 321560 close the mailbox (with expunge)
+ 321630 close the mailbox (without expunge)
+ 321674 MAILBOX
+ 321704 delete the mailbox
+ 321727 OLD-NAME NEW-NAME
+ 321751 rename existing mailbox
+ 322010 permanently remove messages marked for deletion
+ 322070 create new mailbox
+ 322120 [-time DATETIME] [-flag FLAG] MAILBOX FILE
+ 322200 append message text from FILE to MAILBOX
+ 322251 MSGSET MAILBOX
+ 322270 Copy messages from MSGSET to MAILBOX
+ 322335 REF MBOX
+ 322346 List matching mailboxes
+ 322376 List subscribed mailboxes
+ 322430 MBOX
+ 322435 Subscribe to a mailbox
+ 322470 Remove mailbox from subscription list
+ 322542 [on|off]
+ 322553 control UID mode
+ 322574 args...
+ 322604 search the mailbox
+ 322627 quit
+ 322634 same as `logout'
+ 322655 too many arguments
+ 322700 imap> 
+ 322707 imap
+ 322714 encode
+ 322723 encode the input (default)
+ 322756 decode
+ 322765 decode the input
+ 323006 newline
+ 323016 print additional newline
+ 323047 list
+ 323054 list supported filters
+ 323103 mu_filter_get_list
+ 323126 excess arguments
+ 323147 mailutils
+ 323161 what filter do you want?
+ 323214 cannot open filter stream: %s
+ 323260 encode
+ 323267 encode the input (default)
+ 323322 decode
+ 323331 decode the input
+ 323352 newline
+ 323362 print additional newline
+ 323413 charset
+ 323423 NAME
+ 323430 set charset (default: iso-8859-1)
+ 323472 encoding
+ 323510 set encoding (default: quoted-printable)
+ 323561 iso-8859-1
+ 323574 quoted-printable
+ 324077 don't know what %s is
+ 324125 mailutils
+ 324137 %s %s
+ 324145 --help
+ 324154 too many arguments
+ 324177 verbose
+ 324207 increase output verbosity
+ 324250 mbox
+ 324255 -lmu_mbox
+ 324272 -lmu_mh
+ 324302 maildir
+ 324312 -lmu_maildir
+ 324327 imap
+ 324334 -lmu_imap
+ 324350 -lmu_auth -lgsasl -lgnutls  -lldap -lpam -ldl
+ 324432 -lmu_pop
+ 324447 -lmu_dbm
+ 324460 -lkyotocabinet
+ 324477 mailer
+ 324506 -lmu_mailer
+ 324522 sieve
+ 324530 -lmu_sieve
+ 324543 compat
+ 324552 -lmu_compat
+ 324566 auth
+ 324573 guile
+ 324601 -lmu_scm -lguile-2.0 -lgc
+ 324633 python
+ 324650 -lmu_py -lpython2.7 -lpthread -ldl  -lutil -lm 
+ 324734 -lmu_cfg
+ 324745 argp
+ 324752 -lmu_argp
+ 324764 too many arguments
+ 325007 mailutils
+ 325021 -L/usr/lib/x86_64-linux-gnu
+ 325056 -lmailutils
+ 325076 unknown keyword: %s
+ 325140 file
+ 325145 FILE
+ 325152 read message from FILE
+ 325201 priority
+ 325212 FACILITY[.LEVEL]
+ 325240 log at the specified syslog priority (implies --syslog)
+ 325330 syslog
+ 325337 log via syslog
+ 325356 stderr
+ 325365 log to the standard error
+ 325417 severity
+ 325440 log at Mailutils severity level SEV
+ 325504 locus
+ 325512 FILE:LINE[:COL]
+ 325532 set locus for logging
+ 325564 syslog tag
+ 325577 set syslog tag
+ 325616 unknown severity: %s
+ 325643 mailutils
+ 325655 unknown facility: %s
+ 325702 unknown priority: %s
+ 325727 bad column number: %s
+ 325755 bad line number: %s
+ 326010 both input file and message text given
+ 326057 mu-logger
+ 326071 cannot create log stream: %s
+ 326140 cannot open input stream %s: %s
+ 326200 disconnected
+ 326215 connected
+ 326227 logged in
+ 326241 unknown
+ 326251 user
+ 326256 [nouser]
+ 326267 host
+ 326274 [nohost]
+ 326305 program-name
+ 326322 canonical-program-name
+ 326354 package
+ 326364 mailutils
+ 326376 version
+ 326406 2.99.99
+ 326416 status
+ 326425 apop: password required
+ 326455 Password:
+ 326467 -reread
+ 326477 %s: %s
+ 326507 %s is set
+ 326522 %s is not set
+ 326542 CAPA: %s
+ 326554 UIDL: %s
+ 326566 Msg: %d UIDL: %s
+ 326610 LIST: %s
+ 326622 Msg: %u Size: %lu
+ 326645 pass: password required
+ 326675 Mesgs: %lu Size %lu
+ 326722 -tls
+ 326727 cannot create TLS stream: %s
+ 326764 Failed to create pop3: %s
+ 327016 Try 'exit' to leave %s
+ 327046 apop
+ 327053 USER [PASS]
+ 327067 authenticate with APOP
+ 327116 capa
+ 327123 [-reread] [NAME...]
+ 327147 list server capabilities
+ 327200 disconnect
+ 327213 close connection
+ 327234 dele
+ 327241 NUMBER
+ 327250 mark message for deletion
+ 327302 list
+ 327307 [NUMBER]
+ 327320 list messages
+ 327336 noop
+ 327343 send a "no operation"
+ 327371 pass
+ 327376 [PASSWORD]
+ 327411 send password
+ 327427 connect
+ 327437 [-tls] HOSTNAME [PORT]
+ 327466 open connection
+ 327506 quit
+ 327513 quit pop3 session
+ 327535 retr
+ 327542 retrieve a message
+ 327565 rset
+ 327572 remove deletion marks
+ 327620 stat
+ 327630 get the mailbox size and number of messages in it
+ 327712 stls
+ 327717 start TLS negotiation
+ 327751 MSGNO [NUMBER]
+ 327770 display message headers and first NUMBER (default 5) lines of its body
+ 330077 uidl
+ 330110 show unique message identifiers
+ 330150 NAME
+ 330155 send login
+ 330170 verbose
+ 330200 [on|off|mask|unmask] [secure [payload]]
+ 330250 control the protocol tracing
+ 330305 too many arguments
+ 330330 pop> 
+ 330350 file
+ 330355 FILE
+ 330370 query configuration values from FILE (default mailutils.rc)
+ 330464 value
+ 330472 display parameter values only
+ 330530 program
+ 330540 NAME
+ 330550 set program name for configuration lookup
+ 330622 path
+ 330627 display parameters as paths
+ 330663 verbose
+ 330673 increase output verbosity
+ 330725 query what?
+ 330741 mailutils
+ 330760 %s: %s
+ 330767 mailutils
+ 331001 send.c
+ 331010 %s:%d: mu_address_union (paddr, addr) failed: %s
+ 331071 from
+ 331076 ADDRESS
+ 331106 send mail from this ADDRESS
+ 331142 rcpt
+ 331147 send mail to this ADDRESS
+ 331201 read-recipients
+ 331230 read recipients from the message
+ 331300 %s:%d: mu_address_create_null (&from_addr) failed: %s
+ 331370 %s:%d: mu_address_create_null (&rcpt_addr) failed: %s
+ 331456 not enough arguments
+ 331510 %s:%d: mu_file_stream_create (&instr, infile, MU_STREAM_READ|MU_STREAM_SEEK) failed: %s
+ 331640 %s:%d: mu_stdio_stream_create (&instr, MU_STDIN_FD, MU_STREAM_READ|MU_STREAM_SEEK) failed: %s
+ 332000 %s:%d: mu_stream_to_message (instr, &msg) failed: %s
+ 332070 %s:%d: mu_message_get_header (msg, &header) failed: %s
+ 332162 mu_header_sget_value
+ 332216 no recipients
+ 332234 smtp://
+ 332250 %s:%d: mu_url_create (&urlhint, "smtp://") failed: %s
+ 332340 %s:%d: mu_url_create_hint (&url, argv[0], MU_URL_PARSE_DEFAULT, urlhint) failed: %s
+ 332470 %s:%d: mu_mailer_create_from_url (&mailer, url) failed: %s
+ 332570 %s:%d: mu_mailer_open (mailer, MU_STREAM_RDWR) failed: %s
+ 332670 %s:%d: mu_mailer_send_message (mailer, msg, from_addr, rcpt_addr) failed: %s
+ 333010 disconnected
+ 333025 connected
+ 333037 logged in
+ 333051 unknown
+ 333061 user
+ 333066 [nouser]
+ 333077 host
+ 333104 [nohost]
+ 333115 program-name
+ 333132 canonical-program-name
+ 333164 package
+ 333174 mailutils
+ 333206 version
+ 333216 2.99.99
+ 333226 status
+ 333235 %s %s
+ 333244 -tls
+ 333251 cannot create TLS stream: %s
+ 333306 Failed to create smtp: %s
+ 333340 smtp://
+ 333350 %s: %s
+ 333360 %s is set
+ 333373 %s is not set
+ 333413 CAPA: %s
+ 333425 no domain set
+ 333443 Try 'exit' to leave %s
+ 333473 no sender address
+ 333515 no recipients
+ 333533 VISUAL
+ 333542 EDITOR
+ 333551 /bin/ed
+ 333561 mu_spawnvp
+ 333610 cannot create temporary file: %s
+ 333660 error copying to temporary file: %s
+ 333724 mu_file_stream_create
+ 333760 cannot open temporary file for writing: %s
+ 334033 From: %s
+ 334045 From: 
+ 334055 To: 
+ 334064 Subject: 
+ 334100 What now: [s]end, [e]dit, [q]uit
+ 334141 seqSEQ
+ 334150 Previous message exists. What now: [r]euse, [e]dit, [u]se as a template or
+ 334263 [d]rop and start from scratch
+ 334321 rReEdD
+ 334640 STARTTLS
+ 334660 remote party does not offer STARTTLS
+ 334725 mu_smtp_clear_auth_mech
+ 334755 mu_smtp_add_auth_mech
+ 335010 authentication not implemented
+ 335050 no suitable authentication mechanism found
+ 335123 domain
+ 335132 username
+ 335143 password
+ 335154 service
+ 335164 realm
+ 335176 mu_getpass
+ 335211 unrecognized parameter: %s
+ 335244 mu_smtp_set_param
+ 335266 %s: 
+ 335273 error reading value: %s
+ 335323 %s = %s
+ 335334 %s not set
+ 335350 mu_smtp_get_reply_iterator
+ 335407 connect
+ 335417 [-tls] HOSTNAME [PORT]
+ 335446 open connection
+ 335472 PARAM [ARG...]
+ 335511 Set connection parameter
+ 335542 clear
+ 335550 [PARAM...]
+ 335563 Clear connection parameters
+ 335617 list
+ 335624 List connection parameters
+ 335657 auth
+ 335664 MECH [MECH...]
+ 335703 Authenticate
+ 335720 ehlo
+ 335725 [DOMAIN]
+ 335736 Greet the server
+ 335757 capa
+ 335764 [NAME...]
+ 335776 list server capabilities
+ 336027 starttls
+ 336040 initiate encrypted connection
+ 336076 rset
+ 336103 reset the session state
+ 336133 from
+ 336140 [EMAIL]
+ 336150 set sender email
+ 336174 set recipient email
+ 336220 send
+ 336225 [FILE]
+ 336234 send message
+ 336251 smtp
+ 336256 COMMAND [ARGS...]
+ 336300 send an arbitrary COMMAND
+ 336332 quit
+ 336337 quit the session
+ 336360 verbose
+ 336370 [on|off|mask|unmask] [secure [payload]]
+ 336440 control the protocol tracing
+ 336475 bad arguments
+ 336513 smtp> 
+ 336530 file
+ 336535 FILE
+ 336550 use FILE instead of ~/.mu-tickets
+ 336612 verbose
+ 336622 increase output verbosity
+ 336654 quiet
+ 336662 suppress any output
+ 336706 ~/.mu-tickets
+ 336724 mu_url_create
+ 336744 mu_stream_seek
+ 336763 %s: %s:%d
+ 336775 : %s
+ 337004 not found
+ 337016 mailutils
+ 337030 %s: %s
+ 337040 mu_wicket_stream_match_url
+ 337073 not enough arguments
+ 337120 mu_tilde_expansion
+ 337143 cannot open input file %s: %s
+ 343017 ;*3$"
+ 370640 COMMAND [CMDOPTS]
+ 370700 GNU Mailutils multi-purpose tool.
+ 371640 mu acl - test access control lists.
+ 371720 test access control lists
+ 371760 ADDRESS [ADDRESS...]
+ 372600 mu cflags - show compiler options
+ 372660 show compiler options
+ 373040 mu dbm - DBM management tool
+ 373075 Valid COMMANDs are:
+ 373122   create or load - create the database
+ 373171   dump           - dump the database
+ 373236   list           - list contents of the database
+ 373317   delete         - delete specified keys from the database
+ 373412   add            - add records to the database
+ 373471   replace        - add records replacing ones with matching keys
+ 373600 DBM management tool
+ 373640 COMMAND FILE [KEY...]
+ 377040 mu imap - IMAP4 client shell.
+ 377100 IMAP4 client shell
+ 402200 mu filter - apply a chain of filters to the input
+ 402300 apply a chain of filters to the input
+ 402400 [~]NAME [ARGS] [+ [~]NAME [ARGS]...]
+ 403200 mu 2047 - decode/encode message headers.
+ 403300 decode/encode email message headers
+ 403344 [text]
+ 404200 mu help - display a terse help summary
+ 404260 display a terse help summary
+ 404320 [COMMAND]
+ 404440 mu info - print a list of configuration options used to build mailutils; optional arguments are interpreted as a list of configuration options to check for.
+ 404700 show Mailutils configuration
+ 404740 [capa...]
+ 405240 mu ldflags - list libraries required to link
+ 405340 list libraries required to link
+ 405400 KEYWORD [KEYWORD...]
+ 406440 mu logger - log data using Mailutils log facility
+ 406540 log data using Mailutils log facility
+ 406606 [TEXT]
+ 407540 mu pop - POP3 client shell.
+ 407600 POP3 client shell
+ 411500 mu query - query configuration values.
+ 411560 query configuration values
+ 411620 path [path...]
+ 412400 mu send - send a message.
+ 412440 send a message
+ 412460 URL-or-HOST [FILE]
+ 413140 mu smtp - run a SMTP session.
+ 413200 run a SMTP session
+ 415140 mu wicket - find matching URL in wicket
+ 415220 scan wickets for matching URLs
+ 415730 d62728e93f1dfeb997b8c9d9127aaa155e23ca.debug
+ 416015 .shstrtab
+ 416027 .interp
+ 416037 .note.ABI-tag
+ 416055 .note.gnu.build-id
+ 416100 .gnu.hash
+ 416112 .dynsym
+ 416122 .dynstr
+ 416132 .gnu.version
+ 416147 .gnu.version_r
+ 416166 .rela.dyn
+ 416200 .init
+ 416206 .plt
+ 416213 .plt.got
+ 416224 .text
+ 416232 .fini
+ 416240 .rodata
+ 416250 .eh_frame_hdr
+ 416266 .eh_frame
+ 416300 .init_array
+ 416314 .fini_array
+ 416330 .jcr
+ 416335 .dynamic
+ 416346 .data
+ 416354 .bss
+ 416361 .gnu_debuglink

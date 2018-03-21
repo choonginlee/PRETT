@@ -38,7 +38,7 @@ num_of_states = 0
 g_start_time = 0
 mul_start = 0
 new_state = []
-myiface = "ens34"
+myiface = "eth1"
 is_pruning = False
 is_moving = False
 is_data = False
@@ -228,9 +228,9 @@ def expand_states(states_in_the_level, token_db, args_db):
 			is_moving = True
 			for move_msg in move_state_msg:
 				rp, res = send_receive(rp, move_msg)
-				if move_msg.find("mail FROM") >= 0:
+				if move_msg.find("MAIL FROM") >= 0:
 					is_mailfrom = True
-				if move_msg.find("rcpt TO") >= 0:
+				if move_msg.find("RCPT TO") >= 0:
 					is_rcptto = True
 				if move_msg == 'data' or move_msg == 'DATA':
 		 			is_data = True
@@ -444,6 +444,8 @@ def send_receive(rp, payload):
 	
 	if is_mailfrom == True and is_rcptto == True and is_data == True:
 		#print "send_after_data called. port no. %d" % sport
+		if current_level > 4: # after sending DATA -> MAIL Content.
+			p = generate_ftp_msg(payload, rp)
 		if is_content_written == False:
 			p = generate_ftp_msg(payload+'\r\n.', rp)
 			is_content_written = True
@@ -518,7 +520,7 @@ def process_response(p, ans, origin_rp):
 	finack_resp = None
 	for resp in resp_list:
 		# return the last ftp packet. Scapy bug.
-		if resp.haslayer("TCP") and resp.haslayer("Raw"):
+		if resp.haslayer("TCP") and resp.haslayer("Raw") and resp.getlayer("TCP").dport == sport:
 			raw_resp = resp
 		# check if finack
 		elif resp.haslayer("TCP") and resp.getlayer("TCP").flags == 0x11:
@@ -531,7 +533,7 @@ def process_response(p, ans, origin_rp):
 		for resp in resp_list:
 			# return the last ftp packet. Scapy bug.
 			# print resp.show()
-			if resp.haslayer("TCP") and resp.haslayer("Raw"):
+			if resp.haslayer("TCP") and resp.haslayer("Raw") and resp.getlayer("TCP").dport == sport:
 				raw_resp = resp
 			# check if finack
 			elif resp.haslayer("TCP") and resp.getlayer("TCP").flags == 0x11:
@@ -888,10 +890,22 @@ if mode1 == 'm':
 elif mode1 == 'a' or mode == 'A':
 	# get all command candidates
 	with open("./tokenfile/total_tokens.txt") as f:
-		#token_db = pickle.load(f)
-		#token_db = ['retr', 'data', 'type', 'get', 'size', 'list', 'help', 'mode', 'user', 'port', 'pass', 'opts', 'pwd', 'cwd', 'rest', 'stat', 'acct', 'prot', 'noop', 'pasv']
-		#token_db = ['user', 'pass', 'pasv', 'opts']
-		token_db = ['data', 'helo', 'rcpt', 'auth', 'mail', 'rset', 'ehlo', 'blabla']
+
+		token_db = []
+		smtp_trace_token = ['USER', 'PASS', 'SYST', 'PWD', 'TYPE', 'PASV', 'RETR', 'PORT', 'FEAT', 'LIST', 'CWD', 'STOR', 'OPTS', 'MDTM', 'QUIT', 'opts', 'syst', 'site', 'noop']
+		for token in smtp_trace_token:
+			token_db.append(token)
+		print "[+] Total tokens in traces : %d" % len(smtp_trace_token)
+				
+		token_db_dict = pickle.load(f)
+		token_db_set = set()
+		for token in token_db_dict:
+			token_db_set.add(token[0].upper())
+		
+		print "[+] Total tokens in binaries : %d" % len(token_db_set)
+		for token in token_db_set:
+			if token not in token_db:
+				token_db.append(token)
 
 	# get all argument candidates
 	with open("./args/total_args.txt") as a:

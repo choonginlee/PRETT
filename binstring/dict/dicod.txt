@@ -1,0 +1,2336 @@
+   1070 /lib64/ld-linux-x86-64.so.2
+   2313 |MSVMA
+   2332 yth/
+   2413 EXp|
+   2432 ^c_s
+   2550 |w{p
+   2644 cMKE>U
+   2720 N~1# 
+  25131 libdico.so.1
+  25146 _ITM_deregisterTMCloneTable
+  25202 __gmon_start__
+  25221 _Jv_RegisterClasses
+  25245 _ITM_registerTMCloneTable
+  25277 grecs_warning
+  25315 grecs_include_path_setup
+  25346 dico_list_item
+  25365 utf8_iter_first
+  25405 dico_strat_free
+  25425 grecs_print_diag_fun
+  25452 grecs_foreach_include_dir
+  25504 dico_list_destroy
+  25526 wordsplit
+  25540 dico_set_program_name
+  25566 dico_codec_stream_create
+  25617 dico_stream_bytes_in
+  25644 dico_stream_read
+  25665 _dico_list_remove
+  25707 dico_stream_set_write
+  25735 grecs_txtacc_create
+  25761 grecs_log_to_stderr
+  26005 dico_stream_write
+  26027 dico_list_append
+  26050 dico_dbg_stream_create
+  26077 grecs_lex_trace
+  26117 dico_strategy_iterate
+  26145 wordsplit_strerror
+  26170 dico_udb_open
+  26206 utf8_strncasecmp
+  26227 grecs_default_port
+  26252 dico_crlf_stream
+  26273 dico_tokenize_clear
+  26317 dico_assoc_dup
+  26336 grecs_preproc_run
+  26360 xlat_c_string
+  26376 dico_fd_io_stream_create
+  26427 dico_list_create
+  26450 dico_log
+  26461 grecs_string_convert
+  26506 dico_argcv_free
+  26526 dico_stream_set_error_string
+  26563 wordsplit_free
+  26602 grecs_tree_free
+  26622 grecs_preprocessor
+  26645 dico_iterator_remove_current
+  26702 dico_iterator_next
+  26725 dico_list_prepend
+  26747 dico_stream_create
+  26772 grecs_preproc_add_include_dir
+  27030 dico_stream_set_flush
+  27056 dico_stream_bytes_out
+  27104 dico_udb_get_password
+  27132 dico_assoc_append
+  27154 dico_die
+  27165 dico_stream_flush
+  27207 dico_markup_type
+  27230 dico_soundex
+  27245 grecs_txtacc_finish
+  27271 dico_list_count
+  27311 dico_strategy_find
+  27334 grecs_asprintf
+  27353 dico_stream_destroy
+  27377 dico_markup_list
+  27420 grecs_include_path_count
+  27451 dico_header_parse
+  27473 grecs_error_count
+  27515 dico_iterator_first
+  27541 dico_list_iterate
+  27563 utf8_strlen
+  27577 dico_assoc_create
+  27621 grecs_print_statement_array
+  27655 grecs_node_create
+  27677 dico_get_default_strategy
+  27731 dico_udb_get_groups
+  27755 dico_stream_set_ioctl
+  30003 dico_stream_ioctl
+  30025 _fini
+  30033 dico_markup_register
+  30060 dico_list_intersect_p
+  30106 dico_list_iterator
+  30131 utf8_iter_end_p
+  30151 dico_set_log_printer
+  30176 dico_trim_nl
+  30213 dico_list_set_comparator
+  30244 grecs_parse
+  30260 dico_set_default_strategy
+  30312 dico_assoc_add
+  30331 dico_udb_create
+  30351 dico_udb_check_password
+  30401 dico_stream_strerror
+  30426 grecs_gram_trace
+  30447 grecs_tree_process
+  30472 dico_stream_getline
+  30516 grecs_print_docstring
+  30544 dico_full_file_name
+  30570 dico_strategy_count
+  30614 dico_levenshtein_distance
+  30646 dico_iterator_destroy
+  30674 dico_base64_decode
+  30717 dico_udb_define
+  30737 dico_strategy_create
+  30764 grecs_malloc
+  31001 dico_tokenize_begin
+  31025 dico_stream_writeln
+  31051 dico_udb_close
+  31070 _dico_stderr_log_printer
+  31121 grecs_txtacc_grow
+  31143 dico_list_set_free_item
+  31173 dico_argcv_string
+  31215 grecs_error
+  31231 dico_log_stream_create
+  31260 dico_linetrim_stream
+  31305 grecs_txtacc_free
+  31327 dico_invocation_name
+  31354 dico_assoc_destroy
+  31377 dico_stream_last_error
+  31426 _dico_list_locate
+  31450 dico_url_full_path
+  31473 utf8_quote
+  31506 dico_stream_set_close
+  31534 dico_assoc_find
+  31554 dico_strategy_add
+  31576 dico_stream_set_destroy
+  31626 dico_tokenize_end
+  31650 dico_stream_set_read
+  31675 dico_tokenize_string
+  31722 dico_stream_close
+  31744 dico_assoc_iterator
+  31770 utf8_iter_next
+  32007 utf8_strcasecmp
+  32027 dico_strat_name_cmp
+  32053 _dico_libi18n_init
+  32076 dico_stream_set_buffer
+  32125 dico_markup_lookup
+  32150 dico_program_name
+  32172 dico_argcv_quoting_style
+  32223 libgsasl.so.7
+  32241 gsasl_callback_hook_set
+  32271 gsasl_step64
+  32306 gsasl_encode
+  32323 gsasl_callback_hook_get
+  32353 gsasl_server_mechlist
+  32401 gsasl_property_set
+  32424 gsasl_server_start
+  32447 gsasl_strerror
+  32466 gsasl_decode
+  32503 gsasl_finish
+  32520 gsasl_init
+  32533 gsasl_property_get
+  32556 gsasl_callback_set
+  32601 libltdl.so.7
+  32616 lt_dlsym
+  32627 lt_dlclose
+  32642 lt_dladvise_init
+  32663 lt_dladvise_destroy
+  32707 lt_dladdsearchdir
+  32731 lt_dladvise_ext
+  32751 lt_dladvise_global
+  32774 lt_dlopenadvise
+  33014 lt_dlerror
+  33027 lt_dlinit
+  33041 libcrypt.so.1
+  33057 crypt
+  33065 libc.so.6
+  33077 setuid
+  33106 socket
+  33115 strcpy
+  33124 __printf_chk
+  33141 exit
+  33146 execv
+  33154 _IO_putc
+  33165 setlocale
+  33177 mbrtowc
+  33207 fopen
+  33215 strncmp
+  33225 inet_aton
+  33237 optind
+  33246 regexec
+  33256 __strdup
+  33267 dcgettext
+  33301 connect
+  33311 __fdelt_chk
+  33325 inet_ntoa
+  33337 signal
+  33346 getdomainname
+  33364 fork
+  33371 regfree
+  33401 setreuid
+  33412 __stack_chk_fail
+  33433 daemon
+  33442 unlink
+  33451 listen
+  33460 select
+  33467 iswprint
+  33500 realloc
+  33510 abort
+  33516 memchr
+  33525 getpid
+  33534 kill
+  33541 strftime
+  33552 localtime_r
+  33566 __ctype_get_mb_cur_max
+  33615 strtol
+  33624 isatty
+  33633 feof
+  33640 getpwnam
+  33651 calloc
+  33660 openlog
+  33670 memset
+  33677 __errno_location
+  33720 bind
+  33725 memcmp
+  33734 __syslog_chk
+  33751 getsockopt
+  33764 setgroups
+  33776 pause
+  34004 __fprintf_chk
+  34022 getgrnam
+  34033 stdout
+  34042 gethostbyaddr
+  34060 fputc
+  34066 getrusage
+  34100 fputs
+  34106 regerror
+  34117 memcpy
+  34126 fclose
+  34135 __vsnprintf_chk
+  34155 strtoul
+  34165 setsockopt
+  34200 setegid
+  34210 mbsinit
+  34220 __ctype_b_loc
+  34236 getenv
+  34245 regcomp
+  34255 optarg
+  34264 getservbyname
+  34302 alarm
+  34310 gethostbyname
+  34326 __snprintf_chk
+  34345 getuid
+  34354 fscanf
+  34363 getegid
+  34373 getopt_long
+  34407 gethostname
+  34423 __getdelim
+  34436 fwrite
+  34445 fread
+  34453 gettimeofday
+  34470 geteuid
+  34500 __memcpy_chk
+  34515 waitpid
+  34525 strchr
+  34534 getsockname
+  34550 mktime
+  34557 qsort
+  34565 accept
+  34574 sleep
+  34602 __ctype_toupper_loc
+  34626 __ctype_tolower_loc
+  34652 __cxa_finalize
+  34671 __vasprintf_chk
+  34711 fcntl
+  34717 __sprintf_chk
+  34735 __xstat
+  34745 uname
+  34753 bindtextdomain
+  34772 setgid
+  35001 strcmp
+  35010 __asprintf_chk
+  35027 __libc_start_main
+  35051 ferror
+  35060 stpcpy
+  35067 setenv
+  35076 sysconf
+  35106 _edata
+  35115 __bss_start
+  35131 kwd_acl
+  35141 debug_source_info
+  35163 group_list
+  35176 srvcount
+  35207 global_acl
+  35222 restart
+  35232 server_addr
+  35246 access_log_prog
+  35266 ident_keyfile
+  35304 show_sys_info
+  35322 got_quit
+  35333 srvtab
+  35342 option_mime
+  35356 client_addrlen
+  35375 debug_level
+  35411 log_facility
+  35426 cmdline_tree
+  35443 log_print_severity
+  35466 foreground
+  35501 help_text
+  35513 pidfile_name
+  35530 sasl_realm
+  35543 kwd_sasl
+  35554 identity_check
+  35573 program_version
+  35613 need_cleanup
+  35630 default_strategy_name
+  35656 stop
+  35663 debug_stream
+  35700 user_groups
+  35714 msg_id
+  35723 default_prefix
+  35742 access_log_format
+  35764 server_addrlen
+  36003 module_load_path
+  36024 sasl_enable
+  36040 database_list
+  36056 fdmax
+  36064 command_tab
+  36100 kwd_database
+  36115 print_help_hook
+  36135 _IO_stdin_used
+  36154 total_stat
+  36167 command_list
+  36204 prepend_load_path
+  36226 debug_level_str
+  36246 log_tag
+  36256 quoting_style_vals
+  36301 shutdown_timeout
+  36322 inactivity_timeout
+  36345 user_id
+  36355 connect_acl
+  36371 text_udb_def
+  36406 identity_name
+  36424 quoting_style_args
+  36447 ident_timeout
+  36465 sasl_enabled_mech
+  36507 kwd_load_module
+  36527 config_file
+  36543 kwd_strategy
+  36560 program_bug_address
+  36604 single_process
+  36623 total_bytes_out
+  36643 mode
+  36650 user_db_cfg
+  36664 dicod_lang_prefs
+  36705 access_log_file
+  36725 modinst_list
+  36742 keywords
+  36753 group_id
+  36764 kwd_user_db
+  37000 timing_option
+  37016 initial_banner_text
+  37042 sasl_disabled_mech
+  37065 client_addr
+  37101 version_etc_copyright
+  37127 print_version_hook
+  37152 current_stat
+  37167 transcript
+  37202 childtab
+  37213 max_children
+  37230 dicod_lang_lazy_prefs
+  37256 num_children
+  37273 user_name
+  37305 server_info
+  37321 total_forks
+  37335 client_id
+  37347 sasl_anon_groups
+  37370 config_lint_option
+  37413 sasl_service
+  37430 listen_addr
+  37444 LIBGSASL_1.1
+  37461 GLIBC_2.2.5
+  37475 GLIBC_2.14
+  37510 GLIBC_2.8
+  37522 GLIBC_2.15
+  37535 GLIBC_2.4
+  37547 GLIBC_2.3.4
+  37563 GLIBC_2.3
+ 110241 5ZV"
+ 110247 %\V"
+ 110261 %ZV"
+ 110301 %RV"
+ 110321 %JV"
+ 110341 %BV"
+ 110361 %:V"
+ 110401 %2V"
+ 110421 %*V"
+ 110441 %"V"
+ 111161 %zU"
+ 111201 %rU"
+ 111221 %jU"
+ 111241 %bU"
+ 111261 %ZU"
+ 111301 %RU"
+ 111321 %JU"
+ 111341 %BU"
+ 111361 %:U"
+ 111401 %2U"
+ 111421 %*U"
+ 111441 %"U"
+ 112161 %zT"
+ 112201 %rT"
+ 112221 %jT"
+ 112241 %bT"
+ 112261 %ZT"
+ 112301 %RT"
+ 112321 %JT"
+ 112341 %BT"
+ 112361 %:T"
+ 112401 %2T"
+ 112421 %*T"
+ 112441 %"T"
+ 113161 %zS"
+ 113201 %rS"
+ 113221 %jS"
+ 113241 %bS"
+ 113261 %ZS"
+ 113301 %RS"
+ 113321 %JS"
+ 113341 %BS"
+ 113361 %:S"
+ 113401 %2S"
+ 113421 %*S"
+ 113441 %"S"
+ 114161 %zR"
+ 114201 %rR"
+ 114221 %jR"
+ 114241 %bR"
+ 114261 %ZR"
+ 114301 %RR"
+ 114321 %JR"
+ 114341 %BR"
+ 114361 %:R"
+ 114401 %2R"
+ 114421 %*R"
+ 114441 %"R"
+ 115161 %zQ"
+ 115201 %rQ"
+ 115221 %jQ"
+ 115241 %bQ"
+ 115261 %ZQ"
+ 115301 %RQ"
+ 115321 %JQ"
+ 115341 %BQ"
+ 115361 %:Q"
+ 115401 %2Q"
+ 115421 %*Q"
+ 115441 %"Q"
+ 116161 %zP"
+ 116201 %rP"
+ 116221 %jP"
+ 116241 %bP"
+ 116261 %ZP"
+ 116301 %RP"
+ 116321 %JP"
+ 116341 %BP"
+ 116361 %:P"
+ 116401 %2P"
+ 116421 %*P"
+ 116441 %"P"
+ 117161 %zO"
+ 117201 %rO"
+ 117221 %jO"
+ 117241 %bO"
+ 117261 %ZO"
+ 117301 %RO"
+ 117321 %JO"
+ 117341 %BO"
+ 117361 %:O"
+ 117401 %2O"
+ 117421 %*O"
+ 117441 %"O"
+ 120161 %zN"
+ 120201 %rN"
+ 120221 %jN"
+ 120241 %bN"
+ 120261 %ZN"
+ 120301 %RN"
+ 120321 %JN"
+ 120341 %BN"
+ 120361 %:N"
+ 120401 %2N"
+ 120421 %*N"
+ 120441 %"N"
+ 120500 AVAUA
+ 120507 ATUH
+ 121037 %T|"
+ 121227 =,{"
+ 121427  []A\A]A^
+ 122202 =Iu"
+ 122211 5Bu"
+ 122321 =)u"
+ 123155 t![H
+ 123567 =dw"
+ 124167 =dv"
+ 125240 ATUH
+ 125300 D$H1
+ 125401 D$HdH3
+ 125422 P[]A\
+ 125440 ATUH
+ 125527 []A\
+ 125540 AUATI
+ 125632 []A\A]
+ 126360 ATUI
+ 126507 []A\
+ 127300 AWAVL
+ 127313 AUATUSH
+ 127475 t A9
+ 130315 []A\A]A^A_
+ 130346 []A\A]A^A_H
+ 130520 ATUA
+ 130735 []A\
+ 130760 AUAT
+ 131071 []A\A]
+ 131114 []A\A]
+ 131212 []A\A]
+ 131320 ATUI
+ 131337 W$dH
+ 131421 $t_H
+ 131467 $t9H
+ 131730 []A\
+ 132500 AUATI
+ 132530 D$(1
+ 133331 L$(dH3
+ 133356 8[]A\A]
+ 134320 AUATI
+ 134356 D$81
+ 134373 8auk
+ 135104 L$8dH3
+ 135133 H[]A\A]
+ 135740 ATUSH
+ 136135 []A\
+ 136160 ATUI
+ 136324 []A\
+ 136340 AVAUI
+ 136347 ATUH
+ 136545 ]A\A]A^
+ 137046 ]A\A]A^
+ 137141 ]A\A]A^
+ 137623 tbH9
+ 140057 D$81
+ 140121 T$8dH3
+ 140300 AVAUI
+ 140362 =!Y"
+ 140635 []A\A]A^
+ 140740 AWAVAUATA
+ 141006 D$x1
+ 141057 \$@H
+ 141123 |$8H
+ 141136 D$@t5H
+ 141204 |$8H
+ 141302 |$8H
+ 141437 L$(H
+ 141470 T$ I
+ 141572 ~LHc
+ 141762 |$8L
+ 142015 \$xdH3
+ 142042 []A\A]A^A_
+ 142120 AWAVAUATI
+ 142146 -]Y"
+ 142320 t$ L
+ 143061 []A\A]A^A_
+ 143556 =%V"
+ 143660 AVAUI
+ 143720 =KR"
+ 143766 []A\A]A^
+ 144055 []A\A]A^
+ 144600 ATUH
+ 145152 []A\
+ 145260 ATUI
+ 145574 []A\
+ 145660 ATUH
+ 146232 []A\
+ 146340 ATUI
+ 146654 []A\
+ 146740 AWAVAUATUSH
+ 146766 4$tvH
+ 147042 []A\A]A^A_
+ 147143 ([]A\A]A^A_
+ 147304 =w$"
+ 147331 %b$"
+ 147371 M;t$
+ 147524 ([]A\A]A^A_
+ 147561 []A\A]A^A_
+ 147703 Sw]Hc
+ 150225 t&<,t"1
+ 150454 t/<,t+1
+ 150560 AVAUI
+ 150760 u	[]A\A]A^
+ 151060 AWAVAUATUSH
+ 151237 =+!"
+ 151371 %J!"
+ 152241 []A\A]A^A_
+ 152760 AWAV
+ 152771 AUAT
+ 153026 D$x1
+ 153131 d$(L
+ 153606         
+ 153617 D$(    
+ 153627 D$, H
+ 153635 D$ H
+ 153642 D$xdH3
+ 153676 []A\A]A^A_
+ 154027 H;\$
+ 154322 D4 =
+ 154565         A
+ 154602     A
+ 155016 L;|$
+ 155144 OwaA
+ 155207 D< [
+ 155214 D4 -
+ 155341         A
+ 155356     I
+ 155707         A
+ 155724     A
+ 156035         
+ 156046 D$(    
+ 156056 D$, H
+ 156070 D$-[
+ 156132         
+ 156143 D$(    
+ 156153 D$, H
+ 156230         
+ 156241 D$(    
+ 156251 D$, H
+ 156660 AWAVI
+ 156667 AUATI
+ 157160 <\t0A
+ 160332 =Q9"
+ 160702 []A\A]A^A_
+ 161060 AUATUSH
+ 161224 $tyL
+ 161400 []A\A]
+ 162000 ATUI
+ 162206 []A\
+ 162770 l$ H
+ 164100 AUATI
+ 164242 []A\A]
+ 164320 AWAVI
+ 164327 AUATA
+ 164476 []A\A]A^A_
+ 164700 AUATI
+ 165057 []A\A]
+ 165160 AUATI
+ 165361 []A\A]
+ 165412 AWAV1
+ 165420 AUATI
+ 165573 []A\A]A^A_
+ 166011 +tdH
+ 166510 D$(1
+ 166545 D$(dH3
+ 167040 ATUH
+ 167122 D$(1
+ 167337 D$(dH3
+ 167360 0[]A\
+ 167500 ATUI
+ 167555 []A\
+ 167700 AWAVAUATI
+ 170253 []A\A]A^A_
+ 170274 []A\A]A^A_
+ 170320 AWAVI
+ 170327 AUATI
+ 170362 D$(1
+ 170456 t$ L
+ 170624 T$(dH3
+ 170645 8[]A\A]A^A_
+ 170760 AVAUI
+ 170767 ATUI
+ 171234 dH34%(
+ 171255  []A\A]A^
+ 171320 ATUI
+ 171606 []A\
+ 172142 ATUSH
+ 172162 []A\
+ 172306 []A\
+ 173142 t4USH
+ 173300 ATUI
+ 173605 []A\
+ 173720 AUATI
+ 174024 []A\A]
+ 174140 ATUSH
+ 174626 []A\
+ 175200 AWAVAUATUSH
+ 175243 D$H1
+ 175473 =p""
+ 175653 |$ 1
+ 175702 \$ H
+ 176124 d$(H
+ 176524 T$8H
+ 177060 L$HdH3
+ 177101 X[]A\A]A^A_
+ 177231 5B "
+ 200220 AVAUATUH
+ 200377  []A\A]A^
+ 202060 AWAVAUATUSH
+ 202130 D$h1
+ 202240 D$hdH3
+ 202265 x[]A\A]A^A_
+ 202451 T$(L
+ 202603 T$@H
+ 202610 D$@L
+ 202615 t$0L
+ 202622 |$HH
+ 202633 D$8H
+ 202645 |$(L
+ 202673 t$0H
+ 203112 l$8L
+ 203133 D$HH
+ 203227  tfH
+ 203244 D$HI
+ 203306 D$HH
+ 203346 D$HH
+ 203402 l$8H
+ 203537 |$PH
+ 204243 t$PH
+ 204540 ATUSH
+ 204646 []A\
+ 205164 H9\$
+ 205500 AWAVAUATUSH
+ 205613 L$(H
+ 205620 T$ H
+ 206010 []A\A]A^A_
+ 206071 l$0H
+ 206467 l$`H
+ 206772 T$(H
+ 207062 D$@H1D$PH
+ 207077 D$HH1D$X
+ 207134 D$0H1D$@H
+ 207146 D$8H1D$H
+ 207165 T$0I
+ 207213 T$0u
+ 207302 D$0H
+ 207312 D$8H
+ 207323 D$@H
+ 207440 AWAVI
+ 207447 AUATA
+ 207511 t$,1
+ 207572 D$pI
+ 207624 D$`H
+ 207636 D$@H
+ 207643 D$ 1
+ 210006 |$@H
+ 210031 D$`H
+ 210036 T$hH+D$PH+T$X
+ 210063 L$@H9
+ 210124 D$HH)
+ 210142 D$ H
+ 210166 L$@1
+ 210736 []A\A]A^A_
+ 210760 H9T$H@
+ 211240 AUAT1
+ 211673 l$0H
+ 211764 D$0H
+ 212420 []A\A]
+ 213043 \$ H
+ 213476 T$PH
+ 213532 |$Vf
+ 213700 AWAVI
+ 213707 AUATI
+ 214227 []A\A]A^A_
+ 215100 ATUI
+ 215234  []A\
+ 217273 HcD$
+ 217640 AWAVI
+ 217647 AUATI
+ 220036 []A\A]A^A_
+ 220060 AWAVI
+ 220067 AUATUSH
+ 220123 D$H1
+ 220146 T$ L
+ 220206 D$@1
+ 220231 D$8H
+ 220272 D$@H
+ 220304 T$xH
+ 220311 t$@H
+ 220331 D$8H
+ 220352 T$XH
+ 220371 |$8I
+ 220454 H9\$
+ 220504 T$ M
+ 220631 D$8H
+ 220735 D$HdH3
+ 220756 X[]A\A]A^A_
+ 221160 AWAV
+ 221171 AUATUSH
+ 221217 l$ dH
+ 221274 l$(L
+ 221301 |$ H
+ 221455 []A\A]A^A_
+ 223542 C@tJ1
+ 223777 tOSH
+ 224663 t[SH
+ 225040 ATUH
+ 225213 []A\
+ 225360 AWAVAUATI
+ 225450 L$81
+ 226037 D$8dH3
+ 226064 H[]A\A]A^A_
+ 226137 L$(L
+ 226151 L$(H
+ 226176 L$(H
+ 226213 L$(L
+ 226270 t$ L
+ 226420 AWAVAUATUSH
+ 226463 L$(L
+ 226470 D$0L
+ 226522 D$8dH
+ 226540 D$X1
+ 226712 D$ I
+ 226717 D$hH
+ 226763 |$PH
+ 227100 T$HI
+ 227120 T$`H
+ 227162 D$HH
+ 227233 D$HH
+ 227240 L$ H
+ 227266 T$ H
+ 227273 t$(1
+ 227462 t$0H
+ 227502 t$8H
+ 227553 |$(L
+ 227602 D$XdH3
+ 227627 h[]A\A]A^A_
+ 227655 T$PI
+ 230060 AWAVI
+ 230067 AUATI
+ 230172 T$HH
+ 230216 T$`H
+ 230252 D$hH
+ 230575 T$pH
+ 230624 []A\A]A^A_
+ 231000 ATUI
+ 231226 []A\
+ 231240 ATUI
+ 231466 []A\
+ 231500 AWAVI
+ 231507 AUATI
+ 231564 T$PH
+ 231610 T$`H
+ 231643 D$hH
+ 232055 D$pH
+ 232067 []A\A]A^A_
+ 232215 []A\A]A^A_
+ 232440 AUATUSH
+ 232537 ]A\A]
+ 232603 []A\A]
+ 232677 []A\A]
+ 233075 []A\A]
+ 233200 AUATI
+ 233335 |$(H
+ 233370 []A\A]
+ 233500 |$(H
+ 233533 []A\A]
+ 233740 AVAUATUH
+ 234035 []A\A]A^
+ 234171 []A\A]A^
+ 234267 []A\A]A^
+ 234542 []A\A]A^
+ 235100 AWAVAUATM
+ 235464 []A\A]A^A_
+ 235620 AWAVA
+ 235627 AUATI
+ 235665 D$(1
+ 236031 t$ H
+ 236147 D$(dH3
+ 236174 8[]A\A]A^A_
+ 236231 t$ H
+ 236275 t$(H
+ 236302 |$ A
+ 236440 t$(H
+ 236445 |$ A
+ 237140 AVAUATUS1
+ 237171 D$81
+ 237310 T$8dH3
+ 237337 @[]A\A]A^
+ 241115 tIr/
+ 241217 []A\
+ 241332 []A\
+ 241423 ATUSH
+ 242027 []A\
+ 242314 ]A\A]A^
+ 242524 ]A\A]A^H
+ 242625 ]A\A]A^
+ 244120 AUATI
+ 244246 []A\A]
+ 244354 []A\A]
+ 244423 []A\A]
+ 245460 ATUSH
+ 245572 []A\
+ 245653 []A\
+ 246016 []A\
+ 246100 ATUI
+ 246156 []A\
+ 250110 D$(1
+ 250334 D$(dH3
+ 250355 0[]A\
+ 250600 AUATI
+ 251056 []A\A]
+ 251160 AVAUI
+ 251167 ATUSH
+ 251474 []A\A]A^
+ 251632 \$(H
+ 252040 ATUH
+ 252140 H9kPt:H
+ 252223 []A\
+ 253001 ?:t+H
+ 253243 t;SH
+ 253651 markup-
+ 254200 AWAVI
+ 254207 AUATI
+ 254266 <$.H
+ 254273 ?tQM
+ 254344 []A\A]A^A_
+ 254412 <$.u
+ 254524 twf.
+ 255203 tsUSH
+ 255400 ATUH
+ 255710 []A\
+ 255740 AUATUSH
+ 256110 []A\A]
+ 256632 []A\H
+ 256751 []A\H
+ 257114 ]A\1
+ 257320 AWAVAUATUSH
+ 257535 |$ L
+ 260320 []A\A]A^A_
+ 260461 D$8%
+ 261440 AUATUSH
+ 261614 []A\A]
+ 262160 AUATUS
+ 262315 t[E1
+ 262523 []A\A]
+ 262540 AUATUSH
+ 262677 []A\A]
+ 262733 tRATU
+ 263053 []A\
+ 263070 []A\
+ 263120 AUATH
+ 263451 []A\A]
+ 264014 []A\
+ 264260 AUATHc
+ 264662 []A\A]
+ 265500 AWAV
+ 265511 AUATUSH
+ 265712 0L9#w
+ 265760 D$,H
+ 266057 D$0E1
+ 266103 D$8H
+ 266120 D$@H
+ 266135 D$HH
+ 266152 D$PH
+ 266167 D$XH
+ 266204 D$`H
+ 266221 D$hH
+ 266236 D$pH
+ 266253 D$xH
+ 266554 Jc< 
+ 267100 dH34%(
+ 267126 []A\A]A^A_
+ 270034 t$,1
+ 270140 AVAUI
+ 272467 []A\
+ 272605 tAr/
+ 273200 ATUI
+ 273257 []A\
+ 273300 ATUA
+ 273353 []A\
+ 274160 AUATI
+ 274327 []A\A]
+ 274353 []A\A]
+ 275320 AVAUATUM
+ 275355 D$(1
+ 275557 D$(dH3
+ 275604 0[]A\A]A^
+ 276140 ATU1
+ 276302 []A\
+ 276360 ATUA
+ 276663 tBH9
+ 277161 $H+C0H
+ 277222 H+C8
+ 277266 H+C@H
+ 277324 H+CH
+ 277337 D$ H+CP
+ 277375 D$(H+CX
+ 277524 D$ H+
+ 277565 D$(H+
+ 300740 AVAUA
+ 300747 ATUA
+ 301433 tCA9
+ 301512 []A\A]A^
+ 302660 ATUS
+ 302711 []A\H
+ 303010 []A\
+ 303360 AWAVAUATUSH
+ 303734 []A\A]A^A_
+ 303777 ]A\A]A^A_
+ 304023 tcSH
+ 304200 AUATI
+ 304305 []A\A]
+ 304330 []A\A]
+ 304360 ATUI
+ 304523 dH34%(
+ 304541  []A\
+ 304600 AUATI
+ 305243 $u7H
+ 305252 []A\A]
+ 305457 T$@H
+ 305464 L$HL
+ 305471 D$PL
+ 305476 L$Xt:
+ 305504 )D$`
+ 305511 )L$p
+ 305610 D$(1
+ 305755 t$(dH34%(
+ 306100 ATUI
+ 306333  []A\
+ 307324 -gU!
+ 307331 ATUSH
+ 307535 []A\A]
+ 307570 []A\A]
+ 307620 AVAUL
+ 307712 <$xt
+ 307717 []A\A]A^
+ 307766 ]A\A]A^
+ 310035 ]A\A]A^
+ 310520 AUAT
+ 310724 []A\A]
+ 310747 []A\A]
+ 310760 AUATUS1
+ 311160 []A\A]
+ 311300 AUATI
+ 313500 []A\A]
+ 313520 AVAUATUSH
+ 313751 []A\A]A^
+ 314227 AUATUS
+ 314514 33331
+ 315025 ?F3d
+ 315045 ?F3$
+ 315074 ?G3$
+ 315126 ?G3$
+ 315145 ?G3$
+ 315174 ?F3$
+ 315222 ?B3D
+ 315417 ?F3d
+ 315437 ?F3$
+ 315466 ?G3$
+ 315520 ?G3$
+ 315537 ?G3$
+ 315566 ?F3$
+ 315601 i E1
+ 315614 ?B3D
+ 315703 D3i$E
+ 315776 i(A1
+ 316011 ?F3d
+ 316031 ?F3$
+ 316060 ?G3$
+ 316100 D3i,E
+ 316112 ?G3$
+ 316131 ?G3$
+ 316160 ?F3$
+ 316173 i0E1
+ 316206 ?B3D
+ 316275 D3i4E
+ 316370 i8A1
+ 316403 ?F3d
+ 316423 ?F3$
+ 316452 ?G3$
+ 316472 D3i<E
+ 316504 ?G3$
+ 316523 ?G3$
+ 316552 ?F3$
+ 316565 i@E1
+ 316600 ?B3D
+ 316667 D3iDE
+ 316762 iHA1
+ 316775 ?F3d
+ 317015 ?F3$
+ 317044 ?G3$
+ 317064 D3iLE
+ 317076 ?G3$
+ 317115 ?G3$
+ 317144 ?F3$
+ 317157 iPE1
+ 317172 ?B3D
+ 317261 D3iTE
+ 317354 iXA1
+ 317367 ?F3d
+ 317407 ?F3$
+ 317436 ?G3$
+ 317456 D3i\E
+ 317470 ?G3$
+ 317507 ?G3$
+ 317536 ?F3$
+ 317551 i`E1
+ 317564 ?B3D
+ 317653 D3idE
+ 317746 ihA1
+ 317761 ?F3d
+ 320001 ?F3$
+ 320030 ?G3$
+ 320050 D3ilE
+ 320062 ?G3$
+ 320101 ?G3$
+ 320130 ?F3$
+ 320143 ipE1
+ 320156 ?B3D
+ 320245 D3itE
+ 320340 ixA1
+ 320353 ?F3d
+ 320371 ?D3$
+ 320416 ?E3$
+ 320436 D3Q|D
+ 320450 ?G3$
+ 320467 ?G3$
+ 320514 ?F3$
+ 320531 A\A]A^
+ 320617 %33331
+ 321040 ATUI
+ 321264 []A\
+ 321300 AUATI
+ 321530 []A\A]
+ 321540 AWAV
+ 321546 AUATI
+ 322044 33331
+ 322135 ?A3D
+ 322322 ?A3L
+ 322342 ?A34
+ 322420 ?A34
+ 322435 ?A34
+ 322462 ?A34
+ 322507 ?C3D
+ 322546 ?B3D
+ 322674 ?C3t
+ 322714 ?C34
+ 322741 ?B3t
+ 322771 ?C34
+ 323010 ?C34
+ 323035 ?C34
+ 323061 ?C3D
+ 323126 ?B3D
+ 323144 A3H$A
+ 323246 ?C3t
+ 323266 ?C34
+ 323313 ?B3t
+ 323331 A3H,A
+ 323343 ?C34
+ 323362 ?C34
+ 323407 ?C34
+ 323433 ?C3D
+ 323516 A3H4A
+ 323620 ?C3t
+ 323640 ?C34
+ 323665 ?B3t
+ 323703 A3H<A
+ 323715 ?C34
+ 323734 ?C34
+ 323761 ?C34
+ 324005 ?C3D
+ 324052 ?B3D
+ 324070 A3HDA
+ 324172 ?C3t
+ 324212 ?C34
+ 324237 ?B3t
+ 324255 A3HLA
+ 324267 ?C34
+ 324306 ?C34
+ 324333 ?C34
+ 324357 ?C3D
+ 324424 ?B3D
+ 324442 A3HTA
+ 324544 ?C3t
+ 324564 ?C34
+ 324611 ?B3t
+ 324627 A3H\A
+ 324641 ?C34
+ 324660 ?C34
+ 324705 ?C34
+ 324714 p`34
+ 324731 ?A3D
+ 325016 E3pdE
+ 325122 ?C3t
+ 325142 ?C34
+ 325167 ?B3t
+ 325204 E3pl34
+ 325220 ?A34
+ 325235 ?A34
+ 325262 ?A34
+ 325271 @pB34
+ 325307 ?C3L
+ 325354 ?B3L
+ 325372 A3@tA
+ 325602 ?A34
+ 325633 ?B34
+ 325652 ?A34
+ 325666 ?A34
+ 325727 ?A34
+ 325744 ?A34
+ 325761 ?A34
+ 326021 ?A34
+ 326036 ?A34
+ 326067 ?A3L
+ 326262 ?C3t
+ 326302 ?E34
+ 326324 ?D3t
+ 326356 ?E34
+ 326372 ?E34
+ 326414 ?E34
+ 326443 ?A3D
+ 326616 ?E3t
+ 326633 ?E34
+ 326655 ?D3t
+ 326707 ?E34
+ 326723 ?E34
+ 326737 ?E34
+ 326751 ?D34
+ 326774 ?A3D
+ 327147 ?E3t
+ 327164 ?E34
+ 327206 ?D3t
+ 327240 ?E34
+ 327254 ?E34
+ 327276 ?E34
+ 327325 ?A3D
+ 327500 ?E3t
+ 327515 ?E34
+ 327537 ?D3t
+ 327571 ?E34
+ 327605 ?E34
+ 327633 ?D34
+ 327656 ?A3D
+ 330031 ?E3t
+ 330046 ?E34
+ 330070 ?D3t
+ 330122 ?E34
+ 330136 ?E34
+ 330160 ?E34
+ 330207 ?A3D
+ 330362 ?E3t
+ 330377 ?E34
+ 330421 ?D3t
+ 330453 ?E34
+ 330467 ?E34
+ 330511 ?E34
+ 330556 ?A3D
+ 330575 ?A34
+ 330660 ?A34
+ 330705 ?A34
+ 330733 ?E3t
+ 331003 ?B3D
+ 331307 ?A34
+ 331327 ?A34
+ 331370 ?A34
+ 331532 ?C3D
+ 331577 ?B3D
+ 331725 ?C3L
+ 331745 ?E34
+ 331767 ?D3t
+ 332021 ?E34
+ 332035 ?E34
+ 332057 ?E34
+ 332106 ?A3D
+ 332261 ?E3t
+ 332276 ?E34
+ 332320 ?D3t
+ 332352 ?E34
+ 332366 ?E34
+ 332410 ?E34
+ 332437 ?A3D
+ 332612 ?E3t
+ 332627 ?E34
+ 332651 ?D3t
+ 332703 ?E34
+ 332717 ?E34
+ 332741 ?E34
+ 332770 ?A3D
+ 333143 ?E3t
+ 333160 ?E34
+ 333202 ?D3t
+ 333234 ?E34
+ 333250 ?E34
+ 333272 ?E34
+ 333321 ?A3D
+ 333474 ?E3t
+ 333511 ?E34
+ 333533 ?D3t
+ 333565 ?E34
+ 333601 ?E34
+ 333623 ?E34
+ 333652 ?A3D
+ 334025 ?E3t
+ 334042 ?E34
+ 334064 ?D3t
+ 334116 ?E34
+ 334132 ?E34
+ 334154 ?E34
+ 334203 ?A3D
+ 334356 ?E3t
+ 334373 ?E34
+ 334415 ?D3t
+ 334447 ?E34
+ 334463 ?E34
+ 334505 ?E34
+ 334534 ?A3D
+ 335002 3333D1
+ 335161 []A\A]A^A_
+ 335240 ATUS1
+ 335256 []A\
+ 335340 []A\
+ 335420 AUATUSH
+ 335521 []A\A]
+ 335540 AUATUSH
+ 335641 []A\A]
+ 335660 AWAVAUATI
+ 335737 D$hD
+ 335744 L$$@
+ 335772 D$pH
+ 336003 D$xH
+ 336166 D$8H
+ 336220 D$(@
+ 336226 %tgI
+ 336332 dH34%(
+ 336360 []A\A]A^A_
+ 336403 d$#1
+ 336435 "<#u.I
+ 336546 	wA1
+ 336652 <EtR<OtN<zD
+ 337171 T$HD)
+ 337224 D$@L
+ 337337 t$HIc
+ 337402 |$HIc
+ 337442 |$HA
+ 337664 D$PL
+ 337721 T$@E
+ 340036 t$(Ic
+ 340237 L$$D
+ 340244 D$hA
+ 340262 L$p1
+ 340272 D$@A
+ 340440 L$$D
+ 340445 D$hH
+ 340455 L$HH
+ 340535 D$0E
+ 340623 D$HL
+ 340752 HcT$@H
+ 340761 t$0H
+ 340776 t$HM
+ 341037 D$pH
+ 341044 |$8H
+ 341061 D$xH
+ 341242 gfffffffA
+ 341526 HcT$
+ 341637 u;Hc
+ 341647 <$0D
+ 341654 d$XI
+ 341736 |$HH
+ 341753 t$PHcD$@1
+ 341772 D$@t-D
+ 342001 d$HI
+ 342051 d$HH
+ 342063 t$@1
+ 342127 D$@L
+ 342174 u=Hc
+ 342204 <$0D
+ 342304 HcT$HL
+ 344706 D$@9
+ 344745 D$H+
+ 345323 +D$Hi
+ 346074 L$$A
+ 346101 gfff
+ 346153 \$@A
+ 347411 D$H-
+ 347430 Hct$HH
+ 347464 |$(Ic
+ 347565 t$(Ic
+ 347610 HcD$@H
+ 347622 D$XL
+ 347655 t$`L
+ 347666 \$lH
+ 347751 t$X)
+ 350020 D$@L
+ 350100 \$XI
+ 350153 |$HH
+ 350175 t$@H
+ 350256 D$@L
+ 350336 \$XI
+ 350522 D$@L
+ 350566 <$0Hc
+ 350612 \$XI
+ 350675 \$XH
+ 350707 |$HH
+ 350731 L$PL
+ 351023 Hct$@H
+ 351032 |$0H
+ 351114 D$@	
+ 351272 HcT$@H
+ 351301 t$0H
+ 351506 D$@	
+ 352304 \$XH
+ 352311 D$PH
+ 352321 L$`H
+ 352345 H;\$Pr
+ 352623 	viH
+ 353074 S0H;C
+ 353140 AVAUI
+ 353147 ATUI
+ 353205 tzH9
+ 353304 L$HH
+ 353315 D$H[H
+ 353324 ]A\A]A^
+ 353407 ]A\A]A^
+ 353455 L$HH
+ 353466 D$HH
+ 353474 []A\A]A^
+ 353760 AWAVA
+ 353767 AUATI
+ 354011 .L;n
+ 354161 D$HH
+ 354172 \$HH
+ 354260 []A\A]A^A_
+ 354326 D$HH
+ 354344 T$HH
+ 354463 []A\A]A^A_
+ 355020 H9W 
+ 355040 AUATUSH
+ 355402 []A\A]H
+ 355560 ATUI
+ 356241 t'H9
+ 356360 AWAVAUATUSH
+ 356400 7L9w
+ 356517 []A\A]A^A_
+ 356700 AWAVH
+ 356713 AUATI
+ 357365 []A\A]A^A_
+ 357416 []A\A]A^A_
+ 357540 ATUH
+ 357551 'L;g
+ 357763 []A\
+ 360000 ATUH
+ 360027 'L;g
+ 360300 ATUSH
+ 360315 g(dH
+ 360332 D$X1
+ 360632 d$(H
+ 360637 D$0H
+ 360650 D$8H
+ 360661 D$@H
+ 361024 L$XdH3
+ 361053 `[]A\
+ 361214 D$HH
+ 361320 AUATUSH
+ 361465 []A\A]
+ 363033 []A\
+ 364103 AWAVH
+ 364113 AUATUSH
+ 364212 L;\$
+ 364440 [(D1
+ 365315 QZ^&
+ 367511 L9\$
+ 367561 []A\A]A^A_
+ 370240 AWAVAUATI
+ 370325 []A\A]A^A_
+ 370430 ?v#H
+ 370505 []A\A]A^A_
+ 371237 <0D9
+ 371600 AWAVI
+ 371607 AUATUSH
+ 372220 []A\A]A^A_
+ 372320 AWAVI
+ 372327 AUATE
+ 372416 D$@H
+ 372433 D$hH
+ 372450 D$`dH
+ 372663 D$ H
+ 372700 D$HH
+ 373060 L$8L
+ 373065 L$0L
+ 373111 D$(L
+ 373520 D:|$ r%H
+ 373531 t$@H
+ 374245 t$xL
+ 374267 D$<H
+ 374274 |$0A
+ 374324 dH3<%(
+ 374352 []A\A]A^A_
+ 374612 	w#I9
+ 375166 L$0D
+ 375215 \$(L
+ 376132 D$hH
+ 376203 D$hH
+ 376243 D$`H
+ 376306 D$`1
+ 376376 t$`L
+ 376403 \$ L
+ 376420 t$PH
+ 376562 D$HI
+ 376617 \$xD
+ 376647 l$0D
+ 376667 l$8M
+ 376677 t$(L
+ 376714 D$0H
+ 376721 T$(H
+ 376726 L$HH
+ 376733 |$XL
+ 376744 ,7L)
+ 377262 l$0H
+ 377267 \$xL
+ 377274 l$8L
+ 377301 t$(H
+ 377362 l$8L
+ 377432 D$8D
+ 377437 \$0L
+ 377456 D$8I
+ 377467 \$0L
+ 377527 t$(H
+ 377550 l$0D
+ 377602 \$xL
+ 377607 l$8D
+ 377717 l$0D
+ 377750 \$xL
+ 377755 l$8D
+ 400120 AWAVLc
+ 400127 AUATI
+ 400461 u(AWL
+ 400472 T$(L
+ 400643 L$<H
+ 400653 T$(H
+ 400660 t$0I
+ 400716 []A\A]A^A_
+ 401020 ATUSH
+ 401076 []A\
+ 401460 AWAVH
+ 401473 AUATI
+ 401603 L$(L
+ 401630 8[]A\A]A^A_
+ 401660 AWAVH
+ 401673 AUATI
+ 402007 s(AR1
+ 402042 D$HH
+ 402107 T$8A
+ 402146 D$,H
+ 402170 \$(M
+ 402207 8[]A\A]A^A_
+ 402734 D$x1
+ 402762 D$@L
+ 403053 D$hH
+ 403113 D$(H
+ 403120 D$pH
+ 403137 T$xdH3
+ 403230 D$x1
+ 403256 D$@L
+ 403347 D$hH
+ 403407 D$(H
+ 403414 D$pH
+ 403433 T$xdH3
+ 403564 D$81
+ 403704 D$ H
+ 403725 D$(H
+ 403741 D$0D
+ 404003 t$8dH34%(
+ 404140 AUATM
+ 404175 D$81
+ 404275 D$ H
+ 404311 D$(H
+ 404357 L$8dH3
+ 404400 H[]A\A]
+ 404720 AWAVH
+ 404727 AUATUSH
+ 404774 T$PH
+ 405064 |$0v
+ 405077 t$HH
+ 405104 D$`H
+ 405111 D$XH9
+ 405142 L$X1
+ 405204 t$,D
+ 405211 \$`H
+ 405243 T$dD
+ 405250 l$pA
+ 405402 l$lF
+ 405622 L$xF
+ 405676 L$|F
+ 406734 D3l$xA1
+ 407136 L$|D1
+ 407242 3T$x3
+ 407324 D3l$|A
+ 407447 d$4B
+ 407717 3\$4
+ 410273 D3\$4
+ 410301 \$$D3\$
+ 410327 D3T$
+ 410337 D3T$ A1
+ 410356 D3L$
+ 410400 \$(D3L$$D
+ 410571 D3D$
+ 410576 D3D$(A
+ 411021 \$4D
+ 411037 3D$$1
+ 411045 3T$ 3\$
+ 411101 T$4E1
+ 411201 D$(E
+ 411303 3\$4D
+ 411317 \$<D
+ 411447 3\$8
+ 411562 3\$ 
+ 411612 3\$<
+ 411640 3\$$A
+ 411714 \$ 3\$(A	
+ 411726 3\$4D
+ 412015 \$$D
+ 412107 \$$D	
+ 412143 D$8A
+ 412163 T$(E1
+ 412262 D3T$
+ 412363 D3L$
+ 412373 D3L$$A
+ 412474 D3D$(A
+ 412530 D$@F
+ 412564 D$4E
+ 412631 |$4D
+ 412677 l$8D1
+ 413010 3T$@D
+ 413073 D$$A1
+ 413104 3D$4A
+ 413133 \$<A	
+ 413221 3L$(D
+ 413230 3L$D
+ 413314 3\$8
+ 413430 3\$<D
+ 413556 3\$@A	
+ 413626 3\$4A
+ 413660 T$(A
+ 413744 D3l$DD1
+ 413754 3\$8D3l$
+ 414016 D$<A
+ 414060 3\$ 
+ 414077 L$$1
+ 414241 \$`C
+ 414256 \$<A
+ 414266 \$@D
+ 414322 D3T$$A
+ 414376 T$4C
+ 414423 |$4D
+ 414430 |$dB
+ 414450 D3\$
+ 414467 D3\$<A1
+ 414510 3D$(D
+ 414516 t$8A
+ 414526 \$lE1
+ 414546 D$hB
+ 414624 D3T$ E1
+ 414634 D3L$
+ 414705 D3D$$D1
+ 414775 D$x1
+ 415072 |$(A
+ 415135 |$|C
+ 415166 3L$<
+ 415265 3T$4D1
+ 415353 D3|$ D1
+ 415445 D3|$
+ 415457 |$$D1
+ 415541 t$ E1
+ 415554 t$(D1
+ 415734 L$<E1
+ 416030 D$4D
+ 416055 t$,D1
+ 416160 T$,H
+ 416206 \$0H9t$H
+ 416265 []A\A]A^A_
+ 417020 AWAVAUATI
+ 417105 []A\A]A^A_
+ 417210 ?v#H
+ 417265 []A\A]A^A_
+ 417352 } L)
+ 420017 <0D9
+ 420400 AWAVI
+ 420407 AUATUSH
+ 421040 []A\A]A^A_
+ 421743 tcSH
+ 422120 ATUH
+ 422265 dH3<%(
+ 422303  []A\
+ 422500 AUATI
+ 422606 []A\A]
+ 422735 []A\A]
+ 422760 AWAVI
+ 422767 AUATUSH
+ 423017 w dH
+ 423112 l$8H
+ 423117 \$@L
+ 423130 t$(L
+ 423135 l$0I
+ 423203 T$8H
+ 423305 \$(H9\$
+ 423422 l$0L
+ 423427 t$(H
+ 423446 D$(H
+ 423536 []A\A]A^A_
+ 423560 H;\$
+ 423576 D$(H
+ 423632 G I;G0I
+ 424027 |$0A
+ 424120 ATUI
+ 424473 []A\
+ 424540 AWAVI
+ 424547 AUATI
+ 425043 []A\A]A^A_
+ 425360 AWAVA
+ 425367 AUATL
+ 425512 []A\A]A^A_
+ 425606 localhost
+ 425620 {unsupported family}
+ 425645 stdin
+ 425653 [%d/%b/%Y:%H:%M:%S %z]
+ 425710 DEFINE
+ 425717 MATCH
+ 425725 {AF_UNIX}
+ 425743 %h %l %u %t "%r" %>s %b
+ 426000 log format error (near char %d): missing terminating `}'
+ 426100 log format warning (near char %d): format char `%c' does not take arguments
+ 426220 log format error (near char %d): unknown format char `%c'
+ 426320 cannot open access log file `%s'
+ 426406 .AMATCHES
+ 426420 does not match
+ 426437 %s:%d: %s
+ 426451 auth
+ 426456 authenticated
+ 426474 socket name too long: `%s'
+ 426527 invalid netmask: `%s'
+ 426555 ACL not defined: `%s'
+ 426603 junk after `from' list
+ 426632 expected string
+ 426652 unknown word `%s'
+ 426674 expected string value
+ 426722 unexpected list
+ 426750 expected string but found list
+ 427010 cannot resolve host name: `%s'
+ 427050 expected ACL name, but found end of statement
+ 427130 expected string, but found list
+ 427170 expected `from', but found list
+ 427230 expected `from', but found `%s'
+ 427270 unexpected end of statement after `from'
+ 427350 expected group list, but found end of statement
+ 427430 expected group list, but found array
+ 427475 alias `%s' already defined
+ 427530 this is the location of the previous definition
+ 427610 failed to open user database
+ 427645 no such user `%s'
+ 427667 %02x
+ 427674 230 Authentication successful
+ 427732 user string
+ 427750 failed to get password for `%s' from the database
+ 430040 authentication failed for `%s'
+ 430100 531 Access denied, use "SHOW INFO" for server information
+ 430200 auth capability required but user database is not configured
+ 430300 provide authentication information
+ 430343 malformed SSHA1 password: %s
+ 430400 malformed SMD5 password: %s
+ 430434 CRYPT
+ 430442 SMD5
+ 430447 SSHA
+ 430460 unsupported password algorithm scheme: %.*s
+ 430534 %*.*s
+ 430543 OPTION
+ 430552 Usage:
+ 430561 dicod
+ 430567 %s %s [%s]... %s
+ 430611   %s
+ 430616 %s%s%s
+ 430625 Report bugs to %s.
+ 430651 GNU dico
+ 430662 not enough memory
+ 430704 %s %s 
+ 430717 2005-2012
+ 430731  "-D
+ 430736 EtifsTx:I:D:hV
+ 430755 %s: unexpected arguments
+ 431007 <bug-dico@gnu.org>
+ 431032 dicod (GNU dico) 2.2
+ 431057 Select program mode
+ 431106 -t, --lint
+ 431121 -i, --inetd
+ 431135 Inetd mode.
+ 431151 Modifiers
+ 431163 --config
+ 431174 FILE
+ 431201 Read this configuration file.
+ 431237 -f, --foreground
+ 431260 Operate in foreground.
+ 431307 --stderr
+ 431320 Output diagnostic to stderr.
+ 431355 --syslog
+ 431366 -s, --single-process
+ 431413 Single-process mode.
+ 431440 Debugging
+ 431452 -T, --transcript
+ 431473 Enable session transcript.
+ 431526 --no-transcript
+ 431546 Disable session transcript.
+ 431602 -x, --debug
+ 431616 LEVEL-SPEC
+ 431631 Set debug verbosity level.
+ 431664 --source-info
+ 431702 --trace-grammar
+ 431722 --trace-lex
+ 431736 Trace config file lexer.
+ 431767 Additional help
+ 432007 --config-help
+ 432025 Preprocessor control
+ 432052 --preprocessor
+ 432071 PROG
+ 432076 --no-preprocessor
+ 432120 -I, --include-dir
+ 432146 -D, --define
+ 432163 SYMBOL[=VALUE]
+ 432202 define a preprocessor symbol
+ 432237 Other options
+ 432255 -h, --help
+ 432270 Give this help list
+ 432314 --usage
+ 432324 Give a short usage message
+ 432357 -V, --version
+ 432375 Print program version
+ 432430 Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.
+ 432620 %s home page: <http://www.gnu.org/software/%s/>
+ 432710 General help using GNU software: <http://www.gnu.org/gethelp/>
+ 433010 Free Software Foundation, Inc.
+ 433050 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+ 433166 This is free software: you are free to change and redistribute it.
+ 433271 There is NO WARRANTY, to the extent permitted by law.
+ 433370 Preprocess configuration file and exit
+ 433440 Check configuration file syntax and exit.
+ 433520 Output diagnostic to syslog (default).
+ 433570 Include source line information in the debugging output.
+ 433670 Trace parsing of configuration file.
+ 433740 Show configuration file summary.
+ 434010 Use PROG as a preprocessor for config file.
+ 434070 Do not use external preprocessor.
+ 434140 Add the directory DIR to the list of directories to be searched for preprocessor include files
+ 435740 Copyright %s %s %s
+ 435763 221 bye
+ 435773 112 information for %s
+ 436023 No information available.
+ 436056 250 ok
+ 436066 554 No databases present
+ 436120 110 %lu databases present
+ 436153 555 No strategies available
+ 436210 114 server information
+ 436240 dicod 
+ 436247 GNU dico 2.2
+ 436264 (%s) on %s %s, 
+ 436304 server on 
+ 436317  up 
+ 436324 , %lu forks (%.1f/hour)
+ 436360  No timing data available
+ 436412 dicod_client
+ 436427 Client info: %s
+ 436447 %*.*s -- %s
+ 436464 113 help text follows
+ 436513 500 unknown command
+ 436540 database word
+ 436556 look up word in database
+ 436607 database strategy word
+ 436636 SHOW DB
+ 436646 list all accessible databases
+ 436704 SHOW DATABASES
+ 436723 SHOW STRAT
+ 436736 SHOW STRATEGIES
+ 436756 SHOW INFO
+ 436770 SHOW SERVER
+ 437004 CLIENT
+ 437013 identify client to server
+ 437045 STATUS
+ 437054 display timing information
+ 437107 HELP
+ 437114 display this help information
+ 437152 QUIT
+ 437157 terminate connection
+ 437210 550 invalid database, use SHOW DB for a list
+ 437270 111 %lu strategies present: list follows
+ 437350 551 Invalid strategy, use SHOW STRAT for a list
+ 437440 501 wrong number of arguments
+ 437500 502 command is not yet implemented, sorry
+ 437560 match word in database using strategy
+ 437630 list available matching strategies
+ 437700 provide information about the database
+ 437750 provide site-specific information
+ 440037 ?cannot open file `%s'
+ 440066 cannot get path from URL `%s'
+ 440124 cannot stat directory `%s'
+ 440157 %s: not a directory
+ 440203 stdstrat_suffix
+ 440223 dicod.c
+ 440237 removing database %s
+ 440264 error freeing database %s
+ 440316 connection from
+ 440336 220 
+ 440345 <%lu.%lu@%s>
+ 440362 session finished:
+ 440404 error closing database %s
+ 440436 exact
+ 440444 Match words exactly
+ 440470 prefix
+ 440477 Match word prefixes
+ 440523 Match word suffixes
+ 440547 soundex
+ 440557 Match using SOUNDEX algorithm
+ 440615 130 challenge follows
+ 440650 330 send response
+ 440673 user name not supplied
+ 440722 SASL gsasl_server_start: %s
+ 440756 SASLRESP
+ 440767 GSASL error: %s
+ 441007 GSASL %s: cannot get username
+ 441045 SASLAUTH
+ 441056 mechanism [initial-response]
+ 441113 Start SASL authentication
+ 441150 532 Access denied, unknown mechanism
+ 441220 531 Access denied, use "SHOW INFO" for server information
+ 441320 Unexpected input instead of SASLRESP command: %s
+ 441410 cannot initialize libgsasl: %s
+ 441450 cannot get list of available SASL mechanisms: %s
+ 441540 Incorrect length of IDENT DES packet
+ 441610 cannot create socket for AUTH identification
+ 441670 cannot connect to AUTH server %s
+ 441740 Keyfile for AUTH responses not specified in config; use `ident-keyfile FILE'
+ 442060 failure while communicating with AUTH server %s
+ 442140 I/O error while communicating with AUTH server %s
+ 442230 Malformed IDENT response: `%s', from %s
+ 442300 Cannot open file %s
+ 442324 cannot bind AUTH socket
+ 442354 %u , %u
+ 442366 USERID :
+ 442377 no reply from AUTH server %s
+ 442460 250 ok - set language preferences
+ 442530 show databases with their language preferences
+ 442610 show language preferences of a database
+ 442660 show server language preferences
+ 442725 lang
+ 442732 OPTION LANG
+ 442746 [list]
+ 442755 define language preferences
+ 443011 SHOW LANG DB
+ 443026 SHOW LANG DATABASES
+ 443052 SHOW LANG INFO
+ 443071 SHOW LANG PREF
+ 443110 tell
+ 443115 280 %d
+ 443125 500 invalid argument
+ 443153 nlev
+ 443160 xlev
+ 443165 XLEV
+ 443172 Set Levenshtein distance
+ 443223 ndlev
+ 443240 250 ok - Levenshtein threshold set to %d
+ 443320 Match headwords within given Levenshtein distance
+ 443410 Match headwords within given Levenshtein distance (normalized)
+ 443510 Match headwords within given Damerau-Levenshtein distance
+ 443610 Match headwords within given Damerau-Levenshtein distance (normalized)
+ 443725 151 "%s" %s "%s"
+ 443747 module %s already loaded
+ 444000 cannot load module %s: %s
+ 444032 pmod
+ 444037 pmod->dico_init
+ 444057 pmod->dico_init_db
+ 444102 pmod->dico_free_db
+ 444125 pmod->dico_match
+ 444146 pmod->dico_define
+ 444170 pmod->dico_output_result
+ 444221 pmod->dico_result_count
+ 444251 pmod->dico_free_result
+ 444300 %s: initialization failed
+ 444332 cannot open database `%s'
+ 444376 250 Command complete
+ 444430 /usr/lib/x86_64-linux-gnu/dico
+ 444470 cannot parse command line `%s': %s
+ 444540 %s: faulty module: (%s) failed
+ 444600 pmod->dico_version <= DICO_MODULE_VERSION
+ 444660 pmod->dico_open && pmod->dico_close
+ 444730 cannot initialize database `%s': module `%s' does not support databases
+ 445040 cannot initialize database `%s'
+ 445100 152 %lu matches found: list follows
+ 445150 150 %lu definitions found: list follows
+ 445221 list element must be a string
+ 445257 too many arguments
+ 445302 URL must be a string
+ 445327 empty URL
+ 445341 %s: 
+ 445346 %s:%u
+ 445354 %s:%u.%u-%s:%u.%u
+ 445376 %s:%u.%u-%u.%u
+ 445415 %s:%u.%u-%u
+ 445431 Unexpected block statement
+ 445464 ACL name must be a string
+ 445516 missing ACL name
+ 445537 redefinition of ACL %s
+ 445566 expected scalar value
+ 445614 no such ACL: `%s'
+ 445636 %s: no such user
+ 445657 unknown mode
+ 445674 LOG_
+ 445701 unknown syslog facility
+ 445731 database name not supplied
+ 445764 cannot parse headers: %s
+ 446015 Content-transfer-encoding
+ 446047 quoted-printable
+ 446070 base64
+ 446077 8bit
+ 446104 unknown encoding type: %s
+ 446136 argument %d has wrong type
+ 446171 Section name must be a string
+ 446227 missing section name
+ 446254 Unexpected statement
+ 446301 Expected boolean value
+ 446330 tag must be a string
+ 446355 missing tag
+ 446371 %s: unknown group
+ 446413 Expected string value
+ 446441 expected list or string
+ 446471 unknown capability: %s
+ 446520 Expected number
+ 446540 /usr/share/dico/include
+ 446570 /usr/share/dico/2.2/include
+ 446624 /usr/bin/m4 -s
+ 446643 %s: handler not declared
+ 446674 %d:%d:%s
+ 446705 __DICTD_LOGGING__
+ 446727 cannot create user database
+ 446763 unknown strategy
+ 447004 Debug
+ 447012 Info
+ 447017 Notice
+ 447026 Warning
+ 447036 Error
+ 447044 CRIT
+ 447051 ALERT
+ 447057 EMERG
+ 447065 arg: [daemon|inetd]
+ 447111 Operation mode.
+ 447131 server-info
+ 447145 show-sys-info
+ 447163 arg: acl
+ 447174 identity-check
+ 447217 ident-timeout
+ 447241 ident-keyfile
+ 447257 max-children
+ 447274 log-tag
+ 447304 log-facility
+ 447321 log-print-severity
+ 447344 access-log-format
+ 447372 access-log-file
+ 447412 Set access log file name.
+ 447444 Log session transcript.
+ 447474 pidfile
+ 447504 shutdown-timeout
+ 447525 seconds
+ 447535 inactivity-timeout
+ 447560 Set inactivity timeout.
+ 447610 listen
+ 447617 addr
+ 447624 Listen on these addresses.
+ 447657 initial-banner-text
+ 447703 help-text
+ 447715 hostname
+ 447726 Override the host name.
+ 447756 capability
+ 447771 module-load-path
+ 450012 prepend-load-path
+ 450034 default-strategy
+ 450055 timing
+ 450064 visibility-acl
+ 450103 connection-acl
+ 450122 Define a dictionary database.
+ 450160 load-module
+ 450174 name: string
+ 450211 Define an ACL.
+ 450230 user-db
+ 450240 url: string
+ 450254 alias
+ 450262 Define a command alias.
+ 450312 sasl
+ 450317 Control SASL authentication.
+ 450354 deny-all
+ 450365 arg: bool
+ 450377 Deny all * and ! look ups
+ 450431 deny-word
+ 450443 cond
+ 450450 deny-length-lt
+ 450467 len: number
+ 450503 deny-length-le
+ 450522 deny-length-gt
+ 450541 deny-length-ge
+ 450560 deny-length-eq
+ 450577 deny-length-ne
+ 450616 disable-mechanism
+ 450640 mech: list
+ 450653 enable-mechanism
+ 450674 service
+ 450704 realm
+ 450712 anon-group
+ 450725 password-resource
+ 450747 Password file or query.
+ 450777 group-resource
+ 451016 description
+ 451032 languages-from
+ 451051 languages-to
+ 451066 handler
+ 451076 mime-headers
+ 451113 Additional MIME headers
+ 451143 command
+ 451153 Command line.
+ 451171 USER
+ 451176 DAEMON
+ 451205 AUTHPRIV
+ 451216 MAIL
+ 451223 CRON
+ 451230 LOCAL0
+ 451237 LOCAL1
+ 451246 LOCAL2
+ 451255 LOCAL3
+ 451264 LOCAL4
+ 451273 LOCAL5
+ 451302 LOCAL6
+ 451311 LOCAL7
+ 451320 allow
+ 451326 Allow access
+ 451343 deny
+ 451350 Deny access
+ 451364 /var/run/dicod.pid
+ 451407 /etc/dicod.conf
+ 451430 list element must be a socket specification
+ 451510 expected boolean value but found list
+ 451560 location of the previous definition
+ 451630 expected scalar value but found list
+ 451700 invalid use of block statement
+ 451740 Not enough arguments for alias
+ 452000 Run with these user privileges.
+ 452040 Supplementary group to retain with the user privileges.
+ 452130 Server description to be shown in reply to SHOW SERVER command.
+ 452230 Show system information if arg matches.
+ 452300 Enable identification check using AUTH protocol (RFC 1413)
+ 452400 Set timeout for AUTH I/O operations.
+ 452450 Name of the file containing the keys for decrypting AUTH replies.
+ 452560 Maximum number of children running simultaneously.
+ 452650 Tag syslog diagnostics with this tag.
+ 452720 Set syslog facility. Arg is one of the following: user, daemon, auth, authpriv, mail, cron, local0 through local7 (case-insensitive), or a facility number.
+ 453160 Prefix diagnostics messages with their severity.
+ 453250 Set format string for access log file.
+ 453320 Store PID of the master process in this file.
+ 453400 Wait this number of seconds for all children to terminate.
+ 453500 Display this text in the initial 220 banner
+ 453560 Display this text in reply to the HELP command. If text begins with a +, usual command summary is displayed before it.
+ 453750 Request additional capabilities.
+ 454020 List of directories searched for database modules.
+ 454110 List of directories searched for database modules prior to the default module directory
+ 454240 Set the name of the default matching strategy.
+ 454320 Provide timing information after successful completion of an operation.
+ 454430 Set ACL to control visibility of all databases.
+ 454510 Apply this ACL to incoming connections.
+ 454560 Load a module instance.
+ 454610 If <name> is the same as <arg> in command, it can be simplified as:
+ 454714   load-module <name: string>;
+ 454752 Furthermore, several simplified forms can be combined into one
+ 455051 by using a list of names as its argument, as in:
+ 455132   load-module (stratall,word);
+ 455200 Define user database for authentication.
+ 455260 Additional configuration for strategy <name>
+ 455340 Deny * and ! look-ups on these words.
+ 455410 Deny * and ! look-ups on words with length < <len>.
+ 455500 Deny * and ! look-ups on words with length <= <len>.
+ 455570 Deny * and ! look-ups on words with length > <len>.
+ 455660 Deny * and ! look-ups on words with length >= <len>.
+ 455750 Deny * and ! look-ups on words with length == <len>.
+ 456040 Deny * and ! look-ups on words with length != <len>.
+ 456130 Disable SASL mechanisms listed in <mech>.
+ 456210 Enable SASL mechanisms listed in <mech>.
+ 456270 Set service name for GSSAPI and Kerberos.
+ 456350 Set realm name for GSSAPI and Kerberos.
+ 456420 Define groups for anonymous users.
+ 456470 File containing user group information or a query to retrieve it.
+ 456600 Implementation-dependent options
+ 456650 Dictionary name (a single word).
+ 456720 Short description, to be shown in reply to SHOW DB command.
+ 457020 Full description of the database, to be shown in reply to SHOW INFO command.
+ 457140 List of languages this database translates from.
+ 457230 List of languages this database translates to.
+ 457310 Name of the handler for this database.
+ 457360 ACL controlling visibility of this database
+ 457440 [all|authenticated|group <grp: list>] [from <addr: list>]
+ 457540 280 %s is current markup type
+ 457577 250 markup type set to %s
+ 457632 markup
+ 457641 none
+ 457646 OPTION MARKUP
+ 457664 Set output markup type
+ 457713 250 ok - using MIME headers
+ 457750 mime
+ 457755 OPTION MIME
+ 457771 use MIME headers
+ 460012 Regex error: %s
+ 460032 regexp
+ 460050 Old (basic) regular expressions
+ 460110 POSIX 1003.2 (modern) regular expressions
+ 460162 %lu exited successfully
+ 460212 %lu timed out
+ 460230 %lu failed with status %d
+ 460262 %lu terminated on signal %d
+ 460316 %lu stopped on signal %d
+ 460347 %lu dumped core
+ 460367 file %s is not a socket
+ 460417 cannot unlink file %s
+ 460445 cannot bind to %s
+ 460467 cannot listen on %s
+ 460513 No sockets opened
+ 460535 subprocess %lu finished
+ 460565 Cannot open pidfile `%s'
+ 460616 Cannot unlink pidfile `%s'
+ 460651 Cannot create pidfile `%s'
+ 460704 accept
+ 460713 connection from %s denied
+ 460745 530 Access denied
+ 460770 fork
+ 460775 too many children (%lu)
+ 461025 fork failed
+ 461041 waitpid failed
+ 461060 refusing to restart
+ 461104 select error
+ 461121 %s started
+ 461134 exiting
+ 461144 Cannot become a daemon
+ 461173 %s restarting
+ 461211 Cannot restart
+ 461230 %s terminating
+ 461250 %lu terminated with unrecognized status
+ 461320 file %s exists but cannot be stat'd
+ 461370 unsupported address family: %d
+ 461430 Cannot get pid from pidfile `%s'
+ 461500 %s appears to run with pid %lu. If it does not, remove `%s' and retry.
+ 461610 420 Server temporarily unavailable
+ 461660 refusing to restart due to errors in configuration file
+ 461750 refusing to restart due to unexpected return status of configuration checker
+ 462070 refusing to restart: configuration checker did not exit within 5 seconds
+ 462210 not running as root: ignoring user/group settings
+ 462300 dicod started without full file name
+ 462350 restart (SIGHUP) will not work
+ 462410 configuration file is not given with a full file name
+ 462500 Exit code = %d, last error status
+ 462545 d/m/c = %lu/%lu/%lu 
+ 462630 110 %lu second(s)
+ 462653 xidle
+ 462661 XIDLE
+ 462670 report inactivity timeout, reset idle timer
+ 462744 110 
+ 462751 xversion
+ 462762 XVERSION
+ 463000 show implementation and version info
+ 463045 /usr/share/locale
+ 463073 anonymous socket
+ 463114 socket 
+ 463124 {Unsupported family: 
+ 463152 %0.3f
+ 463160 %ld+%02ld:%02ld:%02ld
+ 463217 @Refusing to run as root
+ 463250 setgroups(1, %lu) failed
+ 463301 setegid(%lu) failed
+ 463325 setgid(%lu) failed
+ 463350 setreuid(%lu,-1) failed
+ 463400 second setuid(%lu) failed
+ 463440 Cannot set effective gid to %lu
+ 463500 seteuid(0) succeeded when it should not
+ 463550 Cannot drop non-root setuid privileges
+ 463617 (none)
+ 463640 not enough memory while formatting reply message
+ 463721 EXTERNAL
+ 463732 external
+ 463743 SKEY
+ 463750 skey
+ 463755 GSSAPI
+ 463764 gssapi
+ 463773 KERBEROS_V4
+ 464007 kerberos_v4
+ 471400 %m/%d/%y
+ 471411 %Y-%m-%d
+ 471422 %H:%M
+ 471430 %H:%M:%S
+ 473374 # entries:         %lu
+ 473424 # buckets:         %lu
+ 473454 max bucket length: %lu
+ 473510 # buckets used:    %lu (%.2f%%)
+ 473607 =fff?
+ 474002 literal
+ 474012 shell
+ 474020 shell-always
+ 474035 c-maybe
+ 474045 escape
+ 474054 clocale
+ 475300 Not enough memory
+ 475322 Cannot get transport stream
+ 475356 Cannot create GSASL stream
+ 475411 Cannot install GSASL stream
+ 504327 ;*3$"
+ 571720 GNU dictionary server
+ 600200 552 No match
+ 600300 Configuration file structure for dicod.
+ 600350 For more information, use `info dico configuration'.
+ 614720 70ba2d0b3422a3388ee590a6ea5f8f0d08c085.debug
+ 615005 .shstrtab
+ 615017 .interp
+ 615027 .note.ABI-tag
+ 615045 .note.gnu.build-id
+ 615070 .gnu.hash
+ 615102 .dynsym
+ 615112 .dynstr
+ 615122 .gnu.version
+ 615137 .gnu.version_r
+ 615156 .rela.dyn
+ 615170 .rela.plt
+ 615202 .init
+ 615210 .text
+ 615216 .fini
+ 615224 .rodata
+ 615234 .eh_frame_hdr
+ 615252 .eh_frame
+ 615264 .init_array
+ 615300 .fini_array
+ 615314 .jcr
+ 615321 .data.rel.ro
+ 615336 .dynamic
+ 615347 .got
+ 615354 .data
+ 615362 .bss
+ 615367 .gnu_debuglink
