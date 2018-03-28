@@ -1,7 +1,7 @@
-# ptmsg #
+# PRETT #
 ======
 
-ptmsg is a tool that automatically infering network protocol models from binary tokens.
+PRETT is a tool that automatically infers network protocol models using network traces and binary tokens.
 
 ## Prerequisite (please install in order) ##
 - Scapy (pip)
