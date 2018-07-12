@@ -943,7 +943,7 @@ elif mode1 == 'a' or mode == 'A':
 				# 	if res == 1:
 				# 		continue
 
-				for msg in prune_move_state_msg
+				for msg in prune_move_state_msg:
 					logging.info("[+] [port no. %d] Prune Move (depth %d -> %d) msg : " % (sport, current_level, current_level+1) + str(msg))
 					rp, res = send_receive(rp, msg)
 
