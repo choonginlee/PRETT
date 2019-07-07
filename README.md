@@ -15,23 +15,20 @@ pip install pygraphviz --install-option="--include-path=/usr/include/graphviz" -
 
 ## Easy Running Example ##
 
-1. Run stringsgen.sh in the root directory of ptmsg
+1. Make 'binstring' directory and run 'strings_extractor.sh' in the root directory.
 - It generates tokens from basic binaries of your own linux OS.
 
-2. If strings are generated from binaries, check binstring/ directory.
-- There should a lot of txt files which contain strings extracted from target binaries
+2. If strings are generated from binaries, the 'binstring/' directory should contain a lot of txt files which contain strings extracted from target binaries.
 
-3. Then run tokenizer.py by specifying binstring/ directory as an arguemnt.
-- Ex ) $ python tokenizer.py ./binstring/
-- It refines appropriate tokens from the strings
+3. Make 'tokenfile' directory and run 'token_refiner.py' to refine appropriate tokens from the strings extracted in step 1.
+  $ python token_refiner.py ./binstring/
 
-4. If tokens are generated and refined from strings, check tokenfile/ directory.
-- There should a lot of txt files which contain tokens refined from strings
+4. If tokens are generated and refined, the 'tokenfile/' directory should containt a lot of txt files which contain tokens refined from strings.
 
-5. Then run modeller.py by specifying target FTP server as an arguemnt (permission needed)
-- Ex ) $ sudo python modeller.py [Target IP]
+5. Then run modeller_{ftp,smtp,http}.py specifying target FTP, SMTP, HTTP server IP as its arguemnt (permission needed)
+- Ex ) $ sudo pythonmodeller_{ftp,smtp,http}.py [Target IP]
 
-6. You will see the requests automatically generated and responses of them.
+6. You will see the requests automatically generated and responses of them. We expect a clear state machine is drawn in a file in the root directory, but it may run so long time in case the implemnetaion of the server binary is too complex. We encourage users to quit the process as the job achieved desirable result with heuristics.
 
 ! For the better performance, disable PAM in vsftpd.
 (Ubuntu)
