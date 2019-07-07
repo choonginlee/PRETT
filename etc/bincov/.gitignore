@@ -1,4 +1,0 @@
-*.swp
-.vagrant
-_build
-dynamorio/clients/bincov
