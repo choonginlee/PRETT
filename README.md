@@ -15,8 +15,7 @@ pip install pygraphviz --install-option="--include-path=/usr/include/graphviz" -
 
 ## Easy Running Example ##
 
-1. Make 'binstring' directory and run 'strings_extractor.sh' in the root directory.
-- It generates tokens from basic binaries of your own linux OS.
+1. Make 'binstring' directory and run 'strings_extractor.sh' in the root directory. It should generates tokens from basic binaries of your own linux OS.
 
 2. If strings are generated from binaries, the 'binstring/' directory should contain a lot of txt files which contain strings extracted from target binaries.
 
