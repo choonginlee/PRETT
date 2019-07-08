@@ -27,7 +27,7 @@ pip install pygraphviz --install-option="--include-path=/usr/include/graphviz" -
 
 5. Then run modeller_{ftp,smtp,http}.py specifying target FTP, SMTP, HTTP server IP as its arguemnt (permission needed)
 
-> $ sudo pythonmodeller_{ftp,smtp,http}.py [Target IP]
+> $ sudo python modeller_{ftp,smtp,http}.py [Target IP]
 
 6. You will see the requests automatically generated and responses of them. We expect a clear state machine is drawn in a file in the root directory, but it may run so long time in case the implemnetaion of the server binary is too complex. We encourage users to quit the process as the job achieved desirable result with heuristics.
 
