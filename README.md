@@ -37,3 +37,6 @@ pip install pygraphviz --install-option="--include-path=/usr/include/graphviz" -
 - in /etc/pam.d/vsftpd, make comments to all the content
 - in /etc/vsftpd.conf, make comment in pam_service_name=vsftpd
 then reboot!
+
+## Reference ## 
+Lee, C., Bae, J., & Lee, H. (2018, September). PRETT: Protocol Reverse Engineering Using Binary Tokens and Network Traces. In IFIP International Conference on ICT Systems Security and Privacy Protection (pp. 141-155). Springer, Cham.
